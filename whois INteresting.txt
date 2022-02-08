@@ -1,0 +1,124 @@
+-bash-3.2# whois 2001:578:3f::30
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+inet6num:     2001:400:0:0:0:0:0:0/23
+organisation: ARIN
+status:       ALLOCATED
+
+whois:        whois.arin.net
+
+changed:      1999-07-01
+source:       IANA
+
+# whois.arin.net
+
+NetRange:       2001:578:: - 2001:57B:FFFF:FFFF:FFFF:FFFF:FFFF:FFFF
+CIDR:           2001:578::/30
+NetName:        NETBLK-COXIPV6
+NetHandle:      NET6-2001-578-1
+Parent:         ARIN-001 (NET6-2001-400-0)
+NetType:        Direct Allocation
+OriginAS:       
+Organization:   Cox Communications Inc. (CXA)
+RegDate:        2003-02-06
+Updated:        2012-03-02
+Comment:        For legal requests/assistance please use the following contact information:
+Comment:        
+Comment:        Cox Subpoena Phone: 404-269-0100
+Comment:        
+Comment:        Cox Subpoena Info: http://www.cox.com/policy/leainformation/default.asp
+Ref:            https://rdap.arin.net/registry/ip/2001:578::
+
+
+
+OrgName:        Cox Communications Inc.
+OrgId:          CXA
+Address:        1400 Lake Hearn Dr.
+City:           Atlanta
+StateProv:      GA
+PostalCode:     30319
+Country:        US
+RegDate:        
+Updated:        2022-01-19
+Comment:        For legal requests/assistance please use the
+Comment:        following contact information:
+Comment:        Cox Subpoena Info: https://www.cox.com/aboutus/policies/law-enforcement-and-subpoenas-information.html
+Ref:            https://rdap.arin.net/registry/entity/CXA
+
+
+OrgTechHandle: PATEL2868-ARIN
+OrgTechName:   Patel, Amrish 
+OrgTechPhone:  +1-404-269-5762 
+OrgTechEmail:  amrish.patel@cox.com
+OrgTechRef:    https://rdap.arin.net/registry/entity/PATEL2868-ARIN
+
+OrgTechHandle: RUIZC31-ARIN
+OrgTechName:   Ruiz, Carlos 
+OrgTechPhone:  +1-480-318-5430 
+OrgTechEmail:  carlos.ruiz@cox.com
+OrgTechRef:    https://rdap.arin.net/registry/entity/RUIZC31-ARIN
+
+OrgTechHandle: GARCI1592-ARIN
+OrgTechName:   Garcia, Jacob 
+OrgTechPhone:  +1-404-269-4416 
+OrgTechEmail:  jacob.garcia@cox.com
+OrgTechRef:    https://rdap.arin.net/registry/entity/GARCI1592-ARIN
+
+OrgTechHandle: IPADM754-ARIN
+OrgTechName:   IP Adminstrator
+OrgTechPhone:  +1-404-269-0188 
+OrgTechEmail:  sophea.long@cox.com
+OrgTechRef:    https://rdap.arin.net/registry/entity/IPADM754-ARIN
+
+OrgTechHandle: GOODW243-ARIN
+OrgTechName:   Goodwin, Mark 
+OrgTechPhone:  +1-404-269-8267 
+OrgTechEmail:  mark.goodwin@cox.com
+OrgTechRef:    https://rdap.arin.net/registry/entity/GOODW243-ARIN
+
+OrgTechHandle: MEROL3-ARIN
+OrgTechName:   Merola, Cari 
+OrgTechPhone:  +1-404-269-4416 
+OrgTechEmail:  cari.merola@cox.com
+OrgTechRef:    https://rdap.arin.net/registry/entity/MEROL3-ARIN
+
+OrgRoutingHandle: GARCI1592-ARIN
+OrgRoutingName:   Garcia, Jacob 
+OrgRoutingPhone:  +1-404-269-4416 
+OrgRoutingEmail:  jacob.garcia@cox.com
+OrgRoutingRef:    https://rdap.arin.net/registry/entity/GARCI1592-ARIN
+
+OrgTechHandle: BERUB3-ARIN
+OrgTechName:   Berube, Tori 
+OrgTechPhone:  +1-404-269-4416 
+OrgTechEmail:  tori.berube@cox.com
+OrgTechRef:    https://rdap.arin.net/registry/entity/BERUB3-ARIN
+
+OrgTechHandle: ADA131-ARIN
+OrgTechName:   Anderson, Alvin Demond
+OrgTechPhone:  +1-404-269-4416 
+OrgTechEmail:  alvin.anderson@cox.com
+OrgTechRef:    https://rdap.arin.net/registry/entity/ADA131-ARIN
+
+OrgAbuseHandle: IC146-ARIN
+OrgAbuseName:   Cox Communications Inc
+OrgAbusePhone:  +1-404-269-7626 
+OrgAbuseEmail:  abuse@cox.net
+OrgAbuseRef:    https://rdap.arin.net/registry/entity/IC146-ARIN
+
+RTechHandle: IC146-ARIN
+RTechName:   Cox Communications Inc
+RTechPhone:  +1-404-269-7626 
+RTechEmail:  abuse@cox.net
+RTechRef:    https://rdap.arin.net/registry/entity/IC146-ARIN
+
+
+-bash-3.2# traceroute 2001:578:3f::30
+traceroute: unknown host 2001:578:3f::30
+-bash-3.2# ping 2001:578:3f::30
+ping: cannot resolve 2001:578:3f::30: Unknown host
+-bash-3.2# ping 2001:400:0:0:0:0:0:0
+ping: cannot resolve 2001:400:0:0:0:0:0:0: Unknown host
+-bash-3.2# 

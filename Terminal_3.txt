@@ -1,0 +1,1249 @@
+-bash-3.2# cd /var/db/diagnostics
+-bash-3.2# ls
+logd.0.log			logdata.statistics.0.txt	timesync			version.plist
+-bash-3.2# cat logd.0.log
+2022-02-06 12:59:56+0000 logd[52]: libtrace_kic=0
+2022-02-06 12:59:56+0000 logd[52]: _read_kernel_uuid calling _logd_uuiddb_harvest_kernel for F5893147-A9D2-3D60-B5A4-E4AE9BA0A628
+2022-02-06 12:59:56+0000 logd[52]: _logd_read_kernel_info calling _logd_uuiddb_harvest_kernel for F5893147-A9D2-3D60-B5A4-E4AE9BA0A628
+2022-02-06 12:59:56+0000 logd[52]: Invalid syslog socket fd: -1
+2022-02-06 12:59:56+0000 logd_helper[83]: Harvesting: 2534E906-34AA-3355-9B0C-F3C67098264D
+2022-02-06 12:59:56+0000 logd_helper[83]: Harvest Complete for 2534E906-34AA-3355-9B0C-F3C67098264D: 0
+-bash-3.2# ls
+logd.0.log			logdata.statistics.0.txt	timesync			version.plist
+-bash-3.2# rm log.0.log
+rm: log.0.log: No such file or directory
+-bash-3.2# ls
+logd.0.log			logdata.statistics.0.txt	timesync			version.plist
+-bash-3.2# rm logd.0.log
+-bash-3.2# ls
+logdata.statistics.0.txt	timesync			version.plist
+-bash-3.2# cat logdata.statistics.0.txt
+-bash-3.2# ls
+logdata.statistics.0.txt	timesync			version.plist
+-bash-3.2# rm logdata.statistics.0.txt
+-bash-3.2# ls
+timesync	version.plist
+-bash-3.2# ls timesyc
+ls: timesyc: No such file or directory
+-bash-3.2# ls timesync
+0000000000000002.timesync
+-bash-3.2# cat timesync/0000000000000002.timesync
+??0?? ?NC???an??}p?h??3?Ts 1e?o???3?Ts ?mH???3?-bash-3.2# 
+-bash-3.2# rm -r timesync
+-bash-3.2# ls
+version.plist
+-bash-3.2# cd versio
+-bash: cd: versio: No such file or directory
+-bash-3.2# cat version.plist
+ "I-bash-3.2# cat version.plist2D3668D-EDB8-44F8-B725-60C063FEFE51
+ "I-bash-3.2# ionZIdentifier_$42D3668D-EDB8-44F8-B725-60C063FEFE51
+-bash-3.2# cat version.plist
+ "I-bash-3.2# cat version.plist2D3668D-EDB8-44F8-B725-60C063FEFE51
+ "I-bash-3.2# ionZIdentifier_$42D3668D-EDB8-44F8-B725-60C063FEFE51
+-bash-3.2# cat version.plist
+ "I-bash-3.2# ionZIdentifier_$42D3668D-EDB8-44F8-B725-60C063FEFE51
+-bash-3.2# cat version.plist"
+> "
+cat: version.plist
+: No such file or directory
+-bash-3.2# cat "0000000000000002.timesync
+> "
+cat: 0000000000000002.timesync
+: No such file or directory
+-bash-3.2# ls
+version.plist
+-bash-3.2# cat version.plist
+ "I-bash-3.2# ionZIdentifier_$42D3668D-EDB8-44F8-B725-60C063FEFE51
+-bash-3.2# cat 
+^C
+-bash-3.2# cat 
+0000000000000002.timesync
+0000000000000002.timesync
+
+
+ls
+ls
+cd^C
+-bash-3.2# las
+-bash: las: command not found
+-bash-3.2# ls
+version.plist
+-bash-3.2# cat
+version.plist
+version.plist
+cat versionplist
+cat versionplist
+c^C
+-bash-3.2# cat "version.plist
+> "
+cat: version.plist
+: No such file or directory
+-bash-3.2# cat "version.plist"
+ "I-bash-3.2# echZIdentifier_$42D3668D-EDB8-44F8-B725-60C063FEFE51
+-bash: ech: command not found
+-bash-3.2# echo "
+> "; cat "version.plist"
+
+
+ "I-bash-3.2# 
+-bash: ech: command not found
+-bash-3.2# echo "
+"; cat "version.plist"; echo "
+> "
+
+
+ "Iist00?WVersionZIdentifier_$42D3668D-EDB8-44F8-B725-60C063FEFE51
+
+-bash-3.2# ls
+version.plist
+-bash-3.2# rm version.plist
+-bash-3.2# ls
+-bash-3.2# cd ..
+-bash-3.2# ls
+Battery					accessoryupdater			darwindaemon				hidd					powerlog
+ConfigurationProfiles			analyticsd				datadetectors				installcoordinationd			receipts
+DiagnosticsReporter			appinstalld				dhcpclient				knowledgegraphd				reportmemoryexception
+ExtensibleSSO				applepay				diagnostics				locationd				rmd
+KernelExtensionManagement		appstore				diskimagesiod				lockdown				securityagent
+MobileIdentityService			astris					displaypolicyd				mds					softwareupdate
+PanicReporter				caches					dslocal					nearbyd					systemstats
+Sandbox					cmiodalassistants			findmydevice				nsurlsessiond				timed
+SystemKey				com.apple.dt.automationmode		fpsd					nsurlstoraged				uuidtext
+SystemPolicy				com.apple.xpc.launchd			fud					oah
+SystemPolicyConfiguration		com.apple.xpc.roleaccountd.staging	geod					ondemand
+-bash-3.2# ls diagnosticsreportr
+ls: diagnosticsreportr: No such file or directory
+-bash-3.2# ls diagnosticsreporter
+-bash-3.2# rm diagnosticsreporter
+rm: diagnosticsreporter: is a directory
+-bash-3.2# rm -r diagnosticsreporter
+-bash-3.2# ls
+Battery					analyticsd				datadetectors				installcoordinationd			receipts
+ConfigurationProfiles			appinstalld				dhcpclient				knowledgegraphd				reportmemoryexception
+ExtensibleSSO				applepay				diagnostics				locationd				rmd
+KernelExtensionManagement		appstore				diskimagesiod				lockdown				securityagent
+MobileIdentityService			astris					displaypolicyd				mds					softwareupdate
+PanicReporter				caches					dslocal					nearbyd					systemstats
+Sandbox					cmiodalassistants			findmydevice				nsurlsessiond				timed
+SystemKey				com.apple.dt.automationmode		fpsd					nsurlstoraged				uuidtext
+SystemPolicy				com.apple.xpc.launchd			fud					oah
+SystemPolicyConfiguration		com.apple.xpc.roleaccountd.staging	geod					ondemand
+accessoryupdater			darwindaemon				hidd					powerlog
+-bash-3.2# ls extensiblesso
+Configuration
+-bash-3.2# ls extensiblesso/configuration
+-bash-3.2# rm -r extensiblesso
+rm: extensiblesso: Operation not permitted
+-bash-3.2# ls
+Battery					analyticsd				datadetectors				installcoordinationd			receipts
+ConfigurationProfiles			appinstalld				dhcpclient				knowledgegraphd				reportmemoryexception
+ExtensibleSSO				applepay				diagnostics				locationd				rmd
+KernelExtensionManagement		appstore				diskimagesiod				lockdown				securityagent
+MobileIdentityService			astris					displaypolicyd				mds					softwareupdate
+PanicReporter				caches					dslocal					nearbyd					systemstats
+Sandbox					cmiodalassistants			findmydevice				nsurlsessiond				timed
+SystemKey				com.apple.dt.automationmode		fpsd					nsurlstoraged				uuidtext
+SystemPolicy				com.apple.xpc.launchd			fud					oah
+SystemPolicyConfiguration		com.apple.xpc.roleaccountd.staging	geod					ondemand
+accessoryupdater			darwindaemon				hidd					powerlog
+-bash-3.2# ls kernelextensionmanagement
+-bash-3.2# ls
+Battery					analyticsd				datadetectors				installcoordinationd			receipts
+ConfigurationProfiles			appinstalld				dhcpclient				knowledgegraphd				reportmemoryexception
+ExtensibleSSO				applepay				diagnostics				locationd				rmd
+KernelExtensionManagement		appstore				diskimagesiod				lockdown				securityagent
+MobileIdentityService			astris					displaypolicyd				mds					softwareupdate
+PanicReporter				caches					dslocal					nearbyd					systemstats
+Sandbox					cmiodalassistants			findmydevice				nsurlsessiond				timed
+SystemKey				com.apple.dt.automationmode		fpsd					nsurlstoraged				uuidtext
+SystemPolicy				com.apple.xpc.launchd			fud					oah
+SystemPolicyConfiguration		com.apple.xpc.roleaccountd.staging	geod					ondemand
+accessoryupdater			darwindaemon				hidd					powerlog
+-bash-3.2# ls mobileidentityservice
+Configuration	Profiles
+-bash-3.2# ls mobileidentityservice/configuration
+-bash-3.2# ls mobileidentityservice/profiles
+-bash-3.2# rm -r mobileidentityservice
+-bash-3.2# ls
+Battery					appinstalld				dhcpclient				knowledgegraphd				reportmemoryexception
+ConfigurationProfiles			applepay				diagnostics				locationd				rmd
+ExtensibleSSO				appstore				diskimagesiod				lockdown				securityagent
+KernelExtensionManagement		astris					displaypolicyd				mds					softwareupdate
+PanicReporter				caches					dslocal					nearbyd					systemstats
+Sandbox					cmiodalassistants			findmydevice				nsurlsessiond				timed
+SystemKey				com.apple.dt.automationmode		fpsd					nsurlstoraged				uuidtext
+SystemPolicy				com.apple.xpc.launchd			fud					oah
+SystemPolicyConfiguration		com.apple.xpc.roleaccountd.staging	geod					ondemand
+accessoryupdater			darwindaemon				hidd					powerlog
+analyticsd				datadetectors				installcoordinationd			receipts
+-bash-3.2# ls panic reporter
+ls: panic: No such file or directory
+ls: reporter: No such file or directory
+-bash-3.2# ls "panic reporter"
+ls: panic reporter: No such file or directory
+-bash-3.2# ls panicreporter
+-bash-3.2# rm -r panicrepporter
+rm: panicrepporter: No such file or directory
+-bash-3.2# rm -r panicreporter
+-bash-3.2# ls
+Battery					appinstalld				datadetectors				hidd					ondemand
+ConfigurationProfiles			applepay				dhcpclient				installcoordinationd			powerlog
+ExtensibleSSO				appstore				diagnostics				knowledgegraphd				receipts
+KernelExtensionManagement		astris					diskimagesiod				locationd				reportmemoryexception
+Sandbox					caches					displaypolicyd				lockdown				rmd
+SystemKey				cmiodalassistants			dslocal					mds					securityagent
+SystemPolicy				com.apple.dt.automationmode		findmydevice				nearbyd					softwareupdate
+SystemPolicyConfiguration		com.apple.xpc.launchd			fpsd					nsurlsessiond				systemstats
+accessoryupdater			com.apple.xpc.roleaccountd.staging	fud					nsurlstoraged				timed
+analyticsd				darwindaemon				geod					oah					uuidtext
+-bash-3.2# ls sandbox
+homedir_ancestors	homedirs		network-exemptions	syncroot_ancestors	syncroots		syncroots.db
+-bash-3.2# ls sandbox/homedir_ancestors
+sandbox/homedir_ancestors
+-bash-3.2# cat sandbox/homedir_ancestors
+-bash-3.2# ls sandbox
+homedir_ancestors	homedirs		network-exemptions	syncroot_ancestors	syncroots		syncroots.db
+-bash-3.2# cat hoemdir_ancestors
+cat: hoemdir_ancestors: No such file or directory
+-bash-3.2# ls
+Battery					appinstalld				datadetectors				hidd					ondemand
+ConfigurationProfiles			applepay				dhcpclient				installcoordinationd			powerlog
+ExtensibleSSO				appstore				diagnostics				knowledgegraphd				receipts
+KernelExtensionManagement		astris					diskimagesiod				locationd				reportmemoryexception
+Sandbox					caches					displaypolicyd				lockdown				rmd
+SystemKey				cmiodalassistants			dslocal					mds					securityagent
+SystemPolicy				com.apple.dt.automationmode		findmydevice				nearbyd					softwareupdate
+SystemPolicyConfiguration		com.apple.xpc.launchd			fpsd					nsurlsessiond				systemstats
+accessoryupdater			com.apple.xpc.roleaccountd.staging	fud					nsurlstoraged				timed
+analyticsd				darwindaemon				geod					oah					uuidtext
+-bash-3.2# cd sandbox
+-bash-3.2# ls
+homedir_ancestors	homedirs		network-exemptions	syncroot_ancestors	syncroots		syncroots.db
+-bash-3.2# cat homedir_ancestors
+-bash-3.2# cat homedirs
+-bash-3.2# cat network-exemptions
+-bash-3.2# cat syncroot_ancestors
+-bash-3.2# cat syncroots
+-bash-3.2# syncroots.db
+-bash: syncroots.db: command not found
+-bash-3.2# cat syncroots.db
+bplist00?
+X$versionY$archiverT$topX$objects??_NSKeyedArchiver?    Troot??
+
+_protectedFileObjectsV$class???ZNS.objects???Z$classnameX$classes\NSMutableSet?NSSetXNSObject?_%SBSandcastleProtectedFolderObjectList? %SBSandcastleProtectedFolderObjectList_SBSandcastleProtectedFolderLis$)27ILQSY_d{????????????????+!M-bash-3.2# 
+-bash-3.2# ls
+homedir_ancestors	homedirs		network-exemptions	syncroot_ancestors	syncroots		syncroots.db
+-bash-3.2# cd ../
+-bash-3.2# ls
+Battery					appinstalld				datadetectors				hidd					ondemand
+ConfigurationProfiles			applepay				dhcpclient				installcoordinationd			powerlog
+ExtensibleSSO				appstore				diagnostics				knowledgegraphd				receipts
+KernelExtensionManagement		astris					diskimagesiod				locationd				reportmemoryexception
+Sandbox					caches					displaypolicyd				lockdown				rmd
+SystemKey				cmiodalassistants			dslocal					mds					securityagent
+SystemPolicy				com.apple.dt.automationmode		findmydevice				nearbyd					softwareupdate
+SystemPolicyConfiguration		com.apple.xpc.launchd			fpsd					nsurlsessiond				systemstats
+accessoryupdater			com.apple.xpc.roleaccountd.staging	fud					nsurlstoraged				timed
+analyticsd				darwindaemon				geod					oah					uuidtext
+-bash-3.2# rm -r sandbox
+-bash-3.2# ls
+Battery					applepay				dhcpclient				installcoordinationd			powerlog
+ConfigurationProfiles			appstore				diagnostics				knowledgegraphd				receipts
+ExtensibleSSO				astris					diskimagesiod				locationd				reportmemoryexception
+KernelExtensionManagement		caches					displaypolicyd				lockdown				rmd
+SystemKey				cmiodalassistants			dslocal					mds					securityagent
+SystemPolicy				com.apple.dt.automationmode		findmydevice				nearbyd					softwareupdate
+SystemPolicyConfiguration		com.apple.xpc.launchd			fpsd					nsurlsessiond				systemstats
+accessoryupdater			com.apple.xpc.roleaccountd.staging	fud					nsurlstoraged				timed
+analyticsd				darwindaemon				geod					oah					uuidtext
+appinstalld				datadetectors				hidd					ondemand
+-bash-3.2# cd systemkey
+odesignedpackagespresentbuiltin 'ookmarkhintspresentbuiltin
+root_only)document rules+filter_unsigned1codesignedpackages'	bookmarkhints
+?       1?&?c
+/
+ ?
+  1?<		?!    %anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] exists and certificate leaf[field.1.2.840.113635.100.6.1.13] existsLK@Developer IDAB??A?AB??A?=   %     %anchor appleLK@Apple SystemAB??A䁺AB??A䁺?l	?     %anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] exists and (certificate leaf[field.1.2.840.113635.100.6.1.14] or certificate leaf[field.1.2.840.113635.100.6.1.13])LK@Developer IDAB??A䁈AB??A䁈?;		?!    %anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] exists and certificate leaf[field.1.2.840.113635.100.6.1.13] existsLK@Developer IDAB??A?=AB??A?=?	?/    'anchor apple generic and certificate leaf[field.1.2.840.113635.100.6.1.10] existsLK@Mac App StoreAB??A?
+                                                                                                                                                              AB??A?
+                                                                                                                                                                    ?		?-    'anchor apple generic and certificate leaf[field.1.2.840.113635.100.6.1.9] existsLK@Mac App StoreAB??A??AB??A??<		%     %anchor appleLK@Apple SystemAB??A䀨AB??A䀨?	?U     +anchor apple generic and certificateauthorityt.CN] = "Apple Software Update Certification Authority"LK@?Apple InstallerAB??A?vAB??A?v;	      - LK@ԲI?%??~No Matching RuleAB??A?EAB??A?E
+	??????????					
+	??????????
+                  	ԲI?%??~
+	??????????LK@	LKLK@LK@LK@LK@LK@LK@	LK@
+
+
+?	??	?	?	o????c?#????(	-?viewactive_authorityactive_authorityCREATE VIEW active_authority AS
+SELECT * from authority
+WHERE disabled = 0 AND JULIANDAY('now') < expires AND (flags & 1) = 0triggerauthority_updateauthorityCREATE TRIGGER authority_update AFTER UPDATE ON authority
+BEGIN
+	UPDATE authority SET mtime = JULIANDAY('now') WHERE id = old.id;
+END[/windexauthority_expiresauthoritCREATE INDEX authority_expires ON authority (expires)^1{indexauthority_priorityauthorityCREATE INDEX authority_priority ON authority (priority)R)kindexauthority_typeauthorityCREATE INDEX authority_type ON authority (type)P++Ytablesqlite_sequencesqlite_sequenceCREATE TABLE sqlite_sequence(name,seq)??OtableauthorityauthorityCREATE TABLE authority (
+	id INTEGER PRIMARY KEY AUTOINCREMENT,				-- canonical
+	version INTEGER NOT NULL DEFAULT (1)				-- semantic version of this rule
+		CHECK (version > 0),
+	type INTEGER NOT NULL,								-- operation type
+	requirement TEXT NULL								-- code requirement
+		CHECK ((requirement IS NULL) = ((flags & 1) != 0)),
+	allow INTEGER NOT NULL DEFAULT (1)					-- allow (1) or deny (0)
+		CHECK (allow = 0 OR allow = 1),
+	disabled INTEGER NOT NULL DEFAULT (0)				-- disable count (stacks; enabled if zero)
+		CHECK (disabled >= 0),
+	expires FLOAT NOT NULL DEFAULT (5000000),			-- expiration of rule authority (Julian date)
+	priority REAL NOT NULL DEFAULT (0),					-- rule priority (full float)
+	label TEXT NULL,									-- text label for authority rule
+	filter_unsigned TEXT NULL,							-- prescreen for handling unsigned code
+	flags INTEGER NOT NULL DEFAULT (0),					-- amalgamated binary flags
+	-- following fields are for documentation only
+	ctime FLOAT NOT NULL DEFAULT (JULIANDAY('now')),	-- rule creation time (Julian)
+	mtime FLOAT NOT NULL DEFAULT (JULIANDAY('now')),	-- time rule was last changed (Julian)
+	user TEXT NULL,										-- user requesting this rule (NULL if unknown)
+	remarks TEXT NULL									-- optional remarks string
+)?q9tablefeaturefeatureCREATE TABLE feature (
+	id INTEGER PRIMARY KEY,				-- canononical
+	name TEXT NOT NULL UNIQUE,			-- name of option
+	value TEXT NULL,					-- value of option, if any
+	remarks TEXT NULL					-- optional remarks string
+*l?ndexsqlite_autoindex_feature_1feature
+   ?
+    N
+?
+?
+*?a%?	viewobject_stateobject_stateCREATE VIEW object_state AS
+SELECT object.id, object.type, object.allow,
+	CASE object.expires WHEN 5000000 THEN NULL ELSE STRFTIME('%Y-%m-%d %H:%M:%f', object.expires, 'localtime') END AS expiration,
+	(object.expires - JULIANDAY('now')) * 86400 as remaining,
+	authority.label,
+	object.authority,
+	object.path,
+	object.ctime,
+	authority.requirement,
+	authority.disabled,
+	object.remarks
+FROM object, authority
+WHERE object.authority = authority.id?triggerobject_updateobjectCREATE TRIGGER object_update AFTER UPDATE ON object
+BEGIN
+	UPDATE object SET mtime = JULIANDAY('now') WHERE id = old.id;
+CREATE UNIQUE INDEX object_hash ON object (hash)O)kindexobject_expiresobject
+#_indexobject_typeobject                                                    CREATE INDEX object_expires ON object (expires)F
+                        CREATE INDEX object_type ON object (type)?
+                                                                  ?_tableobjectobject
+CREATE TABLE object (
+	id INTEGER PRIMARY KEY,								-- canonical
+	type INTEGER NOT NULL,									-- operation type
+	hash CDHASH NOT NULL,									-- canonical hash of object
+	allow INTEGER NOT NULL,								-- allow (1) or deny (0)
+	expires FLOAT NOT NULL DEFAULT (5000000),				-- expiration of object entry
+	authority INTEGER NOT NULL								-- governing authority rule
+		REFERENCES authority(id) ON DELETE CASCADE,
+	-- following fields are for documentation only
+	path TEXT NULL,											-- path of object at record creation time
+	ctime FLOAT NOT NULL DEFAULT (JULIANDAY('now')),		-- record creation time
+	mtime FLOAT NOT NULL DEFAULT (JULIANDAY('now')),		-- record modification time
+	remarks TEXT NULL										-- optional remarks string
+)?N
+   ''?[tablebookmarkhintsbookmarkhints	CREATE TABLE bookmarkhints (
+	id INTEGER PRIMARY KEY AUTOINCREMENT,
+	bookmark BLOB NOT NULL,
+	authority INTEGER NOT NULL
+		REFERENCES authority(id) ON DELETE CASCADE
+)?
+)?aviewscan_authorityscan_authorityCREATE VIEW scan_authority AS
+SELECT * from authority
+WHERE JULIANDAY('now') < expires AND (flags & 1) = 0-bash-3.2# 
+-bash-3.2# ls
+Battery					appstore				diagnostics				knowledgegraphd				receipts
+ConfigurationProfiles			astris					diskimagesiod				locationd				reportmemoryexception
+ExtensibleSSO				caches					displaypolicyd				lockdown				rmd
+KernelExtensionManagement		cmiodalassistants			dslocal					mds					securityagent
+SystemPolicy				com.apple.dt.automationmode		findmydevice				nearbyd					softwareupdate
+SystemPolicyConfiguration		com.apple.xpc.launchd			fpsd					nsurlsessiond				systemstats
+accessoryupdater			com.apple.xpc.roleaccountd.staging	fud					nsurlstoraged				timed
+analyticsd				darwindaemon				geod					oah					uuidtext
+appinstalld				datadetectors				hidd					ondemand
+applepay				dhcpclient				installcoordinationd			powerlog
+-bash-3.2# rm systempolicy
+-bash-3.2# cat systempolicyconfiguration
+cat: systempolicyconfiguration: Is a directory
+-bash-3.2# cat systempolicyconfiguration
+cat: systempolicyconfiguration: Is a directory
+-bash-3.2# ls
+Battery					astris					diskimagesiod				locationd				reportmemoryexception
+ConfigurationProfiles			caches					displaypolicyd				lockdown				rmd
+ExtensibleSSO				cmiodalassistants			dslocal					mds					securityagent
+KernelExtensionManagement		com.apple.dt.automationmode		findmydevice				nearbyd					softwareupdate
+SystemPolicyConfiguration		com.apple.xpc.launchd			fpsd					nsurlsessiond				systemstats
+accessoryupdater			com.apple.xpc.roleaccountd.staging	fud					nsurlstoraged				timed
+analyticsd				darwindaemon				geod					oah					uuidtext
+appinstalld				datadetectors				hidd					ondemand
+applepay				dhcpclient				installcoordinationd			powerlog
+appstore				diagnostics				knowledgegraphd				receipts
+-bash-3.2# cd SystemPolicyConfiguration
+-bash-3.2# ls
+-bash-3.2# cd ../
+-bash-3.2# rm -r SystemPolicyConfiguration
+-bash-3.2# ls
+Battery					caches					displaypolicyd				lockdown				rmd
+ConfigurationProfiles			cmiodalassistants			dslocal					mds					securityagent
+ExtensibleSSO				com.apple.dt.automationmode		findmydevice				nearbyd					softwareupdate
+KernelExtensionManagement		com.apple.xpc.launchd			fpsd					nsurlsessiond				systemstats
+accessoryupdater			com.apple.xpc.roleaccountd.staging	fud					nsurlstoraged				timed
+analyticsd				darwindaemon				geod					oah					uuidtext
+appinstalld				datadetectors				hidd					ondemand
+applepay				dhcpclient				installcoordinationd			powerlog
+appstore				diagnostics				knowledgegraphd				receipts
+astris					diskimagesiod				locationd				reportmemoryexception
+-bash-3.2# ls -l
+total 416
+drwxr-xr-x  3 root                    wheel                    88 Feb  6 12:59 Battery
+drwxr-xr-x  2 root                    wheel                     0 Feb  6 13:35 ConfigurationProfiles
+drwxr-xr-x  2 root                    wheel                     0 Feb  6 13:51 ExtensibleSSO
+drwxr-xr-x@ 2 root                    wheel                     0 Jan 22 07:42 KernelExtensionManagement
+drwxr-x---  2 _accessoryupdater       _accessoryupdater         0 Jan 22 07:42 accessoryupdater
+drwxr-x---  2 _analyticsd             _analyticsd               0 Jan 22 07:42 analyticsd
+drwxr-x---  2 _appinstalld            _appinstalld             88 Jan 22 07:42 appinstalld
+drwx------  2 _applepay               _applepay                 0 Jan 22 07:42 applepay
+drwxr-xr-x  2 _appstore               _appstore                 0 Jan 22 07:42 appstore
+drwxr-xr-x  2 _astris                 _astris                   0 Jan 22 07:42 astris
+drwxr-xr-x  3 root                    wheel                    88 Jan 22 07:42 caches
+drwxr-x---  2 _cmiodalassistants      _cmiodalassistants        0 Jan 22 07:42 cmiodalassistants
+drwxr-xr-x  2 root                    wheel                     0 Jan 22 07:42 com.apple.dt.automationmode
+drwxr-xr-x  3 root                    wheel                    88 Jan 22 07:42 com.apple.xpc.launchd
+drwx------@ 2 root                    wheel                     0 Jan 22 07:42 com.apple.xpc.roleaccountd.staging
+drwxr-x---  3 _darwindaemon           _darwindaemon            88 Jan 22 07:42 darwindaemon
+drwx--x--x@ 2 _datadetectors          _datadetectors            0 Jan 22 07:42 datadetectors
+drwx------  3 root                    wheel                   264 Feb  6 12:59 dhcpclient
+lrwxr-xr-x  1 root                    wheel                    85 Feb  6 12:59 diagnostics -> /System/Volumes/Preboot/DA1B0143-E3FE-4328-A851-D6F35D3E582F/PreLoginData/diagnostics
+drwxr-x---  2 _diskimagesiod          _diskimagesiod           88 Jan 22 07:42 diskimagesiod
+drwxr-xr-x  2 root                    wheel                     0 Jan 22 07:42 displaypolicyd
+drwxr-xr-x  3 root                    wheel                    88 Jan 22 07:42 dslocal
+drwxr-xr-x  2 _findmydevice           _findmydevice             0 Jan 22 07:42 findmydevice
+drwxr-x---  2 _fpsd                   _fpsd                     0 Jan 22 07:42 fpsd
+drwxr-xr-x  3 root                    wheel                   176 Feb  6 13:02 fud
+drwxr-x---  2 _geod                   _geod                     0 Jan 22 07:42 geod
+drwxr-x---  2 _hidd                   _hidd                     0 Jan 22 07:42 hidd
+drwxr-x---  2 _installcoordinationd   _installcoordinationd    88 Jan 22 07:42 installcoordinationd
+drwxr-x---  2 _knowledgegraphd        _knowledgegraphd          0 Jan 22 07:42 knowledgegraphd
+drwxr-x---  2 _locationd              _locationd                0 Jan 22 07:42 locationd
+drwx------  2 _usbmuxd                _usbmuxd                  0 Jan 22 07:42 lockdown
+drwxr-xr-x  4 root                    wheel                   176 Feb  6 12:59 mds
+drwxr-x---  2 _nearbyd                _nearbyd                  0 Jan 22 07:42 nearbyd
+drwxr-x---  2 _nsurlsessiond          _nsurlsessiond            0 Jan 22 07:42 nsurlsessiond
+drwxr-xr-x  2 _nsurlsessiond          _nsurlsessiond            0 Jan 22 07:42 nsurlstoraged
+drwxr-xr-x@ 2 _oahd                   _oahd                     0 Jan 22 07:42 oah
+drwxr-xr-x  2 _ondemand               _ondemand                 0 Jan 22 07:42 ondemand
+drwxr-xr-x  2 root                    wheel                     0 Jan 22 07:42 powerlog
+drwxr-xr-x  2 root                    wheel                     0 Jan 22 07:42 receipts
+drwxr-x---  2 _reportmemoryexception  _reportmemoryexception    0 Jan 22 07:42 reportmemoryexception
+drwxr-x---  2 _rmd                    _rmd                      0 Jan 22 07:42 rmd
+drwxr-x---  2 _securityagent          _securityagent            0 Jan 22 07:42 securityagent
+drwxr-xr-x  2 _softwareupdate         _softwareupdate           0 Jan 22 07:42 softwareupdate
+drwxr-xr-x  2 root                    wheel                     0 Jan 22 07:42 systemstats
+drwxr-x---  2 _timed                  _timed                    0 Jan 22 07:42 timed
+lrwxr-xr-x  1 root                    wheel                    82 Feb  6 12:59 uuidtext -> /System/Volumes/Preboot/DA1B0143-E3FE-4328-A851-D6F35D3E582F/PreLoginData/uuidtext
+-bash-3.2# rm -r analyticsd
+-bash-3.2# la appinstalld
+-bash: la: command not found
+-bash-3.2# ls appinstalld
+.file
+-bash-3.2# cat appinstalld/.file
+ 
+-bash-3.2# ls
+Battery					caches					diskimagesiod				knowledgegraphd				powerlog
+ConfigurationProfiles			cmiodalassistants			displaypolicyd				locationd				receipts
+ExtensibleSSO				com.apple.dt.automationmode		dslocal					lockdown				reportmemoryexception
+KernelExtensionManagement		com.apple.xpc.launchd			findmydevice				mds					rmd
+accessoryupdater			com.apple.xpc.roleaccountd.staging	fpsd					nearbyd					securityagent
+appinstalld				darwindaemon				fud					nsurlsessiond				softwareupdate
+applepay				datadetectors				geod					nsurlstoraged				systemstats
+appstore				dhcpclient				hidd					oah					timed
+astris					diagnostics				installcoordinationd			ondemand				uuidtext
+-bash-3.2# rm 0r appinstalld
+rm: 0r: No such file or directory
+rm: appinstalld: is a directory
+-bash-3.2# rm -r appinstalld
+-bash-3.2# ls
+Battery					cmiodalassistants			displaypolicyd				locationd				receipts
+ConfigurationProfiles			com.apple.dt.automationmode		dslocal					lockdown				reportmemoryexception
+ExtensibleSSO				com.apple.xpc.launchd			findmydevice				mds					rmd
+KernelExtensionManagement		com.apple.xpc.roleaccountd.staging	fpsd					nearbyd					securityagent
+accessoryupdater			darwindaemon				fud					nsurlsessiond				softwareupdate
+applepay				datadetectors				geod					nsurlstoraged				systemstats
+appstore				dhcpclient				hidd					oah					timed
+astris					diagnostics				installcoordinationd			ondemand				uuidtext
+caches					diskimagesiod				knowledgegraphd				powerlog
+-bash-3.2# ls -l
+total 384
+drwxr-xr-x  3 root                    wheel                    88 Feb  6 12:59 Battery
+drwxr-xr-x  2 root                    wheel                     0 Feb  6 13:35 ConfigurationProfiles
+drwxr-xr-x  2 root                    wheel                     0 Feb  6 13:51 ExtensibleSSO
+drwxr-xr-x@ 2 root                    wheel                     0 Jan 22 07:42 KernelExtensionManagement
+drwxr-x---  2 _accessoryupdater       _accessoryupdater         0 Jan 22 07:42 accessoryupdater
+drwx------  2 _applepay               _applepay                 0 Jan 22 07:42 applepay
+drwxr-xr-x  2 _appstore               _appstore                 0 Jan 22 07:42 appstore
+drwxr-xr-x  2 _astris                 _astris                   0 Jan 22 07:42 astris
+drwxr-xr-x  3 root                    wheel                    88 Jan 22 07:42 caches
+drwxr-x---  2 _cmiodalassistants      _cmiodalassistants        0 Jan 22 07:42 cmiodalassistants
+drwxr-xr-x  2 root                    wheel                     0 Jan 22 07:42 com.apple.dt.automationmode
+drwxr-xr-x  3 root                    wheel                    88 Jan 22 07:42 com.apple.xpc.launchd
+drwx------@ 2 root                    wheel                     0 Jan 22 07:42 com.apple.xpc.roleaccountd.staging
+drwxr-x---  3 _darwindaemon           _darwindaemon            88 Jan 22 07:42 darwindaemon
+drwx--x--x@ 2 _datadetectors          _datadetectors            0 Jan 22 07:42 datadetectors
+drwx------  3 root                    wheel                   264 Feb  6 12:59 dhcpclient
+lrwxr-xr-x  1 root                    wheel                    85 Feb  6 12:59 diagnostics -> /System/Volumes/Preboot/DA1B0143-E3FE-4328-A851-D6F35D3E582F/PreLoginData/diagnostics
+drwxr-x---  2 _diskimagesiod          _diskimagesiod           88 Jan 22 07:42 diskimagesiod
+drwxr-xr-x  2 root                    wheel                     0 Jan 22 07:42 displaypolicyd
+drwxr-xr-x  3 root                    wheel                    88 Jan 22 07:42 dslocal
+drwxr-xr-x  2 _findmydevice           _findmydevice             0 Jan 22 07:42 findmydevice
+drwxr-x---  2 _fpsd                   _fpsd                     0 Jan 22 07:42 fpsd
+drwxr-xr-x  3 root                    wheel                   176 Feb  6 13:02 fud
+drwxr-x---  2 _geod                   _geod                     0 Jan 22 07:42 geod
+drwxr-x---  2 _hidd                   _hidd                     0 Jan 22 07:42 hidd
+drwxr-x---  2 _installcoordinationd   _installcoordinationd    88 Jan 22 07:42 installcoordinationd
+drwxr-x---  2 _knowledgegraphd        _knowledgegraphd          0 Jan 22 07:42 knowledgegraphd
+drwxr-x---  2 _locationd              _locationd                0 Jan 22 07:42 locationd
+drwx------  2 _usbmuxd                _usbmuxd                  0 Jan 22 07:42 lockdown
+drwxr-xr-x  4 root                    wheel                   176 Feb  6 12:59 mds
+drwxr-x---  2 _nearbyd                _nearbyd                  0 Jan 22 07:42 nearbyd
+drwxr-x---  2 _nsurlsessiond          _nsurlsessiond            0 Jan 22 07:42 nsurlsessiond
+drwxr-xr-x  2 _nsurlsessiond          _nsurlsessiond            0 Jan 22 07:42 nsurlstoraged
+drwxr-xr-x@ 2 _oahd                   _oahd                     0 Jan 22 07:42 oah
+drwxr-xr-x  2 _ondemand               _ondemand                 0 Jan 22 07:42 ondemand
+drwxr-xr-x  2 root                    wheel                     0 Jan 22 07:42 powerlog
+drwxr-xr-x  2 root                    wheel                     0 Jan 22 07:42 receipts
+drwxr-x---  2 _reportmemoryexception  _reportmemoryexception    0 Jan 22 07:42 reportmemoryexception
+drwxr-x---  2 _rmd                    _rmd                      0 Jan 22 07:42 rmd
+drwxr-x---  2 _securityagent          _securityagent            0 Jan 22 07:42 securityagent
+drwxr-xr-x  2 _softwareupdate         _softwareupdate           0 Jan 22 07:42 softwareupdate
+drwxr-xr-x  2 root                    wheel                     0 Jan 22 07:42 systemstats
+drwxr-x---  2 _timed                  _timed                    0 Jan 22 07:42 timed
+lrwxr-xr-x  1 root                    wheel                    82 Feb  6 12:59 uuidtext -> /System/Volumes/Preboot/DA1B0143-E3FE-4328-A851-D6F35D3E582F/PreLoginData/uuidtext
+-bash-3.2# rm -r accessoryupdater
+-bash-3.2# ls
+Battery					com.apple.dt.automationmode		dslocal					lockdown				reportmemoryexception
+ConfigurationProfiles			com.apple.xpc.launchd			findmydevice				mds					rmd
+ExtensibleSSO				com.apple.xpc.roleaccountd.staging	fpsd					nearbyd					securityagent
+KernelExtensionManagement		darwindaemon				fud					nsurlsessiond				softwareupdate
+applepay				datadetectors				geod					nsurlstoraged				systemstats
+appstore				dhcpclient				hidd					oah					timed
+astris					diagnostics				installcoordinationd			ondemand				uuidtext
+caches					diskimagesiod				knowledgegraphd				powerlog
+cmiodalassistants			displaypolicyd				locationd				receipts
+-bash-3.2# ls -l
+total 384
+drwxr-xr-x  3 root                    wheel                    88 Feb  6 12:59 Battery
+drwxr-xr-x  2 root                    wheel                     0 Feb  6 13:35 ConfigurationProfiles
+drwxr-xr-x  2 root                    wheel                     0 Feb  6 13:51 ExtensibleSSO
+drwxr-xr-x@ 2 root                    wheel                     0 Jan 22 07:42 KernelExtensionManagement
+drwx------  2 _applepay               _applepay                 0 Jan 22 07:42 applepay
+drwxr-xr-x  2 _appstore               _appstore                 0 Jan 22 07:42 appstore
+drwxr-xr-x  2 _astris                 _astris                   0 Jan 22 07:42 astris
+drwxr-xr-x  3 root                    wheel                    88 Jan 22 07:42 caches
+drwxr-x---  2 _cmiodalassistants      _cmiodalassistants        0 Jan 22 07:42 cmiodalassistants
+drwxr-xr-x  2 root                    wheel                     0 Jan 22 07:42 com.apple.dt.automationmode
+drwxr-xr-x  3 root                    wheel                    88 Jan 22 07:42 com.apple.xpc.launchd
+drwx------@ 2 root                    wheel                     0 Jan 22 07:42 com.apple.xpc.roleaccountd.staging
+drwxr-x---  3 _darwindaemon           _darwindaemon            88 Jan 22 07:42 darwindaemon
+drwx--x--x@ 2 _datadetectors          _datadetectors            0 Jan 22 07:42 datadetectors
+drwx------  3 root                    wheel                   264 Feb  6 12:59 dhcpclient
+lrwxr-xr-x  1 root                    wheel                    85 Feb  6 12:59 diagnostics -> /System/Volumes/Preboot/DA1B0143-E3FE-4328-A851-D6F35D3E582F/PreLoginData/diagnostics
+drwxr-x---  2 _diskimagesiod          _diskimagesiod           88 Jan 22 07:42 diskimagesiod
+drwxr-xr-x  2 root                    wheel                     0 Jan 22 07:42 displaypolicyd
+drwxr-xr-x  3 root                    wheel                    88 Jan 22 07:42 dslocal
+drwxr-xr-x  2 _findmydevice           _findmydevice             0 Jan 22 07:42 findmydevice
+drwxr-x---  2 _fpsd                   _fpsd                     0 Jan 22 07:42 fpsd
+drwxr-xr-x  3 root                    wheel                   176 Feb  6 13:02 fud
+drwxr-x---  2 _geod                   _geod                     0 Jan 22 07:42 geod
+drwxr-x---  2 _hidd                   _hidd                     0 Jan 22 07:42 hidd
+drwxr-x---  2 _installcoordinationd   _installcoordinationd    88 Jan 22 07:42 installcoordinationd
+drwxr-x---  2 _knowledgegraphd        _knowledgegraphd          0 Jan 22 07:42 knowledgegraphd
+drwxr-x---  2 _locationd              _locationd                0 Jan 22 07:42 locationd
+drwx------  2 _usbmuxd                _usbmuxd                  0 Jan 22 07:42 lockdown
+drwxr-xr-x  4 root                    wheel                   176 Feb  6 12:59 mds
+drwxr-x---  2 _nearbyd                _nearbyd                  0 Jan 22 07:42 nearbyd
+drwxr-x---  2 _nsurlsessiond          _nsurlsessiond            0 Jan 22 07:42 nsurlsessiond
+drwxr-xr-x  2 _nsurlsessiond          _nsurlsessiond            0 Jan 22 07:42 nsurlstoraged
+drwxr-xr-x@ 2 _oahd                   _oahd                     0 Jan 22 07:42 oah
+drwxr-xr-x  2 _ondemand               _ondemand                 0 Jan 22 07:42 ondemand
+drwxr-xr-x  2 root                    wheel                     0 Jan 22 07:42 powerlog
+drwxr-xr-x  2 root                    wheel                     0 Jan 22 07:42 receipts
+drwxr-x---  2 _reportmemoryexception  _reportmemoryexception    0 Jan 22 07:42 reportmemoryexception
+drwxr-x---  2 _rmd                    _rmd                      0 Jan 22 07:42 rmd
+drwxr-x---  2 _securityagent          _securityagent            0 Jan 22 07:42 securityagent
+drwxr-xr-x  2 _softwareupdate         _softwareupdate           0 Jan 22 07:42 softwareupdate
+drwxr-xr-x  2 root                    wheel                     0 Jan 22 07:42 systemstats
+drwxr-x---  2 _timed                  _timed                    0 Jan 22 07:42 timed
+lrwxr-xr-x  1 root                    wheel                    82 Feb  6 12:59 uuidtext -> /System/Volumes/Preboot/DA1B0143-E3FE-4328-A851-D6F35D3E582F/PreLoginData/uuidtext
+-bash-3.2# rm -r applepay
+-bash-3.2# rm -r applestore
+rm: applestore: No such file or directory
+-bash-3.2# rm -r appstore
+-bash-3.2# ls
+Battery					com.apple.xpc.roleaccountd.staging	fpsd					nearbyd					securityagent
+ConfigurationProfiles			darwindaemon				fud					nsurlsessiond				softwareupdate
+ExtensibleSSO				datadetectors				geod					nsurlstoraged				systemstats
+KernelExtensionManagement		dhcpclient				hidd					oah					timed
+astris					diagnostics				installcoordinationd			ondemand				uuidtext
+caches					diskimagesiod				knowledgegraphd				powerlog
+cmiodalassistants			displaypolicyd				locationd				receipts
+com.apple.dt.automationmode		dslocal					lockdown				reportmemoryexception
+com.apple.xpc.launchd			findmydevice				mds					rmd
+-bash-3.2# ls astris
+-bash-3.2# rm -r astris
+-bash-3.2# ls -l
+total 384
+drwxr-xr-x  3 root                    wheel                    88 Feb  6 12:59 Battery
+drwxr-xr-x  2 root                    wheel                     0 Feb  6 13:35 ConfigurationProfiles
+drwxr-xr-x  2 root                    wheel                     0 Feb  6 13:51 ExtensibleSSO
+drwxr-xr-x@ 2 root                    wheel                     0 Jan 22 07:42 KernelExtensionManagement
+drwxr-xr-x  3 root                    wheel                    88 Jan 22 07:42 caches
+drwxr-x---  2 _cmiodalassistants      _cmiodalassistants        0 Jan 22 07:42 cmiodalassistants
+drwxr-xr-x  2 root                    wheel                     0 Jan 22 07:42 com.apple.dt.automationmode
+drwxr-xr-x  3 root                    wheel                    88 Jan 22 07:42 com.apple.xpc.launchd
+drwx------@ 2 root                    wheel                     0 Jan 22 07:42 com.apple.xpc.roleaccountd.staging
+drwxr-x---  3 _darwindaemon           _darwindaemon            88 Jan 22 07:42 darwindaemon
+drwx--x--x@ 2 _datadetectors          _datadetectors            0 Jan 22 07:42 datadetectors
+drwx------  3 root                    wheel                   264 Feb  6 12:59 dhcpclient
+lrwxr-xr-x  1 root                    wheel                    85 Feb  6 12:59 diagnostics -> /System/Volumes/Preboot/DA1B0143-E3FE-4328-A851-D6F35D3E582F/PreLoginData/diagnostics
+drwxr-x---  2 _diskimagesiod          _diskimagesiod           88 Jan 22 07:42 diskimagesiod
+drwxr-xr-x  2 root                    wheel                     0 Jan 22 07:42 displaypolicyd
+drwxr-xr-x  3 root                    wheel                    88 Jan 22 07:42 dslocal
+drwxr-xr-x  2 _findmydevice           _findmydevice             0 Jan 22 07:42 findmydevice
+drwxr-x---  2 _fpsd                   _fpsd                     0 Jan 22 07:42 fpsd
+drwxr-xr-x  3 root                    wheel                   176 Feb  6 13:02 fud
+drwxr-x---  2 _geod                   _geod                     0 Jan 22 07:42 geod
+drwxr-x---  2 _hidd                   _hidd                     0 Jan 22 07:42 hidd
+drwxr-x---  2 _installcoordinationd   _installcoordinationd    88 Jan 22 07:42 installcoordinationd
+drwxr-x---  2 _knowledgegraphd        _knowledgegraphd          0 Jan 22 07:42 knowledgegraphd
+drwxr-x---  2 _locationd              _locationd                0 Jan 22 07:42 locationd
+drwx------  2 _usbmuxd                _usbmuxd                  0 Jan 22 07:42 lockdown
+drwxr-xr-x  4 root                    wheel                   176 Feb  6 12:59 mds
+drwxr-x---  2 _nearbyd                _nearbyd                  0 Jan 22 07:42 nearbyd
+drwxr-x---  2 _nsurlsessiond          _nsurlsessiond            0 Jan 22 07:42 nsurlsessiond
+drwxr-xr-x  2 _nsurlsessiond          _nsurlsessiond            0 Jan 22 07:42 nsurlstoraged
+drwxr-xr-x@ 2 _oahd                   _oahd                     0 Jan 22 07:42 oah
+drwxr-xr-x  2 _ondemand               _ondemand                 0 Jan 22 07:42 ondemand
+drwxr-xr-x  2 root                    wheel                     0 Jan 22 07:42 powerlog
+drwxr-xr-x  2 root                    wheel                     0 Jan 22 07:42 receipts
+drwxr-x---  2 _reportmemoryexception  _reportmemoryexception    0 Jan 22 07:42 reportmemoryexception
+drwxr-x---  2 _rmd                    _rmd                      0 Jan 22 07:42 rmd
+drwxr-x---  2 _securityagent          _securityagent            0 Jan 22 07:42 securityagent
+drwxr-xr-x  2 _softwareupdate         _softwareupdate           0 Jan 22 07:42 softwareupdate
+drwxr-xr-x  2 root                    wheel                     0 Jan 22 07:42 systemstats
+drwxr-x---  2 _timed                  _timed                    0 Jan 22 07:42 timed
+lrwxr-xr-x  1 root                    wheel                    82 Feb  6 12:59 uuidtext -> /System/Volumes/Preboot/DA1B0143-E3FE-4328-A851-D6F35D3E582F/PreLoginData/uuidtext
+-bash-3.2# cd caches
+-bash-3.2# ls
+opendirectory
+-bash-3.2# cd opendirectory
+-bash-3.2# ls
+-bash-3.2# cd ../../
+-bash-3.2# rm caches
+rm: caches: is a directory
+-bash-3.2# ls
+Battery					com.apple.xpc.roleaccountd.staging	findmydevice				lockdown				receipts
+ConfigurationProfiles			darwindaemon				fpsd					mds					reportmemoryexception
+ExtensibleSSO				datadetectors				fud					nearbyd					rmd
+KernelExtensionManagement		dhcpclient				geod					nsurlsessiond				securityagent
+caches					diagnostics				hidd					nsurlstoraged				softwareupdate
+cmiodalassistants			diskimagesiod				installcoordinationd			oah					systemstats
+com.apple.dt.automationmode		displaypolicyd				knowledgegraphd				ondemand				timed
+com.apple.xpc.launchd			dslocal					locationd				powerlog				uuidtext
+-bash-3.2# rm -r cahces
+rm: cahces: No such file or directory
+-bash-3.2# rm -r caches
+-bash-3.2# ls
+Battery					darwindaemon				fpsd					mds					reportmemoryexception
+ConfigurationProfiles			datadetectors				fud					nearbyd					rmd
+ExtensibleSSO				dhcpclient				geod					nsurlsessiond				securityagent
+KernelExtensionManagement		diagnostics				hidd					nsurlstoraged				softwareupdate
+cmiodalassistants			diskimagesiod				installcoordinationd			oah					systemstats
+com.apple.dt.automationmode		displaypolicyd				knowledgegraphd				ondemand				timed
+com.apple.xpc.launchd			dslocal					locationd				powerlog				uuidtext
+com.apple.xpc.roleaccountd.staging	findmydevice				lockdown				receipts
+-bash-3.2# cd cmiodalassistants
+-bash-3.2# ls
+-bash-3.2# cd ../
+-bash-3.2# rm -r cmidoalassistants
+rm: cmidoalassistants: No such file or directory
+-bash-3.2# rm 0r cmiodalassistants
+rm: 0r: No such file or directory
+rm: cmiodalassistants: is a directory
+-bash-3.2#  -r cmiodalassistants
+-bash: -r: command not found
+-bash-3.2# ls
+Battery					darwindaemon				fpsd					mds					reportmemoryexception
+ConfigurationProfiles			datadetectors				fud					nearbyd					rmd
+ExtensibleSSO				dhcpclient				geod					nsurlsessiond				securityagent
+KernelExtensionManagement		diagnostics				hidd					nsurlstoraged				softwareupdate
+cmiodalassistants			diskimagesiod				installcoordinationd			oah					systemstats
+com.apple.dt.automationmode		displaypolicyd				knowledgegraphd				ondemand				timed
+com.apple.xpc.launchd			dslocal					locationd				powerlog				uuidtext
+com.apple.xpc.roleaccountd.staging	findmydevice				lockdown				receipts
+-bash-3.2# rm -r cmiodalassistants
+-bash-3.2# ls -l
+total 352
+drwxr-xr-x  3 root                    wheel                    88 Feb  6 12:59 Battery
+drwxr-xr-x  2 root                    wheel                     0 Feb  6 13:35 ConfigurationProfiles
+drwxr-xr-x  2 root                    wheel                     0 Feb  6 13:51 ExtensibleSSO
+drwxr-xr-x@ 2 root                    wheel                     0 Jan 22 07:42 KernelExtensionManagement
+drwxr-xr-x  2 root                    wheel                     0 Jan 22 07:42 com.apple.dt.automationmode
+drwxr-xr-x  3 root                    wheel                    88 Jan 22 07:42 com.apple.xpc.launchd
+drwx------@ 2 root                    wheel                     0 Jan 22 07:42 com.apple.xpc.roleaccountd.staging
+drwxr-x---  3 _darwindaemon           _darwindaemon            88 Jan 22 07:42 darwindaemon
+drwx--x--x@ 2 _datadetectors          _datadetectors            0 Jan 22 07:42 datadetectors
+drwx------  3 root                    wheel                   264 Feb  6 12:59 dhcpclient
+lrwxr-xr-x  1 root                    wheel                    85 Feb  6 12:59 diagnostics -> /System/Volumes/Preboot/DA1B0143-E3FE-4328-A851-D6F35D3E582F/PreLoginData/diagnostics
+drwxr-x---  2 _diskimagesiod          _diskimagesiod           88 Jan 22 07:42 diskimagesiod
+drwxr-xr-x  2 root                    wheel                     0 Jan 22 07:42 displaypolicyd
+drwxr-xr-x  3 root                    wheel                    88 Jan 22 07:42 dslocal
+drwxr-xr-x  2 _findmydevice           _findmydevice             0 Jan 22 07:42 findmydevice
+drwxr-x---  2 _fpsd                   _fpsd                     0 Jan 22 07:42 fpsd
+drwxr-xr-x  3 root                    wheel                   176 Feb  6 13:02 fud
+drwxr-x---  2 _geod                   _geod                     0 Jan 22 07:42 geod
+drwxr-x---  2 _hidd                   _hidd                     0 Jan 22 07:42 hidd
+drwxr-x---  2 _installcoordinationd   _installcoordinationd    88 Jan 22 07:42 installcoordinationd
+drwxr-x---  2 _knowledgegraphd        _knowledgegraphd          0 Jan 22 07:42 knowledgegraphd
+drwxr-x---  2 _locationd              _locationd                0 Jan 22 07:42 locationd
+drwx------  2 _usbmuxd                _usbmuxd                  0 Jan 22 07:42 lockdown
+drwxr-xr-x  4 root                    wheel                   176 Feb  6 12:59 mds
+drwxr-x---  2 _nearbyd                _nearbyd                  0 Jan 22 07:42 nearbyd
+drwxr-x---  2 _nsurlsessiond          _nsurlsessiond            0 Jan 22 07:42 nsurlsessiond
+drwxr-xr-x  2 _nsurlsessiond          _nsurlsessiond            0 Jan 22 07:42 nsurlstoraged
+drwxr-xr-x@ 2 _oahd                   _oahd                     0 Jan 22 07:42 oah
+drwxr-xr-x  2 _ondemand               _ondemand                 0 Jan 22 07:42 ondemand
+drwxr-xr-x  2 root                    wheel                     0 Jan 22 07:42 powerlog
+drwxr-xr-x  2 root                    wheel                     0 Jan 22 07:42 receipts
+drwxr-x---  2 _reportmemoryexception  _reportmemoryexception    0 Jan 22 07:42 reportmemoryexception
+drwxr-x---  2 _rmd                    _rmd                      0 Jan 22 07:42 rmd
+drwxr-x---  2 _securityagent          _securityagent            0 Jan 22 07:42 securityagent
+drwxr-xr-x  2 _softwareupdate         _softwareupdate           0 Jan 22 07:42 softwareupdate
+drwxr-xr-x  2 root                    wheel                     0 Jan 22 07:42 systemstats
+drwxr-x---  2 _timed                  _timed                    0 Jan 22 07:42 timed
+lrwxr-xr-x  1 root                    wheel                    82 Feb  6 12:59 uuidtext -> /System/Volumes/Preboot/DA1B0143-E3FE-4328-A851-D6F35D3E582F/PreLoginData/uuidtext
+-bash-3.2# cd cmiodalassistantscmiodalassistants
+-bash: cd: cmiodalassistantscmiodalassistants: No such file or directory
+-bash-3.2# cd com.apple.dt.automationmode
+-bash-3.2# ls
+-bash-3.2# cd ..
+-bash-3.2# rm -r com.apple.dt.automationmode
+-bash-3.2# ls -l
+total 352
+drwxr-xr-x  3 root                    wheel                    88 Feb  6 12:59 Battery
+drwxr-xr-x  2 root                    wheel                     0 Feb  6 13:35 ConfigurationProfiles
+drwxr-xr-x  2 root                    wheel                     0 Feb  6 13:51 ExtensibleSSO
+drwxr-xr-x@ 2 root                    wheel                     0 Jan 22 07:42 KernelExtensionManagement
+drwxr-xr-x  3 root                    wheel                    88 Jan 22 07:42 com.apple.xpc.launchd
+drwx------@ 2 root                    wheel                     0 Jan 22 07:42 com.apple.xpc.roleaccountd.staging
+drwxr-x---  3 _darwindaemon           _darwindaemon            88 Jan 22 07:42 darwindaemon
+drwx--x--x@ 2 _datadetectors          _datadetectors            0 Jan 22 07:42 datadetectors
+drwx------  3 root                    wheel                   264 Feb  6 12:59 dhcpclient
+lrwxr-xr-x  1 root                    wheel                    85 Feb  6 12:59 diagnostics -> /System/Volumes/Preboot/DA1B0143-E3FE-4328-A851-D6F35D3E582F/PreLoginData/diagnostics
+drwxr-x---  2 _diskimagesiod          _diskimagesiod           88 Jan 22 07:42 diskimagesiod
+drwxr-xr-x  2 root                    wheel                     0 Jan 22 07:42 displaypolicyd
+drwxr-xr-x  3 root                    wheel                    88 Jan 22 07:42 dslocal
+drwxr-xr-x  2 _findmydevice           _findmydevice             0 Jan 22 07:42 findmydevice
+drwxr-x---  2 _fpsd                   _fpsd                     0 Jan 22 07:42 fpsd
+drwxr-xr-x  3 root                    wheel                   176 Feb  6 13:02 fud
+drwxr-x---  2 _geod                   _geod                     0 Jan 22 07:42 geod
+drwxr-x---  2 _hidd                   _hidd                     0 Jan 22 07:42 hidd
+drwxr-x---  2 _installcoordinationd   _installcoordinationd    88 Jan 22 07:42 installcoordinationd
+drwxr-x---  2 _knowledgegraphd        _knowledgegraphd          0 Jan 22 07:42 knowledgegraphd
+drwxr-x---  2 _locationd              _locationd                0 Jan 22 07:42 locationd
+drwx------  2 _usbmuxd                _usbmuxd                  0 Jan 22 07:42 lockdown
+drwxr-xr-x  4 root                    wheel                   176 Feb  6 12:59 mds
+drwxr-x---  2 _nearbyd                _nearbyd                  0 Jan 22 07:42 nearbyd
+drwxr-x---  2 _nsurlsessiond          _nsurlsessiond            0 Jan 22 07:42 nsurlsessiond
+drwxr-xr-x  2 _nsurlsessiond          _nsurlsessiond            0 Jan 22 07:42 nsurlstoraged
+drwxr-xr-x@ 2 _oahd                   _oahd                     0 Jan 22 07:42 oah
+drwxr-xr-x  2 _ondemand               _ondemand                 0 Jan 22 07:42 ondemand
+drwxr-xr-x  2 root                    wheel                     0 Jan 22 07:42 powerlog
+drwxr-xr-x  2 root                    wheel                     0 Jan 22 07:42 receipts
+drwxr-x---  2 _reportmemoryexception  _reportmemoryexception    0 Jan 22 07:42 reportmemoryexception
+drwxr-x---  2 _rmd                    _rmd                      0 Jan 22 07:42 rmd
+drwxr-x---  2 _securityagent          _securityagent            0 Jan 22 07:42 securityagent
+drwxr-xr-x  2 _softwareupdate         _softwareupdate           0 Jan 22 07:42 softwareupdate
+drwxr-xr-x  2 root                    wheel                     0 Jan 22 07:42 systemstats
+drwxr-x---  2 _timed                  _timed                    0 Jan 22 07:42 timed
+lrwxr-xr-x  1 root                    wheel                    82 Feb  6 12:59 uuidtext -> /System/Volumes/Preboot/DA1B0143-E3FE-4328-A851-D6F35D3E582F/PreLoginData/uuidtext
+-bash-3.2# rm -r  com.apple.xpc.roleaccountd.staging
+-bash-3.2# rm -r datadetectors
+-bash-3.2# ls displaypolicyd
+-bash-3.2# rm -r displaypolicyd
+-bash-3.2# ls diskimagesiod
+.file
+-bash-3.2# cat diskimagesiod/.file
+ 
+-bash-3.2# rm diskimagesiod
+rm: diskimagesiod: is a directory
+-bash-3.2# rm -r diskimagesiod
+-bash-3.2# ls -l
+total 320
+drwxr-xr-x  3 root                    wheel                    88 Feb  6 12:59 Battery
+drwxr-xr-x  2 root                    wheel                     0 Feb  6 13:35 ConfigurationProfiles
+drwxr-xr-x  2 root                    wheel                     0 Feb  6 13:51 ExtensibleSSO
+drwxr-xr-x@ 2 root                    wheel                     0 Jan 22 07:42 KernelExtensionManagement
+drwxr-xr-x  3 root                    wheel                    88 Jan 22 07:42 com.apple.xpc.launchd
+drwxr-x---  3 _darwindaemon           _darwindaemon            88 Jan 22 07:42 darwindaemon
+drwx------  3 root                    wheel                   264 Feb  6 12:59 dhcpclient
+lrwxr-xr-x  1 root                    wheel                    85 Feb  6 12:59 diagnostics -> /System/Volumes/Preboot/DA1B0143-E3FE-4328-A851-D6F35D3E582F/PreLoginData/diagnostics
+drwxr-xr-x  3 root                    wheel                    88 Jan 22 07:42 dslocal
+drwxr-xr-x  2 _findmydevice           _findmydevice             0 Jan 22 07:42 findmydevice
+drwxr-x---  2 _fpsd                   _fpsd                     0 Jan 22 07:42 fpsd
+drwxr-xr-x  3 root                    wheel                   176 Feb  6 13:02 fud
+drwxr-x---  2 _geod                   _geod                     0 Jan 22 07:42 geod
+drwxr-x---  2 _hidd                   _hidd                     0 Jan 22 07:42 hidd
+drwxr-x---  2 _installcoordinationd   _installcoordinationd    88 Jan 22 07:42 installcoordinationd
+drwxr-x---  2 _knowledgegraphd        _knowledgegraphd          0 Jan 22 07:42 knowledgegraphd
+drwxr-x---  2 _locationd              _locationd                0 Jan 22 07:42 locationd
+drwx------  2 _usbmuxd                _usbmuxd                  0 Jan 22 07:42 lockdown
+drwxr-xr-x  4 root                    wheel                   176 Feb  6 12:59 mds
+drwxr-x---  2 _nearbyd                _nearbyd                  0 Jan 22 07:42 nearbyd
+drwxr-x---  2 _nsurlsessiond          _nsurlsessiond            0 Jan 22 07:42 nsurlsessiond
+drwxr-xr-x  2 _nsurlsessiond          _nsurlsessiond            0 Jan 22 07:42 nsurlstoraged
+drwxr-xr-x@ 2 _oahd                   _oahd                     0 Jan 22 07:42 oah
+drwxr-xr-x  2 _ondemand               _ondemand                 0 Jan 22 07:42 ondemand
+drwxr-xr-x  2 root                    wheel                     0 Jan 22 07:42 powerlog
+drwxr-xr-x  2 root                    wheel                     0 Jan 22 07:42 receipts
+drwxr-x---  2 _reportmemoryexception  _reportmemoryexception    0 Jan 22 07:42 reportmemoryexception
+drwxr-x---  2 _rmd                    _rmd                      0 Jan 22 07:42 rmd
+drwxr-x---  2 _securityagent          _securityagent            0 Jan 22 07:42 securityagent
+drwxr-xr-x  2 _softwareupdate         _softwareupdate           0 Jan 22 07:42 softwareupdate
+drwxr-xr-x  2 root                    wheel                     0 Jan 22 07:42 systemstats
+drwxr-x---  2 _timed                  _timed                    0 Jan 22 07:42 timed
+lrwxr-xr-x  1 root                    wheel                    82 Feb  6 12:59 uuidtext -> /System/Volumes/Preboot/DA1B0143-E3FE-4328-A851-D6F35D3E582F/PreLoginData/uuidtext
+-bash-3.2# rm -r findmydevice
+-bash-3.2# rm -r psd
+rm: psd: No such file or directory
+-bash-3.2# ls
+Battery				dhcpclient			hidd				nearbyd				receipts			timed
+ConfigurationProfiles		diagnostics			installcoordinationd		nsurlsessiond			reportmemoryexception		uuidtext
+ExtensibleSSO			dslocal				knowledgegraphd			nsurlstoraged			rmd
+KernelExtensionManagement	fpsd				locationd			oah				securityagent
+com.apple.xpc.launchd		fud				lockdown			ondemand			softwareupdate
+darwindaemon			geod				mds				powerlog			systemstats
+-bash-3.2# ls -l
+total 320
+drwxr-xr-x  3 root                    wheel                    88 Feb  6 12:59 Battery
+drwxr-xr-x  2 root                    wheel                     0 Feb  6 13:35 ConfigurationProfiles
+drwxr-xr-x  2 root                    wheel                     0 Feb  6 13:51 ExtensibleSSO
+drwxr-xr-x@ 2 root                    wheel                     0 Jan 22 07:42 KernelExtensionManagement
+drwxr-xr-x  3 root                    wheel                    88 Jan 22 07:42 com.apple.xpc.launchd
+drwxr-x---  3 _darwindaemon           _darwindaemon            88 Jan 22 07:42 darwindaemon
+drwx------  3 root                    wheel                   264 Feb  6 12:59 dhcpclient
+lrwxr-xr-x  1 root                    wheel                    85 Feb  6 12:59 diagnostics -> /System/Volumes/Preboot/DA1B0143-E3FE-4328-A851-D6F35D3E582F/PreLoginData/diagnostics
+drwxr-xr-x  3 root                    wheel                    88 Jan 22 07:42 dslocal
+drwxr-x---  2 _fpsd                   _fpsd                     0 Jan 22 07:42 fpsd
+drwxr-xr-x  3 root                    wheel                   176 Feb  6 13:02 fud
+drwxr-x---  2 _geod                   _geod                     0 Jan 22 07:42 geod
+drwxr-x---  2 _hidd                   _hidd                     0 Jan 22 07:42 hidd
+drwxr-x---  2 _installcoordinationd   _installcoordinationd    88 Jan 22 07:42 installcoordinationd
+drwxr-x---  2 _knowledgegraphd        _knowledgegraphd          0 Jan 22 07:42 knowledgegraphd
+drwxr-x---  2 _locationd              _locationd                0 Jan 22 07:42 locationd
+drwx------  2 _usbmuxd                _usbmuxd                  0 Jan 22 07:42 lockdown
+drwxr-xr-x  4 root                    wheel                   176 Feb  6 12:59 mds
+drwxr-x---  2 _nearbyd                _nearbyd                  0 Jan 22 07:42 nearbyd
+drwxr-x---  2 _nsurlsessiond          _nsurlsessiond            0 Jan 22 07:42 nsurlsessiond
+drwxr-xr-x  2 _nsurlsessiond          _nsurlsessiond            0 Jan 22 07:42 nsurlstoraged
+drwxr-xr-x@ 2 _oahd                   _oahd                     0 Jan 22 07:42 oah
+drwxr-xr-x  2 _ondemand               _ondemand                 0 Jan 22 07:42 ondemand
+drwxr-xr-x  2 root                    wheel                     0 Jan 22 07:42 powerlog
+drwxr-xr-x  2 root                    wheel                     0 Jan 22 07:42 receipts
+drwxr-x---  2 _reportmemoryexception  _reportmemoryexception    0 Jan 22 07:42 reportmemoryexception
+drwxr-x---  2 _rmd                    _rmd                      0 Jan 22 07:42 rmd
+drwxr-x---  2 _securityagent          _securityagent            0 Jan 22 07:42 securityagent
+drwxr-xr-x  2 _softwareupdate         _softwareupdate           0 Jan 22 07:42 softwareupdate
+drwxr-xr-x  2 root                    wheel                     0 Jan 22 07:42 systemstats
+drwxr-x---  2 _timed                  _timed                    0 Jan 22 07:42 timed
+lrwxr-xr-x  1 root                    wheel                    82 Feb  6 12:59 uuidtext -> /System/Volumes/Preboot/DA1B0143-E3FE-4328-A851-D6F35D3E582F/PreLoginData/uuidtext
+-bash-3.2# rm -r fpsd
+-bash-3.2# rm -r geod
+-bash-3.2# rm -r hidd
+-bash-3.2# rm -r knowledgegraphd
+-bash-3.2# rm -r lockdown
+-bash-3.2# ls knowledgegraphd
+ls: knowledgegraphd: No such file or directory
+-bash-3.2# ls -l
+total 320
+drwxr-xr-x  3 root                    wheel                    88 Feb  6 12:59 Battery
+drwxr-xr-x  2 root                    wheel                     0 Feb  6 13:35 ConfigurationProfiles
+drwxr-xr-x  2 root                    wheel                     0 Feb  6 13:51 ExtensibleSSO
+drwxr-xr-x@ 2 root                    wheel                     0 Jan 22 07:42 KernelExtensionManagement
+drwxr-xr-x  3 root                    wheel                    88 Jan 22 07:42 com.apple.xpc.launchd
+drwxr-x---  3 _darwindaemon           _darwindaemon            88 Jan 22 07:42 darwindaemon
+drwx------  3 root                    wheel                   264 Feb  6 12:59 dhcpclient
+lrwxr-xr-x  1 root                    wheel                    85 Feb  6 12:59 diagnostics -> /System/Volumes/Preboot/DA1B0143-E3FE-4328-A851-D6F35D3E582F/PreLoginData/diagnostics
+drwxr-xr-x  3 root                    wheel                    88 Jan 22 07:42 dslocal
+drwxr-xr-x  3 root                    wheel                   176 Feb  6 13:02 fud
+drwxr-x---  2 _installcoordinationd   _installcoordinationd    88 Jan 22 07:42 installcoordinationd
+drwxr-x---  2 _locationd              _locationd                0 Jan 22 07:42 locationd
+drwxr-xr-x  4 root                    wheel                   176 Feb  6 12:59 mds
+drwxr-x---  2 _nearbyd                _nearbyd                  0 Jan 22 07:42 nearbyd
+drwxr-x---  2 _nsurlsessiond          _nsurlsessiond            0 Jan 22 07:42 nsurlsessiond
+drwxr-xr-x  2 _nsurlsessiond          _nsurlsessiond            0 Jan 22 07:42 nsurlstoraged
+drwxr-xr-x@ 2 _oahd                   _oahd                     0 Jan 22 07:42 oah
+drwxr-xr-x  2 _ondemand               _ondemand                 0 Jan 22 07:42 ondemand
+drwxr-xr-x  2 root                    wheel                     0 Jan 22 07:42 powerlog
+drwxr-xr-x  2 root                    wheel                     0 Jan 22 07:42 receipts
+drwxr-x---  2 _reportmemoryexception  _reportmemoryexception    0 Jan 22 07:42 reportmemoryexception
+drwxr-x---  2 _rmd                    _rmd                      0 Jan 22 07:42 rmd
+drwxr-x---  2 _securityagent          _securityagent            0 Jan 22 07:42 securityagent
+drwxr-xr-x  2 _softwareupdate         _softwareupdate           0 Jan 22 07:42 softwareupdate
+drwxr-xr-x  2 root                    wheel                     0 Jan 22 07:42 systemstats
+drwxr-x---  2 _timed                  _timed                    0 Jan 22 07:42 timed
+lrwxr-xr-x  1 root                    wheel                    82 Feb  6 12:59 uuidtext -> /System/Volumes/Preboot/DA1B0143-E3FE-4328-A851-D6F35D3E582F/PreLoginData/uuidtext
+-bash-3.2# ls locationd
+-bash-3.2# rm -r locationd
+-bash-3.2# rm -r nearbyd nsurlsessiond nsurlstoraged oah ondemand powerlog recipts reportmemoryexceptoin rmd securityagent softwareupdate sytem stats tiemd
+rm: recipts: No such file or directory
+rm: reportmemoryexceptoin: No such file or directory
+rm: sytem: No such file or directory
+rm: stats: No such file or directory
+rm: tiemd: No such file or directory
+-bash-3.2# rm -r nearbyd nsurlsessiond nsurlstoraged oah ondemand powerlog recipts reportmemoryexceptoin rmd securityagent softwareupdate sytem stats timed
+rm: nearbyd: No such file or directory
+rm: nsurlsessiond: No such file or directory
+rm: nsurlstoraged: No such file or directory
+rm: oah: No such file or directory
+rm: ondemand: No such file or directory
+rm: powerlog: No such file or directory
+rm: recipts: No such file or directory
+rm: reportmemoryexceptoin: No such file or directory
+rm: rmd: No such file or directory
+rm: securityagent: No such file or directory
+rm: softwareupdate: No such file or directory
+rm: sytem: No such file or directory
+rm: stats: No such file or directory
+-bash-3.2# ls
+Battery				KernelExtensionManagement	dhcpclient			fud				receipts			uuidtext
+ConfigurationProfiles		com.apple.xpc.launchd		diagnostics			installcoordinationd		reportmemoryexception
+ExtensibleSSO			darwindaemon			dslocal				mds				systemstats
+-bash-3.2# ls -l
+total 320
+drwxr-xr-x  3 root                    wheel                    88 Feb  6 12:59 Battery
+drwxr-xr-x  2 root                    wheel                     0 Feb  6 13:35 ConfigurationProfiles
+drwxr-xr-x  2 root                    wheel                     0 Feb  6 13:51 ExtensibleSSO
+drwxr-xr-x@ 2 root                    wheel                     0 Jan 22 07:42 KernelExtensionManagement
+drwxr-xr-x  3 root                    wheel                    88 Jan 22 07:42 com.apple.xpc.launchd
+drwxr-x---  3 _darwindaemon           _darwindaemon            88 Jan 22 07:42 darwindaemon
+drwx------  3 root                    wheel                   264 Feb  6 12:59 dhcpclient
+lrwxr-xr-x  1 root                    wheel                    85 Feb  6 12:59 diagnostics -> /System/Volumes/Preboot/DA1B0143-E3FE-4328-A851-D6F35D3E582F/PreLoginData/diagnostics
+drwxr-xr-x  3 root                    wheel                    88 Jan 22 07:42 dslocal
+drwxr-xr-x  3 root                    wheel                   176 Feb  6 13:02 fud
+drwxr-x---  2 _installcoordinationd   _installcoordinationd    88 Jan 22 07:42 installcoordinationd
+drwxr-xr-x  4 root                    wheel                   176 Feb  6 12:59 mds
+drwxr-xr-x  2 root                    wheel                     0 Jan 22 07:42 receipts
+drwxr-x---  2 _reportmemoryexception  _reportmemoryexception    0 Jan 22 07:42 reportmemoryexception
+drwxr-xr-x  2 root                    wheel                     0 Jan 22 07:42 systemstats
+lrwxr-xr-x  1 root                    wheel                    82 Feb  6 12:59 uuidtext -> /System/Volumes/Preboot/DA1B0143-E3FE-4328-A851-D6F35D3E582F/PreLoginData/uuidtext
+-bash-3.2# rm -r recipts reportmemoryexception systemstat
+rm: recipts: No such file or directory
+rm: systemstat: No such file or directory
+-bash-3.2# cd.
+-bash: cd.: command not found
+-bash-3.2# ls -l
+total 320
+drwxr-xr-x  3 root                   wheel                   88 Feb  6 12:59 Battery
+drwxr-xr-x  2 root                   wheel                    0 Feb  6 13:35 ConfigurationProfiles
+drwxr-xr-x  2 root                   wheel                    0 Feb  6 13:51 ExtensibleSSO
+drwxr-xr-x@ 2 root                   wheel                    0 Jan 22 07:42 KernelExtensionManagement
+drwxr-xr-x  3 root                   wheel                   88 Jan 22 07:42 com.apple.xpc.launchd
+drwxr-x---  3 _darwindaemon          _darwindaemon           88 Jan 22 07:42 darwindaemon
+drwx------  3 root                   wheel                  264 Feb  6 12:59 dhcpclient
+lrwxr-xr-x  1 root                   wheel                   85 Feb  6 12:59 diagnostics -> /System/Volumes/Preboot/DA1B0143-E3FE-4328-A851-D6F35D3E582F/PreLoginData/diagnostics
+drwxr-xr-x  3 root                   wheel                   88 Jan 22 07:42 dslocal
+drwxr-xr-x  3 root                   wheel                  176 Feb  6 13:02 fud
+drwxr-x---  2 _installcoordinationd  _installcoordinationd   88 Jan 22 07:42 installcoordinationd
+drwxr-xr-x  4 root                   wheel                  176 Feb  6 12:59 mds
+drwxr-xr-x  2 root                   wheel                    0 Jan 22 07:42 receipts
+drwxr-xr-x  2 root                   wheel                    0 Jan 22 07:42 systemstats
+lrwxr-xr-x  1 root                   wheel                   82 Feb  6 12:59 uuidtext -> /System/Volumes/Preboot/DA1B0143-E3FE-4328-A851-D6F35D3E582F/PreLoginData/uuidtext
+-bash-3.2# cat receipts
+cat: receipts: Is a directory
+-bash-3.2# 
+-bash-3.2# cd receipts
+-bash-3.2# 
+-bash-3.2# cd ../
+-bash-3.2# rm -r receipts
+-bash-3.2# 
+-bash-3.2# ls -l
+total 320
+drwxr-xr-x  3 root                   wheel                   88 Feb  6 12:59 Battery
+drwxr-xr-x  2 root                   wheel                    0 Feb  6 13:35 ConfigurationProfiles
+drwxr-xr-x  2 root                   wheel                    0 Feb  6 13:51 ExtensibleSSO
+drwxr-xr-x@ 2 root                   wheel                    0 Jan 22 07:42 KernelExtensionManagement
+drwxr-xr-x  3 root                   wheel                   88 Jan 22 07:42 com.apple.xpc.launchd
+drwxr-x---  3 _darwindaemon          _darwindaemon           88 Jan 22 07:42 darwindaemon
+drwx------  3 root                   wheel                  264 Feb  6 12:59 dhcpclient
+lrwxr-xr-x  1 root                   wheel                   85 Feb  6 12:59 diagnostics -> /System/Volumes/Preboot/DA1B0143-E3FE-4328-A851-D6F35D3E582F/PreLoginData/diagnostics
+drwxr-xr-x  3 root                   wheel                   88 Jan 22 07:42 dslocal
+drwxr-xr-x  3 root                   wheel                  176 Feb  6 13:02 fud
+drwxr-x---  2 _installcoordinationd  _installcoordinationd   88 Jan 22 07:42 installcoordinationd
+drwxr-xr-x  4 root                   wheel                  176 Feb  6 12:59 mds
+drwxr-xr-x  2 root                   wheel                    0 Jan 22 07:42 systemstats
+lrwxr-xr-x  1 root                   wheel                   82 Feb  6 12:59 uuidtext -> /System/Volumes/Preboot/DA1B0143-E3FE-4328-A851-D6F35D3E582F/PreLoginData/uuidtext
+-bash-3.2# cat systemstats
+cat: systemstats: Is a directory
+-bash-3.2# cd systemstats
+-bash-3.2# ls
+-bash-3.2# cd ../systemstats
+-bash-3.2# ls
+-bash-3.2# cd ../
+-bash-3.2# ls
+Battery				KernelExtensionManagement	dhcpclient			fud				systemstats
+ConfigurationProfiles		com.apple.xpc.launchd		diagnostics			installcoordinationd		uuidtext
+ExtensibleSSO			darwindaemon			dslocal				mds
+-bash-3.2# ls -l
+total 320
+drwxr-xr-x  3 root                   wheel                   88 Feb  6 12:59 Battery
+drwxr-xr-x  2 root                   wheel                    0 Feb  6 13:35 ConfigurationProfiles
+drwxr-xr-x  2 root                   wheel                    0 Feb  6 13:51 ExtensibleSSO
+drwxr-xr-x@ 2 root                   wheel                    0 Jan 22 07:42 KernelExtensionManagement
+drwxr-xr-x  3 root                   wheel                   88 Jan 22 07:42 com.apple.xpc.launchd
+drwxr-x---  3 _darwindaemon          _darwindaemon           88 Jan 22 07:42 darwindaemon
+drwx------  3 root                   wheel                  264 Feb  6 12:59 dhcpclient
+lrwxr-xr-x  1 root                   wheel                   85 Feb  6 12:59 diagnostics -> /System/Volumes/Preboot/DA1B0143-E3FE-4328-A851-D6F35D3E582F/PreLoginData/diagnostics
+drwxr-xr-x  3 root                   wheel                   88 Jan 22 07:42 dslocal
+drwxr-xr-x  3 root                   wheel                  176 Feb  6 13:02 fud
+drwxr-x---  2 _installcoordinationd  _installcoordinationd   88 Jan 22 07:42 installcoordinationd
+drwxr-xr-x  4 root                   wheel                  176 Feb  6 12:59 mds
+drwxr-xr-x  2 root                   wheel                    0 Jan 22 07:42 systemstats
+lrwxr-xr-x  1 root                   wheel                   82 Feb  6 12:59 uuidtext -> /System/Volumes/Preboot/DA1B0143-E3FE-4328-A851-D6F35D3E582F/PreLoginData/uuidtext
+-bash-3.2# cat com.apple.xpc.launchd
+cat: com.apple.xpc.launchd: Is a directory
+-bash-3.2# ls
+Battery				KernelExtensionManagement	dhcpclient			fud				systemstats
+ConfigurationProfiles		com.apple.xpc.launchd		diagnostics			installcoordinationd		uuidtext
+ExtensibleSSO			darwindaemon			dslocal				mds
+-bash-3.2# cd com.apple.xpc.launchd
+-bash-3.2# ls
+config
+-bash-3.2# cd config
+-bash-3.2# ls
+-bash-3.2# rm -r com.apple.xpc.launchd
+rm: com.apple.xpc.launchd: No such file or directory
+-bash-3.2# cat ../../
+cat: ../../: Is a directory
+-bash-3.2# ls
+-bash-3.2# ls
+-bash-3.2# pwd
+/var/db/com.apple.xpc.launchd/config
+-bash-3.2# cd ../../
+-bash-3.2# rm -r com.apple.xpc.launchd
+-bash-3.2# ls
+Battery				KernelExtensionManagement	diagnostics			installcoordinationd		uuidtext
+ConfigurationProfiles		darwindaemon			dslocal				mds
+ExtensibleSSO			dhcpclient			fud				systemstats
+-bash-3.2# ls -l
+total 288
+drwxr-xr-x  3 root                   wheel                   88 Feb  6 12:59 Battery
+drwxr-xr-x  2 root                   wheel                    0 Feb  6 13:35 ConfigurationProfiles
+drwxr-xr-x  2 root                   wheel                    0 Feb  6 13:51 ExtensibleSSO
+drwxr-xr-x@ 2 root                   wheel                    0 Jan 22 07:42 KernelExtensionManagement
+drwxr-x---  3 _darwindaemon          _darwindaemon           88 Jan 22 07:42 darwindaemon
+drwx------  3 root                   wheel                  264 Feb  6 12:59 dhcpclient
+lrwxr-xr-x  1 root                   wheel                   85 Feb  6 12:59 diagnostics -> /System/Volumes/Preboot/DA1B0143-E3FE-4328-A851-D6F35D3E582F/PreLoginData/diagnostics
+drwxr-xr-x  3 root                   wheel                   88 Jan 22 07:42 dslocal
+drwxr-xr-x  3 root                   wheel                  176 Feb  6 13:02 fud
+drwxr-x---  2 _installcoordinationd  _installcoordinationd   88 Jan 22 07:42 installcoordinationd
+drwxr-xr-x  4 root                   wheel                  176 Feb  6 12:59 mds
+drwxr-xr-x  2 root                   wheel                    0 Jan 22 07:42 systemstats
+lrwxr-xr-x  1 root                   wheel                   82 Feb  6 12:59 uuidtext -> /System/Volumes/Preboot/DA1B0143-E3FE-4328-A851-D6F35D3E582F/PreLoginData/uuidtext
+-bash-3.2# cd darwindaemon
+-bash-3.2# ls
+Library
+-bash-3.2# cd library
+-bash-3.2# ls
+-bash-3.2# cd ../../
+-bash-3.2# ls -l
+total 288
+drwxr-xr-x  3 root                   wheel                   88 Feb  6 12:59 Battery
+drwxr-xr-x  2 root                   wheel                    0 Feb  6 13:35 ConfigurationProfiles
+drwxr-xr-x  2 root                   wheel                    0 Feb  6 13:51 ExtensibleSSO
+drwxr-xr-x@ 2 root                   wheel                    0 Jan 22 07:42 KernelExtensionManagement
+drwxr-x---  3 _darwindaemon          _darwindaemon           88 Jan 22 07:42 darwindaemon
+drwx------  3 root                   wheel                  264 Feb  6 12:59 dhcpclient
+lrwxr-xr-x  1 root                   wheel                   85 Feb  6 12:59 diagnostics -> /System/Volumes/Preboot/DA1B0143-E3FE-4328-A851-D6F35D3E582F/PreLoginData/diagnostics
+drwxr-xr-x  3 root                   wheel                   88 Jan 22 07:42 dslocal
+drwxr-xr-x  3 root                   wheel                  176 Feb  6 13:02 fud
+drwxr-x---  2 _installcoordinationd  _installcoordinationd   88 Jan 22 07:42 installcoordinationd
+drwxr-xr-x  4 root                   wheel                  176 Feb  6 12:59 mds
+drwxr-xr-x  2 root                   wheel                    0 Jan 22 07:42 systemstats
+lrwxr-xr-x  1 root                   wheel                   82 Feb  6 12:59 uuidtext -> /System/Volumes/Preboot/DA1B0143-E3FE-4328-A851-D6F35D3E582F/PreLoginData/uuidtext
+-bash-3.2# rm -r darwindeamon
+rm: darwindeamon: No such file or directory
+-bash-3.2# rm -r darwindaemon
+-bash-3.2# ls
+Battery				ExtensibleSSO			dhcpclient			dslocal				installcoordinationd		systemstats
+ConfigurationProfiles		KernelExtensionManagement	diagnostics			fud				mds				uuidtext
+-bash-3.2# ls -l
+total 256
+drwxr-xr-x  3 root                   wheel                   88 Feb  6 12:59 Battery
+drwxr-xr-x  2 root                   wheel                    0 Feb  6 13:35 ConfigurationProfiles
+drwxr-xr-x  2 root                   wheel                    0 Feb  6 13:51 ExtensibleSSO
+drwxr-xr-x@ 2 root                   wheel                    0 Jan 22 07:42 KernelExtensionManagement
+drwx------  3 root                   wheel                  264 Feb  6 12:59 dhcpclient
+lrwxr-xr-x  1 root                   wheel                   85 Feb  6 12:59 diagnostics -> /System/Volumes/Preboot/DA1B0143-E3FE-4328-A851-D6F35D3E582F/PreLoginData/diagnostics
+drwxr-xr-x  3 root                   wheel                   88 Jan 22 07:42 dslocal
+drwxr-xr-x  3 root                   wheel                  176 Feb  6 13:02 fud
+drwxr-x---  2 _installcoordinationd  _installcoordinationd   88 Jan 22 07:42 installcoordinationd
+drwxr-xr-x  4 root                   wheel                  176 Feb  6 12:59 mds
+drwxr-xr-x  2 root                   wheel                    0 Jan 22 07:42 systemstats
+lrwxr-xr-x  1 root                   wheel                   82 Feb  6 12:59 uuidtext -> /System/Volumes/Preboot/DA1B0143-E3FE-4328-A851-D6F35D3E582F/PreLoginData/uuidtext
+-bash-3.2# cd dhcpclient
+-bash-3.2# ls
+CGA.plist	CGAKeys.plist	leases
+-bash-3.2# cat cga.plist
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>GlobalModifier</key>
+	<dict>
+		<key>CreationDate</key>
+		<date>2022-02-06T12:59:56Z</date>
+		<key>Modifier</key>
+		<data>
+		BmXTz097v5oF7PARBvLDTg==
+		</data>
+		<key>SecurityLevel</key>
+		<integer>0</integer>
+	</dict>
+	<key>HostUUID</key>
+	<data>
+	b01jckbeVCuRvLg7kZk/dA==
+	</data>
+</dict>
+</plist>
+-bash-3.2# ls
+CGA.plist	CGAKeys.plist	leases
+-bash-3.2# cat cgakeys.plist
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PrivateKey</key>
+	<data>
+	MIICXQIBAAKBgQCKU+WlB/L3i17FaSXiu536ObV7n7oCs4DZ/TUwD332s6xPRenSZUVM
+	a1qaKPC4g6AL/6q7kfQ4joMtmhO0lIUJgZ1boNV8khFlVUhuSU1K/8FIdGUHj068pkDn
+	uU/VsgYI0Z9JSUuKzgqjY3d5hfg8n/3rs6pPw/NKszkJ+I1ZWwIDAQABAoGALLhV6GYq
+	/yuwHmtRg707JA/vI8HuTXxB3ne1b826X/0TameEYfA6mKumVWuB820eW3Ky/EQB7Bzq
+	vN3wm/NeFMyB42AoQwGLi8zt3ZeQcK3DrfpuebiWXD8IZ+ujnxrpiVspsNNupsR11Bqk
+	Jnk6VsJTw8C9ikLOkp/9p8vMnFkCQQC+49afbp9iHDVEb9/32T5BXjvzzyY0lbP0hyJE
+	hEKOH4sePX5vyY5Y9EesvF1smwvQC2YOgBkHelSlcEvr8WRpAkEAuYJrFOtqBj991fKC
+	U7l2G4Vx7zCrKDqH/FV33HtDzKmMmJzJKaI+iSY6XDLwAU9R7DI4dJhpwb+iESPE6afH
+	IwJALlLcIpSV2Rk/U/xSPbNaiEJ2ChSbEOfDY/PnPPlbrWG6QPxrUnV3Nd8SBbkwcsqt
+	cy9Q9PPhHw9wuzUlN3y9AQJBAK641V5os/2ag0ylEncE8ObO8xaTwkErj7TsUu5I8vyq
+	nI+I7DbYZwoKBWGdYEv7h29thZrbipA/i8eU5vwjV/0CQQCEod5nOPPhyhV9Dmil1kbb
+	3IQ/20bvMw7S+aLBY5mZ8TGO+/BeGd7hS+pupc4Z6mLXaFulWkHVw64KQ4lj1mUa
+	</data>
+	<key>PublicKey</key>
+	<data>
+	MIGJAoGBAIpT5aUH8veLXsVpJeK7nfo5tXufugKzgNn9NTAPffazrE9F6dJlRUxrWpoo
+	8LiDoAv/qruR9DiOgy2aE7SUhQmBnVug1XySEWVVSG5JTUr/wUh0ZQePTrymQOe5T9Wy
+	BgjRn0lJS4rOCqNjd3mF+Dyf/euzqk/D80qzOQn4jVlbAgMBAAE=
+	</data>
+</dict>
+</plist>
+-bash-3.2# ls
+CGA.plist	CGAKeys.plist	leases
+-bash-3.2# cat leases
+cat: leases: Is a directory
+-bash-3.2# cd leases
+-bash-3.2# ls
+-bash-3.2# cd ../../
+-bash-3.2# ls
+Battery				ExtensibleSSO			dhcpclient			dslocal				installcoordinationd		systemstats
+ConfigurationProfiles		KernelExtensionManagement	diagnostics			fud				mds				uuidtext
+-bash-3.2# rm -r dhcpclient
+-bash-3.2# ls
+Battery				ExtensibleSSO			diagnostics			fud				mds				uuidtext
+ConfigurationProfiles		KernelExtensionManagement	dslocal				installcoordinationd		systemstats
+-bash-3.2# ls -l
+total 224
+drwxr-xr-x  3 root                   wheel                   88 Feb  6 12:59 Battery
+drwxr-xr-x  2 root                   wheel                    0 Feb  6 13:35 ConfigurationProfiles
+drwxr-xr-x  2 root                   wheel                    0 Feb  6 13:51 ExtensibleSSO
+drwxr-xr-x@ 2 root                   wheel                    0 Jan 22 07:42 KernelExtensionManagement
+lrwxr-xr-x  1 root                   wheel                   85 Feb  6 12:59 diagnostics -> /System/Volumes/Preboot/DA1B0143-E3FE-4328-A851-D6F35D3E582F/PreLoginData/diagnostics
+drwxr-xr-x  3 root                   wheel                   88 Jan 22 07:42 dslocal
+drwxr-xr-x  3 root                   wheel                  176 Feb  6 13:02 fud
+drwxr-x---  2 _installcoordinationd  _installcoordinationd   88 Jan 22 07:42 installcoordinationd
+drwxr-xr-x  4 root                   wheel                  176 Feb  6 12:59 mds
+drwxr-xr-x  2 root                   wheel                    0 Jan 22 07:42 systemstats
+lrwxr-xr-x  1 root                   wheel                   82 Feb  6 12:59 uuidtext -> /System/Volumes/Preboot/DA1B0143-E3FE-4328-A851-D6F35D3E582F/PreLoginData/uuidtext
+-bash-3.2# cd dslocal
+-bash-3.2# ls
+nodes
+-bash-3.2# cd nodes
+-bash-3.2# ls
+Default
+-bash-3.2# cd default
+-bash-3.2# ls
+aliases		computers	groups		networks	users
+-bash-3.2# ls aliases
+MAILER-AGENT.plist	MAILER-DAEMON.plist	administrator.plist	dumper.plist		manager.plist		nobody.plist		operator.plist		postmaster.plist
+-bash-3.2# cat aliases/mailer-agent.plist
+')6-bash-3.2# lssTname?Zpostmaster?\MAILER-AGENT
+aliases		computers	groups		networks	users
+-bash-3.2# cat aliases/mailer-agent.plist: echo "
+> "
+cat: aliases/mailer-agent.plist:: No such file or directory
+cat: echo: No such file or directory
+cat: 
+: No such file or directory
+-bash-3.2# cat aliases/mailer-agent.plist; echo "
+"
+')6ist00?WmembersTname?Zpostmaster?\MAILER-AGENT
+
+-bash-3.2# ls alisases
+ls: alisases: No such file or directory
+-bash-3.2# ls
+aliases		computers	groups		networks	users
+-bash-3.2# ls aliases
+MAILER-AGENT.plist	MAILER-DAEMON.plist	administrator.plist	dumper.plist		manager.plist		nobody.plist		operator.plist		postmaster.plist
+-bash-3.2# cat aliases/mailer-daemon.plist; echo "
+"
+')7ist00?WmembersTname?Zpostmaster?]MAILER-DAEMON
+
+-bash-3.2# cat aliases/administrator.plist; echo "
+"
+!#1ist00?WmembersTname?Troot?]administrator
+
+-bash-3.2# cat aliases/dumper.plist; echo "
+"
+!#*ist00?WmembersTname?Troot?Vdumper
+
+-bash-3.2# cat aliases/manager.plist; echo "
+"
+!#+ist00?WmembersTname?Troot?Wmanager
+
+-bash-3.2# cat aliases/nobody.plist; echo "
+"
+!#*ist00?WmembersTname?Troot?Vnobody
+
+-bash-3.2# cat aliases/operator.plist; echo "
+"
+!#,ist00?WmembersTname?Troot?Xoperator
+
+-bash-3.2# cat aliases/postmaster.plist; echo "
+"
+!#.ist00?WmembersTname?Troot?Zpostmaster
+
+-bash-3.2# ls
+aliases		computers	groups		networks	users
+-bash-3.2# rm -r aliases
+-bash-3.2# ls computers
+localhost.plist
+-bash-3.2# cat computers/localhost.plist
+bplist00?
+Zip_address\ipv6_addressTname_kerberosServices_record_daemon_version?Y127.0.0.1?	
+S::1[fe80::1%lo0?
+                 Ylocalhost?ThostYafpserverTcifsSvnc?W860000+0C[]gjnz|????????-bash-3.2# 
+-bash-3.2# cat computers/localhost.plist; echo "
+> "
+bplist00?
+Zip_address\ipv6_addressTname_kerberosServices_record_daemon_version?Y127.0.0.1?	
+S::1[fe80::1%lo0?
+                 Ylocalhost?ThostYafpserverTcifsSvnc?W860000+0C[]gjnz|????????
+
+-bash-3.2# 

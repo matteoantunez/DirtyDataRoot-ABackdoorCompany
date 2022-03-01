@@ -1,0 +1,413 @@
+Date/Time:        2022-02-27 04:37:31.356 -0600
+End time:         2022-02-27 04:39:34.251 -0600
+OS Version:       macOS 12.2 (Build 21D49)
+Architecture:     arm64e
+Report Version:   35
+Incident Identifier: 4250CBE6-AD5D-4201-993E-24D462BC500E
+Share With Devs:  Yes
+
+Data Source:      Microstackshots
+Shared Cache:     B90241B2-E425-3982-B3F6-26C4567CBB49 slid base address 0x1a4c68000, slide 0x24c68000
+Shared Cache:     13FE38D9-95AD-3D4F-889F-443CD57D94DE slid base address 0x7ff81dc98000, slide 0x1dc98000
+
+Command:          com.apple.WebKit.WebContent
+Path:             /System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.xpc/Contents/MacOS/com.apple.WebKit.WebContent
+Identifier:       com.apple.WebKit.WebContent
+Version:          17612 (17612.4.9.1.5)
+Build Version:    1
+Project Name:     WebKit
+Source Version:   7612004009001005
+Architecture:     arm64e
+Parent:           UNKNOWN [1]
+PID:              46497
+
+Event:            cpu usage
+Action taken:     none
+CPU:              90 seconds cpu time over 123 seconds (73% cpu average), exceeding limit of 50% cpu over 180 seconds
+CPU limit:        90s
+Limit duration:   180s
+CPU used:         90s
+CPU duration:     123s
+Duration:         122.89s
+Duration Sampled: 121.34s
+Steps:            87
+
+Hardware model:   MacBookPro17,1
+Active cpus:      8
+HW page size:     16384
+VM page size:     16384
+
+Fan speed:        0 rpm
+Advisory levels:  Battery -> 2, User -> 2, ThermalPressure -> 0, Combined -> 2
+Free disk space:  13.34 GB/228.27 GB, low space threshold 3072 MB
+Low Power Mode:   Enabled
+
+Heaviest stack for the target process:
+  11  start + 520 (dyld + 20724) [0x1022cd0f4]
+  11  WebKit::XPCServiceMain(int, char const**) + 152 (WebKit + 2509884) [0x1c313dc3c]
+  11  xpc_main + 108 (libxpc.dylib + 98820) [0x1a4cd2204]
+  11  _xpc_objc_main + 900 (libxpc.dylib + 100608) [0x1a4cd2900]
+  11  -[NSRunLoop(NSRunLoop) run] + 92 (Foundation + 997536) [0x1a5fa38a0]
+  11  -[NSRunLoop(NSRunLoop) runMode:beforeDate:] + 236 (Foundation + 408992) [0x1a5f13da0]
+  9  CFRunLoopRunSpecific + 684 (CoreFoundation + 534408) [0x1a503e788]
+  9  __CFRunLoopDoObservers + 572 (CoreFoundation + 539800) [0x1a503fc98]
+  9  __CFRUNLOOP_IS_CALLING_OUT_TO_AN_OBSERVER_CALLBACK_FUNCTION__ + 36 (CoreFoundation + 540236) [0x1a503fe4c]
+  9  WebKit::TiledCoreAnimationDrawingArea::updateRendering(WebKit::TiledCoreAnimationDrawingArea::UpdateRenderingType) + 588 (WebKit + 6065040) [0x1c34a1b90]
+  5  WebCore::Page::updateRendering() + 1148 (WebCore + 26623788) [0x1c1dbef2c]
+  5  WebCore::Page::forEachDocumentFromMainFrame(WebCore::Frame const&, WTF::Function<void (WebCore::Document&)> const&) + 324 (WebCore + 26644220) [0x1c1dc3efc]
+  3  WebCore::Document::updateIntersectionObservations() + 5548 (WebCore + 19820084) [0x1c1741e34]
+  3  WebCore::IntersectionObserver::notify() + 292 (WebCore + 26557100) [0x1c1daeaac]
+  3  WebCore::JSIntersectionObserverCallback::handleEvent(WebCore::IntersectionObserver&, WTF::Vector<WTF::Ref<WebCore::IntersectionObserverEntry, WTF::RawPtrTraits<WebCore::IntersectionObserverEntry> >, 0ul, WTF::CrashOnOverflow, 16ul, WTF::FastMalloc> const&, WebCore::IntersectionObserver&) + 588 (WebCore + 7780872) [0x1c0bc6a08]
+  3  WebCore::JSCallbackData::invokeCallback(WebCore::JSDOMGlobalObject&, JSC::JSObject*, JSC::JSValue, JSC::MarkedArgumentBufferWithSize<8ul>&, WebCore::JSCallbackData::CallbackType, JSC::PropertyName, WTF::NakedPtr<JSC::Exception>&) + 572 (WebCore + 16795564) [0x1c145f7ac]
+  3  JSC::profiledCall(JSC::JSGlobalObject*, JSC::ProfilingReason, JSC::JSValue, JSC::CallData const&, JSC::JSValue, JSC::ArgList const&, WTF::NakedPtr<JSC::Exception>&) + 204 (JavaScriptCore + 12960336) [0x1bdc6b250]
+  3  JSC::Interpreter::executeCall(JSC::JSGlobalObject*, JSC::JSObject*, JSC::CallData const&, JSC::JSValue, JSC::ArgList const&) + 488 (JavaScriptCore + 10623012) [0x1bda30824]
+  3  ??? [0x1108047e8]
+  2  ??? [0x110ba1ff8]
+  2  ??? [0x110859078]
+  2  ??? [0x1109061b8]
+  1  ??? [0x110d8a46c]
+  1  ??? [0x110b6de10]
+  1  ??? [0x1108bf188]
+  1  ??? [0x1108b3e48]
+  1  ??? [0x110859078]
+  1  ??? [0x110b01a48]
+  1  ??? [0x110b720b0]
+  1  ??? [0x110b2c4cc]
+  1  ??? [0x110b6a174]
+  1  ??? [0x110b665d0]
+  1  ??? [0x1108b4898]
+  1  ??? [0x1108a8780]
+
+
+Powerstats for:   com.apple.WebKit.WebContent [46497] [unique pid 146222]
+UUID:             EB12CF64-DF7F-36B3-9BBF-7AEF4AEE0B09
+Path:             /System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.xpc/Contents/MacOS/com.apple.WebKit.WebContent
+Identifier:       com.apple.WebKit.WebContent
+Version:          17612 (17612.4.9.1.5)
+Build Version:    1
+Project Name:     WebKit
+Source Version:   7612004009001005
+Shared Cache:     B90241B2-E425-3982-B3F6-26C4567CBB49 slid base address 0x1a4c68000, slide 0x24c68000
+Architecture:     arm64e
+Parent:           UNKNOWN [1]
+UID:              501
+Sudden Term:      Tracked (allows idle exit)
+Footprint:        378.58 MB -> 127.16 MB (-251.42 MB)
+Start time:       2022-02-27 04:37:58.513 -0600
+End time:         2022-02-27 04:39:30.443 -0600
+Num samples:      12 (14%)
+Primary state:    7 samples Non-Frontmost App, Non-Suppressed, User mode, Effective Thread QoS User Interactive, Requested Thread QoS User Interactive, Override Thread QoS Unspecified
+User Activity:    0 samples Idle, 12 samples Active
+Power Source:     12 samples on Battery, 0 samples on AC
+  11  start + 520 (dyld + 20724) [0x1022cd0f4]
+    11  WebKit::XPCServiceMain(int, char const**) + 152 (WebKit + 2509884) [0x1c313dc3c]
+      11  xpc_main + 108 (libxpc.dylib + 98820) [0x1a4cd2204]
+        11  _xpc_objc_main + 900 (libxpc.dylib + 100608) [0x1a4cd2900]
+          11  -[NSRunLoop(NSRunLoop) run] + 92 (Foundation + 997536) [0x1a5fa38a0]
+            11  -[NSRunLoop(NSRunLoop) runMode:beforeDate:] + 236 (Foundation + 408992) [0x1a5f13da0]
+              9   CFRunLoopRunSpecific + 684 (CoreFoundation + 534408) [0x1a503e788]
+                9   __CFRunLoopDoObservers + 572 (CoreFoundation + 539800) [0x1a503fc98]
+                  9   __CFRUNLOOP_IS_CALLING_OUT_TO_AN_OBSERVER_CALLBACK_FUNCTION__ + 36 (CoreFoundation + 540236) [0x1a503fe4c]
+                    9   WebKit::TiledCoreAnimationDrawingArea::updateRendering(WebKit::TiledCoreAnimationDrawingArea::UpdateRenderingType) + 588 (WebKit + 6065040) [0x1c34a1b90]
+                      5   WebCore::Page::updateRendering() + 1148 (WebCore + 26623788) [0x1c1dbef2c]
+                        5   WebCore::Page::forEachDocumentFromMainFrame(WebCore::Frame const&, WTF::Function<void (WebCore::Document&)> const&) + 324 (WebCore + 26644220) [0x1c1dc3efc]
+                          3   WebCore::Document::updateIntersectionObservations() + 5548 (WebCore + 19820084) [0x1c1741e34]
+                            3   WebCore::IntersectionObserver::notify() + 292 (WebCore + 26557100) [0x1c1daeaac]
+                              3   WebCore::JSIntersectionObserverCallback::handleEvent(WebCore::IntersectionObserver&, WTF::Vector<WTF::Ref<WebCore::IntersectionObserverEntry, WTF::RawPtrTraits<WebCore::IntersectionObserverEntry> >, 0ul, WTF::CrashOnOverflow, 16ul, WTF::FastMalloc> const&, WebCore::IntersectionObserver&) + 588 (WebCore + 7780872) [0x1c0bc6a08]
+                                3   WebCore::JSCallbackData::invokeCallback(WebCore::JSDOMGlobalObject&, JSC::JSObject*, JSC::JSValue, JSC::MarkedArgumentBufferWithSize<8ul>&, WebCore::JSCallbackData::CallbackType, JSC::PropertyName, WTF::NakedPtr<JSC::Exception>&) + 572 (WebCore + 16795564) [0x1c145f7ac]
+                                  3   JSC::profiledCall(JSC::JSGlobalObject*, JSC::ProfilingReason, JSC::JSValue, JSC::CallData const&, JSC::JSValue, JSC::ArgList const&, WTF::NakedPtr<JSC::Exception>&) + 204 (JavaScriptCore + 12960336) [0x1bdc6b250]
+                                    3   JSC::Interpreter::executeCall(JSC::JSGlobalObject*, JSC::JSObject*, JSC::CallData const&, JSC::JSValue, JSC::ArgList const&) + 488 (JavaScriptCore + 10623012) [0x1bda30824]
+                                      3   ??? [0x1108047e8]
+                                        2   ??? [0x110ba1ff8]
+                                          2   ??? [0x110859078]
+                                            2   ??? [0x1109061b8]
+                                              1   ??? [0x110d8a46c]
+                                                1   ??? [0x110b6de10]
+                                                  1   ??? [0x1108bf188]
+                                                    1   ??? [0x1108b3e48]
+                                                      1   ??? [0x110859078]
+                                                        1   ??? [0x110b01a48]
+                                                          1   ??? [0x110b720b0]
+                                                            1   ??? [0x110b2c4cc]
+                                                              1   ??? [0x110b6a174]
+                                                                1   ??? [0x110b665d0]
+                                                                  1   ??? [0x1108b4898]
+                                                                    1   ??? [0x1108a8780]
+                                              1   ??? [0x110ba0310]
+                                                1   ??? [0x110b6de10]
+                                                  1   ??? [0x110848878]
+                                                    1   ??? [0x1108b3e48]
+                                                      1   ??? [0x110859078]
+                                                        1   ??? [0x110d80350]
+                                                          1   ??? [0x1108488b0]
+                                                            1   ??? [0x110859078]
+                                                              1   ??? [0x110913008]
+                                                                1   ??? [0x1108f8414]
+                                                                  1   ??? [0x1108fd4b8]
+                                                                    1   WebCore::jsElementPrototypeFunction_setAttribute(JSC::JSGlobalObject*, JSC::CallFrame*) + 0 (WebCore + 6180860) [0x1c0a3fffc]
+                                        1   ??? [0x110ba1f0c]
+                                          1   ??? [0x110859078]
+                                            1   ??? [0x11090617c]
+                                              1   ??? [0x110ba0310]
+                                                1   ??? [0x110b6de10]
+                                                  1   ??? [0x110849690]
+                                                    1   ??? [0x1108b3e48]
+                                                      1   ??? [0x110859078]
+                                                        1   ??? [0x110d80138]
+                                                          1   ??? [0x110b720b0]
+                                                            1   ??? [0x110b2c4cc]
+                                                              1   ??? [0x110cfd144]
+                          2   WebCore::Document::updateIntersectionObservations() + 2320 (WebCore + 19816856) [0x1c1741198]
+                            2   WebCore::computeClippedRectInRootContentsSpace(WebCore::LayoutRect const&, WebCore::RenderElement const*) + 124 (WebCore + 19871780) [0x1c174e824]
+                              1   WebCore::RenderInline::computeVisibleRectInContainer(WebCore::LayoutRect const&, WebCore::RenderLayerModelObject const*, WebCore::RenderObject::VisibleRectContext) const + 660 (WebCore + 30569412) [0x1c21823c4]
+                                1   WebCore::RenderBox::computeVisibleRectInContainer(WebCore::LayoutRect const&, WebCore::RenderLayerModelObject const*, WebCore::RenderObject::VisibleRectContext) const + 2748 (WebCore + 30203124) [0x1c2128cf4]
+                                  1   WebCore::RenderBox::computeVisibleRectInContainer(WebCore::LayoutRect const&, WebCore::RenderLayerModelObject const*, WebCore::RenderObject::VisibleRectContext) const + 2748 (WebCore + 30203124) [0x1c2128cf4]
+                                    1   WebCore::RenderBox::computeVisibleRectInContainer(WebCore::LayoutRect const&, WebCore::RenderLayerModelObject const*, WebCore::RenderObject::VisibleRectContext) const + 2748 (WebCore + 30203124) [0x1c2128cf4]
+                                      1   WebCore::RenderBox::computeVisibleRectInContainer(WebCore::LayoutRect const&, WebCore::RenderLayerModelObject const*, WebCore::RenderObject::VisibleRectContext) const + 2748 (WebCore + 30203124) [0x1c2128cf4]
+                                        1   WebCore::RenderBox::computeVisibleRectInContainer(WebCore::LayoutRect const&, WebCore::RenderLayerModelObject const*, WebCore::RenderObject::VisibleRectContext) const + 0 (WebCore + 30200376) [0x1c2128238]
+                                          1   <Suppressed>
+                              1   WebCore::RenderBox::computeVisibleRectInContainer(WebCore::LayoutRect const&, WebCore::RenderLayerModelObject const*, WebCore::RenderObject::VisibleRectContext) const + 2748 (WebCore + 30203124) [0x1c2128cf4]
+                                1   WebCore::RenderBox::computeVisibleRectInContainer(WebCore::LayoutRect const&, WebCore::RenderLayerModelObject const*, WebCore::RenderObject::VisibleRectContext) const + 2748 (WebCore + 30203124) [0x1c2128cf4]
+                                  1   WebCore::RenderBox::computeVisibleRectInContainer(WebCore::LayoutRect const&, WebCore::RenderLayerModelObject const*, WebCore::RenderObject::VisibleRectContext) const + 2748 (WebCore + 30203124) [0x1c2128cf4]
+                                    1   WebCore::RenderBox::computeVisibleRectInContainer(WebCore::LayoutRect const&, WebCore::RenderLayerModelObject const*, WebCore::RenderObject::VisibleRectContext) const + 2748 (WebCore + 30203124) [0x1c2128cf4]
+                                      1   WebCore::RenderBox::computeVisibleRectInContainer(WebCore::LayoutRect const&, WebCore::RenderLayerModelObject const*, WebCore::RenderObject::VisibleRectContext) const + 2576 (WebCore + 30202952) [0x1c2128c48]
+                                        1   WebCore::LayoutRect::edgeInclusiveIntersect(WebCore::LayoutRect const&) + 180 (WebCore + 28028968) [0x1c1f16028]
+                                          1   <Suppressed>
+                      3   WebCore::Page::updateRendering() + 1572 (WebCore + 26624212) [0x1c1dbf0d4]
+                        3   WebCore::FrameView::updateLayoutAndStyleIfNeededRecursive() + 1144 (WebCore + 196744) [0x1c048b088]
+                          3   WebCore::Document::updateStyleIfNeeded() + 432 (WebCore + 180552) [0x1c0487148]
+                            2   WebCore::Document::resolveStyle(WebCore::Document::ResolveStyleType) + 1944 (WebCore + 19686192) [0x1c1721330]
+                              2   WebCore::Style::TreeResolver::resolve() + 860 (WebCore + 32102164) [0x1c22f8714]
+                                1   WebCore::Style::TreeResolver::resolveComposedTree() + 5292 (WebCore + 32091084) [0x1c22f5bcc]
+                                  1   WebCore::Style::TreeResolver::resolvePseudoStyle(WebCore::Element&, WebCore::Style::ElementUpdate const&, WebCore::PseudoId) + 316 (WebCore + 32085120) [0x1c22f4480]
+                                    1   WebCore::Style::Resolver::pseudoStyleForElement(WebCore::Element const&, WebCore::Style::PseudoElementRequest const&, WebCore::RenderStyle const&, WebCore::RenderStyle const*, WebCore::SelectorFilter const*) + 660 (WebCore + 32043320) [0x1c22ea138]
+                                      1   WebCore::Style::Resolver::applyMatchedProperties(WebCore::Style::Resolver::State&, WebCore::Style::MatchResult const&, WebCore::Style::Resolver::UseMatchedDeclarationsCache) + 1464 (WebCore + 32036784) [0x1c22e87b0]
+                                        1   WebCore::Style::Builder::applyLowPriorityProperties() + 300 (WebCore + 31978308) [0x1c22da344]
+                                          1   void WebCore::Style::Builder::applyPropertiesImpl<(WebCore::Style::Builder::CustomPropertyCycleTracking)1>(int, int) + 200 (WebCore + 31981460) [0x1c22daf94]
+                                            1   WebCore::Style::Builder::applyProperty(WebCore::CSSPropertyID, WebCore::CSSValue&, WebCore::SelectorChecker::LinkMatchMask) + 88 (WebCore + 31978944) [0x1c22da5c0]
+                                              1   WebCore::Style::Builder::resolvedVariableValue(WebCore::CSSPropertyID, WebCore::CSSValue const&) + 108 (WebCore + 31984664) [0x1c22dbc18]
+                                                1   WebCore::CSSParserContext::CSSParserContext(WebCore::Document const&, WTF::URL const&, WTF::String const&) + 196 (WebCore + 18770800) [0x1c1641b70]
+                                                  1   WebCore::SecurityOrigin::canRequest(WTF::URL const&) const + 136 (WebCore + 26859968) [0x1c1df89c0]
+                                                    1   WTF::URL::hasSpecialScheme() const + 428 (JavaScriptCore + 18007168) [0x1be13b480]
+                                1   WebCore::Style::TreeResolver::resolveComposedTree() + 3732 (WebCore + 32089524) [0x1c22f55b4]
+                                  1   WebCore::Style::Resolver::styleForElement(WebCore::Element const&, WebCore::RenderStyle const*, WebCore::RenderStyle const*, WebCore::RuleMatchingBehavior, WebCore::SelectorFilter const*) + 1080 (WebCore + 32032536) [0x1c22e7718]
+                                    1   WebCore::Style::Resolver::applyMatchedProperties(WebCore::Style::Resolver::State&, WebCore::Style::MatchResult const&, WebCore::Style::Resolver::UseMatchedDeclarationsCache) + 1464 (WebCore + 32036784) [0x1c22e87b0]
+                                      1   WebCore::Style::Builder::applyLowPriorityProperties() + 212 (WebCore + 31978220) [0x1c22da2ec]
+                                        1   WebCore::Style::Builder::applyCustomProperty(WTF::String const&) + 1268 (WebCore + 31983208) [0x1c22db668]
+                                          1   WebCore::Style::Builder::resolvedVariableValue(WebCore::CSSPropertyID, WebCore::CSSValue const&) + 640 (WebCore + 31985196) [0x1c22dbe2c]
+                                            1   WebCore::CSSParser::parseValueWithVariableReferences(WebCore::CSSPropertyID, WebCore::CSSValue const&, WebCore::Style::BuilderState&) + 1532 (WebCore + 18769716) [0x1c1641734]
+                                              1   WebCore::CSSPropertyParser::parseTypedCustomPropertyValue(WTF::String const&, WTF::String const&, WebCore::Style::BuilderState const&) + 360 (WebCore + 18883864) [0x1c165d518]
+                                                1   WebCore::CSSVariableData::CSSVariableData(WebCore::CSSParserTokenRange const&) + 192 (WebCore + 18462172) [0x1c15f65dc]
+                                                  1   WTF::StringBuilder::shrinkToFit() + 68 (JavaScriptCore + 62336) [0x1bd01e380]
+                                                    1   void WTF::StringBuilder::reallocateBuffer<char16_t>(unsigned int) + 308 (JavaScriptCore + 17918384) [0x1be1259b0]
+                            1   WebCore::Document::resolveStyle(WebCore::Document::ResolveStyleType) + 2912 (WebCore + 19687160) [0x1c17216f8]
+                      1   WebCore::Page::updateRendering() + 1872 (WebCore + 26624512) [0x1c1dbf200]
+                        1   WebCore::Page::forEachDocumentFromMainFrame(WebCore::Frame const&, WTF::Function<void (WebCore::Document&)> const&) + 324 (WebCore + 26644220) [0x1c1dc3efc]
+                          1   WebCore::Document::enqueuePaintTimingEntryIfNeeded() + 196 (WebCore + 19709648) [0x1c1726ed0]
+                            1   WebCore::ContentfulPaintChecker::qualifiesForContentfulPaint(WebCore::FrameView&) + 352 (WebCore + 29638316) [0x1c209eeac]
+                              1   WebCore::ScrollView::paint(WebCore::GraphicsContext&, WebCore::IntRect const&, WebCore::Widget::SecurityOriginPaintPolicy, WebCore::EventRegionContext*) + 1468 (WebCore + 27335972) [0x1c1e6cd24]
+                                1   WebCore::FrameView::paintContents(WebCore::GraphicsContext&, WebCore::IntRect const&, WebCore::Widget::SecurityOriginPaintPolicy, WebCore::EventRegionContext*) + 744 (WebCore + 26508488) [0x1c1da2cc8]
+                                  1   WebCore::RenderLayer::paint(WebCore::GraphicsContext&, WebCore::LayoutRect const&, WebCore::LayoutSize const&, WTF::OptionSet<WebCore::PaintBehavior>, WebCore::RenderObject*, WTF::OptionSet<WebCore::RenderLayer::PaintLayerFlag>, WebCore::RenderLayer::SecurityOriginPaintPolicy, WebCore::EventRegionContext*) + 288 (WebCore + 30618688) [0x1c218e440]
+                                    1   WebCore::RenderLayer::paintLayerContents(WebCore::GraphicsContext&, WebCore::RenderLayer::LayerPaintingInfo const&, WTF::OptionSet<WebCore::RenderLayer::PaintLayerFlag>) + 8796 (WebCore + 30633740) [0x1c2191f0c]
+                                      1   WebCore::RenderLayer::paintLayerContents(WebCore::GraphicsContext&, WebCore::RenderLayer::LayerPaintingInfo const&, WTF::OptionSet<WebCore::RenderLayer::PaintLayerFlag>) + 6764 (WebCore + 30631708) [0x1c219171c]
+                                        1   WebCore::RenderBlock::paint(WebCore::PaintInfo&, WebCore::LayoutPoint const&) + 496 (WebCore + 436144) [0x1c04c57b0]
+                                          1   WebCore::RenderBlock::paintObject(WebCore::PaintInfo&, WebCore::LayoutPoint const&) + 156 (WebCore + 425304) [0x1c04c2d58]
+                                            1   WebCore::RenderBox::determineBackgroundBleedAvoidance(WebCore::GraphicsContext&) const + 0 (WebCore + 30151964) [0x1c211c51c]
+              2   CFRunLoopRunSpecific + 600 (CoreFoundation + 534324) [0x1a503e734]
+                1   __CFRunLoopRun + 1000 (CoreFoundation + 537276) [0x1a503f2bc]
+                  1   _kernelrpc_mach_port_insert_member_trap + 8 (libsystem_kernel.dylib + 6388) [0x1a4f398f4]
+                    1   <Suppressed, Kernel mode>
+                1   __CFRunLoopRun + 820 (CoreFoundation + 537096) [0x1a503f208]
+                  1   __CFRunLoopDoSources0 + 268 (CoreFoundation + 542868) [0x1a5040894]
+                    1   __CFRunLoopDoSource0 + 208 (CoreFoundation + 543656) [0x1a5040ba8]
+                      1   __CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE0_PERFORM_FUNCTION__ + 28 (CoreFoundation + 543836) [0x1a5040c5c]
+                        1   WTF::RunLoop::performWork(void*) + 36 (JavaScriptCore + 17905572) [0x1be1227a4]
+                          1   WTF::RunLoop::performWork() + 200 (JavaScriptCore + 17902108) [0x1be121a1c]
+                            1   WTF::Detail::CallableWrapper<IPC::Connection::enqueueIncomingMessage(std::__1::unique_ptr<IPC::Decoder, std::__1::default_delete<IPC::Decoder> >)::$_11, void>::call() + 240 (WebKit + 601752) [0x1c2f6be98]
+                              1   IPC::Decoder::~Decoder() + 64 (WebKit + 603808) [0x1c2f6c6a0]
+                                1   _kernelrpc_mach_port_deallocate_trap + 8 (libsystem_kernel.dylib + 6340) [0x1a4f398c4]
+                                  1   <Suppressed>
+  1   start_wqthread + 0 (libsystem_pthread.dylib + 8208) [0x1a4f70010]
+    1   <Kernel mode, Effective Thread QoS Default, Requested Thread QoS Default>
+
+  Binary Images:
+           0x102028000 -        0x102033fff  com.apple.WebKit.WebContent 17612 (17612.4.9.1.5) <EB12CF64-DF7F-36B3-9BBF-7AEF4AEE0B09>  /System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.xpc/Contents/MacOS/com.apple.WebKit.WebContent
+           0x1022c8000 -        0x102343fff  dyld (941.5)                                      <D21A73EA-79CD-36EB-8AC9-2C5CF5181A27>  /usr/lib/dyld
+           0x1a4cba000 -        0x1a4cf3fff  libxpc.dylib (2235.80.3)                          <FD3E0E8D-4618-3CE5-A24A-5639BE86B979>  /usr/lib/system/libxpc.dylib
+           0x1a4f38000 -        0x1a4f6dfff  libsystem_kernel.dylib (8019.80.24)               <384945E6-DD71-37E5-9A3D-84FFF14A1E60>  /usr/lib/system/libsystem_kernel.dylib
+           0x1a4f6e000 -        0x1a4f7afff  libsystem_pthread.dylib (485.60.2)                <F7B2ECCF-E6F1-3109-AE81-9028C0B8332A>  /usr/lib/system/libsystem_pthread.dylib
+           0x1a4fbc000 -        0x1a54fffff  com.apple.CoreFoundation 6.9 (1856.105)           <16FADF8B-A3AF-3E0C-B5FB-CE9A9CDC8747>  /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
+           0x1a5eb0000 -        0x1a629dfff  com.apple.Foundation 6.9 (1856.105)               <90321A38-43A5-3767-9A9C-2C631338B9BC>  /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
+           0x1bd00f000 -        0x1be2f2fff  com.apple.JavaScriptCore 17612 (17612.4.9.1.5)    <5078F2C2-A8EC-3B97-B51E-B351E61D8843>  /System/Library/Frameworks/JavaScriptCore.framework/Versions/A/JavaScriptCore
+           0x1c045b000 -        0x1c2846fff  com.apple.WebCore 17612 (17612.4.9.1.5)           <83EB004C-D50A-3AD8-9BD4-C0519740B37F>  /System/Library/Frameworks/WebKit.framework/Versions/A/Frameworks/WebCore.framework/Versions/A/WebCore
+           0x1c2ed9000 -        0x1c3854fff  com.apple.WebKit 17612 (17612.4.9.1.5)            <85225776-DBE9-3B7D-9B53-88692425A518>  /System/Library/Frameworks/WebKit.framework/Versions/A/WebKit
+
+
+Powerstats for:   com.apple.WebKit.GPU
+UUID:             99B8DA5C-C95C-3DD6-AAF1-FF708B59EAD2
+Path:             /System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.GPU.xpc/Contents/MacOS/com.apple.WebKit.GPU
+Identifier:       com.apple.WebKit.GPU
+Version:          17612 (17612.4.9.1.5)
+Build Version:    1
+Project Name:     WebKit
+Source Version:   7612004009001005
+Shared Cache:     B90241B2-E425-3982-B3F6-26C4567CBB49 slid base address 0x1a4c68000, slide 0x24c68000
+Architecture:     arm64e
+Start time:       2022-02-27 04:37:32.441 -0600
+End time:         2022-02-27 04:39:33.779 -0600
+Num samples:      46 (53%)
+Primary state:    17 samples Non-Frontmost App, Non-Suppressed, User mode, Effective Thread QoS Default, Requested Thread QoS Default, Override Thread QoS Unspecified
+User Activity:    0 samples Idle, 46 samples Active
+Power Source:     46 samples on Battery, 0 samples on AC
+  31  start_wqthread + 8 (libsystem_pthread.dylib + 8216) [0x1a4f70018]
+    31  _pthread_wqthread + 228 (libsystem_pthread.dylib + 13000) [0x1a4f712c8]
+      31  _dispatch_worker_thread2 + 164 (libdispatch.dylib + 88920) [0x1a4dc8b58]
+        31  _dispatch_root_queue_drain + 396 (libdispatch.dylib + 86812) [0x1a4dc831c]
+          31  _dispatch_async_redirect_invoke + 596 (libdispatch.dylib + 26332) [0x1a4db96dc]
+            31  _dispatch_continuation_pop + 504 (libdispatch.dylib + 28800) [0x1a4dba080]
+              31  _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+                31  void WTF::dispatchWorkItem<WTF::(anonymous namespace)::DispatchWorkItem>(void*) + 60 (JavaScriptCore + 18205876) [0x1be16bcb4]
+                  31  WTF::Detail::CallableWrapper<WebKit::MediaFormatReader::parseByteSource(WTF::RetainPtr<OpaqueMTPluginByteSource*>&&)::$_6, void>::call() + 124 (WebKit + 4343528) [0x1c32fd6e8]
+                    31  WebCore::SourceBufferParserWebM::appendData(WebCore::SourceBufferParser::Segment&&, WTF::CompletionHandler<void ()>&&, WebCore::SourceBufferParser::AppendFlags) + 2256 (WebCore + 28508976) [0x1c1f8b330]
+                      31  webm::WebmParser::Feed(webm::Callback*, webm::Reader*) + 296 (libwebrtc.dylib + 7342988) [0x1ad648b8c]
+                        31  webm::IdParser::Feed(webm::Callback*, webm::Reader*, unsigned long long*) + 128 (libwebrtc.dylib + 7201164) [0x1ad62618c]
+                          31  WebCore::SourceBufferParserWebM::SegmentReader::Read(unsigned long, unsigned char*, unsigned long long*) + 188 (WebCore + 28569716) [0x1c1f9a074]
+                            31  WebCore::SourceBufferParser::Segment::read(unsigned long, unsigned long, unsigned char*) const + 208 (WebCore + 28505072) [0x1c1f8a3f0]
+                              31  ??? (MediaToolbox + 575284) [0x1b1859734]
+                                31  ??? (MediaToolbox + 529372) [0x1b184e3dc]
+                                  21  ??? (MediaToolbox + 510332) [0x1b184997c]
+                                    15  ??? (MediaToolbox + 514852) [0x1b184ab24]
+                                      12  ??? (MediaToolbox + 520800) [0x1b184c260]
+                                        12  FigRetainProxyUnlockMutex + 68 (CoreMedia + 122272) [0x1ad96eda0]
+                                          11  _pthread_mutex_firstfit_unlock_slow + 244 (libsystem_pthread.dylib + 8088) [0x1a4f6ff98]
+                                            11  __psynch_mutexdrop + 8 (libsystem_kernel.dylib + 18312) [0x1a4f3c788]
+                                              11  <Kernel mode>
+                                          1   _pthread_mutex_firstfit_unlock_slow + 236 (libsystem_pthread.dylib + 8080) [0x1a4f6ff90]
+                                      3   ??? (MediaToolbox + 521368) [0x1b184c498]
+                                        2   ??? (MediaToolbox + 5094808) [0x1b1ca8d98]
+                                          1   ??? (MediaToolbox + 5097172) [0x1b1ca96d4]
+                                            1   curll_getURL + 216 (CoreMedia + 627428) [0x1ad9ea2e4]
+                                              1   _dispatch_event_loop_poke + 348 (libdispatch.dylib + 156004) [0x1a4dd9164]
+                                                1   kevent_id + 8 (libsystem_kernel.dylib + 13960) [0x1a4f3b688]
+                                                  1   <Kernel mode>
+                                          1   ??? (MediaToolbox + 5097004) [0x1b1ca962c]
+                                            1   FigCFDictionarySetInt64 + 32 (CoreMedia + 115356) [0x1ad96d29c]
+                                              1   figCFDictionarySetNumber + 116 (CoreMedia + 15044) [0x1ad954ac4]
+                                                1   __CFStringHash + 228 (CoreFoundation + 42260) [0x1a4fc6514]
+                                        1   ??? (MediaToolbox + 5094724) [0x1b1ca8d44]
+                                          1   _malloc_zone_calloc + 88 (libsystem_malloc.dylib + 125032) [0x1a4da6868]
+                                            1   szone_malloc_should_clear + 92 (libsystem_malloc.dylib + 9620) [0x1a4d8a594]
+                                              1   tiny_malloc_should_clear + 224 (libsystem_malloc.dylib + 14204) [0x1a4d8b77c]
+                                                1   tiny_malloc_from_free_list + 1652 (libsystem_malloc.dylib + 17360) [0x1a4d8c3d0]
+                                                  1   tiny_free_list_add_ptr + 1104 (libsystem_malloc.dylib + 29412) [0x1a4d8f2e4]
+                                    6   ??? (MediaToolbox + 514660) [0x1b184aa64]
+                                      6   fig_log_emit + 80 (CoreMedia + 54336) [0x1ad95e440]
+                                        6   fig_log_internal + 148 (CoreMedia + 54496) [0x1ad95e4e0]
+                                          2   _os_log_impl_flatten_and_send + 6016 (libsystem_trace.dylib + 28420) [0x1a4cfaf04]
+                                            2   voucher_activity_trace_v_2 + 728 (libdispatch.dylib + 179616) [0x1a4ddeda0]
+                                              2   firehose_buffer_ring_enqueue + 316 (libdispatch.dylib + 185428) [0x1a4de0454]
+                                                2   firehose_send_push_async + 92 (libdispatch.dylib + 233988) [0x1a4dec204]
+                                                  2   mach_msg_trap + 8 (libsystem_kernel.dylib + 6484) [0x1a4f39954]
+                                                    2   <Kernel mode>
+                                          2   _os_log_impl_flatten_and_send + 948 (libsystem_trace.dylib + 23352) [0x1a4cf9b38]
+                                          1   _os_log_impl_flatten_and_send + 4864 (libsystem_trace.dylib + 27268) [0x1a4cfaa84]
+                                          1   _os_log_impl_flatten_and_send + 2048 (libsystem_trace.dylib + 24452) [0x1a4cf9f84]
+                                            1   dyld4::APIs::dyld_image_header_containing_address(void const*) + 64 (dyld + 150340) [0x1030c0b44]
+                                              1   dyld4::APIs::findImageMappedAt(void const*, dyld3::MachOLoaded const**, bool*, char const**, void const**, unsigned long long*, unsigned char*) + 380 (dyld + 149380) [0x1030c0784]
+                                                1   DyldSharedCache::forEachImageTextSegment(void (unsigned long long, unsigned long long, unsigned char const*, char const*, bool&) block_pointer) const + 120 (dyld + 205200) [0x1030ce190]
+                                  8   ??? (MediaToolbox + 510400) [0x1b18499c0]
+                                    5   ??? (MediaToolbox + 512476) [0x1b184a1dc]
+                                      4   FigRetainProxyConditionVariableWaitRelative + 92 (CoreMedia + 961156) [0x1ada3ba84]
+                                        4   FigConditionVariableWaitRelative + 16 (CoreMedia + 553568) [0x1ad9d8260]
+                                          4   WaitOnConditionTimedRelative + 92 (CoreMedia + 240264) [0x1ad98ba88]
+                                            4   __psynch_cvwait + 8 (libsystem_kernel.dylib + 20672) [0x1a4f3d0c0]
+                                      1   FigRetainProxyConditionVariableWaitRelative + 104 (CoreMedia + 961168) [0x1ada3ba90]
+                                        1   figRetainProxyIncrementLockCount + 44 (CoreMedia + 122028) [0x1ad96ecac]
+                                          1   objc_loadWeakRetained + 340 (libobjc.A.dylib + 51616) [0x1a4e069a0]
+                                            1   _CFRetain + 0 (CoreFoundation + 1207840) [0x1a50e2e20]
+                                    2   ??? (MediaToolbox + 513616) [0x1b184a650]
+                                      2   FigThreadUnregisterAbortAction + 200 (CoreMedia + 45888) [0x1ad95c340]
+                                        1   free + 348 (libsystem_malloc.dylib + 7952) [0x1a4d89f10]
+                                        1   free + 44 (libsystem_malloc.dylib + 7648) [0x1a4d89de0]
+                                    1   ??? (MediaToolbox + 513608) [0x1b184a648]
+                                      1   _CFRelease + 28 (CoreFoundation + 1431224) [0x1a51196b8]
+                                  1   ??? (MediaToolbox + 511256) [0x1b1849d18]
+                                    1   ??? (MediaToolbox + 502992) [0x1b1847cd0]
+                                      1   FigDeferNotificationToDispatchQueue + 184 (CoreMedia + 60804) [0x1ad95fd84]
+                                        1   _dispatch_root_queue_poke_slow + 232 (libdispatch.dylib + 67696) [0x1a4dc3870]
+                                          1   _dispatch_semaphore_signal_slow + 52 (libdispatch.dylib + 18212) [0x1a4db7724]
+                                            1   semaphore_signal_trap + 8 (libsystem_kernel.dylib + 6508) [0x1a4f3996c]
+                                  1   ??? (MediaToolbox + 510008) [0x1b1849838]
+  14  thread_start + 8 (libsystem_pthread.dylib + 8228) [0x1a4f70024]
+    14  _pthread_start + 148 (libsystem_pthread.dylib + 29248) [0x1a4f75240]
+      10  _dispatch_worker_thread + 244 (libdispatch.dylib + 86188) [0x1a4dc80ac]
+        10  _dispatch_root_queue_drain + 396 (libdispatch.dylib + 86812) [0x1a4dc831c]
+          10  _dispatch_lane_invoke + 444 (libdispatch.dylib + 48856) [0x1a4dbeed8]
+            10  _dispatch_lane_serial_drain + 672 (libdispatch.dylib + 45872) [0x1a4dbe330]
+              10  _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+                5   figDeferredNotificationDispatchFunction + 44 (CoreMedia + 60956) [0x1ad95fe1c]
+                  2   ??? (MediaToolbox + 503212) [0x1b1847dac]
+                    2   CMNotificationCenterPostNotification + 128 (CoreMedia + 32960) [0x1ad9590c0]
+                      1   -[__CFNotification dealloc] + 124 (CoreFoundation + 505148) [0x1a503753c]
+                        1   free + 128 (libsystem_malloc.dylib + 7732) [0x1a4d89e34]
+                          1   <Effective Thread QoS Unspecified, Requested Thread QoS Unspecified>
+                      1   _objc_rootAlloc + 8 (libobjc.A.dylib + 42084) [0x1a4e04464]
+                        1   <Effective Thread QoS Unspecified, Requested Thread QoS Unspecified>
+                  1   ??? (MediaToolbox + 504052) [0x1b18480f4]
+                    1   CMNotificationCenterPostNotification + 128 (CoreMedia + 32960) [0x1ad9590c0]
+                      1   CFNotificationCenterPostNotificationWithOptions + 136 (CoreFoundation + 496276) [0x1a5035294]
+                        1   _CFXNotificationPost + 620 (CoreFoundation + 294476) [0x1a5003e4c]
+                          1   CFXNotificationRegistrarFind + 324 (CoreFoundation + 1730816) [0x1a5162900]
+                            1   CFCachedStringEqual + 0 (CoreFoundation + 1742056) [0x1a51654e8]
+                              1   <Effective Thread QoS Unspecified, Requested Thread QoS Unspecified>
+                  1   ??? (MediaToolbox + 503180) [0x1b1847d8c]
+                    1   FigRetainProxyUnlockMutex + 68 (CoreMedia + 122272) [0x1ad96eda0]
+                      1   _pthread_mutex_firstfit_unlock_slow + 244 (libsystem_pthread.dylib + 8088) [0x1a4f6ff98]
+                        1   __psynch_mutexdrop + 8 (libsystem_kernel.dylib + 18312) [0x1a4f3c788]
+                          1   <Effective Thread QoS Unspecified, Requested Thread QoS Unspecified>
+                  1   ??? (MediaToolbox + 503092) [0x1b1847d34]
+                    1   FigRetainProxyLockMutex + 28 (CoreMedia + 121956) [0x1ad96ec64]
+                      1   _pthread_mutex_firstfit_lock_slow + 240 (libsystem_pthread.dylib + 7320) [0x1a4f6fc98]
+                        1   __psynch_mutexwait + 8 (libsystem_kernel.dylib + 17856) [0x1a4f3c5c0]
+                          1   <Effective Thread QoS Unspecified, Requested Thread QoS Unspecified>
+                3   curl_performDataCallbackDispatch + 44 (CoreMedia + 622576) [0x1ad9e8ff0]
+                  2   ??? (MediaToolbox + 5097628) [0x1b1ca989c]
+                    1   ??? (MediaToolbox + 5100732) [0x1b1caa4bc]
+                      1   ??? (MediaToolbox + 524948) [0x1b184d294]
+                        1   ??? (MediaToolbox + 499336) [0x1b1846e88]
+                          1   <Effective Thread QoS Unspecified, Requested Thread QoS Unspecified>
+                    1   ??? (MediaToolbox + 522480) [0x1b184c8f0]
+                      1   <Effective Thread QoS Unspecified, Requested Thread QoS Unspecified>
+                  1   ??? (MediaToolbox + 5097392) [0x1b1ca97b0]
+                    1   CFRetain + 200 (CoreFoundation + 18864) [0x1a4fc09b0]
+                      1   <Effective Thread QoS Unspecified, Requested Thread QoS Unspecified>
+                1   ??? (MediaToolbox + 5097276) [0x1b1ca973c]
+                  1   <Effective Thread QoS Unspecified, Requested Thread QoS Unspecified>
+                1   curl_performDataCallbackDispatch + 68 (CoreMedia + 622600) [0x1ad9e9008]
+                  1   -[__NSDictionaryM dealloc] + 176 (CoreFoundation + 188556) [0x1a4fea08c]
+                    1   szone_size + 8 (libsystem_malloc.dylib + 18868) [0x1a4d8c9b4]
+                      1   <Effective Thread QoS Unspecified, Requested Thread QoS Unspecified>
+      4   _dispatch_worker_thread + 312 (libdispatch.dylib + 86256) [0x1a4dc80f0]
+        4   _dispatch_semaphore_wait_slow + 76 (libdispatch.dylib + 18364) [0x1a4db77bc]
+          4   semaphore_timedwait_trap + 8 (libsystem_kernel.dylib + 6568) [0x1a4f399a8]
+            3   <Effective Thread QoS Unspecified, Requested Thread QoS Unspecified>
+            1   <Kernel mode, Effective Thread QoS Unspecified, Requested Thread QoS Unspecified>
+  1   start_wqthread + 0 (libsystem_pthread.dylib + 8208) [0x1a4f70010]
+    1   <Kernel mode>
+
+  Binary Images:
+           0x102d48000 -                ???  com.apple.WebKit.GPU 17612 (17612.4.9.1.5)     <99B8DA5C-C95C-3DD6-AAF1-FF708B59EAD2>  /System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.GPU.xpc/Contents/MacOS/com.apple.WebKit.GPU
+           0x10309c000 -        0x103117fff  dyld (941.5)                                   <D21A73EA-79CD-36EB-8AC9-2C5CF5181A27>  /usr/lib/dyld
+           0x1a4cf4000 -        0x1a4d0dfff  libsystem_trace.dylib (1375.40.2)              <4EE35FBA-FAF5-3289-9AD8-D4693D48E0E4>  /usr/lib/system/libsystem_trace.dylib
+           0x1a4d88000 -        0x1a4db2fff  libsystem_malloc.dylib (374.60.3)              <961751ED-F18B-30D4-8025-AA12CA23197B>  /usr/lib/system/libsystem_malloc.dylib
+           0x1a4db3000 -        0x1a4df9fff  libdispatch.dylib (1324.60.3)                  <93E1DCFC-EF56-3113-8E7C-1BA85266A93B>  /usr/lib/system/libdispatch.dylib
+           0x1a4dfa000 -        0x1a4e35fff  libobjc.A.dylib (838.1)                        <2EB32E1D-90CB-3256-8681-9034085A06A6>  /usr/lib/libobjc.A.dylib
+           0x1a4f38000 -        0x1a4f6dfff  libsystem_kernel.dylib (8019.80.24)            <384945E6-DD71-37E5-9A3D-84FFF14A1E60>  /usr/lib/system/libsystem_kernel.dylib
+           0x1a4f6e000 -        0x1a4f7afff  libsystem_pthread.dylib (485.60.2)             <F7B2ECCF-E6F1-3109-AE81-9028C0B8332A>  /usr/lib/system/libsystem_pthread.dylib
+           0x1a4fbc000 -        0x1a54fffff  com.apple.CoreFoundation 6.9 (1856.105)        <16FADF8B-A3AF-3E0C-B5FB-CE9A9CDC8747>  /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
+           0x1acf48000 -        0x1ad70bfff  libwebrtc.dylib (7612.4.9.1.5)                 <E9E0DF6C-CD89-36BC-86B9-D3BEFC7EE999>  /System/Library/Frameworks/WebKit.framework/Versions/A/Frameworks/WebCore.framework/Versions/A/Frameworks/libwebrtc.dylib
+           0x1ad951000 -        0x1ada62fff  com.apple.CoreMedia 1.0 (2935.5.1)             <6A9D10FF-752D-3122-BFAC-581929950857>  /System/Library/Frameworks/CoreMedia.framework/Versions/A/CoreMedia
+           0x1b17cd000 -        0x1b1f3efff  com.apple.MediaToolbox 1.0 (2935.5.1)          <617149F5-7AC0-3EAD-A8DC-404E7C7C48BD>  /System/Library/Frameworks/MediaToolbox.framework/Versions/A/MediaToolbox
+           0x1bd00f000 -        0x1be2f2fff  com.apple.JavaScriptCore 17612 (17612.4.9.1.5) <5078F2C2-A8EC-3B97-B51E-B351E61D8843>  /System/Library/Frameworks/JavaScriptCore.framework/Versions/A/JavaScriptCore
+           0x1c045b000 -        0x1c2846fff  com.apple.WebCore 17612 (17612.4.9.1.5)        <83EB004C-D50A-3AD8-9BD4-C0519740B37F>  /System/Library/Frameworks/WebKit.framework/Versions/A/Frameworks/WebCore.framework/Versions/A/WebCore
+           0x1c2ed9000 -        0x1c3854fff  com.apple.WebKit 17612 (17612.4.9.1.5)         <85225776-DBE9-3B7D-9B53-88692425A518>  /System/Library/Frameworks/WebKit.framework/Versions/A/WebKit

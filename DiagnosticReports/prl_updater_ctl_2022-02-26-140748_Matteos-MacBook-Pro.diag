@@ -1,0 +1,109 @@
+Date/Time:        2022-02-26 14:06:11.330 -0600
+End time:         2022-02-26 14:07:47.919 -0600
+OS Version:       macOS 12.2 (Build 21D49)
+Architecture:     arm64e
+Report Version:   35
+Incident Identifier: F109A131-03CD-4710-ABEB-8C4CE57FB702
+Share With Devs:  Yes
+
+Data Source:      Microstackshots
+Shared Cache:     B90241B2-E425-3982-B3F6-26C4567CBB49 slid base address 0x1a4c68000, slide 0x24c68000
+
+Command:          prl_updater_ctl
+Path:             /Applications/Parallels Desktop.app/Contents/MacOS/prl_updater_ctl
+Codesigning ID:   com.parallels.updater
+Team ID:          4C6364ACXT
+Architecture:     arm64
+Parent:           UNKNOWN [8353]
+PID:              8491
+
+Event:            disk writes
+Action taken:     none
+Writes:           2148.29 MB of file backed memory dirtied over 97 seconds (22.24 MB per second average), exceeding limit of 24.86 KB per second over 86400 seconds
+Writes limit:     2147.48 MB
+Limit duration:   86400s
+Writes caused:    2148.29 MB
+Writes duration:  97s
+Duration:         96.59s
+Duration Sampled: 78.65s
+Steps:            199 ( (10.49 MB/step))
+
+Hardware model:   MacBookPro17,1
+Active cpus:      8
+HW page size:     16384
+VM page size:     16384
+
+Advisory levels:  Battery -> 2, User -> 2, ThermalPressure -> 0, Combined -> 2
+Free disk space:  151.29 GB/228.27 GB, low space threshold 3072 MB
+
+Heaviest stack for the target process:
+  199  start + 520 (dyld + 20724) [0x1047d50f4]
+  199  ??? (prl_updater_ctl + 35540) [0x104574ad4]
+  199  QCoreApplication::exec() + 132 (QtCore + 1928140) [0x105a02bcc]
+  199  QEventLoop::exec(QFlags<QEventLoop::ProcessEventsFlag>) + 524 (QtCore + 1910104) [0x1059fe558]
+  199  QEventDispatcherUNIX::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) + 72 (QtCore + 2316432) [0x105a61890]
+  199  QCoreApplicationPrivate::sendPostedEvents(QObject*, int, QThreadData*) + 764 (QtCore + 1931284) [0x105a03814]
+  199  QCoreApplication::notifyInternal2(QObject*, QEvent*) + 220 (QtCore + 1926556) [0x105a0259c]
+  199  QCoreApplicationPrivate::notify_helper(QObject*, QEvent*) + 124 (QtCore + 1927520) [0x105a02960]
+  199  QObject::event(QEvent*) + 620 (QtCore + 2092312) [0x105a2ad18]
+  199  ??? (QtNetwork + 911640) [0x104bf6918]
+  199  ??? (QtNetwork + 430252) [0x104b810ac]
+  199  ??? (QtCore + 2124088) [0x105a32938]
+  199  ??? (prl_updater_ctl + 103432) [0x104585408]
+  199  QIODevice::write(char const*, long long) + 256 (QtCore + 1215884) [0x105954d8c]
+  199  QFileDevice::writeData(char const*, long long) + 208 (QtCore + 1182240) [0x10594ca20]
+  199  write + 8 (libsystem_kernel.dylib + 21820) [0x1a4f3d53c]
+
+
+Powerstats for:   prl_updater_ctl [8491]
+UUID:             CAD7DCBE-F5D1-3EAA-A2A7-E4539CAB32DA
+Path:             /Applications/Parallels Desktop.app/Contents/MacOS/prl_updater_ctl
+Codesigning ID:   com.parallels.updater
+Team ID:          4C6364ACXT
+Architecture:     arm64
+Parent:           UNKNOWN [8353]
+UID:              501
+Footprint:        6464 KB -> 7248 KB (+784 KB) (max 10.34 MB )
+Start time:       2022-02-26 14:06:29.165 -0600
+End time:         2022-02-26 14:07:47.818 -0600
+Num samples:      199 (100%)
+Primary state:    199 samples Non-Frontmost App, Non-Suppressed, Kernel mode, Effective Thread QoS Default, Requested Thread QoS User Interactive, Override Thread QoS Unspecified
+User Activity:    0 samples Idle, 199 samples Active
+Power Source:     199 samples on Battery, 0 samples on AC
+  199  start + 520 (dyld + 20724) [0x1047d50f4]
+    199  ??? (prl_updater_ctl + 35540) [0x104574ad4]
+      199  QCoreApplication::exec() + 132 (QtCore + 1928140) [0x105a02bcc]
+        199  QEventLoop::exec(QFlags<QEventLoop::ProcessEventsFlag>) + 524 (QtCore + 1910104) [0x1059fe558]
+          199  QEventDispatcherUNIX::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) + 72 (QtCore + 2316432) [0x105a61890]
+            199  QCoreApplicationPrivate::sendPostedEvents(QObject*, int, QThreadData*) + 764 (QtCore + 1931284) [0x105a03814]
+              199  QCoreApplication::notifyInternal2(QObject*, QEvent*) + 220 (QtCore + 1926556) [0x105a0259c]
+                199  QCoreApplicationPrivate::notify_helper(QObject*, QEvent*) + 124 (QtCore + 1927520) [0x105a02960]
+                  199  QObject::event(QEvent*) + 620 (QtCore + 2092312) [0x105a2ad18]
+                    199  ??? (QtNetwork + 911640) [0x104bf6918]
+                      199  ??? (QtNetwork + 430252) [0x104b810ac]
+                        199  ??? (QtCore + 2124088) [0x105a32938]
+                          199  ??? (prl_updater_ctl + 103432) [0x104585408]
+                            199  QIODevice::write(char const*, long long) + 256 (QtCore + 1215884) [0x105954d8c]
+                              199  QFileDevice::writeData(char const*, long long) + 208 (QtCore + 1182240) [0x10594ca20]
+                                199  write + 8 (libsystem_kernel.dylib + 21820) [0x1a4f3d53c]
+
+  Binary Images:
+           0x10456c000 -        0x1045a7fff  prl_updater_ctl (51537)             <CAD7DCBE-F5D1-3EAA-A2A7-E4539CAB32DA>  /Applications/Parallels Desktop.app/Contents/MacOS/prl_updater_ctl
+           0x1047d0000 -        0x10484bfff  dyld (941.5)                        <D21A73EA-79CD-36EB-8AC9-2C5CF5181A27>  /usr/lib/dyld
+           0x104b18000 -        0x104c23fff  org.qt-project.QtNetwork 5.15.1 (7) <D5FDB76F-3801-367E-AE93-CFB82A75562B>  /Applications/Parallels Desktop.app/Contents/Frameworks/QtNetwork.framework/Versions/5/QtNetwork
+           0x10582c000 -        0x105d3ffff  QtCore (0)                          <4FC22FD0-D443-35D1-AB9C-EC8EBCCD21BC>  /Users/USER/Library/Caches/*/Parallels Desktop.app/Contents/Frameworks/QtCore.framework/Versions/5/QtCore
+           0x1a4f38000 -        0x1a4f6dfff  libsystem_kernel.dylib (8019.80.24) <384945E6-DD71-37E5-9A3D-84FFF14A1E60>  /usr/lib/system/libsystem_kernel.dylib
+
+System Profile:
+Network Service: Wi-Fi, AirPort, en0
+Thunderbolt Bus: MacBook Pro, Apple Inc.
+Thunderbolt Bus: MacBook Pro, Apple Inc.
+Boot Volume File System Type: apfs
+Memory Module: LPDDR4
+USB Device: USB31Bus
+USB Device: USB31Bus
+Display: Color LCD, 2560 x 1600 Retina, Main, MirrorOff, Online
+Model: MacBookPro17,1, BootROM 7429.81.3, proc 8:4:4 processors, 8 GB, SMC 
+Graphics: Apple M1, Apple M1, Built-In
+AirPort: Wi-Fi, wl0: Oct 26 2021 16:10:41 version 18.20.310.15.7.8.120 FWID 01-5d6c3867
+Bluetooth: Version (null), 0 services, 0 devices, 0 incoming serial ports

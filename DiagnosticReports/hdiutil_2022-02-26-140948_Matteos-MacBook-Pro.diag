@@ -1,0 +1,355 @@
+Date/Time:        2022-02-26 14:07:47.921 -0600
+End time:         2022-02-26 14:09:39.051 -0600
+OS Version:       macOS 12.2 (Build 21D49)
+Architecture:     arm64e
+Report Version:   35
+Incident Identifier: 5975B72A-B57D-4F02-ABDA-AC0E7054D040
+Share With Devs:  Yes
+
+Data Source:      Microstackshots
+Shared Cache:     B90241B2-E425-3982-B3F6-26C4567CBB49 slid base address 0x1a4c68000, slide 0x24c68000
+
+Command:          hdiutil
+Path:             /usr/bin/hdiutil
+Architecture:     arm64e
+Parent:           prl_esd2iso [8677]
+PID:              8699
+
+Event:            disk writes
+Action taken:     none
+Writes:           8590.02 MB of file backed memory dirtied over 111 seconds (77.30 MB per second average), exceeding limit of 99.42 KB per second over 86400 seconds
+Writes limit:     8589.93 MB
+Limit duration:   86400s
+Writes caused:    8590.02 MB
+Writes duration:  111s
+Duration:         111.13s
+Steps:            959 ( (10.49 MB/step))
+
+Hardware model:   MacBookPro17,1
+Active cpus:      8
+HW page size:     16384
+VM page size:     16384
+
+Advisory levels:  Battery -> 2, User -> 2, ThermalPressure -> 0, Combined -> 2
+Free disk space:  139.75 GB/228.27 GB, low space threshold 3072 MB
+
+Heaviest stack for the target process:
+  211  thread_start + 8 (libsystem_pthread.dylib + 8228) [0x1a4f70024]
+  211  _pthread_start + 148 (libsystem_pthread.dylib + 29248) [0x1a4f75240]
+  211  DRThreadObject::SymbolRoutine(DRThreadObject*) + 16 (DiscRecording + 13088) [0x1b6b88320]
+  211  DRThreadObject::StartRoutine(DRThreadObject*) + 92 (DiscRecording + 13424) [0x1b6b88470]
+  211  BurnManager::BurnThreadEntry(BurnManager*) + 44 (DiscRecording + 115316) [0x1b6ba1274]
+  211  DRBurnObject::BurnThread() + 332 (DiscRecording + 115748) [0x1b6ba1424]
+  211  BurnController::Burn() + 300 (DiscRecording + 217476) [0x1b6bba184]
+  211  CallbackController::BurnSession(DRSessionObject*) + 344 (DiscRecording + 358156) [0x1b6bdc70c]
+  211  TrackProducer::Produce(DRBurnObject*, DRTrackObject*, void (*)(DRTrackObject*, DRTrackProductionInfo*), unsigned int&, unsigned int, unsigned int*) + 928 (DiscRecording + 225864) [0x1b6bbc248]
+  211  CallbackController::SetWriteBufferReady(unsigned char*, unsigned int, unsigned int, unsigned int) + 80 (DiscRecording + 358716) [0x1b6bdc93c]
+  211  DRCallbackDeviceObject::WriteBuffer(unsigned char*, unsigned int, unsigned int, unsigned int) + 72 (DiscRecording + 450260) [0x1b6bf2ed4]
+  211  pwrite + 8 (libsystem_kernel.dylib + 20452) [0x1a4f3cfe4]
+
+
+Powerstats for:   hdiutil [8699]
+UUID:             49F66037-DF1E-37BB-BA40-55B8DCA4ECDA
+Path:             /usr/bin/hdiutil
+Architecture:     arm64e
+Parent:           prl_esd2iso [8677]
+UID:              501
+Footprint:        7184 KB
+Start time:       2022-02-26 14:09:33.396 -0600
+End time:         2022-02-26 14:09:39.032 -0600
+Num samples:      211 (22%)
+Primary state:    211 samples Non-Frontmost App, Non-Suppressed, Kernel mode, Effective Thread QoS Default, Requested Thread QoS Default, Override Thread QoS Unspecified
+User Activity:    0 samples Idle, 211 samples Active
+Power Source:     211 samples on Battery, 0 samples on AC
+  211  thread_start + 8 (libsystem_pthread.dylib + 8228) [0x1a4f70024]
+    211  _pthread_start + 148 (libsystem_pthread.dylib + 29248) [0x1a4f75240]
+      211  DRThreadObject::SymbolRoutine(DRThreadObject*) + 16 (DiscRecording + 13088) [0x1b6b88320]
+        211  DRThreadObject::StartRoutine(DRThreadObject*) + 92 (DiscRecording + 13424) [0x1b6b88470]
+          211  BurnManager::BurnThreadEntry(BurnManager*) + 44 (DiscRecording + 115316) [0x1b6ba1274]
+            211  DRBurnObject::BurnThread() + 332 (DiscRecording + 115748) [0x1b6ba1424]
+              211  BurnController::Burn() + 300 (DiscRecording + 217476) [0x1b6bba184]
+                211  CallbackController::BurnSession(DRSessionObject*) + 344 (DiscRecording + 358156) [0x1b6bdc70c]
+                  211  TrackProducer::Produce(DRBurnObject*, DRTrackObject*, void (*)(DRTrackObject*, DRTrackProductionInfo*), unsigned int&, unsigned int, unsigned int*) + 928 (DiscRecording + 225864) [0x1b6bbc248]
+                    211  CallbackController::SetWriteBufferReady(unsigned char*, unsigned int, unsigned int, unsigned int) + 80 (DiscRecording + 358716) [0x1b6bdc93c]
+                      211  DRCallbackDeviceObject::WriteBuffer(unsigned char*, unsigned int, unsigned int, unsigned int) + 72 (DiscRecording + 450260) [0x1b6bf2ed4]
+                        211  pwrite + 8 (libsystem_kernel.dylib + 20452) [0x1a4f3cfe4]
+
+  Binary Images:
+           0x104bcc000 -                ???  hdiutil                                  <49F66037-DF1E-37BB-BA40-55B8DCA4ECDA>  /usr/bin/hdiutil
+           0x1a4f38000 -        0x1a4f6dfff  libsystem_kernel.dylib (8019.80.24)      <384945E6-DD71-37E5-9A3D-84FFF14A1E60>  /usr/lib/system/libsystem_kernel.dylib
+           0x1a4f6e000 -        0x1a4f7afff  libsystem_pthread.dylib (485.60.2)       <F7B2ECCF-E6F1-3109-AE81-9028C0B8332A>  /usr/lib/system/libsystem_pthread.dylib
+           0x1b6b85000 -        0x1b6c40fff  com.apple.DiscRecording 9.0.3 (9030.4.5) <AECF2CDF-D427-3B3C-AB50-4A2FCBF9C930>  /System/Library/Frameworks/DiscRecording.framework/Versions/A/DiscRecording
+
+
+Powerstats for:   prl_esd2iso
+UUID:             55D97031-7E9B-3E64-98B0-FEFD13E4355E
+Path:             /Applications/Parallels Desktop.app/Contents/MacOS/prl_esd2iso
+Codesigning ID:   com.parallels.desktop.esd2iso
+Team ID:          4C6364ACXT
+Architecture:     arm64
+Start time:       2022-02-26 14:09:10.029 -0600
+End time:         2022-02-26 14:09:33.230 -0600
+Num samples:      427 (45%)
+Primary state:    427 samples Non-Frontmost App, Non-Suppressed, Kernel mode, Effective Thread QoS Default, Requested Thread QoS User Interactive, Override Thread QoS Unspecified
+User Activity:    0 samples Idle, 427 samples Active
+Power Source:     427 samples on Battery, 0 samples on AC
+  427  start + 520 (dyld + 20724) [0x104c350f4]
+    427  ??? (prl_esd2iso + 13740) [0x1048b35ac]
+      363  ??? (prl_esd2iso + 13276) [0x1048b33dc]
+        363  ??? (prl_esd2iso + 13020) [0x1048b32dc]
+          363  wimlib_write + 52 (libwimlib.1.dylib + 185304) [0x104a8d3d8]
+            362  ??? (libwimlib.1.dylib + 183556) [0x104a8cd04]
+              362  ??? (libwimlib.1.dylib + 188536) [0x104a8e078]
+                362  write + 8 (libsystem_kernel.dylib + 21820) [0x1a4f3d53c]
+            1    ??? (libwimlib.1.dylib + 183608) [0x104a8cd38]
+              1    ??? (libwimlib.1.dylib + 184844) [0x104a8d20c]
+                1    ??? (libwimlib.1.dylib + 18100) [0x104a646b4]
+                  1    ??? (libwimlib.1.dylib + 182000) [0x104a8c6f0]
+                    1    ??? (libwimlib.1.dylib + 188976) [0x104a8e230]
+                      1    ??? (libwimlib.1.dylib + 141372) [0x104a8283c]
+                        1    ??? (libwimlib.1.dylib + 138788) [0x104a81e24]
+                          1    ??? (libwimlib.1.dylib + 191888) [0x104a8ed90]
+                            1    write + 8 (libsystem_kernel.dylib + 21820) [0x1a4f3d53c]
+      45   ??? (prl_esd2iso + 13232) [0x1048b33b0]
+        45   ??? (prl_esd2iso + 12752) [0x1048b31d0]
+          45   wimlib_write + 52 (libwimlib.1.dylib + 185304) [0x104a8d3d8]
+            45   ??? (libwimlib.1.dylib + 183556) [0x104a8cd04]
+              45   ??? (libwimlib.1.dylib + 188976) [0x104a8e230]
+                45   ??? (libwimlib.1.dylib + 141272) [0x104a827d8]
+                  45   ??? (libwimlib.1.dylib + 141744) [0x104a829b0]
+                    45   ??? (libwimlib.1.dylib + 144100) [0x104a832e4]
+                      45   ??? (libwimlib.1.dylib + 145632) [0x104a838e0]
+                        45   ??? (libwimlib.1.dylib + 190604) [0x104a8e88c]
+                          45   ??? (libwimlib.1.dylib + 191888) [0x104a8ed90]
+                            45   write + 8 (libsystem_kernel.dylib + 21820) [0x1a4f3d53c]
+      19   ??? (prl_esd2iso + 13172) [0x1048b3374]
+        19   wimlib_extract_image + 72 (libwimlib.1.dylib + 63380) [0x104a6f794]
+          19   ??? (libwimlib.1.dylib + 62156) [0x104a6f2cc]
+            19   ??? (libwimlib.1.dylib + 161688) [0x104a87798]
+              19   ??? (libwimlib.1.dylib + 56848) [0x104a6de10]
+                19   ??? (libwimlib.1.dylib + 141272) [0x104a827d8]
+                  19   ??? (libwimlib.1.dylib + 141744) [0x104a829b0]
+                    19   ??? (libwimlib.1.dylib + 144100) [0x104a832e4]
+                      19   ??? (libwimlib.1.dylib + 145632) [0x104a838e0]
+                        19   ??? (libwimlib.1.dylib + 163040) [0x104a87ce0]
+                          19   pwrite + 8 (libsystem_kernel.dylib + 20452) [0x1a4f3cfe4]
+
+  Binary Images:
+           0x1048b0000 -        0x1048bbfff  prl_esd2iso (51537)                 <55D97031-7E9B-3E64-98B0-FEFD13E4355E>  /Applications/Parallels Desktop.app/Contents/MacOS/prl_esd2iso
+           0x104a60000 -        0x104ac3fff  libwimlib.1.dylib (51537)           <4A921CEF-D9F4-3513-B293-271DAA1478DB>  /Applications/Parallels Desktop.app/Contents/Frameworks/libwimlib.1.dylib
+           0x104c30000 -        0x104cabfff  dyld (941.5)                        <D21A73EA-79CD-36EB-8AC9-2C5CF5181A27>  /usr/lib/dyld
+           0x1a4f38000 -        0x1a4f6dfff  libsystem_kernel.dylib (8019.80.24) <384945E6-DD71-37E5-9A3D-84FFF14A1E60>  /usr/lib/system/libsystem_kernel.dylib
+
+
+Powerstats for:   prl_updater_ctl
+UUID:             CAD7DCBE-F5D1-3EAA-A2A7-E4539CAB32DA
+Path:             /Applications/Parallels Desktop.app/Contents/MacOS/prl_updater_ctl
+Codesigning ID:   com.parallels.updater
+Team ID:          4C6364ACXT
+Architecture:     arm64
+Start time:       2022-02-26 14:07:48.075 -0600
+End time:         2022-02-26 14:08:53.290 -0600
+Num samples:      166 (17%)
+Primary state:    166 samples Non-Frontmost App, Non-Suppressed, Kernel mode, Effective Thread QoS Default, Requested Thread QoS User Interactive, Override Thread QoS Unspecified
+User Activity:    0 samples Idle, 166 samples Active
+Power Source:     166 samples on Battery, 0 samples on AC
+  166  start + 520 (dyld + 20724) [0x1047d50f4]
+    166  ??? (prl_updater_ctl + 35540) [0x104574ad4]
+      166  QCoreApplication::exec() + 132 (QtCore + 1928140) [0x105a02bcc]
+        166  QEventLoop::exec(QFlags<QEventLoop::ProcessEventsFlag>) + 524 (QtCore + 1910104) [0x1059fe558]
+          166  QEventDispatcherUNIX::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) + 72 (QtCore + 2316432) [0x105a61890]
+            166  QCoreApplicationPrivate::sendPostedEvents(QObject*, int, QThreadData*) + 764 (QtCore + 1931284) [0x105a03814]
+              166  QCoreApplication::notifyInternal2(QObject*, QEvent*) + 220 (QtCore + 1926556) [0x105a0259c]
+                166  QCoreApplicationPrivate::notify_helper(QObject*, QEvent*) + 124 (QtCore + 1927520) [0x105a02960]
+                  166  QObject::event(QEvent*) + 620 (QtCore + 2092312) [0x105a2ad18]
+                    166  ??? (QtNetwork + 911640) [0x104bf6918]
+                      166  ??? (QtNetwork + 430252) [0x104b810ac]
+                        166  ??? (QtCore + 2124088) [0x105a32938]
+                          166  ??? (prl_updater_ctl + 103432) [0x104585408]
+                            166  QIODevice::write(char const*, long long) + 256 (QtCore + 1215884) [0x105954d8c]
+                              166  QFileDevice::writeData(char const*, long long) + 208 (QtCore + 1182240) [0x10594ca20]
+                                166  write + 8 (libsystem_kernel.dylib + 21820) [0x1a4f3d53c]
+
+  Binary Images:
+           0x10456c000 -        0x1045a7fff  prl_updater_ctl (51537)             <CAD7DCBE-F5D1-3EAA-A2A7-E4539CAB32DA>  /Applications/Parallels Desktop.app/Contents/MacOS/prl_updater_ctl
+           0x1047d0000 -        0x10484bfff  dyld (941.5)                        <D21A73EA-79CD-36EB-8AC9-2C5CF5181A27>  /usr/lib/dyld
+           0x104b18000 -        0x104c23fff  org.qt-project.QtNetwork 5.15.1 (7) <D5FDB76F-3801-367E-AE93-CFB82A75562B>  /Applications/Parallels Desktop.app/Contents/Frameworks/QtNetwork.framework/Versions/5/QtNetwork
+           0x10582c000 -        0x105d3ffff  QtCore (0)                          <4FC22FD0-D443-35D1-AB9C-EC8EBCCD21BC>  /Users/USER/Library/Caches/*/Parallels Desktop.app/Contents/Frameworks/QtCore.framework/Versions/5/QtCore
+           0x1a4f38000 -        0x1a4f6dfff  libsystem_kernel.dylib (8019.80.24) <384945E6-DD71-37E5-9A3D-84FFF14A1E60>  /usr/lib/system/libsystem_kernel.dylib
+
+
+Powerstats for:   cloudd
+UUID:             F41BDA92-9D1E-3A4D-AFC9-B9C0F678F21A
+Path:             /System/Library/PrivateFrameworks/CloudKitDaemon.framework/Support/cloudd
+Architecture:     arm64e
+Start time:       2022-02-26 14:07:48.585 -0600
+End time:         2022-02-26 14:09:38.410 -0600
+Num samples:      113 (12%)
+Primary state:    113 samples Non-Frontmost App, Non-Suppressed, Kernel mode, Effective Thread QoS Utility, Requested Thread QoS Utility, Override Thread QoS Unspecified
+User Activity:    0 samples Idle, 113 samples Active
+Power Source:     113 samples on Battery, 0 samples on AC
+  107  thread_start + 8 (libsystem_pthread.dylib + 8228) [0x1a4f70024]
+    107  _pthread_start + 148 (libsystem_pthread.dylib + 29248) [0x1a4f75240]
+      107  __NSThread__start__ + 808 (Foundation + 377576) [0x1a5f0c2e8]
+        107  ??? (CloudKitDaemon + 2039124) [0x1d3d67d54]
+          107  CFRunLoopRunSpecific + 600 (CoreFoundation + 534324) [0x1a503e734]
+            103  __CFRunLoopRun + 1728 (CoreFoundation + 538004) [0x1a503f594]
+              103  __CFRunLoopDoBlocks + 412 (CoreFoundation + 542076) [0x1a504057c]
+                103  __CFRUNLOOP_IS_CALLING_OUT_TO_A_BLOCK__ + 28 (CoreFoundation + 542472) [0x1a5040708]
+                  103  __mmcs_perform_with_run_loop_block_invoke + 60 (MMCS + 450148) [0x1cde9be64]
+                    101  __RunLoopPerformBlockSync_block_invoke + 120 (MMCS + 241472) [0x1cde68f40]
+                      101  __54-[MMCSHTTPContext URLSession:dataTask:didReceiveData:]_block_invoke + 480 (MMCS + 233624) [0x1cde67098]
+                        101  mmcs_nshttp_received_data + 276 (MMCS + 166564) [0x1cde56aa4]
+                          101  -[NSData(NSData) enumerateByteRangesUsingBlock:] + 132 (Foundation + 292044) [0x1a5ef74cc]
+                            101  __mmcs_nshttp_received_data_block_invoke + 124 (MMCS + 166728) [0x1cde56b48]
+                              101  handle_callback_downloadContainer + 256 (MMCS + 72004) [0x1cde3f944]
+                                99   mmcs_get_container_process_data + 2348 (MMCS + 74532) [0x1cde40324]
+                                  99   mmcs_get_state_process_chunk_with_padding + 112 (MMCS + 271040) [0x1cde702c0]
+                                    99   CFSetApplyFunction + 328 (CoreFoundation + 308100) [0x1a5007384]
+                                      99   CFBasicHashApply + 144 (CoreFoundation + 308284) [0x1a500743c]
+                                        99   __CFSetApplyFunction_block_invoke + 28 (CoreFoundation + 308748) [0x1a500760c]
+                                          96   mmcs_get_state_process_container_data_for_file_state + 100 (MMCS + 78432) [0x1cde41260]
+                                            96   mmcs_get_file_process_chunk_reference_with_padding + 108 (MMCS + 242052) [0x1cde69184]
+                                              96   mmcs_get_file_process_chunk_instance_with_padding + 272 (MMCS + 242480) [0x1cde69330]
+                                                96   MMCSItemReaderWriterWrite + 192 (MMCS + 157960) [0x1cde54908]
+                                                  96   pwrite + 8 (libsystem_kernel.dylib + 20452) [0x1a4f3cfe4]
+                                          3    mmcs_get_state_process_container_data_for_file_state + 124 (MMCS + 78456) [0x1cde41278]
+                                            3    mmcs_get_file_candidate_completed_with_success + 976 (MMCS + 245108) [0x1cde69d74]
+                                              3    mmcs_get_file_finalize_file_after_validation + 556 (MMCS + 246264) [0x1cde6a1f8]
+                                                3    __rename + 8 (libsystem_kernel.dylib + 21912) [0x1a4f3d598]
+                                2    mmcs_get_container_process_data + 4520 (MMCS + 76704) [0x1cde40ba0]
+                                  2    mmcs_engine_commit_if_over_threshold + 88 (MMCS + 186164) [0x1cde5b734]
+                                    2    _CSCommitDatabaseTransactions + 96 (ChunkingLibrary + 21160) [0x1baa852a8]
+                                      2    _CSEndTransactionSqlRc + 72 (ChunkingLibrary + 115376) [0x1baa9c2b0]
+                                        2    CS_corruption_checking_sqlite3_exec + 120 (ChunkingLibrary + 114876) [0x1baa9c0bc]
+                                          2    sqlite3_exec + 356 (libsqlite3.dylib + 40468) [0x1ab47be14]
+                                            1    sqlite3_step + 3576 (libsqlite3.dylib + 289312) [0x1ab4b8a20]
+                                              1    sqlite3WalDefaultHook + 72 (libsqlite3.dylib + 461884) [0x1ab4e2c3c]
+                                                1    sqlite3_wal_checkpoint_v2 + 500 (libsqlite3.dylib + 695928) [0x1ab51be78]
+                                                  1    sqlite3Checkpoint + 372 (libsqlite3.dylib + 696472) [0x1ab51c098]
+                                                    1    sqlite3WalCheckpoint + 5264 (libsqlite3.dylib + 554936) [0x1ab4f97b8]
+                                                      1    unixWrite + 180 (libsqlite3.dylib + 460888) [0x1ab4e2858]
+                                                        1    guarded_pwrite_np + 8 (libsystem_kernel.dylib + 20852) [0x1a4f3d174]
+                                            1    sqlite3_step + 3284 (libsqlite3.dylib + 289020) [0x1ab4b88fc]
+                                              1    sqlite3VdbeExec + 56548 (libsqlite3.dylib + 347716) [0x1ab4c6e44]
+                                                1    sqlite3VdbeHalt + 3428 (libsqlite3.dylib + 155176) [0x1ab497e28]
+                                                  1    sqlite3BtreeCommitPhaseOne + 164 (libsqlite3.dylib + 372568) [0x1ab4ccf58]
+                                                    1    sqlite3PagerCommitPhaseOne + 312 (libsqlite3.dylib + 458816) [0x1ab4e2040]
+                                                      1    pagerWalFrames + 1720 (libsqlite3.dylib + 821220) [0x1ab53a7e4]
+                                                        1    unixWrite + 180 (libsqlite3.dylib + 460888) [0x1ab4e2858]
+                                                          1    guarded_pwrite_np + 8 (libsystem_kernel.dylib + 20852) [0x1a4f3d174]
+                    2    __RunLoopPerformBlock_block_invoke + 120 (MMCS + 241284) [0x1cde68e84]
+                      2    __56-[MMCSHTTPContext URLSession:task:didCompleteWithError:]_block_invoke + 628 (MMCS + 231672) [0x1cde668f8]
+                        2    mmcs_nshttp_did_complete + 748 (MMCS + 167856) [0x1cde56fb0]
+                          2    mmcs_http_context_transaction_complete + 268 (MMCS + 30896) [0x1cde358b0]
+                            2    mmcs_nshttp_context_did_complete + 1140 (MMCS + 164520) [0x1cde562a8]
+                              2    handle_response_getComplete + 540 (MMCS + 94432) [0x1cde450e0]
+                                2    mmcs_get_req_done_phase2 + 376 (MMCS + 98112) [0x1cde45f40]
+                                  2    mmcs_get_req_call_client_request_completed + 824 (MMCS + 102196) [0x1cde46f34]
+                                    2    ??? (CloudKitDaemon + 2043536) [0x1d3d68e90]
+                                      2    ??? (CloudKitDaemon + 2072500) [0x1d3d6ffb4]
+                                        2    ??? (CloudKitDaemon + 2070916) [0x1d3d6f984]
+                                          2    ??? (CloudKitDaemon + 1929092) [0x1d3d4cf84]
+                                            2    ??? (CloudKitDaemon + 1889272) [0x1d3d433f8]
+                                              2    ??? (CloudKitDaemon + 1929432) [0x1d3d4d0d8]
+                                                2    ??? (CloudKit + 622444) [0x1ac6fff6c]
+                                                  2    ??? (CloudKit + 621952) [0x1ac6ffd80]
+                                                    2    ??? (CloudKit + 622792) [0x1ac7000c8]
+                                                      2    ??? (CloudKit + 621636) [0x1ac6ffc44]
+                                                        2    sqlite3_exec + 356 (libsqlite3.dylib + 40468) [0x1ab47be14]
+                                                          2    sqlite3_step + 3284 (libsqlite3.dylib + 289020) [0x1ab4b88fc]
+                                                            2    sqlite3VdbeExec + 56548 (libsqlite3.dylib + 347716) [0x1ab4c6e44]
+                                                              2    sqlite3VdbeHalt + 3428 (libsqlite3.dylib + 155176) [0x1ab497e28]
+                                                                2    sqlite3BtreeCommitPhaseOne + 164 (libsqlite3.dylib + 372568) [0x1ab4ccf58]
+                                                                  2    sqlite3PagerCommitPhaseOne + 312 (libsqlite3.dylib + 458816) [0x1ab4e2040]
+                                                                    2    pagerWalFrames + 1720 (libsqlite3.dylib + 821220) [0x1ab53a7e4]
+                                                                      2    unixWrite + 180 (libsqlite3.dylib + 460888) [0x1ab4e2858]
+                                                                        2    guarded_pwrite_np + 8 (libsystem_kernel.dylib + 20852) [0x1a4f3d174]
+            4    __CFRunLoopRun + 800 (CoreFoundation + 537076) [0x1a503f1f4]
+              4    __CFRunLoopDoBlocks + 412 (CoreFoundation + 542076) [0x1a504057c]
+                4    __CFRUNLOOP_IS_CALLING_OUT_TO_A_BLOCK__ + 28 (CoreFoundation + 542472) [0x1a5040708]
+                  4    __mmcs_perform_with_run_loop_block_invoke + 60 (MMCS + 450148) [0x1cde9be64]
+                    4    __RunLoopPerformBlockSync_block_invoke + 120 (MMCS + 241472) [0x1cde68f40]
+                      4    __54-[MMCSHTTPContext URLSession:dataTask:didReceiveData:]_block_invoke + 480 (MMCS + 233624) [0x1cde67098]
+                        4    mmcs_nshttp_received_data + 276 (MMCS + 166564) [0x1cde56aa4]
+                          4    -[NSData(NSData) enumerateByteRangesUsingBlock:] + 132 (Foundation + 292044) [0x1a5ef74cc]
+                            4    __mmcs_nshttp_received_data_block_invoke + 124 (MMCS + 166728) [0x1cde56b48]
+                              4    handle_callback_downloadContainer + 256 (MMCS + 72004) [0x1cde3f944]
+                                4    mmcs_get_container_process_data + 2348 (MMCS + 74532) [0x1cde40324]
+                                  4    mmcs_get_state_process_chunk_with_padding + 112 (MMCS + 271040) [0x1cde702c0]
+                                    4    CFSetApplyFunction + 328 (CoreFoundation + 308100) [0x1a5007384]
+                                      4    CFBasicHashApply + 144 (CoreFoundation + 308284) [0x1a500743c]
+                                        4    __CFSetApplyFunction_block_invoke + 28 (CoreFoundation + 308748) [0x1a500760c]
+                                          4    mmcs_get_state_process_container_data_for_file_state + 100 (MMCS + 78432) [0x1cde41260]
+                                            4    mmcs_get_file_process_chunk_reference_with_padding + 108 (MMCS + 242052) [0x1cde69184]
+                                              4    mmcs_get_file_process_chunk_instance_with_padding + 272 (MMCS + 242480) [0x1cde69330]
+                                                4    MMCSItemReaderWriterWrite + 192 (MMCS + 157960) [0x1cde54908]
+                                                  4    pwrite + 8 (libsystem_kernel.dylib + 20452) [0x1a4f3cfe4]
+  6    start_wqthread + 8 (libsystem_pthread.dylib + 8216) [0x1a4f70018]
+    6    _pthread_wqthread + 288 (libsystem_pthread.dylib + 13060) [0x1a4f71304]
+      6    _dispatch_workloop_worker_thread + 656 (libdispatch.dylib + 91912) [0x1a4dc9708]
+        6    _dispatch_lane_invoke + 444 (libdispatch.dylib + 48856) [0x1a4dbeed8]
+          6    _dispatch_lane_serial_drain + 672 (libdispatch.dylib + 45872) [0x1a4dbe330]
+            6    _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+              6    _dispatch_call_block_and_release + 32 (libdispatch.dylib + 7776) [0x1a4db4e60]
+                6    ??? (CloudKitDaemon + 1240496) [0x1d3ca4db0]
+                  6    ??? (CloudKitDaemon + 1238312) [0x1d3ca4528]
+                    6    ??? (CloudKitDaemon + 1237120) [0x1d3ca4080]
+                      6    ??? (CloudKitDaemon + 518368) [0x1d3bf48e0]
+                        6    ??? (CloudKitDaemon + 565196) [0x1d3bfffcc]
+                          6    _dispatch_lane_barrier_sync_invoke_and_complete + 56 (libdispatch.dylib + 77312) [0x1a4dc5e00]
+                            6    _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+                              6    ??? (CloudKitDaemon + 565628) [0x1d3c0017c]
+                                6    ??? (CloudKitDaemon + 518536) [0x1d3bf4988]
+                                  6    ??? (CloudKitDaemon + 513028) [0x1d3bf3404]
+                                    6    ??? (CloudKitDaemon + 3015652) [0x1d3e563e4]
+                                      6    ??? (CloudKitDaemon + 2513108) [0x1d3ddb8d4]
+                                        6    ??? (CloudKitDaemon + 2523820) [0x1d3dde2ac]
+                                          6    ??? (CloudKitDaemon + 36360) [0x1d3b7ee08]
+                                            6    ??? (CloudKit + 622444) [0x1ac6fff6c]
+                                              6    ??? (CloudKit + 621952) [0x1ac6ffd80]
+                                                6    ??? (CloudKit + 622792) [0x1ac7000c8]
+                                                  6    ??? (CloudKit + 621636) [0x1ac6ffc44]
+                                                    6    sqlite3_exec + 356 (libsqlite3.dylib + 40468) [0x1ab47be14]
+                                                      4    sqlite3_step + 3576 (libsqlite3.dylib + 289312) [0x1ab4b8a20]
+                                                        4    sqlite3WalDefaultHook + 72 (libsqlite3.dylib + 461884) [0x1ab4e2c3c]
+                                                          4    sqlite3_wal_checkpoint_v2 + 500 (libsqlite3.dylib + 695928) [0x1ab51be78]
+                                                            4    sqlite3Checkpoint + 372 (libsqlite3.dylib + 696472) [0x1ab51c098]
+                                                              4    sqlite3WalCheckpoint + 5264 (libsqlite3.dylib + 554936) [0x1ab4f97b8]
+                                                                4    unixWrite + 180 (libsqlite3.dylib + 460888) [0x1ab4e2858]
+                                                                  4    guarded_pwrite_np + 8 (libsystem_kernel.dylib + 20852) [0x1a4f3d174]
+                                                      2    sqlite3_step + 3284 (libsqlite3.dylib + 289020) [0x1ab4b88fc]
+                                                        2    sqlite3VdbeExec + 56548 (libsqlite3.dylib + 347716) [0x1ab4c6e44]
+                                                          2    sqlite3VdbeHalt + 3428 (libsqlite3.dylib + 155176) [0x1ab497e28]
+                                                            2    sqlite3BtreeCommitPhaseOne + 164 (libsqlite3.dylib + 372568) [0x1ab4ccf58]
+                                                              2    sqlite3PagerCommitPhaseOne + 312 (libsqlite3.dylib + 458816) [0x1ab4e2040]
+                                                                2    pagerWalFrames + 1720 (libsqlite3.dylib + 821220) [0x1ab53a7e4]
+                                                                  2    unixWrite + 180 (libsqlite3.dylib + 460888) [0x1ab4e2858]
+                                                                    2    guarded_pwrite_np + 8 (libsystem_kernel.dylib + 20852) [0x1a4f3d174]
+
+  Binary Images:
+           0x102730000 -                ???  cloudd                                        <F41BDA92-9D1E-3A4D-AFC9-B9C0F678F21A>  /System/Library/PrivateFrameworks/CloudKitDaemon.framework/Support/cloudd
+           0x1a4db3000 -        0x1a4df9fff  libdispatch.dylib (1324.60.3)                 <93E1DCFC-EF56-3113-8E7C-1BA85266A93B>  /usr/lib/system/libdispatch.dylib
+           0x1a4f38000 -        0x1a4f6dfff  libsystem_kernel.dylib (8019.80.24)           <384945E6-DD71-37E5-9A3D-84FFF14A1E60>  /usr/lib/system/libsystem_kernel.dylib
+           0x1a4f6e000 -        0x1a4f7afff  libsystem_pthread.dylib (485.60.2)            <F7B2ECCF-E6F1-3109-AE81-9028C0B8332A>  /usr/lib/system/libsystem_pthread.dylib
+           0x1a4fbc000 -        0x1a54fffff  com.apple.CoreFoundation 6.9 (1856.105)       <16FADF8B-A3AF-3E0C-B5FB-CE9A9CDC8747>  /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
+           0x1a5eb0000 -        0x1a629dfff  com.apple.Foundation 6.9 (1856.105)           <90321A38-43A5-3767-9A9C-2C631338B9BC>  /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
+           0x1ab472000 -        0x1ab61ffff  libsqlite3.dylib (331)                        <BF74926A-62E6-3EDD-99BC-40B4388DBA3E>  /usr/lib/libsqlite3.dylib
+           0x1ac668000 -        0x1ac849fff  com.apple.cloudkit.CloudKit 1940 (1940)       <3FC2C2BD-E1ED-306E-B348-1E0D6BEBA5DF>  /System/Library/Frameworks/CloudKit.framework/Versions/A/CloudKit
+           0x1baa80000 -        0x1baad2fff  com.apple.ChunkingLibrary 337.1 (337.1)       <202B9625-0346-36C1-8314-50A77D3505A4>  /System/Library/PrivateFrameworks/ChunkingLibrary.framework/Versions/A/ChunkingLibrary
+           0x1cde2e000 -        0x1cded3fff  com.apple.MMCS 1.3 (1930)                     <2B5E824B-CC07-3E71-94B3-F6CE7B21A23B>  /System/Library/PrivateFrameworks/MMCS.framework/Versions/A/MMCS
+           0x1d3b76000 -        0x1d3f65fff  com.apple.cloudkit.CloudKitDaemon 1940 (1940) <F74C2D1D-BBC7-3215-BFC6-3CF81CF61DFB>  /System/Library/PrivateFrameworks/CloudKitDaemon.framework/Versions/A/CloudKitDaemon
+
+System Profile:
+Network Service: Wi-Fi, AirPort, en0
+Thunderbolt Bus: MacBook Pro, Apple Inc.
+Thunderbolt Bus: MacBook Pro, Apple Inc.
+Boot Volume File System Type: apfs
+Memory Module: LPDDR4
+USB Device: USB31Bus
+USB Device: USB31Bus
+Display: Color LCD, 2560 x 1600 Retina, Main, MirrorOff, Online
+Model: MacBookPro17,1, BootROM 7429.81.3, proc 8:4:4 processors, 8 GB, SMC 
+Graphics: Apple M1, Apple M1, Built-In
+AirPort: Wi-Fi, wl0: Oct 26 2021 16:10:41 version 18.20.310.15.7.8.120 FWID 01-5d6c3867
+Bluetooth: Version (null), 0 services, 0 devices, 0 incoming serial ports

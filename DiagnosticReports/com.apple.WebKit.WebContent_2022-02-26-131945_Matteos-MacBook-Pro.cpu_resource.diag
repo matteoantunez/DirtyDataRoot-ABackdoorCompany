@@ -1,0 +1,768 @@
+Date/Time:        2022-02-26 13:17:41.862 -0600
+End time:         2022-02-26 13:19:43.939 -0600
+OS Version:       macOS 12.2 (Build 21D49)
+Architecture:     arm64e
+Report Version:   35
+Incident Identifier: 35E674C9-9980-47BC-A584-57DD5D733213
+Share With Devs:  Yes
+
+Data Source:      Microstackshots
+Shared Cache:     B90241B2-E425-3982-B3F6-26C4567CBB49 slid base address 0x1a4c68000, slide 0x24c68000
+
+Command:          com.apple.WebKit.WebContent
+Path:             /System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.xpc/Contents/MacOS/com.apple.WebKit.WebContent
+Identifier:       com.apple.WebKit.WebContent
+Version:          17612 (17612.4.9.1.5)
+Build Version:    1
+Project Name:     WebKit
+Source Version:   7612004009001005
+Architecture:     arm64e
+Parent:           UNKNOWN [1]
+PID:              6078
+
+Event:            cpu usage
+Action taken:     none
+CPU:              90 seconds cpu time over 122 seconds (74% cpu average), exceeding limit of 50% cpu over 180 seconds
+CPU limit:        90s
+Limit duration:   180s
+CPU used:         90s
+CPU duration:     122s
+Duration:         122.08s
+Duration Sampled: 119.31s
+Steps:            87
+
+Hardware model:   MacBookPro17,1
+Active cpus:      8
+HW page size:     16384
+VM page size:     16384
+
+Fan speed:        0 rpm
+Advisory levels:  Battery -> 2, User -> 2, ThermalPressure -> 0, Combined -> 2
+Free disk space:  185.47 GB/228.27 GB, low space threshold 3072 MB
+
+Heaviest stack for the target process:
+  47  start + 520 (dyld + 20724) [0x1046410f4]
+  47  WebKit::XPCServiceMain(int, char const**) + 152 (WebKit + 2509884) [0x1c313dc3c]
+  47  xpc_main + 108 (libxpc.dylib + 98820) [0x1a4cd2204]
+  47  _xpc_objc_main + 900 (libxpc.dylib + 100608) [0x1a4cd2900]
+  47  -[NSRunLoop(NSRunLoop) run] + 92 (Foundation + 997536) [0x1a5fa38a0]
+  47  -[NSRunLoop(NSRunLoop) runMode:beforeDate:] + 236 (Foundation + 408992) [0x1a5f13da0]
+  46  CFRunLoopRunSpecific + 600 (CoreFoundation + 534324) [0x1a503e734]
+  31  __CFRunLoopRun + 1944 (CoreFoundation + 538220) [0x1a503f66c]
+  29  __CFRunLoopDoTimers + 392 (CoreFoundation + 649968) [0x1a505aaf0]
+  24  __CFRunLoopDoTimer + 1076 (CoreFoundation + 651364) [0x1a505b064]
+  24  __CFRUNLOOP_IS_CALLING_OUT_TO_A_TIMER_CALLBACK_FUNCTION__ + 32 (CoreFoundation + 652392) [0x1a505b468]
+  24  WebCore::timerFired(__CFRunLoopTimer*, void*) + 68 (WebCore + 37436) [0x1c046423c]
+  8   WTF::Detail::CallableWrapper<WebCore::ThreadTimers::setSharedTimer(WebCore::SharedTimer*)::$_0, void>::call() + 208 (WebCore + 27414596) [0x1c1e80044]
+  5   CFRunLoopTimerSetNextFireDate + 464 (CoreFoundation + 809200) [0x1a50818f0]
+  1   CFArrayRemoveValueAtIndex + 76 (CoreFoundation + 382628) [0x1a50196a4]
+
+
+Powerstats for:   com.apple.WebKit.WebContent [6078]
+UUID:             EB12CF64-DF7F-36B3-9BBF-7AEF4AEE0B09
+Path:             /System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.xpc/Contents/MacOS/com.apple.WebKit.WebContent
+Identifier:       com.apple.WebKit.WebContent
+Version:          17612 (17612.4.9.1.5)
+Build Version:    1
+Project Name:     WebKit
+Source Version:   7612004009001005
+Architecture:     arm64e
+Parent:           UNKNOWN [1]
+UID:              501
+Sudden Term:      Tracked (allows idle exit)
+Footprint:        225.03 MB -> 251.58 MB (+26.55 MB) (max 363.11 MB )
+Pageins:          1 pages
+Start time:       2022-02-26 13:17:44.562 -0600
+End time:         2022-02-26 13:19:43.871 -0600
+Num samples:      48 (55%)
+Primary state:    37 samples Non-Frontmost App, Non-Suppressed, User mode, Effective Thread QoS User Interactive, Requested Thread QoS User Interactive, Override Thread QoS Unspecified
+User Activity:    0 samples Idle, 48 samples Active
+Power Source:     48 samples on Battery, 0 samples on AC
+  47  start + 520 (dyld + 20724) [0x1046410f4]
+    47  WebKit::XPCServiceMain(int, char const**) + 152 (WebKit + 2509884) [0x1c313dc3c]
+      47  xpc_main + 108 (libxpc.dylib + 98820) [0x1a4cd2204]
+        47  _xpc_objc_main + 900 (libxpc.dylib + 100608) [0x1a4cd2900]
+          47  -[NSRunLoop(NSRunLoop) run] + 92 (Foundation + 997536) [0x1a5fa38a0]
+            47  -[NSRunLoop(NSRunLoop) runMode:beforeDate:] + 236 (Foundation + 408992) [0x1a5f13da0]
+              46  CFRunLoopRunSpecific + 600 (CoreFoundation + 534324) [0x1a503e734]
+                31  __CFRunLoopRun + 1944 (CoreFoundation + 538220) [0x1a503f66c]
+                  29  __CFRunLoopDoTimers + 392 (CoreFoundation + 649968) [0x1a505aaf0]
+                    24  __CFRunLoopDoTimer + 1076 (CoreFoundation + 651364) [0x1a505b064]
+                      24  __CFRUNLOOP_IS_CALLING_OUT_TO_A_TIMER_CALLBACK_FUNCTION__ + 32 (CoreFoundation + 652392) [0x1a505b468]
+                        24  WebCore::timerFired(__CFRunLoopTimer*, void*) + 68 (WebCore + 37436) [0x1c046423c]
+                          8   WTF::Detail::CallableWrapper<WebCore::ThreadTimers::setSharedTimer(WebCore::SharedTimer*)::$_0, void>::call() + 208 (WebCore + 27414596) [0x1c1e80044]
+                            5   CFRunLoopTimerSetNextFireDate + 464 (CoreFoundation + 809200) [0x1a50818f0]
+                              1   CFArrayRemoveValueAtIndex + 76 (CoreFoundation + 382628) [0x1a50196a4]
+                              1   __CFRepositionTimerInMode + 152 (CoreFoundation + 309664) [0x1a50079a0]
+                                1   __CFArmNextTimerInMode + 124 (CoreFoundation + 310624) [0x1a5007d60]
+                              1   __CFRepositionTimerInMode + 124 (CoreFoundation + 309636) [0x1a5007984]
+                                1   objc_msgSend + 0 (libobjc.A.dylib + 25344) [0x1a4e00300]
+                              1   __CFRepositionTimerInMode + 112 (CoreFoundation + 309624) [0x1a5007978]
+                                1   _CFArrayReplaceValues + 384 (CoreFoundation + 1217696) [0x1a50e54a0]
+                              1   __CFRepositionTimerInMode + 80 (CoreFoundation + 309592) [0x1a5007958]
+                                1   CFArrayGetFirstIndexOfValue + 224 (CoreFoundation + 382376) [0x1a50195a8]
+                            1   CFRunLoopTimerSetNextFireDate + 476 (CoreFoundation + 809212) [0x1a50818fc]
+                            1   CFRunLoopTimerSetNextFireDate + 388 (CoreFoundation + 809124) [0x1a50818a4]
+                              1   __CFRunLoopCopyMode + 148 (CoreFoundation + 1425308) [0x1a5117f9c]
+                                1   CFSetGetValue + 256 (CoreFoundation + 290168) [0x1a5002d78]
+                                  1   CFBasicHashFindBucket + 484 (CoreFoundation + 34752) [0x1a4fc47c0]
+                                    1   CFEqual + 708 (CoreFoundation + 44540) [0x1a4fc6dfc]
+                            1   CFRunLoopTimerSetNextFireDate + 92 (CoreFoundation + 808828) [0x1a508177c]
+                          6   WTF::Detail::CallableWrapper<WebCore::ThreadTimers::setSharedTimer(WebCore::SharedTimer*)::$_0, void>::call() + 248 (WebCore + 27414636) [0x1c1e8006c]
+                            6   WebCore::WindowEventLoop::didReachTimeToRun() + 36 (WebCore + 20555600) [0x1c17f5750]
+                              3   WebCore::EventLoop::run() + 224 (WebCore + 20056632) [0x1c177ba38]
+                                2   WTF::Detail::CallableWrapper<WebCore::DeferredPromise::callFunction(JSC::JSGlobalObject&, WebCore::DeferredPromise::ResolveMode, JSC::JSValue)::$_37, void>::call() + 200 (WebCore + 16937836) [0x1c148236c]
+                                  2   WebCore::DeferredPromise::callFunction(JSC::JSGlobalObject&, WebCore::DeferredPromise::ResolveMode, JSC::JSValue) + 780 (WebCore + 16852960) [0x1c146d7e0]
+                                    2   WebCore::EventLoopTaskGroup::queueTask(WebCore::TaskSource, WTF::Function<void ()>&&) + 400 (WebCore + 20057824) [0x1c177bee0]
+                                      1   CFRunLoopTimerSetNextFireDate + 464 (CoreFoundation + 809200) [0x1a50818f0]
+                                        1   __CFRepositionTimerInMode + 152 (CoreFoundation + 309664) [0x1a50079a0]
+                                          1   __CFArmNextTimerInMode + 116 (CoreFoundation + 310616) [0x1a5007d58]
+                                      1   CFRunLoopTimerSetNextFireDate + 388 (CoreFoundation + 809124) [0x1a50818a4]
+                                        1   __CFRunLoopCopyMode + 132 (CoreFoundation + 1425292) [0x1a5117f8c]
+                                          1   _CFRuntimeSetInstanceTypeIDAndIsa + 88 (CoreFoundation + 23868) [0x1a4fc1d3c]
+                                1   WTF::Detail::CallableWrapper<WebCore::DeferredPromise::callFunction(JSC::JSGlobalObject&, WebCore::DeferredPromise::ResolveMode, JSC::JSValue)::$_37, void>::call() + 208 (WebCore + 16937844) [0x1c1482374]
+                                  1   JSC::JSLockHolder::~JSLockHolder() + 128 (JavaScriptCore + 49404) [0x1bd01b0fc]
+                                    1   JSC::VM::drainMicrotasks() + 572 (JavaScriptCore + 15232680) [0x1bde95ea8]
+                              2   WebCore::EventLoop::run() + 920 (WebCore + 20057328) [0x1c177bcf0]
+                                2   WebCore::EventLoopFunctionDispatchTask::~EventLoopFunctionDispatchTask() + 96 (WebCore + 20071216) [0x1c177f330]
+                                  2   WTF::Detail::CallableWrapper<WebCore::DeferredPromise::callFunction(JSC::JSGlobalObject&, WebCore::DeferredPromise::ResolveMode, JSC::JSValue)::$_37, void>::~CallableWrapper() + 124 (WebCore + 16937544) [0x1c1482248]
+                                    2   JSC::JSLockHolder::~JSLockHolder() + 128 (JavaScriptCore + 49404) [0x1bd01b0fc]
+                                      2   JSC::JSLock::willReleaseLock() + 152 (JavaScriptCore + 14000900) [0x1bdd69304]
+                                        1   JSC::VM::drainMicrotasks() + 564 (JavaScriptCore + 15232672) [0x1bde95ea0]
+                                        1   JSC::VM::drainMicrotasks() + 64 (JavaScriptCore + 15232172) [0x1bde95cac]
+                                          1   JSC::VM::didExhaustMicrotaskQueue() + 52 (JavaScriptCore + 15231652) [0x1bde95aa4]
+                              1   WebCore::EventLoop::run() + 492 (WebCore + 20056900) [0x1c177bb44]
+                                1   WTF::fastMalloc(unsigned long) + 204 (JavaScriptCore + 6028) [0x1bd01078c]
+                          5   CFRunLoopTimerSetNextFireDate + 464 (CoreFoundation + 809200) [0x1a50818f0]
+                            2   __CFRepositionTimerInMode + 152 (CoreFoundation + 309664) [0x1a50079a0]
+                              1   __CFArmNextTimerInMode + 104 (CoreFoundation + 310604) [0x1a5007d4c]
+                                1   -[__NSCFArray objectAtIndex:] + 68 (CoreFoundation + 261540) [0x1a4ffbda4]
+                              1   __CFArmNextTimerInMode + 104 (CoreFoundation + 310604) [0x1a5007d4c]
+                            2   __CFRepositionTimerInMode + 80 (CoreFoundation + 309592) [0x1a5007958]
+                              1   CFArrayGetFirstIndexOfValue + 320 (CoreFoundation + 382472) [0x1a5019608]
+                              1   CFArrayGetFirstIndexOfValue + 264 (CoreFoundation + 382416) [0x1a50195d0]
+                                1   -[__NSCFArray objectAtIndex:] + 108 (CoreFoundation + 261580) [0x1a4ffbdcc]
+                            1   __CFRepositionTimerInMode + 124 (CoreFoundation + 309636) [0x1a5007984]
+                              1   __CFRunLoopInsertionIndexInTimerArray + 144 (CoreFoundation + 309872) [0x1a5007a70]
+                          2   CFRunLoopTimerSetNextFireDate + 388 (CoreFoundation + 809124) [0x1a50818a4]
+                            2   __CFRunLoopCopyMode + 148 (CoreFoundation + 1425308) [0x1a5117f9c]
+                              2   CFSetGetValue + 256 (CoreFoundation + 290168) [0x1a5002d78]
+                                1   CFEqual + 760 (CoreFoundation + 44592) [0x1a4fc6e30]
+                                1   CFBasicHashFindBucket + 484 (CoreFoundation + 34752) [0x1a4fc47c0]
+                                  1   CFEqual + 304 (CoreFoundation + 44136) [0x1a4fc6c68]
+                          1   __CFRunLoopCopyMode + 204 (CoreFoundation + 1425364) [0x1a5117fd4]
+                          1   CFRunLoopTimerSetNextFireDate + 400 (CoreFoundation + 809136) [0x1a50818b0]
+                            1   CFRelease + 92 (CoreFoundation + 50032) [0x1a4fc8370]
+                          1   _CFRunLoopGetButDontCreateCurrent + 4 (CoreFoundation + 693132) [0x1a506538c]
+                    4   __CFRunLoopDoTimer + 1300 (CoreFoundation + 651588) [0x1a505b144]
+                      4   mk_timer_arm + 8 (libsystem_kernel.dylib + 6892) [0x1a4f39aec]
+                        2   <Kernel mode>
+                    1   mach_absolute_time + 108 (libsystem_kernel.dylib + 7852) [0x1a4f39eac]
+                  1   __CFRunLoopDoTimers + 512 (CoreFoundation + 650088) [0x1a505ab68]
+                  1   objc_msgSend + 0 (libobjc.A.dylib + 25344) [0x1a4e00300]
+                10  __CFRunLoopRun + 1212 (CoreFoundation + 537488) [0x1a503f390]
+                  10  __CFRunLoopServiceMachPort + 372 (CoreFoundation + 544472) [0x1a5040ed8]
+                    10  mach_msg_trap + 8 (libsystem_kernel.dylib + 6484) [0x1a4f39954]
+                      7   <Kernel mode>
+                2   __CFRunLoopRun + 916 (CoreFoundation + 537192) [0x1a503f268]
+                  2   __CFRunLoopServiceMachPort + 372 (CoreFoundation + 544472) [0x1a5040ed8]
+                    2   mach_msg_trap + 8 (libsystem_kernel.dylib + 6484) [0x1a4f39954]
+                      1   <Kernel mode>
+                1   __CFRunLoopRun + 1444 (CoreFoundation + 537720) [0x1a503f478]
+                  1   _kernelrpc_mach_port_extract_member_trap + 8 (libsystem_kernel.dylib + 6400) [0x1a4f39900]
+                1   __CFRunLoopRun + 1120 (CoreFoundation + 537396) [0x1a503f334]
+                  1   _kernelrpc_mach_port_insert_member_trap + 8 (libsystem_kernel.dylib + 6388) [0x1a4f398f4]
+                1   __CFRunLoopRun + 1052 (CoreFoundation + 537328) [0x1a503f2f0]
+                  1   __CFRunLoopDoObservers + 760 (CoreFoundation + 539988) [0x1a503fd54]
+              1   CFRunLoopRunSpecific + 684 (CoreFoundation + 534408) [0x1a503e788]
+                1   __CFRunLoopDoObservers + 572 (CoreFoundation + 539800) [0x1a503fc98]
+                  1   __CFRUNLOOP_IS_CALLING_OUT_TO_AN_OBSERVER_CALLBACK_FUNCTION__ + 36 (CoreFoundation + 540236) [0x1a503fe4c]
+                    1   WebKit::TiledCoreAnimationDrawingArea::updateRendering(WebKit::TiledCoreAnimationDrawingArea::UpdateRenderingType) + 1160 (WebKit + 6065612) [0x1c34a1dcc]
+                      1   WebKit::WebPage::finalizeRenderingUpdate(WTF::OptionSet<WebCore::FinalizeRenderingUpdateFlags>) + 32 (WebKit + 8055840) [0x1c3687c20]
+                        1   WebCore::Page::finalizeRenderingUpdate(WTF::OptionSet<WebCore::FinalizeRenderingUpdateFlags>) + 92 (WebCore + 26629932) [0x1c1dc072c]
+                          1   WebCore::FrameView::flushCompositingStateIncludingSubframes() + 32 (WebCore + 338932) [0x1c04adbf4]
+                            1   WebCore::FrameView::flushCompositingStateForThisFrame(WebCore::Frame const&) + 508 (WebCore + 26462464) [0x1c1d97900]
+                              1   WebCore::RenderLayerCompositor::flushPendingLayerChanges(bool) + 332 (WebCore + 339528) [0x1c04ade48]
+                                1   WebCore::GraphicsLayerCA::flushCompositingState(WebCore::FloatRect const&) + 208 (WebCore + 343336) [0x1c04aed28]
+                                  1   WebCore::GraphicsLayerCA::recursiveCommitChanges(WebCore::GraphicsLayerCA::CommitState&, WebCore::TransformState const&, float, WebCore::FloatPoint const&, bool) + 1016 (WebCore + 28228464) [0x1c1f46b70]
+                                    1   WebCore::GraphicsLayerCA::recursiveCommitChanges(WebCore::GraphicsLayerCA::CommitState&, WebCore::TransformState const&, float, WebCore::FloatPoint const&, bool) + 1016 (WebCore + 28228464) [0x1c1f46b70]
+                                      1   WebCore::GraphicsLayerCA::recursiveCommitChanges(WebCore::GraphicsLayerCA::CommitState&, WebCore::TransformState const&, float, WebCore::FloatPoint const&, bool) + 1016 (WebCore + 28228464) [0x1c1f46b70]
+                                        1   WebCore::GraphicsLayerCA::recursiveCommitChanges(WebCore::GraphicsLayerCA::CommitState&, WebCore::TransformState const&, float, WebCore::FloatPoint const&, bool) + 1016 (WebCore + 28228464) [0x1c1f46b70]
+                                          1   WebCore::GraphicsLayerCA::recursiveCommitChanges(WebCore::GraphicsLayerCA::CommitState&, WebCore::TransformState const&, float, WebCore::FloatPoint const&, bool) + 1016 (WebCore + 28228464) [0x1c1f46b70]
+                                            1   WebCore::GraphicsLayerCA::recursiveCommitChanges(WebCore::GraphicsLayerCA::CommitState&, WebCore::TransformState const&, float, WebCore::FloatPoint const&, bool) + 1016 (WebCore + 28228464) [0x1c1f46b70]
+                                              1   WebCore::GraphicsLayerCA::recursiveCommitChanges(WebCore::GraphicsLayerCA::CommitState&, WebCore::TransformState const&, float, WebCore::FloatPoint const&, bool) + 848 (WebCore + 28228296) [0x1c1f46ac8]
+                                                1   WebCore::GraphicsLayerCA::commitLayerChangesBeforeSublayers(WebCore::GraphicsLayerCA::CommitState&, float, WebCore::FloatPoint const&, bool&) + 4084 (WebCore + 28233808) [0x1c1f48050]
+                                                  1   WebCore::PlatformCALayerCocoa::setBounds(WebCore::FloatRect const&) + 56 (WebCore + 13039068) [0x1c10ca5dc]
+                                                    1   -[CALayer setBounds:] + 132 (QuartzCore + 45828) [0x1abe8d304]
+                                                      1   CA::Layer::set_bounds(CA::Rect const&, bool) + 352 (QuartzCore + 46224) [0x1abe8d490]
+                                                        1   CA::Layer::begin_change(CA::Transaction*, unsigned int, objc_object*, objc_object*&) + 252 (QuartzCore + 36056) [0x1abe8acd8]
+                                                          1   NSKeyValueWillChangeWithPerThreadPendingNotifications + 104 (Foundation + 1791212) [0x1a60654ec]
+                                                            1   os_unfair_lock_lock + 4 (libsystem_platform.dylib + 6588) [0x1a4f899bc]
+  1   thread_start + 8 (libsystem_pthread.dylib + 8228) [0x1a4f70024]
+    1   _pthread_start + 148 (libsystem_pthread.dylib + 29248) [0x1a4f75240]
+      1   WTF::wtfThreadEntryPoint(void*) + 16 (JavaScriptCore + 35264) [0x1bd0179c0]
+        1   WTF::Thread::entryPoint(WTF::Thread::NewThreadContext*) + 168 (JavaScriptCore + 17991016) [0x1be137568]
+          1   WTF::Detail::CallableWrapper<WTF::AutomaticThread::start(WTF::AbstractLocker const&)::$_0, void>::call() + 468 (JavaScriptCore + 17704728) [0x1be0f1718]
+            1   JSC::JITWorklistThread::work() + 252 (JavaScriptCore + 11538232) [0x1bdb0ff38]
+              1   JSC::JITPlan::compileInThread(JSC::JITWorklistThread*) + 432 (JavaScriptCore + 11292212) [0x1bdad3e34]
+                1   JSC::DFG::Plan::compileInThreadImpl() + 5352 (JavaScriptCore + 8730884) [0x1bd862904]
+                  1   JSC::DFG::JITCompiler::compileFunction() + 668 (JavaScriptCore + 8275664) [0x1bd7f36d0]
+                    1   JSC::DFG::SpeculativeJIT::compile() + 96 (JavaScriptCore + 599984) [0x1bd0a17b0]
+                      1   JSC::DFG::SpeculativeJIT::compileCurrentBlock() + 7808 (JavaScriptCore + 1219056) [0x1bd1389f0]
+                        1   JSC::DFG::SpeculativeJIT::compile(JSC::DFG::Node*) + 136 (JavaScriptCore + 601500) [0x1bd0a1d9c]
+                          1   JSC::DFG::SpeculativeJIT::emitCall(JSC::DFG::Node*) + 6568 (JavaScriptCore + 737736) [0x1bd0c31c8]
+                            1   JSC::CallFrameShuffler::prepareForSlowPath() + 48 (JavaScriptCore + 10701300) [0x1bda439f4]
+                              1   JSC::CallFrameShuffler::extendFrameIfNeeded() + 368 (JavaScriptCore + 10700852) [0x1bda43834]
+                                1   <Effective Thread QoS User Initiated, Requested Thread QoS User Initiated>
+
+  Binary Images:
+           0x1044e4000 -                ???  com.apple.WebKit.WebContent 17612 (17612.4.9.1.5) <EB12CF64-DF7F-36B3-9BBF-7AEF4AEE0B09>  /System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.xpc/Contents/MacOS/com.apple.WebKit.WebContent
+           0x10463c000 -        0x1046b7fff  dyld (941.5)                                      <D21A73EA-79CD-36EB-8AC9-2C5CF5181A27>  /usr/lib/dyld
+           0x1a4cba000 -        0x1a4cf3fff  libxpc.dylib (2235.80.3)                          <FD3E0E8D-4618-3CE5-A24A-5639BE86B979>  /usr/lib/system/libxpc.dylib
+           0x1a4dfa000 -        0x1a4e35fff  libobjc.A.dylib (838.1)                           <2EB32E1D-90CB-3256-8681-9034085A06A6>  /usr/lib/libobjc.A.dylib
+           0x1a4f38000 -        0x1a4f6dfff  libsystem_kernel.dylib (8019.80.24)               <384945E6-DD71-37E5-9A3D-84FFF14A1E60>  /usr/lib/system/libsystem_kernel.dylib
+           0x1a4f6e000 -        0x1a4f7afff  libsystem_pthread.dylib (485.60.2)                <F7B2ECCF-E6F1-3109-AE81-9028C0B8332A>  /usr/lib/system/libsystem_pthread.dylib
+           0x1a4f88000 -        0x1a4f8ffff  libsystem_platform.dylib (273.40.1)               <49CF1536-27E5-3A34-9724-D75552CBAB56>  /usr/lib/system/libsystem_platform.dylib
+           0x1a4fbc000 -        0x1a54fffff  com.apple.CoreFoundation 6.9 (1856.105)           <16FADF8B-A3AF-3E0C-B5FB-CE9A9CDC8747>  /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
+           0x1a5eb0000 -        0x1a629dfff  com.apple.Foundation 6.9 (1856.105)               <90321A38-43A5-3767-9A9C-2C631338B9BC>  /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
+           0x1abe82000 -        0x1ac180fff  com.apple.QuartzCore 1.11 (962.63)                <0C98ECDE-C21A-3501-9C98-FC9D3DD5BB12>  /System/Library/Frameworks/QuartzCore.framework/Versions/A/QuartzCore
+           0x1bd00f000 -        0x1be2f2fff  com.apple.JavaScriptCore 17612 (17612.4.9.1.5)    <5078F2C2-A8EC-3B97-B51E-B351E61D8843>  /System/Library/Frameworks/JavaScriptCore.framework/Versions/A/JavaScriptCore
+           0x1c045b000 -        0x1c2846fff  com.apple.WebCore 17612 (17612.4.9.1.5)           <83EB004C-D50A-3AD8-9BD4-C0519740B37F>  /System/Library/Frameworks/WebKit.framework/Versions/A/Frameworks/WebCore.framework/Versions/A/WebCore
+           0x1c2ed9000 -        0x1c3854fff  com.apple.WebKit 17612 (17612.4.9.1.5)            <85225776-DBE9-3B7D-9B53-88692425A518>  /System/Library/Frameworks/WebKit.framework/Versions/A/WebKit
+
+
+Powerstats for:   bird
+UUID:             514DEC8C-3ABB-37B4-8403-2B4034124ECA
+Path:             /System/Library/PrivateFrameworks/CloudDocsDaemon.framework/Versions/A/Support/bird
+Architecture:     arm64e
+Start time:       2022-02-26 13:17:45.573 -0600
+End time:         2022-02-26 13:19:35.408 -0600
+Num samples:      6 (7%)
+Primary state:    4 samples Non-Frontmost App, Non-Suppressed, User mode, Effective Thread QoS Utility, Requested Thread QoS Utility, Override Thread QoS Unspecified
+User Activity:    0 samples Idle, 6 samples Active
+Power Source:     6 samples on Battery, 0 samples on AC
+  6  start_wqthread + 8 (libsystem_pthread.dylib + 8216) [0x1a4f70018]
+    6  _pthread_wqthread + 288 (libsystem_pthread.dylib + 13060) [0x1a4f71304]
+      6  _dispatch_workloop_worker_thread + 656 (libdispatch.dylib + 91912) [0x1a4dc9708]
+        4  _dispatch_workloop_invoke + 1796 (libdispatch.dylib + 53696) [0x1a4dc01c0]
+          3  _dispatch_lane_invoke + 444 (libdispatch.dylib + 48856) [0x1a4dbeed8]
+            2  _dispatch_lane_serial_drain + 896 (libdispatch.dylib + 46096) [0x1a4dbe410]
+              2  _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+                2  _dispatch_call_block_and_release + 32 (libdispatch.dylib + 7776) [0x1a4db4e60]
+                  2  __dispatch_group_async_with_logs_block_invoke + 88 (CloudDocsDaemon + 1882308) [0x1bf77b8c4]
+                    2  _dispatch_block_invoke_direct + 264 (libdispatch.dylib + 30308) [0x1a4dba664]
+                      2  _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+                        2  __87-[BRCFileCoordinator _didObtainCoordination:context:url1:url2:handler:fcHandler:error:]_block_invoke + 744 (CloudDocsDaemon + 864580) [0x1bf683144]
+                          2  -[BRCFSWriter writeUnderCoordinationFromURL:toURL:canDelete:] + 252 (CloudDocsDaemon + 2631500) [0x1bf83274c]
+                            2  -[PQLConnection performWithFlags:action:] + 104 (libprequelite.dylib + 31684) [0x1c97ddbc4]
+                              2  -[PQLConnection _performWithFlags:action:whenFlushed:] + 780 (libprequelite.dylib + 29324) [0x1c97dd28c]
+                                2  __61-[BRCFSWriter writeUnderCoordinationFromURL:toURL:canDelete:]_block_invoke + 40 (CloudDocsDaemon + 2631604) [0x1bf8327b4]
+                                  1  -[BRCFSWriter _writeUnderCoordinationFromURL:toURL:canDelete:] + 1280 (CloudDocsDaemon + 2630260) [0x1bf832274]
+                                    1  -[BRCURLToItemLookup(BRCFSWriter) tryToUpdateItemInNamespace:withDstLookup:] + 7592 (CloudDocsDaemon + 2587912) [0x1bf827d08]
+                                      1  -[BRCStageRegistry moveFromStageToGraveyard:forItemID:] + 148 (CloudDocsDaemon + 1551344) [0x1bf72abf0]
+                                        1  -[BRCStageRegistry _graveyardAt:path:forItemID:] + 440 (CloudDocsDaemon + 1550456) [0x1bf72a878]
+                                          1  -[BRCStageRegistry _performInStageDirectory:block:] + 88 (CloudDocsDaemon + 1528764) [0x1bf7253bc]
+                                            1  __48-[BRCStageRegistry _graveyardAt:path:forItemID:]_block_invoke + 132 (CloudDocsDaemon + 1550684) [0x1bf72a95c]
+                                              1  -[BRCDiskSpaceReclaimer renameAndUnlinkInBackgroundItemAt:path:] + 92 (CloudDocsDaemon + 2686528) [0x1bf83fe40]
+                                                1  fstatat + 8 (libsystem_kernel.dylib + 185640) [0x1a4f65528]
+                                                  1  <Kernel mode>
+                                  1  -[BRCFSWriter _writeUnderCoordinationFromURL:toURL:canDelete:] + 364 (CloudDocsDaemon + 2629344) [0x1bf831ee0]
+                                    1  -[BRCFSReader lookupAndReadItemUnderCoordinationAtURL:] + 188 (CloudDocsDaemon + 1892856) [0x1bf77e1f8]
+                                      1  -[BRCURLToItemLookup resolveAndKeepOpenWithError:] + 60 (CloudDocsDaemon + 39776) [0x1bf5b9b60]
+                                        1  -[BRCURLToItemLookup resolveParentAndKeepOpenMustExist:errcode:] + 68 (CloudDocsDaemon + 40108) [0x1bf5b9cac]
+                                          1  -[BRCAccountSession(PathResolution) resolvedOpenRelpathForPath:mustExist:allowResolveInPkg:errcode:] + 132 (CloudDocsDaemon + 1099312) [0x1bf6bc630]
+                                            1  -[BRCRelativePath resolveAndKeepOpenMustExist:allowResolveInPkg:error:] + 156 (CloudDocsDaemon + 359276) [0x1bf607b6c]
+                                              1  -[BRCRelativePath _resolveAndKeepOpenMustExist:allowResolveInPkg:error:] + 1492 (CloudDocsDaemon + 355304) [0x1bf606be8]
+                                                1  -[BRCRelativePath _resolveWhenExists] + 1024 (CloudDocsDaemon + 350672) [0x1bf6059d0]
+                                                  1  -[BRCRelativePath _resolveRootWhenExists:] + 592 (CloudDocsDaemon + 348776) [0x1bf605268]
+                                                    1  -[BRCRelativePath resolveAndKeepOpenMustExist:allowResolveInPkg:error:] + 156 (CloudDocsDaemon + 359276) [0x1bf607b6c]
+                                                      1  -[BRCRelativePath _resolveAndKeepOpenMustExist:allowResolveInPkg:error:] + 1492 (CloudDocsDaemon + 355304) [0x1bf606be8]
+                                                        1  fgetxattr + 8 (libsystem_kernel.dylib + 24644) [0x1a4f3e044]
+            1  _dispatch_lane_serial_drain + 376 (libdispatch.dylib + 45576) [0x1a4dbe208]
+              1  _dispatch_source_invoke + 1356 (libdispatch.dylib + 106916) [0x1a4dcd1a4]
+                1  _dispatch_continuation_pop + 504 (libdispatch.dylib + 28800) [0x1a4dba080]
+                  1  _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+                    1  _dispatch_block_async_invoke2 + 148 (libdispatch.dylib + 76176) [0x1a4dc5990]
+                      1  ___BRBlockRememberPersona_block_invoke + 520 (CloudDocsDaemon + 1712888) [0x1bf7522f8]
+                        1  __schedule_fire_after_delay_block_invoke + 52 (CloudDocs + 84000) [0x1ac85e820]
+                          1  fire + 76 (CloudDocs + 83904) [0x1ac85e7c0]
+                            1  ___BRBlockRememberPersona_block_invoke + 520 (CloudDocsDaemon + 1712888) [0x1bf7522f8]
+                              1  __48-[BRCPQLConnection _shouldFlushWithChangeCount:]_block_invoke + 60 (CloudDocsDaemon + 57052) [0x1bf5bdedc]
+                                1  -[PQLConnection flush] + 564 (libprequelite.dylib + 27916) [0x1c97dcd0c]
+                                  1  __84-[BRCAccountSession(BRCDatabaseManager) _finishClientTruthConnectionSetupWithError:]_block_invoke.655 + 232 (CloudDocsDaemon + 162180) [0x1bf5d7984]
+                                    1  -[BRCNotificationManager flushUpdatesWithRank:] + 40 (CloudDocsDaemon + 333684) [0x1bf601774]
+                                      1  -[BRCNotificationManager _queueAdditionalUpdates] + 384 (CloudDocsDaemon + 333252) [0x1bf6015c4]
+                                        1  -[BRCAccountSession(ItemFetching) itemByRowID:db:] + 152 (CloudDocsDaemon + 2642620) [0x1bf8352bc]
+                                          1  -[BRCPQLConnection fetchObject:sql:] + 40 (CloudDocsDaemon + 59780) [0x1bf5be984]
+                                            1  -[BRCPQLConnection fetchObject:sql:args:] + 120 (CloudDocsDaemon + 59912) [0x1bf5bea08]
+                                              1  -[PQLConnection fetchObject:sql:args:] + 168 (libprequelite.dylib + 41228) [0x1c97e010c]
+                                                1  -[PQLResultSet onlyObject:] + 192 (libprequelite.dylib + 46224) [0x1c97e1490]
+                                                  1  -[PQLResultSet close] + 44 (libprequelite.dylib + 44572) [0x1c97e0e1c]
+                                                    1  -[PQLStatement unbindForDB:returnedRows:] + 104 (libprequelite.dylib + 58064) [0x1c97e42d0]
+                                                      1  sqlite3_reset + 68 (libsqlite3.dylib + 464132) [0x1ab4e3504]
+                                                        1  sqlite3VdbeReset + 36 (libsqlite3.dylib + 151244) [0x1ab496ecc]
+                                                          1  sqlite3VdbeHalt + 3504 (libsqlite3.dylib + 155252) [0x1ab497e74]
+                                                            1  sqlite3BtreeCommitPhaseTwo + 372 (libsqlite3.dylib + 373700) [0x1ab4cd3c4]
+                                                              1  pager_unlock + 416 (libsqlite3.dylib + 377000) [0x1ab4ce0a8]
+                                                                1  unixShmLock + 276 (libsqlite3.dylib + 179328) [0x1ab49dc80]
+                                                                  1  unixShmSystemLock + 196 (libsqlite3.dylib + 806104) [0x1ab536cd8]
+                                                                    1  __fcntl + 8 (libsystem_kernel.dylib + 9440) [0x1a4f3a4e0]
+          1  _dispatch_source_invoke + 1356 (libdispatch.dylib + 106916) [0x1a4dcd1a4]
+            1  _dispatch_continuation_pop + 504 (libdispatch.dylib + 28800) [0x1a4dba080]
+              1  _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+                1  _dispatch_block_async_invoke2 + 148 (libdispatch.dylib + 76176) [0x1a4dc5990]
+                  1  ___BRBlockRememberPersona_block_invoke + 520 (CloudDocsDaemon + 1712888) [0x1bf7522f8]
+                    1  __42-[BRCFairScheduler initWithWorkloop:name:]_block_invoke + 40 (CloudDocsDaemon + 2021840) [0x1bf79d9d0]
+                      1  -[BRCFairScheduler schedule] + 372 (CloudDocsDaemon + 2023012) [0x1bf79de64]
+                        1  -[BRCFairSource _runEventHandler] + 164 (CloudDocsDaemon + 2024260) [0x1bf79e344]
+                          1  __51-[BRCDeadlineScheduler initWithName:fairScheduler:]_block_invoke_2 + 40 (CloudDocsDaemon + 2417348) [0x1bf7fe2c4]
+                            1  -[BRCDeadlineScheduler _schedule] + 376 (CloudDocsDaemon + 2418880) [0x1bf7fe8c0]
+                              1  -[BRCDeadlineScheduler runDeadlineSource:completionHandler:] + 340 (CloudDocsDaemon + 2418336) [0x1bf7fe6a0]
+                                1  -[BRCDeadlineSource runEventHandler] + 232 (CloudDocsDaemon + 2416388) [0x1bf7fdf04]
+                                  1  __53-[BRCFSSchedulerBase initWithSession:name:tableName:]_block_invoke + 180 (CloudDocsDaemon + 395476) [0x1bf6108d4]
+                                    1  -[BRCApplyScheduler schedule] + 256 (CloudDocsDaemon + 505756) [0x1bf62b79c]
+                                      1  -[BRCFSSchedulerBase scheduleWithBatchSize:whereSQLClause:columns:actionHandler:] + 668 (CloudDocsDaemon + 405924) [0x1bf6131a4]
+                                        1  __29-[BRCApplyScheduler schedule]_block_invoke + 400 (CloudDocsDaemon + 506240) [0x1bf62b980]
+                                          1  -[BRCApplyScheduler _scheduleApplyJobWithID:zone:applyKind:] + 1152 (CloudDocsDaemon + 507632) [0x1bf62bef0]
+                                            1  -[PQLConnection groupInBatch:] + 148 (libprequelite.dylib + 30748) [0x1c97dd81c]
+                                              1  -[PQLConnection _performWithFlags:action:whenFlushed:] + 780 (libprequelite.dylib + 29324) [0x1c97dd28c]
+                                                1  __30-[PQLConnection groupInBatch:]_block_invoke + 28 (libprequelite.dylib + 30812) [0x1c97dd85c]
+                                                  1  __60-[BRCApplyScheduler _scheduleApplyJobWithID:zone:applyKind:]_block_invoke + 236 (CloudDocsDaemon + 508556) [0x1bf62c28c]
+                                                    1  -[BRCFSSchedulerBase postponeJobID:withThrottle:] + 84 (CloudDocsDaemon + 398748) [0x1bf61159c]
+                                                      1  -[BRCFSSchedulerBase computeStamps:forJobID:throttle:shouldBackoff:] + 192 (CloudDocsDaemon + 402044) [0x1bf61227c]
+                                                        1  -[BRCPQLConnection fetch:] + 40 (CloudDocsDaemon + 59160) [0x1bf5be718]
+                                                          1  -[BRCPQLConnection fetch:args:] + 100 (CloudDocsDaemon + 59272) [0x1bf5be788]
+                                                            1  -[PQLConnection fetch:args:] + 84 (libprequelite.dylib + 40588) [0x1c97dfe8c]
+                                                              1  -[PQLConnection _newStatementForFormat:arguments:] + 260 (libprequelite.dylib + 39004) [0x1c97df85c]
+                                                                1  -[PQLStatement initWithFormat:arguments:db:cache:] + 660 (libprequelite.dylib + 55292) [0x1c97e37fc]
+                                                                  1  cache_get_and_retain + 156 (libcache.dylib + 12212) [0x1af9d1fb4]
+                                                                    1  _entry_get_optionally_checking_collisions + 136 (libcache.dylib + 9512) [0x1af9d1528]
+                                                                      1  __PQLCacheKeyEqual + 16 (libprequelite.dylib + 19392) [0x1c97dabc0]
+                                                                        1  CFEqual + 164 (CoreFoundation + 43996) [0x1a4fc6bdc]
+        2  _dispatch_lane_invoke + 444 (libdispatch.dylib + 48856) [0x1a4dbeed8]
+          2  _dispatch_lane_serial_drain + 376 (libdispatch.dylib + 45576) [0x1a4dbe208]
+            2  _dispatch_source_invoke + 1356 (libdispatch.dylib + 106916) [0x1a4dcd1a4]
+              2  _dispatch_continuation_pop + 504 (libdispatch.dylib + 28800) [0x1a4dba080]
+                2  _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+                  1  receive_and_dispatch_rcv_msg + 160 (FSEvents + 22244) [0x1ac44a6e4]
+                    1  mach_msg_trap + 8 (libsystem_kernel.dylib + 6484) [0x1a4f39954]
+                      1  <Kernel mode>
+                  1  _dispatch_block_async_invoke2 + 148 (libdispatch.dylib + 76176) [0x1a4dc5990]
+                    1  ___BRBlockRememberPersona_block_invoke + 520 (CloudDocsDaemon + 1712888) [0x1bf7522f8]
+                      1  ___br_pacer_create_source_block_invoke + 136 (CloudDocs + 83792) [0x1ac85e750]
+                        1  fire + 76 (CloudDocs + 83904) [0x1ac85e7c0]
+                          1  ___BRBlockRememberPersona_block_invoke + 520 (CloudDocsDaemon + 1712888) [0x1bf7522f8]
+                            1  __37-[BRCGlobalProgress initWithSession:]_block_invoke + 96 (CloudDocsDaemon + 1297096) [0x1bf6ecac8]
+                              1  -[BRCGlobalProgress _updateGlobalProgress] + 276 (CloudDocsDaemon + 1317992) [0x1bf6f1c68]
+                                1  -[_BRCDownloadInfo updateLocalizedDescriptionWithOptions:] + 324 (CloudDocsDaemon + 1295584) [0x1bf6ec4e0]
+                                  1  -[NSProgress setLocalizedDescription:] + 184 (Foundation + 3188972) [0x1a61ba8ec]
+                                    1  -[NSProgress _setValueForKeys:settingBlock:] + 352 (Foundation + 339220) [0x1a5f02d14]
+                                      1  -[NSProgress _notifyRemoteObserversOfValueForKeys:] + 992 (Foundation + 344308) [0x1a5f040f4]
+                                        1  _NSXPCDistantObjectSimpleMessageSend3 + 84 (Foundation + 253428) [0x1a5eeddf4]
+                                          1  -[NSXPCConnection _sendSelector:withProxy:arg1:arg2:arg3:] + 152 (Foundation + 253672) [0x1a5eedee8]
+                                            1  -[NSXPCConnection _sendInvocation:orArguments:count:methodSignature:selector:withProxy:] + 1420 (Foundation + 118904) [0x1a5ecd078]
+                                              1  -[NSXPCEncoder _encodeInvocationObjectArgumentsOnly:count:typeString:selector:isReply:into:] + 236 (Foundation + 147816) [0x1a5ed4168]
+                                                1  _NSXPCSerializationCreateWriteData + 40 (Foundation + 127624) [0x1a5ecf288]
+                                                  1  _CFRelease + 248 (CoreFoundation + 1431444) [0x1a5119794]
+                                                    1  __CFTypeCollectionRelease + 4 (CoreFoundation + 244160) [0x1a4ff79c0]
+
+  Binary Images:
+           0x104434000 -                ???  bird                                                <514DEC8C-3ABB-37B4-8403-2B4034124ECA>  /System/Library/PrivateFrameworks/CloudDocsDaemon.framework/Versions/A/Support/bird
+           0x1a4db3000 -        0x1a4df9fff  libdispatch.dylib (1324.60.3)                       <93E1DCFC-EF56-3113-8E7C-1BA85266A93B>  /usr/lib/system/libdispatch.dylib
+           0x1a4f38000 -        0x1a4f6dfff  libsystem_kernel.dylib (8019.80.24)                 <384945E6-DD71-37E5-9A3D-84FFF14A1E60>  /usr/lib/system/libsystem_kernel.dylib
+           0x1a4f6e000 -        0x1a4f7afff  libsystem_pthread.dylib (485.60.2)                  <F7B2ECCF-E6F1-3109-AE81-9028C0B8332A>  /usr/lib/system/libsystem_pthread.dylib
+           0x1a4fbc000 -        0x1a54fffff  com.apple.CoreFoundation 6.9 (1856.105)             <16FADF8B-A3AF-3E0C-B5FB-CE9A9CDC8747>  /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
+           0x1a5eb0000 -        0x1a629dfff  com.apple.Foundation 6.9 (1856.105)                 <90321A38-43A5-3767-9A9C-2C631338B9BC>  /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
+           0x1ab472000 -        0x1ab61ffff  libsqlite3.dylib (331)                              <BF74926A-62E6-3EDD-99BC-40B4388DBA3E>  /usr/lib/libsqlite3.dylib
+           0x1ac445000 -        0x1ac451fff  com.apple.CoreServices.FSEvents 1325.0.7 (1325.0.7) <D6AA27A1-8C03-3177-98E8-6EC49235416F>  /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/FSEvents.framework/Versions/A/FSEvents
+           0x1ac84a000 -        0x1ac8eefff  com.apple.CloudDocs 1.0 (902.60.2)                  <99569A0C-2668-30E2-9E80-2A299B48128A>  /System/Library/PrivateFrameworks/CloudDocs.framework/Versions/A/CloudDocs
+           0x1af9cf000 -        0x1af9d4fff  libcache.dylib (85)                                 <1EC2C88D-6B0F-34B3-A8DA-93C406307172>  /usr/lib/system/libcache.dylib
+           0x1bf5b0000 -        0x1bf997fff  com.apple.CloudDocsDaemon 1.0 (902.60.2)            <435378AF-C0E7-3E42-8B9D-118506C5532F>  /System/Library/PrivateFrameworks/CloudDocsDaemon.framework/Versions/A/CloudDocsDaemon
+           0x1c97d6000 -        0x1c97eafff  libprequelite.dylib (117)                           <A9234318-AF37-3F06-A1A5-98A6EF477E92>  /usr/lib/libprequelite.dylib
+
+
+Powerstats for:   nsurlsessiond
+UUID:             50A6AC09-2D00-3FAD-B463-40596EA3F3B8
+Path:             /usr/libexec/nsurlsessiond
+Codesigning ID:   com.apple.nsurlsessiond
+Architecture:     arm64e
+Start time:       2022-02-26 13:18:49.910 -0600
+End time:         2022-02-26 13:19:40.870 -0600
+Num samples:      6 (7%)
+Primary state:    4 samples Non-Frontmost App, Non-Suppressed, User mode, Effective Thread QoS Utility, Requested Thread QoS Utility, Override Thread QoS Unspecified
+User Activity:    0 samples Idle, 6 samples Active
+Power Source:     6 samples on Battery, 0 samples on AC
+  6  start_wqthread + 8 (libsystem_pthread.dylib + 8216) [0x1a4f70018]
+    6  _pthread_wqthread + 288 (libsystem_pthread.dylib + 13060) [0x1a4f71304]
+      6  _dispatch_workloop_worker_thread + 656 (libdispatch.dylib + 91912) [0x1a4dc9708]
+        5  _dispatch_lane_invoke + 444 (libdispatch.dylib + 48856) [0x1a4dbeed8]
+          4  _dispatch_lane_serial_drain + 672 (libdispatch.dylib + 45872) [0x1a4dbe330]
+            4  _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+              4  _dispatch_call_block_and_release + 32 (libdispatch.dylib + 7776) [0x1a4db4e60]
+                2  ??? (CFNetwork + 843680) [0x1a9cb2fa0]
+                  2  ??? (nsurlsessiond + 100808) [0x100bc89c8]
+                    2  _CF_forwarding_prep_0 + 96 (CoreFoundation + 408544) [0x1a501fbe0]
+                      2  ___forwarding___ + 1088 (CoreFoundation + 409824) [0x1a50200e0]
+                        1  -[NSXPCConnection _sendInvocation:orArguments:count:methodSignature:selector:withProxy:] + 2480 (Foundation + 119964) [0x1a5ecd49c]
+                          1  xpc_connection_send_message_with_reply + 176 (libxpc.dylib + 55564) [0x1a4cc790c]
+                            1  _xpc_connection_pack_message + 120 (libxpc.dylib + 49468) [0x1a4cc613c]
+                              1  _xpc_serializer_pack + 632 (libxpc.dylib + 26772) [0x1a4cc0894]
+                                1  _xpc_dictionary_serialize + 152 (libxpc.dylib + 28444) [0x1a4cc0f1c]
+                                  1  _xpc_dictionary_apply_node_f + 156 (libxpc.dylib + 27820) [0x1a4cc0cac]
+                                    1  _xpc_dictionary_serialize_apply + 312 (libxpc.dylib + 29148) [0x1a4cc11dc]
+                                      1  _xpc_array_serialize + 384 (libxpc.dylib + 40768) [0x1a4cc3f40]
+                                        1  _xpc_data_serialize + 112 (libxpc.dylib + 39192) [0x1a4cc3918]
+                                          1  dispatch_data_make_memory_entry + 212 (libdispatch.dylib + 219780) [0x1a4de8a84]
+                                            1  _dispatch_data_apply + 188 (libdispatch.dylib + 219064) [0x1a4de87b8]
+                                              1  _platform_memmove + 76 (libsystem_platform.dylib + 16732) [0x1a4f8c15c]
+                                                1  <Kernel mode>
+                        1  -[NSXPCConnection _sendInvocation:orArguments:count:methodSignature:selector:withProxy:] + 1356 (Foundation + 118840) [0x1a5ecd038]
+                          1  -[NSXPCEncoder _encodeInvocation:isReply:into:] + 256 (Foundation + 122524) [0x1a5ecde9c]
+                            1  _NSXPCSerializationAddInvocationArgumentsArray + 276 (Foundation + 123780) [0x1a5ece384]
+                              1  -[NSXPCEncoder _encodeObject:] + 388 (Foundation + 126480) [0x1a5ecee10]
+                                1  _NSXPCSerializationAddASCIIString + 68 (Foundation + 123040) [0x1a5ece0a0]
+                                  1  CFDictionaryCreateMutable + 68 (CoreFoundation + 22148) [0x1a4fc1684]
+                                    1  __CFDictionaryCreateGeneric + 152 (CoreFoundation + 22704) [0x1a4fc18b0]
+                                      1  CFBasicHashCreate + 80 (CoreFoundation + 22824) [0x1a4fc1928]
+                                        1  _CFRuntimeCreateInstance + 612 (CoreFoundation + 17096) [0x1a4fc02c8]
+                                          1  _malloc_zone_malloc + 156 (libsystem_malloc.dylib + 124784) [0x1a4da6770]
+                                            1  szone_malloc_should_clear + 92 (libsystem_malloc.dylib + 9620) [0x1a4d8a594]
+                                              1  tiny_malloc_should_clear + 224 (libsystem_malloc.dylib + 14204) [0x1a4d8b77c]
+                                                1  set_tiny_meta_header_in_use + 228 (libsystem_malloc.dylib + 17796) [0x1a4d8c584]
+                2  ??? (nsurlsessiond + 186072) [0x100bdd6d8]
+                  2  _dispatch_sync_f_slow + 172 (libdispatch.dylib + 76972) [0x1a4dc5cac]
+                    2  _dispatch_sync_invoke_and_complete_recurse + 64 (libdispatch.dylib + 78384) [0x1a4dc6230]
+                      2  _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+                        2  ??? (nsurlsessiond + 186320) [0x100bdd7d0]
+                          1  +[NSKeyedArchiver archivedDataWithRootObject:requiringSecureCoding:error:] + 124 (Foundation + 317724) [0x1a5efd91c]
+                            1  -[NSKeyedArchiver encodedData] + 76 (Foundation + 325896) [0x1a5eff908]
+                              1  -[NSKeyedArchiver finishEncoding] + 548 (Foundation + 326524) [0x1a5effb7c]
+                                1  __CFBinaryPlistWriteOrPresize + 668 (CoreFoundation + 359760) [0x1a5013d50]
+                                  1  _appendObject + 1312 (CoreFoundation + 363852) [0x1a5014d4c]
+                                    1  CFDictionaryGetValue + 256 (CoreFoundation + 34216) [0x1a4fc45a8]
+                                      1  CFBasicHashFindBucket + 356 (CoreFoundation + 34624) [0x1a4fc4740]
+                          1  +[NSKeyedArchiver archivedDataWithRootObject:requiringSecureCoding:error:] + 108 (Foundation + 317708) [0x1a5efd90c]
+                            1  _encodeObject + 1224 (Foundation + 320344) [0x1a5efe358]
+                              1  -[NSDictionary(NSDictionary) encodeWithCoder:] + 700 (Foundation + 324768) [0x1a5eff4a0]
+                                1  -[NSKeyedArchiver _encodeArrayOfObjects:forKey:] + 380 (Foundation + 323676) [0x1a5eff05c]
+                                  1  _encodeObject + 1224 (Foundation + 320344) [0x1a5efe358]
+                                    1  ??? (CFNetwork + 2145340) [0x1a9df0c3c]
+                                      1  +[NSKeyedArchiver archivedDataWithRootObject:requiringSecureCoding:error:] + 156 (Foundation + 317756) [0x1a5efd93c]
+                                        1  -[NSKeyedArchiver dealloc] + 232 (Foundation + 328120) [0x1a5f001b8]
+                                          1  -[__NSArrayM dealloc] + 276 (CoreFoundation + 142156) [0x1a4fdeb4c]
+                                            1  __RELEASE_OBJECTS_IN_THE_ARRAY__ + 116 (CoreFoundation + 142356) [0x1a4fdec14]
+                                              1  -[__NSDictionaryM dealloc] + 148 (CoreFoundation + 188528) [0x1a4fea070]
+                                                1  objc_msgSend + 64 (libobjc.A.dylib + 25408) [0x1a4e00340]
+          1  _dispatch_lane_serial_drain + 376 (libdispatch.dylib + 45576) [0x1a4dbe208]
+            1  _dispatch_mach_msg_async_reply_invoke + 348 (libdispatch.dylib + 136856) [0x1a4dd4698]
+              1  _dispatch_client_callout3 + 20 (libdispatch.dylib + 15404) [0x1a4db6c2c]
+                1  _xpc_connection_call_reply_async + 88 (libxpc.dylib + 63712) [0x1a4cc98e0]
+                  1  _xpc_connection_reply_callout + 116 (libxpc.dylib + 63976) [0x1a4cc99e8]
+                    1  __88-[NSXPCConnection _sendInvocation:orArguments:count:methodSignature:selector:withProxy:]_block_invoke_3 + 212 (Foundation + 129056) [0x1a5ecf820]
+                      1  -[NSXPCConnection _decodeAndInvokeReplyBlockWithEvent:sequence:replyInfo:] + 80 (Foundation + 130212) [0x1a5ecfca4]
+                        1  _objc_rootAllocWithZone + 40 (libobjc.A.dylib + 47168) [0x1a4e05840]
+                          1  _malloc_zone_calloc + 88 (libsystem_malloc.dylib + 125032) [0x1a4da6868]
+                            1  szone_malloc_should_clear + 128 (libsystem_malloc.dylib + 9656) [0x1a4d8a5b8]
+                              1  small_malloc_should_clear + 156 (libsystem_malloc.dylib + 10048) [0x1a4d8a740]
+        1  _dispatch_workloop_invoke + 1796 (libdispatch.dylib + 53696) [0x1a4dc01c0]
+          1  _dispatch_source_invoke + 1356 (libdispatch.dylib + 106916) [0x1a4dcd1a4]
+            1  _dispatch_continuation_pop + 504 (libdispatch.dylib + 28800) [0x1a4dba080]
+              1  _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+                1  nw_socket_update_input_source + 180 (libnetwork.dylib + 978212) [0x1a920bd24]
+                  1  nw_protocol_boringssl_input_available + 352 (libboringssl.dylib + 125636) [0x1a907cac4]
+                    1  nw_boringssl_read + 228 (libboringssl.dylib + 120908) [0x1a907b84c]
+                      1  boringssl_session_read + 332 (libboringssl.dylib + 201244) [0x1a908f21c]
+                        1  SSL_peek + 96 (libboringssl.dylib + 201900) [0x1a908f4ac]
+                          1  ssl_read_impl(ssl_st*) + 340 (libboringssl.dylib + 202312) [0x1a908f648]
+                            1  bssl::ssl_open_app_data(ssl_st*, bssl::Span<unsigned char>*, unsigned long*, unsigned char*, bssl::Span<unsigned char>) + 76 (libboringssl.dylib + 202616) [0x1a908f778]
+                              1  bssl::tls_open_app_data(ssl_st*, bssl::Span<unsigned char>*, unsigned long*, unsigned char*, bssl::Span<unsigned char>) + 120 (libboringssl.dylib + 399464) [0x1a90bf868]
+                                1  bssl::tls_open_record(ssl_st*, unsigned char*, bssl::Span<unsigned char>*, unsigned long*, unsigned char*, bssl::Span<unsigned char>) + 704 (libboringssl.dylib + 86996) [0x1a90733d4]
+                                  1  bssl::SSLAEADContext::Open(bssl::Span<unsigned char>*, unsigned char, unsigned short, unsigned char const*, bssl::Span<unsigned char const>, bssl::Span<unsigned char>) + 532 (libboringssl.dylib + 92540) [0x1a907497c]
+                                    1  EVP_AEAD_CTX_open + 316 (libboringssl.dylib + 177916) [0x1a90896fc]
+                                      1  EVP_AEAD_CTX_open_gather + 120 (libboringssl.dylib + 220784) [0x1a9093e70]
+                                        1  aead_aes_gcm_open_gather + 392 (libboringssl.dylib + 221252) [0x1a9094044]
+                                          1  Decrypt_Main_Loop + 84 (libcorecrypto.dylib + 193556) [0x1a4d3d414]
+                                            1  <Effective Thread QoS Default, Requested Thread QoS Default>
+
+  Binary Images:
+           0x100bb0000 -        0x100c4ffff  nsurlsessiond (1329)                    <50A6AC09-2D00-3FAD-B463-40596EA3F3B8>  /usr/libexec/nsurlsessiond
+           0x1a4cba000 -        0x1a4cf3fff  libxpc.dylib (2235.80.3)                <FD3E0E8D-4618-3CE5-A24A-5639BE86B979>  /usr/lib/system/libxpc.dylib
+           0x1a4d0e000 -        0x1a4d87fff  libcorecrypto.dylib (1217.80.9)         <2FC16D60-2CC6-3982-80AC-7A5495577AE8>  /usr/lib/system/libcorecrypto.dylib
+           0x1a4d88000 -        0x1a4db2fff  libsystem_malloc.dylib (374.60.3)       <961751ED-F18B-30D4-8025-AA12CA23197B>  /usr/lib/system/libsystem_malloc.dylib
+           0x1a4db3000 -        0x1a4df9fff  libdispatch.dylib (1324.60.3)           <93E1DCFC-EF56-3113-8E7C-1BA85266A93B>  /usr/lib/system/libdispatch.dylib
+           0x1a4dfa000 -        0x1a4e35fff  libobjc.A.dylib (838.1)                 <2EB32E1D-90CB-3256-8681-9034085A06A6>  /usr/lib/libobjc.A.dylib
+           0x1a4f6e000 -        0x1a4f7afff  libsystem_pthread.dylib (485.60.2)      <F7B2ECCF-E6F1-3109-AE81-9028C0B8332A>  /usr/lib/system/libsystem_pthread.dylib
+           0x1a4f88000 -        0x1a4f8ffff  libsystem_platform.dylib (273.40.1)     <49CF1536-27E5-3A34-9724-D75552CBAB56>  /usr/lib/system/libsystem_platform.dylib
+           0x1a4fbc000 -        0x1a54fffff  com.apple.CoreFoundation 6.9 (1856.105) <16FADF8B-A3AF-3E0C-B5FB-CE9A9CDC8747>  /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
+           0x1a5eb0000 -        0x1a629dfff  com.apple.Foundation 6.9 (1856.105)     <90321A38-43A5-3767-9A9C-2C631338B9BC>  /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
+           0x1a905e000 -        0x1a911cfff  libboringssl.dylib (398.60.2)           <741E4AC5-66A0-3D96-9425-2CE9B138804D>  /usr/lib/libboringssl.dylib
+           0x1a911d000 -        0x1a9be4fff  libnetwork.dylib (2750.80.2)            <8FC8A8E8-9845-306A-91BE-5D8F3CBEF018>  /usr/lib/libnetwork.dylib
+           0x1a9be5000 -        0x1aa09dfff  com.apple.CFNetwork 1329 (1329)         <A48C10C0-0AEF-3D9F-B050-06420AB96929>  /System/Library/Frameworks/CFNetwork.framework/Versions/A/CFNetwork
+
+
+Powerstats for:   cloudd
+UUID:             F41BDA92-9D1E-3A4D-AFC9-B9C0F678F21A
+Path:             /System/Library/PrivateFrameworks/CloudKitDaemon.framework/Support/cloudd
+Architecture:     arm64e
+Start time:       2022-02-26 13:17:45.479 -0600
+End time:         2022-02-26 13:19:34.870 -0600
+Num samples:      5 (6%)
+Primary state:    5 samples Non-Frontmost App, Non-Suppressed, User mode, Effective Thread QoS Utility, Requested Thread QoS Utility, Override Thread QoS Unspecified
+User Activity:    0 samples Idle, 5 samples Active
+Power Source:     5 samples on Battery, 0 samples on AC
+  4  start_wqthread + 8 (libsystem_pthread.dylib + 8216) [0x1a4f70018]
+    4  _pthread_wqthread + 288 (libsystem_pthread.dylib + 13060) [0x1a4f71304]
+      4  _dispatch_workloop_worker_thread + 656 (libdispatch.dylib + 91912) [0x1a4dc9708]
+        4  _dispatch_lane_invoke + 444 (libdispatch.dylib + 48856) [0x1a4dbeed8]
+          2  _dispatch_lane_serial_drain + 672 (libdispatch.dylib + 45872) [0x1a4dbe330]
+            2  _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+              2  _dispatch_call_block_and_release + 32 (libdispatch.dylib + 7776) [0x1a4db4e60]
+                2  ??? (CloudKitDaemon + 2838348) [0x1d3e2af4c]
+                  2  ??? (CloudKitDaemon + 2839688) [0x1d3e2b488]
+                    2  ??? (CloudKitDaemon + 669288) [0x1d3c19668]
+                      2  CreateWithExportedInternal + 2568 (ProtectedCloudStorage + 120012) [0x1b3b844cc]
+                        2  ValidateSignature + 388 (ProtectedCloudStorage + 132196) [0x1b3b87464]
+                          2  getObjectKey + 56 (ProtectedCloudStorage + 30532) [0x1b3b6e744]
+                            2  PCSKeyCreateKeyFromRandomData + 228 (ProtectedCloudStorage + 30800) [0x1b3b6e850]
+                              2  ccec_generate_key_legacy + 304 (libcorecrypto.dylib + 43776) [0x1a4d18b00]
+                                2  ccec_pairwise_consistency_check + 164 (libcorecrypto.dylib + 35300) [0x1a4d169e4]
+                                  2  ccec_verify + 32 (libcorecrypto.dylib + 36804) [0x1a4d16fc4]
+                                    2  ccec_verify_digest + 300 (libcorecrypto.dylib + 205644) [0x1a4d4034c]
+                                      2  ccec_verify_internal_ws + 780 (libcorecrypto.dylib + 340432) [0x1a4d611d0]
+                                        2  ccec_twin_mult_ws + 1184 (libcorecrypto.dylib + 203744) [0x1a4d3fbe0]
+                                          1  ccn_mul_256_montgomery + 124 (libcorecrypto.dylib + 354668) [0x1a4d6496c]
+                                          1  ccec_double_ws + 292 (libcorecrypto.dylib + 38508) [0x1a4d1766c]
+                                            1  ccn_add_asm + 40 (libcorecrypto.dylib + 228352) [0x1a4d45c00]
+          2  _dispatch_lane_serial_drain + 376 (libdispatch.dylib + 45576) [0x1a4dbe208]
+            2  _dispatch_mach_invoke + 456 (libdispatch.dylib + 134328) [0x1a4dd3cb8]
+              2  _dispatch_lane_serial_drain + 376 (libdispatch.dylib + 45576) [0x1a4dbe208]
+                2  _dispatch_mach_msg_invoke + 476 (libdispatch.dylib + 130920) [0x1a4dd2f68]
+                  2  _dispatch_client_callout4 + 20 (libdispatch.dylib + 15468) [0x1a4db6c6c]
+                    2  _xpc_connection_mach_event + 1368 (libxpc.dylib + 52216) [0x1a4cc6bf8]
+                      2  _xpc_connection_call_event_handler + 176 (libxpc.dylib + 57816) [0x1a4cc81d8]
+                        2  message_handler + 228 (Foundation + 138444) [0x1a5ed1ccc]
+                          2  -[NSXPCConnection _decodeAndInvokeMessageWithEvent:flags:] + 348 (Foundation + 445776) [0x1a5f1cd50]
+                            2  -[NSXPCDecoder _decodeMessageFromXPCObject:allowingSimpleMessageSend:outInvocation:outArguments:outArgumentsMaxCount:outMethodSignature:outSelector:] + 44 (Foundation + 3148884) [0x1a61b0c54]
+                              2  -[NSXPCDecoder __decodeXPCObject:allowingSimpleMessageSend:outInvocation:outArguments:outArgumentsMaxCount:outMethodSignature:outSelector:isReply:replySelector:] + 808 (Foundation + 3149832) [0x1a61b1008]
+                                2  _NSXPCSerializationDecodeInvocationArgumentArray + 500 (Foundation + 132968) [0x1a5ed0768]
+                                  2  _NSXPCSerializationDecodeTypedObjCValuesFromArray + 936 (Foundation + 134636) [0x1a5ed0dec]
+                                    2  -[NSXPCDecoder _decodeObjectOfClasses:atObject:] + 76 (Foundation + 136020) [0x1a5ed1354]
+                                      1  _decodeObject + 1560 (Foundation + 3148016) [0x1a61b08f0]
+                                        1  CFDictionaryAddValue + 348 (CoreFoundation + 165648) [0x1a4fe4710]
+                                          1  CFBasicHashAddValue + 2672 (CoreFoundation + 168428) [0x1a4fe51ec]
+                                            1  __CFBasicHashAddValue + 104 (CoreFoundation + 28924) [0x1a4fc30fc]
+                                              1  __CFBasicHashRehash + 352 (CoreFoundation + 30976) [0x1a4fc3900]
+                                                1  szone_calloc + 136 (libsystem_malloc.dylib + 33356) [0x1a4d9024c]
+                                      1  _decodeObject + 1432 (Foundation + 3147888) [0x1a61b0870]
+                                        1  ??? (CFNetwork + 1892916) [0x1a9db3234]
+                                          1  -[NSXPCDecoder decodeObjectOfClasses:forKey:] + 52 (Foundation + 252604) [0x1a5eedabc]
+                                            1  _decodeObjectAfterSettingWhitelistForKey + 164 (Foundation + 150016) [0x1a5ed4a00]
+                                              1  _decodeObject + 1432 (Foundation + 3147888) [0x1a61b0870]
+                                                1  -[NSArray(NSArray) initWithCoder:] + 176 (Foundation + 182260) [0x1a5edc7f4]
+                                                  1  -[NSXPCDecoder _decodeArrayOfObjectsForKey:] + 236 (Foundation + 160048) [0x1a5ed7130]
+                                                    1  _NSXPCSerializationIterateArrayObject + 212 (Foundation + 160320) [0x1a5ed7240]
+                                                      1  __44-[NSXPCDecoder _decodeArrayOfObjectsForKey:]_block_invoke + 52 (Foundation + 200840) [0x1a5ee1088]
+                                                        1  _decodeObject + 1432 (Foundation + 3147888) [0x1a61b0870]
+                                                          1  ??? (CFNetwork + 1054036) [0x1a9ce6554]
+                                                            1  -[NSXPCDecoder decodeObjectOfClass:forKey:] + 52 (Foundation + 149796) [0x1a5ed4924]
+                                                              1  _decodeObjectAfterSettingWhitelistForKey + 164 (Foundation + 150016) [0x1a5ed4a00]
+                                                                1  _decodeObject + 1432 (Foundation + 3147888) [0x1a61b0870]
+                                                                  1  ??? (CFNetwork + 51548) [0x1a9bf195c]
+                                                                    1  -[NSXPCDecoder decodeObjectOfClasses:forKey:] + 52 (Foundation + 252604) [0x1a5eedabc]
+                                                                      1  _decodeObjectAfterSettingWhitelistForKey + 96 (Foundation + 149948) [0x1a5ed49bc]
+                                                                        1  _NSXPCSerializationCreateObjectInDictionaryForKey + 200 (Foundation + 150268) [0x1a5ed4afc]
+                                                                          1  _iterateDictionaryKeysAndValues + 320 (Foundation + 1206144) [0x1a5fd6780]
+                                                                            1  _platform_memmove + 452 (libsystem_platform.dylib + 17108) [0x1a4f8c2d4]
+  1  thread_start + 8 (libsystem_pthread.dylib + 8228) [0x1a4f70024]
+    1  _pthread_start + 148 (libsystem_pthread.dylib + 29248) [0x1a4f75240]
+      1  __NSThread__start__ + 808 (Foundation + 377576) [0x1a5f0c2e8]
+        1  ??? (CloudKitDaemon + 2039124) [0x1d3d67d54]
+          1  CFRunLoopRunSpecific + 600 (CoreFoundation + 534324) [0x1a503e734]
+            1  __CFRunLoopRun + 1728 (CoreFoundation + 538004) [0x1a503f594]
+              1  __CFRunLoopDoBlocks + 412 (CoreFoundation + 542076) [0x1a504057c]
+                1  __CFRUNLOOP_IS_CALLING_OUT_TO_A_BLOCK__ + 28 (CoreFoundation + 542472) [0x1a5040708]
+                  1  __mmcs_perform_with_run_loop_block_invoke + 60 (MMCS + 450148) [0x1cde9be64]
+                    1  __RunLoopPerformBlockSync_block_invoke + 120 (MMCS + 241472) [0x1cde68f40]
+                      1  __54-[MMCSHTTPContext URLSession:dataTask:didReceiveData:]_block_invoke + 480 (MMCS + 233624) [0x1cde67098]
+                        1  mmcs_nshttp_received_data + 184 (MMCS + 166472) [0x1cde56a48]
+                          1  mmcs_request_queue_request_did_transmit + 340 (MMCS + 504332) [0x1cdea920c]
+                            1  _CFArrayCheckAndGetValueAtIndex + 0 (CoreFoundation + 261676) [0x1a4ffbe2c]
+
+  Binary Images:
+           0x102730000 -                ???  cloudd                                        <F41BDA92-9D1E-3A4D-AFC9-B9C0F678F21A>  /System/Library/PrivateFrameworks/CloudKitDaemon.framework/Support/cloudd
+           0x1a4cba000 -        0x1a4cf3fff  libxpc.dylib (2235.80.3)                      <FD3E0E8D-4618-3CE5-A24A-5639BE86B979>  /usr/lib/system/libxpc.dylib
+           0x1a4d0e000 -        0x1a4d87fff  libcorecrypto.dylib (1217.80.9)               <2FC16D60-2CC6-3982-80AC-7A5495577AE8>  /usr/lib/system/libcorecrypto.dylib
+           0x1a4d88000 -        0x1a4db2fff  libsystem_malloc.dylib (374.60.3)             <961751ED-F18B-30D4-8025-AA12CA23197B>  /usr/lib/system/libsystem_malloc.dylib
+           0x1a4db3000 -        0x1a4df9fff  libdispatch.dylib (1324.60.3)                 <93E1DCFC-EF56-3113-8E7C-1BA85266A93B>  /usr/lib/system/libdispatch.dylib
+           0x1a4f6e000 -        0x1a4f7afff  libsystem_pthread.dylib (485.60.2)            <F7B2ECCF-E6F1-3109-AE81-9028C0B8332A>  /usr/lib/system/libsystem_pthread.dylib
+           0x1a4f88000 -        0x1a4f8ffff  libsystem_platform.dylib (273.40.1)           <49CF1536-27E5-3A34-9724-D75552CBAB56>  /usr/lib/system/libsystem_platform.dylib
+           0x1a4fbc000 -        0x1a54fffff  com.apple.CoreFoundation 6.9 (1856.105)       <16FADF8B-A3AF-3E0C-B5FB-CE9A9CDC8747>  /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
+           0x1a5eb0000 -        0x1a629dfff  com.apple.Foundation 6.9 (1856.105)           <90321A38-43A5-3767-9A9C-2C631338B9BC>  /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
+           0x1a9be5000 -        0x1aa09dfff  com.apple.CFNetwork 1329 (1329)               <A48C10C0-0AEF-3D9F-B050-06420AB96929>  /System/Library/Frameworks/CFNetwork.framework/Versions/A/CFNetwork
+           0x1b3b67000 -        0x1b3bc7fff  com.apple.ProtectedCloudStorage 1.0 (1)       <13D59304-4DEA-3EF1-B775-BE69ED617954>  /System/Library/PrivateFrameworks/ProtectedCloudStorage.framework/Versions/A/ProtectedCloudStorage
+           0x1cde2e000 -        0x1cded3fff  com.apple.MMCS 1.3 (1930)                     <2B5E824B-CC07-3E71-94B3-F6CE7B21A23B>  /System/Library/PrivateFrameworks/MMCS.framework/Versions/A/MMCS
+           0x1d3b76000 -        0x1d3f65fff  com.apple.cloudkit.CloudKitDaemon 1940 (1940) <F74C2D1D-BBC7-3215-BFC6-3CF81CF61DFB>  /System/Library/PrivateFrameworks/CloudKitDaemon.framework/Versions/A/CloudKitDaemon
+
+
+Powerstats for:   WindowServer
+UUID:             03F47BF0-EC03-322B-B7DC-514DC1476743
+Path:             /System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/Resources/WindowServer
+Codesigning ID:   com.apple.WindowServer
+Architecture:     arm64e
+Start time:       2022-02-26 13:18:12.344 -0600
+End time:         2022-02-26 13:19:08.184 -0600
+Num samples:      5 (6%)
+Primary state:    5 samples Non-Frontmost App, Non-Suppressed, User mode, Effective Thread QoS Unspecified, Requested Thread QoS Unspecified, Override Thread QoS Unspecified
+User Activity:    0 samples Idle, 5 samples Active
+Power Source:     5 samples on Battery, 0 samples on AC
+  3  start + 520 (dyld + 20724) [0x10490d0f4]
+    3  ??? (WindowServer + 13244) [0x10470f3bc]
+      3  SLXServer + 1744 (SkyLight + 3077556) [0x1aa4305b4]
+        3  server_loop + 128 (SkyLight + 3078384) [0x1aa4308f0]
+          2  CGXRunOneServicesPass + 1612 (SkyLight + 3074772) [0x1aa42fad4]
+            2  post_port_data + 272 (SkyLight + 3075696) [0x1aa42fe70]
+              1  non_coalesced_timer_handler + 24 (SkyLight + 2832656) [0x1aa3f4910]
+                1  run_timer_pass + 544 (SkyLight + 2832264) [0x1aa3f4788]
+                  1  update_display_callback(void*, double) + 1580 (SkyLight + 2439696) [0x1aa394a10]
+                    1  CGXUpdateDisplay + 17244 (SkyLight + 2483628) [0x1aa39f5ac]
+                      1  WS::Displays::SLCADisplay::render_update(WS::Displays::Update&, Compositor*, unsigned int, WSCompositeSourceLayer*) + 1908 (SkyLight + 1423560) [0x1aa29c8c8]
+                        1  CompositorMetal::CompositeLayersToDestination(WSCompositeSourceLayer*, WSCompositeDestination*, unsigned long long) + 272 (SkyLight + 3007164) [0x1aa41f2bc]
+                          1  CompositorMetal::composite(WSCompositeSourceLayer*, WSCompositeDestination*, bool, bool) + 308 (SkyLight + 3007508) [0x1aa41f414]
+                            1  MetalCompositeLayers + 56 (SkyLight + 3008556) [0x1aa41f82c]
+                              1  MetalCompositeLayer + 10512 (SkyLight + 3019132) [0x1aa42217c]
+                                1  CARenderOGLRenderDisplayWithOptions + 200 (QuartzCore + 1491504) [0x1abfee230]
+                                  1  CA::OGL::render(CA::OGL::Renderer&, CA::Render::Update*, unsigned long) + 452 (QuartzCore + 1024340) [0x1abf7c154]
+                                    1  CA::OGL::Renderer::render(CA::Render::Update const*, unsigned long) + 1672 (QuartzCore + 1023196) [0x1abf7bcdc]
+                                      1  CA::OGL::render_root_layers(CA::OGL::Renderer&, x_link_struct const*, CA::OGL::Gstate const&) + 184 (QuartzCore + 645428) [0x1abf1f934]
+                                        1  CA::OGL::render_prepared_layers(CA::OGL::Renderer&, CA::OGL::Layer&, CA::OGL::Layer*, CA::OGL::Gstate const&) + 124 (QuartzCore + 1169652) [0x1abf9f8f4]
+                                          1  CA::OGL::render_layers(CA::OGL::Renderer&, CA::OGL::Layer*) + 264 (QuartzCore + 659568) [0x1abf23070]
+                                            1  CA::OGL::ImagingNode::render(CA::OGL::ImagingNode::RenderClosure*, unsigned int) + 744 (QuartzCore + 660552) [0x1abf23448]
+                                              1  CA::OGL::LayerNode::apply(float, CA::OGL::Surface**, float*) + 112 (QuartzCore + 663468) [0x1abf23fac]
+                                                1  CA::OGL::render_layers(CA::OGL::Renderer&, CA::OGL::Layer*) + 264 (QuartzCore + 659568) [0x1abf23070]
+                                                  1  CA::OGL::ImagingNode::render(CA::OGL::ImagingNode::RenderClosure*, unsigned int) + 744 (QuartzCore + 660552) [0x1abf23448]
+                                                    1  CA::OGL::LayerNode::apply(float, CA::OGL::Surface**, float*) + 112 (QuartzCore + 663468) [0x1abf23fac]
+                                                      1  CA::OGL::render_layers(CA::OGL::Renderer&, CA::OGL::Layer*) + 264 (QuartzCore + 659568) [0x1abf23070]
+                                                        1  CA::OGL::ImagingNode::render(CA::OGL::ImagingNode::RenderClosure*, unsigned int) + 744 (QuartzCore + 660552) [0x1abf23448]
+                                                          1  CA::OGL::LayerNode::apply(float, CA::OGL::Surface**, float*) + 112 (QuartzCore + 663468) [0x1abf23fac]
+                                                            1  CA::OGL::render_layers(CA::OGL::Renderer&, CA::OGL::Layer*) + 264 (QuartzCore + 659568) [0x1abf23070]
+                                                              1  CA::OGL::ImagingNode::render(CA::OGL::ImagingNode::RenderClosure*, unsigned int) + 744 (QuartzCore + 660552) [0x1abf23448]
+                                                                1  CA::OGL::LayerNode::apply(float, CA::OGL::Surface**, float*) + 112 (QuartzCore + 663468) [0x1abf23fac]
+                                                                  1  CA::OGL::render_layers(CA::OGL::Renderer&, CA::OGL::Layer*) + 264 (QuartzCore + 659568) [0x1abf23070]
+                                                                    1  CA::OGL::ImagingNode::render(CA::OGL::ImagingNode::RenderClosure*, unsigned int) + 744 (QuartzCore + 660552) [0x1abf23448]
+                                                                      1  CA::OGL::LayerNode::apply(float, CA::OGL::Surface**, float*) + 112 (QuartzCore + 663468) [0x1abf23fac]
+                                                                        1  CA::OGL::render_layers(CA::OGL::Renderer&, CA::OGL::Layer*) + 264 (QuartzCore + 659568) [0x1abf23070]
+                                                                          1  CA::OGL::ImagingNode::render(CA::OGL::ImagingNode::RenderClosure*, unsigned int) + 744 (QuartzCore + 660552) [0x1abf23448]
+                                                                            1  CA::OGL::LayerNode::apply(float, CA::OGL::Surface**, float*) + 112 (QuartzCore + 663468) [0x1abf23fac]
+                                                                              1  CA::OGL::render_layers(CA::OGL::Renderer&, CA::OGL::Layer*) + 264 (QuartzCore + 659568) [0x1abf23070]
+                                                                                1  CA::OGL::ImagingNode::render(CA::OGL::ImagingNode::RenderClosure*, unsigned int) + 744 (QuartzCore + 660552) [0x1abf23448]
+                                                                                  1  CA::OGL::LayerNode::apply(float, CA::OGL::Surface**, float*) + 112 (QuartzCore + 663468) [0x1abf23fac]
+                                                                                    1  CA::OGL::render_layers(CA::OGL::Renderer&, CA::OGL::Layer*) + 264 (QuartzCore + 659568) [0x1abf23070]
+                                                                                      1  CA::OGL::ImagingNode::render(CA::OGL::ImagingNode::RenderClosure*, unsigned int) + 744 (QuartzCore + 660552) [0x1abf23448]
+                                                                                        1  CA::OGL::LayerNode::apply(float, CA::OGL::Surface**, float*) + 112 (QuartzCore + 663468) [0x1abf23fac]
+                                                                                          1  CA::OGL::render_layers(CA::OGL::Renderer&, CA::OGL::Layer*) + 264 (QuartzCore + 659568) [0x1abf23070]
+                                                                                            1  CA::OGL::ImagingNode::render(CA::OGL::ImagingNode::RenderClosure*, unsigned int) + 744 (QuartzCore + 660552) [0x1abf23448]
+                                                                                              1  CA::OGL::LayerNode::apply(float, CA::OGL::Surface**, float*) + 112 (QuartzCore + 663468) [0x1abf23fac]
+                                                                                                1  CA::OGL::render_layers(CA::OGL::Renderer&, CA::OGL::Layer*) + 264 (QuartzCore + 659568) [0x1abf23070]
+                                                                                                  1  CA::OGL::ImagingNode::render(CA::OGL::ImagingNode::RenderClosure*, unsigned int) + 744 (QuartzCore + 660552) [0x1abf23448]
+                                                                                                    1  CA::OGL::LayerNode::apply(float, CA::OGL::Surface**, float*) + 112 (QuartzCore + 663468) [0x1abf23fac]
+                                                                                                      1  CA::OGL::render_layers(CA::OGL::Renderer&, CA::OGL::Layer*) + 264 (QuartzCore + 659568) [0x1abf23070]
+                                                                                                        1  CA::OGL::ImagingNode::render(CA::OGL::ImagingNode::RenderClosure*, unsigned int) + 744 (QuartzCore + 660552) [0x1abf23448]
+                                                                                                          1  CA::OGL::LayerNode::apply(float, CA::OGL::Surface**, float*) + 112 (QuartzCore + 663468) [0x1abf23fac]
+                                                                                                            1  CA::OGL::render_layers(CA::OGL::Renderer&, CA::OGL::Layer*) + 264 (QuartzCore + 659568) [0x1abf23070]
+                                                                                                              1  CA::OGL::ImagingNode::render(CA::OGL::ImagingNode::RenderClosure*, unsigned int) + 744 (QuartzCore + 660552) [0x1abf23448]
+                                                                                                                1  CA::OGL::LayerNode::apply(float, CA::OGL::Surface**, float*) + 112 (QuartzCore + 663468) [0x1abf23fac]
+                                                                                                                  1  CA::OGL::render_layers(CA::OGL::Renderer&, CA::OGL::Layer*) + 264 (QuartzCore + 659568) [0x1abf23070]
+                                                                                                                    1  CA::OGL::ImagingNode::render(CA::OGL::ImagingNode::RenderClosure*, unsigned int) + 744 (QuartzCore + 660552) [0x1abf23448]
+                                                                                                                      1  CA::OGL::LayerNode::apply(float, CA::OGL::Surface**, float*) + 112 (QuartzCore + 663468) [0x1abf23fac]
+                                                                                                                        1  CA::OGL::render_layers(CA::OGL::Renderer&, CA::OGL::Layer*) + 264 (QuartzCore + 659568) [0x1abf23070]
+                                                                                                                          1  CA::OGL::ImagingNode::render(CA::OGL::ImagingNode::RenderClosure*, unsigned int) + 744 (QuartzCore + 660552) [0x1abf23448]
+                                                                                                                            1  CA::OGL::LayerNode::apply(float, CA::OGL::Surface**, float*) + 112 (QuartzCore + 663468) [0x1abf23fac]
+                                                                                                                              1  CA::OGL::render_layers(CA::OGL::Renderer&, CA::OGL::Layer*) + 264 (QuartzCore + 659568) [0x1abf23070]
+                                                                                                                                1  CA::OGL::ImagingNode::render(CA::OGL::ImagingNode::RenderClosure*, unsigned int) + 744 (QuartzCore + 660552) [0x1abf23448]
+                                                                                                                                  1  CA::OGL::LayerNode::apply(float, CA::OGL::Surface**, float*) + 112 (QuartzCore + 663468) [0x1abf23fac]
+                                                                                                                                    1  CA::OGL::render_layers(CA::OGL::Renderer&, CA::OGL::Layer*) + 264 (QuartzCore + 659568) [0x1abf23070]
+                                                                                                                                      1  CA::OGL::ImagingNode::render(CA::OGL::ImagingNode::RenderClosure*, unsigned int) + 744 (QuartzCore + 660552) [0x1abf23448]
+                                                                                                                                        1  CA::OGL::LayerNode::apply(float, CA::OGL::Surface**, float*) + 112 (QuartzCore + 663468) [0x1abf23fac]
+                                                                                                                                          1  CA::OGL::render_layers(CA::OGL::Renderer&, CA::OGL::Layer*) + 264 (QuartzCore + 659568) [0x1abf23070]
+                                                                                                                                            1  CA::OGL::ImagingNode::render(CA::OGL::ImagingNode::RenderClosure*, unsigned int) + 744 (QuartzCore + 660552) [0x1abf23448]
+                                                                                                                                              1  CA::OGL::LayerNode::apply(float, CA::OGL::Surface**, float*) + 112 (QuartzCore + 663468) [0x1abf23fac]
+                                                                                                                                                1  CA::OGL::render_layers(CA::OGL::Renderer&, CA::OGL::Layer*) + 264 (QuartzCore + 659568) [0x1abf23070]
+                                                                                                                                                  1  CA::OGL::ImagingNode::render(CA::OGL::ImagingNode::RenderClosure*, unsigned int) + 744 (QuartzCore + 660552) [0x1abf23448]
+                                                                                                                                                    1  CA::OGL::LayerNode::apply(float, CA::OGL::Surface**, float*) + 112 (QuartzCore + 663468) [0x1abf23fac]
+                                                                                                                                                      1  CA::OGL::render_layers(CA::OGL::Renderer&, CA::OGL::Layer*) + 264 (QuartzCore + 659568) [0x1abf23070]
+                                                                                                                                                        1  CA::OGL::ImagingNode::render(CA::OGL::ImagingNode::RenderClosure*, unsigned int) + 744 (QuartzCore + 660552) [0x1abf23448]
+                                                                                                                                                          1  CA::OGL::LayerNode::apply(float, CA::OGL::Surface**, float*) + 112 (QuartzCore + 663468) [0x1abf23fac]
+                                                                                                                                                            1  CA::OGL::render_layers(CA::OGL::Renderer&, CA::OGL::Layer*) + 264 (QuartzCore + 659568) [0x1abf23070]
+                                                                                                                                                              1  CA::OGL::ImagingNode::render(CA::OGL::ImagingNode::RenderClosure*, unsigned int) + 744 (QuartzCore + 660552) [0x1abf23448]
+                                                                                                                                                                1  CA::OGL::LayerNode::apply(float, CA::OGL::Surface**, float*) + 112 (QuartzCore + 663468) [0x1abf23fac]
+                                                                                                                                                                  1  CA::OGL::render_layers(CA::OGL::Renderer&, CA::OGL::Layer*) + 264 (QuartzCore + 659568) [0x1abf23070]
+                                                                                                                                                                    1  CA::OGL::ImagingNode::render(CA::OGL::ImagingNode::RenderClosure*, unsigned int) + 744 (QuartzCore + 660552) [0x1abf23448]
+                                                                                                                                                                      1  CA::OGL::LayerNode::apply(float, CA::OGL::Surface**, float*) + 112 (QuartzCore + 663468) [0x1abf23fac]
+                                                                                                                                                                        1  CA::OGL::render_layers(CA::OGL::Renderer&, CA::OGL::Layer*) + 264 (QuartzCore + 659568) [0x1abf23070]
+                                                                                                                                                                          1  CA::OGL::ImagingNode::render(CA::OGL::ImagingNode::RenderClosure*, unsigned int) + 744 (QuartzCore + 660552) [0x1abf23448]
+                                                                                                                                                                            1  CA::OGL::LayerNode::apply(float, CA::OGL::Surface**, float*) + 112 (QuartzCore + 663468) [0x1abf23fac]
+                                                                                                                                                                              1  CA::OGL::render_layers(CA::OGL::Renderer&, CA::OGL::Layer*) + 264 (QuartzCore + 659568) [0x1abf23070]
+                                                                                                                                                                                1  CA::OGL::ImagingNode::render(CA::OGL::ImagingNode::RenderClosure*, unsigned int) + 744 (QuartzCore + 660552) [0x1abf23448]
+                                                                                                                                                                                  1  CA::OGL::LayerNode::apply(float, CA::OGL::Surface**, float*) + 112 (QuartzCore + 663468) [0x1abf23fac]
+                                                                                                                                                                                    1  CA::OGL::render_layers(CA::OGL::Renderer&, CA::OGL::Layer*) + 264 (QuartzCore + 659568) [0x1abf23070]
+                                                                                                                                                                                      1  CA::OGL::ImagingNode::render(CA::OGL::ImagingNode::RenderClosure*, unsigned int) + 744 (QuartzCore + 660552) [0x1abf23448]
+                                                                                                                                                                                        1  CA::OGL::LayerNode::apply(float, CA::OGL::Surface**, float*) + 112 (QuartzCore + 663468) [0x1abf23fac]
+                                                                                                                                                                                          1  CA::OGL::render_layers(CA::OGL::Renderer&, CA::OGL::Layer*) + 264 (QuartzCore + 659568) [0x1abf23070]
+                                                                                                                                                                                            1  CA::OGL::ImagingNode::render(CA::OGL::ImagingNode::RenderClosure*, unsigned int) + 744 (QuartzCore + 660552) [0x1abf23448]
+                                                                                                                                                                                              1  CA::OGL::LayerNode::apply(float, CA::OGL::Surface**, float*) + 112 (QuartzCore + 663468) [0x1abf23fac]
+                                                                                                                                                                                                1  CA::OGL::render_layers(CA::OGL::Renderer&, CA::OGL::Layer*) + 264 (QuartzCore + 659568) [0x1abf23070]
+                                                                                                                                                                                                  1  CA::OGL::ImagingNode::render(CA::OGL::ImagingNode::RenderClosure*, unsigned int) + 744 (QuartzCore + 660552) [0x1abf23448]
+                                                                                                                                                                                                    1  CA::OGL::LayerNode::apply(float, CA::OGL::Surface**, float*) + 64 (QuartzCore + 663420) [0x1abf23f7c]
+                                                                                                                                                                                                      1  CA::OGL::render_contents_background(CA::OGL::Renderer&, CA::OGL::Layer const*) + 7208 (QuartzCore + 671564) [0x1abf25f4c]
+                                                                                                                                                                                                        1  CA::OGL::Context::bind_image(unsigned int, CA::Render::Texture*, unsigned int, CA::OGL::TextureFilter, CA::OGL::TextureFilter, float, CA::OGL::TextureEdgeMode, CA::OGL::ContentsGeometry const*, float*, char const*) + 668 (QuartzCore + 465976) [0x1abef3c38]
+                                                                                                                                                                                                          1  CA::OGL::MetalContext::bind_image_impl(unsigned int, CA::Render::Texture*, unsigned int, CA::OGL::TextureFilter, CA::OGL::TextureFilter, float, CA::OGL::TextureEdgeMode, float*, char const*) + 688 (QuartzCore + 469320) [0x1abef4948]
+                                                                                                                                                                                                            1  CA::OGL::MetalContext::update_surface(CA::OGL::MetalImage*, CA::Render::Surface*, unsigned int, char const*) + 4016 (QuartzCore + 1796096) [0x1ac038800]
+                                                                                                                                                                                                              1  ??? (AGXMetal13_3 + 5016952) [0x206cbcd78]
+                                                                                                                                                                                                                1  -[IOGPUMetalTexture initWithDevice:descriptor:iosurface:plane:field:args:argsSize:] + 768 (IOGPU + 65448) [0x1bf564fa8]
+                                                                                                                                                                                                                  1  -[IOGPUMetalResource initWithDevice:remoteStorageResource:options:args:argsSize:] + 476 (IOGPU + 55800) [0x1bf5629f8]
+                                                                                                                                                                                                                    1  IOGPUResourceCreate + 224 (IOGPU + 80240) [0x1bf568970]
+                                                                                                                                                                                                                      1  IOConnectCallMethod + 236 (IOKit + 15300) [0x1a7a20bc4]
+                                                                                                                                                                                                                        1  io_connect_method + 440 (IOKit + 15784) [0x1a7a20da8]
+                                                                                                                                                                                                                          1  mach_msg_trap + 8 (libsystem_kernel.dylib + 6484) [0x1a4f39954]
+              1  connectionHandler(unsigned int, mach_msg_header_t*, void*) + 256 (SkyLight + 989184) [0x1aa232800]
+                1  CGXHandleMessage + 156 (SkyLight + 2692600) [0x1aa3d25f8]
+                  1  invocation function for block in connectionHandler(unsigned int, mach_msg_header_t*, void*) + 116 (SkyLight + 990024) [0x1aa232b48]
+                    1  invocation function for block in connectionHandler(unsigned int, mach_msg_header_t*, void*) + 296 (SkyLight + 990404) [0x1aa232cc4]
+                      1  _XWindowRoutingRecordsForScreenLocation + 468 (SkyLight + 3289880) [0x1aa464318]
+                        1  (anonymous namespace)::create_routing_record_dictionary(unsigned int, unsigned int, CGPoint) + 108 (SkyLight + 2071060) [0x1aa33aa14]
+                          1  CGPointCreateDictionaryRepresentation + 52 (CoreGraphics + 688092) [0x1aa5b5fdc]
+                            1  add_number_to_dict + 72 (CoreGraphics + 614416) [0x1aa5a4010]
+                              1  -[__NSDictionaryM __setObject:forKey:] + 336 (CoreFoundation + 138080) [0x1a4fddb60]
+                                1  _malloc_zone_calloc + 88 (libsystem_malloc.dylib + 125032) [0x1a4da6868]
+                                  1  szone_malloc_should_clear + 92 (libsystem_malloc.dylib + 9620) [0x1a4d8a594]
+                                    1  tiny_malloc_should_clear + 208 (libsystem_malloc.dylib + 14188) [0x1a4d8b76c]
+          1  CGXRunOneServicesPass + 1780 (SkyLight + 3074940) [0x1aa42fb7c]
+            1  objc_autoreleasePoolPop + 208 (libobjc.A.dylib + 40296) [0x1a4e03d68]
+              1  objc_release + 24 (libobjc.A.dylib + 34456) [0x1a4e02698]
+  2  thread_start + 8 (libsystem_pthread.dylib + 8228) [0x1a4f70024]
+    2  _pthread_start + 148 (libsystem_pthread.dylib + 29248) [0x1a4f75240]
+      2  thread_fun(void*) + 32 (QuartzCore + 290716) [0x1abec8f9c]
+        2  CA::Render::Server::server_thread(void*) + 1444 (QuartzCore + 292176) [0x1abec9550]
+          1  CA::Render::Server::ReceivedMessage::run_command_stream() + 704 (QuartzCore + 1691356) [0x1ac01eedc]
+            1  CA::Render::decode_commands(CA::Render::Decoder*) + 2884 (QuartzCore + 2073504) [0x1ac07c3a0]
+              1  CA::Render::post_notification(CA::Render::NotificationName, CA::Render::Object*, void*, bool) + 884 (QuartzCore + 240256) [0x1abebca80]
+                1  contextDidCommit(void*, void*, void*) + 264 (SkyLight + 3177204) [0x1aa448af4]
+                  1  layerkit_perform_on_main_thread(ca_context_notification_info*, void (CGXConnection*) block_pointer) + 156 (SkyLight + 3174004) [0x1aa447e74]
+                    1  WSMainThreadBlockHoistEnqueueBlock + 680 (SkyLight + 327028) [0x1aa190d74]
+                      1  mach_msg_trap + 8 (libsystem_kernel.dylib + 6484) [0x1a4f39954]
+          1  CA::Render::Server::ReceivedMessage::run_command_stream() + 608 (QuartzCore + 1691260) [0x1ac01ee7c]
+
+  Binary Images:
+           0x10470c000 -        0x10471bfff  WindowServer (660.5)                        <03F47BF0-EC03-322B-B7DC-514DC1476743>  /System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/Resources/WindowServer
+           0x104908000 -        0x104983fff  dyld (941.5)                                <D21A73EA-79CD-36EB-8AC9-2C5CF5181A27>  /usr/lib/dyld
+           0x1a4d88000 -        0x1a4db2fff  libsystem_malloc.dylib (374.60.3)           <961751ED-F18B-30D4-8025-AA12CA23197B>  /usr/lib/system/libsystem_malloc.dylib
+           0x1a4dfa000 -        0x1a4e35fff  libobjc.A.dylib (838.1)                     <2EB32E1D-90CB-3256-8681-9034085A06A6>  /usr/lib/libobjc.A.dylib
+           0x1a4f38000 -        0x1a4f6dfff  libsystem_kernel.dylib (8019.80.24)         <384945E6-DD71-37E5-9A3D-84FFF14A1E60>  /usr/lib/system/libsystem_kernel.dylib
+           0x1a4f6e000 -        0x1a4f7afff  libsystem_pthread.dylib (485.60.2)          <F7B2ECCF-E6F1-3109-AE81-9028C0B8332A>  /usr/lib/system/libsystem_pthread.dylib
+           0x1a4fbc000 -        0x1a54fffff  com.apple.CoreFoundation 6.9 (1856.105)     <16FADF8B-A3AF-3E0C-B5FB-CE9A9CDC8747>  /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
+           0x1a7a1d000 -        0x1a7af2fff  com.apple.framework.IOKit 2.0.2 (1955.80.2) <97E3D808-8BCB-3AC4-85AB-60FAA4CAE04F>  /System/Library/Frameworks/IOKit.framework/Versions/A/IOKit
+           0x1aa141000 -        0x1aa50dfff  com.apple.SkyLight 1.600.0 (660.5)          <C0FA581F-E027-367F-AB10-CA8B5F8047D5>  /System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/SkyLight
+           0x1aa50e000 -        0x1aab1dfff  com.apple.CoreGraphics 2.0 (1557.4.1)       <535E07B3-61D6-3D7E-A2D9-FF939C6DCB49>  /System/Library/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics
+           0x1abe82000 -        0x1ac180fff  com.apple.QuartzCore 1.11 (962.63)          <0C98ECDE-C21A-3501-9C98-FC9D3DD5BB12>  /System/Library/Frameworks/QuartzCore.framework/Versions/A/QuartzCore
+           0x1bf555000 -        0x1bf581fff  com.apple.IOGPU 35.11 (35.11)               <B65F1B3A-8D38-3CF9-87C7-8854EC9F0C2B>  /System/Library/PrivateFrameworks/IOGPU.framework/Versions/A/IOGPU
+           0x2067f4000 -        0x206d07fff  com.apple.AGXMetal13-3 188.10 (188.10)      <7867B6C8-73C4-388F-9A8B-BD6ED1DFA4ED>  /System/Library/Extensions/AGXMetal13_3.bundle/Contents/MacOS/AGXMetal13_3

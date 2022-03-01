@@ -1,0 +1,497 @@
+Date/Time:        2022-03-01 04:52:44.163 -0600
+End time:         2022-03-01 04:56:36.041 -0600
+OS Version:       macOS 12.2.1 (Build 21D62)
+Architecture:     arm64e
+Report Version:   35
+Incident Identifier: 6FC78FE9-6D17-4570-A2A3-F56E161DBE8C
+Share With Devs:  Yes
+
+Data Source:      Microstackshots
+Shared Cache:     296EB28E-6AEB-3129-8FA6-FEB92261A4EB slid base address 0x1801e4000, slide 0x1e4000
+Shared Cache:     5C9FF5DB-8827-329A-8A37-2483935A9EA1 slid base address 0x7ff80be54000, slide 0xbe54000
+
+Command:          WindowServer
+Path:             /System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/Resources/WindowServer
+Codesigning ID:   com.apple.WindowServer
+Architecture:     arm64e
+Parent:           UNKNOWN [1]
+PID:              581
+
+Event:            wakeups
+Action taken:     none
+Wakeups:          45002 wakeups over the last 232 seconds (194 wakeups per second average), exceeding limit of 150 wakeups per second over 300 seconds
+Wakeups limit:    45000
+Limit duration:   300s
+Wakeups caused:   45002
+Wakeups duration: 232s
+Duration:         231.88s
+Duration Sampled: 226.91s
+Steps:            111
+
+Hardware model:   MacBookPro17,1
+Active cpus:      8
+HW page size:     16384
+VM page size:     16384
+
+Fan speed:        0 rpm
+Advisory levels:  Battery -> 2, User -> 2, ThermalPressure -> 0, Combined -> 2
+Free disk space:  50.13 GB/228.27 GB, low space threshold 3072 MB
+Low Power Mode:   Enabled
+
+Heaviest stack for the target process:
+  8  start + 520 (dyld + 20724) [0x102c010f4]
+  8  ??? (WindowServer + 13244) [0x1029df3bc]
+  8  SLXServer + 1744 (SkyLight + 3077556) [0x1859ac5b4]
+  8  server_loop + 128 (SkyLight + 3078384) [0x1859ac8f0]
+  7  CGXRunOneServicesPass + 1612 (SkyLight + 3074772) [0x1859abad4]
+  7  post_port_data + 272 (SkyLight + 3075696) [0x1859abe70]
+  7  non_coalesced_timer_handler + 24 (SkyLight + 2832656) [0x185970910]
+  7  run_timer_pass + 544 (SkyLight + 2832264) [0x185970788]
+  7  update_display_callback(void*, double) + 1580 (SkyLight + 2439696) [0x185910a10]
+  3  CGXUpdateDisplay + 18068 (SkyLight + 2484452) [0x18591b8e4]
+  2  WS::Displays::SLCADisplay::present_update(WS::Displays::Update&, WS::Displays::SyncType) + 856 (SkyLight + 1419460) [0x1858178c4]
+  2  WS::Displays::SLCADisplay::finish_external_update(_CARenderUpdate*, unsigned int, unsigned long long, unsigned int) + 152 (SkyLight + 1414892) [0x1858166ec]
+  2  -[CAWindowServerDisplay finishExternalUpdate:withFlags:debugInfo:] + 84 (QuartzCore + 2160592) [0x18760d7d0]
+  2  CA::WindowServer::IOMFBServer::finish_skylight_update(CA::Render::Update*, unsigned int, unsigned long long) + 68 (QuartzCore + 2307716) [0x187631684]
+  2  CA::WindowServer::IOMFBDisplay::finish_skylight_update(CA::Render::Update*, unsigned int, unsigned long long) + 3828 (QuartzCore + 2587844) [0x187675cc4]
+  2  kern_SwapEnd + 52 (IOMobileFramebuffer + 18268) [0x18a23175c]
+  2  IOConnectCallStructMethod + 56 (IOKit + 19048) [0x182f9da68]
+  2  IOConnectCallMethod + 176 (IOKit + 15240) [0x182f9cb88]
+  2  io_connect_method + 440 (IOKit + 15784) [0x182f9cda8]
+  2  mach_msg_trap + 8 (libsystem_kernel.dylib + 6484) [0x1804b5954]
+
+
+Powerstats for:   WindowServer [581]
+UUID:             03F47BF0-EC03-322B-B7DC-514DC1476743
+Path:             /System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/Resources/WindowServer
+Codesigning ID:   com.apple.WindowServer
+Shared Cache:     296EB28E-6AEB-3129-8FA6-FEB92261A4EB slid base address 0x1801e4000, slide 0x1e4000
+Architecture:     arm64e
+Parent:           UNKNOWN [1]
+UID:              88
+Footprint:        477.67 MB -> 483.34 MB (+5808 KB) (max 509.48 MB )
+Pageins:          18 pages
+Start time:       2022-03-01 04:53:23.195 -0600
+End time:         2022-03-01 04:56:34.151 -0600
+Num samples:      10 (9%)
+Primary state:    8 samples Non-Frontmost App, Non-Suppressed, User mode, Effective Thread QoS Unspecified, Requested Thread QoS Unspecified, Override Thread QoS Unspecified
+User Activity:    0 samples Idle, 10 samples Active
+Power Source:     10 samples on Battery, 0 samples on AC
+  8   start + 520 (dyld + 20724) [0x102c010f4]
+    8   ??? (WindowServer + 13244) [0x1029df3bc]
+      8   SLXServer + 1744 (SkyLight + 3077556) [0x1859ac5b4]
+        8   server_loop + 128 (SkyLight + 3078384) [0x1859ac8f0]
+          7   CGXRunOneServicesPass + 1612 (SkyLight + 3074772) [0x1859abad4]
+            7   post_port_data + 272 (SkyLight + 3075696) [0x1859abe70]
+              7   non_coalesced_timer_handler + 24 (SkyLight + 2832656) [0x185970910]
+                7   run_timer_pass + 544 (SkyLight + 2832264) [0x185970788]
+                  7   update_display_callback(void*, double) + 1580 (SkyLight + 2439696) [0x185910a10]
+                    3   CGXUpdateDisplay + 18068 (SkyLight + 2484452) [0x18591b8e4]
+                      2   WS::Displays::SLCADisplay::present_update(WS::Displays::Update&, WS::Displays::SyncType) + 856 (SkyLight + 1419460) [0x1858178c4]
+                        2   WS::Displays::SLCADisplay::finish_external_update(_CARenderUpdate*, unsigned int, unsigned long long, unsigned int) + 152 (SkyLight + 1414892) [0x1858166ec]
+                          2   -[CAWindowServerDisplay finishExternalUpdate:withFlags:debugInfo:] + 84 (QuartzCore + 2160592) [0x18760d7d0]
+                            2   CA::WindowServer::IOMFBServer::finish_skylight_update(CA::Render::Update*, unsigned int, unsigned long long) + 68 (QuartzCore + 2307716) [0x187631684]
+                              2   CA::WindowServer::IOMFBDisplay::finish_skylight_update(CA::Render::Update*, unsigned int, unsigned long long) + 3828 (QuartzCore + 2587844) [0x187675cc4]
+                                2   kern_SwapEnd + 52 (IOMobileFramebuffer + 18268) [0x18a23175c]
+                                  2   IOConnectCallStructMethod + 56 (IOKit + 19048) [0x182f9da68]
+                                    2   IOConnectCallMethod + 176 (IOKit + 15240) [0x182f9cb88]
+                                      2   io_connect_method + 440 (IOKit + 15784) [0x182f9cda8]
+                                        2   mach_msg_trap + 8 (libsystem_kernel.dylib + 6484) [0x1804b5954]
+                                          2   <Kernel mode>
+                      1   WS::Displays::SLCADisplay::present_update(WS::Displays::Update&, WS::Displays::SyncType) + 864 (SkyLight + 1419468) [0x1858178cc]
+                        1   CARenderUpdateFinish + 20 (QuartzCore + 1442532) [0x18755e2e4]
+                          1   CA::Render::Update::~Update() + 672 (QuartzCore + 737524) [0x1874b20f4]
+                            1   CA::Render::BackdropState::collect(unsigned int) + 296 (QuartzCore + 739420) [0x1874b285c]
+                    3   CGXUpdateDisplay + 4444 (SkyLight + 2470828) [0x1859183ac]
+                      1   prepare_CoreAnimation_update_state(CGXConnection*, CGXWindowSubArray, WSCAPrepareState*) + 2968 (SkyLight + 2502908) [0x1859200fc]
+                        1   WSCAWindowBacking::PopulateFlattenedContent(unsigned int*) + 400 (SkyLight + 1943096) [0x185897638]
+                          1   WSCALayerBacking::Flatten(double, double) + 72 (SkyLight + 2128304) [0x1858c49b0]
+                            1   WSFlattenedRepresentation::Update() + 816 (SkyLight + 1150676) [0x1857d5ed4]
+                              1   CaptureSurfaceMetal::Populate(WSCompositeSourceLayer*) + 148 (SkyLight + 2882932) [0x18597cd74]
+                                1   CompositorMetal::CompositeLayersToDestination(WSCompositeSourceLayer*, WSCompositeDestination*, unsigned long long) + 272 (SkyLight + 3007164) [0x18599b2bc]
+                                  1   CompositorMetal::composite(WSCompositeSourceLayer*, WSCompositeDestination*, bool, bool) + 308 (SkyLight + 3007508) [0x18599b414]
+                                    1   MetalCompositeLayers + 56 (SkyLight + 3008556) [0x18599b82c]
+                                      1   MetalCompositeLayer + 10472 (SkyLight + 3019092) [0x18599e154]
+                                        1   CARenderOGLRender + 80 (QuartzCore + 1489416) [0x187569a08]
+                                          1   CA::OGL::render(CA::OGL::Renderer&, CA::Render::Update*, unsigned long) + 452 (QuartzCore + 1024340) [0x1874f8154]
+                                            1   CA::OGL::Renderer::render(CA::Render::Update const*, unsigned long) + 1672 (QuartzCore + 1023196) [0x1874f7cdc]
+                                              1   CA::OGL::render_root_layers(CA::OGL::Renderer&, x_link_struct const*, CA::OGL::Gstate const&) + 184 (QuartzCore + 645428) [0x18749b934]
+                                                1   CA::OGL::render_prepared_layers(CA::OGL::Renderer&, CA::OGL::Layer&, CA::OGL::Layer*, CA::OGL::Gstate const&) + 80 (QuartzCore + 1169608) [0x18751b8c8]
+                                                  1   CA::OGL::prepare_layers_roi(CA::OGL::Renderer&, CA::OGL::Layer*, CA::OGL::Gstate const&) + 2276 (QuartzCore + 656948) [0x18749e634]
+                                                    1   CA::OGL::LayerNode::prepare_sublayers_roi_if_needed() + 48 (QuartzCore + 1915536) [0x1875d1a90]
+                                                      1   CA::OGL::prepare_layers_roi(CA::OGL::Renderer&, CA::OGL::Layer*, CA::OGL::Gstate const&) + 2276 (QuartzCore + 656948) [0x18749e634]
+                                                        1   CA::OGL::LayerNode::prepare_sublayers_roi_if_needed() + 48 (QuartzCore + 1915536) [0x1875d1a90]
+                                                          1   CA::OGL::prepare_layers_roi(CA::OGL::Renderer&, CA::OGL::Layer*, CA::OGL::Gstate const&) + 2276 (QuartzCore + 656948) [0x18749e634]
+                                                            1   CA::OGL::LayerNode::prepare_sublayers_roi_if_needed() + 48 (QuartzCore + 1915536) [0x1875d1a90]
+                                                              1   CA::OGL::prepare_layers_roi(CA::OGL::Renderer&, CA::OGL::Layer*, CA::OGL::Gstate const&) + 2276 (QuartzCore + 656948) [0x18749e634]
+                                                                1   CA::OGL::LayerNode::prepare_sublayers_roi_if_needed() + 48 (QuartzCore + 1915536) [0x1875d1a90]
+                                                                  1   CA::OGL::prepare_layers_roi(CA::OGL::Renderer&, CA::OGL::Layer*, CA::OGL::Gstate const&) + 2276 (QuartzCore + 656948) [0x18749e634]
+                                                                    1   CA::OGL::LayerNode::prepare_sublayers_roi_if_needed() + 48 (QuartzCore + 1915536) [0x1875d1a90]
+                                                                      1   CA::OGL::prepare_layers_roi(CA::OGL::Renderer&, CA::OGL::Layer*, CA::OGL::Gstate const&) + 2276 (QuartzCore + 656948) [0x18749e634]
+                                                                        1   CA::OGL::LayerNode::prepare_sublayers_roi_if_needed() + 48 (QuartzCore + 1915536) [0x1875d1a90]
+                                                                          1   CA::OGL::prepare_layers_roi(CA::OGL::Renderer&, CA::OGL::Layer*, CA::OGL::Gstate const&) + 2276 (QuartzCore + 656948) [0x18749e634]
+                                                                            1   CA::OGL::LayerNode::prepare_sublayers_roi_if_needed() + 48 (QuartzCore + 1915536) [0x1875d1a90]
+                                                                              1   CA::OGL::prepare_layers_roi(CA::OGL::Renderer&, CA::OGL::Layer*, CA::OGL::Gstate const&) + 2276 (QuartzCore + 656948) [0x18749e634]
+                                                                                1   CA::OGL::LayerNode::prepare_sublayers_roi_if_needed() + 48 (QuartzCore + 1915536) [0x1875d1a90]
+                                                                                  1   CA::OGL::prepare_layers_roi(CA::OGL::Renderer&, CA::OGL::Layer*, CA::OGL::Gstate const&) + 2276 (QuartzCore + 656948) [0x18749e634]
+                                                                                    1   CA::OGL::ImagingNode::prepare_roi() + 272 (QuartzCore + 1908928) [0x1875d00c0]
+                                                                                      1   CA::OGL::ImagingNode::retain_surface(float&, unsigned int) + 144 (QuartzCore + 684628) [0x1874a5254]
+                                                                                        1   CA::OGL::ImagingNode::render(CA::OGL::ImagingNode::RenderClosure*, unsigned int) + 404 (QuartzCore + 660212) [0x18749f2f4]
+                                                                                          1   CA::OGL::RenderSurface::set_dest(float, unsigned int) + 336 (QuartzCore + 1915008) [0x1875d1880]
+                                                                                            1   CA::OGL::MetalContext::create_surface(int, CA::Bounds const&, unsigned int) + 2380 (QuartzCore + 480156) [0x18747339c]
+                                                                                              1   CA::OGL::MetalContext::add_memoryless_textures(CA::OGL::MetalSurface*) + 256 (QuartzCore + 1777788) [0x1875b007c]
+                                                                                                1   ??? (AGXMetal13_3 + 5019676) [0x1e223981c]
+                                                                                                  1   ??? (AGXMetal13_3 + 4960220) [0x1e222afdc]
+                                                                                                    1   ??? (AGXMetal13_3 + 4947968) [0x1e2228000]
+                                                                                                      1   ??? (AGXMetal13_3 + 3136276) [0x1e206db14]
+                      1   prepare_CoreAnimation_update_state(CGXConnection*, CGXWindowSubArray, WSCAPrepareState*) + 2892 (SkyLight + 2502832) [0x1859200b0]
+                        1   WSWindowSessionForEachWindowInSessionMap(void (CGXWindow*, bool*) block_pointer, CGXWindowSessionMap*) + 132 (SkyLight + 735524) [0x185770924]
+                          1   invocation function for block in prepare_CoreAnimation_update_state(CGXConnection*, CGXWindowSubArray, WSCAPrepareState*) + 196 (SkyLight + 2557408) [0x18592d5e0]
+                            1   WSSetWindowBackingUpdateParameters(CGXConnection*, CGXWindow*, double, double*, unsigned long long*, unsigned long long*, double, unsigned int, unsigned int, int*, WSCAPrepareState*, unsigned int*, CGSRegionObject*) + 576 (SkyLight + 2552304) [0x18592c1f0]
+                              1   WSGetCompositorMetal + 96 (SkyLight + 1111684) [0x1857cc684]
+                                1   metal_compositor_map() + 20 (SkyLight + 1115308) [0x1857cd4ac]
+                      1   prepare_CoreAnimation_update_state(CGXConnection*, CGXWindowSubArray, WSCAPrepareState*) + 2076 (SkyLight + 2502016) [0x18591fd80]
+                        1   WSBeginCAWindowUpdate(CGXConnection*, CGXWindow*, double, unsigned int, unsigned int, WSCAPrepareState*, unsigned int*, CGSRegionObject*, CGSRegionObject**, CGXCoreAnimationUpdateState*) + 308 (SkyLight + 2554024) [0x18592c8a8]
+                          1   WSCAWindowBacking::BeginUpdate(LayerUpdateParams) + 516 (SkyLight + 1938924) [0x1858965ec]
+                            1   WSCALayerBacking::RunUpdate(WSCARenderContextScope&, bool) + 644 (SkyLight + 2124108) [0x1858c394c]
+                              1   CARenderUpdateAddContext2 + 68 (QuartzCore + 1438968) [0x18755d4f8]
+                                1   CA::Render::Update::add_context(CA::Render::Context*, CA::Render::Layer*, CA::Transform const*) + 1728 (QuartzCore + 569900) [0x18748922c]
+                                  1   CA::Render::Updater::prepare_layer(CA::Render::Updater::GlobalState&, CA::Render::Updater::LocalState&, CA::Render::LayerNode*, CA::Render::Updater::LayerShapes&, unsigned long long*) + 7412 (QuartzCore + 1408392) [0x187555d88]
+                                    1   CA::Render::Updater::prepare_layer(CA::Render::Updater::GlobalState&, CA::Render::Updater::LocalState&, CA::Render::LayerNode*, CA::Render::Updater::LayerShapes&, unsigned long long*) + 7412 (QuartzCore + 1408392) [0x187555d88]
+                                      1   CA::Render::Updater::prepare_layer(CA::Render::Updater::GlobalState&, CA::Render::Updater::LocalState&, CA::Render::LayerNode*, CA::Render::Updater::LayerShapes&, unsigned long long*) + 7412 (QuartzCore + 1408392) [0x187555d88]
+                                        1   CA::Render::Updater::prepare_layer(CA::Render::Updater::GlobalState&, CA::Render::Updater::LocalState&, CA::Render::LayerNode*, CA::Render::Updater::LayerShapes&, unsigned long long*) + 7412 (QuartzCore + 1408392) [0x187555d88]
+                                          1   CA::Render::Updater::prepare_layer(CA::Render::Updater::GlobalState&, CA::Render::Updater::LocalState&, CA::Render::LayerNode*, CA::Render::Updater::LayerShapes&, unsigned long long*) + 7412 (QuartzCore + 1408392) [0x187555d88]
+                                            1   CA::Render::Updater::prepare_layer(CA::Render::Updater::GlobalState&, CA::Render::Updater::LocalState&, CA::Render::LayerNode*, CA::Render::Updater::LayerShapes&, unsigned long long*) + 7412 (QuartzCore + 1408392) [0x187555d88]
+                                              1   CA::Render::Updater::prepare_layer(CA::Render::Updater::GlobalState&, CA::Render::Updater::LocalState&, CA::Render::LayerNode*, CA::Render::Updater::LayerShapes&, unsigned long long*) + 7412 (QuartzCore + 1408392) [0x187555d88]
+                                                1   CA::Render::Updater::prepare_layer(CA::Render::Updater::GlobalState&, CA::Render::Updater::LocalState&, CA::Render::LayerNode*, CA::Render::Updater::LayerShapes&, unsigned long long*) + 7412 (QuartzCore + 1408392) [0x187555d88]
+                                                  1   CA::Render::Updater::prepare_layer(CA::Render::Updater::GlobalState&, CA::Render::Updater::LocalState&, CA::Render::LayerNode*, CA::Render::Updater::LayerShapes&, unsigned long long*) + 7412 (QuartzCore + 1408392) [0x187555d88]
+                                                    1   CA::Render::Updater::prepare_layer(CA::Render::Updater::GlobalState&, CA::Render::Updater::LocalState&, CA::Render::LayerNode*, CA::Render::Updater::LayerShapes&, unsigned long long*) + 7412 (QuartzCore + 1408392) [0x187555d88]
+                                                      1   CA::Render::Updater::prepare_layer(CA::Render::Updater::GlobalState&, CA::Render::Updater::LocalState&, CA::Render::LayerNode*, CA::Render::Updater::LayerShapes&, unsigned long long*) + 7412 (QuartzCore + 1408392) [0x187555d88]
+                                                        1   CA::Render::Updater::prepare_layer(CA::Render::Updater::GlobalState&, CA::Render::Updater::LocalState&, CA::Render::LayerNode*, CA::Render::Updater::LayerShapes&, unsigned long long*) + 1080 (QuartzCore + 1402060) [0x1875544cc]
+                                                          1   CA::Render::Updater::LayerShapes::union_bounds(CA::Rect const&, bool) + 40 (QuartzCore + 1399496) [0x187553ac8]
+                    1   CGXUpdateDisplay + 17244 (SkyLight + 2483628) [0x18591b5ac]
+                      1   WS::Displays::SLCADisplay::render_update(WS::Displays::Update&, Compositor*, unsigned int, WSCompositeSourceLayer*) + 2776 (SkyLight + 1424428) [0x185818c2c]
+                        1   MetalContext::EndUpdate(bool) + 156 (SkyLight + 1217440) [0x1857e63a0]
+                          1   MetalContext::Flush(bool) + 240 (SkyLight + 1213680) [0x1857e54f0]
+                            1   -[_MTLCommandQueue submitCommandBuffer:] + 136 (Metal + 159708) [0x188d91fdc]
+                              1   _dispatch_lane_barrier_sync_invoke_and_complete + 56 (libdispatch.dylib + 77312) [0x180341e00]
+                                1   _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x180332bac]
+                                  1   __40-[_MTLCommandQueue submitCommandBuffer:]_block_invoke + 36 (Metal + 159784) [0x188d92028]
+                                    1   -[_MTLCommandQueue _submitAvailableCommandBuffers] + 672 (Metal + 127472) [0x188d8a1f0]
+                                      1   -[IOGPUMetalCommandQueue submitCommandBuffers:count:] + 88 (IOGPU + 24220) [0x19aad6e9c]
+                                        1   -[IOGPUMetalCommandQueue _submitCommandBuffers:count:] + 804 (IOGPU + 25068) [0x19aad71ec]
+                                          1   IOGPUCommandQueueSubmitCommandBuffers + 144 (IOGPU + 79128) [0x19aae4518]
+                                            1   IOConnectCallMethod + 176 (IOKit + 15240) [0x182f9cb88]
+                                              1   io_connect_method + 440 (IOKit + 15784) [0x182f9cda8]
+                                                1   mach_msg_trap + 8 (libsystem_kernel.dylib + 6484) [0x1804b5954]
+          1   CGXRunOneServicesPass + 1536 (SkyLight + 3074696) [0x1859aba88]
+            1   szone_calloc + 0 (libsystem_malloc.dylib + 33220) [0x18030c1c4]
+  1   thread_start + 8 (libsystem_pthread.dylib + 8228) [0x1804ec024]
+    1   _pthread_start + 148 (libsystem_pthread.dylib + 29248) [0x1804f1240]
+      1   thread_fun(void*) + 32 (QuartzCore + 290716) [0x187444f9c]
+        1   CA::WindowServer::IOMFBServer::frame_info_thread_body(void*) + 404 (QuartzCore + 2303164) [0x1876304bc]
+          1   CFRunLoopRun + 64 (CoreFoundation + 1109192) [0x180646cc8]
+            1   CFRunLoopRunSpecific + 600 (CoreFoundation + 534324) [0x1805ba734]
+              1   __CFRunLoopRun + 2380 (CoreFoundation + 538656) [0x1805bb820]
+                1   __CFRunLoopDoSource1 + 596 (CoreFoundation + 545684) [0x1805bd394]
+                  1   __CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE1_PERFORM_FUNCTION__ + 60 (CoreFoundation + 546008) [0x1805bd4d8]
+                    1   __CFMachPortPerform + 308 (CoreFoundation + 742260) [0x1805ed374]
+                      1   IODispatchCalloutFromCFMessage + 380 (IOKit + 24280) [0x182f9eed8]
+                        1   FrameInfoNotifyFunc + 260 (IOMobileFramebuffer + 37476) [0x18a236264]
+                          1   CFStringCreateWithCString + 96 (CoreFoundation + 12828) [0x18053b21c]
+                            1   __CFStringCreateImmutableFunnel3 + 1496 (CoreFoundation + 14344) [0x18053b808]
+  1   start_wqthread + 8 (libsystem_pthread.dylib + 8216) [0x1804ec018]
+    1   _pthread_wqthread + 288 (libsystem_pthread.dylib + 13060) [0x1804ed304]
+      1   _dispatch_workloop_worker_thread + 656 (libdispatch.dylib + 91912) [0x180345708]
+        1   _dispatch_workloop_invoke + 1796 (libdispatch.dylib + 53696) [0x18033c1c0]
+          1   _dispatch_lane_invoke + 444 (libdispatch.dylib + 48856) [0x18033aed8]
+            1   _dispatch_lane_serial_drain + 376 (libdispatch.dylib + 45576) [0x18033a208]
+              1   _dispatch_source_invoke + 1356 (libdispatch.dylib + 106916) [0x1803491a4]
+                1   _dispatch_continuation_pop + 520 (libdispatch.dylib + 28816) [0x180336090]
+                  1   objc_autoreleasePoolPop + 208 (libobjc.A.dylib + 40296) [0x18037fd68]
+                    1   AutoreleasePoolPage::releaseUntil(objc_object**) + 200 (libobjc.A.dylib + 54156) [0x18038338c]
+                      1   -[HIDEvent dealloc] + 108 (IOKit + 31876) [0x182fa0c84]
+                        1   -[__NSArrayM dealloc] + 276 (CoreFoundation + 142156) [0x18055ab4c]
+                          1   __RELEASE_OBJECTS_IN_THE_ARRAY__ + 116 (CoreFoundation + 142356) [0x18055ac14]
+                            1   -[HIDEvent dealloc] + 172 (IOKit + 31940) [0x182fa0cc4]
+                              1   free_tiny + 132 (libsystem_malloc.dylib + 25328) [0x18030a2f0]
+                                1   _os_unfair_lock_lock_slow + 112 (libsystem_platform.dylib + 8396) [0x1805060cc]
+
+  Binary Images:
+           0x1029dc000 -        0x1029ebfff  WindowServer (660.5)                            <03F47BF0-EC03-322B-B7DC-514DC1476743>  /System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/Resources/WindowServer
+           0x102bfc000 -        0x102c77fff  dyld (941.5)                                    <D21A73EA-79CD-36EB-8AC9-2C5CF5181A27>  /usr/lib/dyld
+           0x180304000 -        0x18032efff  libsystem_malloc.dylib (374.60.3)               <961751ED-F18B-30D4-8025-AA12CA23197B>  /usr/lib/system/libsystem_malloc.dylib
+           0x18032f000 -        0x180375fff  libdispatch.dylib (1324.60.3)                   <93E1DCFC-EF56-3113-8E7C-1BA85266A93B>  /usr/lib/system/libdispatch.dylib
+           0x180376000 -        0x1803b1fff  libobjc.A.dylib (838.1)                         <2EB32E1D-90CB-3256-8681-9034085A06A6>  /usr/lib/libobjc.A.dylib
+           0x1804b4000 -        0x1804e9fff  libsystem_kernel.dylib (8019.80.24)             <384945E6-DD71-37E5-9A3D-84FFF14A1E60>  /usr/lib/system/libsystem_kernel.dylib
+           0x1804ea000 -        0x1804f6fff  libsystem_pthread.dylib (485.60.2)              <F7B2ECCF-E6F1-3109-AE81-9028C0B8332A>  /usr/lib/system/libsystem_pthread.dylib
+           0x180504000 -        0x18050bfff  libsystem_platform.dylib (273.40.1)             <49CF1536-27E5-3A34-9724-D75552CBAB56>  /usr/lib/system/libsystem_platform.dylib
+           0x180538000 -        0x180a7bfff  com.apple.CoreFoundation 6.9 (1856.107)         <35473DE6-C433-332C-AEE0-013FD5F6D4FD>  /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
+           0x182f99000 -        0x18306efff  com.apple.framework.IOKit 2.0.2 (1955.80.2)     <97E3D808-8BCB-3AC4-85AB-60FAA4CAE04F>  /System/Library/Frameworks/IOKit.framework/Versions/A/IOKit
+           0x1856bd000 -        0x185a89fff  com.apple.SkyLight 1.600.0 (660.5)              <C0FA581F-E027-367F-AB10-CA8B5F8047D5>  /System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/SkyLight
+           0x1873fe000 -        0x1876fcfff  com.apple.QuartzCore 1.11 (962.63)              <0C98ECDE-C21A-3501-9C98-FC9D3DD5BB12>  /System/Library/Frameworks/QuartzCore.framework/Versions/A/QuartzCore
+           0x188d6b000 -        0x188ea4fff  com.apple.Metal 258.18 (258.18)                 <D550D701-D585-32A0-9F7D-3AC14F59A170>  /System/Library/Frameworks/Metal.framework/Versions/A/Metal
+           0x18a22d000 -        0x18a238fff  com.apple.IOMobileFramebuffer 343.0.0 (343.0.0) <BE76B391-4EBF-3480-96FB-F90F8BFC4718>  /System/Library/PrivateFrameworks/IOMobileFramebuffer.framework/Versions/A/IOMobileFramebuffer
+           0x19aad1000 -        0x19aafdfff  com.apple.IOGPU 35.11 (35.11)                   <B65F1B3A-8D38-3CF9-87C7-8854EC9F0C2B>  /System/Library/PrivateFrameworks/IOGPU.framework/Versions/A/IOGPU
+           0x1e1d70000 -        0x1e2283fff  com.apple.AGXMetal13-3 188.10 (188.10)          <7867B6C8-73C4-388F-9A8B-BD6ED1DFA4ED>  /System/Library/Extensions/AGXMetal13_3.bundle/Contents/MacOS/AGXMetal13_3
+
+
+Powerstats for:   VShieldScanner
+UUID:             27C9D7B7-F730-3A5B-841C-1BEC5EE73236
+Path:             /usr/local/McAfee/AntiMalware/VShieldScanner
+Codesigning ID:   VShieldScanner
+Team ID:          GT8P3H7SPW
+Shared Cache:     None
+Architecture:     x86_64 (translated)
+Start time:       2022-03-01 04:52:49.076 -0600
+End time:         2022-03-01 04:56:35.988 -0600
+Num samples:      69 (62%)
+Primary state:    68 samples Non-Frontmost App, Non-Suppressed, User mode, Effective Thread QoS Utility, Requested Thread QoS Unspecified, Override Thread QoS Unspecified
+User Activity:    0 samples Idle, 69 samples Active
+Power Source:     69 samples on Battery, 0 samples on AC
+  39  start + 462 (dyld + 21758) [0x200d9f4fe]
+    39  main + 52 (VShieldScanner + 5828) [0x100c076c4]
+      39  ScanFactory::initialize() + 236 (VShieldScanner + 92412) [0x100c1c8fc]
+        39  ScanFactory::processClientRequests() + 478 (VShieldScanner + 94430) [0x100c1d0de]
+          39  ScanFactory::spawnScanner(TaskManagement::ScanFactoryRequest&) + 504 (VShieldScanner + 95512) [0x100c1d518]
+            37  ScanFactory::initializeScanChild(TaskManagement::ScanFactoryRequest) + 681 (VShieldScanner + 96361) [0x100c1d869]
+              37  Scanner::run() + 1785 (VShieldScanner + 33033) [0x100c0e109]
+                37  Scanner::performGTISelectionCriteria() + 231 (VShieldScanner + 16887) [0x100c0a1f7]
+                  37  GTI::FileReputationScan(GTIReq const&, GTIResult&) + 176 (libGTI.dylib + 46192) [0x1097cb470]
+                    37  SelCriteria::VerifySelcs(GTIReq const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&, unsigned long&, FILETYPES&, bool&) + 427 (libGTI.dylib + 5325) [0x1097c14cd]
+                      37  FileTypeFinder::GetFileType(char*, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&) + 17 (libGTI.dylib + 42791) [0x1097ca727]
+                        36  file_or_fd + 826 (libmagic.1.dylib + 6106) [0x1099177da]
+                          36  file_buffer + 1082 (libmagic.1.dylib + 78330) [0x1099291fa]
+                            36  file_ascmagic + 215 (libmagic.1.dylib + 49687) [0x109922217]
+                              36  file_ascmagic_with_encoding + 785 (libmagic.1.dylib + 50513) [0x109922551]
+                                36  file_softmagic + 133 (libmagic.1.dylib + 30053) [0x10991d565]
+                                  36  match + 1425 (libmagic.1.dylib + 31553) [0x10991db41]
+                                    11  magiccheck + 896 (libmagic.1.dylib + 41248) [0x109920120]
+                                      11  file_regcomp + 82 (libmagic.1.dylib + 81026) [0x109929c82]
+                                        11  regncomp_l + 341 (libsystem_c.dylib + 116840) [0x7ff80c059868]
+                                          6   tre_compile + 3974 (libsystem_c.dylib + 120882) [0x7ff80c05a832]
+                                            2   ??? [0x7ff89c935fa0]
+                                            1   ??? [0x7ff89c935f8c]
+                                            1   ??? [0x7ff89c935ca4]
+                                            1   tre_set_union + 778 (libsystem_c.dylib + 141598) [0x7ff80c05f91e]
+                                              1   ??? [0x7ff89c932244]
+                                            1   tre_set_union + 142 (libsystem_c.dylib + 140962) [0x7ff80c05f6a2]
+                                              1   ??? [0x7ff89caeed94]
+                                          2   tre_compile + 621 (libsystem_c.dylib + 117529) [0x7ff80c059b19]
+                                            1   ??? [0x7ff89c934488]
+                                            1   ??? [0x7ff89c932fe8]
+                                          1   tre_compile + 5692 (libsystem_c.dylib + 122600) [0x7ff80c05aee8]
+                                            1   tre_mem_destroy + 41 (libsystem_c.dylib + 142857) [0x7ff80c05fe09]
+                                              1   ??? [0x7ff89c7012f0]
+                                          1   tre_compile + 4962 (libsystem_c.dylib + 121870) [0x7ff80c05ac0e]
+                                            1   tre_ast_to_tnfa + 96 (libsystem_c.dylib + 141948) [0x7ff80c05fa7c]
+                                              1   tre_ast_to_tnfa + 96 (libsystem_c.dylib + 141948) [0x7ff80c05fa7c]
+                                                1   tre_ast_to_tnfa + 75 (libsystem_c.dylib + 141927) [0x7ff80c05fa67]
+                                                  1   tre_make_trans + 270 (libsystem_c.dylib + 142286) [0x7ff80c05fbce]
+                                                    1   _malloc_zone_malloc + 125 (libsystem_malloc.dylib + 121558) [0x7ff80bfa7ad6]
+                                                      1   szone_malloc_should_clear + 66 (libsystem_malloc.dylib + 10151) [0x7ff80bf8c7a7]
+                                                        1   tiny_malloc_should_clear + 272 (libsystem_malloc.dylib + 14414) [0x7ff80bf8d84e]
+                                                          1   ??? [0x7ff89c827d84]
+                                          1   tre_compile + 3113 (libsystem_c.dylib + 120021) [0x7ff80c05a4d5]
+                                            1   ??? [0x7ff89c935f78]
+                                    10  ??? [0x1099568b0]
+                                    9   magiccheck + 1470 (libmagic.1.dylib + 41822) [0x10992035e]
+                                      9   regnexec + 65 (libsystem_c.dylib + 143006) [0x7ff80c05fe9e]
+                                        9   tre_match + 269 (libsystem_c.dylib + 143288) [0x7ff80c05ffb8]
+                                          2   ??? [0x7ff89c9373a4]
+                                          1   ??? [0x7ff89caeed4c]
+                                          1   ??? [0x7ff89c937e68]
+                                          1   ??? [0x7ff89c937cb8]
+                                          1   ??? [0x7ff89c937aa0]
+                                          1   ??? [0x7ff89c9373f4]
+                                          1   ??? [0x7ff89c9372ec]
+                                          1   ??? [0x7ff89c700018]
+                                    3   magiccheck + 1006 (libmagic.1.dylib + 41358) [0x10992018e]
+                                      1   ??? [0x109959084]
+                                      1   ??? [0x109958fa8]
+                                      1   ??? [0x109958fa0]
+                                    1   ??? [0x109959350]
+                                    1   ??? [0x109959348]
+                                    1   magiccheck + 1597 (libmagic.1.dylib + 41949) [0x1099203dd]
+                                      1   file_regfree + 24 (libmagic.1.dylib + 81400) [0x109929df8]
+                                        1   tre_free + 95 (libsystem_c.dylib + 161878) [0x7ff80c064856]
+                                          1   ??? [0x7ff89c8246f8]
+                        1   ??? [0x7ff89c702940]
+                          1   <Kernel mode>
+            2   ScanFactory::initializeScanChild(TaskManagement::ScanFactoryRequest) + 1030 (VShieldScanner + 96710) [0x100c1d9c6]
+              2   Scanner::run() + 2623 (VShieldScanner + 33871) [0x100c0e44f]
+                2   Scanner::performGTISelectionCriteria() + 231 (VShieldScanner + 16887) [0x100c0a1f7]
+                  2   GTI::FileReputationScan(GTIReq const&, GTIResult&) + 176 (libGTI.dylib + 46192) [0x1097cb470]
+                    2   SelCriteria::VerifySelcs(GTIReq const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&, unsigned long&, FILETYPES&, bool&) + 427 (libGTI.dylib + 5325) [0x1097c14cd]
+                      2   FileTypeFinder::GetFileType(char*, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&) + 17 (libGTI.dylib + 42791) [0x1097ca727]
+                        2   file_or_fd + 826 (libmagic.1.dylib + 6106) [0x1099177da]
+                          2   file_buffer + 1082 (libmagic.1.dylib + 78330) [0x1099291fa]
+                            2   file_ascmagic + 215 (libmagic.1.dylib + 49687) [0x109922217]
+                              2   file_ascmagic_with_encoding + 785 (libmagic.1.dylib + 50513) [0x109922551]
+                                2   file_softmagic + 133 (libmagic.1.dylib + 30053) [0x10991d565]
+                                  2   match + 1425 (libmagic.1.dylib + 31553) [0x10991db41]
+                                    2   ??? [0x1099568b0]
+  5   _main_thread + 172 (dyld + 525996) [0x200e1a6ac]
+    1   ??? [0x10be54260]
+    1   ??? [0x10b937fbc]
+    1   ??? [0x10b77d0c4]
+    1   ??? [0x10b77c638]
+    1   ??? [0x10b53c870]
+  4   ??? [0x7f8467dc4fa8]
+    1   ??? [0x10be8c018]
+    1   ??? [0x10b938b44]
+    1   ??? [0x10b5949d8]
+    1   ??? [0x10b5941cc]
+  3   ??? [0x7f8467dc4f10]
+    1   ??? [0x10b93802c]
+    1   ??? [0x10b5949d8]
+    1   ??? [0x10b5942a0]
+  1   ??? [0x7ff89caee6f4]
+  1   ??? [0x7f8467e53888]
+    1   ??? [0x10b937568]
+  1   ??? [0x7f8467e3bb08]
+    1   ??? [0x10b9374e8]
+  1   ??? [0x7f8467e3b4e8]
+    1   ??? [0x10be8c07c]
+  1   ??? [0x7f8467dc4838]
+    1   ??? [0x10b5941a0]
+  1   ??? [0x7f8467dac7e0]
+    1   ??? [0x10b937384]
+  1   ??? [0x7f8467dac748]
+    1   ??? [0x10b90b8b4]
+  1   ??? [0x7f8467dac538]
+    1   ??? [0x10b937454]
+  1   ??? [0x7f8467cc5570]
+    1   ??? [0x10b90fd74]
+  1   ??? [0x7f8467cc4f10]
+    1   ??? [0x7ff89caeedc4]
+  1   ??? [0x7f8467caca78]
+    1   ??? [0x10b9373b8]
+  1   ??? [0x7f8467cabe20]
+    1   ??? [0x10b90b8b4]
+  1   ??? [0x7f8467cab2c0]
+    1   ??? [0x10b9071f0]
+  1   ??? [0x7f846795f540]
+    1   ??? [0x10b937764]
+  1   ??? [0x7f846795d570]
+    1   ??? [0x10b552c40]
+  1   ??? [0x7f8452275591]
+    1   ??? [0x100d3aa70]
+  1   ??? [0x7f845218edf2]
+    1   ??? [0x10b91f534]
+  1   ??? [0x305a54a78]
+    1   ??? [0x10be80ba4]
+
+  Binary Images:
+           0x100c06000 -        0x100c2bfff  VShieldScanner (0)                <27C9D7B7-F730-3A5B-841C-1BEC5EE73236>  /usr/local/McAfee/AntiMalware/VShieldScanner
+           0x1097c0000 -        0x1097dbfff  libGTI.dylib (0)                  <6BCD2FEE-3573-3D07-BB01-7C46880BF77A>  /usr/local/McAfee/AntiMalware/lib/libGTI.dylib
+           0x109916000 -        0x109933fff  libmagic.1.dylib (0)              <79DAA2D9-60C5-3C7B-9CFD-AA5E7339B92A>  /usr/local/McAfee/AntiMalware/lib/libmagic.1.dylib
+           0x200d9a000 -        0x200e1dfff  dyld (941.5)                      <7DE33963-BBC5-3996-BA6E-F1D562C17C95>  /usr/lib/dyld
+        0x7ff80bf8a000 -     0x7ff80bfb5fff  libsystem_malloc.dylib (374.60.3) <DB7B390B-09CA-3E17-A367-5FF55DC92262>  /usr/lib/system/libsystem_malloc.dylib
+        0x7ff80c03d000 -     0x7ff80c0c5fff  libsystem_c.dylib (1506.40.4)     <4B160C81-EC52-3243-AABA-49F719BBF617>  /usr/lib/system/libsystem_c.dylib
+
+
+Powerstats for:   Console
+UUID:             C9B51EDE-89F0-3C68-9743-CE6995005139
+Path:             /System/Applications/Utilities/Console.app/Contents/MacOS/Console
+Identifier:       com.apple.Console
+Version:          1.1 (6.0.7)
+Build Version:    1408
+Project Name:     Console2
+Source Version:   6000007000000
+Shared Cache:     296EB28E-6AEB-3129-8FA6-FEB92261A4EB slid base address 0x1801e4000, slide 0x1e4000
+Architecture:     arm64e
+Start time:       2022-03-01 04:52:54.237 -0600
+End time:         2022-03-01 04:56:34.987 -0600
+Num samples:      10 (9%)
+Primary state:    4 samples Non-Frontmost App, Non-Suppressed, User mode, Effective Thread QoS Default, Requested Thread QoS Default, Override Thread QoS Unspecified
+User Activity:    0 samples Idle, 10 samples Active
+Power Source:     10 samples on Battery, 0 samples on AC
+  9   start_wqthread + 8 (libsystem_pthread.dylib + 8216) [0x1804ec018]
+    8   _pthread_wqthread + 288 (libsystem_pthread.dylib + 13060) [0x1804ed304]
+      8   _dispatch_workloop_worker_thread + 656 (libdispatch.dylib + 91912) [0x180345708]
+        8   _dispatch_lane_invoke + 392 (libdispatch.dylib + 48804) [0x18033aea4]
+          8   _dispatch_lane_serial_drain + 376 (libdispatch.dylib + 45576) [0x18033a208]
+            8   _dispatch_mach_invoke + 456 (libdispatch.dylib + 134328) [0x18034fcb8]
+              8   _dispatch_lane_serial_drain + 376 (libdispatch.dylib + 45576) [0x18033a208]
+                7   _dispatch_mach_msg_invoke + 476 (libdispatch.dylib + 130920) [0x18034ef68]
+                  7   _dispatch_client_callout4 + 20 (libdispatch.dylib + 15468) [0x180332c6c]
+                    7   _xpc_connection_mach_event + 1368 (libxpc.dylib + 52216) [0x180242bf8]
+                      7   _xpc_connection_call_event_handler + 176 (libxpc.dylib + 57816) [0x1802441d8]
+                        4   ___os_activity_stream_resume_with_filter_block_invoke + 172 (LoggingSupport + 245388) [0x19ffd1e8c]
+                          2   __30-[OSActivityStream startLocal]_block_invoke + 100 (LoggingSupport + 139540) [0x19ffb8114]
+                            2   -[NSCompoundPredicate evaluateWithObject:substitutionVariables:] + 248 (Foundation + 688880) [0x1814d42f0]
+                              2   -[NSCompoundPredicateOperator evaluatePredicates:withObject:substitutionVariables:] + 272 (Foundation + 689292) [0x1814d448c]
+                                2   -[NSCompoundPredicate evaluateWithObject:substitutionVariables:] + 248 (Foundation + 688880) [0x1814d42f0]
+                                  2   -[NSCompoundPredicateOperator evaluatePredicates:withObject:substitutionVariables:] + 456 (Foundation + 689476) [0x1814d4544]
+                                    1   -[NSCompoundPredicate evaluateWithObject:substitutionVariables:] + 248 (Foundation + 688880) [0x1814d42f0]
+                                      1   -[NSCompoundPredicateOperator evaluatePredicates:withObject:substitutionVariables:] + 272 (Foundation + 689292) [0x1814d448c]
+                                        1   -[NSComparisonPredicate evaluateWithObject:substitutionVariables:] + 216 (Foundation + 437892) [0x181496e84]
+                                          1   -[NSFunctionExpression expressionValueWithObject:context:] + 892 (Foundation + 439020) [0x1814972ec]
+                                            1   objc_msgSend + 0 (libobjc.A.dylib + 25344) [0x18037c300]
+                                    1   -[NSComparisonPredicate evaluateWithObject:substitutionVariables:] + 216 (Foundation + 437892) [0x181496e84]
+                                      1   -[NSFunctionExpression expressionValueWithObject:context:] + 992 (Foundation + 439120) [0x181497350]
+                                        1   -[NSString componentsSeparatedByString:] + 392 (Foundation + 325772) [0x18147b88c]
+                                          1   +[NSArray arrayWithObject:] + 24 (CoreFoundation + 431120) [0x1805a1410]
+                                            1   +[NSArray allocWithZone:] + 28 (CoreFoundation + 17920) [0x18053c600]
+                                              1   <Override Thread QoS Default>
+                          1   __30-[OSActivityStream startLocal]_block_invoke + 140 (LoggingSupport + 139580) [0x19ffb813c]
+                            1   _objc_rootDealloc + 80 (libobjc.A.dylib + 34704) [0x18037e790]
+                              1   objc_destructInstance + 80 (libobjc.A.dylib + 34800) [0x18037e7f0]
+                                1   object_cxxDestructFromClass(objc_object*, objc_class*) + 116 (libobjc.A.dylib + 71616) [0x1803877c0]
+                                  1   -[OSActivityEvent .cxx_destruct] + 104 (LoggingSupport + 144372) [0x19ffb93f4]
+                                    1   nanov2_free + 132 (libsystem_malloc.dylib + 18780) [0x18030895c]
+                          1   __30-[OSActivityStream startLocal]_block_invoke + 56 (LoggingSupport + 139496) [0x19ffb80e8]
+                            1   +[OSActivityEvent activityEventFromStreamEntry:] + 256 (LoggingSupport + 148900) [0x19ffba5a4]
+                              1   -[OSActivityLogMessageEvent initWithEntry:] + 116 (LoggingSupport + 149860) [0x19ffba964]
+                                1   -[OSActivityEvent fillFromStreamEntry:eventMessage:persisted:] + 380 (LoggingSupport + 147972) [0x19ffba204]
+                                  1   +[NSString stringWithUTF8String:] + 80 (Foundation + 152008) [0x1814511c8]
+                                    1   CFStringCreateWithBytes + 48 (CoreFoundation + 65988) [0x1805481c4]
+                                      1   __CFStringCreateImmutableFunnel3 + 1768 (CoreFoundation + 14616) [0x18053b918]
+                                        1   _CFRuntimeCreateInstance + 332 (CoreFoundation + 16816) [0x18053c1b0]
+                                          1   <Effective Thread QoS User Initiated, Override Thread QoS Default>
+                        3   ___os_activity_stream_resume_with_filter_block_invoke + 140 (LoggingSupport + 245356) [0x19ffd1e6c]
+                          2   _os_activity_stream_entry_decode + 304 (LoggingSupport + 243356) [0x19ffd169c]
+                            2   xpc_dictionary_get_int64 + 44 (libxpc.dylib + 32804) [0x18023e024]
+                              2   _xpc_dictionary_look_up_fast + 96 (libxpc.dylib + 24404) [0x18023bf54]
+                                2   _xpc_dictionary_look_up + 136 (libxpc.dylib + 20004) [0x18023ae24]
+                                  2   _xpc_dictionary_look_up_wire_apply + 80 (libxpc.dylib + 107756) [0x1802504ec]
+                                    2   <Effective Thread QoS User Initiated, Requested Thread QoS User Initiated>
+                          1   _os_activity_stream_entry_decode + 620 (LoggingSupport + 243672) [0x19ffd17d8]
+                            1   xpc_dictionary_get_string + 44 (libxpc.dylib + 24240) [0x18023beb0]
+                              1   _xpc_dictionary_look_up_fast + 96 (libxpc.dylib + 24404) [0x18023bf54]
+                                1   _xpc_dictionary_look_up + 136 (libxpc.dylib + 20004) [0x18023ae24]
+                                  1   _xpc_dictionary_apply_wire_f + 136 (libxpc.dylib + 107496) [0x1802503e8]
+                                    1   _skip_id_and_value + 44 (libxpc.dylib + 39484) [0x18023fa3c]
+                1   _dispatch_mach_msg_invoke + 652 (libdispatch.dylib + 131096) [0x18034f018]
+                  1   _dispatch_set_priority_and_voucher_slow + 204 (libdispatch.dylib + 25568) [0x1803353e0]
+                    1   _dispatch_set_priority_and_mach_voucher_slow + 164 (libdispatch.dylib + 25148) [0x18033523c]
+                      1   __bsdthread_ctl + 8 (libsystem_kernel.dylib + 14004) [0x1804b76b4]
+    1   _pthread_wqthread + 228 (libsystem_pthread.dylib + 13000) [0x1804ed2c8]
+      1   _dispatch_worker_thread2 + 164 (libdispatch.dylib + 88920) [0x180344b58]
+        1   _dispatch_root_queue_drain + 684 (libdispatch.dylib + 87100) [0x18034443c]
+          1   _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x180332bac]
+            1   _dispatch_apply_invoke + 224 (libdispatch.dylib + 95172) [0x1803463c4]
+              1   _dispatch_client_callout2 + 20 (libdispatch.dylib + 15340) [0x180332bec]
+                1   ____NSArrayGetIndexesPassingTest_block_invoke + 100 (CoreFoundation + 1433636) [0x180696024]
+                  1   __NSArrayChunkIterate + 416 (CoreFoundation + 936932) [0x18061cbe4]
+                    1   __NSARRAY_IS_CALLING_OUT_TO_A_BOOL_BLOCK__ + 24 (CoreFoundation + 576420) [0x1805c4ba4]
+                      1   __65-[CSKStreamActivitiesObserver _removeActivities:completionBlock:]_block_invoke + 72 (ConsoleKit + 347488) [0x1e7d3dd60]
+                        1   -[__NSDictionaryM objectForKey:] + 184 (CoreFoundation + 141500) [0x18055a8bc]
+                          1   -[__NSCFNumber compare:] + 0 (CoreFoundation + 372060) [0x180592d5c]
+                            1   <Effective Thread QoS User Initiated, Requested Thread QoS User Initiated>
+  1   start_wqthread + 0 (libsystem_pthread.dylib + 8208) [0x1804ec010]
+    1   <Kernel mode, Effective Thread QoS User Initiated>
+
+  Binary Images:
+           0x1049e0000 -                ???  com.apple.Console 1.1 (6.0.7)            <C9B51EDE-89F0-3C68-9743-CE6995005139>  /System/Applications/Utilities/Console.app/Contents/MacOS/Console
+           0x180236000 -        0x18026ffff  libxpc.dylib (2235.80.3)                 <FD3E0E8D-4618-3CE5-A24A-5639BE86B979>  /usr/lib/system/libxpc.dylib
+           0x180304000 -        0x18032efff  libsystem_malloc.dylib (374.60.3)        <961751ED-F18B-30D4-8025-AA12CA23197B>  /usr/lib/system/libsystem_malloc.dylib
+           0x18032f000 -        0x180375fff  libdispatch.dylib (1324.60.3)            <93E1DCFC-EF56-3113-8E7C-1BA85266A93B>  /usr/lib/system/libdispatch.dylib
+           0x180376000 -        0x1803b1fff  libobjc.A.dylib (838.1)                  <2EB32E1D-90CB-3256-8681-9034085A06A6>  /usr/lib/libobjc.A.dylib
+           0x1804b4000 -        0x1804e9fff  libsystem_kernel.dylib (8019.80.24)      <384945E6-DD71-37E5-9A3D-84FFF14A1E60>  /usr/lib/system/libsystem_kernel.dylib
+           0x1804ea000 -        0x1804f6fff  libsystem_pthread.dylib (485.60.2)       <F7B2ECCF-E6F1-3109-AE81-9028C0B8332A>  /usr/lib/system/libsystem_pthread.dylib
+           0x180538000 -        0x180a7bfff  com.apple.CoreFoundation 6.9 (1856.107)  <35473DE6-C433-332C-AEE0-013FD5F6D4FD>  /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
+           0x18142c000 -        0x181819fff  com.apple.Foundation 6.9 (1856.107)      <F3AB29BA-726D-3D0B-8125-CEB1A79CD832>  /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
+           0x19ff96000 -        0x1a0003fff  com.apple.LoggingSupport 1.0 (1375.40.2) <C45FEB51-DE9F-3669-827A-2D09C1E5CECE>  /System/Library/PrivateFrameworks/LoggingSupport.framework/Versions/A/LoggingSupport
+           0x1e7ce9000 -        0x1e7d88fff  com.apple.ConsoleKit 1.0 (7.0.3)         <84F01668-8EC2-3352-A9B4-02E6E3DDB19E>  /System/Library/PrivateFrameworks/ConsoleKit.framework/Versions/A/ConsoleKit

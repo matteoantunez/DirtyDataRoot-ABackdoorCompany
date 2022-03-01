@@ -1,0 +1,122 @@
+Date/Time:        2022-02-26 14:09:39.042 -0600
+End time:         2022-02-26 14:23:06.466 -0600
+OS Version:       macOS 12.2 (Build 21D49)
+Architecture:     arm64e
+Report Version:   35
+Incident Identifier: 9DFE0C64-28BF-47E1-9433-EBA85711AD88
+Share With Devs:  Yes
+
+Data Source:      Microstackshots
+Shared Cache:     B90241B2-E425-3982-B3F6-26C4567CBB49 slid base address 0x1a4c68000, slide 0x24c68000
+
+Command:          prl_vm_app
+Path:             /Applications/Parallels Desktop.app/Contents/MacOS/Parallels VM.app/Contents/MacOS/prl_vm_app
+Identifier:       com.parallels.vm
+Version:          17.1.1 (51537)
+Team ID:          4C6364ACXT
+Architecture:     arm64
+Parent:           UNKNOWN [8408]
+PID:              8900
+
+Event:            disk writes
+Action taken:     none
+Writes:           34.36 GB of file backed memory dirtied over 807 seconds (42.56 MB per second average), exceeding limit of 397.68 KB per second over 86400 seconds
+Writes limit:     34.36 GB
+Limit duration:   86400s
+Writes caused:    34.36 GB
+Writes duration:  807s
+Duration:         807.42s
+Duration Sampled: 576.89s
+Steps:            1350 ( (10.49 MB/step))
+
+Hardware model:   MacBookPro17,1
+Active cpus:      8
+HW page size:     16384
+VM page size:     16384
+
+Advisory levels:  Battery -> 1, User -> 2, ThermalPressure -> 0, Combined -> 1
+Free disk space:  120.31 GB/228.27 GB, low space threshold 3072 MB
+
+Heaviest stack for the target process:
+  1350  thread_start + 8 (libsystem_pthread.dylib + 8228) [0x1a4f70024]
+  1350  _pthread_start + 148 (libsystem_pthread.dylib + 29248) [0x1a4f75240]
+  1350  ??? (QtCore + 142116) [0x10150ab24]
+  1340  ??? (prl_vm_app + 8892076) [0x100992eac]
+  1340  ??? (prl_vm_app + 8891940) [0x100992e24]
+  1340  ??? (prl_vm_app + 8891312) [0x100992bb0]
+  1340  ??? (prl_vm_app + 8893804) [0x10099356c]
+  1340  pwrite + 8 (libsystem_kernel.dylib + 20452) [0x1a4f3cfe4]
+
+
+Powerstats for:   prl_vm_app (Parallels Desktop) [8900]
+UUID:             9E613BE9-1E02-3396-967A-72088B3C45FB
+Path:             /Applications/Parallels Desktop.app/Contents/MacOS/Parallels VM.app/Contents/MacOS/prl_vm_app
+Identifier:       com.parallels.vm
+Version:          17.1.1 (51537)
+Team ID:          4C6364ACXT
+Architecture:     arm64
+Parent:           UNKNOWN [8408]
+UID:              501
+Footprint:        3133.75 MB -> 3468.50 MB (+334.75 MB) (max 4083.17 MB )
+Pageins:          2382 pages
+Start time:       2022-02-26 14:13:29.567 -0600
+End time:         2022-02-26 14:23:06.459 -0600
+Num samples:      1350 (100%)
+Primary state:    1175 samples Non-Frontmost App, Non-Suppressed, Kernel mode, Effective Thread QoS Default, Requested Thread QoS Default, Override Thread QoS Unspecified
+User Activity:    0 samples Idle, 1350 samples Active
+Power Source:     1350 samples on Battery, 0 samples on AC
+  1350  thread_start + 8 (libsystem_pthread.dylib + 8228) [0x1a4f70024]
+    1350  _pthread_start + 148 (libsystem_pthread.dylib + 29248) [0x1a4f75240]
+      1350  ??? (QtCore + 142116) [0x10150ab24]
+        1340  ??? (prl_vm_app + 8892076) [0x100992eac]
+          1340  ??? (prl_vm_app + 8891940) [0x100992e24]
+            1340  ??? (prl_vm_app + 8891312) [0x100992bb0]
+              1340  ??? (prl_vm_app + 8893804) [0x10099356c]
+                1340  pwrite + 8 (libsystem_kernel.dylib + 20452) [0x1a4f3cfe4]
+                  167   <Frontmost App>
+        8     ??? (prl_vm_app + 146380) [0x10013bbcc]
+          8     ??? (prl_vm_app + 7474060) [0x100838b8c]
+            8     ??? (prl_vm_app + 7422260) [0x10082c134]
+              8     ??? (prl_vm_app + 7433900) [0x10082eeac]
+                8     ??? (prl_vm_app + 7513040) [0x1008423d0]
+                  8     pwrite + 8 (libsystem_kernel.dylib + 20452) [0x1a4f3cfe4]
+                    8     <Frontmost App, Effective Thread QoS Unspecified, Requested Thread QoS Unspecified>
+        2     ??? (prl_vm_app + 1302316) [0x100255f2c]
+          2     ??? (prl_vm_app + 1303680) [0x100256480]
+            2     ??? (prl_vm_app + 1765380) [0x1002c7004]
+              1     ??? (prl_vm_app + 1320884) [0x10025a7b4]
+                1     ??? (prl_vm_app + 1322872) [0x10025af78]
+                  1     ??? (prl_vm_app + 5415580) [0x10064229c]
+                    1     -[IOGPUMetalTexture getBytes:bytesPerRow:fromRegion:mipmapLevel:] + 68 (IOGPU + 70704) [0x1bf566430]
+                      1     ??? (AGXMetal13_3 + 4104596) [0x206bde194]
+                        1     ??? (AGXMetal13_3 + 4105368) [0x206bde498]
+                          1     ??? (AGXMetal13_3 + 4381248) [0x206c21a40]
+              1     ??? (prl_vm_app + 1320780) [0x10025a74c]
+                1     ??? (prl_vm_app + 1310288) [0x100257e50]
+                  1     ??? (prl_vm_app + 1311256) [0x100258218]
+                    1     ??? (prl_vm_app + 1314684) [0x100258f7c]
+                      1     ??? (prl_vm_app + 1317560) [0x100259ab8]
+                        1     _platform_memmove + 168 (libsystem_platform.dylib + 16824) [0x1a4f8c1b8]
+
+  Binary Images:
+           0x100118000 -        0x100e07fff  com.parallels.vm 17.1.1 (51537)        <9E613BE9-1E02-3396-967A-72088B3C45FB>  /Applications/Parallels Desktop.app/Contents/MacOS/Parallels VM.app/Contents/MacOS/prl_vm_app
+           0x1014e8000 -        0x1019fbfff  QtCore (0)                             <4FC22FD0-D443-35D1-AB9C-EC8EBCCD21BC>  /Users/USER/Library/Caches/*/Parallels Desktop.app/Contents/Frameworks/QtCore.framework/Versions/5/QtCore
+           0x1a4f38000 -        0x1a4f6dfff  libsystem_kernel.dylib (8019.80.24)    <384945E6-DD71-37E5-9A3D-84FFF14A1E60>  /usr/lib/system/libsystem_kernel.dylib
+           0x1a4f6e000 -        0x1a4f7afff  libsystem_pthread.dylib (485.60.2)     <F7B2ECCF-E6F1-3109-AE81-9028C0B8332A>  /usr/lib/system/libsystem_pthread.dylib
+           0x1a4f88000 -        0x1a4f8ffff  libsystem_platform.dylib (273.40.1)    <49CF1536-27E5-3A34-9724-D75552CBAB56>  /usr/lib/system/libsystem_platform.dylib
+           0x1bf555000 -        0x1bf581fff  com.apple.IOGPU 35.11 (35.11)          <B65F1B3A-8D38-3CF9-87C7-8854EC9F0C2B>  /System/Library/PrivateFrameworks/IOGPU.framework/Versions/A/IOGPU
+           0x2067f4000 -        0x206d07fff  com.apple.AGXMetal13-3 188.10 (188.10) <7867B6C8-73C4-388F-9A8B-BD6ED1DFA4ED>  /System/Library/Extensions/AGXMetal13_3.bundle/Contents/MacOS/AGXMetal13_3
+
+System Profile:
+Network Service: Wi-Fi, AirPort, en0
+Thunderbolt Bus: MacBook Pro, Apple Inc.
+Thunderbolt Bus: MacBook Pro, Apple Inc.
+Boot Volume File System Type: apfs
+Memory Module: LPDDR4
+USB Device: USB31Bus
+USB Device: USB31Bus
+Display: Color LCD, 2560 x 1600 Retina, Main, MirrorOff, Online
+Model: MacBookPro17,1, BootROM 7429.81.3, proc 8:4:4 processors, 8 GB, SMC 
+Graphics: Apple M1, Apple M1, Built-In
+AirPort: Wi-Fi, wl0: Oct 26 2021 16:10:41 version 18.20.310.15.7.8.120 FWID 01-5d6c3867
+Bluetooth: Version (null), 0 services, 0 devices, 0 incoming serial ports

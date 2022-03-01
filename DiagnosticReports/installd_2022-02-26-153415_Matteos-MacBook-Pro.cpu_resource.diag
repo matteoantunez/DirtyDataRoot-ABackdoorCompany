@@ -1,0 +1,476 @@
+Date/Time:        2022-02-26 15:32:24.353 -0600
+End time:         2022-02-26 15:34:10.820 -0600
+OS Version:       macOS 12.2 (Build 21D49)
+Architecture:     arm64e
+Report Version:   35
+Incident Identifier: C8077971-4891-4598-948B-0076A9B60AEB
+Share With Devs:  Yes
+
+Data Source:      Microstackshots
+Shared Cache:     B90241B2-E425-3982-B3F6-26C4567CBB49 slid base address 0x1a4c68000, slide 0x24c68000
+Shared Cache:     13FE38D9-95AD-3D4F-889F-443CD57D94DE slid base address 0x7ff81dc98000, slide 0x1dc98000
+
+Command:          installd
+Path:             /System/Library/PrivateFrameworks/PackageKit.framework/Versions/A/Resources/installd
+Architecture:     arm64e
+Parent:           UNKNOWN [1]
+PID:              18264
+
+Event:            cpu usage
+Action taken:     none
+CPU:              90 seconds cpu time over 106 seconds (85% cpu average), exceeding limit of 50% cpu over 180 seconds
+CPU limit:        90s
+Limit duration:   180s
+CPU used:         90s
+CPU duration:     106s
+Duration:         106.47s
+Duration Sampled: 102.71s
+Steps:            58
+
+Hardware model:   MacBookPro17,1
+Active cpus:      8
+HW page size:     16384
+VM page size:     16384
+
+Fan speed:        0 rpm
+Advisory levels:  Battery -> 1, User -> 2, ThermalPressure -> 0, Combined -> 1
+Free disk space:  34.14 GB/228.27 GB, low space threshold 3072 MB
+
+Heaviest stack for the target process:
+  30  start_wqthread + 8 (libsystem_pthread.dylib + 8216) [0x1a4f70018]
+  30  _pthread_wqthread + 228 (libsystem_pthread.dylib + 13000) [0x1a4f712c8]
+  30  _dispatch_worker_thread2 + 164 (libdispatch.dylib + 88920) [0x1a4dc8b58]
+  30  _dispatch_root_queue_drain + 684 (libdispatch.dylib + 87100) [0x1a4dc843c]
+  30  _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+  30  _dispatch_block_async_invoke2 + 148 (libdispatch.dylib + 76176) [0x1a4dc5990]
+  30  -[PKInstall _installMain:] + 1072 (PackageKit + 154052) [0x1c286c9c4]
+  30  -[PKInstallAnalyzer initWithInstallRequest:includeObsoletion:] + 340 (PackageKit + 343992) [0x1c289afb8]
+  30  -[PKInstallAnalyzer _analyzeIncludingObsoletion:] + 712 (PackageKit + 345020) [0x1c289b3bc]
+  30  -[PKInstallAnalyzer _findRegistrationPathsForPackageSpecifier:] + 640 (PackageKit + 366380) [0x1c28a072c]
+  30  -[PKPackage subpathsForComponent:] + 32 (PackageKit + 229368) [0x1c287eff8]
+  24  -[PKPackage _populateComponentSubpaths] + 1064 (PackageKit + 231028) [0x1c287f674]
+  24  -[__NSCFString hasPrefix:] + 24 (CoreFoundation + 293064) [0x1a50038c8]
+  5   CFStringFindWithOptionsAndLocale + 1732 (CoreFoundation + 52888) [0x1a4fc8e98]
+
+
+Powerstats for:   installd [18264]
+UUID:             D964891D-A3BB-35D0-A3F4-FACAA581F3C1
+Path:             /System/Library/PrivateFrameworks/PackageKit.framework/Versions/A/Resources/installd
+Shared Cache:     B90241B2-E425-3982-B3F6-26C4567CBB49 slid base address 0x1a4c68000, slide 0x24c68000
+Architecture:     arm64e
+Parent:           UNKNOWN [1]
+UID:              0
+Sudden Term:      Tracked (allows idle exit)
+Footprint:        267.30 MB -> 512.69 MB (+245.39 MB)
+Pageins:          12 pages
+Start time:       2022-02-26 15:32:28.079 -0600
+End time:         2022-02-26 15:34:09.372 -0600
+Num samples:      30 (52%)
+Primary state:    29 samples Non-Frontmost App, Non-Suppressed, User mode, Effective Thread QoS Background, Requested Thread QoS Utility, Override Thread QoS Unspecified
+User Activity:    30 samples Idle, 0 samples Active
+Power Source:     30 samples on Battery, 0 samples on AC
+  30  start_wqthread + 8 (libsystem_pthread.dylib + 8216) [0x1a4f70018]
+    30  _pthread_wqthread + 228 (libsystem_pthread.dylib + 13000) [0x1a4f712c8]
+      30  _dispatch_worker_thread2 + 164 (libdispatch.dylib + 88920) [0x1a4dc8b58]
+        30  _dispatch_root_queue_drain + 684 (libdispatch.dylib + 87100) [0x1a4dc843c]
+          30  _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+            30  _dispatch_block_async_invoke2 + 148 (libdispatch.dylib + 76176) [0x1a4dc5990]
+              30  -[PKInstall _installMain:] + 1072 (PackageKit + 154052) [0x1c286c9c4]
+                30  -[PKInstallAnalyzer initWithInstallRequest:includeObsoletion:] + 340 (PackageKit + 343992) [0x1c289afb8]
+                  30  -[PKInstallAnalyzer _analyzeIncludingObsoletion:] + 712 (PackageKit + 345020) [0x1c289b3bc]
+                    30  -[PKInstallAnalyzer _findRegistrationPathsForPackageSpecifier:] + 640 (PackageKit + 366380) [0x1c28a072c]
+                      30  -[PKPackage subpathsForComponent:] + 32 (PackageKit + 229368) [0x1c287eff8]
+                        24  -[PKPackage _populateComponentSubpaths] + 1064 (PackageKit + 231028) [0x1c287f674]
+                          24  -[__NSCFString hasPrefix:] + 24 (CoreFoundation + 293064) [0x1a50038c8]
+                            5   CFStringFindWithOptionsAndLocale + 1732 (CoreFoundation + 52888) [0x1a4fc8e98]
+                              1   <Kernel mode>
+                            3   CFStringGetCharactersPtr + 72 (CoreFoundation + 63220) [0x1a4fcb6f4]
+                            2   CFStringFindWithOptionsAndLocale + 724 (CoreFoundation + 51880) [0x1a4fc8aa8]
+                            2   CFStringFindWithOptionsAndLocale + 708 (CoreFoundation + 51864) [0x1a4fc8a98]
+                            2   CFStringFindWithOptionsAndLocale + 224 (CoreFoundation + 51380) [0x1a4fc88b4]
+                              2   _CFStringGetCStringPtrInternal + 396 (CoreFoundation + 62856) [0x1a4fcb588]
+                            2   CFStringGetLength + 64 (CoreFoundation + 38820) [0x1a4fc57a4]
+                            2   CFStringFindWithOptionsAndLocale + 396 (CoreFoundation + 51552) [0x1a4fc8960]
+                              1   _CFStringGetCStringPtrInternal + 396 (CoreFoundation + 62856) [0x1a4fcb588]
+                              1   _CFStringGetCStringPtrInternal + 324 (CoreFoundation + 62784) [0x1a4fcb540]
+                            1   CFStringFindWithOptionsAndLocale + 10628 (CoreFoundation + 61784) [0x1a4fcb158]
+                            1   CFStringFindWithOptionsAndLocale + 720 (CoreFoundation + 51876) [0x1a4fc8aa4]
+                            1   CFStringFindWithOptionsAndLocale + 596 (CoreFoundation + 51752) [0x1a4fc8a28]
+                            1   CFStringFindWithOptionsAndLocale + 472 (CoreFoundation + 51628) [0x1a4fc89ac]
+                              1   _CFStringGetCStringPtrInternal + 324 (CoreFoundation + 62784) [0x1a4fcb540]
+                            1   CFStringFindWithOptionsAndLocale + 248 (CoreFoundation + 51404) [0x1a4fc88cc]
+                              1   _CFStringGetCStringPtrInternal + 324 (CoreFoundation + 62784) [0x1a4fcb540]
+                            1   CFStringGetLength + 136 (CoreFoundation + 38892) [0x1a4fc57ec]
+                        3   objc_msgSend + 64 (libobjc.A.dylib + 25408) [0x1a4e00340]
+                        1   -[PKPackage _populateComponentSubpaths] + 1700 (PackageKit + 231664) [0x1c287f8f0]
+                          1   -[NSFileManager stringWithFileSystemRepresentation:length:] + 60 (Foundation + 48644) [0x1a5ebbe04]
+                            1   CFStringCreateWithBytes + 48 (CoreFoundation + 65988) [0x1a4fcc1c4]
+                              1   __CFStringCreateImmutableFunnel3 + 1768 (CoreFoundation + 14616) [0x1a4fbf918]
+                                1   _CFRuntimeCreateInstance + 332 (CoreFoundation + 16816) [0x1a4fc01b0]
+                                  1   _malloc_zone_calloc + 88 (libsystem_malloc.dylib + 125032) [0x1a4da6868]
+                        1   -[PKPackage _populateComponentSubpaths] + 1140 (PackageKit + 231104) [0x1c287f6c0]
+                          1   +[PKBOM _attributesOfBOMFSObject:] + 164 (PackageKit + 205444) [0x1c2879284]
+                            1   -[__NSDictionaryM setObject:forKey:] + 272 (CoreFoundation + 250808) [0x1a4ff93b8]
+                              1   _malloc_zone_calloc + 120 (libsystem_malloc.dylib + 125064) [0x1a4da6888]
+                        1   -[PKBundleComponent bundlePath] + 0 (PackageKit + 39616) [0x1c2850ac0]
+
+  Binary Images:
+           0x104684000 -                ???  installd                                <D964891D-A3BB-35D0-A3F4-FACAA581F3C1>  /System/Library/PrivateFrameworks/PackageKit.framework/Versions/A/Resources/installd
+           0x1a4d88000 -        0x1a4db2fff  libsystem_malloc.dylib (374.60.3)       <961751ED-F18B-30D4-8025-AA12CA23197B>  /usr/lib/system/libsystem_malloc.dylib
+           0x1a4db3000 -        0x1a4df9fff  libdispatch.dylib (1324.60.3)           <93E1DCFC-EF56-3113-8E7C-1BA85266A93B>  /usr/lib/system/libdispatch.dylib
+           0x1a4dfa000 -        0x1a4e35fff  libobjc.A.dylib (838.1)                 <2EB32E1D-90CB-3256-8681-9034085A06A6>  /usr/lib/libobjc.A.dylib
+           0x1a4f6e000 -        0x1a4f7afff  libsystem_pthread.dylib (485.60.2)      <F7B2ECCF-E6F1-3109-AE81-9028C0B8332A>  /usr/lib/system/libsystem_pthread.dylib
+           0x1a4fbc000 -        0x1a54fffff  com.apple.CoreFoundation 6.9 (1856.105) <16FADF8B-A3AF-3E0C-B5FB-CE9A9CDC8747>  /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
+           0x1a5eb0000 -        0x1a629dfff  com.apple.Foundation 6.9 (1856.105)     <90321A38-43A5-3767-9A9C-2C631338B9BC>  /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
+           0x1c2847000 -        0x1c2912fff  com.apple.PackageKit 3.0 (1125)         <3E8E3639-8776-3A43-BC27-03F7B0D24445>  /System/Library/PrivateFrameworks/PackageKit.framework/Versions/A/PackageKit
+
+
+Powerstats for:   nsurlsessiond
+UUID:             50A6AC09-2D00-3FAD-B463-40596EA3F3B8
+Path:             /usr/libexec/nsurlsessiond
+Codesigning ID:   com.apple.nsurlsessiond
+Shared Cache:     B90241B2-E425-3982-B3F6-26C4567CBB49 slid base address 0x1a4c68000, slide 0x24c68000
+Architecture:     arm64e
+Start time:       2022-02-26 15:32:33.615 -0600
+End time:         2022-02-26 15:34:09.791 -0600
+Num samples:      11 (19%)
+Primary state:    5 samples Non-Frontmost App, Non-Suppressed, User mode, Effective Thread QoS Utility, Requested Thread QoS Utility, Override Thread QoS Unspecified
+User Activity:    11 samples Idle, 0 samples Active
+Power Source:     11 samples on Battery, 0 samples on AC
+  11  start_wqthread + 8 (libsystem_pthread.dylib + 8216) [0x1a4f70018]
+    11  _pthread_wqthread + 288 (libsystem_pthread.dylib + 13060) [0x1a4f71304]
+      11  _dispatch_workloop_worker_thread + 656 (libdispatch.dylib + 91912) [0x1a4dc9708]
+        6   _dispatch_lane_invoke + 444 (libdispatch.dylib + 48856) [0x1a4dbeed8]
+          5   _dispatch_lane_serial_drain + 672 (libdispatch.dylib + 45872) [0x1a4dbe330]
+            5   _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+              5   _dispatch_call_block_and_release + 32 (libdispatch.dylib + 7776) [0x1a4db4e60]
+                3   ??? (CFNetwork + 843680) [0x1a9cb2fa0]
+                  3   ??? (nsurlsessiond + 100808) [0x100bc89c8]
+                    3   _CF_forwarding_prep_0 + 96 (CoreFoundation + 408544) [0x1a501fbe0]
+                      3   ___forwarding___ + 1088 (CoreFoundation + 409824) [0x1a50200e0]
+                        2   -[NSXPCConnection _sendInvocation:orArguments:count:methodSignature:selector:withProxy:] + 2480 (Foundation + 119964) [0x1a5ecd49c]
+                          2   xpc_connection_send_message_with_reply + 176 (libxpc.dylib + 55564) [0x1a4cc790c]
+                            2   _xpc_connection_pack_message + 120 (libxpc.dylib + 49468) [0x1a4cc613c]
+                              2   _xpc_serializer_pack + 632 (libxpc.dylib + 26772) [0x1a4cc0894]
+                                2   _xpc_dictionary_serialize + 152 (libxpc.dylib + 28444) [0x1a4cc0f1c]
+                                  2   _xpc_dictionary_apply_node_f + 156 (libxpc.dylib + 27820) [0x1a4cc0cac]
+                                    2   _xpc_dictionary_serialize_apply + 312 (libxpc.dylib + 29148) [0x1a4cc11dc]
+                                      2   _xpc_array_serialize + 384 (libxpc.dylib + 40768) [0x1a4cc3f40]
+                                        2   _xpc_data_serialize + 112 (libxpc.dylib + 39192) [0x1a4cc3918]
+                                          1   dispatch_data_make_memory_entry + 260 (libdispatch.dylib + 219828) [0x1a4de8ab4]
+                                            1   mach_make_memory_entry_64 + 144 (libsystem_kernel.dylib + 12152) [0x1a4f3af78]
+                                              1   mach_msg_trap + 8 (libsystem_kernel.dylib + 6484) [0x1a4f39954]
+                                                1   <Kernel mode>
+                                          1   dispatch_data_make_memory_entry + 212 (libdispatch.dylib + 219780) [0x1a4de8a84]
+                                            1   _dispatch_data_apply + 188 (libdispatch.dylib + 219064) [0x1a4de87b8]
+                                              1   _platform_memmove + 88 (libsystem_platform.dylib + 16744) [0x1a4f8c168]
+                        1   -[NSXPCConnection _sendInvocation:orArguments:count:methodSignature:selector:withProxy:] + 1356 (Foundation + 118840) [0x1a5ecd038]
+                          1   -[NSXPCEncoder _encodeInvocation:isReply:into:] + 324 (Foundation + 122592) [0x1a5ecdee0]
+                            1   _xpc_dictionary_insert + 436 (libxpc.dylib + 8256) [0x1a4cbc040]
+                              1   _xpc_alloc + 32 (libxpc.dylib + 119316) [0x1a4cd7214]
+                                1   szone_calloc + 136 (libsystem_malloc.dylib + 33356) [0x1a4d9024c]
+                1   ??? (CFNetwork + 555804) [0x1a9c6cb1c]
+                  1   ??? (CFNetwork + 560068) [0x1a9c6dbc4]
+                    1   objc_msgSend + 76 (libobjc.A.dylib + 25420) [0x1a4e0034c]
+                1   ??? (nsurlsessiond + 186072) [0x100bdd6d8]
+                  1   _dispatch_sync_f_slow + 172 (libdispatch.dylib + 76972) [0x1a4dc5cac]
+                    1   _dispatch_sync_invoke_and_complete_recurse + 64 (libdispatch.dylib + 78384) [0x1a4dc6230]
+                      1   _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+                        1   ??? (nsurlsessiond + 186320) [0x100bdd7d0]
+                          1   +[NSKeyedArchiver archivedDataWithRootObject:requiringSecureCoding:error:] + 108 (Foundation + 317708) [0x1a5efd90c]
+                            1   _encodeObject + 1224 (Foundation + 320344) [0x1a5efe358]
+                              1   -[NSDictionary(NSDictionary) encodeWithCoder:] + 700 (Foundation + 324768) [0x1a5eff4a0]
+                                1   -[NSKeyedArchiver _encodeArrayOfObjects:forKey:] + 380 (Foundation + 323676) [0x1a5eff05c]
+                                  1   _encodeObject + 1224 (Foundation + 320344) [0x1a5efe358]
+                                    1   ??? (CFNetwork + 2142652) [0x1a9df01bc]
+                                      1   _encodeObject + 1224 (Foundation + 320344) [0x1a5efe358]
+                                        1   ??? (CFNetwork + 61704) [0x1a9bf4108]
+                                          1   ??? (CFNetwork + 65624) [0x1a9bf5058]
+                                            1   ??? (CFNetwork + 60348) [0x1a9bf3bbc]
+                                              1   CFPropertyListCreateData + 144 (CoreFoundation + 496668) [0x1a503541c]
+                                                1   CFPropertyListWrite + 208 (CoreFoundation + 358420) [0x1a5013814]
+                                                  1   __CFBinaryPlistWriteOrPresize + 296 (CoreFoundation + 359388) [0x1a5013bdc]
+                                                    1   __CFBasicHashRehash + 208 (CoreFoundation + 30832) [0x1a4fc3870]
+                                                      1   _malloc_zone_calloc + 88 (libsystem_malloc.dylib + 125032) [0x1a4da6868]
+                                                        1   szone_malloc_should_clear + 128 (libsystem_malloc.dylib + 9656) [0x1a4d8a5b8]
+                                                          1   _platform_memset + 140 (libsystem_platform.dylib + 16076) [0x1a4f8becc]
+          1   _dispatch_lane_serial_drain + 376 (libdispatch.dylib + 45576) [0x1a4dbe208]
+            1   _dispatch_mach_msg_async_reply_invoke + 348 (libdispatch.dylib + 136856) [0x1a4dd4698]
+              1   _dispatch_client_callout3 + 20 (libdispatch.dylib + 15404) [0x1a4db6c2c]
+                1   _xpc_connection_call_reply_async + 88 (libxpc.dylib + 63712) [0x1a4cc98e0]
+                  1   _xpc_connection_reply_callout + 116 (libxpc.dylib + 63976) [0x1a4cc99e8]
+                    1   __88-[NSXPCConnection _sendInvocation:orArguments:count:methodSignature:selector:withProxy:]_block_invoke_3 + 212 (Foundation + 129056) [0x1a5ecf820]
+                      1   -[NSXPCConnection _decodeAndInvokeReplyBlockWithEvent:sequence:replyInfo:] + 192 (Foundation + 130324) [0x1a5ecfd14]
+                        1   -[NSXPCDecoder _decodeReplyFromXPCObject:forSelector:] + 84 (Foundation + 3148980) [0x1a61b0cb4]
+                          1   -[NSXPCDecoder __decodeXPCObject:allowingSimpleMessageSend:outInvocation:outArguments:outArgumentsMaxCount:outMethodSignature:outSelector:isReply:replySelector:] + 508 (Foundation + 3149532) [0x1a61b0edc]
+                            1   +[NSMethodSignature signatureWithObjCTypes:] + 92 (CoreFoundation + 396848) [0x1a501ce30]
+                              1   _platform_strcmp + 0 (libsystem_platform.dylib + 5456) [0x1a4f89550]
+        5   _dispatch_workloop_invoke + 1796 (libdispatch.dylib + 53696) [0x1a4dc01c0]
+          5   _dispatch_source_invoke + 1356 (libdispatch.dylib + 106916) [0x1a4dcd1a4]
+            5   _dispatch_continuation_pop + 504 (libdispatch.dylib + 28800) [0x1a4dba080]
+              5   _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+                5   nw_socket_update_input_source + 180 (libnetwork.dylib + 978212) [0x1a920bd24]
+                  5   nw_protocol_boringssl_input_available + 352 (libboringssl.dylib + 125636) [0x1a907cac4]
+                    5   nw_boringssl_read + 228 (libboringssl.dylib + 120908) [0x1a907b84c]
+                      5   boringssl_session_read + 332 (libboringssl.dylib + 201244) [0x1a908f21c]
+                        5   SSL_peek + 96 (libboringssl.dylib + 201900) [0x1a908f4ac]
+                          3   ssl_read_impl(ssl_st*) + 368 (libboringssl.dylib + 202340) [0x1a908f664]
+                            3   bssl::ssl_handle_open_record(ssl_st*, bool*, bssl::ssl_open_record_t, unsigned long, unsigned char) + 160 (libboringssl.dylib + 88084) [0x1a9073814]
+                              3   bssl::ssl_read_buffer_extend_to(ssl_st*, unsigned long) + 392 (libboringssl.dylib + 88564) [0x1a90739f4]
+                                3   BIO_read + 64 (libboringssl.dylib + 88956) [0x1a9073b7c]
+                                  3   boringssl_bio_read + 44 (libboringssl.dylib + 89104) [0x1a9073c10]
+                                    3   nw_protocol_boringssl_read_bytes + 344 (libboringssl.dylib + 89480) [0x1a9073d88]
+                                      3   nw_protocol_boringssl_read_frames + 180 (libboringssl.dylib + 91436) [0x1a907452c]
+                                        2   __recvmsg + 8 (libsystem_kernel.dylib + 25404) [0x1a4f3e33c]
+                                          2   <Effective Thread QoS Default, Requested Thread QoS Default>
+                                        1   nw_socket_get_input_frames + 5704 (libnetwork.dylib + 805804) [0x1a91e1bac]
+                                          1   _malloc_zone_calloc + 88 (libsystem_malloc.dylib + 125032) [0x1a4da6868]
+                                            1   szone_malloc_should_clear + 128 (libsystem_malloc.dylib + 9656) [0x1a4d8a5b8]
+                                              1   small_malloc_should_clear + 224 (libsystem_malloc.dylib + 10116) [0x1a4d8a784]
+                                                1   small_malloc_from_free_list + 408 (libsystem_malloc.dylib + 12172) [0x1a4d8af8c]
+                                                  1   small_free_list_add_ptr + 280 (libsystem_malloc.dylib + 30440) [0x1a4d8f6e8]
+                                                    1   <Effective Thread QoS Default, Requested Thread QoS Default, Override Thread QoS Default>
+                          1   ssl_read_impl(ssl_st*) + 340 (libboringssl.dylib + 202312) [0x1a908f648]
+                            1   bssl::ssl_open_app_data(ssl_st*, bssl::Span<unsigned char>*, unsigned long*, unsigned char*, bssl::Span<unsigned char>) + 76 (libboringssl.dylib + 202616) [0x1a908f778]
+                              1   bssl::tls_open_app_data(ssl_st*, bssl::Span<unsigned char>*, unsigned long*, unsigned char*, bssl::Span<unsigned char>) + 120 (libboringssl.dylib + 399464) [0x1a90bf868]
+                                1   bssl::tls_open_record(ssl_st*, unsigned char*, bssl::Span<unsigned char>*, unsigned long*, unsigned char*, bssl::Span<unsigned char>) + 704 (libboringssl.dylib + 86996) [0x1a90733d4]
+                                  1   bssl::SSLAEADContext::Open(bssl::Span<unsigned char>*, unsigned char, unsigned short, unsigned char const*, bssl::Span<unsigned char const>, bssl::Span<unsigned char>) + 532 (libboringssl.dylib + 92540) [0x1a907497c]
+                                    1   EVP_AEAD_CTX_open + 316 (libboringssl.dylib + 177916) [0x1a90896fc]
+                                      1   EVP_AEAD_CTX_open_gather + 120 (libboringssl.dylib + 220784) [0x1a9093e70]
+                                        1   aead_aes_gcm_open_gather + 128 (libboringssl.dylib + 220988) [0x1a9093f3c]
+                                          1   ccaes_arm_encrypt_ecb + 0 (libcorecrypto.dylib + 140944) [0x1a4d30690]
+                                            1   <Effective Thread QoS Default, Requested Thread QoS Default, Override Thread QoS Default>
+                          1   ssl_read_impl(ssl_st*) + 44 (libboringssl.dylib + 202016) [0x1a908f520]
+                            1   ERR_clear_error + 24 (libboringssl.dylib + 46384) [0x1a9069530]
+                              1   err_get_state + 24 (libboringssl.dylib + 46480) [0x1a9069590]
+                                1   CRYPTO_get_thread_local + 92 (libboringssl.dylib + 46708) [0x1a9069674]
+                                  1   <Effective Thread QoS Default, Requested Thread QoS Default>
+
+  Binary Images:
+           0x100bb0000 -        0x100c4ffff  nsurlsessiond (1329)                    <50A6AC09-2D00-3FAD-B463-40596EA3F3B8>  /usr/libexec/nsurlsessiond
+           0x1a4cba000 -        0x1a4cf3fff  libxpc.dylib (2235.80.3)                <FD3E0E8D-4618-3CE5-A24A-5639BE86B979>  /usr/lib/system/libxpc.dylib
+           0x1a4d0e000 -        0x1a4d87fff  libcorecrypto.dylib (1217.80.9)         <2FC16D60-2CC6-3982-80AC-7A5495577AE8>  /usr/lib/system/libcorecrypto.dylib
+           0x1a4d88000 -        0x1a4db2fff  libsystem_malloc.dylib (374.60.3)       <961751ED-F18B-30D4-8025-AA12CA23197B>  /usr/lib/system/libsystem_malloc.dylib
+           0x1a4db3000 -        0x1a4df9fff  libdispatch.dylib (1324.60.3)           <93E1DCFC-EF56-3113-8E7C-1BA85266A93B>  /usr/lib/system/libdispatch.dylib
+           0x1a4dfa000 -        0x1a4e35fff  libobjc.A.dylib (838.1)                 <2EB32E1D-90CB-3256-8681-9034085A06A6>  /usr/lib/libobjc.A.dylib
+           0x1a4f38000 -        0x1a4f6dfff  libsystem_kernel.dylib (8019.80.24)     <384945E6-DD71-37E5-9A3D-84FFF14A1E60>  /usr/lib/system/libsystem_kernel.dylib
+           0x1a4f6e000 -        0x1a4f7afff  libsystem_pthread.dylib (485.60.2)      <F7B2ECCF-E6F1-3109-AE81-9028C0B8332A>  /usr/lib/system/libsystem_pthread.dylib
+           0x1a4f88000 -        0x1a4f8ffff  libsystem_platform.dylib (273.40.1)     <49CF1536-27E5-3A34-9724-D75552CBAB56>  /usr/lib/system/libsystem_platform.dylib
+           0x1a4fbc000 -        0x1a54fffff  com.apple.CoreFoundation 6.9 (1856.105) <16FADF8B-A3AF-3E0C-B5FB-CE9A9CDC8747>  /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
+           0x1a5eb0000 -        0x1a629dfff  com.apple.Foundation 6.9 (1856.105)     <90321A38-43A5-3767-9A9C-2C631338B9BC>  /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
+           0x1a905e000 -        0x1a911cfff  libboringssl.dylib (398.60.2)           <741E4AC5-66A0-3D96-9425-2CE9B138804D>  /usr/lib/libboringssl.dylib
+           0x1a911d000 -        0x1a9be4fff  libnetwork.dylib (2750.80.2)            <8FC8A8E8-9845-306A-91BE-5D8F3CBEF018>  /usr/lib/libnetwork.dylib
+           0x1a9be5000 -        0x1aa09dfff  com.apple.CFNetwork 1329 (1329)         <A48C10C0-0AEF-3D9F-B050-06420AB96929>  /System/Library/Frameworks/CFNetwork.framework/Versions/A/CFNetwork
+
+
+Powerstats for:   bird
+UUID:             514DEC8C-3ABB-37B4-8403-2B4034124ECA
+Path:             /System/Library/PrivateFrameworks/CloudDocsDaemon.framework/Versions/A/Support/bird
+Shared Cache:     B90241B2-E425-3982-B3F6-26C4567CBB49 slid base address 0x1a4c68000, slide 0x24c68000
+Architecture:     arm64e
+Start time:       2022-02-26 15:33:24.801 -0600
+End time:         2022-02-26 15:34:06.787 -0600
+Num samples:      6 (10%)
+Primary state:    4 samples Non-Frontmost App, Non-Suppressed, User mode, Effective Thread QoS Utility, Requested Thread QoS Utility, Override Thread QoS Unspecified
+User Activity:    6 samples Idle, 0 samples Active
+Power Source:     6 samples on Battery, 0 samples on AC
+  6  start_wqthread + 8 (libsystem_pthread.dylib + 8216) [0x1a4f70018]
+    6  _pthread_wqthread + 288 (libsystem_pthread.dylib + 13060) [0x1a4f71304]
+      6  _dispatch_workloop_worker_thread + 656 (libdispatch.dylib + 91912) [0x1a4dc9708]
+        5  _dispatch_workloop_invoke + 1796 (libdispatch.dylib + 53696) [0x1a4dc01c0]
+          4  _dispatch_lane_invoke + 444 (libdispatch.dylib + 48856) [0x1a4dbeed8]
+            2  _dispatch_lane_serial_drain + 896 (libdispatch.dylib + 46096) [0x1a4dbe410]
+              2  _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+                2  _dispatch_call_block_and_release + 32 (libdispatch.dylib + 7776) [0x1a4db4e60]
+                  2  __dispatch_group_async_with_logs_block_invoke + 88 (CloudDocsDaemon + 1882308) [0x1bf77b8c4]
+                    2  _dispatch_block_invoke_direct + 264 (libdispatch.dylib + 30308) [0x1a4dba664]
+                      2  _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+                        2  __87-[BRCFileCoordinator _didObtainCoordination:context:url1:url2:handler:fcHandler:error:]_block_invoke + 744 (CloudDocsDaemon + 864580) [0x1bf683144]
+                          2  -[BRCFSWriter writeUnderCoordinationFromURL:toURL:canDelete:] + 252 (CloudDocsDaemon + 2631500) [0x1bf83274c]
+                            2  -[PQLConnection performWithFlags:action:] + 104 (libprequelite.dylib + 31684) [0x1c97ddbc4]
+                              2  -[PQLConnection _performWithFlags:action:whenFlushed:] + 780 (libprequelite.dylib + 29324) [0x1c97dd28c]
+                                2  __61-[BRCFSWriter writeUnderCoordinationFromURL:toURL:canDelete:]_block_invoke + 40 (CloudDocsDaemon + 2631604) [0x1bf8327b4]
+                                  1  -[BRCFSWriter _writeUnderCoordinationFromURL:toURL:canDelete:] + 1280 (CloudDocsDaemon + 2630260) [0x1bf832274]
+                                    1  -[BRCURLToItemLookup(BRCFSWriter) tryToUpdateItemInNamespace:withDstLookup:] + 8484 (CloudDocsDaemon + 2588804) [0x1bf828084]
+                                      1  -[BRCURLToItemLookup clearFaultedItem] + 64 (CloudDocsDaemon + 45832) [0x1bf5bb308]
+                                        1  -[BRCRelativePath refreshFromPathMustExist:] + 80 (CloudDocsDaemon + 359404) [0x1bf607bec]
+                                          1  -[BRCRelativePath resolveAndKeepOpenMustExist:allowResolveInPkg:error:] + 156 (CloudDocsDaemon + 359276) [0x1bf607b6c]
+                                            1  -[BRCRelativePath _resolveAndKeepOpenMustExist:allowResolveInPkg:error:] + 1916 (CloudDocsDaemon + 355728) [0x1bf606d90]
+                                              1  -[NSString(BRCPathAdditions) br_isInPackage] + 28 (CloudDocs + 196404) [0x1ac879f34]
+                                                1  offsetOfPackageRootFilenameInPath + 824 (CloudDocs + 197300) [0x1ac87a2b4]
+                                                  1  -[NSURL getResourceValue:forKey:error:] + 120 (CoreFoundation + 449988) [0x1a5029dc4]
+                                                    1  CFURLCopyResourcePropertyForKey + 140 (CoreFoundation + 354972) [0x1a5012a9c]
+                                                      1  _FSURLCopyResourcePropertyForKeyInternal(__CFURL const*, __CFString const*, void*, void*, __CFError**, unsigned char) + 68 (CoreServicesInternal + 4132) [0x1a79a3024]
+                                                        1  _FileCacheGetForURL(__CFURL const*, void*) + 96 (CoreServicesInternal + 169944) [0x1a79cb7d8]
+                                                          1  CFRelease + 180 (CoreFoundation + 50120) [0x1a4fc83c8]
+                                  1  -[BRCFSWriter _writeUnderCoordinationFromURL:toURL:canDelete:] + 364 (CloudDocsDaemon + 2629344) [0x1bf831ee0]
+                                    1  -[BRCFSReader lookupAndReadItemUnderCoordinationAtURL:] + 228 (CloudDocsDaemon + 1892896) [0x1bf77e220]
+                                      1  -[BRCFSReader readUnderCoordinationWithLookup:] + 76 (CloudDocsDaemon + 1890504) [0x1bf77d8c8]
+                                        1  -[BRCURLToItemLookup(BRCFSReader) matchLookupItemsWithDisk] + 64 (CloudDocsDaemon + 1885284) [0x1bf77c464]
+                                          1  -[BRCURLToItemLookup faultedMatch] + 48 (CloudDocsDaemon + 44176) [0x1bf5bac90]
+                                            1  -[BRCURLToItemLookup _fetchFaultedMatch] + 556 (CloudDocsDaemon + 44796) [0x1bf5baefc]
+                                              1  -[BRCRelativePath resolveAndKeepOpenMustExist:allowResolveInPkg:error:] + 156 (CloudDocsDaemon + 359276) [0x1bf607b6c]
+                                                1  -[BRCRelativePath _resolveAndKeepOpenMustExist:allowResolveInPkg:error:] + 1916 (CloudDocsDaemon + 355728) [0x1bf606d90]
+                                                  1  -[NSString(BRCPathAdditions) br_isInPackage] + 28 (CloudDocs + 196404) [0x1ac879f34]
+                                                    1  offsetOfPackageRootFilenameInPath + 824 (CloudDocs + 197300) [0x1ac87a2b4]
+                                                      1  -[NSURL getResourceValue:forKey:error:] + 120 (CoreFoundation + 449988) [0x1a5029dc4]
+                                                        1  CFURLCopyResourcePropertyForKey + 140 (CoreFoundation + 354972) [0x1a5012a9c]
+                                                          1  _FSURLCopyResourcePropertyForKeyInternal(__CFURL const*, __CFString const*, void*, void*, __CFError**, unsigned char) + 232 (CoreServicesInternal + 4296) [0x1a79a30c8]
+                                                            1  prepareValuesForBitmap(__CFURL const*, __FileCache*, _FilePropertyBitmap*, __CFError**) + 412 (CoreServicesInternal + 16496) [0x1a79a6070]
+                                                              1  __getattrlist + 8 (libsystem_kernel.dylib + 9084) [0x1a4f3a37c]
+                                                                1  <Kernel mode>
+            1  _dispatch_lane_serial_drain + 672 (libdispatch.dylib + 45872) [0x1a4dbe330]
+              1  _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+                1  _dispatch_call_block_and_release + 32 (libdispatch.dylib + 7776) [0x1a4db4e60]
+                  1  __dispatch_async_with_logs_block_invoke + 88 (CloudDocsDaemon + 623812) [0x1bf6484c4]
+                    1  __115-[BRCFSDownloader transferStreamOfSyncContext:didBecomeReadyWithMaxRecordsCount:sizeHint:priority:completionBlock:]_block_invoke + 48 (CloudDocsDaemon + 621968) [0x1bf647d90]
+                      1  -[BRCFSDownloader _transferStreamOfSyncContext:didBecomeReadyWithMaxRecordsCount:sizeHint:priority:] + 940 (CloudDocsDaemon + 621244) [0x1bf647abc]
+                        1  -[BRCFSDownloader _sendContentsBatch:sizeHint:maxRecordsCount:] + 3080 (CloudDocsDaemon + 616872) [0x1bf6469a8]
+                          1  +[BRCProgress downloadProgressForDocument:sizeInfo:] + 88 (CloudDocsDaemon + 109156) [0x1bf5caa64]
+                            1  +[BRCProgress _progressForDocument:group:sizeInfo:] + 180 (CloudDocsDaemon + 110176) [0x1bf5cae60]
+                              1  -[BRCLocalItem fetchParentFileIDs] + 136 (CloudDocsDaemon + 706612) [0x1bf65c834]
+                                1  -[BRCLocalItem _ascendItemHierarchyWithBlock:] + 284 (CloudDocsDaemon + 705620) [0x1bf65c454]
+                                  1  -[PQLResultSet _next:] + 116 (libprequelite.dylib + 44840) [0x1c97e0f28]
+                                    1  sqlite3_step + 3284 (libsqlite3.dylib + 289020) [0x1ab4b88fc]
+                                      1  sqlite3VdbeExec + 40028 (libsqlite3.dylib + 331196) [0x1ab4c2dbc]
+            1  _dispatch_lane_serial_drain + 376 (libdispatch.dylib + 45576) [0x1a4dbe208]
+              1  _dispatch_source_invoke + 1356 (libdispatch.dylib + 106916) [0x1a4dcd1a4]
+                1  _dispatch_continuation_pop + 504 (libdispatch.dylib + 28800) [0x1a4dba080]
+                  1  _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+                    1  _dispatch_block_async_invoke2 + 148 (libdispatch.dylib + 76176) [0x1a4dc5990]
+                      1  ___BRBlockRememberPersona_block_invoke + 520 (CloudDocsDaemon + 1712888) [0x1bf7522f8]
+                        1  __schedule_fire_after_delay_block_invoke + 52 (CloudDocs + 84000) [0x1ac85e820]
+                          1  fire + 76 (CloudDocs + 83904) [0x1ac85e7c0]
+                            1  ___BRBlockRememberPersona_block_invoke + 520 (CloudDocsDaemon + 1712888) [0x1bf7522f8]
+                              1  __48-[BRCPQLConnection _shouldFlushWithChangeCount:]_block_invoke + 60 (CloudDocsDaemon + 57052) [0x1bf5bdedc]
+                                1  -[PQLConnection flush] + 564 (libprequelite.dylib + 27916) [0x1c97dcd0c]
+                                  1  __84-[BRCAccountSession(BRCDatabaseManager) _finishClientTruthConnectionSetupWithError:]_block_invoke.655 + 232 (CloudDocsDaemon + 162180) [0x1bf5d7984]
+                                    1  -[BRCNotificationManager flushUpdatesWithRank:] + 40 (CloudDocsDaemon + 333684) [0x1bf601774]
+                                      1  -[BRCNotificationManager _queueAdditionalUpdates] + 404 (CloudDocsDaemon + 333272) [0x1bf6015d8]
+                                        1  -[BRCLocalItem _sendNotificationIfNeededWithDiffs:regather:] + 544 (CloudDocsDaemon + 707712) [0x1bf65cc80]
+                                          1  +[BRCNotification notificationGatheredFromItem:] + 28 (CloudDocsDaemon + 98976) [0x1bf5c82a0]
+                                            1  +[BRCNotification notificationFromItem:relpath:] + 216 (CloudDocsDaemon + 99228) [0x1bf5c839c]
+                                              1  -[BRCNotification initWithLocalItem:itemDiffs:] + 1200 (CloudDocsDaemon + 91344) [0x1bf5c64d0]
+                                                1  -[BRCLocalItem parentFileObjectID] + 52 (CloudDocsDaemon + 684828) [0x1bf65731c]
+                                                  1  -[BRCLocalItem parentFileID] + 44 (CloudDocsDaemon + 684684) [0x1bf65728c]
+                                                    1  -[BRCLocalItem parentItemOnFS] + 492 (CloudDocsDaemon + 697864) [0x1bf65a608]
+                                                      1  -[BRCClientZone itemByItemID:db:] + 124 (CloudDocsDaemon + 1231064) [0x1bf6dc8d8]
+                                                        1  -[BRCAccountSession(ItemFetching) itemByItemGlobalID:db:] + 496 (CloudDocsDaemon + 2645516) [0x1bf835e0c]
+                                                          1  -[BRCPQLConnection fetchObject:sql:] + 40 (CloudDocsDaemon + 59780) [0x1bf5be984]
+                                                            1  -[BRCPQLConnection fetchObject:sql:args:] + 120 (CloudDocsDaemon + 59912) [0x1bf5bea08]
+                                                              1  -[PQLConnection fetchObject:sql:args:] + 168 (libprequelite.dylib + 41228) [0x1c97e010c]
+                                                                1  -[PQLResultSet onlyObject:] + 64 (libprequelite.dylib + 46096) [0x1c97e1410]
+                                                                  1  -[PQLResultSet _next:] + 116 (libprequelite.dylib + 44840) [0x1c97e0f28]
+                                                                    1  sqlite3_step + 3284 (libsqlite3.dylib + 289020) [0x1ab4b88fc]
+                                                                      1  sqlite3VdbeExec + 3192 (libsqlite3.dylib + 294360) [0x1ab4b9dd8]
+                                                                        1  sqlite3BtreeMovetoUnpacked + 1228 (libsqlite3.dylib + 395208) [0x1ab4d27c8]
+                                                                          1  getAndInitPage + 96 (libsqlite3.dylib + 868544) [0x1ab5460c0]
+                                                                            1  getPageNormal + 508 (libsqlite3.dylib + 825772) [0x1ab53b9ac]
+                                                                              1  readDbPage + 192 (libsqlite3.dylib + 184872) [0x1ab49f228]
+                                                                                1  pread + 8 (libsystem_kernel.dylib + 12924) [0x1a4f3b27c]
+          1  _dispatch_source_invoke + 1356 (libdispatch.dylib + 106916) [0x1a4dcd1a4]
+            1  _dispatch_continuation_pop + 504 (libdispatch.dylib + 28800) [0x1a4dba080]
+              1  _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+                1  _dispatch_block_async_invoke2 + 148 (libdispatch.dylib + 76176) [0x1a4dc5990]
+                  1  ___BRBlockRememberPersona_block_invoke + 520 (CloudDocsDaemon + 1712888) [0x1bf7522f8]
+                    1  ___br_pacer_create_source_block_invoke + 136 (CloudDocs + 83792) [0x1ac85e750]
+                      1  fire + 76 (CloudDocs + 83904) [0x1ac85e7c0]
+                        1  ___BRBlockRememberPersona_block_invoke + 520 (CloudDocsDaemon + 1712888) [0x1bf7522f8]
+                          1  __53-[BRCInflightProgressTracker initWithAccountSession:]_block_invoke + 40 (CloudDocsDaemon + 1411064) [0x1bf7087f8]
+                            1  -[BRCInflightProgressTracker _sendNotificationsForChildrenUpdates] + 380 (CloudDocsDaemon + 1411656) [0x1bf708a48]
+                              1  -[BRCInflightProgressTracker _progressUpdateForFileID:] + 92 (CloudDocsDaemon + 1412016) [0x1bf708bb0]
+                                1  -[BRCInflightProgressTracker _transferedSizeForDirectoryWithFileID:getTotalSize:getParentFileIDs:inGroup:] + 304 (CloudDocsDaemon + 1412748) [0x1bf708e8c]
+                                  1  objc_msgSend + 64 (libobjc.A.dylib + 25408) [0x1a4e00340]
+        1  _dispatch_lane_invoke + 444 (libdispatch.dylib + 48856) [0x1a4dbeed8]
+          1  _dispatch_lane_serial_drain + 376 (libdispatch.dylib + 45576) [0x1a4dbe208]
+            1  _dispatch_mach_msg_async_reply_invoke + 348 (libdispatch.dylib + 136856) [0x1a4dd4698]
+              1  _dispatch_client_callout3 + 20 (libdispatch.dylib + 15404) [0x1a4db6c2c]
+                1  _xpc_connection_handle_async_reply + 532 (libxpc.dylib + 63388) [0x1a4cc979c]
+                  1  _xpc_connection_unpack_message + 160 (libxpc.dylib + 50820) [0x1a4cc6684]
+                    1  os_unfair_lock_lock_with_options + 24 (libsystem_platform.dylib + 5336) [0x1a4f894d8]
+                      1  <Effective Thread QoS Default, Requested Thread QoS Default>
+
+  Binary Images:
+           0x104434000 -                ???  bird                                     <514DEC8C-3ABB-37B4-8403-2B4034124ECA>  /System/Library/PrivateFrameworks/CloudDocsDaemon.framework/Versions/A/Support/bird
+           0x1a4cba000 -        0x1a4cf3fff  libxpc.dylib (2235.80.3)                 <FD3E0E8D-4618-3CE5-A24A-5639BE86B979>  /usr/lib/system/libxpc.dylib
+           0x1a4db3000 -        0x1a4df9fff  libdispatch.dylib (1324.60.3)            <93E1DCFC-EF56-3113-8E7C-1BA85266A93B>  /usr/lib/system/libdispatch.dylib
+           0x1a4dfa000 -        0x1a4e35fff  libobjc.A.dylib (838.1)                  <2EB32E1D-90CB-3256-8681-9034085A06A6>  /usr/lib/libobjc.A.dylib
+           0x1a4f38000 -        0x1a4f6dfff  libsystem_kernel.dylib (8019.80.24)      <384945E6-DD71-37E5-9A3D-84FFF14A1E60>  /usr/lib/system/libsystem_kernel.dylib
+           0x1a4f6e000 -        0x1a4f7afff  libsystem_pthread.dylib (485.60.2)       <F7B2ECCF-E6F1-3109-AE81-9028C0B8332A>  /usr/lib/system/libsystem_pthread.dylib
+           0x1a4f88000 -        0x1a4f8ffff  libsystem_platform.dylib (273.40.1)      <49CF1536-27E5-3A34-9724-D75552CBAB56>  /usr/lib/system/libsystem_platform.dylib
+           0x1a4fbc000 -        0x1a54fffff  com.apple.CoreFoundation 6.9 (1856.105)  <16FADF8B-A3AF-3E0C-B5FB-CE9A9CDC8747>  /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
+           0x1a79a2000 -        0x1a79defff  com.apple.CoreServicesInternal 484 (484) <B0C40221-F4C3-3F56-B25B-D484E5D3A8BB>  /System/Library/PrivateFrameworks/CoreServicesInternal.framework/Versions/A/CoreServicesInternal
+           0x1ab472000 -        0x1ab61ffff  libsqlite3.dylib (331)                   <BF74926A-62E6-3EDD-99BC-40B4388DBA3E>  /usr/lib/libsqlite3.dylib
+           0x1ac84a000 -        0x1ac8eefff  com.apple.CloudDocs 1.0 (902.60.2)       <99569A0C-2668-30E2-9E80-2A299B48128A>  /System/Library/PrivateFrameworks/CloudDocs.framework/Versions/A/CloudDocs
+           0x1bf5b0000 -        0x1bf997fff  com.apple.CloudDocsDaemon 1.0 (902.60.2) <435378AF-C0E7-3E42-8B9D-118506C5532F>  /System/Library/PrivateFrameworks/CloudDocsDaemon.framework/Versions/A/CloudDocsDaemon
+           0x1c97d6000 -        0x1c97eafff  libprequelite.dylib (117)                <A9234318-AF37-3F06-A1A5-98A6EF477E92>  /usr/lib/libprequelite.dylib
+
+
+Powerstats for:   cloudd
+UUID:             F41BDA92-9D1E-3A4D-AFC9-B9C0F678F21A
+Path:             /System/Library/PrivateFrameworks/CloudKitDaemon.framework/Support/cloudd
+Shared Cache:     B90241B2-E425-3982-B3F6-26C4567CBB49 slid base address 0x1a4c68000, slide 0x24c68000
+Architecture:     arm64e
+Start time:       2022-02-26 15:32:54.416 -0600
+End time:         2022-02-26 15:34:10.793 -0600
+Num samples:      3 (5%)
+Primary state:    3 samples Non-Frontmost App, Non-Suppressed, User mode, Effective Thread QoS Utility, Requested Thread QoS Utility, Override Thread QoS Unspecified
+User Activity:    3 samples Idle, 0 samples Active
+Power Source:     3 samples on Battery, 0 samples on AC
+  3  thread_start + 8 (libsystem_pthread.dylib + 8228) [0x1a4f70024]
+    3  _pthread_start + 148 (libsystem_pthread.dylib + 29248) [0x1a4f75240]
+      3  __NSThread__start__ + 808 (Foundation + 377576) [0x1a5f0c2e8]
+        3  ??? (CloudKitDaemon + 2039124) [0x1d3d67d54]
+          3  CFRunLoopRunSpecific + 600 (CoreFoundation + 534324) [0x1a503e734]
+            2  __CFRunLoopRun + 1728 (CoreFoundation + 538004) [0x1a503f594]
+              2  __CFRunLoopDoBlocks + 412 (CoreFoundation + 542076) [0x1a504057c]
+                2  __CFRUNLOOP_IS_CALLING_OUT_TO_A_BLOCK__ + 28 (CoreFoundation + 542472) [0x1a5040708]
+                  2  __mmcs_perform_with_run_loop_block_invoke + 60 (MMCS + 450148) [0x1cde9be64]
+                    2  __RunLoopPerformBlockSync_block_invoke + 120 (MMCS + 241472) [0x1cde68f40]
+                      2  __54-[MMCSHTTPContext URLSession:dataTask:didReceiveData:]_block_invoke + 480 (MMCS + 233624) [0x1cde67098]
+                        1  mmcs_nshttp_received_data + 276 (MMCS + 166564) [0x1cde56aa4]
+                          1  -[NSData(NSData) enumerateByteRangesUsingBlock:] + 132 (Foundation + 292044) [0x1a5ef74cc]
+                            1  __mmcs_nshttp_received_data_block_invoke + 124 (MMCS + 166728) [0x1cde56b48]
+                              1  handle_callback_downloadContainer + 256 (MMCS + 72004) [0x1cde3f944]
+                                1  mmcs_get_container_process_data + 2124 (MMCS + 74308) [0x1cde40244]
+                                  1  CKChunkCoderUpdate + 172 (ChunkingLibrary + 26424) [0x1baa86738]
+                                    1  CKChunkSignatureGeneratorV1Update + 32 (ChunkingLibrary + 291756) [0x1baac73ac]
+                                      1  CC_SHA256_Update + 92 (libcommonCrypto.dylib + 5592) [0x1af98e5d8]
+                                        1  AccelerateCrypto_SHA256_compress + 532 (libcorecrypto.dylib + 19860) [0x1a4d12d94]
+                        1  mmcs_nshttp_received_data + 184 (MMCS + 166472) [0x1cde56a48]
+                          1  mmcs_request_queue_request_did_transmit + 380 (MMCS + 504372) [0x1cdea9234]
+            1  __CFRunLoopRun + 800 (CoreFoundation + 537076) [0x1a503f1f4]
+              1  __CFRunLoopDoBlocks + 412 (CoreFoundation + 542076) [0x1a504057c]
+                1  __CFRUNLOOP_IS_CALLING_OUT_TO_A_BLOCK__ + 28 (CoreFoundation + 542472) [0x1a5040708]
+                  1  _dispatch_block_invoke_direct + 264 (libdispatch.dylib + 30308) [0x1a4dba664]
+                    1  _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+                      1  ??? (CloudKitDaemon + 2051636) [0x1d3d6ae34]
+                        1  ??? (CloudKitDaemon + 2053952) [0x1d3d6b740]
+                          1  ??? (CloudKitDaemon + 1652676) [0x1d3d097c4]
+                            1  MMCSGetItems + 524 (MMCS + 426304) [0x1cde96140]
+                              1  mmcs_get_items + 1876 (MMCS + 13856) [0x1cde31620]
+                                1  process_authorization_data + 108 (MMCS + 192616) [0x1cde5d068]
+                                  1  process_authorization_array + 3276 (MMCS + 195996) [0x1cde5dd9c]
+                                    1  send_request_downloadChunks + 1004 (MMCS + 190112) [0x1cde5c6a0]
+                                      1  mmcs_get_file_compute_remaining_work + 304 (MMCS + 64256) [0x1cde3db00]
+                                        1  CKGetRegisteredFileMetadata + 84 (ChunkingLibrary + 68164) [0x1baa90a44]
+                                          1  _CSGetSignatureForItemID + 412 (ChunkingLibrary + 22584) [0x1baa85838]
+                                            1  CS_sqlite3_step + 80 (ChunkingLibrary + 120436) [0x1baa9d674]
+                                              1  sqlite3_step + 3284 (libsqlite3.dylib + 289020) [0x1ab4b88fc]
+                                                1  sqlite3VdbeExec + 3192 (libsqlite3.dylib + 294360) [0x1ab4b9dd8]
+                                                  1  sqlite3BtreeMovetoUnpacked + 272 (libsqlite3.dylib + 394252) [0x1ab4d240c]
+                                                    1  moveToRoot + 596 (libsqlite3.dylib + 351380) [0x1ab4c7c94]
+                                                      1  getPageNormal + 12 (libsqlite3.dylib + 825276) [0x1ab53b7bc]
+
+  Binary Images:
+           0x102730000 -                ???  cloudd                                        <F41BDA92-9D1E-3A4D-AFC9-B9C0F678F21A>  /System/Library/PrivateFrameworks/CloudKitDaemon.framework/Support/cloudd
+           0x1a4d0e000 -        0x1a4d87fff  libcorecrypto.dylib (1217.80.9)               <2FC16D60-2CC6-3982-80AC-7A5495577AE8>  /usr/lib/system/libcorecrypto.dylib
+           0x1a4db3000 -        0x1a4df9fff  libdispatch.dylib (1324.60.3)                 <93E1DCFC-EF56-3113-8E7C-1BA85266A93B>  /usr/lib/system/libdispatch.dylib
+           0x1a4f6e000 -        0x1a4f7afff  libsystem_pthread.dylib (485.60.2)            <F7B2ECCF-E6F1-3109-AE81-9028C0B8332A>  /usr/lib/system/libsystem_pthread.dylib
+           0x1a4fbc000 -        0x1a54fffff  com.apple.CoreFoundation 6.9 (1856.105)       <16FADF8B-A3AF-3E0C-B5FB-CE9A9CDC8747>  /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
+           0x1a5eb0000 -        0x1a629dfff  com.apple.Foundation 6.9 (1856.105)           <90321A38-43A5-3767-9A9C-2C631338B9BC>  /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
+           0x1ab472000 -        0x1ab61ffff  libsqlite3.dylib (331)                        <BF74926A-62E6-3EDD-99BC-40B4388DBA3E>  /usr/lib/libsqlite3.dylib
+           0x1af98d000 -        0x1af999fff  libcommonCrypto.dylib (60190)                 <BCB5AB77-5F11-3BB5-B37D-3DA47DEC997B>  /usr/lib/system/libcommonCrypto.dylib
+           0x1baa80000 -        0x1baad2fff  com.apple.ChunkingLibrary 337.1 (337.1)       <202B9625-0346-36C1-8314-50A77D3505A4>  /System/Library/PrivateFrameworks/ChunkingLibrary.framework/Versions/A/ChunkingLibrary
+           0x1cde2e000 -        0x1cded3fff  com.apple.MMCS 1.3 (1930)                     <2B5E824B-CC07-3E71-94B3-F6CE7B21A23B>  /System/Library/PrivateFrameworks/MMCS.framework/Versions/A/MMCS
+           0x1d3b76000 -        0x1d3f65fff  com.apple.cloudkit.CloudKitDaemon 1940 (1940) <F74C2D1D-BBC7-3215-BFC6-3CF81CF61DFB>  /System/Library/PrivateFrameworks/CloudKitDaemon.framework/Versions/A/CloudKitDaemon

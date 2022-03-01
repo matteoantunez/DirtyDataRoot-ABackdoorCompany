@@ -1,0 +1,371 @@
+Date/Time:        2022-03-01 00:52:51.777 -0600
+End time:         2022-03-01 00:54:24.953 -0600
+OS Version:       macOS 12.2.1 (Build 21D62)
+Architecture:     arm64e
+Report Version:   35
+Incident Identifier: 8A077E58-2489-4D6B-B324-35257F797023
+Share With Devs:  Yes
+
+Data Source:      Microstackshots
+Shared Cache:     296EB28E-6AEB-3129-8FA6-FEB92261A4EB slid base address 0x1801e4000, slide 0x1e4000
+Shared Cache:     5C9FF5DB-8827-329A-8A37-2483935A9EA1 slid base address 0x7ff80be54000, slide 0xbe54000
+
+Command:          ArchiveService
+Path:             /System/Library/Frameworks/FileProvider.framework/XPCServices/ArchiveService.xpc/Contents/MacOS/ArchiveService
+Identifier:       com.apple.FileProvider.ArchiveService
+Version:          1.0 (1)
+Build Version:    1
+Project Name:     FileProvider_executables
+Source Version:   378080012000000
+Architecture:     arm64e
+Parent:           UNKNOWN [1]
+PID:              7431
+
+Event:            cpu usage
+Action taken:     none
+CPU:              90 seconds cpu time over 93 seconds (97% cpu average), exceeding limit of 50% cpu over 180 seconds
+CPU limit:        90s
+Limit duration:   180s
+CPU used:         90s
+CPU duration:     93s
+Duration:         93.18s
+Steps:            61
+
+Hardware model:   MacBookPro17,1
+Active cpus:      8
+HW page size:     16384
+VM page size:     16384
+
+Fan speed:        0 rpm
+Advisory levels:  Battery -> 2, User -> 2, ThermalPressure -> 0, Combined -> 2
+Free disk space:  51.89 GB/228.27 GB, low space threshold 3072 MB
+Low Power Mode:   Enabled
+
+Heaviest stack for the target process:
+  25  start_wqthread + 8 (libsystem_pthread.dylib + 8216) [0x1804ec018]
+  25  _pthread_wqthread + 228 (libsystem_pthread.dylib + 13000) [0x1804ed2c8]
+  25  _dispatch_worker_thread2 + 164 (libdispatch.dylib + 88920) [0x180344b58]
+  25  _dispatch_root_queue_drain + 396 (libdispatch.dylib + 86812) [0x18034431c]
+  25  _dispatch_async_redirect_invoke + 596 (libdispatch.dylib + 26332) [0x1803356dc]
+  25  _dispatch_continuation_pop + 504 (libdispatch.dylib + 28800) [0x180336080]
+  25  _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x180332bac]
+  25  _dispatch_block_async_invoke2 + 148 (libdispatch.dylib + 76176) [0x180341990]
+  25  __NSOQSchedule_f + 184 (Foundation + 274836) [0x18146f194]
+  25  __NSOPERATIONQUEUE_IS_STARTING_AN_OPERATION__ + 24 (Foundation + 275168) [0x18146f2e0]
+  25  -[NSOperation start] + 804 (Foundation + 275980) [0x18146f60c]
+  25  __NSOPERATION_IS_INVOKING_MAIN__ + 24 (Foundation + 279496) [0x1814703c8]
+  25  -[NSBlockOperation main] + 104 (Foundation + 279608) [0x181470438]
+  25  __NSBLOCKOPERATION_IS_CALLING_OUT_TO_A_BLOCK__ + 24 (Foundation + 279952) [0x181470590]
+  25  __78-[NSFileCoordinator(NSPrivate) _coordinateAccessWithIntents:queue:byAccessor:]_block_invoke_3 + 188 (Foundation + 1044712) [0x18152b0e8]
+  25  __66-[NSFileCoordinator coordinateAccessWithIntents:queue:byAccessor:]_block_invoke + 132 (Foundation + 1044992) [0x18152b200]
+  25  -[NSFileCoordinator _invokeAccessor:thenCompletionHandler:] + 100 (Foundation + 1021104) [0x1815254b0]
+  25  ??? (ArchiveService + 28792) [0x100ec7078]
+  25  ??? (ArchiveService + 19572) [0x100ec4c74]
+  25  ??? (ArchiveService + 41856) [0x100eca380]
+  25  ??? (ArchiveService + 38972) [0x100ec983c]
+  25  ??? (ArchiveService + 31640) [0x100ec7b98]
+  25  ??? (ArchiveService + 40080) [0x100ec9c90]
+  25  ??? (ArchiveService + 34004) [0x100ec84d4]
+  24  ??? (ArchiveService + 32744) [0x100ec7fe8]
+  23  ??? (libarchive.2.dylib + 442256) [0x18b105f90]
+  23  deflate + 3224 (libz.1.dylib + 15432) [0x18aea4c48]
+  6   ??? (libz.1.dylib + 24200) [0x18aea6e88]
+
+
+Powerstats for:   ArchiveService [7431]
+UUID:             88F74370-C1C2-3E91-91AA-EC63B478135C
+Path:             /System/Library/Frameworks/FileProvider.framework/XPCServices/ArchiveService.xpc/Contents/MacOS/ArchiveService
+Identifier:       com.apple.FileProvider.ArchiveService
+Version:          1.0 (1)
+Build Version:    1
+Project Name:     FileProvider_executables
+Source Version:   378080012000000
+Shared Cache:     296EB28E-6AEB-3129-8FA6-FEB92261A4EB slid base address 0x1801e4000, slide 0x1e4000
+Architecture:     arm64e
+Parent:           UNKNOWN [1]
+UID:              501
+Sudden Term:      Tracked (allows idle exit)
+Footprint:        21.47 MB -> 34 MB (+12.53 MB)
+Start time:       2022-03-01 00:53:00.791 -0600
+End time:         2022-03-01 00:54:22.581 -0600
+Num samples:      25 (41%)
+Primary state:    25 samples Non-Frontmost App, Non-Suppressed, User mode, Effective Thread QoS Default, Requested Thread QoS Default, Override Thread QoS Unspecified
+User Activity:    0 samples Idle, 25 samples Active
+Power Source:     25 samples on Battery, 0 samples on AC
+  25  start_wqthread + 8 (libsystem_pthread.dylib + 8216) [0x1804ec018]
+    25  _pthread_wqthread + 228 (libsystem_pthread.dylib + 13000) [0x1804ed2c8]
+      25  _dispatch_worker_thread2 + 164 (libdispatch.dylib + 88920) [0x180344b58]
+        25  _dispatch_root_queue_drain + 396 (libdispatch.dylib + 86812) [0x18034431c]
+          25  _dispatch_async_redirect_invoke + 596 (libdispatch.dylib + 26332) [0x1803356dc]
+            25  _dispatch_continuation_pop + 504 (libdispatch.dylib + 28800) [0x180336080]
+              25  _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x180332bac]
+                25  _dispatch_block_async_invoke2 + 148 (libdispatch.dylib + 76176) [0x180341990]
+                  25  __NSOQSchedule_f + 184 (Foundation + 274836) [0x18146f194]
+                    25  __NSOPERATIONQUEUE_IS_STARTING_AN_OPERATION__ + 24 (Foundation + 275168) [0x18146f2e0]
+                      25  -[NSOperation start] + 804 (Foundation + 275980) [0x18146f60c]
+                        25  __NSOPERATION_IS_INVOKING_MAIN__ + 24 (Foundation + 279496) [0x1814703c8]
+                          25  -[NSBlockOperation main] + 104 (Foundation + 279608) [0x181470438]
+                            25  __NSBLOCKOPERATION_IS_CALLING_OUT_TO_A_BLOCK__ + 24 (Foundation + 279952) [0x181470590]
+                              25  __78-[NSFileCoordinator(NSPrivate) _coordinateAccessWithIntents:queue:byAccessor:]_block_invoke_3 + 188 (Foundation + 1044712) [0x18152b0e8]
+                                25  __66-[NSFileCoordinator coordinateAccessWithIntents:queue:byAccessor:]_block_invoke + 132 (Foundation + 1044992) [0x18152b200]
+                                  25  -[NSFileCoordinator _invokeAccessor:thenCompletionHandler:] + 100 (Foundation + 1021104) [0x1815254b0]
+                                    25  ??? (ArchiveService + 28792) [0x100ec7078]
+                                      25  ??? (ArchiveService + 19572) [0x100ec4c74]
+                                        25  ??? (ArchiveService + 41856) [0x100eca380]
+                                          25  ??? (ArchiveService + 38972) [0x100ec983c]
+                                            25  ??? (ArchiveService + 31640) [0x100ec7b98]
+                                              25  ??? (ArchiveService + 40080) [0x100ec9c90]
+                                                25  ??? (ArchiveService + 34004) [0x100ec84d4]
+                                                  24  ??? (ArchiveService + 32744) [0x100ec7fe8]
+                                                    23  ??? (libarchive.2.dylib + 442256) [0x18b105f90]
+                                                      23  deflate + 3224 (libz.1.dylib + 15432) [0x18aea4c48]
+                                                        6   ??? (libz.1.dylib + 24200) [0x18aea6e88]
+                                                        5   ??? (libz.1.dylib + 23812) [0x18aea6d04]
+                                                        3   ??? (libz.1.dylib + 23344) [0x18aea6b30]
+                                                          2   ??? (libz.1.dylib + 32852) [0x18aea9054]
+                                                            1   ??? (libz.1.dylib + 36380) [0x18aea9e1c]
+                                                            1   ??? (libz.1.dylib + 36376) [0x18aea9e18]
+                                                          1   ??? (libz.1.dylib + 36000) [0x18aea9ca0]
+                                                        1   ??? (libz.1.dylib + 24188) [0x18aea6e7c]
+                                                        1   ??? (libz.1.dylib + 24176) [0x18aea6e70]
+                                                        1   ??? (libz.1.dylib + 24132) [0x18aea6e44]
+                                                        1   ??? (libz.1.dylib + 23800) [0x18aea6cf8]
+                                                        1   ??? (libz.1.dylib + 23072) [0x18aea6a20]
+                                                        1   ??? (libz.1.dylib + 22752) [0x18aea68e0]
+                                                        1   ??? (libz.1.dylib + 22720) [0x18aea68c0]
+                                                        1   ??? (libz.1.dylib + 22676) [0x18aea6894]
+                                                        1   ??? (libz.1.dylib + 22568) [0x18aea6828]
+                                                          1   ??? (libz.1.dylib + 18368) [0x18aea57c0]
+                                                    1   ??? (libarchive.2.dylib + 442484) [0x18b106074]
+                                                      1   ??? (libz.1.dylib + 48008) [0x18aeacb88]
+                                                  1   read + 8 (libsystem_kernel.dylib + 9528) [0x1804b6538]
+
+  Binary Images:
+           0x100ec0000 -        0x100edbfff  com.apple.FileProvider.ArchiveService 1.0 (1) <88F74370-C1C2-3E91-91AA-EC63B478135C>  /System/Library/Frameworks/FileProvider.framework/XPCServices/ArchiveService.xpc/Contents/MacOS/ArchiveService
+           0x18032f000 -        0x180375fff  libdispatch.dylib (1324.60.3)                 <93E1DCFC-EF56-3113-8E7C-1BA85266A93B>  /usr/lib/system/libdispatch.dylib
+           0x1804b4000 -        0x1804e9fff  libsystem_kernel.dylib (8019.80.24)           <384945E6-DD71-37E5-9A3D-84FFF14A1E60>  /usr/lib/system/libsystem_kernel.dylib
+           0x1804ea000 -        0x1804f6fff  libsystem_pthread.dylib (485.60.2)            <F7B2ECCF-E6F1-3109-AE81-9028C0B8332A>  /usr/lib/system/libsystem_pthread.dylib
+           0x18142c000 -        0x181819fff  com.apple.Foundation 6.9 (1856.107)           <F3AB29BA-726D-3D0B-8125-CEB1A79CD832>  /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
+           0x18aea1000 -        0x18aeb2fff  libz.1.dylib (77)                             <1546610B-3908-399F-ADB0-2EE6CBE5E294>  /usr/lib/libz.1.dylib
+           0x18b09a000 -        0x18b11ffff  libarchive.2.dylib (103)                      <15F5C871-A869-3EA0-8D1B-899B75DA82D4>  /usr/lib/libarchive.2.dylib
+
+
+Powerstats for:   Console
+UUID:             C9B51EDE-89F0-3C68-9743-CE6995005139
+Path:             /System/Applications/Utilities/Console.app/Contents/MacOS/Console
+Identifier:       com.apple.Console
+Version:          1.1 (6.0.7)
+Build Version:    1408
+Project Name:     Console2
+Source Version:   6000007000000
+Shared Cache:     296EB28E-6AEB-3129-8FA6-FEB92261A4EB slid base address 0x1801e4000, slide 0x1e4000
+Architecture:     arm64e
+Start time:       2022-03-01 00:54:03.925 -0600
+End time:         2022-03-01 00:54:24.941 -0600
+Num samples:      6 (10%)
+Primary state:    3 samples Non-Frontmost App, Non-Suppressed, User mode, Effective Thread QoS Default, Requested Thread QoS Default, Override Thread QoS Unspecified
+User Activity:    0 samples Idle, 6 samples Active
+Power Source:     6 samples on Battery, 0 samples on AC
+  5  start_wqthread + 8 (libsystem_pthread.dylib + 8216) [0x1804ec018]
+    5  _pthread_wqthread + 288 (libsystem_pthread.dylib + 13060) [0x1804ed304]
+      5  _dispatch_workloop_worker_thread + 656 (libdispatch.dylib + 91912) [0x180345708]
+        5  _dispatch_lane_invoke + 392 (libdispatch.dylib + 48804) [0x18033aea4]
+          5  _dispatch_lane_serial_drain + 376 (libdispatch.dylib + 45576) [0x18033a208]
+            5  _dispatch_mach_invoke + 456 (libdispatch.dylib + 134328) [0x18034fcb8]
+              5  _dispatch_lane_serial_drain + 376 (libdispatch.dylib + 45576) [0x18033a208]
+                5  _dispatch_mach_msg_invoke + 476 (libdispatch.dylib + 130920) [0x18034ef68]
+                  5  _dispatch_client_callout4 + 20 (libdispatch.dylib + 15468) [0x180332c6c]
+                    5  _xpc_connection_mach_event + 1368 (libxpc.dylib + 52216) [0x180242bf8]
+                      5  _xpc_connection_call_event_handler + 176 (libxpc.dylib + 57816) [0x1802441d8]
+                        3  ___os_activity_stream_resume_with_filter_block_invoke + 172 (LoggingSupport + 245388) [0x19ffd1e8c]
+                          3  __30-[OSActivityStream startLocal]_block_invoke + 100 (LoggingSupport + 139540) [0x19ffb8114]
+                            3  -[NSCompoundPredicate evaluateWithObject:substitutionVariables:] + 248 (Foundation + 688880) [0x1814d42f0]
+                              3  -[NSCompoundPredicateOperator evaluatePredicates:withObject:substitutionVariables:] + 272 (Foundation + 689292) [0x1814d448c]
+                                3  -[NSCompoundPredicate evaluateWithObject:substitutionVariables:] + 248 (Foundation + 688880) [0x1814d42f0]
+                                  3  -[NSCompoundPredicateOperator evaluatePredicates:withObject:substitutionVariables:] + 456 (Foundation + 689476) [0x1814d4544]
+                                    2  -[NSCompoundPredicate evaluateWithObject:substitutionVariables:] + 248 (Foundation + 688880) [0x1814d42f0]
+                                      2  -[NSCompoundPredicateOperator evaluatePredicates:withObject:substitutionVariables:] + 272 (Foundation + 689292) [0x1814d448c]
+                                        1  -[NSComparisonPredicate evaluateWithObject:substitutionVariables:] + 328 (Foundation + 438004) [0x181496ef4]
+                                          1  objc_autoreleasePoolPop + 208 (libobjc.A.dylib + 40296) [0x18037fd68]
+                                            1  AutoreleasePoolPage::releaseUntil(objc_object**) + 200 (libobjc.A.dylib + 54156) [0x18038338c]
+                                              1  nanov2_free_definite_size + 112 (libsystem_malloc.dylib + 8876) [0x1803062ac]
+                                        1  -[NSComparisonPredicate evaluateWithObject:substitutionVariables:] + 216 (Foundation + 437892) [0x181496e84]
+                                          1  -[NSFunctionExpression expressionValueWithObject:context:] + 1496 (Foundation + 439624) [0x181497548]
+                                            1  -[NSObject(NSKeyValueCoding) valueForKey:] + 320 (Foundation + 207552) [0x18145eac0]
+                                              1  _NSGetUnsignedLongLongValueWithMethod + 96 (Foundation + 492932) [0x1814a4584]
+                                                1  DYLD-STUB$$CFNumberCreate + 0 (Foundation + 3235008) [0x181741cc0]
+                                                  1  <Effective Thread QoS User Initiated, Override Thread QoS Default>
+                                    1  -[NSComparisonPredicate evaluateWithObject:substitutionVariables:] + 216 (Foundation + 437892) [0x181496e84]
+                                      1  -[NSFunctionExpression expressionValueWithObject:context:] + 224 (Foundation + 438352) [0x181497050]
+                                        1  CFStringCreateWithCString + 96 (CoreFoundation + 12828) [0x18053b21c]
+                                          1  __CFStringCreateImmutableFunnel3 + 1608 (CoreFoundation + 14456) [0x18053b878]
+                                            1  __CFStrHashEightBit2 + 120 (CoreFoundation + 16140) [0x18053bf0c]
+                        2  ___os_activity_stream_resume_with_filter_block_invoke + 140 (LoggingSupport + 245356) [0x19ffd1e6c]
+                          1  _os_activity_stream_entry_decode + 264 (LoggingSupport + 243316) [0x19ffd1674]
+                            1  xpc_dictionary_get_uint64 + 44 (libxpc.dylib + 37760) [0x18023f380]
+                              1  _xpc_dictionary_look_up_fast + 96 (libxpc.dylib + 24404) [0x18023bf54]
+                                1  _xpc_dictionary_look_up + 136 (libxpc.dylib + 20004) [0x18023ae24]
+                                  1  _xpc_dictionary_apply_wire_f + 124 (libxpc.dylib + 107484) [0x1802503dc]
+                                    1  _platform_strnlen + 68 (libsystem_platform.dylib + 6180) [0x180505824]
+                                      1  <Effective Thread QoS User Initiated, Requested Thread QoS User Initiated>
+                          1  _os_activity_stream_entry_decode + 140 (LoggingSupport + 243192) [0x19ffd15f8]
+                            1  xpc_dictionary_get_uint64 + 44 (libxpc.dylib + 37760) [0x18023f380]
+                              1  _xpc_dictionary_look_up_fast + 96 (libxpc.dylib + 24404) [0x18023bf54]
+                                1  _xpc_dictionary_look_up + 136 (libxpc.dylib + 20004) [0x18023ae24]
+                                  1  _skip_id_and_value + 88 (libxpc.dylib + 39528) [0x18023fa68]
+  1  start_wqthread + 0 (libsystem_pthread.dylib + 8208) [0x1804ec010]
+    1  <Kernel mode>
+
+  Binary Images:
+           0x1049e0000 -                ???  com.apple.Console 1.1 (6.0.7)            <C9B51EDE-89F0-3C68-9743-CE6995005139>  /System/Applications/Utilities/Console.app/Contents/MacOS/Console
+           0x180236000 -        0x18026ffff  libxpc.dylib (2235.80.3)                 <FD3E0E8D-4618-3CE5-A24A-5639BE86B979>  /usr/lib/system/libxpc.dylib
+           0x180304000 -        0x18032efff  libsystem_malloc.dylib (374.60.3)        <961751ED-F18B-30D4-8025-AA12CA23197B>  /usr/lib/system/libsystem_malloc.dylib
+           0x18032f000 -        0x180375fff  libdispatch.dylib (1324.60.3)            <93E1DCFC-EF56-3113-8E7C-1BA85266A93B>  /usr/lib/system/libdispatch.dylib
+           0x180376000 -        0x1803b1fff  libobjc.A.dylib (838.1)                  <2EB32E1D-90CB-3256-8681-9034085A06A6>  /usr/lib/libobjc.A.dylib
+           0x1804ea000 -        0x1804f6fff  libsystem_pthread.dylib (485.60.2)       <F7B2ECCF-E6F1-3109-AE81-9028C0B8332A>  /usr/lib/system/libsystem_pthread.dylib
+           0x180504000 -        0x18050bfff  libsystem_platform.dylib (273.40.1)      <49CF1536-27E5-3A34-9724-D75552CBAB56>  /usr/lib/system/libsystem_platform.dylib
+           0x180538000 -        0x180a7bfff  com.apple.CoreFoundation 6.9 (1856.107)  <35473DE6-C433-332C-AEE0-013FD5F6D4FD>  /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
+           0x18142c000 -        0x181819fff  com.apple.Foundation 6.9 (1856.107)      <F3AB29BA-726D-3D0B-8125-CEB1A79CD832>  /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
+           0x19ff96000 -        0x1a0003fff  com.apple.LoggingSupport 1.0 (1375.40.2) <C45FEB51-DE9F-3669-827A-2D09C1E5CECE>  /System/Library/PrivateFrameworks/LoggingSupport.framework/Versions/A/LoggingSupport
+
+
+Powerstats for:   diagnosticd
+UUID:             88A7718F-C01E-34AE-8993-F43330EB748E
+Path:             /usr/libexec/diagnosticd
+Codesigning ID:   com.apple.diagnosticd
+Shared Cache:     296EB28E-6AEB-3129-8FA6-FEB92261A4EB slid base address 0x1801e4000, slide 0x1e4000
+Architecture:     arm64e
+Start time:       2022-03-01 00:52:51.843 -0600
+End time:         2022-03-01 00:54:06.945 -0600
+Num samples:      6 (10%)
+Primary state:    5 samples Non-Frontmost App, Non-Suppressed, User mode, Effective Thread QoS Default, Requested Thread QoS Default, Override Thread QoS Unspecified
+User Activity:    0 samples Idle, 6 samples Active
+Power Source:     6 samples on Battery, 0 samples on AC
+  5  start_wqthread + 8 (libsystem_pthread.dylib + 8216) [0x1804ec018]
+    5  _pthread_wqthread + 288 (libsystem_pthread.dylib + 13060) [0x1804ed304]
+      5  _dispatch_workloop_worker_thread + 656 (libdispatch.dylib + 91912) [0x180345708]
+        5  _dispatch_mach_invoke + 456 (libdispatch.dylib + 134328) [0x18034fcb8]
+          5  _dispatch_lane_serial_drain + 376 (libdispatch.dylib + 45576) [0x18033a208]
+            5  _dispatch_mach_msg_invoke + 476 (libdispatch.dylib + 130920) [0x18034ef68]
+              5  _dispatch_client_callout4 + 20 (libdispatch.dylib + 15468) [0x180332c6c]
+                3  _xpc_connection_mach_event + 1368 (libxpc.dylib + 52216) [0x180242bf8]
+                  3  _xpc_connection_call_event_handler + 176 (libxpc.dylib + 57816) [0x1802441d8]
+                    3  ??? (diagnosticd + 19464) [0x102360c08]
+                      3  _dispatch_lane_barrier_sync_invoke_and_complete + 56 (libdispatch.dylib + 77312) [0x180341e00]
+                        3  _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x180332bac]
+                          3  ??? (diagnosticd + 19940) [0x102360de4]
+                            3  xpc_connection_send_message + 112 (libxpc.dylib + 54812) [0x18024361c]
+                              2  _xpc_connection_pack_message + 120 (libxpc.dylib + 49468) [0x18024213c]
+                                2  _xpc_serializer_pack + 108 (libxpc.dylib + 26248) [0x18023c688]
+                                  2  xpc_dictionary_apply_f + 68 (libxpc.dylib + 27652) [0x18023cc04]
+                                    2  _xpc_dictionary_apply_node_f + 240 (libxpc.dylib + 27904) [0x18023cd00]
+                                      2  _xpc_dictionary_apply_wire_f + 136 (libxpc.dylib + 107496) [0x1802503e8]
+                                        2  _xpc_dictionary_apply_node_f_wire_apply + 120 (libxpc.dylib + 107924) [0x180250594]
+                                          1  _xpc_dictionary_unpack_value_and_vend + 44 (libxpc.dylib + 42040) [0x180240438]
+                                            1  _xpc_alloc + 32 (libxpc.dylib + 119316) [0x180253214]
+                                              1  szone_malloc_should_clear + 12 (libsystem_malloc.dylib + 9540) [0x180306544]
+                                          1  _xpc_dictionary_unpack_value_and_vend + 28 (libxpc.dylib + 42024) [0x180240428]
+                                            1  _xpc_dictionary_unpack_value + 120 (libxpc.dylib + 36800) [0x18023efc0]
+                                              1  _xpc_string_deserialize + 80 (libxpc.dylib + 40968) [0x180240008]
+                                                1  _xpc_string_create + 40 (libxpc.dylib + 146604) [0x180259cac]
+                                                  1  _os_object_alloc_realized + 32 (libdispatch.dylib + 12120) [0x180331f58]
+                                                    1  calloc + 0 (libsystem_malloc.dylib + 13376) [0x180307440]
+                              1  _xpc_connection_pack_message + 76 (libxpc.dylib + 49424) [0x180242110]
+                                1  _os_object_alloc_realized + 32 (libdispatch.dylib + 12120) [0x180331f58]
+                                  1  class_createInstance + 64 (libobjc.A.dylib + 25008) [0x18037c1b0]
+                                    1  _malloc_zone_calloc + 88 (libsystem_malloc.dylib + 125032) [0x180322868]
+                                      1  szone_malloc_should_clear + 92 (libsystem_malloc.dylib + 9620) [0x180306594]
+                                        1  tiny_malloc_should_clear + 224 (libsystem_malloc.dylib + 14204) [0x18030777c]
+                                          1  tiny_malloc_from_free_list + 1652 (libsystem_malloc.dylib + 17360) [0x1803083d0]
+                                            1  tiny_free_list_add_ptr + 296 (libsystem_malloc.dylib + 28604) [0x18030afbc]
+                2  _xpc_connection_mach_event + 1376 (libxpc.dylib + 52224) [0x180242c00]
+                  2  -[OS_xpc_object dealloc] + 28 (libxpc.dylib + 19008) [0x18023aa40]
+                    2  _xpc_dictionary_dispose + 172 (libxpc.dylib + 20552) [0x18023b048]
+                      2  -[OS_xpc_object dealloc] + 56 (libxpc.dylib + 19036) [0x18023aa5c]
+                        2  _objc_rootDealloc + 80 (libobjc.A.dylib + 34704) [0x18037e790]
+                          2  objc_destructInstance + 96 (libobjc.A.dylib + 34816) [0x18037e800]
+                            2  _object_remove_assocations + 812 (libobjc.A.dylib + 35700) [0x18037eb74]
+  1  start_wqthread + 0 (libsystem_pthread.dylib + 8208) [0x1804ec010]
+    1  <Effective Thread QoS User Initiated, Requested Thread QoS User Initiated>
+
+  Binary Images:
+           0x10235c000 -        0x10236bfff  diagnosticd (1375.40.2)            <88A7718F-C01E-34AE-8993-F43330EB748E>  /usr/libexec/diagnosticd
+           0x180236000 -        0x18026ffff  libxpc.dylib (2235.80.3)           <FD3E0E8D-4618-3CE5-A24A-5639BE86B979>  /usr/lib/system/libxpc.dylib
+           0x180304000 -        0x18032efff  libsystem_malloc.dylib (374.60.3)  <961751ED-F18B-30D4-8025-AA12CA23197B>  /usr/lib/system/libsystem_malloc.dylib
+           0x18032f000 -        0x180375fff  libdispatch.dylib (1324.60.3)      <93E1DCFC-EF56-3113-8E7C-1BA85266A93B>  /usr/lib/system/libdispatch.dylib
+           0x180376000 -        0x1803b1fff  libobjc.A.dylib (838.1)            <2EB32E1D-90CB-3256-8681-9034085A06A6>  /usr/lib/libobjc.A.dylib
+           0x1804ea000 -        0x1804f6fff  libsystem_pthread.dylib (485.60.2) <F7B2ECCF-E6F1-3109-AE81-9028C0B8332A>  /usr/lib/system/libsystem_pthread.dylib
+
+
+Powerstats for:   WindowServer
+UUID:             03F47BF0-EC03-322B-B7DC-514DC1476743
+Path:             /System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/Resources/WindowServer
+Codesigning ID:   com.apple.WindowServer
+Shared Cache:     296EB28E-6AEB-3129-8FA6-FEB92261A4EB slid base address 0x1801e4000, slide 0x1e4000
+Architecture:     arm64e
+Start time:       2022-03-01 00:54:01.928 -0600
+End time:         2022-03-01 00:54:17.902 -0600
+Num samples:      4 (7%)
+Primary state:    3 samples Non-Frontmost App, Non-Suppressed, User mode, Effective Thread QoS Unspecified, Requested Thread QoS Unspecified, Override Thread QoS Unspecified
+User Activity:    0 samples Idle, 4 samples Active
+Power Source:     4 samples on Battery, 0 samples on AC
+  2  start + 520 (dyld + 20724) [0x102c010f4]
+    2  ??? (WindowServer + 13244) [0x1029df3bc]
+      2  SLXServer + 1744 (SkyLight + 3077556) [0x1859ac5b4]
+        2  server_loop + 128 (SkyLight + 3078384) [0x1859ac8f0]
+          2  CGXRunOneServicesPass + 1612 (SkyLight + 3074772) [0x1859abad4]
+            2  post_port_data + 272 (SkyLight + 3075696) [0x1859abe70]
+              2  non_coalesced_timer_handler + 24 (SkyLight + 2832656) [0x185970910]
+                2  run_timer_pass + 544 (SkyLight + 2832264) [0x185970788]
+                  2  update_display_callback(void*, double) + 1580 (SkyLight + 2439696) [0x185910a10]
+                    1  CGXUpdateDisplay + 17244 (SkyLight + 2483628) [0x18591b5ac]
+                      1  WS::Displays::SLCADisplay::render_update(WS::Displays::Update&, Compositor*, unsigned int, WSCompositeSourceLayer*) + 2776 (SkyLight + 1424428) [0x185818c2c]
+                        1  MetalContext::EndUpdate(bool) + 156 (SkyLight + 1217440) [0x1857e63a0]
+                          1  MetalContext::Flush(bool) + 240 (SkyLight + 1213680) [0x1857e54f0]
+                            1  -[_MTLCommandQueue submitCommandBuffer:] + 136 (Metal + 159708) [0x188d91fdc]
+                              1  _dispatch_lane_barrier_sync_invoke_and_complete + 56 (libdispatch.dylib + 77312) [0x180341e00]
+                                1  _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x180332bac]
+                                  1  __40-[_MTLCommandQueue submitCommandBuffer:]_block_invoke + 36 (Metal + 159784) [0x188d92028]
+                                    1  -[_MTLCommandQueue _submitAvailableCommandBuffers] + 672 (Metal + 127472) [0x188d8a1f0]
+                                      1  -[IOGPUMetalCommandQueue submitCommandBuffers:count:] + 88 (IOGPU + 24220) [0x19aad6e9c]
+                                        1  -[IOGPUMetalCommandQueue _submitCommandBuffers:count:] + 804 (IOGPU + 25068) [0x19aad71ec]
+                                          1  IOGPUCommandQueueSubmitCommandBuffers + 144 (IOGPU + 79128) [0x19aae4518]
+                                            1  IOConnectCallMethod + 176 (IOKit + 15240) [0x182f9cb88]
+                                              1  io_connect_method + 440 (IOKit + 15784) [0x182f9cda8]
+                                                1  mach_msg_trap + 8 (libsystem_kernel.dylib + 6484) [0x1804b5954]
+                    1  CGXUpdateDisplay + 4444 (SkyLight + 2470828) [0x1859183ac]
+                      1  prepare_CoreAnimation_update_state(CGXConnection*, CGXWindowSubArray, WSCAPrepareState*) + 2076 (SkyLight + 2502016) [0x18591fd80]
+                        1  WSBeginCAWindowUpdate(CGXConnection*, CGXWindow*, double, unsigned int, unsigned int, WSCAPrepareState*, unsigned int*, CGSRegionObject*, CGSRegionObject**, CGXCoreAnimationUpdateState*) + 308 (SkyLight + 2554024) [0x18592c8a8]
+                          1  WSCAWindowBacking::BeginUpdate(LayerUpdateParams) + 148 (SkyLight + 1938556) [0x18589647c]
+                            1  WSCALayerBacking::InitUpdate(LayerUpdateParams, WSCARenderContextScope&) + 72 (SkyLight + 2122424) [0x1858c32b8]
+                              1  WSCALayerBacking::CloseCAUpdate() + 48 (SkyLight + 2126872) [0x1858c4418]
+                                1  CARenderUpdateFinish + 20 (QuartzCore + 1442532) [0x18755e2e4]
+                                  1  CA::Render::Update::~Update() + 364 (QuartzCore + 737216) [0x1874b1fc0]
+                                    1  CFRelease + 180 (CoreFoundation + 50120) [0x1805443c8]
+  1  thread_start + 8 (libsystem_pthread.dylib + 8228) [0x1804ec024]
+    1  _pthread_start + 148 (libsystem_pthread.dylib + 29248) [0x1804f1240]
+      1  thread_fun(void*) + 32 (QuartzCore + 290716) [0x187444f9c]
+        1  CA::WindowServer::IOMFBServer::thread_body(void*) + 404 (QuartzCore + 2302580) [0x187630274]
+          1  CFRunLoopRun + 64 (CoreFoundation + 1109192) [0x180646cc8]
+            1  CFRunLoopRunSpecific + 600 (CoreFoundation + 534324) [0x1805ba734]
+              1  __CFRunLoopRun + 2380 (CoreFoundation + 538656) [0x1805bb820]
+                1  __CFRunLoopDoSource1 + 596 (CoreFoundation + 545684) [0x1805bd394]
+                  1  __CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE1_PERFORM_FUNCTION__ + 60 (CoreFoundation + 546008) [0x1805bd4d8]
+                    1  __CFMachPortPerform + 308 (CoreFoundation + 742260) [0x1805ed374]
+                      1  display_timer_callback(__CFMachPort*, void*, long, void*) + 324 (QuartzCore + 411216) [0x187462650]
+                        1  CA::WindowServer::IOMFBServer::vsync_callback(__IOMobileFramebuffer*, unsigned long long, unsigned long long, unsigned long long, void*) + 88 (QuartzCore + 2300512) [0x18762fa60]
+  1  start_wqthread + 0 (libsystem_pthread.dylib + 8208) [0x1804ec010]
+    1  <Kernel mode>
+
+  Binary Images:
+           0x1029dc000 -        0x1029ebfff  WindowServer (660.5)                        <03F47BF0-EC03-322B-B7DC-514DC1476743>  /System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/Resources/WindowServer
+           0x102bfc000 -        0x102c77fff  dyld (941.5)                                <D21A73EA-79CD-36EB-8AC9-2C5CF5181A27>  /usr/lib/dyld
+           0x18032f000 -        0x180375fff  libdispatch.dylib (1324.60.3)               <93E1DCFC-EF56-3113-8E7C-1BA85266A93B>  /usr/lib/system/libdispatch.dylib
+           0x1804b4000 -        0x1804e9fff  libsystem_kernel.dylib (8019.80.24)         <384945E6-DD71-37E5-9A3D-84FFF14A1E60>  /usr/lib/system/libsystem_kernel.dylib
+           0x1804ea000 -        0x1804f6fff  libsystem_pthread.dylib (485.60.2)          <F7B2ECCF-E6F1-3109-AE81-9028C0B8332A>  /usr/lib/system/libsystem_pthread.dylib
+           0x180538000 -        0x180a7bfff  com.apple.CoreFoundation 6.9 (1856.107)     <35473DE6-C433-332C-AEE0-013FD5F6D4FD>  /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
+           0x182f99000 -        0x18306efff  com.apple.framework.IOKit 2.0.2 (1955.80.2) <97E3D808-8BCB-3AC4-85AB-60FAA4CAE04F>  /System/Library/Frameworks/IOKit.framework/Versions/A/IOKit
+           0x1856bd000 -        0x185a89fff  com.apple.SkyLight 1.600.0 (660.5)          <C0FA581F-E027-367F-AB10-CA8B5F8047D5>  /System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/SkyLight
+           0x1873fe000 -        0x1876fcfff  com.apple.QuartzCore 1.11 (962.63)          <0C98ECDE-C21A-3501-9C98-FC9D3DD5BB12>  /System/Library/Frameworks/QuartzCore.framework/Versions/A/QuartzCore
+           0x188d6b000 -        0x188ea4fff  com.apple.Metal 258.18 (258.18)             <D550D701-D585-32A0-9F7D-3AC14F59A170>  /System/Library/Frameworks/Metal.framework/Versions/A/Metal
+           0x19aad1000 -        0x19aafdfff  com.apple.IOGPU 35.11 (35.11)               <B65F1B3A-8D38-3CF9-87C7-8854EC9F0C2B>  /System/Library/PrivateFrameworks/IOGPU.framework/Versions/A/IOGPU

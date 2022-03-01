@@ -1,0 +1,178 @@
+Date/Time:        2022-02-26 14:19:23.384 -0600
+End time:         2022-02-26 14:22:53.439 -0600
+OS Version:       macOS 12.2 (Build 21D49)
+Architecture:     arm64e
+Report Version:   35
+Incident Identifier: E60407A3-FCD0-4191-9450-E0C6180A5412
+Share With Devs:  Yes
+
+Data Source:      Microstackshots
+Shared Cache:     B90241B2-E425-3982-B3F6-26C4567CBB49 slid base address 0x1a4c68000, slide 0x24c68000
+
+Command:          prl_vm_app
+Path:             /Applications/Parallels Desktop.app/Contents/MacOS/Parallels VM.app/Contents/MacOS/prl_vm_app
+Identifier:       com.parallels.vm
+Version:          17.1.1 (51537)
+Team ID:          4C6364ACXT
+Architecture:     arm64
+Parent:           UNKNOWN [8408]
+PID:              8900
+
+Event:            wakeups
+Action taken:     none
+Wakeups:          45001 wakeups over the last 210 seconds (214 wakeups per second average), exceeding limit of 150 wakeups per second over 300 seconds
+Wakeups limit:    45000
+Limit duration:   300s
+Wakeups caused:   45001
+Wakeups duration: 210s
+Duration:         210.06s
+Duration Sampled: 208.58s
+Steps:            59
+
+Hardware model:   MacBookPro17,1
+Active cpus:      8
+HW page size:     16384
+VM page size:     16384
+
+Fan speed:        0 rpm
+Advisory levels:  Battery -> 1, User -> 2, ThermalPressure -> 0, Combined -> 1
+Free disk space:  120.50 GB/228.27 GB, low space threshold 3072 MB
+
+Heaviest stack for the target process:
+  58  thread_start + 8 (libsystem_pthread.dylib + 8228) [0x1a4f70024]
+  58  _pthread_start + 148 (libsystem_pthread.dylib + 29248) [0x1a4f75240]
+  56  ??? (QtCore + 142116) [0x10150ab24]
+  50  ??? (prl_vm_app + 431460) [0x100181564]
+  50  ??? (prl_vm_app + 431908) [0x100181724]
+  50  ??? (prl_vm_app + 620424) [0x1001af788]
+  50  ??? (prl_vm_app + 881268) [0x1001ef274]
+  50  ??? (libMonitorArm.dylib + 21376) [0x10b399380]
+  50  ??? (libMonitorArm.dylib + 226012) [0x10b3cb2dc]
+  38  ??? (libMonitorArm.dylib + 472264) [0x10b4074c8]
+  38  hv_trap + 8 (Hypervisor + 3928) [0x208000f58]
+
+
+Powerstats for:   prl_vm_app (Parallels Desktop) [8900]
+UUID:             9E613BE9-1E02-3396-967A-72088B3C45FB
+Path:             /Applications/Parallels Desktop.app/Contents/MacOS/Parallels VM.app/Contents/MacOS/prl_vm_app
+Identifier:       com.parallels.vm
+Version:          17.1.1 (51537)
+Team ID:          4C6364ACXT
+Architecture:     arm64
+Parent:           UNKNOWN [8408]
+UID:              501
+Footprint:        3485.48 MB
+Pageins:          63 pages
+Start time:       2022-02-26 14:19:23.746 -0600
+End time:         2022-02-26 14:22:52.325 -0600
+Num samples:      59 (100%)
+Primary state:    27 samples Non-Frontmost App, Non-Suppressed, User mode, Effective Thread QoS Default, Requested Thread QoS Default, Override Thread QoS Unspecified
+User Activity:    0 samples Idle, 59 samples Active
+Power Source:     59 samples on Battery, 0 samples on AC
+  58  thread_start + 8 (libsystem_pthread.dylib + 8228) [0x1a4f70024]
+    58  _pthread_start + 148 (libsystem_pthread.dylib + 29248) [0x1a4f75240]
+      56  ??? (QtCore + 142116) [0x10150ab24]
+        50  ??? (prl_vm_app + 431460) [0x100181564]
+          50  ??? (prl_vm_app + 431908) [0x100181724]
+            50  ??? (prl_vm_app + 620424) [0x1001af788]
+              50  ??? (prl_vm_app + 881268) [0x1001ef274]
+                50  ??? (libMonitorArm.dylib + 21376) [0x10b399380]
+                  50  ??? (libMonitorArm.dylib + 226012) [0x10b3cb2dc]
+                    38  ??? (libMonitorArm.dylib + 472264) [0x10b4074c8]
+                      38  hv_trap + 8 (Hypervisor + 3928) [0x208000f58]
+                        20  <Kernel mode>
+                        2   <Frontmost App>
+                    5   ??? (libMonitorArm.dylib + 472520) [0x10b4075c8]
+                      3   ??? (libMonitorArm.dylib + 311412) [0x10b3e0074]
+                        3   ??? (libMonitorArm.dylib + 475692) [0x10b40822c]
+                          3   __psynch_cvwait + 8 (libsystem_kernel.dylib + 20672) [0x1a4f3d0c0]
+                            1   <Kernel mode>
+                      2   ??? (libMonitorArm.dylib + 311360) [0x10b3e0040]
+                        2   ??? (libMonitorArm.dylib + 473088) [0x10b407800]
+                          1   ??? (libMonitorArm.dylib + 375468) [0x10b3efaac]
+                            1   ??? (libMonitorArm.dylib + 380028) [0x10b3f0c7c]
+                              1   ??? (libMonitorArm.dylib + 475196) [0x10b40803c]
+                                1   _pthread_mutex_firstfit_lock_slow + 240 (libsystem_pthread.dylib + 7320) [0x1a4f6fc98]
+                                  1   __psynch_mutexwait + 8 (libsystem_kernel.dylib + 17856) [0x1a4f3c5c0]
+                                    1   <Kernel mode>
+                          1   ??? (libMonitorArm.dylib + 132852) [0x10b3b46f4]
+                            1   __psynch_cvsignal + 8 (libsystem_kernel.dylib + 26052) [0x1a4f3e5c4]
+                    4   ??? (libMonitorArm.dylib + 472608) [0x10b407620]
+                      2   ??? (libMonitorArm.dylib + 311860) [0x10b3e0234]
+                        2   ??? (libMonitorArm.dylib + 308160) [0x10b3df3c0]
+                          1   ??? (libMonitorArm.dylib + 382300) [0x10b3f155c]
+                            1   ??? (libMonitorArm.dylib + 475268) [0x10b408084]
+                              1   _pthread_mutex_firstfit_unlock_slow + 244 (libsystem_pthread.dylib + 8088) [0x1a4f6ff98]
+                                1   __psynch_mutexdrop + 8 (libsystem_kernel.dylib + 18312) [0x1a4f3c788]
+                          1   ??? (libMonitorArm.dylib + 382196) [0x10b3f14f4]
+                            1   ??? (libMonitorArm.dylib + 378668) [0x10b3f072c]
+                              1   ??? (libMonitorArm.dylib + 475832) [0x10b4082b8]
+                                1   __psynch_cvsignal + 8 (libsystem_kernel.dylib + 26052) [0x1a4f3e5c4]
+                      1   ??? (libMonitorArm.dylib + 311844) [0x10b3e0224]
+                        1   DYLD-STUB$$hv_vcpu_get_reg + 4 (libMonitorArm.dylib + 498052) [0x10b40d984]
+                      1   ??? (libMonitorArm.dylib + 311820) [0x10b3e020c]
+                        1   hv_vcpu_set_reg + 0 (Hypervisor + 8232) [0x208002028]
+                    2   ??? (libMonitorArm.dylib + 472208) [0x10b407490]
+                    1   ??? (libMonitorArm.dylib + 472584) [0x10b407608]
+                      1   ??? (libMonitorArm.dylib + 277744) [0x10b3d7cf0]
+                        1   ??? (libMonitorArm.dylib + 234192) [0x10b3cd2d0]
+                          1   ??? (libMonitorArm.dylib + 371476) [0x10b3eeb14]
+                            1   ??? (libMonitorArm.dylib + 24828) [0x10b39a0fc]
+                              1   ??? (prl_vm_app + 9466168) [0x100a1f138]
+                                1   mach_msg_trap + 8 (libsystem_kernel.dylib + 6484) [0x1a4f39954]
+                                  1   <Frontmost App>
+        4   ??? (prl_vm_app + 8892076) [0x100992eac]
+          4   ??? (prl_vm_app + 8891940) [0x100992e24]
+            4   ??? (prl_vm_app + 8891312) [0x100992bb0]
+              4   ??? (prl_vm_app + 8893804) [0x10099356c]
+                4   pwrite + 8 (libsystem_kernel.dylib + 20452) [0x1a4f3cfe4]
+                  2   <Kernel mode>
+        2   ??? (prl_vm_app + 5651092) [0x10067ba94]
+          2   ??? (prl_vm_app + 1200572) [0x10023d1bc]
+            2   ??? (prl_vm_app + 1200996) [0x10023d364]
+              2   ??? (prl_vm_app + 5535924) [0x10065f8b4]
+                2   ??? (prl_vm_app + 5536212) [0x10065f9d4]
+                  2   ??? (prl_vm_app + 5537048) [0x10065fd18]
+                    1   ??? (prl_vm_app + 5535812) [0x10065f844]
+                      1   ??? (prl_vm_app + 5549804) [0x100662eec]
+                        1   ??? (prl_vm_app + 8118076) [0x1008d5f3c]
+                          1   ??? (prl_vm_app + 8121560) [0x1008d6cd8]
+                            1   ??? (prl_vm_app + 8274396) [0x1008fc1dc]
+                              1   __bzero + 64 (libsystem_platform.dylib + 15904) [0x1a4f8be20]
+                                1   <Kernel mode, Effective Thread QoS Unspecified, Requested Thread QoS Unspecified>
+                    1   ??? (prl_vm_app + 5535780) [0x10065f824]
+                      1   ??? (prl_vm_app + 5549104) [0x100662c30]
+                        1   _platform_memmove + 168 (libsystem_platform.dylib + 16824) [0x1a4f8c1b8]
+                          1   <Effective Thread QoS Unspecified, Requested Thread QoS Unspecified>
+      2   ??? (libMonitorArm.dylib + 136160) [0x10b3b53e0]
+        2   __psynch_cvwait + 8 (libsystem_kernel.dylib + 20672) [0x1a4f3d0c0]
+          2   <Kernel mode>
+  1   start_wqthread + 8 (libsystem_pthread.dylib + 8216) [0x1a4f70018]
+    1   _pthread_wqthread + 288 (libsystem_pthread.dylib + 13060) [0x1a4f71304]
+      1   _dispatch_workloop_worker_thread + 656 (libdispatch.dylib + 91912) [0x1a4dc9708]
+        1   _dispatch_lane_invoke + 392 (libdispatch.dylib + 48804) [0x1a4dbeea4]
+          1   _dispatch_lane_serial_drain + 376 (libdispatch.dylib + 45576) [0x1a4dbe208]
+            1   _dispatch_source_invoke + 1356 (libdispatch.dylib + 106916) [0x1a4dcd1a4]
+              1   _dispatch_continuation_pop + 504 (libdispatch.dylib + 28800) [0x1a4dba080]
+                1   _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+                  1   -[_MTLCommandQueue _submitAvailableCommandBuffers] + 672 (Metal + 127472) [0x1ad80e1f0]
+                    1   -[IOGPUMetalCommandQueue submitCommandBuffers:count:] + 88 (IOGPU + 24220) [0x1bf55ae9c]
+                      1   -[IOGPUMetalCommandQueue _submitCommandBuffers:count:] + 804 (IOGPU + 25068) [0x1bf55b1ec]
+                        1   IOGPUCommandQueueSubmitCommandBuffers + 144 (IOGPU + 79128) [0x1bf568518]
+                          1   IOConnectCallMethod + 176 (IOKit + 15240) [0x1a7a20b88]
+                            1   io_connect_method + 440 (IOKit + 15784) [0x1a7a20da8]
+                              1   mach_msg_trap + 8 (libsystem_kernel.dylib + 6484) [0x1a4f39954]
+                                1   <Frontmost App, Effective Thread QoS User Interactive, Requested Thread QoS User Interactive>
+
+  Binary Images:
+           0x100118000 -        0x100e07fff  com.parallels.vm 17.1.1 (51537)             <9E613BE9-1E02-3396-967A-72088B3C45FB>  /Applications/Parallels Desktop.app/Contents/MacOS/Parallels VM.app/Contents/MacOS/prl_vm_app
+           0x1014e8000 -        0x1019fbfff  QtCore (0)                                  <4FC22FD0-D443-35D1-AB9C-EC8EBCCD21BC>  /Users/USER/Library/Caches/*/Parallels Desktop.app/Contents/Frameworks/QtCore.framework/Versions/5/QtCore
+           0x10b394000 -        0x10b5bbfff  libMonitorArm.dylib (51537)                 <E112458B-D226-32A7-888E-70CC82EF84EF>  /Applications/Parallels Desktop.app/Contents/MacOS/libMonitorArm.dylib
+           0x1a4db3000 -        0x1a4df9fff  libdispatch.dylib (1324.60.3)               <93E1DCFC-EF56-3113-8E7C-1BA85266A93B>  /usr/lib/system/libdispatch.dylib
+           0x1a4f38000 -        0x1a4f6dfff  libsystem_kernel.dylib (8019.80.24)         <384945E6-DD71-37E5-9A3D-84FFF14A1E60>  /usr/lib/system/libsystem_kernel.dylib
+           0x1a4f6e000 -        0x1a4f7afff  libsystem_pthread.dylib (485.60.2)          <F7B2ECCF-E6F1-3109-AE81-9028C0B8332A>  /usr/lib/system/libsystem_pthread.dylib
+           0x1a4f88000 -        0x1a4f8ffff  libsystem_platform.dylib (273.40.1)         <49CF1536-27E5-3A34-9724-D75552CBAB56>  /usr/lib/system/libsystem_platform.dylib
+           0x1a7a1d000 -        0x1a7af2fff  com.apple.framework.IOKit 2.0.2 (1955.80.2) <97E3D808-8BCB-3AC4-85AB-60FAA4CAE04F>  /System/Library/Frameworks/IOKit.framework/Versions/A/IOKit
+           0x1ad7ef000 -        0x1ad928fff  com.apple.Metal 258.18 (258.18)             <D550D701-D585-32A0-9F7D-3AC14F59A170>  /System/Library/Frameworks/Metal.framework/Versions/A/Metal
+           0x1bf555000 -        0x1bf581fff  com.apple.IOGPU 35.11 (35.11)               <B65F1B3A-8D38-3CF9-87C7-8854EC9F0C2B>  /System/Library/PrivateFrameworks/IOGPU.framework/Versions/A/IOGPU
+           0x208000000 -        0x208003fff  com.apple.Hypervisor 1.0 (1)                <78D08A59-9FF5-3AD2-8F57-A7D7295744C8>  /System/Library/Frameworks/Hypervisor.framework/Versions/A/Hypervisor

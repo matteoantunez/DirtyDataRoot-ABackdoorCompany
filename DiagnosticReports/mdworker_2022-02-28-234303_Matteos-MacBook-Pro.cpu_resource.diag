@@ -1,0 +1,708 @@
+Date/Time:        2022-02-28 23:40:44.867 -0600
+End time:         2022-02-28 23:42:58.417 -0600
+OS Version:       macOS 12.2.1 (Build 21D62)
+Architecture:     arm64e
+Report Version:   35
+Incident Identifier: 48B05D3B-0564-4787-BC69-E93621B2792D
+Share With Devs:  Yes
+
+Data Source:      Microstackshots
+Shared Cache:     296EB28E-6AEB-3129-8FA6-FEB92261A4EB slid base address 0x1801e4000, slide 0x1e4000
+
+Command:          mdworker
+Path:             /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker
+Codesigning ID:   com.apple.mdworker
+Architecture:     arm64e
+Parent:           UNKNOWN [1]
+PID:              1286
+
+Event:            cpu usage
+Action taken:     none
+CPU:              90 seconds cpu time over 134 seconds (67% cpu average), exceeding limit of 50% cpu over 180 seconds
+CPU limit:        90s
+Limit duration:   180s
+CPU used:         90s
+CPU duration:     134s
+Duration:         133.55s
+Duration Sampled: 129.03s
+Steps:            78
+
+Hardware model:   MacBookPro17,1
+Active cpus:      8
+HW page size:     16384
+VM page size:     16384
+
+Fan speed:        0 rpm
+Advisory levels:  Battery -> 2, User -> 2, ThermalPressure -> 0, Combined -> 2
+Free disk space:  55.90 GB/228.27 GB, low space threshold 3072 MB
+Low Power Mode:   Enabled
+
+Heaviest stack for the target process:
+  14  start_wqthread + 8 (libsystem_pthread.dylib + 8216) [0x1804ec018]
+  14  _pthread_wqthread + 288 (libsystem_pthread.dylib + 13060) [0x1804ed304]
+  14  _dispatch_workloop_worker_thread + 656 (libdispatch.dylib + 91912) [0x180345708]
+  14  _dispatch_lane_invoke + 392 (libdispatch.dylib + 48804) [0x18033aea4]
+  14  _dispatch_lane_serial_drain + 672 (libdispatch.dylib + 45872) [0x18033a330]
+  14  _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x180332bac]
+  14  _dispatch_call_block_and_release + 32 (libdispatch.dylib + 7776) [0x180330e60]
+  14  ??? (mdworker + 130160) [0x100a43c70]
+  14  ??? (mdworker + 113036) [0x100a3f98c]
+  14  _NodeSizing + 60 (DesktopServicesPriv + 624136) [0x1842a2608]
+  14  _NodeSizingV2 + 940 (DesktopServicesPriv + 625140) [0x1842a29f4]
+  14  TOperationSizer::ComputeSize() + 28 (DesktopServicesPriv + 174676) [0x184234a54]
+  14  TOperationSizer::ComputeSizeWithTimeout(unsigned long long) + 408 (DesktopServicesPriv + 1272016) [0x1843408d0]
+  14  TOperationSizer::ResumeSizing(unsigned long long) + 148 (DesktopServicesPriv + 1272396) [0x184340a4c]
+  14  TDeepCFURLIterator::Next(std::__1::shared_ptr<TCFURLInfo>&, int&, int&, bool&, bool&, std::__1::shared_ptr<TCFURLInfo>&, bool&, std::__1::shared_ptr<TCFURLInfo>&) + 80 (DesktopServicesPriv + 940324) [0x1842ef924]
+  14  TDeepCFURLIterator::NextInternal(std::__1::shared_ptr<TCFURLInfo>&, int&, int&, bool&, bool&, std::__1::shared_ptr<TCFURLInfo>&, bool&, std::__1::shared_ptr<TCFURLInfo>&) + 180 (DesktopServicesPriv + 940896) [0x1842efb60]
+  13  TCFURLIterator::Next(std::__1::shared_ptr<TCFURLInfo>&) + 556 (DesktopServicesPriv + 910628) [0x1842e8524]
+  8   TCFURLIterator::NextRaw(std::__1::shared_ptr<TCFURLInfo>&) + 48 (DesktopServicesPriv + 934520) [0x1842ee278]
+  6   _URLEnumeratorGetNextURL + 140 (CoreServicesInternal + 47816) [0x182f29ac8]
+  5   _GetDirectoryURLs(_CFURLEnumerator*) + 1164 (CoreServicesInternal + 53740) [0x182f2b1ec]
+  5   DirEnumRead + 356 (CoreServicesInternal + 54328) [0x182f2b438]
+  5   getattrlistbulk + 8 (libsystem_kernel.dylib + 20584) [0x1804b9068]
+
+
+Powerstats for:   mdworker [1286]
+UUID:             C495B373-528B-31CC-B225-301B39110483
+Path:             /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker
+Codesigning ID:   com.apple.mdworker
+Architecture:     arm64e
+Parent:           UNKNOWN [1]
+UID:              89
+Sudden Term:      Tracked (allows idle exit)
+Footprint:        2864 KB -> 4416 KB (+1552 KB)
+Pageins:          2 pages
+Start time:       2022-02-28 23:40:49.840 -0600
+End time:         2022-02-28 23:42:52.433 -0600
+Num samples:      14 (18%)
+Primary state:    11 samples Non-Frontmost App, Non-Suppressed, User mode, Effective Thread QoS Maintenance, Requested Thread QoS Maintenance, Override Thread QoS Unspecified
+User Activity:    0 samples Idle, 14 samples Active
+Power Source:     14 samples on Battery, 0 samples on AC
+  14  start_wqthread + 8 (libsystem_pthread.dylib + 8216) [0x1804ec018]
+    14  _pthread_wqthread + 288 (libsystem_pthread.dylib + 13060) [0x1804ed304]
+      14  _dispatch_workloop_worker_thread + 656 (libdispatch.dylib + 91912) [0x180345708]
+        14  _dispatch_lane_invoke + 392 (libdispatch.dylib + 48804) [0x18033aea4]
+          14  _dispatch_lane_serial_drain + 672 (libdispatch.dylib + 45872) [0x18033a330]
+            14  _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x180332bac]
+              14  _dispatch_call_block_and_release + 32 (libdispatch.dylib + 7776) [0x180330e60]
+                14  ??? (mdworker + 130160) [0x100a43c70]
+                  14  ??? (mdworker + 113036) [0x100a3f98c]
+                    14  _NodeSizing + 60 (DesktopServicesPriv + 624136) [0x1842a2608]
+                      14  _NodeSizingV2 + 940 (DesktopServicesPriv + 625140) [0x1842a29f4]
+                        14  TOperationSizer::ComputeSize() + 28 (DesktopServicesPriv + 174676) [0x184234a54]
+                          14  TOperationSizer::ComputeSizeWithTimeout(unsigned long long) + 408 (DesktopServicesPriv + 1272016) [0x1843408d0]
+                            14  TOperationSizer::ResumeSizing(unsigned long long) + 148 (DesktopServicesPriv + 1272396) [0x184340a4c]
+                              14  TDeepCFURLIterator::Next(std::__1::shared_ptr<TCFURLInfo>&, int&, int&, bool&, bool&, std::__1::shared_ptr<TCFURLInfo>&, bool&, std::__1::shared_ptr<TCFURLInfo>&) + 80 (DesktopServicesPriv + 940324) [0x1842ef924]
+                                14  TDeepCFURLIterator::NextInternal(std::__1::shared_ptr<TCFURLInfo>&, int&, int&, bool&, bool&, std::__1::shared_ptr<TCFURLInfo>&, bool&, std::__1::shared_ptr<TCFURLInfo>&) + 180 (DesktopServicesPriv + 940896) [0x1842efb60]
+                                  13  TCFURLIterator::Next(std::__1::shared_ptr<TCFURLInfo>&) + 556 (DesktopServicesPriv + 910628) [0x1842e8524]
+                                    8   TCFURLIterator::NextRaw(std::__1::shared_ptr<TCFURLInfo>&) + 48 (DesktopServicesPriv + 934520) [0x1842ee278]
+                                      6   _URLEnumeratorGetNextURL + 140 (CoreServicesInternal + 47816) [0x182f29ac8]
+                                        5   _GetDirectoryURLs(_CFURLEnumerator*) + 1164 (CoreServicesInternal + 53740) [0x182f2b1ec]
+                                          5   DirEnumRead + 356 (CoreServicesInternal + 54328) [0x182f2b438]
+                                            5   getattrlistbulk + 8 (libsystem_kernel.dylib + 20584) [0x1804b9068]
+                                              1   <Kernel mode>
+                                        1   _GetDirectoryURLs(_CFURLEnumerator*) + 624 (CoreServicesInternal + 53200) [0x182f2afd0]
+                                          1   _FSURLCreateWithPathAndAttributes + 304 (CoreServicesInternal + 56116) [0x182f2bb34]
+                                            1   createBaseCacheWithPathAndAttributes(__CFAllocator const*, unsigned char const*, unsigned int, unsigned char, unsigned char, attrlist const*, void const*, void**, __CFError**) + 184 (CoreServicesInternal + 56984) [0x182f2be98]
+                                              1   parseAttributeBuffer(__CFAllocator const*, unsigned char const*, unsigned char, attrlist const*, void const*, void**, _FileAttributes*, unsigned int*) + 404 (CoreServicesInternal + 19584) [0x182f22c80]
+                                                1   SetNameAndHiddenFlagsFromCString(__CFAllocator const*, char const*, long, _FileAttributes*) + 76 (CoreServicesInternal + 23560) [0x182f23c08]
+                                                  1   CFStringCreateWithBytes + 48 (CoreFoundation + 65988) [0x1805481c4]
+                                                    1   __CFStringCreateImmutableFunnel3 + 1608 (CoreFoundation + 14456) [0x18053b878]
+                                                      1   __CFStrHashEightBit2 + 428 (CoreFoundation + 16448) [0x18053c040]
+                                      2   _URLEnumeratorGetNextURL + 96 (CoreServicesInternal + 47772) [0x182f29a9c]
+                                        2   _InitalizeDirectoryEnumerator(_CFURLEnumerator*) + 1396 (CoreServicesInternal + 49540) [0x182f2a184]
+                                          2   DirEnumOpen + 948 (CoreServicesInternal + 51480) [0x182f2a918]
+                                            2   __getattrlist + 8 (libsystem_kernel.dylib + 9084) [0x1804b637c]
+                                    5   TCFURLIterator::NextRaw(std::__1::shared_ptr<TCFURLInfo>&) + 108 (DesktopServicesPriv + 934580) [0x1842ee2b4]
+                                      5   TCFURLInfo::Initialize(__CFURL const*, bool, bool) + 208 (DesktopServicesPriv + 10668) [0x18420c9ac]
+                                        5   TCFURLInfo::FetchProperties(bool) + 452 (DesktopServicesPriv + 11268) [0x18420cc04]
+                                          5   TCFURLInfo::GetBooleanProperty(__CFURL const*, __CFString const*) + 40 (DesktopServicesPriv + 12672) [0x18420d180]
+                                            5   CFURLCopyResourcePropertyForKey + 140 (CoreFoundation + 354972) [0x18058ea9c]
+                                              5   _FSURLCopyResourcePropertyForKeyInternal(__CFURL const*, __CFString const*, void*, void*, __CFError**, unsigned char) + 232 (CoreServicesInternal + 4296) [0x182f1f0c8]
+                                                5   prepareValuesForBitmap(__CFURL const*, __FileCache*, _FilePropertyBitmap*, __CFError**) + 412 (CoreServicesInternal + 16496) [0x182f22070]
+                                                  3   __getattrlist + 8 (libsystem_kernel.dylib + 9084) [0x1804b637c]
+                                                    2   <Kernel mode>
+                                                  1   corePropertyProviderPrepareValues(__CFURL const*, __FileCache*, __CFString const* const*, void const**, long, void const*, __CFError**) + 1236 (CoreServicesInternal + 17868) [0x182f225cc]
+                                                    1   parseAttributeBuffer(__CFAllocator const*, unsigned char const*, unsigned char, attrlist const*, void const*, void**, _FileAttributes*, unsigned int*) + 2944 (CoreServicesInternal + 22124) [0x182f2366c]
+                                                      1   MountInfoPrepare + 68 (CoreServicesInternal + 23796) [0x182f23cf4]
+                                                        1   FSMountPrepare + 76 (CarbonCore + 31128) [0x182c2d998]
+                                                          1   FSMount::FSMount(unsigned int, FSMountNumberType, int*, unsigned int const*) + 92 (CarbonCore + 31292) [0x182c2da3c]
+                                                            1   FileIDTreeGetAndLockVolumeEntryForDeviceID + 80 (CarbonCore + 31708) [0x182c2dbdc]
+                                                              1   FSNodeStorageGetAndLockCurrentUniverse + 56 (CarbonCore + 32224) [0x182c2dde0]
+                                                                1   _CFGetEUID + 44 (CoreFoundation + 11540) [0x18053ad14]
+                                                                  1   __CFGetUGIDs + 60 (CoreFoundation + 1218880) [0x180661940]
+                                                  1   LaunchServices::URLPropertyProvider::prepareValues(__CFURL const*, __FileCache*, __CFString const* const*, void const**, long, void const*, __CFError**) + 460 (LaunchServices + 66380) [0x180a8c34c]
+                                                    1   LaunchServices::URLPropertyProvider::prepareIsPackageValue(LaunchServices::Database::Context&, FSNode*, __FileCache*, __CFString const*, LaunchServices::URLPropertyProvider::State*, NSError* __autoreleasing*) + 56 (LaunchServices + 1697228) [0x180c1a5cc]
+                                                      1   _LSNodeIsPackage + 24 (LaunchServices + 186400) [0x180aa9820]
+                                                        1   _LSNodeIsPackageCommon(LSContext*, FSNode*, bool, unsigned char*) + 260 (LaunchServices + 852336) [0x180b4c170]
+                                                          1   -[FSNode(MiscellaneousProperties) getHFSType:creator:error:] + 236 (LaunchServices + 157344) [0x180aa26a0]
+                                                            1   +[NSData(NSData) dataWithContentsOfURL:options:maxLength:error:] + 68 (Foundation + 761588) [0x1814e5ef4]
+                                                              1   -[NSData(NSData) initWithContentsOfFile:options:maxLength:error:] + 128 (Foundation + 157848) [0x181452898]
+                                                                1   _NSReadBytesFromFileWithExtendedAttributes + 160 (Foundation + 158264) [0x181452a38]
+                                                                  1   __open + 8 (libsystem_kernel.dylib + 9172) [0x1804b63d4]
+                                  1   TCFURLIterator::Next(std::__1::shared_ptr<TCFURLInfo>&) + 68 (DesktopServicesPriv + 910140) [0x1842e833c]
+                                    1   TCFURLInfo::CopyPathURLIfPossible(__CFURL const*) + 40 (DesktopServicesPriv + 895960) [0x1842e4bd8]
+                                      1   CFURLCreateFilePathURL + 1168 (CoreFoundation + 968368) [0x1806246b0]
+                                        1   _CFURLCreateWithURLString + 344 (CoreFoundation + 84272) [0x18054c930]
+
+  Binary Images:
+           0x100a24000 -        0x100a9ffff  mdworker (2183.14)                            <C495B373-528B-31CC-B225-301B39110483>  /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker
+           0x18032f000 -        0x180375fff  libdispatch.dylib (1324.60.3)                 <93E1DCFC-EF56-3113-8E7C-1BA85266A93B>  /usr/lib/system/libdispatch.dylib
+           0x1804b4000 -        0x1804e9fff  libsystem_kernel.dylib (8019.80.24)           <384945E6-DD71-37E5-9A3D-84FFF14A1E60>  /usr/lib/system/libsystem_kernel.dylib
+           0x1804ea000 -        0x1804f6fff  libsystem_pthread.dylib (485.60.2)            <F7B2ECCF-E6F1-3109-AE81-9028C0B8332A>  /usr/lib/system/libsystem_pthread.dylib
+           0x180538000 -        0x180a7bfff  com.apple.CoreFoundation 6.9 (1856.107)       <35473DE6-C433-332C-AEE0-013FD5F6D4FD>  /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
+           0x180a7c000 -        0x180cdcfff  com.apple.LaunchServices 1141.1 (1141.1)      <E986B6D9-472C-3BEA-AB9A-D3ABEF2A07FB>  /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/LaunchServices
+           0x18142c000 -        0x181819fff  com.apple.Foundation 6.9 (1856.107)           <F3AB29BA-726D-3D0B-8125-CEB1A79CD832>  /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
+           0x182c26000 -        0x182f1dfff  com.apple.CoreServices.CarbonCore 1319 (1319) <81A246A0-140F-398F-A47A-039B8034946E>  /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/CarbonCore.framework/Versions/A/CarbonCore
+           0x182f1e000 -        0x182f5afff  com.apple.CoreServicesInternal 484 (484)      <B0C40221-F4C3-3F56-B25B-D484E5D3A8BB>  /System/Library/PrivateFrameworks/CoreServicesInternal.framework/Versions/A/CoreServicesInternal
+           0x18420a000 -        0x184391fff  com.apple.desktopservices 2.1 (1438.1.1)      <C36A8FA8-9893-3269-AF49-59FA9CE1EA59>  /System/Library/PrivateFrameworks/DesktopServicesPriv.framework/Versions/A/DesktopServicesPriv
+
+
+Powerstats for:   mds_stores
+UUID:             1C58D9DD-2A5E-37FE-B49A-18926E6EB979
+Path:             /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores
+Codesigning ID:   com.apple.mds_stores
+Architecture:     arm64e
+Start time:       2022-02-28 23:40:48.560 -0600
+End time:         2022-02-28 23:42:57.439 -0600
+Num samples:      35 (45%)
+Primary state:    14 samples Non-Frontmost App, Non-Suppressed, User mode, Effective Thread QoS Maintenance, Requested Thread QoS Maintenance, Override Thread QoS Maintenance
+User Activity:    0 samples Idle, 35 samples Active
+Power Source:     35 samples on Battery, 0 samples on AC
+  34  start_wqthread + 8 (libsystem_pthread.dylib + 8216) [0x1804ec018]
+    33  _pthread_wqthread + 228 (libsystem_pthread.dylib + 13000) [0x1804ed2c8]
+      33  _dispatch_worker_thread2 + 164 (libdispatch.dylib + 88920) [0x180344b58]
+        19  _dispatch_root_queue_drain + 396 (libdispatch.dylib + 86812) [0x18034431c]
+          19  _dispatch_async_redirect_invoke + 596 (libdispatch.dylib + 26332) [0x1803356dc]
+            19  _dispatch_continuation_pop + 208 (libdispatch.dylib + 28504) [0x180335f58]
+              19  _dispatch_lane_invoke + 444 (libdispatch.dylib + 48856) [0x18033aed8]
+                19  _dispatch_lane_serial_drain + 376 (libdispatch.dylib + 45576) [0x18033a208]
+                  19  _dispatch_lane_invoke + 444 (libdispatch.dylib + 48856) [0x18033aed8]
+                    19  _dispatch_lane_serial_drain + 672 (libdispatch.dylib + 45872) [0x18033a330]
+                      19  _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x180332bac]
+                        19  _dispatch_block_async_invoke2 + 148 (libdispatch.dylib + 76176) [0x180341990]
+                          19  work_fun + 704 (SpotlightIndex + 218932) [0x195d4b734]
+                            17  setattr_runLoop + 148 (SpotlightIndex + 564260) [0x195d9fc24]
+                              10  setAttributesBulk + 316 (SpotlightIndex + 1104096) [0x195e238e0]
+                                5   _setAttributes + 7980 (SpotlightIndex + 1112516) [0x195e259c4]
+                                  4   si_writeBackAndIndexWithLiveQueryToggle + 4068 (SpotlightIndex + 647596) [0x195db41ac]
+                                    4   _CIUpdateContent + 796 (SpotlightIndex + 607672) [0x195daa5b8]
+                                      4   setDocumentAttributes + 5624 (SpotlightIndex + 614268) [0x195dabf7c]
+                                        4   TermUpdateSetAddDocumentInfo + 412 (SpotlightIndex + 667860) [0x195db90d4]
+                                          4   termUpdateSetProcessFields + 1504 (SpotlightIndex + 669772) [0x195db984c]
+                                            2   invertValueToUpdateSet + 1860 (SpotlightIndex + 672032) [0x195dba120]
+                                              2   _CITokenizerGetTokens + 340 (SpotlightIndex + 2345236) [0x195f52914]
+                                                1   CoreNLP::WordDispatchTagger::setString(__CFString const*, CFRange, NLLanguageID) + 464 (CoreNLP + 36348) [0x189ac4dfc]
+                                                  1   ThaiTokenizerSetStringWithRange + 944 (libThaiTokenizer.dylib + 4588) [0x18b1981ec]
+                                                    1   CFBurstTrieContains + 200 (CoreFoundation + 1156872) [0x180652708]
+                                                      1   CFBurstTrieContainsUTF8String + 176 (CoreFoundation + 133988) [0x180558b64]
+                                                        1   CFBurstTrieCursorAdvanceForBytes + 68 (CoreFoundation + 1180704) [0x180658420]
+                                                          1   advanceMapCursor + 128 (CoreFoundation + 1180880) [0x1806584d0]
+                                                            1   advanceMapCursor + 380 (CoreFoundation + 1181132) [0x1806585cc]
+                                                              1   advanceMapCursor + 380 (CoreFoundation + 1181132) [0x1806585cc]
+                                                                1   advanceMapCursor + 380 (CoreFoundation + 1181132) [0x1806585cc]
+                                                                  1   advanceMapCursor + 380 (CoreFoundation + 1181132) [0x1806585cc]
+                                                                    1   advanceMapCursor + 380 (CoreFoundation + 1181132) [0x1806585cc]
+                                                                      1   advanceMapCursor + 380 (CoreFoundation + 1181132) [0x1806585cc]
+                                                                        1   advanceMapCursor + 380 (CoreFoundation + 1181132) [0x1806585cc]
+                                                                          1   _platform_memcmp + 0 (libsystem_platform.dylib + 7376) [0x180505cd0]
+                                                1   CoreNLP::WordDispatchTagger::setString(__CFString const*, CFRange, NLLanguageID) + 164 (CoreNLP + 36048) [0x189ac4cd0]
+                                                  1   CoreNLP::NLLangid::getLanguageOfString(__CFString const*, CFRange, NLLanguageID) + 124 (CoreNLP + 68584) [0x189accbe8]
+                                                    1   CoreNLP::ICUTextBreakWithCustomizedRules::cjTokenLengthInString(__CFString const*, CFRange) + 108 (CoreNLP + 69232) [0x189acce70]
+                                                      1   CoreNLP::ICUTextBreakWithCustomizedRules::setString(__CFString const*, CFRange) + 24 (CoreNLP + 69348) [0x189accee4]
+                                                        1   CoreNLP::ICUTextBreak::setString(__CFString const*, CFRange) + 404 (CoreNLP + 40544) [0x189ac5e60]
+                                                          1   icu::RuleBasedBreakIterator57::setText(UText*, UErrorCode&) + 228 (libicucore.A.dylib + 250768) [0x1829ad390]
+                                                            1   icu::RuleBasedBreakIterator57::first() + 80 (libicucore.A.dylib + 251676) [0x1829ad71c]
+                                                              1   utext_setNativeIndex + 104 (libicucore.A.dylib + 835744) [0x182a3c0a0]
+                                                                1   doAccess + 72 (CoreFoundation + 661396) [0x1805d9794]
+                                            2   invertValueToUpdateSet + 1788 (SpotlightIndex + 671960) [0x195dba0d8]
+                                              2   CITokenizerSetLocale + 292 (SpotlightIndex + 672684) [0x195dba3ac]
+                                                2   CoreNLP::getLocaleLanguage(__CFLocale const*) + 124 (CoreNLP + 15820) [0x189abfdcc]
+                                                  2   uloc_addLikelySubtags + 92 (libicucore.A.dylib + 143552) [0x1829930c0]
+                                                    2   ??? (libicucore.A.dylib + 143928) [0x182993238]
+                                                      2   ??? (libicucore.A.dylib + 147452) [0x182993ffc]
+                                                        1   ??? (libicucore.A.dylib + 149460) [0x1829947d4]
+                                                          1   ??? (libicucore.A.dylib + 150384) [0x182994b70]
+                                                            1   uloc_getScript + 100 (libicucore.A.dylib + 618912) [0x182a071a0]
+                                                              1   icu::CharString::append(char, UErrorCode&) + 4 (libicucore.A.dylib + 38944) [0x182979820]
+                                                        1   ??? (libicucore.A.dylib + 149148) [0x18299469c]
+                                                          1   ??? (libicucore.A.dylib + 149592) [0x182994858]
+                                                            1   ??? (libicucore.A.dylib + 762964) [0x182a2a454]
+                                                              1   std::__1::mutex::unlock() + 16 (libc++.1.dylib + 48368) [0x180441cf0]
+                                                                1   pthread_mutex_unlock + 12 (libsystem_pthread.dylib + 7416) [0x1804ebcf8]
+                                  1   si_writeBackAndIndexWithLiveQueryToggle + 4240 (SpotlightIndex + 647768) [0x195db4258]
+                                    1   si_writeBackDBO + 200 (SpotlightIndex + 681720) [0x195dbc6f8]
+                                      1   db2_store_obj + 256 (SpotlightIndex + 724180) [0x195dc6cd4]
+                                        1   _insert_obj + 72 (SpotlightIndex + 686752) [0x195dbdaa0]
+                                          1   serializeDBO + 2420 (SpotlightIndex + 690084) [0x195dbe7a4]
+                                            1   getUniquedDBFValue + 436 (SpotlightIndex + 657816) [0x195db6998]
+                                              1   _get_id_for_string + 476 (SpotlightIndex + 203180) [0x195d479ac]
+                                                1   _data_map_get_bucket_entry + 0 (SpotlightIndex + 1345236) [0x195e5e6d4]
+                                2   _setAttributes + 4112 (SpotlightIndex + 1108648) [0x195e24aa8]
+                                  2   -[__NSDictionaryI __apply:context:] + 120 (CoreFoundation + 358948) [0x18058fa24]
+                                    1   preProcess + 836 (SpotlightIndex + 620156) [0x195dad67c]
+                                      1   CFStringGetLength + 64 (CoreFoundation + 38820) [0x1805417a4]
+                                    1   CFArrayGetTypeID + 0 (CoreFoundation + 261464) [0x180577d58]
+                                1   _setAttributes + 6384 (SpotlightIndex + 1110920) [0x195e25388]
+                                  1   setDatastoreAttributes + 168 (SpotlightIndex + 1121680) [0x195e27d90]
+                                    1   -[__NSDictionaryI __apply:context:] + 120 (CoreFoundation + 358948) [0x18058fa24]
+                                      1   setAttributeApplier + 248 (SpotlightIndex + 1127044) [0x195e29284]
+                                        1   setOneFieldLocked + 116 (SpotlightIndex + 635308) [0x195db11ac]
+                                1   _setAttributes + 6220 (SpotlightIndex + 1110756) [0x195e252e4]
+                                  1   setDatastoreLocalizedAttributes + 228 (SpotlightIndex + 1007692) [0x195e0c04c]
+                                    1   setOneLocalizedFieldWithFlags + 516 (SpotlightIndex + 1005320) [0x195e0b708]
+                                      1   _qsort + 1340 (libsystem_c.dylib + 442252) [0x180420f8c]
+                                        1   __setOneLocalizedFieldWithFlags_block_invoke + 28 (SpotlightIndex + 1007240) [0x195e0be88]
+                                          1   -[NSTaggedPointerString _fastCharacterContents] + 0 (CoreFoundation + 71452) [0x18054971c]
+                                1   _setAttributes + 1276 (SpotlightIndex + 1105812) [0x195e23f94]
+                                  1   pthread_setspecific + 48 (libsystem_pthread.dylib + 8400) [0x1804ec0d0]
+                              7   setAttributesBulk + 252 (SpotlightIndex + 1104032) [0x195e238a0]
+                                7   _dispatch_apply_with_attr_f + 1152 (libdispatch.dylib + 97500) [0x180346cdc]
+                                  7   _dispatch_apply_invoke_and_wait + 224 (libdispatch.dylib + 100696) [0x180347958]
+                                    7   _dispatch_client_callout2 + 20 (libdispatch.dylib + 15340) [0x180332bec]
+                                      7   __setAttributesBulk_block_invoke.3500 + 460 (SpotlightIndex + 1116856) [0x195e26ab8]
+                                        6   _setAttributes + 7980 (SpotlightIndex + 1112516) [0x195e259c4]
+                                          4   si_writeBackAndIndexWithLiveQueryToggle + 4068 (SpotlightIndex + 647596) [0x195db41ac]
+                                            4   _CIUpdateContent + 796 (SpotlightIndex + 607672) [0x195daa5b8]
+                                              4   setDocumentAttributes + 5380 (SpotlightIndex + 614024) [0x195dabe88]
+                                                4   TermUpdateSetAddDocumentInfo + 412 (SpotlightIndex + 667860) [0x195db90d4]
+                                                  2   termUpdateSetProcessFields + 1504 (SpotlightIndex + 669772) [0x195db984c]
+                                                    1   invertValueToUpdateSet + 1860 (SpotlightIndex + 672032) [0x195dba120]
+                                                      1   _CITokenizerGetTokens + 3924 (SpotlightIndex + 2348820) [0x195f53714]
+                                                        1   _NLStringTokenizerGetSubTokensOfCompound + 196 (CoreNLP + 75160) [0x189ace598]
+                                                          1   CoreNLP::EnglishCompoundWord::enumerateSubTokensOfTokenWithCharacterType(CFRange const*, unsigned long, void (NLToken*, bool*) block_pointer) + 640 (CoreNLP + 76716) [0x189acebac]
+                                                    1   invertValueToUpdateSet + 1788 (SpotlightIndex + 671960) [0x195dba0d8]
+                                                      1   CITokenizerSetLocale + 292 (SpotlightIndex + 672684) [0x195dba3ac]
+                                                        1   CoreNLP::getLocaleLanguage(__CFLocale const*) + 124 (CoreNLP + 15820) [0x189abfdcc]
+                                                          1   uloc_addLikelySubtags + 92 (libicucore.A.dylib + 143552) [0x1829930c0]
+                                                            1   ??? (libicucore.A.dylib + 143928) [0x182993238]
+                                                              1   ??? (libicucore.A.dylib + 147452) [0x182993ffc]
+                                                                1   ??? (libicucore.A.dylib + 148960) [0x1829945e0]
+                                                                  1   ??? (libicucore.A.dylib + 149812) [0x182994934]
+                                                                    1   ures_getStringByKey + 136 (libicucore.A.dylib + 760860) [0x182a29c1c]
+                                                                      1   res_getTableItemByKey + 168 (libicucore.A.dylib + 776020) [0x182a2d754]
+                                                                        1   ??? (libicucore.A.dylib + 776240) [0x182a2d830]
+                                                                          1   <Effective Thread QoS Background, Requested Thread QoS Background, Override Thread QoS Unspecified>
+                                                  1   DYLD-STUB$$CFGetTypeID + 8 (SpotlightIndex + 2691784) [0x195fa72c8]
+                                                    1   <Override Thread QoS Unspecified>
+                                                  1   termUpdateSetProcessFields + 324 (SpotlightIndex + 668592) [0x195db93b0]
+                                                    1   invertValueToUpdateSet + 1860 (SpotlightIndex + 672032) [0x195dba120]
+                                                      1   _CITokenizerGetTokens + 3160 (SpotlightIndex + 2348056) [0x195f53418]
+                                                        1   _getPropertySubTokenCallback + 20 (SpotlightIndex + 1671440) [0x195eae110]
+                                                          1   getPropertyTokenCallback + 316 (SpotlightIndex + 673944) [0x195dba898]
+                                                            1   pushPropertyTerm + 344 (SpotlightIndex + 1666764) [0x195eacecc]
+                                                              1   TermTrieResolve + 4 (SpotlightIndex + 132940) [0x195d3674c]
+                                                                1   <Effective Thread QoS Background, Requested Thread QoS Background, Override Thread QoS Unspecified>
+                                          1   si_writeBackAndIndexWithLiveQueryToggle + 1116 (SpotlightIndex + 644644) [0x195db3624]
+                                            1   decodeDBOToDictionary + 460 (SpotlightIndex + 652488) [0x195db54c8]
+                                              1   _decodeSDBField + 1724 (SpotlightIndex + 655840) [0x195db61e0]
+                                                1   get_string_and_length_for_id.11683 + 452 (SpotlightIndex + 2474292) [0x195f72134]
+                                                  1   _data_map_unlock + 152 (SpotlightIndex + 1319756) [0x195e5834c]
+                                                    1   db_rwlock_wakeup + 80 (SpotlightIndex + 181472) [0x195d424e0]
+                                          1   si_writeBackAndIndexWithLiveQueryToggle + 876 (SpotlightIndex + 644404) [0x195db3534]
+                                            1   computePath + 2064 (SpotlightIndex + 661896) [0x195db7988]
+                                              1   psid_lookupPath + 104 (SpotlightIndex + 2008200) [0x195f00488]
+                                                1   SIPersistentIDStoreGetOidPathForOid + 104 (SpotlightIndex + 2186172) [0x195f2bbbc]
+                                                  1   si_remotepsid_oid_to_oid_path + 188 (SpotlightIndex + 804480) [0x195dda680]
+                                                    1   si_remote_ctx_connection_send_message + 224 (SpotlightIndex + 261724) [0x195d55e5c]
+                                                      1   xpc_connection_send_message_with_reply_sync + 488 (libxpc.dylib + 49200) [0x180242030]
+                                                        1   _xpc_connection_unpack_message + 128 (libxpc.dylib + 50788) [0x180242664]
+                                                          1   xpc_receive_mach_msg + 196 (libxpc.dylib + 30736) [0x18023d810]
+                                                            1   _xpc_payload_create_from_mach_msg + 40 (libxpc.dylib + 31148) [0x18023d9ac]
+                                                              1   objc_opt_class + 0 (libobjc.A.dylib + 105732) [0x18038fd04]
+                                        1   _setAttributes + 6400 (SpotlightIndex + 1110936) [0x195e25398]
+                                          1   free + 12 (libsystem_malloc.dylib + 7616) [0x180305dc0]
+                            2   flush_runLoop + 148 (SpotlightIndex + 602048) [0x195da8fc0]
+                              1   _flushCache + 540 (SpotlightIndex + 948004) [0x195dfd724]
+                                1   _CIFlushCache + 640 (SpotlightIndex + 950816) [0x195dfe220]
+                                  1   index_FlushCache + 992 (SpotlightIndex + 502828) [0x195d90c2c]
+                                    1   bt_mergeSet + 5184 (SpotlightIndex + 510628) [0x195d92aa4]
+                                      1   <Effective Thread QoS Background, Requested Thread QoS Background, Override Thread QoS Unspecified>
+                              1   syncIndex + 2124 (SpotlightIndex + 604380) [0x195da98dc]
+                                1   _ContentIndexSyncIndexBulk + 228 (SpotlightIndex + 494440) [0x195d8eb68]
+                                  1   _CISyncContextSync + 500 (SpotlightIndex + 498472) [0x195d8fb28]
+                                    1   indexPrepareForSyncBulk + 996 (SpotlightIndex + 500680) [0x195d903c8]
+                                      1   index_FlushCache + 992 (SpotlightIndex + 502828) [0x195d90c2c]
+                                        1   bt_mergeSet + 1428 (SpotlightIndex + 506872) [0x195d91bf8]
+                                          1   bt_getOffset + 448 (SpotlightIndex + 725220) [0x195dc70e4]
+                                            1   <Effective Thread QoS Background, Requested Thread QoS Background, Override Thread QoS Unspecified>
+        14  _dispatch_root_queue_drain + 684 (libdispatch.dylib + 87100) [0x18034443c]
+          14  _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x180332bac]
+            14  _dispatch_apply_invoke + 224 (libdispatch.dylib + 95172) [0x1803463c4]
+              14  _dispatch_client_callout2 + 20 (libdispatch.dylib + 15340) [0x180332bec]
+                13  __setAttributesBulk_block_invoke.3500 + 460 (SpotlightIndex + 1116856) [0x195e26ab8]
+                  7   _setAttributes + 7980 (SpotlightIndex + 1112516) [0x195e259c4]
+                    6   si_writeBackAndIndexWithLiveQueryToggle + 4068 (SpotlightIndex + 647596) [0x195db41ac]
+                      6   _CIUpdateContent + 796 (SpotlightIndex + 607672) [0x195daa5b8]
+                        5   setDocumentAttributes + 5380 (SpotlightIndex + 614024) [0x195dabe88]
+                          4   TermUpdateSetAddDocumentInfo + 412 (SpotlightIndex + 667860) [0x195db90d4]
+                            4   termUpdateSetProcessFields + 1504 (SpotlightIndex + 669772) [0x195db984c]
+                              2   invertValueToUpdateSet + 1860 (SpotlightIndex + 672032) [0x195dba120]
+                                1   _CITokenizerGetTokens + 3924 (SpotlightIndex + 2348820) [0x195f53714]
+                                  1   _NLStringTokenizerGetSubTokensOfCompound + 196 (CoreNLP + 75160) [0x189ace598]
+                                    1   CoreNLP::EnglishCompoundWord::enumerateSubTokensOfToken(CFRange const*, unsigned long, bool, void (NLToken*, bool*) block_pointer) + 52 (CoreNLP + 75572) [0x189ace734]
+                                      1   CoreNLP::EnglishCompoundWord::enumerateSubTokensOfTokenFromTrie(CFRange const*, unsigned long, void (NLToken*, bool*) block_pointer) + 248 (CoreNLP + 75884) [0x189ace86c]
+                                        1   <Effective Thread QoS Background, Requested Thread QoS Background, Override Thread QoS Unspecified>
+                                1   _CITokenizerGetTokens + 248 (SpotlightIndex + 2345144) [0x195f528b8]
+                                  1   CITokenizerStateInit + 148 (SpotlightIndex + 672888) [0x195dba478]
+                                    1   -[NSTaggedPointerString getCharacters:range:] + 264 (CoreFoundation + 71732) [0x180549834]
+                                      1   <Effective Thread QoS Background, Requested Thread QoS Background, Override Thread QoS Unspecified>
+                              2   invertValueToUpdateSet + 1788 (SpotlightIndex + 671960) [0x195dba0d8]
+                                1   CITokenizerSetLocale + 292 (SpotlightIndex + 672684) [0x195dba3ac]
+                                  1   CoreNLP::getLocaleLanguage(__CFLocale const*) + 96 (CoreNLP + 15792) [0x189abfdb0]
+                                    1   CFStringGetCString + 56 (CoreFoundation + 39352) [0x1805419b8]
+                                      1   <Effective Thread QoS Background, Requested Thread QoS Background, Override Thread QoS Unspecified>
+                                1   CITokenizerSetLocale + 248 (SpotlightIndex + 672640) [0x195dba380]
+                                  1   CFLocaleCreate + 88 (CoreFoundation + 276352) [0x18057b780]
+                                    1   DYLD-STUB$$bsearch + 8 (CoreFoundation + 1976568) [0x18071a8f8]
+                                      1   <Effective Thread QoS Background, Requested Thread QoS Background, Override Thread QoS Unspecified>
+                          1   TermUpdateSetAddDocumentInfo + 476 (SpotlightIndex + 667924) [0x195db9114]
+                            1   CIReleaseIndexingTokenizer + 72 (SpotlightIndex + 681320) [0x195dbc568]
+                              1   CoreNLP::WordDispatchTagger::setString(__CFString const*, CFRange, NLLanguageID) + 464 (CoreNLP + 36348) [0x189ac4dfc]
+                                1   CoreNLP::DefaultSubWordTagger::setString(__CFString const*, CFRange) + 92 (CoreNLP + 40020) [0x189ac5c54]
+                                  1   CoreNLP::ICUTextBreakWithCustomizedRules::setString(__CFString const*, CFRange) + 24 (CoreNLP + 69348) [0x189accee4]
+                                    1   CoreNLP::ICUTextBreak::setString(__CFString const*, CFRange) + 56 (CoreNLP + 40196) [0x189ac5d04]
+                                      1   _CFRelease + 1180 (CoreFoundation + 1432376) [0x180695b38]
+                                        1   free_tiny + 396 (libsystem_malloc.dylib + 25592) [0x18030a3f8]
+                                          1   <Override Thread QoS Unspecified>
+                        1   setDocumentAttributes + 5488 (SpotlightIndex + 614132) [0x195dabef4]
+                          1   term_fat_level_iterate_helper + 388 (SpotlightIndex + 2164940) [0x195f268cc]
+                            1   <Override Thread QoS Unspecified>
+                    1   si_writeBackAndIndexWithLiveQueryToggle + 496 (SpotlightIndex + 644024) [0x195db33b8]
+                      1   si_populategroup + 104 (SpotlightIndex + 2011160) [0x195f01018]
+                        1   si_getGroupFromDBO + 368 (SpotlightIndex + 2002060) [0x195efec8c]
+                          1   CFDictionaryGetValueIfPresent + 196 (CoreFoundation + 121416) [0x180555a48]
+                            1   CFBasicHashFindBucket + 464 (CoreFoundation + 34732) [0x1805407ac]
+                              1   <Effective Thread QoS Background, Requested Thread QoS Background, Override Thread QoS Unspecified>
+                  3   _setAttributes + 6220 (SpotlightIndex + 1110756) [0x195e252e4]
+                    3   setDatastoreLocalizedAttributes + 228 (SpotlightIndex + 1007692) [0x195e0c04c]
+                      2   setOneLocalizedFieldWithFlags + 1320 (SpotlightIndex + 1006124) [0x195e0ba2c]
+                        1   db2_create_localized_field_data + 324 (SpotlightIndex + 632824) [0x195db07f8]
+                          1   db2_add_field_with_cache + 912 (SpotlightIndex + 2515344) [0x195f7c190]
+                            1   _data_map_unlock + 56 (SpotlightIndex + 1319660) [0x195e582ec]
+                              1   _pthread_mutex_firstfit_lock_slow + 240 (libsystem_pthread.dylib + 7320) [0x1804ebc98]
+                                1   __psynch_mutexwait + 8 (libsystem_kernel.dylib + 17856) [0x1804b85c0]
+                                  1   <Kernel mode, Override Thread QoS Unspecified>
+                        1   db_add_localized_string_field + 100 (SpotlightIndex + 632028) [0x195db04dc]
+                          1   db2_get_field_id + 236 (SpotlightIndex + 632480) [0x195db06a0]
+                            1   _get_id_for_string + 440 (SpotlightIndex + 203144) [0x195d47988]
+                              1   data_map_id_get_with_key + 924 (SpotlightIndex + 1364332) [0x195e6316c]
+                                1   _data_map_unlock + 56 (SpotlightIndex + 1319660) [0x195e582ec]
+                                  1   _pthread_mutex_firstfit_lock_slow + 240 (libsystem_pthread.dylib + 7320) [0x1804ebc98]
+                                    1   __psynch_mutexwait + 8 (libsystem_kernel.dylib + 17856) [0x1804b85c0]
+                                      1   <Kernel mode, Override Thread QoS Unspecified>
+                      1   setOneLocalizedFieldWithFlags + 516 (SpotlightIndex + 1005320) [0x195e0b708]
+                        1   _qsort + 1028 (libsystem_c.dylib + 441940) [0x180420e54]
+                          1   __setOneLocalizedFieldWithFlags_block_invoke + 28 (SpotlightIndex + 1007240) [0x195e0be88]
+                            1   objc_msgSend + 64 (libobjc.A.dylib + 25408) [0x18037c340]
+                              1   <Override Thread QoS Unspecified>
+                  3   _setAttributes + 4112 (SpotlightIndex + 1108648) [0x195e24aa8]
+                    3   -[__NSDictionaryI __apply:context:] + 120 (CoreFoundation + 358948) [0x18058fa24]
+                      1   preProcess + 5168 (SpotlightIndex + 624488) [0x195dae768]
+                        1   CFStringCompareWithOptionsAndLocale + 292 (CoreFoundation + 103900) [0x1805515dc]
+                          1   _CFStringGetCStringPtrInternal + 448 (CoreFoundation + 62908) [0x1805475bc]
+                            1   <Override Thread QoS Unspecified>
+                      1   preProcess + 564 (SpotlightIndex + 619884) [0x195dad56c]
+                        1   CFStringCompareWithOptionsAndLocale + 268 (CoreFoundation + 103876) [0x1805515c4]
+                          1   _CFStringGetCStringPtrInternal + 44 (CoreFoundation + 62504) [0x180547428]
+                            1   <Override Thread QoS Unspecified>
+                      1   preProcess + 80 (SpotlightIndex + 619400) [0x195dad388]
+                        1   CFGetTypeID + 120 (CoreFoundation + 142596) [0x18055ad04]
+                          1   <Override Thread QoS Unspecified>
+                1   __setAttributesBulk_block_invoke.3500 + 52 (SpotlightIndex + 1116448) [0x195e26920]
+                  1   pthread_getspecific + 0 (libsystem_pthread.dylib + 8340) [0x1804ec094]
+                    1   <Override Thread QoS Unspecified>
+    1   _pthread_wqthread + 288 (libsystem_pthread.dylib + 13060) [0x1804ed304]
+      1   _dispatch_workloop_worker_thread + 656 (libdispatch.dylib + 91912) [0x180345708]
+        1   _dispatch_lane_invoke + 392 (libdispatch.dylib + 48804) [0x18033aea4]
+          1   _dispatch_lane_serial_drain + 672 (libdispatch.dylib + 45872) [0x18033a330]
+            1   _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x180332bac]
+              1   _dispatch_call_block_and_release + 32 (libdispatch.dylib + 7776) [0x180330e60]
+                1   ??? (mds_stores + 202620) [0x100b4577c]
+                  1   ??? (mds_stores + 237920) [0x100b4e160]
+                    1   mach_msg_trap + 8 (libsystem_kernel.dylib + 6484) [0x1804b5954]
+                      1   <Kernel mode, Override Thread QoS Unspecified>
+  1   start_wqthread + 0 (libsystem_pthread.dylib + 8208) [0x1804ec010]
+    1   <Kernel mode, Effective Thread QoS Background, Requested Thread QoS Background, Override Thread QoS Unspecified>
+
+  Binary Images:
+           0x100b14000 -        0x100b6ffff  mds_stores (2183.14)                       <1C58D9DD-2A5E-37FE-B49A-18926E6EB979>  /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores
+           0x180236000 -        0x18026ffff  libxpc.dylib (2235.80.3)                   <FD3E0E8D-4618-3CE5-A24A-5639BE86B979>  /usr/lib/system/libxpc.dylib
+           0x180304000 -        0x18032efff  libsystem_malloc.dylib (374.60.3)          <961751ED-F18B-30D4-8025-AA12CA23197B>  /usr/lib/system/libsystem_malloc.dylib
+           0x18032f000 -        0x180375fff  libdispatch.dylib (1324.60.3)              <93E1DCFC-EF56-3113-8E7C-1BA85266A93B>  /usr/lib/system/libdispatch.dylib
+           0x180376000 -        0x1803b1fff  libobjc.A.dylib (838.1)                    <2EB32E1D-90CB-3256-8681-9034085A06A6>  /usr/lib/libobjc.A.dylib
+           0x1803b5000 -        0x180435fff  libsystem_c.dylib (1506.40.4)              <0DBC8B95-0037-3725-A769-0C772C293488>  /usr/lib/system/libsystem_c.dylib
+           0x180436000 -        0x180499fff  libc++.1.dylib (1200.3)                    <0EB3A986-B1BC-3F18-B7CC-51E2E5E00DC3>  /usr/lib/libc++.1.dylib
+           0x1804b4000 -        0x1804e9fff  libsystem_kernel.dylib (8019.80.24)        <384945E6-DD71-37E5-9A3D-84FFF14A1E60>  /usr/lib/system/libsystem_kernel.dylib
+           0x1804ea000 -        0x1804f6fff  libsystem_pthread.dylib (485.60.2)         <F7B2ECCF-E6F1-3109-AE81-9028C0B8332A>  /usr/lib/system/libsystem_pthread.dylib
+           0x180504000 -        0x18050bfff  libsystem_platform.dylib (273.40.1)        <49CF1536-27E5-3A34-9724-D75552CBAB56>  /usr/lib/system/libsystem_platform.dylib
+           0x180538000 -        0x180a7bfff  com.apple.CoreFoundation 6.9 (1856.107)    <35473DE6-C433-332C-AEE0-013FD5F6D4FD>  /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
+           0x182970000 -        0x182c1afff  libicucore.A.dylib (68232.1)               <4A6B9E85-17A9-3875-ACCD-0A73FE98642E>  /usr/lib/libicucore.A.dylib
+           0x189abc000 -        0x189baafff  com.apple.CoreNLP 1.0 (273)                <4F76297A-01C3-357E-B844-C1C66C2B7A7A>  /System/Library/PrivateFrameworks/CoreNLP.framework/Versions/A/CoreNLP
+           0x18b197000 -        0x18b198fff  libThaiTokenizer.dylib (10)                <E541E7AC-28BB-35DB-B592-81D9A78914CC>  /usr/lib/libThaiTokenizer.dylib
+           0x195d16000 -        0x195fdffff  com.apple.spotlight.index 10.7.0 (2183.14) <9F419630-1FD4-3298-B1F5-9746E3368EF1>  /System/Library/PrivateFrameworks/SpotlightIndex.framework/Versions/A/SpotlightIndex
+
+
+Powerstats for:   mdworker_shared
+UUID:             8A2E621C-60EC-37E1-B173-95070E576CCA
+Path:             /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared
+Codesigning ID:   com.apple.mdworker_shared
+Architecture:     arm64
+Start time:       2022-02-28 23:41:10.426 -0600
+End time:         2022-02-28 23:42:47.425 -0600
+Num samples:      12 (15%)
+Primary state:    6 samples Non-Frontmost App, Non-Suppressed, User mode, Effective Thread QoS Maintenance, Requested Thread QoS Maintenance, Override Thread QoS Unspecified
+User Activity:    0 samples Idle, 12 samples Active
+Power Source:     12 samples on Battery, 0 samples on AC
+  10  thread_start + 8 (libsystem_pthread.dylib + 8228) [0x1804ec024]
+    10  _pthread_start + 148 (libsystem_pthread.dylib + 29248) [0x1804f1240]
+      9   ??? (mdworker_shared + 60624) [0x100206cd0]
+        9   ??? (mdworker_shared + 32312) [0x1001ffe38]
+          7   ??? (mdworker_shared + 24188) [0x1001fde7c]
+            7   ??? (mdworker_shared + 17824) [0x1001fc5a0]
+              7   ??? (mdworker_shared + 114224) [0x100213e30]
+                7   ??? (mdworker_shared + 113036) [0x10021398c]
+                  7   _NodeSizing + 60 (DesktopServicesPriv + 624136) [0x1842a2608]
+                    4   _NodeSizingV2 + 940 (DesktopServicesPriv + 625140) [0x1842a29f4]
+                      4   TOperationSizer::ComputeSize() + 28 (DesktopServicesPriv + 174676) [0x184234a54]
+                        4   TOperationSizer::ComputeSizeWithTimeout(unsigned long long) + 408 (DesktopServicesPriv + 1272016) [0x1843408d0]
+                          4   TOperationSizer::ResumeSizing(unsigned long long) + 148 (DesktopServicesPriv + 1272396) [0x184340a4c]
+                            4   TDeepCFURLIterator::Next(std::__1::shared_ptr<TCFURLInfo>&, int&, int&, bool&, bool&, std::__1::shared_ptr<TCFURLInfo>&, bool&, std::__1::shared_ptr<TCFURLInfo>&) + 80 (DesktopServicesPriv + 940324) [0x1842ef924]
+                              4   TDeepCFURLIterator::NextInternal(std::__1::shared_ptr<TCFURLInfo>&, int&, int&, bool&, bool&, std::__1::shared_ptr<TCFURLInfo>&, bool&, std::__1::shared_ptr<TCFURLInfo>&) + 180 (DesktopServicesPriv + 940896) [0x1842efb60]
+                                4   TCFURLIterator::Next(std::__1::shared_ptr<TCFURLInfo>&) + 556 (DesktopServicesPriv + 910628) [0x1842e8524]
+                                  3   TCFURLIterator::NextRaw(std::__1::shared_ptr<TCFURLInfo>&) + 48 (DesktopServicesPriv + 934520) [0x1842ee278]
+                                    2   _URLEnumeratorGetNextURL + 140 (CoreServicesInternal + 47816) [0x182f29ac8]
+                                      2   _GetDirectoryURLs(_CFURLEnumerator*) + 1164 (CoreServicesInternal + 53740) [0x182f2b1ec]
+                                        1   DirEnumRead + 356 (CoreServicesInternal + 54328) [0x182f2b438]
+                                          1   getattrlistbulk + 8 (libsystem_kernel.dylib + 20584) [0x1804b9068]
+                                            1   <Kernel mode>
+                                        1   fstat + 8 (libsystem_kernel.dylib + 185552) [0x1804e14d0]
+                                          1   <Kernel mode>
+                                    1   _URLEnumeratorGetNextURL + 96 (CoreServicesInternal + 47772) [0x182f29a9c]
+                                      1   _InitalizeDirectoryEnumerator(_CFURLEnumerator*) + 1396 (CoreServicesInternal + 49540) [0x182f2a184]
+                                        1   DirEnumOpen + 948 (CoreServicesInternal + 51480) [0x182f2a918]
+                                          1   __getattrlist + 8 (libsystem_kernel.dylib + 9084) [0x1804b637c]
+                                  1   TCFURLIterator::NextRaw(std::__1::shared_ptr<TCFURLInfo>&) + 108 (DesktopServicesPriv + 934580) [0x1842ee2b4]
+                                    1   TCFURLInfo::Initialize(__CFURL const*, bool, bool) + 208 (DesktopServicesPriv + 10668) [0x18420c9ac]
+                                      1   TCFURLInfo::FetchProperties(bool) + 356 (DesktopServicesPriv + 11172) [0x18420cba4]
+                                        1   _CFURLGetResourcePropertyFlags + 140 (CoreFoundation + 970672) [0x180624fb0]
+                                          1   ___chkstk_darwin + 0 (libsystem_pthread.dylib + 8232) [0x1804ec028]
+                    3   _NodeSizingV2 + 152 (DesktopServicesPriv + 624352) [0x1842a26e0]
+                      3   TCFURLInfo::GetVolumeInfoRecord(VolumeInfoRecord&) const + 64 (DesktopServicesPriv + 172536) [0x1842341f8]
+                        2   TCFURLInfo::GetVolumeInfoRecord(__CFURL const*, VolumeInfoRecord&) + 476 (DesktopServicesPriv + 50980) [0x184216724]
+                          2   APFSVolumeRole + 156 (APFS + 3708) [0x18b7f1e7c]
+                            2   get_volume_io_object + 20 (APFS + 295136) [0x18b8390e0]
+                              2   IOServiceGetMatchingService + 212 (IOKit + 9420) [0x182f9b4cc]
+                                2   io_service_get_matching_service_bin + 200 (IOKit + 11884) [0x182f9be6c]
+                                  2   mach_msg_trap + 8 (libsystem_kernel.dylib + 6484) [0x1804b5954]
+                                    1   <Kernel mode>
+                        1   TCFURLInfo::GetVolumeInfoRecord(__CFURL const*, VolumeInfoRecord&) + 556 (DesktopServicesPriv + 51060) [0x184216774]
+                          1   CFURLCopyResourcePropertyForKey + 140 (CoreFoundation + 354972) [0x18058ea9c]
+                            1   _FSURLCopyResourcePropertyForKeyInternal(__CFURL const*, __CFString const*, void*, void*, __CFError**, unsigned char) + 232 (CoreServicesInternal + 4296) [0x182f1f0c8]
+                              1   prepareValuesForBitmap(__CFURL const*, __FileCache*, _FilePropertyBitmap*, __CFError**) + 412 (CoreServicesInternal + 16496) [0x182f22070]
+                                1   volumePropertyProviderPrepareValues(__CFURL const*, __FileCache*, __CFString const* const*, void const**, long, void const*, __CFError**) + 1204 (CoreServicesInternal + 64448) [0x182f2dbc0]
+                                  1   __getattrlist + 8 (libsystem_kernel.dylib + 9084) [0x1804b637c]
+                                    1   <Kernel mode>
+          1   ??? (mdworker_shared + 25400) [0x1001fe338]
+            1   ??? (mdworker_shared + 19008) [0x1001fca40]
+              1   CFPlugInInstanceCreate + 168 (CoreFoundation + 1055380) [0x180639a94]
+                1   CFBundleGetFunctionPointerForName + 60 (CoreFoundation + 982700) [0x180627eac]
+                  1   _CFBundleLoadExecutableAndReturnError + 572 (CoreFoundation + 1225152) [0x1806631c0]
+                    1   _CFBundleDlfcnLoadBundle + 156 (CoreFoundation + 714376) [0x1805e6688]
+                      1   dyld4::APIs::dlopen_from(char const*, int, void*) + 464 (dyld + 153348) [0x104ad9704]
+                        1   dyld4::RuntimeState::withLoadersWriteLock(void () block_pointer) + 100 (dyld + 43556) [0x104abea24]
+                          1   invocation function for block in dyld4::APIs::dlopen_from(char const*, int, void*) + 828 (dyld + 154680) [0x104ad9c38]
+                            1   dyld4::JustInTimeLoader::applyFixups(Diagnostics&, dyld4::RuntimeState&, dyld4::DyldCacheDataConstLazyScopedWriter&, bool) const + 548 (dyld + 102660) [0x104acd104]
+                              1   dyld4::JustInTimeLoader::forEachBindTarget(Diagnostics&, dyld4::RuntimeState&, void (unsigned int, unsigned int, dyld4::Loader::ResolvedSymbol const&) block_pointer, bool, void (dyld4::Loader::ResolvedSymbol const&, bool&) block_pointer, void (dyld4::Loader::ResolvedSymbol const&, bool&) block_pointer) const + 236 (dyld + 103624) [0x104acd4c8]
+                                1   dyld3::MachOAnalyzer::forEachBindTarget_ChainedFixups(Diagnostics&, void (dyld3::MachOAnalyzer::BindTargetInfo const&, bool&) block_pointer) const + 144 (dyld + 268872) [0x104af5a48]
+                                  1   dyld3::MachOAnalyzer::forEachChainedFixupTarget(Diagnostics&, void (int, char const*, unsigned long long, bool, bool&) block_pointer) const + 608 (dyld + 253888) [0x104af1fc0]
+                                    1   invocation function for block in dyld3::MachOAnalyzer::forEachBindTarget_ChainedFixups(Diagnostics&, void (dyld3::MachOAnalyzer::BindTargetInfo const&, bool&) block_pointer) const + 72 (dyld + 274552) [0x104af7078]
+                                      1   invocation function for block in dyld4::JustInTimeLoader::forEachBindTarget(Diagnostics&, dyld4::RuntimeState&, void (unsigned int, unsigned int, dyld4::Loader::ResolvedSymbol const&) block_pointer, bool, void (dyld4::Loader::ResolvedSymbol const&, bool&) block_pointer, void (dyld4::Loader::ResolvedSymbol const&, bool&) block_pointer) const + 100 (dyld + 106068) [0x104acde54]
+                                        1   dyld4::Loader::resolveSymbol(Diagnostics&, dyld4::RuntimeState&, int, char const*, bool, bool, void (unsigned int, unsigned int, dyld4::Loader::ResolvedSymbol const&) block_pointer, bool) const + 884 (dyld + 91832) [0x104aca6b8]
+                                          1   dyld4::Loader::hasExportedSymbol(Diagnostics&, dyld4::RuntimeState&, char const*, dyld4::Loader::ExportedSymbolMode, dyld4::Loader::ResolvedSymbol*, dyld3::Array<dyld4::Loader const*>*) const + 304 (dyld + 92944) [0x104acab10]
+                                            1   dyld3::MachOLoaded::trieWalk(Diagnostics&, unsigned char const*, unsigned char const*, char const*) + 228 (dyld + 10928) [0x104ab6ab0]
+          1   ??? (mdworker_shared + 22784) [0x1001fd900]
+            1   __open + 8 (libsystem_kernel.dylib + 9172) [0x1804b63d4]
+      1   ??? (mdworker_shared + 55808) [0x100205a00]
+        1   _MDPlistContainerCopyObjectAtKeyPath + 64 (MetadataUtilities + 49552) [0x186fac190]
+          1   __MDPlistContainerCopyObject + 640 (MetadataUtilities + 71296) [0x186fb1680]
+            1   _MDPlistDictionaryIterate + 260 (MetadataUtilities + 50492) [0x186fac53c]
+              1   __copyCFDictionary_block_invoke + 112 (MetadataUtilities + 50668) [0x186fac5ec]
+                1   -[__NSDictionaryM __setObject:forKey:] + 568 (CoreFoundation + 138312) [0x180559c48]
+  1   start_wqthread + 8 (libsystem_pthread.dylib + 8216) [0x1804ec018]
+    1   _pthread_wqthread + 288 (libsystem_pthread.dylib + 13060) [0x1804ed304]
+      1   _dispatch_workloop_worker_thread + 656 (libdispatch.dylib + 91912) [0x180345708]
+        1   _dispatch_workloop_invoke + 788 (libdispatch.dylib + 52688) [0x18033bdd0]
+          1   _dispatch_lane_invoke + 444 (libdispatch.dylib + 48856) [0x18033aed8]
+            1   _dispatch_lane_serial_drain + 376 (libdispatch.dylib + 45576) [0x18033a208]
+              1   _dispatch_mach_invoke + 456 (libdispatch.dylib + 134328) [0x18034fcb8]
+                1   _dispatch_lane_serial_drain + 376 (libdispatch.dylib + 45576) [0x18033a208]
+                  1   _dispatch_mach_msg_invoke + 476 (libdispatch.dylib + 130920) [0x18034ef68]
+                    1   _dispatch_client_callout4 + 20 (libdispatch.dylib + 15468) [0x180332c6c]
+                      1   __53-[MDSMachSubsystem registerPort:withCallback:rights:]_block_invoke + 160 (SpotlightServerKit + 20248) [0x1969a8f18]
+                        1   mdsObjectMsgCallback + 148 (SpotlightServerKit + 21592) [0x1969a9458]
+                          1   mach_msg_dispatch + 200 (Metadata + 71980) [0x18700592c]
+                            1   ??? (mdworker_shared + 201304) [0x100229258]
+                              1   ??? (mdworker_shared + 53536) [0x100205120]
+                                1   ??? (mdworker_shared + 92768) [0x10020ea60]
+                                  1   sandbox_init_with_parameters + 488 (libsystem_sandbox.dylib + 6040) [0x189ab0798]
+                                    1   sandbox_compile_named + 80 (libsandbox.1.dylib + 5780) [0x18307f694]
+                                      1   sandbox_compile_file + 296 (libsandbox.1.dylib + 6160) [0x18307f810]
+                                        1   compile + 7160 (libsandbox.1.dylib + 13372) [0x18308143c]
+                                          1   sb_sbpl_parser_release + 64 (libsandbox.1.dylib + 97872) [0x183095e50]
+                                            1   scheme_deinit + 264 (libsandbox.1.dylib + 98280) [0x183095fe8]
+                                              1   gc + 652 (libsandbox.1.dylib + 48728) [0x183089e58]
+                                                1   free_tiny + 428 (libsystem_malloc.dylib + 25624) [0x18030a418]
+                                                  1   tiny_free_no_lock + 560 (libsystem_malloc.dylib + 26568) [0x18030a7c8]
+                                                    1   tiny_free_list_add_ptr + 140 (libsystem_malloc.dylib + 28448) [0x18030af20]
+                                                      1   <Effective Thread QoS Default, Requested Thread QoS Default>
+  1   start + 520 (dyld + 20724) [0x104ab90f4]
+    1   ??? (mdworker_shared + 48744) [0x100203e68]
+      1   ??? (mdworker_shared + 50192) [0x100204410]
+        1   _MDOptionGetValues + 204 (Metadata + 71152) [0x1870055f0]
+          1   _CFPreferencesGetAppBooleanValueWithContainer + 28 (CoreFoundation + 295936) [0x180580400]
+            1   _CFPreferencesCopyAppValueWithContainerAndConfiguration + 128 (CoreFoundation + 188972) [0x18056622c]
+              1   -[_CFXPreferences copyAppValueForKey:identifier:container:configurationURL:] + 168 (CoreFoundation + 189200) [0x180566310]
+                1   -[_CFXPreferences withSearchListForIdentifier:container:cloudConfigurationURL:perform:] + 392 (CoreFoundation + 1709532) [0x1806d95dc]
+                  1   __108-[_CFXPreferences(SearchListAdditions) withSearchListForIdentifier:container:cloudConfigurationURL:perform:]_block_invoke + 300 (CoreFoundation + 190716) [0x1805668fc]
+                    1   -[_CFXPreferences withSearchLists:] + 84 (CoreFoundation + 1709096) [0x1806d9428]
+                      1   __108-[_CFXPreferences(SearchListAdditions) withSearchListForIdentifier:container:cloudConfigurationURL:perform:]_block_invoke.192 + 880 (CoreFoundation + 1710544) [0x1806d99d0]
+                        1   -[CFPrefsSearchListSource addNamedVolatileSourceForIdentifier:] + 136 (CoreFoundation + 211468) [0x18056ba0c]
+                          1   -[_CFXPreferences withNamedVolatileSourceForIdentifier:perform:] + 268 (CoreFoundation + 1553720) [0x1806b3538]
+                            1   __81-[_CFXPreferences(SourceAdditions) withNamedVolatileSourceForIdentifier:perform:]_block_invoke + 36 (CoreFoundation + 184996) [0x1805652a4]
+                              1   -[__NSDictionaryM objectForKey:] + 92 (CoreFoundation + 141408) [0x18055a860]
+                                1   <Effective Thread QoS Default, Requested Thread QoS Default>
+
+  Binary Images:
+           0x1001f8000 -        0x100273fff  mdworker_shared (2183.14)                            <8A2E621C-60EC-37E1-B173-95070E576CCA>  /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared
+           0x104ab4000 -        0x104b2ffff  dyld (941.5)                                         <D21A73EA-79CD-36EB-8AC9-2C5CF5181A27>  /usr/lib/dyld
+           0x180304000 -        0x18032efff  libsystem_malloc.dylib (374.60.3)                    <961751ED-F18B-30D4-8025-AA12CA23197B>  /usr/lib/system/libsystem_malloc.dylib
+           0x18032f000 -        0x180375fff  libdispatch.dylib (1324.60.3)                        <93E1DCFC-EF56-3113-8E7C-1BA85266A93B>  /usr/lib/system/libdispatch.dylib
+           0x1804b4000 -        0x1804e9fff  libsystem_kernel.dylib (8019.80.24)                  <384945E6-DD71-37E5-9A3D-84FFF14A1E60>  /usr/lib/system/libsystem_kernel.dylib
+           0x1804ea000 -        0x1804f6fff  libsystem_pthread.dylib (485.60.2)                   <F7B2ECCF-E6F1-3109-AE81-9028C0B8332A>  /usr/lib/system/libsystem_pthread.dylib
+           0x180538000 -        0x180a7bfff  com.apple.CoreFoundation 6.9 (1856.107)              <35473DE6-C433-332C-AEE0-013FD5F6D4FD>  /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
+           0x182f1e000 -        0x182f5afff  com.apple.CoreServicesInternal 484 (484)             <B0C40221-F4C3-3F56-B25B-D484E5D3A8BB>  /System/Library/PrivateFrameworks/CoreServicesInternal.framework/Versions/A/CoreServicesInternal
+           0x182f99000 -        0x18306efff  com.apple.framework.IOKit 2.0.2 (1955.80.2)          <97E3D808-8BCB-3AC4-85AB-60FAA4CAE04F>  /System/Library/Frameworks/IOKit.framework/Versions/A/IOKit
+           0x18307e000 -        0x1830cefff  libsandbox.1.dylib (1656.60.9)                       <A3E51EB2-D5ED-3495-A5EB-8F9C2109E499>  /usr/lib/libsandbox.1.dylib
+           0x18420a000 -        0x184391fff  com.apple.desktopservices 2.1 (1438.1.1)             <C36A8FA8-9893-3269-AF49-59FA9CE1EA59>  /System/Library/PrivateFrameworks/DesktopServicesPriv.framework/Versions/A/DesktopServicesPriv
+           0x186fa0000 -        0x186ff3fff  com.apple.spotlight.metadata.utilities 1.0 (2183.14) <DF188BE2-5C3B-363A-859D-7E924A11016E>  /System/Library/PrivateFrameworks/MetadataUtilities.framework/Versions/A/MetadataUtilities
+           0x186ff4000 -        0x187090fff  com.apple.Metadata 10.7.0 (2183.14)                  <938610AC-F12F-33A0-B4EA-F01A695A5305>  /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Metadata
+           0x189aaf000 -        0x189ab3fff  libsystem_sandbox.dylib (1656.60.9)                  <2FF6F533-7444-3D58-A9C8-133E4DBE98BF>  /usr/lib/system/libsystem_sandbox.dylib
+           0x18b7f1000 -        0x18b856fff  com.apple.APFS 1933.80.3 (1933.80.3)                 <7BD50005-C9E5-33FB-97F6-36B5D5CC49D7>  /System/Library/PrivateFrameworks/APFS.framework/Versions/A/APFS
+           0x1969a4000 -        0x1969b7fff  com.apple.metadata.SpotlightServerKit 1.0 (2183.14)  <7FD1ACD8-26A7-3F97-9AB5-849F1B7791B8>  /System/Library/PrivateFrameworks/SpotlightServerKit.framework/Versions/A/SpotlightServerKit
+
+
+Powerstats for:   mds
+UUID:             2417353E-B507-3E03-8EB1-D28237843A41
+Path:             /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds
+Codesigning ID:   com.apple.mds
+Architecture:     arm64e
+Start time:       2022-02-28 23:41:00.951 -0600
+End time:         2022-02-28 23:42:51.049 -0600
+Num samples:      10 (13%)
+Primary state:    5 samples Non-Frontmost App, Non-Suppressed, User mode, Effective Thread QoS Maintenance, Requested Thread QoS Maintenance, Override Thread QoS Unspecified
+User Activity:    0 samples Idle, 10 samples Active
+Power Source:     10 samples on Battery, 0 samples on AC
+  10  start_wqthread + 8 (libsystem_pthread.dylib + 8216) [0x1804ec018]
+    6   _pthread_wqthread + 288 (libsystem_pthread.dylib + 13060) [0x1804ed304]
+      6   _dispatch_workloop_worker_thread + 656 (libdispatch.dylib + 91912) [0x180345708]
+        3   _dispatch_workloop_invoke + 788 (libdispatch.dylib + 52688) [0x18033bdd0]
+          3   _dispatch_lane_invoke + 444 (libdispatch.dylib + 48856) [0x18033aed8]
+            2   _dispatch_lane_serial_drain + 376 (libdispatch.dylib + 45576) [0x18033a208]
+              2   _dispatch_mach_invoke + 456 (libdispatch.dylib + 134328) [0x18034fcb8]
+                2   _dispatch_lane_serial_drain + 376 (libdispatch.dylib + 45576) [0x18033a208]
+                  2   _dispatch_mach_msg_invoke + 476 (libdispatch.dylib + 130920) [0x18034ef68]
+                    2   _dispatch_client_callout4 + 20 (libdispatch.dylib + 15468) [0x180332c6c]
+                      2   __53-[MDSMachSubsystem registerPort:withCallback:rights:]_block_invoke + 160 (SpotlightServerKit + 20248) [0x1969a8f18]
+                        2   mdsObjectMsgCallback + 148 (SpotlightServerKit + 21592) [0x1969a9458]
+                          2   mach_msg_dispatch + 200 (Metadata + 71980) [0x18700592c]
+                            1   ??? (mds + 1329168) [0x102c50810]
+                              1   ??? (mds + 319736) [0x102b5a0f8]
+                                1   ??? (mds + 322440) [0x102b5ab88]
+                                  1   ??? (mds + 360180) [0x102b63ef4]
+                                    1   ??? (mds + 929616) [0x102beef50]
+                                      1   _dispatch_event_loop_poke + 348 (libdispatch.dylib + 156004) [0x180355164]
+                                        1   kevent_id + 8 (libsystem_kernel.dylib + 13960) [0x1804b7688]
+                                          1   <Effective Thread QoS Default, Requested Thread QoS Default>
+                            1   ??? (mds + 1326636) [0x102c4fe2c]
+                              1   ??? (mds + 1109900) [0x102c1af8c]
+                                1   ??? (mds + 764080) [0x102bc68b0]
+                                  1   getattrlistbulk + 8 (libsystem_kernel.dylib + 20584) [0x1804b9068]
+                                    1   <Effective Thread QoS Default, Requested Thread QoS Default>
+            1   _dispatch_lane_serial_drain + 672 (libdispatch.dylib + 45872) [0x18033a330]
+              1   _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x180332bac]
+                1   mds_dispatch_wrapper + 24 (SpotlightServerKit + 22420) [0x1969a9794]
+                  1   mds_dispatch_nocopy_wrapper + 112 (SpotlightServerKit + 22008) [0x1969a95f8]
+                    1   ??? (mds + 375404) [0x102b67a6c]
+                      1   ??? (mds + 364348) [0x102b64f3c]
+                        1   __MDPlistBytesAddObject + 344 (MetadataUtilities + 22248) [0x186fa56e8]
+                          1   -[__NSDictionaryM __apply:context:] + 132 (CoreFoundation + 254000) [0x180576030]
+                            1   dictionaryApplier + 324 (MetadataUtilities + 37708) [0x186fa934c]
+                              1   __MDPlistBytesAddObject + 344 (MetadataUtilities + 22248) [0x186fa56e8]
+                                1   -[__NSDictionaryM __apply:context:] + 132 (CoreFoundation + 254000) [0x180576030]
+                                  1   dictionaryApplier + 324 (MetadataUtilities + 37708) [0x186fa934c]
+                                    1   __MDPlistBytesAddObject + 124 (MetadataUtilities + 22028) [0x186fa560c]
+                                      1   _MDPlistBytesAddString + 476 (MetadataUtilities + 24780) [0x186fa60cc]
+                                        1   -[NSTaggedPointerString getCharacters:range:] + 0 (CoreFoundation + 71468) [0x18054972c]
+                                          1   <Effective Thread QoS Background, Requested Thread QoS Background>
+        3   _dispatch_lane_invoke + 392 (libdispatch.dylib + 48804) [0x18033aea4]
+          2   _dispatch_lane_serial_drain + 376 (libdispatch.dylib + 45576) [0x18033a208]
+            2   _dispatch_lane_invoke + 444 (libdispatch.dylib + 48856) [0x18033aed8]
+              2   _dispatch_lane_serial_drain + 672 (libdispatch.dylib + 45872) [0x18033a330]
+                2   _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x180332bac]
+                  2   _dispatch_block_async_invoke2 + 148 (libdispatch.dylib + 76176) [0x180341990]
+                    1   ??? (mds + 372244) [0x102b66e14]
+                      1   _dispatch_apply_with_attr_f + 1152 (libdispatch.dylib + 97500) [0x180346cdc]
+                        1   _dispatch_apply_invoke_and_wait + 224 (libdispatch.dylib + 100696) [0x180347958]
+                          1   _dispatch_client_callout2 + 20 (libdispatch.dylib + 15340) [0x180332bec]
+                            1   ??? (mds + 373656) [0x102b67398]
+                              1   listxattr + 8 (libsystem_kernel.dylib + 20628) [0x1804b9094]
+                    1   ??? (mds + 369052) [0x102b6619c]
+                      1   ??? (mds + 1253632) [0x102c3e100]
+                        1   fsgetpath_ext + 8 (libsystem_kernel.dylib + 185464) [0x1804e1478]
+          1   _dispatch_lane_serial_drain + 672 (libdispatch.dylib + 45872) [0x18033a330]
+            1   _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x180332bac]
+              1   _dispatch_block_async_invoke2 + 148 (libdispatch.dylib + 76176) [0x180341990]
+                1   ??? (mds + 1075052) [0x102c1276c]
+                  1   _CFRelease + 248 (CoreFoundation + 1431444) [0x180695794]
+                    1   __MDStoreOIDArrayFinalize + 40 (MetadataUtilities + 27764) [0x186fa6c74]
+                      1   defaultDeallocator_block_invoke + 48 (MetadataUtilities + 29624) [0x186fa73b8]
+                        1   __munmap + 4 (libsystem_kernel.dylib + 21216) [0x1804b92e0]
+                          1   <Effective Thread QoS Background, Requested Thread QoS Background>
+    4   _pthread_wqthread + 228 (libsystem_pthread.dylib + 13000) [0x1804ed2c8]
+      4   _dispatch_worker_thread2 + 164 (libdispatch.dylib + 88920) [0x180344b58]
+        4   _dispatch_root_queue_drain + 684 (libdispatch.dylib + 87100) [0x18034443c]
+          4   _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x180332bac]
+            4   _dispatch_apply_invoke + 224 (libdispatch.dylib + 95172) [0x1803463c4]
+              4   _dispatch_client_callout2 + 20 (libdispatch.dylib + 15340) [0x180332bec]
+                4   ??? (mds + 373656) [0x102b67398]
+                  3   ??? (mds + 575292) [0x102b9873c]
+                    3   CFURLCopyResourcePropertiesForKeys + 128 (CoreFoundation + 555084) [0x1805bf84c]
+                      3   _FSURLCopyResourcePropertiesForKeysInternal(__CFURL const*, __CFArray const*, void*, __CFError**, unsigned char) + 1200 (CoreServicesInternal + 59016) [0x182f2c688]
+                        3   prepareValuesForBitmap(__CFURL const*, __FileCache*, _FilePropertyBitmap*, __CFError**) + 412 (CoreServicesInternal + 16496) [0x182f22070]
+                          1   corePropertyProviderPrepareValues(__CFURL const*, __FileCache*, __CFString const* const*, void const**, long, void const*, __CFError**) + 1236 (CoreServicesInternal + 17868) [0x182f225cc]
+                            1   parseAttributeBuffer(__CFAllocator const*, unsigned char const*, unsigned char, attrlist const*, void const*, void**, _FileAttributes*, unsigned int*) + 1960 (CoreServicesInternal + 21140) [0x182f23294]
+                              1   CFStringCreateWithBytes + 48 (CoreFoundation + 65988) [0x1805481c4]
+                                1   __CFStringCreateImmutableFunnel3 + 1608 (CoreFoundation + 14456) [0x18053b878]
+                                  1   __CFSearchStringROM + 132 (CoreFoundation + 15992) [0x18053be78]
+                          1   LaunchServices::URLPropertyProvider::prepareValues(__CFURL const*, __FileCache*, __CFString const* const*, void const**, long, void const*, __CFError**) + 460 (LaunchServices + 66380) [0x180a8c34c]
+                            1   LaunchServices::URLPropertyProvider::prepareLocalizedNameDictionaryValue(LaunchServices::Database::Context&, FSNode*, __FileCache*, __CFString const*, LaunchServices::URLPropertyProvider::State*, NSError* __autoreleasing*) + 280 (LaunchServices + 1700004) [0x180c1b0a4]
+                              1   -[__NSFrozenDictionaryM enumerateKeysAndObjectsWithOptions:usingBlock:] + 188 (CoreFoundation + 773924) [0x1805f4f24]
+                                1   __NSDICTIONARY_IS_CALLING_OUT_TO_A_BLOCK__ + 24 (CoreFoundation + 291488) [0x18057f2a0]
+                                  1   objc_msgSend + 64 (libobjc.A.dylib + 25408) [0x18037c340]
+                          1   __getattrlist + 8 (libsystem_kernel.dylib + 9084) [0x1804b637c]
+                  1   __getattrlist + 8 (libsystem_kernel.dylib + 9084) [0x1804b637c]
+                    1   <Kernel mode>
+
+  Binary Images:
+           0x102b0c000 -        0x102d23fff  mds (2183.14)                                        <2417353E-B507-3E03-8EB1-D28237843A41>  /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds
+           0x18032f000 -        0x180375fff  libdispatch.dylib (1324.60.3)                        <93E1DCFC-EF56-3113-8E7C-1BA85266A93B>  /usr/lib/system/libdispatch.dylib
+           0x180376000 -        0x1803b1fff  libobjc.A.dylib (838.1)                              <2EB32E1D-90CB-3256-8681-9034085A06A6>  /usr/lib/libobjc.A.dylib
+           0x1804b4000 -        0x1804e9fff  libsystem_kernel.dylib (8019.80.24)                  <384945E6-DD71-37E5-9A3D-84FFF14A1E60>  /usr/lib/system/libsystem_kernel.dylib
+           0x1804ea000 -        0x1804f6fff  libsystem_pthread.dylib (485.60.2)                   <F7B2ECCF-E6F1-3109-AE81-9028C0B8332A>  /usr/lib/system/libsystem_pthread.dylib
+           0x180538000 -        0x180a7bfff  com.apple.CoreFoundation 6.9 (1856.107)              <35473DE6-C433-332C-AEE0-013FD5F6D4FD>  /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
+           0x180a7c000 -        0x180cdcfff  com.apple.LaunchServices 1141.1 (1141.1)             <E986B6D9-472C-3BEA-AB9A-D3ABEF2A07FB>  /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/LaunchServices
+           0x182f1e000 -        0x182f5afff  com.apple.CoreServicesInternal 484 (484)             <B0C40221-F4C3-3F56-B25B-D484E5D3A8BB>  /System/Library/PrivateFrameworks/CoreServicesInternal.framework/Versions/A/CoreServicesInternal
+           0x186fa0000 -        0x186ff3fff  com.apple.spotlight.metadata.utilities 1.0 (2183.14) <DF188BE2-5C3B-363A-859D-7E924A11016E>  /System/Library/PrivateFrameworks/MetadataUtilities.framework/Versions/A/MetadataUtilities
+           0x186ff4000 -        0x187090fff  com.apple.Metadata 10.7.0 (2183.14)                  <938610AC-F12F-33A0-B4EA-F01A695A5305>  /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Metadata
+           0x1969a4000 -        0x1969b7fff  com.apple.metadata.SpotlightServerKit 1.0 (2183.14)  <7FD1ACD8-26A7-3F97-9AB5-849F1B7791B8>  /System/Library/PrivateFrameworks/SpotlightServerKit.framework/Versions/A/SpotlightServerKit

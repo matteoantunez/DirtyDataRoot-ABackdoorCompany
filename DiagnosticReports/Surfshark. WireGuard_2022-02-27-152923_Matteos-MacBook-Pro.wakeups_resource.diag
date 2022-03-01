@@ -1,0 +1,70 @@
+Date/Time:        2022-02-27 15:29:19.041 -0600
+End time:         2022-02-27 15:29:23.028 -0600
+OS Version:       macOS 12.2 (Build 21D49)
+Architecture:     arm64e
+Report Version:   35
+Incident Identifier: 2CEA39C4-BAF5-4ED7-9CF5-ABC52179AFFB
+Share With Devs:  Yes
+
+Data Source:      Microstackshots
+Shared Cache:     B90241B2-E425-3982-B3F6-26C4567CBB49 slid base address 0x1a4c68000, slide 0x24c68000
+
+Command:          Surfshark. WireGuard
+Path:             /Applications/Surfshark.app/Contents/PlugIns/Surfshark. WireGuard.appex/Contents/MacOS/Surfshark. WireGuard
+Identifier:       com.surfshark.vpnclient.macos.PacketTunnel-WireGuard
+Version:          3.12.5 (1068)
+Team ID:          YHUG37CKN8
+Architecture:     arm64
+Parent:           UNKNOWN [1]
+PID:              48435
+
+Event:            wakeups
+Action taken:     none
+Wakeups:          45002 wakeups over the last 4 seconds (11287 wakeups per second average), exceeding limit of 150 wakeups per second over 300 seconds
+Wakeups limit:    45000
+Limit duration:   300s
+Wakeups caused:   45002
+Wakeups duration: 4s
+Duration:         3.99s
+Duration Sampled: 0.00s
+Steps:            1
+
+Hardware model:   MacBookPro17,1
+Active cpus:      8
+HW page size:     16384
+VM page size:     16384
+
+Fan speed:        0 rpm
+Advisory levels:  Battery -> 2, User -> 2, ThermalPressure -> 0, Combined -> 2
+Free disk space:  12.69 GB/228.27 GB, low space threshold 3072 MB
+Low Power Mode:   Enabled
+
+Heaviest stack for the target process:
+  1  runtime.asmcgocall + 124 (WireGuardKit + 600844) [0x10549ab0c]
+  1  __sendto + 8 (libsystem_kernel.dylib + 24424) [0x1a4f3df68]
+
+
+Powerstats for:   Surfshark. WireGuard [48435] [unique pid 247890]
+UUID:             72D3018E-1ACF-3182-BA98-30042DBA02F2
+Path:             /Applications/Surfshark.app/Contents/PlugIns/Surfshark. WireGuard.appex/Contents/MacOS/Surfshark. WireGuard
+Identifier:       com.surfshark.vpnclient.macos.PacketTunnel-WireGuard
+Version:          3.12.5 (1068)
+Team ID:          YHUG37CKN8
+Architecture:     arm64
+Parent:           UNKNOWN [1]
+UID:              501
+Sudden Term:      Tracked (allows idle exit)
+Footprint:        50.88 MB
+Start time:       2022-02-27 15:29:20.203 -0600
+End time:         2022-02-27 15:29:20.203 -0600
+Num samples:      1 (100%)
+Primary state:    1 samples Non-Frontmost App, Non-Suppressed, User mode, Effective Thread QoS Default, Requested Thread QoS Default, Override Thread QoS Unspecified
+User Activity:    0 samples Idle, 1 samples Active
+Power Source:     1 samples on Battery, 0 samples on AC
+  1  runtime.asmcgocall + 124 (WireGuardKit + 600844) [0x10549ab0c]
+    1  __sendto + 8 (libsystem_kernel.dylib + 24424) [0x1a4f3df68]
+
+  Binary Images:
+           0x104b34000 -                ???  com.surfshark.vpnclient.macos.PacketTunnel-WireGuard 3.12.5 (1068) <72D3018E-1ACF-3182-BA98-30042DBA02F2>  /Applications/Surfshark.app/Contents/PlugIns/Surfshark. WireGuard.appex/Contents/MacOS/Surfshark. WireGuard
+           0x105408000 -        0x1056bffff  com.surfshark.fmwk.WireGuardKit 1.0.13 (24)                        <D6814C45-5A73-3AEB-982F-0CBE7DF37779>  /Applications/Surfshark.app/Contents/Frameworks/WireGuardKit.framework/Versions/A/WireGuardKit
+           0x1a4f38000 -        0x1a4f6dfff  libsystem_kernel.dylib (8019.80.24)                                <384945E6-DD71-37E5-9A3D-84FFF14A1E60>  /usr/lib/system/libsystem_kernel.dylib

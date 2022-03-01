@@ -1,0 +1,134 @@
+Date/Time:        2022-02-27 02:23:07.511 -0600
+End time:         2022-02-27 16:11:58.316 -0600
+OS Version:       macOS 12.2 (Build 21D49)
+Architecture:     arm64e
+Report Version:   35
+Incident Identifier: D04E028D-AECD-493A-AE5F-FEC0E41E9E05
+Share With Devs:  Yes
+
+Data Source:      Microstackshots
+Shared Cache:     13FE38D9-95AD-3D4F-889F-443CD57D94DE slid base address 0x7ff81dc98000, slide 0x1dc98000
+Shared Cache:     B90241B2-E425-3982-B3F6-26C4567CBB49 slid base address 0x1a4c68000, slide 0x24c68000
+
+Command:          Fing Helper
+Path:             /Applications/Fing.app/Contents/Frameworks/Fing Helper.app/Contents/MacOS/Fing Helper
+Identifier:       com.fing.app.helper
+Version:          ??? (2.8.0.334)
+Team ID:          747FK9M934
+Architecture:     x86_64 (translated)
+Parent:           UNKNOWN [19616]
+PID:              19622
+
+Event:            disk writes
+Action taken:     none
+Writes:           2147.49 MB of file backed memory dirtied over 49731 seconds (43.18 KB per second average), exceeding limit of 24.86 KB per second over 86400 seconds
+Writes limit:     2147.48 MB
+Limit duration:   86400s
+Writes caused:    2147.49 MB
+Writes duration:  49731s
+Duration:         49730.80s
+Duration Sampled: 48156.41s
+Steps:            64 ( (10.49 MB/step))
+
+Hardware model:   MacBookPro17,1
+Active cpus:      8
+HW page size:     16384
+VM page size:     16384
+
+Advisory levels:  Battery -> 2, User -> 2, ThermalPressure -> 0, Combined -> 2
+Free disk space:  11.87 GB/228.27 GB, low space threshold 3072 MB
+Low Power Mode:   Enabled (for last 15440.3s)
+
+Heaviest stack for the target process:
+  64  thread_start + 15 (libsystem_pthread.dylib + 8207) [0x7ff81dfb200f]
+  64  _pthread_start + 125 (libsystem_pthread.dylib + 25844) [0x7ff81dfb64f4]
+  64  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 10105960 (Electron Framework + 27026680) [0x11294b4f8]
+  64  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 9985853 (Electron Framework + 26906573) [0x11292dfcd]
+  64  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 9986404 (Electron Framework + 26907124) [0x11292e1f4]
+  64  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 9947075 (Electron Framework + 26867795) [0x112924853]
+  64  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 10104968 (Electron Framework + 27025688) [0x11294b118]
+  63  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 9949195 (Electron Framework + 26869915) [0x11292509b]
+  63  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 9952903 (Electron Framework + 26873623) [0x112925f17]
+  63  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 9798796 (Electron Framework + 26719516) [0x11290051c]
+  63  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 10008234 (Electron Framework + 26928954) [0x11293373a]
+  63  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 10007738 (Electron Framework + 26928458) [0x11293354a]
+  63  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 12113560 (Electron Framework + 29034280) [0x112b35728]
+  47  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 12393284 (Electron Framework + 29314004) [0x112b79bd4]
+  47  ??? [0x7ff8ae546940]
+
+
+Powerstats for:   Fing Helper (Electron Helper) [19622]
+UUID:             471AB763-AA91-3031-9DF4-960A3A02A0AA
+Path:             /Applications/Fing.app/Contents/Frameworks/Fing Helper.app/Contents/MacOS/Fing Helper
+Identifier:       com.fing.app.helper
+Version:          ??? (2.8.0.334)
+Team ID:          747FK9M934
+Shared Cache:     13FE38D9-95AD-3D4F-889F-443CD57D94DE slid base address 0x7ff81dc98000, slide 0x1dc98000
+Architecture:     x86_64 (translated)
+Parent:           UNKNOWN [19616]
+UID:              501
+Footprint:        20.14 MB -> 21.27 MB (+1152 KB)
+Pageins:          7301 pages
+Start time:       2022-02-27 02:35:28.968 -0600
+End time:         2022-02-27 15:58:05.382 -0600
+Num samples:      64 (100%)
+Primary state:    64 samples Non-Frontmost App, Non-Suppressed, Kernel mode, Effective Thread QoS Unspecified, Requested Thread QoS Unspecified, Override Thread QoS Unspecified
+User Activity:    0 samples Idle, 64 samples Active
+Power Source:     54 samples on Battery, 10 samples on AC
+  64  thread_start + 15 (libsystem_pthread.dylib + 8207) [0x7ff81dfb200f]
+    64  _pthread_start + 125 (libsystem_pthread.dylib + 25844) [0x7ff81dfb64f4]
+      64  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 10105960 (Electron Framework + 27026680) [0x11294b4f8]
+        64  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 9985853 (Electron Framework + 26906573) [0x11292dfcd]
+          64  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 9986404 (Electron Framework + 26907124) [0x11292e1f4]
+            64  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 9947075 (Electron Framework + 26867795) [0x112924853]
+              64  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 10104968 (Electron Framework + 27025688) [0x11294b118]
+                63  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 9949195 (Electron Framework + 26869915) [0x11292509b]
+                  63  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 9952903 (Electron Framework + 26873623) [0x112925f17]
+                    63  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 9798796 (Electron Framework + 26719516) [0x11290051c]
+                      63  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 10008234 (Electron Framework + 26928954) [0x11293373a]
+                        63  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 10007738 (Electron Framework + 26928458) [0x11293354a]
+                          63  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 12113560 (Electron Framework + 29034280) [0x112b35728]
+                            47  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 12393284 (Electron Framework + 29314004) [0x112b79bd4]
+                              47  ??? [0x7ff8ae546940]
+                            11  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 12389338 (Electron Framework + 29310058) [0x112b78c6a]
+                              11  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 12395004 (Electron Framework + 29315724) [0x112b7a28c]
+                                11  ??? [0x7ff8ae546940]
+                            4   v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 12355638 (Electron Framework + 29276358) [0x112b708c6]
+                              4   v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 12355524 (Electron Framework + 29276244) [0x112b70854]
+                                4   v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 12390347 (Electron Framework + 29311067) [0x112b7905b]
+                                  4   v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 12390618 (Electron Framework + 29311338) [0x112b7916a]
+                                    4   v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 12404629 (Electron Framework + 29325349) [0x112b7c825]
+                                      4   v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 10091161 (Electron Framework + 27011881) [0x112947b29]
+                                        4   ??? [0x7ff8ae546940]
+                            1   v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 12353319 (Electron Framework + 29274039) [0x112b6ffb7]
+                              1   v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 12398809 (Electron Framework + 29319529) [0x112b7b169]
+                                1   v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 12399793 (Electron Framework + 29320513) [0x112b7b541]
+                                  1   v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 12360776 (Electron Framework + 29281496) [0x112b71cd8]
+                                    1   v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 9533422 (Electron Framework + 26454142) [0x1128bf87e]
+                                      1   v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 10085859 (Electron Framework + 27006579) [0x112946673]
+                                        1   ??? [0x7ff8ae546940]
+                1   v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 9949328 (Electron Framework + 26870048) [0x112925120]
+                  1   v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 9952967 (Electron Framework + 26873687) [0x112925f57]
+                    1   v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 9798796 (Electron Framework + 26719516) [0x11290051c]
+                      1   v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 12385994 (Electron Framework + 29306714) [0x112b77f5a]
+                        1   v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 12379670 (Electron Framework + 29300390) [0x112b766a6]
+                          1   ??? [0x7ff8ae546940]
+
+  Binary Images:
+           0x10052e000 -        0x100541fff  com.fing.app.helper (2.8.0.334)        <471AB763-AA91-3031-9DF4-960A3A02A0AA>  /Applications/Fing.app/Contents/Frameworks/Fing Helper.app/Contents/MacOS/Fing Helper
+           0x110f85000 -        0x1190d4fff  com.github.Electron.framework (13.4.0) <3AC6811C-C93A-3A42-83E2-2B84E3A68DF4>  /Applications/Fing.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Electron Framework
+        0x7ff81dfb0000 -     0x7ff81dfbbfff  libsystem_pthread.dylib (485.60.2)     <EE564342-D8F2-396D-B642-40092CF34D82>  /usr/lib/system/libsystem_pthread.dylib
+
+System Profile:
+Network Service: Wi-Fi, AirPort, en0
+Thunderbolt Bus: MacBook Pro, Apple Inc.
+Thunderbolt Bus: MacBook Pro, Apple Inc.
+Boot Volume File System Type: apfs
+Memory Module: LPDDR4
+USB Device: USB31Bus
+USB Device: USB31Bus
+Display: Color LCD, 2560 x 1600 Retina, Main, MirrorOff, Online
+Model: MacBookPro17,1, BootROM 7429.81.3, proc 8:4:4 processors, 8 GB, SMC 
+Graphics: Apple M1, Apple M1, Built-In
+AirPort: Wi-Fi, wl0: Oct 26 2021 16:10:41 version 18.20.310.15.7.8.120 FWID 01-5d6c3867
+Bluetooth: Version (null), 0 services, 0 devices, 0 incoming serial ports

@@ -1,0 +1,593 @@
+Date/Time:        2022-02-28 03:53:55.173 -0600
+End time:         2022-02-28 08:32:24.133 -0600
+OS Version:       macOS 12.2 (Build 21D49)
+Architecture:     arm64e
+Report Version:   35
+Incident Identifier: EB2FD233-6D0D-4150-BCF8-674AF1E533DD
+Share With Devs:  Yes
+
+Data Source:      Microstackshots
+Shared Cache:     B90241B2-E425-3982-B3F6-26C4567CBB49 slid base address 0x1a4c68000, slide 0x24c68000
+
+Command:          Instruments
+Path:             /Applications/Xcode.app/Contents/Applications/Instruments.app/Contents/MacOS/Instruments
+Identifier:       com.apple.dt.Instruments
+Version:          13.2.1 (64551.30)
+Build Version:    2
+Product Build Version: 13C100
+Project Name:     Instruments
+Source Version:   64551030000000000
+Team ID:          59GAB85EFG
+Architecture:     arm64
+Parent:           launchd [1]
+PID:              67646
+
+Event:            disk writes
+Action taken:     none
+Writes:           34.36 GB of file backed memory dirtied over 16709 seconds (2056.51 KB per second average), exceeding limit of 397.68 KB per second over 86400 seconds
+Writes limit:     34.36 GB
+Limit duration:   86400s
+Writes caused:    34.36 GB
+Writes duration:  16709s
+Duration:         16708.96s
+Duration Sampled: 16327.38s
+Steps:            3500 ( (10.49 MB/step))
+
+Hardware model:   MacBookPro17,1
+Active cpus:      8
+HW page size:     16384
+VM page size:     16384
+
+Advisory levels:  Battery -> 2, User -> 2, ThermalPressure -> 0, Combined -> 2
+Free disk space:  49.63 GB/228.27 GB, low space threshold 3072 MB
+Low Power Mode:   Enabled (for last 1722.7s)
+
+Heaviest stack for the target process:
+  221  start_wqthread + 8 (libsystem_pthread.dylib + 8216) [0x1a4f70018]
+  216  _pthread_wqthread + 228 (libsystem_pthread.dylib + 13000) [0x1a4f712c8]
+  216  _dispatch_worker_thread2 + 164 (libdispatch.dylib + 88920) [0x1a4dc8b58]
+  216  _dispatch_root_queue_drain + 396 (libdispatch.dylib + 86812) [0x1a4dc831c]
+  216  _dispatch_queue_override_invoke + 792 (libdispatch.dylib + 27860) [0x1a4db9cd4]
+  216  _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+  216  _dispatch_disk_perform + 516 (libdispatch.dylib + 212200) [0x1a4de6ce8]
+  216  __write_nocancel + 8 (libsystem_kernel.dylib + 22740) [0x1a4f3d8d4]
+
+
+Powerstats for:   Instruments [67646] [unique pid 267095]
+UUID:             41B2B5A3-EDB8-3E49-AD77-BCA301CFAE77
+Path:             /Applications/Xcode.app/Contents/Applications/Instruments.app/Contents/MacOS/Instruments
+Identifier:       com.apple.dt.Instruments
+Version:          13.2.1 (64551.30)
+Build Version:    2
+Product Build Version: 13C100
+Project Name:     Instruments
+Source Version:   64551030000000000
+Team ID:          59GAB85EFG
+Architecture:     arm64
+Parent:           launchd [1]
+UID:              501
+Footprint:        13.55 MB -> 2586.58 MB (+2573.03 MB) (max 4404.48 MB )
+Pageins:          2236 pages
+Start time:       2022-02-28 08:30:55.673 -0600
+End time:         2022-02-28 08:32:24.132 -0600
+Num samples:      221 (6%)
+Primary state:    216 samples Non-Frontmost App, Non-Suppressed, Kernel mode, Effective Thread QoS User Initiated, Requested Thread QoS User Initiated, Override Thread QoS Unspecified
+User Activity:    0 samples Idle, 221 samples Active
+Power Source:     221 samples on Battery, 0 samples on AC
+  221  start_wqthread + 8 (libsystem_pthread.dylib + 8216) [0x1a4f70018]
+    216  _pthread_wqthread + 228 (libsystem_pthread.dylib + 13000) [0x1a4f712c8]
+      216  _dispatch_worker_thread2 + 164 (libdispatch.dylib + 88920) [0x1a4dc8b58]
+        216  _dispatch_root_queue_drain + 396 (libdispatch.dylib + 86812) [0x1a4dc831c]
+          216  _dispatch_queue_override_invoke + 792 (libdispatch.dylib + 27860) [0x1a4db9cd4]
+            216  _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+              216  _dispatch_disk_perform + 516 (libdispatch.dylib + 212200) [0x1a4de6ce8]
+                216  __write_nocancel + 8 (libsystem_kernel.dylib + 22740) [0x1a4f3d8d4]
+    5    _pthread_wqthread + 288 (libsystem_pthread.dylib + 13060) [0x1a4f71304]
+      5    _dispatch_workloop_worker_thread + 656 (libdispatch.dylib + 91912) [0x1a4dc9708]
+        5    _dispatch_lane_invoke + 392 (libdispatch.dylib + 48804) [0x1a4dbeea4]
+          5    _dispatch_lane_serial_drain + 672 (libdispatch.dylib + 45872) [0x1a4dbe330]
+            5    _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+              5    _dispatch_call_block_and_release + 32 (libdispatch.dylib + 7776) [0x1a4db4e60]
+                5    __49+[XRAnalysisCorePathManager deleteStaleTempPaths]_block_invoke + 596 (InstrumentsAnalysisCore + 678648) [0x104759af8]
+                  5    -[NSRegularExpression(NSMatching) enumerateMatchesInString:options:range:usingBlock:] + 1128 (Foundation + 387892) [0x1a5f0eb34]
+                    5    __49+[XRAnalysisCorePathManager deleteStaleTempPaths]_block_invoke_3 + 180 (InstrumentsAnalysisCore + 679140) [0x104759ce4]
+                      5    -[NSFileManager removeItemAtPath:error:] + 64 (Foundation + 381160) [0x1a5f0d0e8]
+                        5    -[NSOperation start] + 804 (Foundation + 275980) [0x1a5ef360c]
+                          5    __NSOPERATION_IS_INVOKING_MAIN__ + 24 (Foundation + 279496) [0x1a5ef43c8]
+                            5    -[NSFilesystemItemRemoveOperation main] + 312 (Foundation + 381536) [0x1a5f0d260]
+                              5    removefile + 144 (libremovefile.dylib + 5996) [0x1af9c376c]
+                                5    __removefile_tree_walker + 408 (libremovefile.dylib + 6532) [0x1af9c3984]
+                                  5    __unlink + 8 (libsystem_kernel.dylib + 22944) [0x1a4f3d9a0]
+                                    5    <Frontmost App>
+
+  Binary Images:
+           0x1042f0000 -        0x104303fff  com.apple.dt.Instruments 13.2.1 (64551.30)             <41B2B5A3-EDB8-3E49-AD77-BCA301CFAE77>  /Applications/Xcode.app/Contents/Applications/Instruments.app/Contents/MacOS/Instruments
+           0x1046b4000 -        0x10488ffff  com.apple.dt.InstrumentsAnalysisCore 13.2.1 (64551.30) <F3BD2899-6EA6-30E6-AA1D-5F0616A21FED>  /Applications/Xcode.app/Contents/Applications/Instruments.app/Contents/Frameworks/InstrumentsAnalysisCore.framework/Versions/A/InstrumentsAnalysisCore
+           0x1a4db3000 -        0x1a4df9fff  libdispatch.dylib (1324.60.3)                          <93E1DCFC-EF56-3113-8E7C-1BA85266A93B>  /usr/lib/system/libdispatch.dylib
+           0x1a4f38000 -        0x1a4f6dfff  libsystem_kernel.dylib (8019.80.24)                    <384945E6-DD71-37E5-9A3D-84FFF14A1E60>  /usr/lib/system/libsystem_kernel.dylib
+           0x1a4f6e000 -        0x1a4f7afff  libsystem_pthread.dylib (485.60.2)                     <F7B2ECCF-E6F1-3109-AE81-9028C0B8332A>  /usr/lib/system/libsystem_pthread.dylib
+           0x1a5eb0000 -        0x1a629dfff  com.apple.Foundation 6.9 (1856.105)                    <90321A38-43A5-3767-9A9C-2C631338B9BC>  /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
+           0x1af9c2000 -        0x1af9c4fff  libremovefile.dylib (60)                               <CA9A0D50-7AE5-33E2-81E8-2C031135C40F>  /usr/lib/system/libremovefile.dylib
+
+
+Powerstats for:   Instruments (other tasks)
+UUID:             41B2B5A3-EDB8-3E49-AD77-BCA301CFAE77
+Path:             /Applications/Xcode.app/Contents/Applications/Instruments.app/Contents/MacOS/Instruments
+Identifier:       com.apple.dt.Instruments
+Version:          13.2.1 (64551.30)
+Build Version:    2
+Product Build Version: 13C100
+Project Name:     Instruments
+Source Version:   64551030000000000
+Team ID:          59GAB85EFG
+Architecture:     arm64
+Start time:       2022-02-28 04:39:41.830 -0600
+End time:         2022-02-28 08:07:57.714 -0600
+Num samples:      1412 (40%)
+Primary state:    799 samples Non-Frontmost App, Non-Suppressed, Kernel mode, Effective Thread QoS User Initiated, Requested Thread QoS User Initiated, Override Thread QoS Unspecified
+User Activity:    518 samples Idle, 894 samples Active
+Power Source:     556 samples on Battery, 856 samples on AC
+  1408  start_wqthread + 8 (libsystem_pthread.dylib + 8216) [0x1a4f70018]
+    1235  _pthread_wqthread + 228 (libsystem_pthread.dylib + 13000) [0x1a4f712c8]
+      1235  _dispatch_worker_thread2 + 164 (libdispatch.dylib + 88920) [0x1a4dc8b58]
+        1153  _dispatch_root_queue_drain + 396 (libdispatch.dylib + 86812) [0x1a4dc831c]
+          742   _dispatch_async_redirect_invoke + 596 (libdispatch.dylib + 26332) [0x1a4db96dc]
+            742   _dispatch_continuation_pop + 504 (libdispatch.dylib + 28800) [0x1a4dba080]
+              742   _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+                742   ??? (DVTInstrumentsUtilities + 160164) [0x1050171a4]
+                  742   ??? (DVTInstrumentsUtilities + 126740) [0x10500ef14]
+                    742   ??? (DVTInstrumentsUtilities + 143644) [0x10501311c]
+                      601   -[XRAnalysisCoreOptimizationAgent executeStopOnItinerary:] + 248 (InstrumentsAnalysisCore + 1209544) [0x1053534c8]
+                        507   -[XRIndexedStorageT64_CC32_R performIndexOptimize] + 32 (InstrumentsAnalysisCore + 960388) [0x105316784]
+                          487   XRSpatialIndexMP<XRSpatialIndexMPStrategy<XRT64_CC32_R_Strategy>, 4096>::_spillPreindex() + 1204 (InstrumentsAnalysisCore + 966752) [0x105318060]
+                            224   <Suppressed>
+                            6     <Frontmost App>
+                          17    XRSpatialIndexMP<XRSpatialIndexMPStrategy<XRT64_CC32_R_Strategy>, 4096>::_spillPreindex() + 2860 (InstrumentsAnalysisCore + 968408) [0x1053186d8]
+                            7     <Suppressed>
+                          2     XRSpatialIndexMP<XRSpatialIndexMPStrategy<XRT64_CC32_R_Strategy>, 4096>::_spillPreindex() + 3200 (InstrumentsAnalysisCore + 968748) [0x10531882c]
+                          1     XRSpatialIndexMP<XRSpatialIndexMPStrategy<XRT64_CC32_R_Strategy>, 4096>::_spillPreindex() + 276 (InstrumentsAnalysisCore + 965824) [0x105317cc0]
+                            1     XRSpatialIndexMP<XRSpatialIndexMPStrategy<XRT64_CC32_R_Strategy>, 4096>::_addSpatialIndex(NSURL*, bool) + 108 (InstrumentsAnalysisCore + 971124) [0x105319174]
+                              1     __open + 8 (libsystem_kernel.dylib + 9172) [0x1a4f3a3d4]
+                        94    -[XRIndexedStorageTD64_CC32_R performIndexOptimize] + 32 (InstrumentsAnalysisCore + 334020) [0x10527d8c4]
+                          89    XRSpatialIndexMP<XRSpatialIndexMPStrategy<XRTD64_CC32_R_Strategy>, 4096>::_spillPreindex() + 1200 (InstrumentsAnalysisCore + 340380) [0x10527f19c]
+                            27    <Suppressed>
+                          5     XRSpatialIndexMP<XRSpatialIndexMPStrategy<XRTD64_CC32_R_Strategy>, 4096>::_spillPreindex() + 2848 (InstrumentsAnalysisCore + 342028) [0x10527f80c]
+                            2     <Suppressed>
+                      136   -[XRAnalysisCoreModelingExecutor executeStopOnItinerary:] + 3000 (InstrumentsAnalysisCore + 1418512) [0x105386510]
+                        85    -[XRCLIPSModeler populateOutputTables:usingObserverations:parameters:yieldFlag:] + 48 (InstrumentsAnalysisCore + 277696) [0x10526fcc0]
+                          85    XRCLIPSBlackboardEngine::modelEventStream(XRAnalysisCoreReadCursor*, bool _Atomic*) + 820 (InstrumentsAnalysisCore + 579136) [0x1052b9640]
+                            85    XRCLIPSBlackboardEngine::executeRules() + 228 (InstrumentsAnalysisCore + 581392) [0x1052b9f10]
+                              85    _runInCLocale(void () block_pointer) + 68 (InstrumentsAnalysisCore + 642624) [0x1052c8e40]
+                                85    invocation function for block in XRCLIPS::run(long long) + 28 (InstrumentsAnalysisCore + 644968) [0x1052c9768]
+                                  85    Run + 2688 (InstrumentsAnalysisCore + 1481424) [0x105395ad0]
+                                    85    EvaluateProcActions + 428 (InstrumentsAnalysisCore + 1348204) [0x10537526c]
+                                      85    EvaluateExpression + 520 (InstrumentsAnalysisCore + 1321984) [0x10536ec00]
+                                        85    PrognFunction + 72 (InstrumentsAnalysisCore + 270736) [0x10526e190]
+                                          85    EvaluateExpression + 520 (InstrumentsAnalysisCore + 1321984) [0x10536ec00]
+                                            62    XRCLIPSBlackboardEngine::_setTableColumn(environmentData*, udfContext*, udfValue*) + 608 (InstrumentsAnalysisCore + 566748) [0x1052b65dc]
+                                              33    XRAnalysisCoreWriteCursor::setColumnValueByStorage(unsigned char, XRStoredValue) const + 184 (InstrumentsAnalysisCore + 1042660) [0x10532a8e4]
+                                              29    XRAnalysisCoreWriteCursor::setColumnValueByStorage(unsigned char, XRStoredValue) const + 304 (InstrumentsAnalysisCore + 1042780) [0x10532a95c]
+                                            16    UDFNextArgument + 248 (InstrumentsAnalysisCore + 1125616) [0x10533ecf0]
+                                              16    EvaluateExpression + 520 (InstrumentsAnalysisCore + 1321984) [0x10536ec00]
+                                                16    PrognFunction + 72 (InstrumentsAnalysisCore + 270736) [0x10526e190]
+                                                  16    EvaluateExpression + 520 (InstrumentsAnalysisCore + 1321984) [0x10536ec00]
+                                                    16    XRCLIPSBlackboardEngine::_setTableColumn(environmentData*, udfContext*, udfValue*) + 608 (InstrumentsAnalysisCore + 566748) [0x1052b65dc]
+                                                      14    XRAnalysisCoreWriteCursor::setColumnValueByStorage(unsigned char, XRStoredValue) const + 304 (InstrumentsAnalysisCore + 1042780) [0x10532a95c]
+                                                      2     XRAnalysisCoreWriteCursor::setColumnValueByStorage(unsigned char, XRStoredValue) const + 184 (InstrumentsAnalysisCore + 1042660) [0x10532a8e4]
+                                            5     XRCLIPSBlackboardEngine::_setColumnNarrative(environmentData*, udfContext*, udfValue*) + 236 (InstrumentsAnalysisCore + 587852) [0x1052bb84c]
+                                              5     XRCLIPSCompiledNarrative::setColumnValueToNarrative(XRAnalysisCoreWriteCursor*, unsigned char, environmentData*, udfContext*) + 1028 (InstrumentsAnalysisCore + 886376) [0x105304668]
+                                                5     -[XRAnalysisCoreObjectRegistry addTypedArrayToCore:] + 348 (InstrumentsAnalysisCore + 1385912) [0x10537e5b8]
+                                                  2     _platform_memmove + 220 (libsystem_platform.dylib + 16876) [0x1a4f8c1ec]
+                                                  2     _platform_memmove + 168 (libsystem_platform.dylib + 16824) [0x1a4f8c1b8]
+                                                  1     _platform_memmove + 180 (libsystem_platform.dylib + 16836) [0x1a4f8c1c4]
+                                            2     XRCLIPSBlackboardEngine::_createNewRow(environmentData*, udfContext*, udfValue*) + 100 (InstrumentsAnalysisCore + 585048) [0x1052bad58]
+                                              2     XRCLIPSBlackboardEngine::_createNewRowForTable(unsigned int) + 68 (InstrumentsAnalysisCore + 588932) [0x1052bbc84]
+                                                2     XRAnalysisCoreWriteCursor::commit() + 432 (InstrumentsAnalysisCore + 1042444) [0x10532a80c]
+                                                  1     XRAnalysisCoreWriteCursor::setColumnValueByStorage(unsigned char, XRStoredValue) const + 304 (InstrumentsAnalysisCore + 1042780) [0x10532a95c]
+                                                  1     XRAnalysisCoreWriteCursor::setColumnValueByStorage(unsigned char, XRStoredValue) const + 184 (InstrumentsAnalysisCore + 1042660) [0x10532a8e4]
+                        28    ??? (BuiltinModelerPlugin + 85232) [0x165864cf0]
+                          28    XRAnalysisCoreWriteCursorSetSignature + 104 (InstrumentsAnalysisCore + 1046328) [0x10532b738]
+                            28    XRAnalysisCoreWriteCursor::setColumnValueByStorage(unsigned char, XRStoredValue) const + 184 (InstrumentsAnalysisCore + 1042660) [0x10532a8e4]
+                        10    ??? (BuiltinModelerPlugin + 85248) [0x165864d00]
+                          10    XRAnalysisCoreWriteCursorSetSignature + 104 (InstrumentsAnalysisCore + 1046328) [0x10532b738]
+                            10    XRAnalysisCoreWriteCursor::setColumnValueByStorage(unsigned char, XRStoredValue) const + 184 (InstrumentsAnalysisCore + 1042660) [0x10532a8e4]
+                        7     ??? (BuiltinModelerPlugin + 85280) [0x165864d20]
+                          7     XRAnalysisCoreWriteCursorSetSignature + 104 (InstrumentsAnalysisCore + 1046328) [0x10532b738]
+                            7     XRAnalysisCoreWriteCursor::setColumnValueByStorage(unsigned char, XRStoredValue) const + 184 (InstrumentsAnalysisCore + 1042660) [0x10532a8e4]
+                        6     -[XRAnalysisCoreTickModeler populateOutputTables:usingObserverations:parameters:yieldFlag:] + 212 (InstrumentsAnalysisCore + 485580) [0x1052a28cc]
+                          6     XRAnalysisCoreWriteCursor::commit() + 288 (InstrumentsAnalysisCore + 1042300) [0x10532a77c]
+                            6     XRAnalysisCoreWriteCursorT64_CC32_R::commitTopologyField() + 68 (InstrumentsAnalysisCore + 978320) [0x10531ad90]
+                              6     <Frontmost App>
+                      5     -[XRAnalysisCoreModelingExecutor executeStopOnItinerary:] + 3056 (InstrumentsAnalysisCore + 1418568) [0x105386548]
+                        5     -[XRCLIPSModeler populateSpeculationTables:parameters:] + 460 (InstrumentsAnalysisCore + 278236) [0x10526fedc]
+                          5     XRCLIPSBlackboardEngine::executeRules() + 228 (InstrumentsAnalysisCore + 581392) [0x1052b9f10]
+                            5     _runInCLocale(void () block_pointer) + 68 (InstrumentsAnalysisCore + 642624) [0x1052c8e40]
+                              5     invocation function for block in XRCLIPS::run(long long) + 28 (InstrumentsAnalysisCore + 644968) [0x1052c9768]
+                                5     Run + 2688 (InstrumentsAnalysisCore + 1481424) [0x105395ad0]
+                                  5     EvaluateProcActions + 428 (InstrumentsAnalysisCore + 1348204) [0x10537526c]
+                                    5     EvaluateExpression + 520 (InstrumentsAnalysisCore + 1321984) [0x10536ec00]
+                                      5     PrognFunction + 72 (InstrumentsAnalysisCore + 270736) [0x10526e190]
+                                        5     EvaluateExpression + 520 (InstrumentsAnalysisCore + 1321984) [0x10536ec00]
+                                          5     DelayedQueryDoForAllFacts + 684 (InstrumentsAnalysisCore + 99176) [0x105244368]
+                                            5     EvaluateExpression + 520 (InstrumentsAnalysisCore + 1321984) [0x10536ec00]
+                                              5     PrognFunction + 72 (InstrumentsAnalysisCore + 270736) [0x10526e190]
+                                                5     EvaluateExpression + 952 (InstrumentsAnalysisCore + 1322416) [0x10536edb0]
+                                                  5     EvaluateDeffunctionCall + 44 (InstrumentsAnalysisCore + 1431224) [0x1053896b8]
+                                                    5     CallDeffunction + 356 (InstrumentsAnalysisCore + 326092) [0x10527b9cc]
+                                                      5     EvaluateProcActions + 428 (InstrumentsAnalysisCore + 1348204) [0x10537526c]
+                                                        5     EvaluateExpression + 520 (InstrumentsAnalysisCore + 1321984) [0x10536ec00]
+                                                          5     PrognFunction + 72 (InstrumentsAnalysisCore + 270736) [0x10526e190]
+                                                            5     EvaluateExpression + 520 (InstrumentsAnalysisCore + 1321984) [0x10536ec00]
+                                                              5     WhileFunction + 384 (InstrumentsAnalysisCore + 268320) [0x10526d820]
+                                                                5     UDFNextArgument + 248 (InstrumentsAnalysisCore + 1125616) [0x10533ecf0]
+                                                                  5     EvaluateExpression + 520 (InstrumentsAnalysisCore + 1321984) [0x10536ec00]
+                                                                    5     PrognFunction + 72 (InstrumentsAnalysisCore + 270736) [0x10526e190]
+                                                                      5     EvaluateExpression + 520 (InstrumentsAnalysisCore + 1321984) [0x10536ec00]
+                                                                        3     XRCLIPSBlackboardEngine::_setTableColumn(environmentData*, udfContext*, udfValue*) + 608 (InstrumentsAnalysisCore + 566748) [0x1052b65dc]
+                                                                          3     XRAnalysisCoreWriteCursor::setColumnValueByStorage(unsigned char, XRStoredValue) const + 304 (InstrumentsAnalysisCore + 1042780) [0x10532a95c]
+                                                                        2     XRCLIPSBlackboardEngine::_setTableColumn(environmentData*, udfContext*, udfValue*) + 160 (InstrumentsAnalysisCore + 566300) [0x1052b641c]
+                                                                          2     UDFNextArgument + 248 (InstrumentsAnalysisCore + 1125616) [0x10533ecf0]
+                                                                            2     EvaluateExpression + 520 (InstrumentsAnalysisCore + 1321984) [0x10536ec00]
+                                                                              2     XRCLIPSBlackboardEngine::_createValueWithType(environmentData*, udfContext*, udfValue*) + 920 (InstrumentsAnalysisCore + 572808) [0x1052b7d88]
+                                                                                2     -[XRAnalysisCoreObjectRegistry addArrayOfUInt64sToCore:] + 344 (InstrumentsAnalysisCore + 1383904) [0x10537dde0]
+                                                                                  1     _platform_memmove + 424 (libsystem_platform.dylib + 17080) [0x1a4f8c2b8]
+                                                                                  1     _platform_memmove + 180 (libsystem_platform.dylib + 16836) [0x1a4f8c1c4]
+          299   _dispatch_queue_override_invoke + 792 (libdispatch.dylib + 27860) [0x1a4db9cd4]
+            299   _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+              299   _dispatch_disk_perform + 516 (libdispatch.dylib + 212200) [0x1a4de6ce8]
+                299   __write_nocancel + 8 (libsystem_kernel.dylib + 22740) [0x1a4f3d8d4]
+                  253   <Frontmost App>
+                  1     <Frontmost App, User mode>
+          112   _dispatch_async_redirect_invoke + 748 (libdispatch.dylib + 26484) [0x1a4db9774]
+            112   _dispatch_continuation_pop + 504 (libdispatch.dylib + 28800) [0x1a4dba080]
+              112   _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+                112   ??? (DVTInstrumentsUtilities + 160164) [0x1050171a4]
+                  112   ??? (DVTInstrumentsUtilities + 126740) [0x10500ef14]
+                    112   ??? (DVTInstrumentsUtilities + 143644) [0x10501311c]
+                      79    -[XRAnalysisCoreOptimizationAgent executeStopOnItinerary:] + 248 (InstrumentsAnalysisCore + 1209544) [0x1053534c8]
+                        56    -[XRIndexedStorageT64_CC32_R performIndexOptimize] + 32 (InstrumentsAnalysisCore + 960388) [0x105316784]
+                          52    XRSpatialIndexMP<XRSpatialIndexMPStrategy<XRT64_CC32_R_Strategy>, 4096>::_spillPreindex() + 1204 (InstrumentsAnalysisCore + 966752) [0x105318060]
+                            19    <Suppressed>
+                          4     XRSpatialIndexMP<XRSpatialIndexMPStrategy<XRT64_CC32_R_Strategy>, 4096>::_spillPreindex() + 2860 (InstrumentsAnalysisCore + 968408) [0x1053186d8]
+                            2     <Suppressed>
+                        23    -[XRIndexedStorageTD64_CC32_R performIndexOptimize] + 32 (InstrumentsAnalysisCore + 334020) [0x10527d8c4]
+                          20    XRSpatialIndexMP<XRSpatialIndexMPStrategy<XRTD64_CC32_R_Strategy>, 4096>::_spillPreindex() + 1200 (InstrumentsAnalysisCore + 340380) [0x10527f19c]
+                            19    <Suppressed>
+                          2     XRSpatialIndexMP<XRSpatialIndexMPStrategy<XRTD64_CC32_R_Strategy>, 4096>::_spillPreindex() + 276 (InstrumentsAnalysisCore + 339456) [0x10527ee00]
+                            2     XRSpatialIndexMP<XRSpatialIndexMPStrategy<XRTD64_CC32_R_Strategy>, 4096>::_addSpatialIndex(NSURL*, bool) + 468 (InstrumentsAnalysisCore + 345088) [0x105280400]
+                              2     <Suppressed>
+                          1     XRSpatialIndexMP<XRSpatialIndexMPStrategy<XRTD64_CC32_R_Strategy>, 4096>::_spillPreindex() + 3024 (InstrumentsAnalysisCore + 342204) [0x10527f8bc]
+                      33    -[XRAnalysisCoreModelingExecutor executeStopOnItinerary:] + 3000 (InstrumentsAnalysisCore + 1418512) [0x105386510]
+                        15    -[XRCLIPSModeler populateOutputTables:usingObserverations:parameters:yieldFlag:] + 48 (InstrumentsAnalysisCore + 277696) [0x10526fcc0]
+                          15    XRCLIPSBlackboardEngine::modelEventStream(XRAnalysisCoreReadCursor*, bool _Atomic*) + 820 (InstrumentsAnalysisCore + 579136) [0x1052b9640]
+                            15    XRCLIPSBlackboardEngine::executeRules() + 228 (InstrumentsAnalysisCore + 581392) [0x1052b9f10]
+                              15    _runInCLocale(void () block_pointer) + 68 (InstrumentsAnalysisCore + 642624) [0x1052c8e40]
+                                15    invocation function for block in XRCLIPS::run(long long) + 28 (InstrumentsAnalysisCore + 644968) [0x1052c9768]
+                                  15    Run + 2688 (InstrumentsAnalysisCore + 1481424) [0x105395ad0]
+                                    15    EvaluateProcActions + 428 (InstrumentsAnalysisCore + 1348204) [0x10537526c]
+                                      15    EvaluateExpression + 520 (InstrumentsAnalysisCore + 1321984) [0x10536ec00]
+                                        15    PrognFunction + 72 (InstrumentsAnalysisCore + 270736) [0x10526e190]
+                                          15    EvaluateExpression + 520 (InstrumentsAnalysisCore + 1321984) [0x10536ec00]
+                                            10    XRCLIPSBlackboardEngine::_setTableColumn(environmentData*, udfContext*, udfValue*) + 608 (InstrumentsAnalysisCore + 566748) [0x1052b65dc]
+                                              6     XRAnalysisCoreWriteCursor::setColumnValueByStorage(unsigned char, XRStoredValue) const + 184 (InstrumentsAnalysisCore + 1042660) [0x10532a8e4]
+                                              4     XRAnalysisCoreWriteCursor::setColumnValueByStorage(unsigned char, XRStoredValue) const + 304 (InstrumentsAnalysisCore + 1042780) [0x10532a95c]
+                                            5     UDFNextArgument + 248 (InstrumentsAnalysisCore + 1125616) [0x10533ecf0]
+                                              5     EvaluateExpression + 520 (InstrumentsAnalysisCore + 1321984) [0x10536ec00]
+                                                5     PrognFunction + 72 (InstrumentsAnalysisCore + 270736) [0x10526e190]
+                                                  5     EvaluateExpression + 520 (InstrumentsAnalysisCore + 1321984) [0x10536ec00]
+                                                    5     XRCLIPSBlackboardEngine::_setTableColumn(environmentData*, udfContext*, udfValue*) + 608 (InstrumentsAnalysisCore + 566748) [0x1052b65dc]
+                                                      5     XRAnalysisCoreWriteCursor::setColumnValueByStorage(unsigned char, XRStoredValue) const + 304 (InstrumentsAnalysisCore + 1042780) [0x10532a95c]
+                        7     ??? (BuiltinModelerPlugin + 85232) [0x165864cf0]
+                          7     XRAnalysisCoreWriteCursorSetSignature + 104 (InstrumentsAnalysisCore + 1046328) [0x10532b738]
+                            7     XRAnalysisCoreWriteCursor::setColumnValueByStorage(unsigned char, XRStoredValue) const + 184 (InstrumentsAnalysisCore + 1042660) [0x10532a8e4]
+                        5     ??? (BuiltinModelerPlugin + 85248) [0x165864d00]
+                          5     XRAnalysisCoreWriteCursorSetSignature + 104 (InstrumentsAnalysisCore + 1046328) [0x10532b738]
+                            5     XRAnalysisCoreWriteCursor::setColumnValueByStorage(unsigned char, XRStoredValue) const + 184 (InstrumentsAnalysisCore + 1042660) [0x10532a8e4]
+                        4     ??? (BuiltinModelerPlugin + 85280) [0x165864d20]
+                          4     XRAnalysisCoreWriteCursorSetSignature + 104 (InstrumentsAnalysisCore + 1046328) [0x10532b738]
+                            4     XRAnalysisCoreWriteCursor::setColumnValueByStorage(unsigned char, XRStoredValue) const + 184 (InstrumentsAnalysisCore + 1042660) [0x10532a8e4]
+                        2     ??? (BuiltinModelerPlugin + 85264) [0x165864d10]
+                          2     ??? (BuiltinModelerPlugin + 66888) [0x165860548]
+                            2     ??? (BuiltinModelerPlugin + 68100) [0x165860a04]
+                              2     -[XRAnalysisCoreObjectRegistry invokeOracleFunction:invocation:] + 68 (InstrumentsAnalysisCore + 1387220) [0x10537ead4]
+                                2     -[XRCallstackFixupOracle invoke:] + 124 (InstrumentsPlugIn + 421268) [0x1057ced94]
+                                  2     _dispatch_lane_barrier_sync_invoke_and_complete + 56 (libdispatch.dylib + 77312) [0x1a4dc5e00]
+                                    2     _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+                                      2     __33-[XRCallstackFixupOracle invoke:]_block_invoke + 1420 (InstrumentsPlugIn + 422744) [0x1057cf358]
+                                        2     -[XRAnalysisCoreObjectRegistry getBacktraceValue:fragments:count:] + 52 (InstrumentsAnalysisCore + 1392408) [0x10537ff18]
+                                          2     -[XRAnalysisCoreObjectRegistry storedBacktrace:count:] + 216 (InstrumentsAnalysisCore + 1387656) [0x10537ec88]
+                                            2     -[XRAnalysisCoreObjectRegistry addArrayOfUInt64sToCore:] + 344 (InstrumentsAnalysisCore + 1383904) [0x10537dde0]
+                                              2     _platform_memmove + 424 (libsystem_platform.dylib + 17080) [0x1a4f8c2b8]
+        82    _dispatch_root_queue_drain + 684 (libdispatch.dylib + 87100) [0x1a4dc843c]
+          82    _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+            82    _dispatch_apply_invoke + 224 (libdispatch.dylib + 95172) [0x1a4dca3c4]
+              82    _dispatch_client_callout2 + 20 (libdispatch.dylib + 15340) [0x1a4db6bec]
+                82    __mdict_enumerateKeysAndObjectsWithOptionsUsingBlock_block_invoke + 132 (CoreFoundation + 1881984) [0x1a5187780]
+                  82    __NSDICTIONARY_IS_CALLING_OUT_TO_A_BLOCK__ + 24 (CoreFoundation + 291488) [0x1a50032a0]
+                    82    __34-[XRAnalysisCoreTableManager seal]_block_invoke.111 + 68 (InstrumentsAnalysisCore + 624480) [0x1052c4760]
+                      82    -[XRIndexedStorage seal:] + 756 (InstrumentsAnalysisCore + 312240) [0x1052783b0]
+                        51    XRSpatialIndexMP<XRSpatialIndexMPStrategy<XRT64_CC32_R_Strategy>, 4096>::flush() + 52 (InstrumentsAnalysisCore + 965216) [0x105317a60]
+                          46    XRSpatialIndexMP<XRSpatialIndexMPStrategy<XRT64_CC32_R_Strategy>, 4096>::_spillPreindex() + 1204 (InstrumentsAnalysisCore + 966752) [0x105318060]
+                            20    <Frontmost App>
+                          5     XRSpatialIndexMP<XRSpatialIndexMPStrategy<XRT64_CC32_R_Strategy>, 4096>::_spillPreindex() + 2860 (InstrumentsAnalysisCore + 968408) [0x1053186d8]
+                            1     <Frontmost App>
+                        28    write + 8 (libsystem_kernel.dylib + 21820) [0x1a4f3d53c]
+                        3     XRSpatialIndexMP<XRSpatialIndexMPStrategy<XRT64_CC32_R_Strategy>, 4096>::flush() + 124 (InstrumentsAnalysisCore + 965288) [0x105317aa8]
+                          3     ftruncate + 8 (libsystem_kernel.dylib + 20496) [0x1a4f3d010]
+    173   _pthread_wqthread + 288 (libsystem_pthread.dylib + 13060) [0x1a4f71304]
+      173   _dispatch_workloop_worker_thread + 656 (libdispatch.dylib + 91912) [0x1a4dc9708]
+        173   _dispatch_lane_invoke + 392 (libdispatch.dylib + 48804) [0x1a4dbeea4]
+          173   _dispatch_lane_serial_drain + 672 (libdispatch.dylib + 45872) [0x1a4dbe330]
+            173   _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+              173   ??? (DVTInstrumentsUtilities + 160164) [0x1050171a4]
+                173   ??? (DVTInstrumentsUtilities + 126740) [0x10500ef14]
+                  173   ??? (DVTInstrumentsUtilities + 143644) [0x10501311c]
+                    118   ??? (ktracePlugin + 135480) [0x161465138]
+                      118   ??? (ktracePlugin + 147400) [0x161467fc8]
+                        118   -[XRAnalysisCoreBindingHemisphere populateTableIDs:block:] + 260 (InstrumentsAnalysisCore + 1082312) [0x1053343c8]
+                          118   ??? (ktracePlugin + 147664) [0x1614680d0]
+                            118   ??? (ktracePlugin + 146908) [0x161467ddc]
+                              118   ??? (ktracePlugin + 150316) [0x161468b2c]
+                                118   ??? (ktracePlugin + 20368) [0x161448f90]
+                                  60    ??? (ktracePlugin + 73520) [0x161455f30]
+                                    34    ??? (ktracePlugin + 71664) [0x1614557f0]
+                                      13    ??? (ktracePlugin + 71268) [0x161455664]
+                                        13    XRAnalysisCoreWriteCursorSetImpl + 12 (InstrumentsAnalysisCore + 1043484) [0x10532ac1c]
+                                          13    XRAnalysisCoreWriteCursor::setColumnValueByStorage(unsigned char, XRStoredValue) const + 304 (InstrumentsAnalysisCore + 1042780) [0x10532a95c]
+                                      12    ??? (ktracePlugin + 71060) [0x161455594]
+                                        12    XRAnalysisCoreWriteCursorSetImpl + 12 (InstrumentsAnalysisCore + 1043484) [0x10532ac1c]
+                                          12    XRAnalysisCoreWriteCursor::setColumnValueByStorage(unsigned char, XRStoredValue) const + 184 (InstrumentsAnalysisCore + 1042660) [0x10532a8e4]
+                                      9     ??? (ktracePlugin + 71196) [0x16145561c]
+                                        9     XRAnalysisCoreWriteCursorSetImpl + 12 (InstrumentsAnalysisCore + 1043484) [0x10532ac1c]
+                                          9     XRAnalysisCoreWriteCursor::setColumnValueByStorage(unsigned char, XRStoredValue) const + 304 (InstrumentsAnalysisCore + 1042780) [0x10532a95c]
+                                    26    ??? (ktracePlugin + 71652) [0x1614557e4]
+                                      26    XRAnalysisCoreWriteCursorSetImpl + 12 (InstrumentsAnalysisCore + 1043484) [0x10532ac1c]
+                                        26    XRAnalysisCoreWriteCursor::setColumnValueByStorage(unsigned char, XRStoredValue) const + 184 (InstrumentsAnalysisCore + 1042660) [0x10532a8e4]
+                                  53    ??? (ktracePlugin + 76980) [0x161456cb4]
+                                    46    ??? (ktracePlugin + 67988) [0x161454994]
+                                      24    ??? (ktracePlugin + 77332) [0x161456e14]
+                                        24    ??? (ktracePlugin + 71664) [0x1614557f0]
+                                          10    ??? (ktracePlugin + 71196) [0x16145561c]
+                                            10    XRAnalysisCoreWriteCursorSetImpl + 12 (InstrumentsAnalysisCore + 1043484) [0x10532ac1c]
+                                              10    XRAnalysisCoreWriteCursor::setColumnValueByStorage(unsigned char, XRStoredValue) const + 304 (InstrumentsAnalysisCore + 1042780) [0x10532a95c]
+                                                1     <Frontmost App>
+                                          8     ??? (ktracePlugin + 71060) [0x161455594]
+                                            8     XRAnalysisCoreWriteCursorSetImpl + 12 (InstrumentsAnalysisCore + 1043484) [0x10532ac1c]
+                                              8     XRAnalysisCoreWriteCursor::setColumnValueByStorage(unsigned char, XRStoredValue) const + 184 (InstrumentsAnalysisCore + 1042660) [0x10532a8e4]
+                                          6     ??? (ktracePlugin + 71268) [0x161455664]
+                                            6     XRAnalysisCoreWriteCursorSetImpl + 12 (InstrumentsAnalysisCore + 1043484) [0x10532ac1c]
+                                              6     XRAnalysisCoreWriteCursor::setColumnValueByStorage(unsigned char, XRStoredValue) const + 304 (InstrumentsAnalysisCore + 1042780) [0x10532a95c]
+                                      22    ??? (ktracePlugin + 77260) [0x161456dcc]
+                                        22    ??? (ktracePlugin + 63876) [0x161453984]
+                                          22    XRAnalysisCoreWriteCursorSetThreadState + 52 (InstrumentsAnalysisCore + 1045392) [0x10532b390]
+                                            22    XRAnalysisCoreWriteCursor::setColumnValueByStorage(unsigned char, XRStoredValue) const + 184 (InstrumentsAnalysisCore + 1042660) [0x10532a8e4]
+                                    7     ??? (ktracePlugin + 67468) [0x16145478c]
+                                      4     ??? (ktracePlugin + 77260) [0x161456dcc]
+                                        4     ??? (ktracePlugin + 63320) [0x161453758]
+                                          4     ??? (ktracePlugin + 64340) [0x161453b54]
+                                            4     XRAnalysisCoreWriteCursorSetColumn + 236 (InstrumentsAnalysisCore + 1046628) [0x10532b864]
+                                              4     XRAnalysisCoreWriteCursor::setColumnValueByStorage(unsigned char, XRStoredValue) const + 184 (InstrumentsAnalysisCore + 1042660) [0x10532a8e4]
+                                      3     ??? (ktracePlugin + 77332) [0x161456e14]
+                                        3     ??? (ktracePlugin + 71664) [0x1614557f0]
+                                          2     ??? (ktracePlugin + 71060) [0x161455594]
+                                            2     XRAnalysisCoreWriteCursorSetImpl + 12 (InstrumentsAnalysisCore + 1043484) [0x10532ac1c]
+                                              2     XRAnalysisCoreWriteCursor::setColumnValueByStorage(unsigned char, XRStoredValue) const + 184 (InstrumentsAnalysisCore + 1042660) [0x10532a8e4]
+                                          1     ??? (ktracePlugin + 71268) [0x161455664]
+                                            1     XRAnalysisCoreWriteCursorSetImpl + 12 (InstrumentsAnalysisCore + 1043484) [0x10532ac1c]
+                                              1     XRAnalysisCoreWriteCursor::setColumnValueByStorage(unsigned char, XRStoredValue) const + 304 (InstrumentsAnalysisCore + 1042780) [0x10532a95c]
+                                  5     ??? (ktracePlugin + 80164) [0x161457924]
+                                    5     ??? (ktracePlugin + 67468) [0x16145478c]
+                                      5     ??? (ktracePlugin + 80248) [0x161457978]
+                                        5     ??? (ktracePlugin + 63320) [0x161453758]
+                                          3     ??? (ktracePlugin + 64340) [0x161453b54]
+                                            3     XRAnalysisCoreWriteCursorSetColumn + 236 (InstrumentsAnalysisCore + 1046628) [0x10532b864]
+                                              3     XRAnalysisCoreWriteCursor::setColumnValueByStorage(unsigned char, XRStoredValue) const + 184 (InstrumentsAnalysisCore + 1042660) [0x10532a8e4]
+                                          2     ??? (ktracePlugin + 64320) [0x161453b40]
+                                            2     ??? (ktracePlugin + 65828) [0x161454124]
+                                              1     -[XRAnalysisCoreObjectRegistry getCPCallstack:process:pc:frames:extraRegisters:] + 376 (InstrumentsAnalysisCore + 1395260) [0x105380a3c]
+                                                1     -[XRAnalysisCoreObjectRegistry addArrayOfUInt64sToCore:] + 344 (InstrumentsAnalysisCore + 1383904) [0x10537dde0]
+                                                  1     _platform_memmove + 424 (libsystem_platform.dylib + 17080) [0x1a4f8c2b8]
+                                              1     -[XRAnalysisCoreObjectRegistry getCPCallstack:process:pc:frames:extraRegisters:] + 108 (InstrumentsAnalysisCore + 1394992) [0x105380930]
+                                                1     -[XRAnalysisCoreObjectRegistry addArrayOfUInt64sToCore:] + 344 (InstrumentsAnalysisCore + 1383904) [0x10537dde0]
+                                                  1     _platform_memmove + 180 (libsystem_platform.dylib + 16836) [0x1a4f8c1c4]
+                    52    ??? (DVTInstrumentsUtilities + 175020) [0x10501abac]
+                      50    __42-[XRAnalysisCoreConfigurationManager seal]_block_invoke + 220 (InstrumentsAnalysisCore + 834272) [0x1052f7ae0]
+                        50    -[XRAnalysisCoreBindingHemisphere seal] + 44 (InstrumentsAnalysisCore + 1084384) [0x105334be0]
+                          50    -[XRAnalysisCoreTableManager seal] + 652 (InstrumentsAnalysisCore + 622892) [0x1052c412c]
+                            50    -[__NSDictionaryM enumerateKeysAndObjectsWithOptions:usingBlock:] + 360 (CoreFoundation + 551672) [0x1a5042af8]
+                              50    _dispatch_apply_with_attr_f + 1152 (libdispatch.dylib + 97500) [0x1a4dcacdc]
+                                50    _dispatch_apply_invoke_and_wait + 224 (libdispatch.dylib + 100696) [0x1a4dcb958]
+                                  50    _dispatch_client_callout2 + 20 (libdispatch.dylib + 15340) [0x1a4db6bec]
+                                    50    __mdict_enumerateKeysAndObjectsWithOptionsUsingBlock_block_invoke + 132 (CoreFoundation + 1881984) [0x1a5187780]
+                                      50    __NSDICTIONARY_IS_CALLING_OUT_TO_A_BLOCK__ + 24 (CoreFoundation + 291488) [0x1a50032a0]
+                                        50    __34-[XRAnalysisCoreTableManager seal]_block_invoke.111 + 68 (InstrumentsAnalysisCore + 624480) [0x1052c4760]
+                                          50    -[XRIndexedStorage seal:] + 756 (InstrumentsAnalysisCore + 312240) [0x1052783b0]
+                                            46    XRSpatialIndexMP<XRSpatialIndexMPStrategy<XRT64_CC32_R_Strategy>, 4096>::flush() + 52 (InstrumentsAnalysisCore + 965216) [0x105317a60]
+                                              46    XRSpatialIndexMP<XRSpatialIndexMPStrategy<XRT64_CC32_R_Strategy>, 4096>::_spillPreindex() + 1204 (InstrumentsAnalysisCore + 966752) [0x105318060]
+                                                19    <Frontmost App>
+                                            4     write + 8 (libsystem_kernel.dylib + 21820) [0x1a4f3d53c]
+                      2     __42-[XRAnalysisCoreConfigurationManager seal]_block_invoke + 200 (InstrumentsAnalysisCore + 834252) [0x1052f7acc]
+                        2     -[XRAnalysisCoreObjectRegistry seal] + 64 (InstrumentsAnalysisCore + 1381728) [0x10537d560]
+                          1     _commitToCurrentURL(XRAnalysisCoreObjectRegistry*) + 56 (InstrumentsAnalysisCore + 1398468) [0x1053816c4]
+                            1     write + 8 (libsystem_kernel.dylib + 21820) [0x1a4f3d53c]
+                          1     _commitToCurrentURL(XRAnalysisCoreObjectRegistry*) + 48 (InstrumentsAnalysisCore + 1398460) [0x1053816bc]
+                            1     write + 8 (libsystem_kernel.dylib + 21820) [0x1a4f3d53c]
+                    3     ??? (ActivityTracePlugin + 18704) [0x134c9c910]
+                      3     -[XRAnalysisCoreBindingHemisphere populateTableIDs:block:] + 260 (InstrumentsAnalysisCore + 1082312) [0x1053343c8]
+                        3     ??? (ActivityTracePlugin + 19692) [0x134c9ccec]
+                          3     -[XRAnalysisCoreImporterBundle importData:length:bindings:] + 4184 (InstrumentsAnalysisCore + 1110392) [0x10533b178]
+                            3     -[XRAnalysisCoreImporter _importRow:cursor:] + 164 (InstrumentsAnalysisCore + 52804) [0x105238e44]
+                              2     XRAnalysisCoreImporterWriteStringCol::execute(DTTableRowDecoder*, XRAnalysisCoreWriteCursor*) + 284 (InstrumentsAnalysisCore + 61684) [0x10523b0f4]
+                                2     XRAnalysisCoreWriteCursor::setColumnValueByStorage(unsigned char, XRStoredValue) const + 184 (InstrumentsAnalysisCore + 1042660) [0x10532a8e4]
+                              1     XRAnalysisCoreImporterWriteTypedArrayCol::execute(DTTableRowDecoder*, XRAnalysisCoreWriteCursor*) + 272 (InstrumentsAnalysisCore + 57020) [0x105239ebc]
+                                1     XRAnalysisCoreWriteCursor::setColumnValueByStorage(unsigned char, XRStoredValue) const + 184 (InstrumentsAnalysisCore + 1042660) [0x10532a8e4]
+  4     start + 520 (dyld + 20724) [0x10517d0f4]
+    4     NSApplicationMain + 1064 (AppKit + 16520) [0x1a7b57088]
+      4     -[NSApplication run] + 596 (AppKit + 207284) [0x1a7b859b4]
+        4     ??? (Instruments + 19228) [0x104d88b1c]
+          4     DVTCheckForUndeallocatedObjectsWithBlock + 164 (DVTFoundation + 1767996) [0x107f17a3c]
+            4     ??? (Instruments + 19436) [0x104d88bec]
+              4     -[NSApplication(NSEvent) _nextEventMatchingEventMask:untilDate:inMode:dequeue:] + 1332 (AppKit + 264356) [0x1a7b938a4]
+                4     _DPSNextEvent + 844 (AppKit + 270336) [0x1a7b95000]
+                  4     _BlockUntilNextEventMatchingListInModeWithFilter + 72 (HIToolbox + 207516) [0x1adbd6a9c]
+                    4     ReceiveNextEventCommon + 552 (HIToolbox + 208092) [0x1adbd6cdc]
+                      4     RunCurrentEventLoopInMode + 292 (HIToolbox + 208744) [0x1adbd6f68]
+                        4     CFRunLoopRunSpecific + 600 (CoreFoundation + 534324) [0x1a503e734]
+                          4     __CFRunLoopRun + 1728 (CoreFoundation + 538004) [0x1a503f594]
+                            4     __CFRunLoopDoBlocks + 412 (CoreFoundation + 542076) [0x1a504057c]
+                              4     __CFRUNLOOP_IS_CALLING_OUT_TO_A_BLOCK__ + 28 (CoreFoundation + 542472) [0x1a5040708]
+                                4     __deferBlockOntoMainThread_block_invoke_2 + 324 (ViewBridge + 24324) [0x1ac312f04]
+                                  4     __wrapBlockWithVoucher_block_invoke + 56 (ViewBridge + 25228) [0x1ac31328c]
+                                    4     __deferNSXPCInvocationOntoMainThread_block_invoke + 248 (ViewBridge + 79296) [0x1ac3205c0]
+                                      4     -[NSInvocation invoke] + 468 (CoreFoundation + 416332) [0x1a5021a4c]
+                                        4     __invoking___ + 148 (CoreFoundation + 416724) [0x1a5021bd4]
+                                          4     -[NSRemoteViewMarshal setRemoteObject:forKey:withReply:] + 72 (ViewBridge + 88000) [0x1ac3227c0]
+                                            4     -[NSRemoteViewMarshal exceptionSafeSetRemoteObject:forKey:withReply:] + 244 (ViewBridge + 88320) [0x1ac322900]
+                                              4     -[NSViewBridge nonLocalChangeInProgress:block:] + 180 (ViewBridge + 89036) [0x1ac322bcc]
+                                                4     -[NSViewBridge setObject:forKey:withKVO:] + 428 (ViewBridge + 83912) [0x1ac3217c8]
+                                                  4     withHintInProgress + 200 (ViewBridge + 678256) [0x1ac3b2970]
+                                                    4     __41-[NSViewBridge setObject:forKey:withKVO:]_block_invoke + 360 (ViewBridge + 120164) [0x1ac32a564]
+                                                      4     NSKeyValueDidChangeWithPerThreadPendingNotifications + 160 (Foundation + 1791856) [0x1a6065770]
+                                                        4     NSKeyValueDidChange + 356 (Foundation + 1058140) [0x1a5fb255c]
+                                                          4     NSKeyValueNotifyObserver + 292 (Foundation + 221500) [0x1a5ee613c]
+                                                            4     -[NSSavePanel observeValueForKeyPath:ofObject:change:context:] + 340 (AppKit + 10943468) [0x1a85c2bec]
+                                                              4     -[NSSavePanel completeWithReturnCode:url:urls:] + 440 (AppKit + 10935732) [0x1a85c0db4]
+                                                                4     -[NSSavePanel completeSheet:] + 108 (AppKit + 10935172) [0x1a85c0b84]
+                                                                  4     NSWindowEndWindowModalSession + 388 (AppKit + 9361996) [0x1a8440a4c]
+                                                                    4     -[NSSavePanel didEndPanelWithReturnCode:] + 88 (AppKit + 10934112) [0x1a85c0760]
+                                                                      4     __104-[NSDocument(NSDocumentSaving) _runModalSavePanelForSaveOperation:delegate:didSaveSelector:contextInfo:]_block_invoke.583 + 1248 (AppKit + 12165496) [0x1a86ed178]
+                                                                        4     __104-[NSDocument(NSDocumentSaving) _runModalSavePanelForSaveOperation:delegate:didSaveSelector:contextInfo:]_block_invoke_2.603 + 444 (AppKit + 12166460) [0x1a86ed53c]
+                                                                          4     -[NSDocument(NSDocumentSerializationAPIs) _continueActivityUsingBlock:] + 292 (AppKit + 6378132) [0x1a8168294]
+                                                                            4     -[NSDocument saveToURL:ofType:forSaveOperation:delegate:didSaveSelector:contextInfo:] + 120 (AppKit + 4350868) [0x1a7f79394]
+                                                                              4     -[NSDocument(NSDocumentSerializationAPIs) performActivityWithSynchronousWaiting:usingBlock:cancellationHandler:] + 580 (AppKit + 6377808) [0x1a8168150]
+                                                                                4     __85-[NSDocument saveToURL:ofType:forSaveOperation:delegate:didSaveSelector:contextInfo:]_block_invoke + 440 (AppKit + 4351320) [0x1a7f79558]
+                                                                                  4     -[NSDocument _commitEditingWithDelegate:didSomethingSelector:contextInfo:thenContinue:] + 112 (AppKit + 3954124) [0x1a7f185cc]
+                                                                                    4     -[NSDocument _commitEditingThenContinue:] + 464 (AppKit + 3954600) [0x1a7f187a8]
+                                                                                      4     __85-[NSDocument saveToURL:ofType:forSaveOperation:delegate:didSaveSelector:contextInfo:]_block_invoke_2 + 256 (AppKit + 4351600) [0x1a7f79670]
+                                                                                        4     -[NSDocument(NSDocumentSaving) _saveToURL:ofType:forSaveOperation:completionHandler:] + 112 (AppKit + 12176936) [0x1a86efe28]
+                                                                                          4     -[NSDocument(NSDocumentSerializationAPIs) _performFileAccess:] + 624 (AppKit + 6381580) [0x1a816900c]
+                                                                                            4     -[NSDocument(NSDocumentSerializationAPIs) continueFileAccessUsingBlock:] + 248 (AppKit + 6379608) [0x1a8168858]
+                                                                                              4     __85-[NSDocument(NSDocumentSaving) _saveToURL:ofType:forSaveOperation:completionHandler:]_block_invoke + 364 (AppKit + 12177312) [0x1a86effa0]
+                                                                                                4     __85-[NSDocument(NSDocumentSaving) _saveToURL:ofType:forSaveOperation:completionHandler:]_block_invoke_2.909 + 708 (AppKit + 12180008) [0x1a86f0a28]
+                                                                                                  4     -[NSDocument(NSDocumentSaving) _fileCoordinator:coordinateReadingContentsAndWritingItemAtURL:byAccessor:] + 404 (AppKit + 12172048) [0x1a86eeb10]
+                                                                                                    4     -[NSFileCoordinator(NSPrivate) _coordinateWritingItemAtURL:options:error:byAccessor:] + 784 (Foundation + 1314276) [0x1a5ff0de4]
+                                                                                                      4     -[NSFileCoordinator(NSPrivate) _withAccessArbiter:invokeAccessor:orDont:andRelinquishAccessClaim:] + 620 (Foundation + 397128) [0x1a5f10f48]
+                                                                                                        4     __85-[NSFileCoordinator(NSPrivate) _coordinateWritingItemAtURL:options:error:byAccessor:]_block_invoke.364 + 264 (Foundation + 2805792) [0x1a615d020]
+                                                                                                          4     __85-[NSDocument(NSDocumentSaving) _saveToURL:ofType:forSaveOperation:completionHandler:]_block_invoke_3.915 + 1244 (AppKit + 12181328) [0x1a86f0f50]
+                                                                                                            4     __85-[NSDocument(NSDocumentSaving) _saveToURL:ofType:forSaveOperation:completionHandler:]_block_invoke.1026 + 428 (AppKit + 12188096) [0x1a86f29c0]
+                                                                                                              4     __85-[NSDocument(NSDocumentSaving) _saveToURL:ofType:forSaveOperation:completionHandler:]_block_invoke_2.1029 + 256 (AppKit + 12188376) [0x1a86f2ad8]
+                                                                                                                4     -[PFTTraceDocument writeSafelyToURL:ofType:forSaveOperation:error:] + 508 (InstrumentsKit + 280608) [0x105d8c820]
+                                                                                                                  3     -[XRTrace saveDocument:error:] + 2268 (InstrumentsPlugIn + 311020) [0x1057b3eec]
+                                                                                                                    3     -[XRSymbolStoreManager sealAndMoveToURL:] + 52 (InstrumentsPlugIn + 983432) [0x105858188]
+                                                                                                                      3     -[XRSymbolStoreManager storeSymbolStoreData] + 112 (InstrumentsPlugIn + 993208) [0x10585a7b8]
+                                                                                                                        3     CSCppAddMmapArchivesToDirectory + 52 (CoreSymbolicationDT + 539672) [0x105b23c18]
+                                                                                                                          3     AddMmapArchiveToDirectory(CSCppSymbolOwner*, char const*) + 564 (CoreSymbolicationDT + 539244) [0x105b23a6c]
+                                                                                                                            3     WriteMMapArchiveToDirectory(CSCppSymbolOwner*, TMMapArchive&, char const*) + 816 (CoreSymbolicationDT + 538600) [0x105b237e8]
+                                                                                                                              3     write + 8 (libsystem_kernel.dylib + 21820) [0x1a4f3d53c]
+                                                                                                                                3     <Effective Thread QoS User Interactive, Requested Thread QoS User Interactive>
+                                                                                                                  1     -[XRTrace saveDocument:error:] + 1624 (InstrumentsPlugIn + 310376) [0x1057b3c68]
+                                                                                                                    1     -[XRTrace saveTemplate:asPartOfDocument:error:] + 2160 (InstrumentsPlugIn + 293780) [0x1057afb94]
+                                                                                                                      1     _NSWriteDataToFileWithExtendedAttributes + 644 (Foundation + 285372) [0x1a5ef5abc]
+                                                                                                                        1     -[NSData(NSData) enumerateByteRangesUsingBlock:] + 132 (Foundation + 292044) [0x1a5ef74cc]
+                                                                                                                          1     ___NSWriteDataToFileWithExtendedAttributes_block_invoke + 80 (Foundation + 292204) [0x1a5ef756c]
+                                                                                                                            1     write + 8 (libsystem_kernel.dylib + 21820) [0x1a4f3d53c]
+                                                                                                                              1     <Effective Thread QoS User Interactive, Requested Thread QoS User Interactive>
+
+  Binary Images:
+           0x104d84000 -        0x104d97fff  com.apple.dt.Instruments 13.2.1 (64551.30)                         <41B2B5A3-EDB8-3E49-AD77-BCA301CFAE77>  /Applications/Xcode.app/Contents/Applications/Instruments.app/Contents/MacOS/Instruments
+           0x104ff0000 -        0x10505ffff  com.apple.dt.instruments.DVTInstrumentsUtilities 13.2.1 (64551.32) <B7B417EB-A912-3414-BB1D-E1D0A12AB760>  /Applications/Xcode.app/Contents/SharedFrameworks/DVTInstrumentsUtilities.framework/Versions/A/DVTInstrumentsUtilities
+           0x105178000 -        0x1051f3fff  dyld (941.5)                                                       <D21A73EA-79CD-36EB-8AC9-2C5CF5181A27>  /usr/lib/dyld
+           0x10522c000 -        0x105407fff  com.apple.dt.InstrumentsAnalysisCore 13.2.1 (64551.30)             <F3BD2899-6EA6-30E6-AA1D-5F0616A21FED>  /Applications/Xcode.app/Contents/Applications/Instruments.app/Contents/Frameworks/InstrumentsAnalysisCore.framework/Versions/A/InstrumentsAnalysisCore
+           0x105768000 -        0x105997fff  com.apple.dt.instruments.InstrumentsPlugIn 13.2.1 (64551.30)       <E263BDCF-D293-3284-BA91-5CE9B5038EF1>  /Applications/Xcode.app/Contents/Applications/Instruments.app/Contents/Frameworks/InstrumentsPlugIn.framework/Versions/A/InstrumentsPlugIn
+           0x105aa0000 -        0x105bcffff  com.apple.CoreSymbolicationDT 13.2.1 (64551.21)                    <E9B2E393-4177-3E72-BF06-80400E8C5F83>  /Applications/Xcode.app/Contents/SharedFrameworks/CoreSymbolicationDT.framework/Versions/A/CoreSymbolicationDT
+           0x105d48000 -        0x105f4ffff  com.apple.dt.instruments.InstrumentsKit 13.2.1 (64551.30)          <03C5F634-EA13-3C53-B6B3-AC7DD1F70808>  /Applications/Xcode.app/Contents/Applications/Instruments.app/Contents/Frameworks/InstrumentsKit.framework/Versions/A/InstrumentsKit
+           0x107d68000 -        0x108487fff  com.apple.dt.DVTFoundation 13.2.1 (19564)                          <9B101362-D39F-34EE-A5C5-3FBD934AEDCD>  /Applications/Xcode.app/Contents/SharedFrameworks/DVTFoundation.framework/Versions/A/DVTFoundation
+           0x134c98000 -        0x134cabfff  com.apple.dt.instruments.ActivityTracePlugin 13.2.1 (64551.30)     <C96D50AA-32C9-34D4-AD83-876506BEC515>  /Applications/Xcode.app/Contents/Applications/Instruments.app/Contents/PlugIns/ActivityTracePlugin.xrplugin/Contents/MacOS/ActivityTracePlugin
+           0x161444000 -        0x16147bfff  com.apple.dt.instruments.ktracePlugin 13.2.1 (64551.30)            <7189431C-4847-321F-9EBB-F690A5A8CAFC>  /Applications/Xcode.app/Contents/Applications/Instruments.app/Contents/PlugIns/ktracePlugin.xrplugin/Contents/MacOS/ktracePlugin
+           0x165850000 -        0x16590ffff  com.apple.dt.perfteam.BuiltinModelerPlugin 1.0 (64551.30)          <1BFCACCD-E243-3C8B-8ED7-80672AD7E9B7>  /Applications/Xcode.app/Contents/Applications/Instruments.app/Contents/PlugIns/BuiltinModelerPlugin.xrplugin/Contents/MacOS/BuiltinModelerPlugin
+           0x1a4db3000 -        0x1a4df9fff  libdispatch.dylib (1324.60.3)                                      <93E1DCFC-EF56-3113-8E7C-1BA85266A93B>  /usr/lib/system/libdispatch.dylib
+           0x1a4f38000 -        0x1a4f6dfff  libsystem_kernel.dylib (8019.80.24)                                <384945E6-DD71-37E5-9A3D-84FFF14A1E60>  /usr/lib/system/libsystem_kernel.dylib
+           0x1a4f6e000 -        0x1a4f7afff  libsystem_pthread.dylib (485.60.2)                                 <F7B2ECCF-E6F1-3109-AE81-9028C0B8332A>  /usr/lib/system/libsystem_pthread.dylib
+           0x1a4f88000 -        0x1a4f8ffff  libsystem_platform.dylib (273.40.1)                                <49CF1536-27E5-3A34-9724-D75552CBAB56>  /usr/lib/system/libsystem_platform.dylib
+           0x1a4fbc000 -        0x1a54fffff  com.apple.CoreFoundation 6.9 (1856.105)                            <16FADF8B-A3AF-3E0C-B5FB-CE9A9CDC8747>  /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
+           0x1a5eb0000 -        0x1a629dfff  com.apple.Foundation 6.9 (1856.105)                                <90321A38-43A5-3767-9A9C-2C631338B9BC>  /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
+           0x1a7b53000 -        0x1a8a09fff  com.apple.AppKit 6.9 (2113.30.116)                                 <1B65B629-6D3B-3FCD-AD43-E5683A9F94B7>  /System/Library/Frameworks/AppKit.framework/Versions/C/AppKit
+           0x1ac30d000 -        0x1ac408fff  com.apple.ViewBridge 638.3 (638.3)                                 <48FF4C98-3F7F-32EB-B16B-60C2BB34EE74>  /System/Library/PrivateFrameworks/ViewBridge.framework/Versions/A/ViewBridge
+           0x1adba4000 -        0x1aded3fff  com.apple.HIToolbox 2.1.1 (1113.6)                                 <B5A3FE9A-833B-3697-AC9C-1E9E8EB11BAC>  /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/HIToolbox
+
+
+Powerstats for:   softwareupdated
+UUID:             198FF96C-C4C2-3019-A882-36BEBB847421
+Path:             /System/Library/CoreServices/Software Update.app/Contents/Resources/softwareupdated
+Codesigning ID:   com.apple.softwareupdated
+Architecture:     arm64
+Start time:       2022-02-28 04:42:33.754 -0600
+End time:         2022-02-28 07:29:26.723 -0600
+Num samples:      1161 (33%)
+Primary state:    1152 samples Non-Frontmost App, Non-Suppressed, Kernel mode, Effective Thread QoS Utility, Requested Thread QoS Utility, Override Thread QoS Unspecified
+User Activity:    419 samples Idle, 742 samples Active
+Power Source:     0 samples on Battery, 1161 samples on AC
+  1161  start_wqthread + 8 (libsystem_pthread.dylib + 8216) [0x1a4f70018]
+    1161  _pthread_wqthread + 288 (libsystem_pthread.dylib + 13060) [0x1a4f71304]
+      1161  _dispatch_workloop_worker_thread + 656 (libdispatch.dylib + 91912) [0x1a4dc9708]
+        1160  _dispatch_lane_invoke + 392 (libdispatch.dylib + 48804) [0x1a4dbeea4]
+          1160  _dispatch_lane_serial_drain + 672 (libdispatch.dylib + 45872) [0x1a4dbe330]
+            1160  _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+              1160  _dispatch_call_block_and_release + 32 (libdispatch.dylib + 7776) [0x1a4db4e60]
+                1152  __99-[_PKURLSessionDelegate _notifyCompletionHandlerWithData:withURLResponse:withResumeData:withError:]_block_invoke + 96 (PackageKit + 381904) [0x1c28a43d0]
+                  1152  __141-[PKURLDownload _downloadChunk:usingQueue:withChunkIndex:withChunkSizes:withChunksValid:withChunkAttempt:withBytesDownloadedSoFor:withReply:]_block_invoke_3 + 396 (PackageKit + 488244) [0x1c28be334]
+                    1152  -[NSConcreteFileHandle writeData:] + 212 (Foundation + 346280) [0x1a5f048a8]
+                      1152  -[NSData(NSData) enumerateByteRangesUsingBlock:] + 132 (Foundation + 292044) [0x1a5ef74cc]
+                        1152  __34-[NSConcreteFileHandle writeData:]_block_invoke + 80 (Foundation + 346488) [0x1a5f04978]
+                          1152  write + 8 (libsystem_kernel.dylib + 21820) [0x1a4f3d53c]
+                7     __60-[SUCatalogDataManager _retrieveURL:forProduct:withHandler:]_block_invoke_4 + 188 (SoftwareUpdate + 91700) [0x1b2f40634]
+                  7     _NSWriteDataToFileWithExtendedAttributes + 644 (Foundation + 285372) [0x1a5ef5abc]
+                    7     -[NSData(NSData) enumerateByteRangesUsingBlock:] + 132 (Foundation + 292044) [0x1a5ef74cc]
+                      7     ___NSWriteDataToFileWithExtendedAttributes_block_invoke + 80 (Foundation + 292204) [0x1a5ef756c]
+                        7     write + 8 (libsystem_kernel.dylib + 21820) [0x1a4f3d53c]
+                          4     <Effective Thread QoS Default, Requested Thread QoS Default>
+                          3     <Effective Thread QoS User Initiated, Requested Thread QoS User Initiated>
+                1     __51-[SUCatalogDataManager retrieveCatalogWithHandler:]_block_invoke + 836 (SoftwareUpdate + 69804) [0x1b2f3b0ac]
+                  1     _NSWriteDataToFileWithExtendedAttributes + 644 (Foundation + 285372) [0x1a5ef5abc]
+                    1     -[NSData(NSData) enumerateByteRangesUsingBlock:] + 132 (Foundation + 292044) [0x1a5ef74cc]
+                      1     ___NSWriteDataToFileWithExtendedAttributes_block_invoke + 80 (Foundation + 292204) [0x1a5ef756c]
+                        1     write + 8 (libsystem_kernel.dylib + 21820) [0x1a4f3d53c]
+                          1     <Effective Thread QoS User Initiated, Requested Thread QoS User Initiated>
+        1     _dispatch_lane_invoke + 444 (libdispatch.dylib + 48856) [0x1a4dbeed8]
+          1     _dispatch_lane_serial_drain + 672 (libdispatch.dylib + 45872) [0x1a4dbe330]
+            1     _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+              1     _dispatch_call_block_and_release + 32 (libdispatch.dylib + 7776) [0x1a4db4e60]
+                1     ??? (CFNetwork + 359412) [0x1a9c3cbf4]
+                  1     ??? (CFNetwork + 809816) [0x1a9caab58]
+                    1     __60-[SUProduct(AppleInternal) fetchRemoteMajorProduct:getIcon:]_block_invoke + 396 (SoftwareUpdate + 296840) [0x1b2f72788]
+                      1     _NSWriteDataToFileWithExtendedAttributes + 644 (Foundation + 285372) [0x1a5ef5abc]
+                        1     -[_NSDispatchData enumerateByteRangesUsingBlock:] + 112 (Foundation + 791396) [0x1a5f71364]
+                          1     _dispatch_data_apply + 188 (libdispatch.dylib + 219064) [0x1a4de87b8]
+                            1     __49-[_NSDispatchData enumerateByteRangesUsingBlock:]_block_invoke + 68 (Foundation + 791504) [0x1a5f713d0]
+                              1     ___NSWriteDataToFileWithExtendedAttributes_block_invoke + 80 (Foundation + 292204) [0x1a5ef756c]
+                                1     write + 8 (libsystem_kernel.dylib + 21820) [0x1a4f3d53c]
+                                  1     <Effective Thread QoS User Initiated, Requested Thread QoS User Initiated>
+
+  Binary Images:
+           0x100510000 -                ???  softwareupdated                                  <198FF96C-C4C2-3019-A882-36BEBB847421>  /System/Library/CoreServices/Software Update.app/Contents/Resources/softwareupdated
+           0x1a4db3000 -        0x1a4df9fff  libdispatch.dylib (1324.60.3)                    <93E1DCFC-EF56-3113-8E7C-1BA85266A93B>  /usr/lib/system/libdispatch.dylib
+           0x1a4f38000 -        0x1a4f6dfff  libsystem_kernel.dylib (8019.80.24)              <384945E6-DD71-37E5-9A3D-84FFF14A1E60>  /usr/lib/system/libsystem_kernel.dylib
+           0x1a4f6e000 -        0x1a4f7afff  libsystem_pthread.dylib (485.60.2)               <F7B2ECCF-E6F1-3109-AE81-9028C0B8332A>  /usr/lib/system/libsystem_pthread.dylib
+           0x1a5eb0000 -        0x1a629dfff  com.apple.Foundation 6.9 (1856.105)              <90321A38-43A5-3767-9A9C-2C631338B9BC>  /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
+           0x1a9be5000 -        0x1aa09dfff  com.apple.CFNetwork 1329 (1329)                  <A48C10C0-0AEF-3D9F-B050-06420AB96929>  /System/Library/Frameworks/CFNetwork.framework/Versions/A/CFNetwork
+           0x1b2f2a000 -        0x1b2ff5fff  com.apple.SoftwareUpdate.framework 6 (1512.81.3) <91DA2986-0BE3-3794-9286-7324D2A76B0D>  /System/Library/PrivateFrameworks/SoftwareUpdate.framework/Versions/A/SoftwareUpdate
+           0x1c2847000 -        0x1c2912fff  com.apple.PackageKit 3.0 (1125)                  <3E8E3639-8776-3A43-BC27-03F7B0D24445>  /System/Library/PrivateFrameworks/PackageKit.framework/Versions/A/PackageKit
+
+System Profile:
+Network Service: Wi-Fi, AirPort, en0
+Thunderbolt Bus: MacBook Pro, Apple Inc.
+Thunderbolt Bus: MacBook Pro, Apple Inc.
+Boot Volume File System Type: apfs
+Memory Module: LPDDR4
+USB Device: USB31Bus
+USB Device: USB31Bus
+Display: Color LCD, 2560 x 1600 Retina, Main, MirrorOff, Online
+Model: MacBookPro17,1, BootROM 7429.81.3, proc 8:4:4 processors, 8 GB, SMC 
+Graphics: Apple M1, Apple M1, Built-In
+AirPort: Wi-Fi, wl0: Oct 26 2021 16:10:41 version 18.20.310.15.7.8.120 FWID 01-5d6c3867
+Bluetooth: Version (null), 0 services, 0 devices, 0 incoming serial ports

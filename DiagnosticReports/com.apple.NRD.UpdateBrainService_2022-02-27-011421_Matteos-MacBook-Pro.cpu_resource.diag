@@ -1,0 +1,178 @@
+Date/Time:        2022-02-27 01:11:25.612 -0600
+End time:         2022-02-27 01:14:20.937 -0600
+OS Version:       macOS 12.2 (Build 21D49)
+Architecture:     arm64e
+Report Version:   35
+Incident Identifier: 12E5FA53-8C2A-4450-BF73-6EC19E91E9C1
+Share With Devs:  Yes
+
+Data Source:      Microstackshots
+Shared Cache:     B90241B2-E425-3982-B3F6-26C4567CBB49 slid base address 0x1a4c68000, slide 0x24c68000
+
+Command:          com.apple.NRD.UpdateBrainService
+Path:             /private/var/db/*/com.apple.NRD.UpdateBrainService
+Identifier:       com.apple.NRD.UpdateBrainService
+Version:          1.0 (1)
+Build Version:    142
+Project Name:     RecoveryOSUpdateBrainAsset
+Source Version:   1395080004000000
+Architecture:     arm64e
+Parent:           UNKNOWN [1]
+PID:              68759
+
+Event:            cpu usage
+Action taken:     none
+CPU:              90 seconds cpu time over 175 seconds (51% cpu average), exceeding limit of 50% cpu over 180 seconds
+CPU limit:        90s
+Limit duration:   180s
+CPU used:         90s
+CPU duration:     175s
+Duration:         175.32s
+Duration Sampled: 153.12s
+Steps:            38
+
+Hardware model:   MacBookPro17,1
+Active cpus:      8
+HW page size:     16384
+VM page size:     16384
+
+Fan speed:        0 rpm
+Advisory levels:  Battery -> 3, User -> 2, ThermalPressure -> 0, Combined -> 2
+Free disk space:  17.59 GB/228.27 GB, low space threshold 3072 MB
+
+Heaviest stack for the target process:
+  34  start_wqthread + 8 (libsystem_pthread.dylib + 8216) [0x1a4f70018]
+  34  _pthread_wqthread + 288 (libsystem_pthread.dylib + 13060) [0x1a4f71304]
+  34  _dispatch_workloop_worker_thread + 656 (libdispatch.dylib + 91912) [0x1a4dc9708]
+  34  _dispatch_lane_invoke + 392 (libdispatch.dylib + 48804) [0x1a4dbeea4]
+  34  _dispatch_lane_serial_drain + 672 (libdispatch.dylib + 45872) [0x1a4dbe330]
+  34  _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+  34  _dispatch_call_block_and_release + 32 (libdispatch.dylib + 7776) [0x1a4db4e60]
+  34  __74-[NRDUpdateBrainServerImpl installNeRDUpdate:options:progress:completion:]_block_invoke.549 + 196 (com.apple.NRD.UpdateBrainService + 164092) [0x1022b40fc]
+  34  -[NRDUpdateBrainServerCore installNeRDUpdate:options:background:progress:] + 1076 (com.apple.NRD.UpdateBrainService + 141372) [0x1022ae83c]
+  34  perform_update + 396 (com.apple.NRD.UpdateBrainService + 104828) [0x1022a597c]
+  34  preflightPersonalize + 3428 (com.apple.NRD.UpdateBrainService + 42916) [0x1022967a4]
+  34  +[MSUSFRTargetController populateSystemRecovery:srcBundlePath:dstBundlePath:nsih:cancel:error:] + 1224 (com.apple.NRD.UpdateBrainService + 96356) [0x1022a3864]
+  34  -[MSUBootObjectCopier populateSystemRecoveryVolume:fromBuildIdentity:withNSIH:fetchBootObjectBlock:] + 736 (com.apple.NRD.UpdateBrainService + 1218340) [0x1023b5724]
+  34  __95+[MSUSFRTargetController populateSystemRecovery:srcBundlePath:dstBundlePath:nsih:cancel:error:]_block_invoke + 1104 (com.apple.NRD.UpdateBrainService + 99136) [0x1022a4340]
+  33  -[MSUTargetController copyBaseSystemToPath:fromImage:orPatch:baseImage:architecture:error:] + 1400 (com.apple.NRD.UpdateBrainService + 75688) [0x10229e7a8]
+  33  ParallelCompressionAFSCStreamWrite + 308 (com.apple.NRD.UpdateBrainService + 279500) [0x1022d03cc]
+  33  compression_encode_buffer + 356 (com.apple.NRD.UpdateBrainService + 595696) [0x10231d6f0]
+  33  lzvn_encode_buffer + 44 (com.apple.NRD.UpdateBrainService + 371568) [0x1022e6b70]
+  33  lzvn_encode_partial + 204 (com.apple.NRD.UpdateBrainService + 371800) [0x1022e6c58]
+  5   lzvnEncode + 1512 (com.apple.NRD.UpdateBrainService + 370496) [0x1022e6740]
+
+
+Powerstats for:   com.apple.NRD.UpdateBrainService [68759]
+UUID:             A9E84419-88DE-3B49-AB8B-E7AEE47ACAB5
+Path:             /private/var/db/*/com.apple.NRD.UpdateBrainService
+Identifier:       com.apple.NRD.UpdateBrainService
+Version:          1.0 (1)
+Build Version:    142
+Project Name:     RecoveryOSUpdateBrainAsset
+Source Version:   1395080004000000
+Architecture:     arm64e
+Parent:           UNKNOWN [1]
+UID:              0
+Sudden Term:      Tracked (allows idle exit)
+Footprint:        7968 KB
+Start time:       2022-02-27 01:13:25.321 -0600
+End time:         2022-02-27 01:14:20.834 -0600
+Num samples:      34 (89%)
+Primary state:    33 samples Non-Frontmost App, Non-Suppressed, User mode, Effective Thread QoS Background, Requested Thread QoS Default, Override Thread QoS Unspecified
+User Activity:    34 samples Idle, 0 samples Active
+Power Source:     0 samples on Battery, 34 samples on AC
+  34  start_wqthread + 8 (libsystem_pthread.dylib + 8216) [0x1a4f70018]
+    34  _pthread_wqthread + 288 (libsystem_pthread.dylib + 13060) [0x1a4f71304]
+      34  _dispatch_workloop_worker_thread + 656 (libdispatch.dylib + 91912) [0x1a4dc9708]
+        34  _dispatch_lane_invoke + 392 (libdispatch.dylib + 48804) [0x1a4dbeea4]
+          34  _dispatch_lane_serial_drain + 672 (libdispatch.dylib + 45872) [0x1a4dbe330]
+            34  _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+              34  _dispatch_call_block_and_release + 32 (libdispatch.dylib + 7776) [0x1a4db4e60]
+                34  __74-[NRDUpdateBrainServerImpl installNeRDUpdate:options:progress:completion:]_block_invoke.549 + 196 (com.apple.NRD.UpdateBrainService + 164092) [0x1022b40fc]
+                  34  -[NRDUpdateBrainServerCore installNeRDUpdate:options:background:progress:] + 1076 (com.apple.NRD.UpdateBrainService + 141372) [0x1022ae83c]
+                    34  perform_update + 396 (com.apple.NRD.UpdateBrainService + 104828) [0x1022a597c]
+                      34  preflightPersonalize + 3428 (com.apple.NRD.UpdateBrainService + 42916) [0x1022967a4]
+                        34  +[MSUSFRTargetController populateSystemRecovery:srcBundlePath:dstBundlePath:nsih:cancel:error:] + 1224 (com.apple.NRD.UpdateBrainService + 96356) [0x1022a3864]
+                          34  -[MSUBootObjectCopier populateSystemRecoveryVolume:fromBuildIdentity:withNSIH:fetchBootObjectBlock:] + 736 (com.apple.NRD.UpdateBrainService + 1218340) [0x1023b5724]
+                            34  __95+[MSUSFRTargetController populateSystemRecovery:srcBundlePath:dstBundlePath:nsih:cancel:error:]_block_invoke + 1104 (com.apple.NRD.UpdateBrainService + 99136) [0x1022a4340]
+                              33  -[MSUTargetController copyBaseSystemToPath:fromImage:orPatch:baseImage:architecture:error:] + 1400 (com.apple.NRD.UpdateBrainService + 75688) [0x10229e7a8]
+                                33  ParallelCompressionAFSCStreamWrite + 308 (com.apple.NRD.UpdateBrainService + 279500) [0x1022d03cc]
+                                  33  compression_encode_buffer + 356 (com.apple.NRD.UpdateBrainService + 595696) [0x10231d6f0]
+                                    33  lzvn_encode_buffer + 44 (com.apple.NRD.UpdateBrainService + 371568) [0x1022e6b70]
+                                      33  lzvn_encode_partial + 204 (com.apple.NRD.UpdateBrainService + 371800) [0x1022e6c58]
+                                        5   lzvnEncode + 1512 (com.apple.NRD.UpdateBrainService + 370496) [0x1022e6740]
+                                        4   lzvnEncode + 172 (com.apple.NRD.UpdateBrainService + 369156) [0x1022e6204]
+                                        3   lzvnEncode + 780 (com.apple.NRD.UpdateBrainService + 369764) [0x1022e6464]
+                                        2   lzvnEncode + 1056 (com.apple.NRD.UpdateBrainService + 370040) [0x1022e6578]
+                                        2   lzvnEncode + 836 (com.apple.NRD.UpdateBrainService + 369820) [0x1022e649c]
+                                        2   lzvnEncode + 560 (com.apple.NRD.UpdateBrainService + 369544) [0x1022e6388]
+                                        2   lzvnEncode + 220 (com.apple.NRD.UpdateBrainService + 369204) [0x1022e6234]
+                                        1   lzvnEncode + 1328 (com.apple.NRD.UpdateBrainService + 370312) [0x1022e6688]
+                                        1   lzvnEncode + 1308 (com.apple.NRD.UpdateBrainService + 370292) [0x1022e6674]
+                                        1   lzvnEncode + 1256 (com.apple.NRD.UpdateBrainService + 370240) [0x1022e6640]
+                                        1   lzvnEncode + 1112 (com.apple.NRD.UpdateBrainService + 370096) [0x1022e65b0]
+                                        1   lzvnEncode + 980 (com.apple.NRD.UpdateBrainService + 369964) [0x1022e652c]
+                                        1   lzvnEncode + 704 (com.apple.NRD.UpdateBrainService + 369688) [0x1022e6418]
+                                        1   lzvnEncode + 408 (com.apple.NRD.UpdateBrainService + 369392) [0x1022e62f0]
+                                        1   lzvnEncode + 372 (com.apple.NRD.UpdateBrainService + 369356) [0x1022e62cc]
+                                        1   lzvnEncode + 216 (com.apple.NRD.UpdateBrainService + 369200) [0x1022e6230]
+                                        1   lzvnEncode + 192 (com.apple.NRD.UpdateBrainService + 369176) [0x1022e6218]
+                                        1   lzvnEncode + 128 (com.apple.NRD.UpdateBrainService + 369112) [0x1022e61d8]
+                                        1   lzvnEncode + 112 (com.apple.NRD.UpdateBrainService + 369096) [0x1022e61c8]
+                                        1   lzvnEncode + 76 (com.apple.NRD.UpdateBrainService + 369060) [0x1022e61a4]
+                              1   read + 8 (libsystem_kernel.dylib + 9528) [0x1a4f3a538]
+                                1   <Kernel mode>
+
+  Binary Images:
+           0x10228c000 -        0x1024affff  com.apple.NRD.UpdateBrainService 1.0 (1) <A9E84419-88DE-3B49-AB8B-E7AEE47ACAB5>  /private/var/db/*/com.apple.NRD.UpdateBrainService
+           0x1a4db3000 -        0x1a4df9fff  libdispatch.dylib (1324.60.3)            <93E1DCFC-EF56-3113-8E7C-1BA85266A93B>  /usr/lib/system/libdispatch.dylib
+           0x1a4f38000 -        0x1a4f6dfff  libsystem_kernel.dylib (8019.80.24)      <384945E6-DD71-37E5-9A3D-84FFF14A1E60>  /usr/lib/system/libsystem_kernel.dylib
+           0x1a4f6e000 -        0x1a4f7afff  libsystem_pthread.dylib (485.60.2)       <F7B2ECCF-E6F1-3109-AE81-9028C0B8332A>  /usr/lib/system/libsystem_pthread.dylib
+
+
+Powerstats for:   com.apple.StreamingUnzipService
+UUID:             94E35F0B-8163-3595-987F-7F54331F7098
+Path:             /System/Library/PrivateFrameworks/StreamingZip.framework/Versions/A/XPCServices/com.apple.StreamingUnzipService.xpc/Contents/MacOS/com.apple.StreamingUnzipService
+Identifier:       com.apple.StreamingUnzipService
+Version:          1.0 (1)
+Build Version:    4228
+Project Name:     StreamingZip
+Source Version:   182000000000000
+Architecture:     arm64e
+Start time:       2022-02-27 01:11:47.710 -0600
+End time:         2022-02-27 01:12:26.077 -0600
+Num samples:      2 (5%)
+Primary state:    2 samples Non-Frontmost App, Non-Suppressed, User mode, Effective Thread QoS Background, Requested Thread QoS Background, Override Thread QoS Unspecified
+User Activity:    2 samples Idle, 0 samples Active
+Power Source:     0 samples on Battery, 2 samples on AC
+  2  start_wqthread + 8 (libsystem_pthread.dylib + 8216) [0x1a4f70018]
+    2  _pthread_wqthread + 288 (libsystem_pthread.dylib + 13060) [0x1a4f71304]
+      2  _dispatch_workloop_worker_thread + 656 (libdispatch.dylib + 91912) [0x1a4dc9708]
+        2  _dispatch_lane_invoke + 444 (libdispatch.dylib + 48856) [0x1a4dbeed8]
+          2  _dispatch_lane_serial_drain + 376 (libdispatch.dylib + 45576) [0x1a4dbe208]
+            2  _dispatch_mach_invoke + 456 (libdispatch.dylib + 134328) [0x1a4dd3cb8]
+              2  _dispatch_lane_serial_drain + 376 (libdispatch.dylib + 45576) [0x1a4dbe208]
+                2  _dispatch_mach_msg_invoke + 476 (libdispatch.dylib + 130920) [0x1a4dd2f68]
+                  2  _dispatch_client_callout4 + 20 (libdispatch.dylib + 15468) [0x1a4db6c6c]
+                    2  _xpc_connection_mach_event + 1368 (libxpc.dylib + 52216) [0x1a4cc6bf8]
+                      2  _xpc_connection_call_event_handler + 176 (libxpc.dylib + 57816) [0x1a4cc81d8]
+                        2  message_handler + 228 (Foundation + 138444) [0x1a5ed1ccc]
+                          2  -[NSXPCConnection _decodeAndInvokeMessageWithEvent:flags:] + 1820 (Foundation + 447248) [0x1a5f1d310]
+                            2  __NSXPCCONNECTION_IS_CALLING_OUT_TO_EXPORTED_OBJECT_S2__ + 16 (Foundation + 451376) [0x1a5f1e330]
+                              2  ??? (com.apple.StreamingUnzipService + 85472) [0x10022cde0]
+                                2  -[NSData(NSData) enumerateByteRangesUsingBlock:] + 132 (Foundation + 292044) [0x1a5ef74cc]
+                                  2  ??? (com.apple.StreamingUnzipService + 85864) [0x10022cf68]
+                                    2  ??? (com.apple.StreamingUnzipService + 71428) [0x100229704]
+                                      2  compression_stream_process + 228 (libcompression.dylib + 4068) [0x1afc74fe4]
+                                        2  zlib_decode_stream_process + 252 (libcompression.dylib + 24604) [0x1afc7a01c]
+                                          1  zlibDecodeBuffer + 1528 (libcompression.dylib + 26576) [0x1afc7a7d0]
+                                          1  zlibDecodeBuffer + 1492 (libcompression.dylib + 26540) [0x1afc7a7ac]
+
+  Binary Images:
+           0x100218000 -        0x10023ffff  com.apple.StreamingUnzipService 1.0 (1) <94E35F0B-8163-3595-987F-7F54331F7098>  /System/Library/PrivateFrameworks/StreamingZip.framework/Versions/A/XPCServices/com.apple.StreamingUnzipService.xpc/Contents/MacOS/com.apple.StreamingUnzipService
+           0x1a4cba000 -        0x1a4cf3fff  libxpc.dylib (2235.80.3)                <FD3E0E8D-4618-3CE5-A24A-5639BE86B979>  /usr/lib/system/libxpc.dylib
+           0x1a4db3000 -        0x1a4df9fff  libdispatch.dylib (1324.60.3)           <93E1DCFC-EF56-3113-8E7C-1BA85266A93B>  /usr/lib/system/libdispatch.dylib
+           0x1a4f6e000 -        0x1a4f7afff  libsystem_pthread.dylib (485.60.2)      <F7B2ECCF-E6F1-3109-AE81-9028C0B8332A>  /usr/lib/system/libsystem_pthread.dylib
+           0x1a5eb0000 -        0x1a629dfff  com.apple.Foundation 6.9 (1856.105)     <90321A38-43A5-3767-9A9C-2C631338B9BC>  /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
+           0x1afc74000 -        0x1afd3dfff  libcompression.dylib (125)              <BB47F9FE-37B4-3D38-9ABE-EC4DADC0047B>  /usr/lib/libcompression.dylib

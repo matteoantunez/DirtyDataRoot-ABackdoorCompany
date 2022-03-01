@@ -1,0 +1,339 @@
+Date/Time:        2022-02-28 04:44:38.384 -0600
+End time:         2022-02-28 04:55:29.819 -0600
+OS Version:       macOS 12.2 (Build 21D49)
+Architecture:     arm64e
+Report Version:   35
+Incident Identifier: D53CF320-99AD-418D-AA52-64CA875A383E
+Share With Devs:  Yes
+
+Data Source:      Microstackshots
+Shared Cache:     B90241B2-E425-3982-B3F6-26C4567CBB49 slid base address 0x1a4c68000, slide 0x24c68000
+
+Command:          softwareupdated
+Path:             /System/Library/CoreServices/Software Update.app/Contents/Resources/softwareupdated
+Codesigning ID:   com.apple.softwareupdated
+Architecture:     arm64
+PID:              33189
+
+Event:            disk writes
+Action taken:     none
+Writes:           8590.70 MB of file backed memory dirtied over 651 seconds (13.19 MB per second average), exceeding limit of 99.42 KB per second over 86400 seconds
+Writes limit:     8589.93 MB
+Limit duration:   86400s
+Writes caused:    8590.70 MB
+Writes duration:  651s
+Duration:         651.43s
+Duration Sampled: 650.65s
+Steps:            1235 ( (10.49 MB/step))
+
+Hardware model:   MacBookPro17,1
+Active cpus:      8
+HW page size:     16384
+VM page size:     16384
+
+Advisory levels:  Battery -> 3, User -> 2, ThermalPressure -> 0, Combined -> 2
+Free disk space:  11.50 GB/228.27 GB, low space threshold 3072 MB
+
+Heaviest stack for the target process:
+  813  start_wqthread + 8 (libsystem_pthread.dylib + 8216) [0x1a4f70018]
+  813  _pthread_wqthread + 288 (libsystem_pthread.dylib + 13060) [0x1a4f71304]
+  813  _dispatch_workloop_worker_thread + 656 (libdispatch.dylib + 91912) [0x1a4dc9708]
+  813  _dispatch_lane_invoke + 392 (libdispatch.dylib + 48804) [0x1a4dbeea4]
+  813  _dispatch_lane_serial_drain + 672 (libdispatch.dylib + 45872) [0x1a4dbe330]
+  813  _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+  813  _dispatch_call_block_and_release + 32 (libdispatch.dylib + 7776) [0x1a4db4e60]
+  813  __99-[_PKURLSessionDelegate _notifyCompletionHandlerWithData:withURLResponse:withResumeData:withError:]_block_invoke + 96 (PackageKit + 381904) [0x1c28a43d0]
+  813  __141-[PKURLDownload _downloadChunk:usingQueue:withChunkIndex:withChunkSizes:withChunksValid:withChunkAttempt:withBytesDownloadedSoFor:withReply:]_block_invoke_3 + 396 (PackageKit + 488244) [0x1c28be334]
+  813  -[NSConcreteFileHandle writeData:] + 212 (Foundation + 346280) [0x1a5f048a8]
+  813  -[NSData(NSData) enumerateByteRangesUsingBlock:] + 132 (Foundation + 292044) [0x1a5ef74cc]
+  813  __34-[NSConcreteFileHandle writeData:]_block_invoke + 80 (Foundation + 346488) [0x1a5f04978]
+  813  write + 8 (libsystem_kernel.dylib + 21820) [0x1a4f3d53c]
+
+
+Powerstats for:   softwareupdated [33189]
+UUID:             198FF96C-C4C2-3019-A882-36BEBB847421
+Path:             /System/Library/CoreServices/Software Update.app/Contents/Resources/softwareupdated
+Codesigning ID:   com.apple.softwareupdated
+Architecture:     arm64
+Footprint:        80.98 MB
+Pageins:          156 pages
+Start time:       2022-02-28 04:44:38.392 -0600
+End time:         2022-02-28 04:55:29.041 -0600
+Num samples:      813 (66%)
+Primary state:    813 samples Non-Frontmost App, Non-Suppressed, Kernel mode, Effective Thread QoS Utility, Requested Thread QoS Utility, Override Thread QoS Unspecified
+User Activity:    213 samples Idle, 600 samples Active
+Power Source:     0 samples on Battery, 813 samples on AC
+  813  start_wqthread + 8 (libsystem_pthread.dylib + 8216) [0x1a4f70018]
+    813  _pthread_wqthread + 288 (libsystem_pthread.dylib + 13060) [0x1a4f71304]
+      813  _dispatch_workloop_worker_thread + 656 (libdispatch.dylib + 91912) [0x1a4dc9708]
+        813  _dispatch_lane_invoke + 392 (libdispatch.dylib + 48804) [0x1a4dbeea4]
+          813  _dispatch_lane_serial_drain + 672 (libdispatch.dylib + 45872) [0x1a4dbe330]
+            813  _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+              813  _dispatch_call_block_and_release + 32 (libdispatch.dylib + 7776) [0x1a4db4e60]
+                813  __99-[_PKURLSessionDelegate _notifyCompletionHandlerWithData:withURLResponse:withResumeData:withError:]_block_invoke + 96 (PackageKit + 381904) [0x1c28a43d0]
+                  813  __141-[PKURLDownload _downloadChunk:usingQueue:withChunkIndex:withChunkSizes:withChunksValid:withChunkAttempt:withBytesDownloadedSoFor:withReply:]_block_invoke_3 + 396 (PackageKit + 488244) [0x1c28be334]
+                    813  -[NSConcreteFileHandle writeData:] + 212 (Foundation + 346280) [0x1a5f048a8]
+                      813  -[NSData(NSData) enumerateByteRangesUsingBlock:] + 132 (Foundation + 292044) [0x1a5ef74cc]
+                        813  __34-[NSConcreteFileHandle writeData:]_block_invoke + 80 (Foundation + 346488) [0x1a5f04978]
+                          813  write + 8 (libsystem_kernel.dylib + 21820) [0x1a4f3d53c]
+
+  Binary Images:
+           0x100510000 -                ???  softwareupdated                     <198FF96C-C4C2-3019-A882-36BEBB847421>  /System/Library/CoreServices/Software Update.app/Contents/Resources/softwareupdated
+           0x1a4db3000 -        0x1a4df9fff  libdispatch.dylib (1324.60.3)       <93E1DCFC-EF56-3113-8E7C-1BA85266A93B>  /usr/lib/system/libdispatch.dylib
+           0x1a4f38000 -        0x1a4f6dfff  libsystem_kernel.dylib (8019.80.24) <384945E6-DD71-37E5-9A3D-84FFF14A1E60>  /usr/lib/system/libsystem_kernel.dylib
+           0x1a4f6e000 -        0x1a4f7afff  libsystem_pthread.dylib (485.60.2)  <F7B2ECCF-E6F1-3109-AE81-9028C0B8332A>  /usr/lib/system/libsystem_pthread.dylib
+           0x1a5eb0000 -        0x1a629dfff  com.apple.Foundation 6.9 (1856.105) <90321A38-43A5-3767-9A9C-2C631338B9BC>  /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
+           0x1c2847000 -        0x1c2912fff  com.apple.PackageKit 3.0 (1125)     <3E8E3639-8776-3A43-BC27-03F7B0D24445>  /System/Library/PrivateFrameworks/PackageKit.framework/Versions/A/PackageKit
+
+
+Powerstats for:   Instruments
+UUID:             41B2B5A3-EDB8-3E49-AD77-BCA301CFAE77
+Path:             /Applications/Xcode.app/Contents/Applications/Instruments.app/Contents/MacOS/Instruments
+Identifier:       com.apple.dt.Instruments
+Version:          13.2.1 (64551.30)
+Build Version:    2
+Product Build Version: 13C100
+Project Name:     Instruments
+Source Version:   64551030000000000
+Team ID:          59GAB85EFG
+Architecture:     arm64
+Start time:       2022-02-28 04:44:39.064 -0600
+End time:         2022-02-28 04:55:25.928 -0600
+Num samples:      142 (11%)
+Primary state:    129 samples Non-Frontmost App, Non-Suppressed, Kernel mode, Effective Thread QoS User Initiated, Requested Thread QoS User Initiated, Override Thread QoS Unspecified
+User Activity:    13 samples Idle, 129 samples Active
+Power Source:     0 samples on Battery, 142 samples on AC
+  142  start_wqthread + 8 (libsystem_pthread.dylib + 8216) [0x1a4f70018]
+    139  _pthread_wqthread + 228 (libsystem_pthread.dylib + 13000) [0x1a4f712c8]
+      139  _dispatch_worker_thread2 + 164 (libdispatch.dylib + 88920) [0x1a4dc8b58]
+        139  _dispatch_root_queue_drain + 396 (libdispatch.dylib + 86812) [0x1a4dc831c]
+          117  _dispatch_async_redirect_invoke + 596 (libdispatch.dylib + 26332) [0x1a4db96dc]
+            117  _dispatch_continuation_pop + 504 (libdispatch.dylib + 28800) [0x1a4dba080]
+              117  _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+                117  ??? (DVTInstrumentsUtilities + 160164) [0x1050171a4]
+                  117  ??? (DVTInstrumentsUtilities + 126740) [0x10500ef14]
+                    117  ??? (DVTInstrumentsUtilities + 143644) [0x10501311c]
+                      111  -[XRAnalysisCoreModelingExecutor executeStopOnItinerary:] + 3000 (InstrumentsAnalysisCore + 1418512) [0x105386510]
+                        68   -[XRCLIPSModeler populateOutputTables:usingObserverations:parameters:yieldFlag:] + 48 (InstrumentsAnalysisCore + 277696) [0x10526fcc0]
+                          68   XRCLIPSBlackboardEngine::modelEventStream(XRAnalysisCoreReadCursor*, bool _Atomic*) + 820 (InstrumentsAnalysisCore + 579136) [0x1052b9640]
+                            68   XRCLIPSBlackboardEngine::executeRules() + 228 (InstrumentsAnalysisCore + 581392) [0x1052b9f10]
+                              68   _runInCLocale(void () block_pointer) + 68 (InstrumentsAnalysisCore + 642624) [0x1052c8e40]
+                                68   invocation function for block in XRCLIPS::run(long long) + 28 (InstrumentsAnalysisCore + 644968) [0x1052c9768]
+                                  68   Run + 2688 (InstrumentsAnalysisCore + 1481424) [0x105395ad0]
+                                    68   EvaluateProcActions + 428 (InstrumentsAnalysisCore + 1348204) [0x10537526c]
+                                      68   EvaluateExpression + 520 (InstrumentsAnalysisCore + 1321984) [0x10536ec00]
+                                        68   PrognFunction + 72 (InstrumentsAnalysisCore + 270736) [0x10526e190]
+                                          68   EvaluateExpression + 520 (InstrumentsAnalysisCore + 1321984) [0x10536ec00]
+                                            57   XRCLIPSBlackboardEngine::_setTableColumn(environmentData*, udfContext*, udfValue*) + 608 (InstrumentsAnalysisCore + 566748) [0x1052b65dc]
+                                              32   XRAnalysisCoreWriteCursor::setColumnValueByStorage(unsigned char, XRStoredValue) const + 184 (InstrumentsAnalysisCore + 1042660) [0x10532a8e4]
+                                              25   XRAnalysisCoreWriteCursor::setColumnValueByStorage(unsigned char, XRStoredValue) const + 304 (InstrumentsAnalysisCore + 1042780) [0x10532a95c]
+                                            5    UDFNextArgument + 248 (InstrumentsAnalysisCore + 1125616) [0x10533ecf0]
+                                              5    EvaluateExpression + 520 (InstrumentsAnalysisCore + 1321984) [0x10536ec00]
+                                                5    PrognFunction + 72 (InstrumentsAnalysisCore + 270736) [0x10526e190]
+                                                  5    EvaluateExpression + 520 (InstrumentsAnalysisCore + 1321984) [0x10536ec00]
+                                                    5    XRCLIPSBlackboardEngine::_setTableColumn(environmentData*, udfContext*, udfValue*) + 608 (InstrumentsAnalysisCore + 566748) [0x1052b65dc]
+                                                      5    XRAnalysisCoreWriteCursor::setColumnValueByStorage(unsigned char, XRStoredValue) const + 304 (InstrumentsAnalysisCore + 1042780) [0x10532a95c]
+                                            4    XRCLIPSBlackboardEngine::_setColumnNarrative(environmentData*, udfContext*, udfValue*) + 236 (InstrumentsAnalysisCore + 587852) [0x1052bb84c]
+                                              4    XRCLIPSCompiledNarrative::setColumnValueToNarrative(XRAnalysisCoreWriteCursor*, unsigned char, environmentData*, udfContext*) + 1028 (InstrumentsAnalysisCore + 886376) [0x105304668]
+                                                4    -[XRAnalysisCoreObjectRegistry addTypedArrayToCore:] + 348 (InstrumentsAnalysisCore + 1385912) [0x10537e5b8]
+                                                  2    _platform_memmove + 220 (libsystem_platform.dylib + 16876) [0x1a4f8c1ec]
+                                                  2    _platform_memmove + 168 (libsystem_platform.dylib + 16824) [0x1a4f8c1b8]
+                                            2    XRCLIPSBlackboardEngine::_createNewRow(environmentData*, udfContext*, udfValue*) + 100 (InstrumentsAnalysisCore + 585048) [0x1052bad58]
+                                              2    XRCLIPSBlackboardEngine::_createNewRowForTable(unsigned int) + 68 (InstrumentsAnalysisCore + 588932) [0x1052bbc84]
+                                                2    XRAnalysisCoreWriteCursor::commit() + 432 (InstrumentsAnalysisCore + 1042444) [0x10532a80c]
+                                                  1    XRAnalysisCoreWriteCursor::setColumnValueByStorage(unsigned char, XRStoredValue) const + 304 (InstrumentsAnalysisCore + 1042780) [0x10532a95c]
+                                                  1    XRAnalysisCoreWriteCursor::setColumnValueByStorage(unsigned char, XRStoredValue) const + 184 (InstrumentsAnalysisCore + 1042660) [0x10532a8e4]
+                        22   ??? (BuiltinModelerPlugin + 85232) [0x165864cf0]
+                          22   XRAnalysisCoreWriteCursorSetSignature + 104 (InstrumentsAnalysisCore + 1046328) [0x10532b738]
+                            22   XRAnalysisCoreWriteCursor::setColumnValueByStorage(unsigned char, XRStoredValue) const + 184 (InstrumentsAnalysisCore + 1042660) [0x10532a8e4]
+                        8    ??? (BuiltinModelerPlugin + 85248) [0x165864d00]
+                          8    XRAnalysisCoreWriteCursorSetSignature + 104 (InstrumentsAnalysisCore + 1046328) [0x10532b738]
+                            8    XRAnalysisCoreWriteCursor::setColumnValueByStorage(unsigned char, XRStoredValue) const + 184 (InstrumentsAnalysisCore + 1042660) [0x10532a8e4]
+                        7    ??? (BuiltinModelerPlugin + 85280) [0x165864d20]
+                          7    XRAnalysisCoreWriteCursorSetSignature + 104 (InstrumentsAnalysisCore + 1046328) [0x10532b738]
+                            7    XRAnalysisCoreWriteCursor::setColumnValueByStorage(unsigned char, XRStoredValue) const + 184 (InstrumentsAnalysisCore + 1042660) [0x10532a8e4]
+                        6    -[XRAnalysisCoreTickModeler populateOutputTables:usingObserverations:parameters:yieldFlag:] + 212 (InstrumentsAnalysisCore + 485580) [0x1052a28cc]
+                          6    XRAnalysisCoreWriteCursor::commit() + 288 (InstrumentsAnalysisCore + 1042300) [0x10532a77c]
+                            6    XRAnalysisCoreWriteCursorT64_CC32_R::commitTopologyField() + 68 (InstrumentsAnalysisCore + 978320) [0x10531ad90]
+                              6    <Frontmost App>
+                      6    -[XRAnalysisCoreOptimizationAgent executeStopOnItinerary:] + 248 (InstrumentsAnalysisCore + 1209544) [0x1053534c8]
+                        6    -[XRIndexedStorageT64_CC32_R performIndexOptimize] + 32 (InstrumentsAnalysisCore + 960388) [0x105316784]
+                          6    XRSpatialIndexMP<XRSpatialIndexMPStrategy<XRT64_CC32_R_Strategy>, 4096>::_spillPreindex() + 1204 (InstrumentsAnalysisCore + 966752) [0x105318060]
+                            6    <Frontmost App>
+          22   _dispatch_async_redirect_invoke + 748 (libdispatch.dylib + 26484) [0x1a4db9774]
+            22   _dispatch_continuation_pop + 504 (libdispatch.dylib + 28800) [0x1a4dba080]
+              22   _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+                22   ??? (DVTInstrumentsUtilities + 160164) [0x1050171a4]
+                  22   ??? (DVTInstrumentsUtilities + 126740) [0x10500ef14]
+                    22   ??? (DVTInstrumentsUtilities + 143644) [0x10501311c]
+                      22   -[XRAnalysisCoreModelingExecutor executeStopOnItinerary:] + 3000 (InstrumentsAnalysisCore + 1418512) [0x105386510]
+                        10   -[XRCLIPSModeler populateOutputTables:usingObserverations:parameters:yieldFlag:] + 48 (InstrumentsAnalysisCore + 277696) [0x10526fcc0]
+                          10   XRCLIPSBlackboardEngine::modelEventStream(XRAnalysisCoreReadCursor*, bool _Atomic*) + 820 (InstrumentsAnalysisCore + 579136) [0x1052b9640]
+                            10   XRCLIPSBlackboardEngine::executeRules() + 228 (InstrumentsAnalysisCore + 581392) [0x1052b9f10]
+                              10   _runInCLocale(void () block_pointer) + 68 (InstrumentsAnalysisCore + 642624) [0x1052c8e40]
+                                10   invocation function for block in XRCLIPS::run(long long) + 28 (InstrumentsAnalysisCore + 644968) [0x1052c9768]
+                                  10   Run + 2688 (InstrumentsAnalysisCore + 1481424) [0x105395ad0]
+                                    10   EvaluateProcActions + 428 (InstrumentsAnalysisCore + 1348204) [0x10537526c]
+                                      10   EvaluateExpression + 520 (InstrumentsAnalysisCore + 1321984) [0x10536ec00]
+                                        10   PrognFunction + 72 (InstrumentsAnalysisCore + 270736) [0x10526e190]
+                                          10   EvaluateExpression + 520 (InstrumentsAnalysisCore + 1321984) [0x10536ec00]
+                                            10   XRCLIPSBlackboardEngine::_setTableColumn(environmentData*, udfContext*, udfValue*) + 608 (InstrumentsAnalysisCore + 566748) [0x1052b65dc]
+                                              6    XRAnalysisCoreWriteCursor::setColumnValueByStorage(unsigned char, XRStoredValue) const + 184 (InstrumentsAnalysisCore + 1042660) [0x10532a8e4]
+                                              4    XRAnalysisCoreWriteCursor::setColumnValueByStorage(unsigned char, XRStoredValue) const + 304 (InstrumentsAnalysisCore + 1042780) [0x10532a95c]
+                        5    ??? (BuiltinModelerPlugin + 85232) [0x165864cf0]
+                          5    XRAnalysisCoreWriteCursorSetSignature + 104 (InstrumentsAnalysisCore + 1046328) [0x10532b738]
+                            5    XRAnalysisCoreWriteCursor::setColumnValueByStorage(unsigned char, XRStoredValue) const + 184 (InstrumentsAnalysisCore + 1042660) [0x10532a8e4]
+                        4    ??? (BuiltinModelerPlugin + 85248) [0x165864d00]
+                          4    XRAnalysisCoreWriteCursorSetSignature + 104 (InstrumentsAnalysisCore + 1046328) [0x10532b738]
+                            4    XRAnalysisCoreWriteCursor::setColumnValueByStorage(unsigned char, XRStoredValue) const + 184 (InstrumentsAnalysisCore + 1042660) [0x10532a8e4]
+                        2    ??? (BuiltinModelerPlugin + 85280) [0x165864d20]
+                          2    XRAnalysisCoreWriteCursorSetSignature + 104 (InstrumentsAnalysisCore + 1046328) [0x10532b738]
+                            2    XRAnalysisCoreWriteCursor::setColumnValueByStorage(unsigned char, XRStoredValue) const + 184 (InstrumentsAnalysisCore + 1042660) [0x10532a8e4]
+                        1    ??? (BuiltinModelerPlugin + 85264) [0x165864d10]
+                          1    ??? (BuiltinModelerPlugin + 66888) [0x165860548]
+                            1    ??? (BuiltinModelerPlugin + 68100) [0x165860a04]
+                              1    -[XRAnalysisCoreObjectRegistry invokeOracleFunction:invocation:] + 68 (InstrumentsAnalysisCore + 1387220) [0x10537ead4]
+                                1    -[XRCallstackFixupOracle invoke:] + 124 (InstrumentsPlugIn + 421268) [0x1057ced94]
+                                  1    _dispatch_lane_barrier_sync_invoke_and_complete + 56 (libdispatch.dylib + 77312) [0x1a4dc5e00]
+                                    1    _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+                                      1    __33-[XRCallstackFixupOracle invoke:]_block_invoke + 1420 (InstrumentsPlugIn + 422744) [0x1057cf358]
+                                        1    -[XRAnalysisCoreObjectRegistry getBacktraceValue:fragments:count:] + 52 (InstrumentsAnalysisCore + 1392408) [0x10537ff18]
+                                          1    -[XRAnalysisCoreObjectRegistry storedBacktrace:count:] + 216 (InstrumentsAnalysisCore + 1387656) [0x10537ec88]
+                                            1    -[XRAnalysisCoreObjectRegistry addArrayOfUInt64sToCore:] + 344 (InstrumentsAnalysisCore + 1383904) [0x10537dde0]
+                                              1    _platform_memmove + 424 (libsystem_platform.dylib + 17080) [0x1a4f8c2b8]
+    3    _pthread_wqthread + 288 (libsystem_pthread.dylib + 13060) [0x1a4f71304]
+      3    _dispatch_workloop_worker_thread + 656 (libdispatch.dylib + 91912) [0x1a4dc9708]
+        3    _dispatch_lane_invoke + 392 (libdispatch.dylib + 48804) [0x1a4dbeea4]
+          3    _dispatch_lane_serial_drain + 672 (libdispatch.dylib + 45872) [0x1a4dbe330]
+            3    _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+              3    ??? (DVTInstrumentsUtilities + 160164) [0x1050171a4]
+                3    ??? (DVTInstrumentsUtilities + 126740) [0x10500ef14]
+                  3    ??? (DVTInstrumentsUtilities + 143644) [0x10501311c]
+                    3    ??? (ktracePlugin + 135480) [0x161465138]
+                      3    ??? (ktracePlugin + 147400) [0x161467fc8]
+                        3    -[XRAnalysisCoreBindingHemisphere populateTableIDs:block:] + 260 (InstrumentsAnalysisCore + 1082312) [0x1053343c8]
+                          3    ??? (ktracePlugin + 147664) [0x1614680d0]
+                            3    ??? (ktracePlugin + 146908) [0x161467ddc]
+                              3    ??? (ktracePlugin + 150316) [0x161468b2c]
+                                3    ??? (ktracePlugin + 20368) [0x161448f90]
+                                  2    ??? (ktracePlugin + 76980) [0x161456cb4]
+                                    2    ??? (ktracePlugin + 67988) [0x161454994]
+                                      2    ??? (ktracePlugin + 77332) [0x161456e14]
+                                        2    ??? (ktracePlugin + 71664) [0x1614557f0]
+                                          2    ??? (ktracePlugin + 71196) [0x16145561c]
+                                            2    XRAnalysisCoreWriteCursorSetImpl + 12 (InstrumentsAnalysisCore + 1043484) [0x10532ac1c]
+                                              2    XRAnalysisCoreWriteCursor::setColumnValueByStorage(unsigned char, XRStoredValue) const + 304 (InstrumentsAnalysisCore + 1042780) [0x10532a95c]
+                                                1    <Frontmost App>
+                                  1    ??? (ktracePlugin + 73520) [0x161455f30]
+                                    1    ??? (ktracePlugin + 71652) [0x1614557e4]
+                                      1    XRAnalysisCoreWriteCursorSetImpl + 12 (InstrumentsAnalysisCore + 1043484) [0x10532ac1c]
+                                        1    XRAnalysisCoreWriteCursor::setColumnValueByStorage(unsigned char, XRStoredValue) const + 184 (InstrumentsAnalysisCore + 1042660) [0x10532a8e4]
+
+  Binary Images:
+           0x104d84000 -                ???  com.apple.dt.Instruments 13.2.1 (64551.30)                         <41B2B5A3-EDB8-3E49-AD77-BCA301CFAE77>  /Applications/Xcode.app/Contents/Applications/Instruments.app/Contents/MacOS/Instruments
+           0x104ff0000 -        0x10505ffff  com.apple.dt.instruments.DVTInstrumentsUtilities 13.2.1 (64551.32) <B7B417EB-A912-3414-BB1D-E1D0A12AB760>  /Applications/Xcode.app/Contents/SharedFrameworks/DVTInstrumentsUtilities.framework/Versions/A/DVTInstrumentsUtilities
+           0x10522c000 -        0x105407fff  com.apple.dt.InstrumentsAnalysisCore 13.2.1 (64551.30)             <F3BD2899-6EA6-30E6-AA1D-5F0616A21FED>  /Applications/Xcode.app/Contents/Applications/Instruments.app/Contents/Frameworks/InstrumentsAnalysisCore.framework/Versions/A/InstrumentsAnalysisCore
+           0x105768000 -        0x105997fff  com.apple.dt.instruments.InstrumentsPlugIn 13.2.1 (64551.30)       <E263BDCF-D293-3284-BA91-5CE9B5038EF1>  /Applications/Xcode.app/Contents/Applications/Instruments.app/Contents/Frameworks/InstrumentsPlugIn.framework/Versions/A/InstrumentsPlugIn
+           0x161444000 -        0x16147bfff  com.apple.dt.instruments.ktracePlugin 13.2.1 (64551.30)            <7189431C-4847-321F-9EBB-F690A5A8CAFC>  /Applications/Xcode.app/Contents/Applications/Instruments.app/Contents/PlugIns/ktracePlugin.xrplugin/Contents/MacOS/ktracePlugin
+           0x165850000 -        0x16590ffff  com.apple.dt.perfteam.BuiltinModelerPlugin 1.0 (64551.30)          <1BFCACCD-E243-3C8B-8ED7-80672AD7E9B7>  /Applications/Xcode.app/Contents/Applications/Instruments.app/Contents/PlugIns/BuiltinModelerPlugin.xrplugin/Contents/MacOS/BuiltinModelerPlugin
+           0x1a4db3000 -        0x1a4df9fff  libdispatch.dylib (1324.60.3)                                      <93E1DCFC-EF56-3113-8E7C-1BA85266A93B>  /usr/lib/system/libdispatch.dylib
+           0x1a4f6e000 -        0x1a4f7afff  libsystem_pthread.dylib (485.60.2)                                 <F7B2ECCF-E6F1-3109-AE81-9028C0B8332A>  /usr/lib/system/libsystem_pthread.dylib
+           0x1a4f88000 -        0x1a4f8ffff  libsystem_platform.dylib (273.40.1)                                <49CF1536-27E5-3A34-9724-D75552CBAB56>  /usr/lib/system/libsystem_platform.dylib
+
+
+Powerstats for:   prl_vm_app (Parallels Desktop)
+UUID:             9E613BE9-1E02-3396-967A-72088B3C45FB
+Path:             /Applications/Parallels Desktop.app/Contents/MacOS/Parallels VM.app/Contents/MacOS/prl_vm_app
+Identifier:       com.parallels.vm
+Version:          17.1.1 (51537)
+Team ID:          4C6364ACXT
+Architecture:     arm64
+Start time:       2022-02-28 04:47:21.485 -0600
+End time:         2022-02-28 04:48:41.444 -0600
+Num samples:      121 (10%)
+Primary state:    121 samples Non-Frontmost App, Non-Suppressed, Kernel mode, Effective Thread QoS Default, Requested Thread QoS Default, Override Thread QoS Unspecified
+User Activity:    0 samples Idle, 121 samples Active
+Power Source:     0 samples on Battery, 121 samples on AC
+  121  thread_start + 8 (libsystem_pthread.dylib + 8228) [0x1a4f70024]
+    121  _pthread_start + 148 (libsystem_pthread.dylib + 29248) [0x1a4f75240]
+      121  ??? (QtCore + 142116) [0x10150ab24]
+        119  ??? (prl_vm_app + 431460) [0x100181564]
+          119  ??? (prl_vm_app + 432008) [0x100181788]
+            119  ??? (prl_vm_app + 591428) [0x1001a8644]
+              119  ??? (prl_vm_app + 412848) [0x10017ccb0]
+                119  ??? (prl_vm_app + 8010608) [0x1008bbb70]
+                  119  ??? (prl_vm_app + 8009308) [0x1008bb65c]
+                    119  ??? (prl_vm_app + 8018248) [0x1008bd948]
+                      119  ??? (prl_vm_app + 8016236) [0x1008bd16c]
+                        119  ??? (prl_vm_app + 9141040) [0x1009cfb30]
+                          114  ??? (prl_vm_app + 8026484) [0x1008bf974]
+                            114  ??? (prl_vm_app + 9163788) [0x1009d540c]
+                              114  write + 8 (libsystem_kernel.dylib + 21820) [0x1a4f3d53c]
+                          5    ??? (prl_vm_app + 8026336) [0x1008bf8e0]
+                            5    ??? (prl_vm_app + 9163788) [0x1009d540c]
+                              5    write + 8 (libsystem_kernel.dylib + 21820) [0x1a4f3d53c]
+        2    ??? (prl_vm_app + 1302316) [0x100255f2c]
+          2    ??? (prl_vm_app + 1303680) [0x100256480]
+            2    ??? (prl_vm_app + 1765380) [0x1002c7004]
+              2    ??? (prl_vm_app + 1320884) [0x10025a7b4]
+                2    ??? (prl_vm_app + 1322872) [0x10025af78]
+                  2    ??? (prl_vm_app + 5415580) [0x10064229c]
+                    2    -[IOGPUMetalTexture getBytes:bytesPerRow:fromRegion:mipmapLevel:] + 68 (IOGPU + 70704) [0x1bf566430]
+                      2    ??? (AGXMetal13_3 + 4104596) [0x206bde194]
+                        2    ??? (AGXMetal13_3 + 4105368) [0x206bde498]
+                          2    ??? (AGXMetal13_3 + 4381248) [0x206c21a40]
+
+  Binary Images:
+           0x100118000 -        0x100e07fff  com.parallels.vm 17.1.1 (51537)        <9E613BE9-1E02-3396-967A-72088B3C45FB>  /Applications/Parallels Desktop.app/Contents/MacOS/Parallels VM.app/Contents/MacOS/prl_vm_app
+           0x1014e8000 -        0x1019fbfff  org.qt-project.QtCore 5.15.1 (7)       <4FC22FD0-D443-35D1-AB9C-EC8EBCCD21BC>  /Applications/Parallels Desktop.app/Contents/Frameworks/QtCore.framework/Versions/5/QtCore
+           0x1a4f38000 -        0x1a4f6dfff  libsystem_kernel.dylib (8019.80.24)    <384945E6-DD71-37E5-9A3D-84FFF14A1E60>  /usr/lib/system/libsystem_kernel.dylib
+           0x1a4f6e000 -        0x1a4f7afff  libsystem_pthread.dylib (485.60.2)     <F7B2ECCF-E6F1-3109-AE81-9028C0B8332A>  /usr/lib/system/libsystem_pthread.dylib
+           0x1bf555000 -        0x1bf581fff  com.apple.IOGPU 35.11 (35.11)          <B65F1B3A-8D38-3CF9-87C7-8854EC9F0C2B>  /System/Library/PrivateFrameworks/IOGPU.framework/Versions/A/IOGPU
+           0x2067f4000 -        0x206d07fff  com.apple.AGXMetal13-3 188.10 (188.10) <7867B6C8-73C4-388F-9A8B-BD6ED1DFA4ED>  /System/Library/Extensions/AGXMetal13_3.bundle/Contents/MacOS/AGXMetal13_3
+
+
+Powerstats for:   coresymbolicationd
+UUID:             8BC10764-033F-38E8-AD09-76375F993585
+Path:             /System/Library/PrivateFrameworks/CoreSymbolication.framework/coresymbolicationd
+Codesigning ID:   com.apple.coresymbolicationd
+Architecture:     arm64e
+Start time:       2022-02-28 04:45:14.814 -0600
+End time:         2022-02-28 04:55:07.040 -0600
+Num samples:      69 (6%)
+Primary state:    50 samples Non-Frontmost App, Non-Suppressed, Kernel mode, Effective Thread QoS User Initiated, Requested Thread QoS User Initiated, Override Thread QoS Unspecified
+User Activity:    3 samples Idle, 66 samples Active
+Power Source:     0 samples on Battery, 69 samples on AC
+  69  start_wqthread + 8 (libsystem_pthread.dylib + 8216) [0x1a4f70018]
+    69  _pthread_wqthread + 288 (libsystem_pthread.dylib + 13060) [0x1a4f71304]
+      69  _dispatch_workloop_worker_thread + 656 (libdispatch.dylib + 91912) [0x1a4dc9708]
+        69  _dispatch_mach_invoke + 456 (libdispatch.dylib + 134328) [0x1a4dd3cb8]
+          69  _dispatch_lane_serial_drain + 376 (libdispatch.dylib + 45576) [0x1a4dbe208]
+            69  _dispatch_mach_msg_invoke + 476 (libdispatch.dylib + 130920) [0x1a4dd2f68]
+              69  _dispatch_client_callout4 + 20 (libdispatch.dylib + 15468) [0x1a4db6c6c]
+                69  _xpc_connection_mach_event + 1368 (libxpc.dylib + 52216) [0x1a4cc6bf8]
+                  69  _xpc_connection_call_event_handler + 176 (libxpc.dylib + 57816) [0x1a4cc81d8]
+                    69  ??? (coresymbolicationd + 21092) [0x102e11264]
+                      69  ??? (coresymbolicationd + 42976) [0x102e167e0]
+                        69  pwrite + 8 (libsystem_kernel.dylib + 20452) [0x1a4f3cfe4]
+                          19  <Effective Thread QoS Background, Requested Thread QoS Background>
+
+  Binary Images:
+           0x102e0c000 -        0x102e23fff  coresymbolicationd (64550.88.2)     <8BC10764-033F-38E8-AD09-76375F993585>  /System/Library/PrivateFrameworks/CoreSymbolication.framework/coresymbolicationd
+           0x1a4cba000 -        0x1a4cf3fff  libxpc.dylib (2235.80.3)            <FD3E0E8D-4618-3CE5-A24A-5639BE86B979>  /usr/lib/system/libxpc.dylib
+           0x1a4db3000 -        0x1a4df9fff  libdispatch.dylib (1324.60.3)       <93E1DCFC-EF56-3113-8E7C-1BA85266A93B>  /usr/lib/system/libdispatch.dylib
+           0x1a4f38000 -        0x1a4f6dfff  libsystem_kernel.dylib (8019.80.24) <384945E6-DD71-37E5-9A3D-84FFF14A1E60>  /usr/lib/system/libsystem_kernel.dylib
+           0x1a4f6e000 -        0x1a4f7afff  libsystem_pthread.dylib (485.60.2)  <F7B2ECCF-E6F1-3109-AE81-9028C0B8332A>  /usr/lib/system/libsystem_pthread.dylib
+
+System Profile:
+Network Service: Wi-Fi, AirPort, en0
+Thunderbolt Bus: MacBook Pro, Apple Inc.
+Thunderbolt Bus: MacBook Pro, Apple Inc.
+Boot Volume File System Type: apfs
+Memory Module: LPDDR4
+USB Device: USB31Bus
+USB Device: USB31Bus
+Display: Color LCD, 2560 x 1600 Retina, Main, MirrorOff, Online
+Model: MacBookPro17,1, BootROM 7429.81.3, proc 8:4:4 processors, 8 GB, SMC 
+Graphics: Apple M1, Apple M1, Built-In
+AirPort: Wi-Fi, wl0: Oct 26 2021 16:10:41 version 18.20.310.15.7.8.120 FWID 01-5d6c3867
+Bluetooth: Version (null), 0 services, 0 devices, 0 incoming serial ports

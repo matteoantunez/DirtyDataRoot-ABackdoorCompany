@@ -1,0 +1,980 @@
+Date/Time:        2022-02-26 12:34:43.423 -0600
+End time:         2022-02-26 12:45:27.370 -0600
+OS Version:       macOS 12.2 (Build 21D49)
+Architecture:     arm64e
+Report Version:   35
+Incident Identifier: B4236FE9-A34D-4046-93A2-8744F2E885B2
+Share With Devs:  Yes
+
+Data Source:      Microstackshots
+Shared Cache:     B90241B2-E425-3982-B3F6-26C4567CBB49 slid base address 0x1a4c68000, slide 0x24c68000
+
+Command:          cloudd
+Path:             /System/Library/PrivateFrameworks/CloudKitDaemon.framework/Support/cloudd
+Architecture:     arm64e
+Parent:           UNKNOWN [1]
+PID:              983
+
+Event:            disk writes
+Action taken:     none
+Writes:           2147.49 MB of file backed memory dirtied over 644 seconds (3334.88 KB per second average), exceeding limit of 24.86 KB per second over 86400 seconds
+Writes limit:     2147.48 MB
+Limit duration:   86400s
+Writes caused:    2147.49 MB
+Writes duration:  644s
+Duration:         643.95s
+Duration Sampled: 469.64s
+Steps:            803 ( (10.49 MB/step))
+
+Hardware model:   MacBookPro17,1
+Active cpus:      8
+HW page size:     16384
+VM page size:     16384
+
+Advisory levels:  Battery -> 2, User -> 2, ThermalPressure -> 0, Combined -> 2
+Free disk space:  208.21 GB/228.27 GB, low space threshold 3072 MB
+
+Heaviest stack for the target process:
+  188  start_wqthread + 8 (libsystem_pthread.dylib + 8216) [0x1a4f70018]
+  130  _pthread_wqthread + 288 (libsystem_pthread.dylib + 13060) [0x1a4f71304]
+  130  _dispatch_workloop_worker_thread + 656 (libdispatch.dylib + 91912) [0x1a4dc9708]
+  130  _dispatch_lane_invoke + 444 (libdispatch.dylib + 48856) [0x1a4dbeed8]
+  126  _dispatch_lane_serial_drain + 376 (libdispatch.dylib + 45576) [0x1a4dbe208]
+  126  _dispatch_source_invoke + 1356 (libdispatch.dylib + 106916) [0x1a4dcd1a4]
+  126  _dispatch_continuation_pop + 504 (libdispatch.dylib + 28800) [0x1a4dba080]
+  126  _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+  125  _dispatch_block_async_invoke2 + 148 (libdispatch.dylib + 76176) [0x1a4dc5990]
+  125  __37-[PQLConnection _batchStartIfNeeded:]_block_invoke + 172 (libprequelite.dylib + 22192) [0x1c97db6b0]
+  125  -[PQLConnection flush] + 316 (libprequelite.dylib + 27668) [0x1c97dcc14]
+  125  -[PQLConnection _execute:mustSucceed:bindings:] + 72 (libprequelite.dylib + 39644) [0x1c97dfadc]
+  125  -[PQLConnection _executeStmt:mustSucceed:] + 112 (libprequelite.dylib + 39216) [0x1c97df930]
+  70   sqlite3_step + 3576 (libsqlite3.dylib + 289312) [0x1ab4b8a20]
+  70   sqlite3WalDefaultHook + 72 (libsqlite3.dylib + 461884) [0x1ab4e2c3c]
+  70   sqlite3_wal_checkpoint_v2 + 500 (libsqlite3.dylib + 695928) [0x1ab51be78]
+  70   sqlite3Checkpoint + 372 (libsqlite3.dylib + 696472) [0x1ab51c098]
+  70   sqlite3WalCheckpoint + 5264 (libsqlite3.dylib + 554936) [0x1ab4f97b8]
+  70   unixWrite + 180 (libsqlite3.dylib + 460888) [0x1ab4e2858]
+  70   guarded_pwrite_np + 8 (libsystem_kernel.dylib + 20852) [0x1a4f3d174]
+
+
+Powerstats for:   cloudd [983]
+UUID:             F41BDA92-9D1E-3A4D-AFC9-B9C0F678F21A
+Path:             /System/Library/PrivateFrameworks/CloudKitDaemon.framework/Support/cloudd
+Architecture:     arm64e
+Parent:           UNKNOWN [1]
+UID:              501
+Sudden Term:      Tracked (allows idle exit)
+Footprint:        10.80 MB -> 48.11 MB (+37.31 MB) (max 54.67 MB )
+Pageins:          16 pages
+Start time:       2022-02-26 12:38:44.140 -0600
+End time:         2022-02-26 12:45:27.369 -0600
+Num samples:      202 (25%)
+Primary state:    111 samples Non-Frontmost App, Non-Suppressed, Kernel mode, Effective Thread QoS Background, Requested Thread QoS Background, Override Thread QoS Unspecified
+User Activity:    0 samples Idle, 202 samples Active
+Power Source:     202 samples on Battery, 0 samples on AC
+  188  start_wqthread + 8 (libsystem_pthread.dylib + 8216) [0x1a4f70018]
+    130  _pthread_wqthread + 288 (libsystem_pthread.dylib + 13060) [0x1a4f71304]
+      130  _dispatch_workloop_worker_thread + 656 (libdispatch.dylib + 91912) [0x1a4dc9708]
+        130  _dispatch_lane_invoke + 444 (libdispatch.dylib + 48856) [0x1a4dbeed8]
+          126  _dispatch_lane_serial_drain + 376 (libdispatch.dylib + 45576) [0x1a4dbe208]
+            126  _dispatch_source_invoke + 1356 (libdispatch.dylib + 106916) [0x1a4dcd1a4]
+              126  _dispatch_continuation_pop + 504 (libdispatch.dylib + 28800) [0x1a4dba080]
+                126  _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+                  125  _dispatch_block_async_invoke2 + 148 (libdispatch.dylib + 76176) [0x1a4dc5990]
+                    125  __37-[PQLConnection _batchStartIfNeeded:]_block_invoke + 172 (libprequelite.dylib + 22192) [0x1c97db6b0]
+                      125  -[PQLConnection flush] + 316 (libprequelite.dylib + 27668) [0x1c97dcc14]
+                        125  -[PQLConnection _execute:mustSucceed:bindings:] + 72 (libprequelite.dylib + 39644) [0x1c97dfadc]
+                          125  -[PQLConnection _executeStmt:mustSucceed:] + 112 (libprequelite.dylib + 39216) [0x1c97df930]
+                            70   sqlite3_step + 3576 (libsqlite3.dylib + 289312) [0x1ab4b8a20]
+                              70   sqlite3WalDefaultHook + 72 (libsqlite3.dylib + 461884) [0x1ab4e2c3c]
+                                70   sqlite3_wal_checkpoint_v2 + 500 (libsqlite3.dylib + 695928) [0x1ab51be78]
+                                  70   sqlite3Checkpoint + 372 (libsqlite3.dylib + 696472) [0x1ab51c098]
+                                    70   sqlite3WalCheckpoint + 5264 (libsqlite3.dylib + 554936) [0x1ab4f97b8]
+                                      70   unixWrite + 180 (libsqlite3.dylib + 460888) [0x1ab4e2858]
+                                        70   guarded_pwrite_np + 8 (libsystem_kernel.dylib + 20852) [0x1a4f3d174]
+                                          12   <Effective Thread QoS Utility>
+                            55   sqlite3_step + 3284 (libsqlite3.dylib + 289020) [0x1ab4b88fc]
+                              55   sqlite3VdbeExec + 56548 (libsqlite3.dylib + 347716) [0x1ab4c6e44]
+                                55   sqlite3VdbeHalt + 3428 (libsqlite3.dylib + 155176) [0x1ab497e28]
+                                  55   sqlite3BtreeCommitPhaseOne + 164 (libsqlite3.dylib + 372568) [0x1ab4ccf58]
+                                    55   sqlite3PagerCommitPhaseOne + 312 (libsqlite3.dylib + 458816) [0x1ab4e2040]
+                                      55   pagerWalFrames + 1720 (libsqlite3.dylib + 821220) [0x1ab53a7e4]
+                                        55   unixWrite + 180 (libsqlite3.dylib + 460888) [0x1ab4e2858]
+                                          55   guarded_pwrite_np + 8 (libsystem_kernel.dylib + 20852) [0x1a4f3d174]
+                                            2    <Effective Thread QoS Utility>
+                  1    ??? (CloudKitDaemon + 60116) [0x1d3b84ad4]
+                    1    -[__NSDictionaryM dealloc] + 148 (CoreFoundation + 188528) [0x1a4fea070]
+                      1    cow_cleanup + 172 (CoreFoundation + 188780) [0x1a4fea16c]
+                        1    ??? (CloudKit + 618920) [0x1ac6ff1a8]
+                          1    ??? (CloudKit + 629536) [0x1ac701b20]
+                            1    ??? (CloudKit + 629052) [0x1ac70193c]
+                              1    sqlite3Close + 1732 (libsqlite3.dylib + 690828) [0x1ab51aa8c]
+                                1    sqlite3LeaveMutexAndCloseZombie + 492 (libsqlite3.dylib + 645308) [0x1ab50f8bc]
+                                  1    sqlite3BtreeClose + 268 (libsqlite3.dylib + 489144) [0x1ab4e96b8]
+                                    1    sqlite3PagerClose + 336 (libsqlite3.dylib + 490880) [0x1ab4e9d80]
+                                      1    sqlite3WalClose + 196 (libsqlite3.dylib + 491612) [0x1ab4ea05c]
+                                        1    sqlite3WalCheckpoint + 5264 (libsqlite3.dylib + 554936) [0x1ab4f97b8]
+                                          1    unixWrite + 180 (libsqlite3.dylib + 460888) [0x1ab4e2858]
+                                            1    guarded_pwrite_np + 8 (libsystem_kernel.dylib + 20852) [0x1a4f3d174]
+                                              1    <Effective Thread QoS User Initiated, Requested Thread QoS User Initiated>
+          4    _dispatch_lane_serial_drain + 672 (libdispatch.dylib + 45872) [0x1a4dbe330]
+            4    _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+              4    _dispatch_call_block_and_release + 32 (libdispatch.dylib + 7776) [0x1a4db4e60]
+                2    ??? (CloudKitDaemon + 1240496) [0x1d3ca4db0]
+                  2    ??? (CloudKitDaemon + 1238312) [0x1d3ca4528]
+                    2    ??? (CloudKitDaemon + 1237120) [0x1d3ca4080]
+                      2    ??? (CloudKitDaemon + 518368) [0x1d3bf48e0]
+                        2    ??? (CloudKitDaemon + 565196) [0x1d3bfffcc]
+                          2    _dispatch_lane_barrier_sync_invoke_and_complete + 56 (libdispatch.dylib + 77312) [0x1a4dc5e00]
+                            2    _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+                              2    ??? (CloudKitDaemon + 565628) [0x1d3c0017c]
+                                2    ??? (CloudKitDaemon + 518536) [0x1d3bf4988]
+                                  2    ??? (CloudKitDaemon + 513028) [0x1d3bf3404]
+                                    2    ??? (CloudKitDaemon + 3015652) [0x1d3e563e4]
+                                      2    ??? (CloudKitDaemon + 2513108) [0x1d3ddb8d4]
+                                        2    ??? (CloudKitDaemon + 2523820) [0x1d3dde2ac]
+                                          2    ??? (CloudKitDaemon + 36360) [0x1d3b7ee08]
+                                            2    ??? (CloudKit + 622444) [0x1ac6fff6c]
+                                              2    ??? (CloudKit + 621952) [0x1ac6ffd80]
+                                                2    ??? (CloudKit + 622792) [0x1ac7000c8]
+                                                  2    ??? (CloudKit + 621636) [0x1ac6ffc44]
+                                                    2    sqlite3_exec + 356 (libsqlite3.dylib + 40468) [0x1ab47be14]
+                                                      2    sqlite3_step + 3284 (libsqlite3.dylib + 289020) [0x1ab4b88fc]
+                                                        2    sqlite3VdbeExec + 56548 (libsqlite3.dylib + 347716) [0x1ab4c6e44]
+                                                          2    sqlite3VdbeHalt + 3428 (libsqlite3.dylib + 155176) [0x1ab497e28]
+                                                            2    sqlite3BtreeCommitPhaseOne + 164 (libsqlite3.dylib + 372568) [0x1ab4ccf58]
+                                                              2    sqlite3PagerCommitPhaseOne + 312 (libsqlite3.dylib + 458816) [0x1ab4e2040]
+                                                                2    pagerWalFrames + 1720 (libsqlite3.dylib + 821220) [0x1ab53a7e4]
+                                                                  2    unixWrite + 180 (libsqlite3.dylib + 460888) [0x1ab4e2858]
+                                                                    2    guarded_pwrite_np + 8 (libsystem_kernel.dylib + 20852) [0x1a4f3d174]
+                                                                      2    <Effective Thread QoS Utility, Requested Thread QoS Utility>
+                2    ??? (CloudKitDaemon + 566364) [0x1d3c0045c]
+                  2    ??? (CloudKitDaemon + 540500) [0x1d3bf9f54]
+                    2    ??? (CloudKitDaemon + 1821832) [0x1d3d32c88]
+                      2    ??? (CloudKitDaemon + 3259388) [0x1d3e91bfc]
+                        2    _dispatch_lane_barrier_sync_invoke_and_complete + 56 (libdispatch.dylib + 77312) [0x1a4dc5e00]
+                          2    _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+                            2    ??? (CloudKitDaemon + 3259584) [0x1d3e91cc0]
+                              2    ??? (CloudKit + 622444) [0x1ac6fff6c]
+                                2    ??? (CloudKit + 621952) [0x1ac6ffd80]
+                                  2    ??? (CloudKit + 622792) [0x1ac7000c8]
+                                    2    ??? (CloudKit + 621636) [0x1ac6ffc44]
+                                      2    sqlite3_exec + 356 (libsqlite3.dylib + 40468) [0x1ab47be14]
+                                        2    sqlite3_step + 3284 (libsqlite3.dylib + 289020) [0x1ab4b88fc]
+                                          2    sqlite3VdbeExec + 56548 (libsqlite3.dylib + 347716) [0x1ab4c6e44]
+                                            2    sqlite3VdbeHalt + 3428 (libsqlite3.dylib + 155176) [0x1ab497e28]
+                                              2    sqlite3BtreeCommitPhaseOne + 164 (libsqlite3.dylib + 372568) [0x1ab4ccf58]
+                                                2    sqlite3PagerCommitPhaseOne + 312 (libsqlite3.dylib + 458816) [0x1ab4e2040]
+                                                  2    pagerWalFrames + 1720 (libsqlite3.dylib + 821220) [0x1ab53a7e4]
+                                                    2    unixWrite + 180 (libsqlite3.dylib + 460888) [0x1ab4e2858]
+                                                      2    guarded_pwrite_np + 8 (libsystem_kernel.dylib + 20852) [0x1a4f3d174]
+                                                        2    <Effective Thread QoS Utility, Requested Thread QoS Utility>
+    58   _pthread_wqthread + 228 (libsystem_pthread.dylib + 13000) [0x1a4f712c8]
+      58   _dispatch_worker_thread2 + 164 (libdispatch.dylib + 88920) [0x1a4dc8b58]
+        58   _dispatch_root_queue_drain + 396 (libdispatch.dylib + 86812) [0x1a4dc831c]
+          58   _dispatch_async_redirect_invoke + 596 (libdispatch.dylib + 26332) [0x1a4db96dc]
+            58   _dispatch_continuation_pop + 504 (libdispatch.dylib + 28800) [0x1a4dba080]
+              58   _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+                58   _dispatch_call_block_and_release + 32 (libdispatch.dylib + 7776) [0x1a4db4e60]
+                  58   ??? (CloudKitDaemon + 362336) [0x1d3bce760]
+                    58   ??? (CloudKitDaemon + 364316) [0x1d3bcef1c]
+                      58   ??? (CloudKitDaemon + 361052) [0x1d3bce25c]
+                        57   ??? (CloudKitDaemon + 2545236) [0x1d3de3654]
+                          57   ??? (CloudKitDaemon + 378816) [0x1d3bd27c0]
+                            57   ??? (CloudKitDaemon + 2505240) [0x1d3dd9a18]
+                              57   ??? (CloudKitDaemon + 2511776) [0x1d3ddb3a0]
+                                57   ??? (CloudKitDaemon + 2523820) [0x1d3dde2ac]
+                                  57   ??? (CloudKitDaemon + 36360) [0x1d3b7ee08]
+                                    57   ??? (CloudKit + 622444) [0x1ac6fff6c]
+                                      57   ??? (CloudKit + 621952) [0x1ac6ffd80]
+                                        57   ??? (CloudKit + 622792) [0x1ac7000c8]
+                                          57   ??? (CloudKit + 621636) [0x1ac6ffc44]
+                                            57   sqlite3_exec + 356 (libsqlite3.dylib + 40468) [0x1ab47be14]
+                                              37   sqlite3_step + 3284 (libsqlite3.dylib + 289020) [0x1ab4b88fc]
+                                                37   sqlite3VdbeExec + 56548 (libsqlite3.dylib + 347716) [0x1ab4c6e44]
+                                                  37   sqlite3VdbeHalt + 3428 (libsqlite3.dylib + 155176) [0x1ab497e28]
+                                                    37   sqlite3BtreeCommitPhaseOne + 164 (libsqlite3.dylib + 372568) [0x1ab4ccf58]
+                                                      37   sqlite3PagerCommitPhaseOne + 312 (libsqlite3.dylib + 458816) [0x1ab4e2040]
+                                                        37   pagerWalFrames + 1720 (libsqlite3.dylib + 821220) [0x1ab53a7e4]
+                                                          37   unixWrite + 180 (libsqlite3.dylib + 460888) [0x1ab4e2858]
+                                                            37   guarded_pwrite_np + 8 (libsystem_kernel.dylib + 20852) [0x1a4f3d174]
+                                                              36   <Effective Thread QoS Utility, Requested Thread QoS Utility>
+                                                              1    <Effective Thread QoS User Initiated, Requested Thread QoS User Initiated>
+                                              20   sqlite3_step + 3576 (libsqlite3.dylib + 289312) [0x1ab4b8a20]
+                                                20   sqlite3WalDefaultHook + 72 (libsqlite3.dylib + 461884) [0x1ab4e2c3c]
+                                                  20   sqlite3_wal_checkpoint_v2 + 500 (libsqlite3.dylib + 695928) [0x1ab51be78]
+                                                    20   sqlite3Checkpoint + 372 (libsqlite3.dylib + 696472) [0x1ab51c098]
+                                                      20   sqlite3WalCheckpoint + 5264 (libsqlite3.dylib + 554936) [0x1ab4f97b8]
+                                                        20   unixWrite + 180 (libsqlite3.dylib + 460888) [0x1ab4e2858]
+                                                          20   guarded_pwrite_np + 8 (libsystem_kernel.dylib + 20852) [0x1a4f3d174]
+                                                            20   <Effective Thread QoS Utility, Requested Thread QoS Utility>
+                        1    ??? (CloudKitDaemon + 894804) [0x1d3c50754]
+                          1    ??? (CloudKitDaemon + 155056) [0x1d3b9bdb0]
+                            1    ??? (CloudKitDaemon + 1625780) [0x1d3d02eb4]
+                              1    _dispatch_lane_barrier_sync_invoke_and_complete + 56 (libdispatch.dylib + 77312) [0x1a4dc5e00]
+                                1    _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+                                  1    ??? (CloudKitDaemon + 1626936) [0x1d3d03338]
+                                    1    ??? (CloudKitDaemon + 2047864) [0x1d3d69f78]
+                                      1    ??? (CloudKitDaemon + 2045788) [0x1d3d6975c]
+                                        1    ??? (CloudKitDaemon + 2040096) [0x1d3d68120]
+                                          1    MMCSEngineCreate + 276 (MMCS + 182664) [0x1cde5a988]
+                                            1    CKChunkStoreCreate + 108 (ChunkingLibrary + 7112) [0x1baa81bc8]
+                                              1    _CSChunkStoreCreate + 2476 (ChunkingLibrary + 10068) [0x1baa82754]
+                                                1    CSopenDB + 4476 (ChunkingLibrary + 17680) [0x1baa84510]
+                                                  1    CSsql_corruption_checking_do + 84 (ChunkingLibrary + 49944) [0x1baa8c318]
+                                                    1    CSsql_doV + 328 (ChunkingLibrary + 45352) [0x1baa8b128]
+                                                      1    sqlite3_exec + 356 (libsqlite3.dylib + 40468) [0x1ab47be14]
+                                                        1    sqlite3_step + 3284 (libsqlite3.dylib + 289020) [0x1ab4b88fc]
+                                                          1    sqlite3VdbeExec + 56548 (libsqlite3.dylib + 347716) [0x1ab4c6e44]
+                                                            1    sqlite3VdbeHalt + 3428 (libsqlite3.dylib + 155176) [0x1ab497e28]
+                                                              1    sqlite3BtreeCommitPhaseOne + 164 (libsqlite3.dylib + 372568) [0x1ab4ccf58]
+                                                                1    sqlite3PagerCommitPhaseOne + 312 (libsqlite3.dylib + 458816) [0x1ab4e2040]
+                                                                  1    pagerWalFrames + 1720 (libsqlite3.dylib + 821220) [0x1ab53a7e4]
+                                                                    1    unixWrite + 180 (libsqlite3.dylib + 460888) [0x1ab4e2858]
+                                                                      1    guarded_pwrite_np + 8 (libsystem_kernel.dylib + 20852) [0x1a4f3d174]
+                                                                        1    <Effective Thread QoS Utility, Requested Thread QoS Utility>
+  14   thread_start + 8 (libsystem_pthread.dylib + 8228) [0x1a4f70024]
+    14   _pthread_start + 148 (libsystem_pthread.dylib + 29248) [0x1a4f75240]
+      14   __NSThread__start__ + 808 (Foundation + 377576) [0x1a5f0c2e8]
+        14   ??? (CloudKitDaemon + 2039124) [0x1d3d67d54]
+          14   CFRunLoopRunSpecific + 600 (CoreFoundation + 534324) [0x1a503e734]
+            10   __CFRunLoopRun + 1728 (CoreFoundation + 538004) [0x1a503f594]
+              10   __CFRunLoopDoBlocks + 412 (CoreFoundation + 542076) [0x1a504057c]
+                10   __CFRUNLOOP_IS_CALLING_OUT_TO_A_BLOCK__ + 28 (CoreFoundation + 542472) [0x1a5040708]
+                  8    __mmcs_perform_with_run_loop_block_invoke + 60 (MMCS + 450148) [0x1cde9be64]
+                    8    __RunLoopPerformBlockSync_block_invoke + 120 (MMCS + 241472) [0x1cde68f40]
+                      8    __54-[MMCSHTTPContext URLSession:dataTask:didReceiveData:]_block_invoke + 480 (MMCS + 233624) [0x1cde67098]
+                        8    mmcs_nshttp_received_data + 276 (MMCS + 166564) [0x1cde56aa4]
+                          8    -[NSData(NSData) enumerateByteRangesUsingBlock:] + 132 (Foundation + 292044) [0x1a5ef74cc]
+                            8    __mmcs_nshttp_received_data_block_invoke + 124 (MMCS + 166728) [0x1cde56b48]
+                              8    handle_callback_downloadContainer + 256 (MMCS + 72004) [0x1cde3f944]
+                                8    mmcs_get_container_process_data + 2348 (MMCS + 74532) [0x1cde40324]
+                                  8    mmcs_get_state_process_chunk_with_padding + 112 (MMCS + 271040) [0x1cde702c0]
+                                    8    CFSetApplyFunction + 328 (CoreFoundation + 308100) [0x1a5007384]
+                                      8    CFBasicHashApply + 144 (CoreFoundation + 308284) [0x1a500743c]
+                                        8    __CFSetApplyFunction_block_invoke + 28 (CoreFoundation + 308748) [0x1a500760c]
+                                          8    mmcs_get_state_process_container_data_for_file_state + 100 (MMCS + 78432) [0x1cde41260]
+                                            8    mmcs_get_file_process_chunk_reference_with_padding + 108 (MMCS + 242052) [0x1cde69184]
+                                              8    mmcs_get_file_process_chunk_instance_with_padding + 272 (MMCS + 242480) [0x1cde69330]
+                                                8    MMCSItemReaderWriterWrite + 192 (MMCS + 157960) [0x1cde54908]
+                                                  8    pwrite + 8 (libsystem_kernel.dylib + 20452) [0x1a4f3cfe4]
+                                                    8    <Effective Thread QoS Utility, Requested Thread QoS Utility>
+                  2    _dispatch_block_invoke_direct + 264 (libdispatch.dylib + 30308) [0x1a4dba664]
+                    2    _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+                      2    ??? (CloudKitDaemon + 2051636) [0x1d3d6ae34]
+                        2    ??? (CloudKitDaemon + 2053952) [0x1d3d6b740]
+                          2    ??? (CloudKitDaemon + 1652676) [0x1d3d097c4]
+                            2    MMCSGetItems + 524 (MMCS + 426304) [0x1cde96140]
+                              2    mmcs_get_items + 1876 (MMCS + 13856) [0x1cde31620]
+                                2    process_authorization_data + 108 (MMCS + 192616) [0x1cde5d068]
+                                  2    process_authorization_array + 3276 (MMCS + 195996) [0x1cde5dd9c]
+                                    2    send_request_downloadChunks + 1004 (MMCS + 190112) [0x1cde5c6a0]
+                                      2    mmcs_get_file_compute_remaining_work + 3200 (MMCS + 67152) [0x1cde3e650]
+                                        2    mmcs_get_file_fulfill_chunk_locally + 1540 (MMCS + 253280) [0x1cde6bd60]
+                                          2    MMCSItemReaderWriterWrite + 192 (MMCS + 157960) [0x1cde54908]
+                                            2    pwrite + 8 (libsystem_kernel.dylib + 20452) [0x1a4f3cfe4]
+                                              2    <Effective Thread QoS Utility, Requested Thread QoS Utility>
+            3    __CFRunLoopRun + 1944 (CoreFoundation + 538220) [0x1a503f66c]
+              3    __CFRunLoopDoTimers + 392 (CoreFoundation + 649968) [0x1a505aaf0]
+                3    __CFRunLoopDoTimer + 1076 (CoreFoundation + 651364) [0x1a505b064]
+                  3    __CFRUNLOOP_IS_CALLING_OUT_TO_A_TIMER_CALLBACK_FUNCTION__ + 32 (CoreFoundation + 652392) [0x1a505b468]
+                    3    mmcs_runloop_reply_job_completed + 248 (MMCS + 449096) [0x1cde9ba48]
+                      3    mmcs_file_job_done_callback + 40 (MMCS + 455300) [0x1cde9d284]
+                        3    mmcs_get_req_context_did_validate_item + 1180 (MMCS + 262972) [0x1cde6e33c]
+                          2    mmcs_get_file_finalize_file_after_validation + 556 (MMCS + 246264) [0x1cde6a1f8]
+                            2    __rename + 8 (libsystem_kernel.dylib + 21912) [0x1a4f3d598]
+                              2    <Effective Thread QoS Utility, Requested Thread QoS Utility>
+                          1    mmcs_get_file_finalize_file_after_validation + 820 (MMCS + 246528) [0x1cde6a300]
+                            1    mmcs_get_req_item_set_done_success_and_notify_item + 356 (MMCS + 257272) [0x1cde6ccf8]
+                              1    ??? (CloudKitDaemon + 2042336) [0x1d3d689e0]
+                                1    ??? (CloudKitDaemon + 2077208) [0x1d3d71218]
+                                  1    -[NSFileManager moveItemAtPath:toPath:error:] + 184 (Foundation + 732556) [0x1a5f62d8c]
+                                    1    -[NSOperation start] + 804 (Foundation + 275980) [0x1a5ef360c]
+                                      1    __NSOPERATION_IS_INVOKING_MAIN__ + 24 (Foundation + 279496) [0x1a5ef43c8]
+                                        1    -[NSFilesystemItemMoveOperation main] + 456 (Foundation + 733520) [0x1a5f63150]
+                                          1    __rename + 8 (libsystem_kernel.dylib + 21912) [0x1a4f3d598]
+                                            1    <Effective Thread QoS Utility, Requested Thread QoS Utility>
+            1    __CFRunLoopRun + 800 (CoreFoundation + 537076) [0x1a503f1f4]
+              1    __CFRunLoopDoBlocks + 412 (CoreFoundation + 542076) [0x1a504057c]
+                1    __CFRUNLOOP_IS_CALLING_OUT_TO_A_BLOCK__ + 28 (CoreFoundation + 542472) [0x1a5040708]
+                  1    __mmcs_perform_with_run_loop_block_invoke + 60 (MMCS + 450148) [0x1cde9be64]
+                    1    __RunLoopPerformBlockSync_block_invoke + 120 (MMCS + 241472) [0x1cde68f40]
+                      1    __54-[MMCSHTTPContext URLSession:dataTask:didReceiveData:]_block_invoke + 480 (MMCS + 233624) [0x1cde67098]
+                        1    mmcs_nshttp_received_data + 276 (MMCS + 166564) [0x1cde56aa4]
+                          1    -[NSData(NSData) enumerateByteRangesUsingBlock:] + 132 (Foundation + 292044) [0x1a5ef74cc]
+                            1    __mmcs_nshttp_received_data_block_invoke + 124 (MMCS + 166728) [0x1cde56b48]
+                              1    handle_callback_downloadContainer + 256 (MMCS + 72004) [0x1cde3f944]
+                                1    mmcs_get_container_process_data + 2348 (MMCS + 74532) [0x1cde40324]
+                                  1    mmcs_get_state_process_chunk_with_padding + 112 (MMCS + 271040) [0x1cde702c0]
+                                    1    CFSetApplyFunction + 328 (CoreFoundation + 308100) [0x1a5007384]
+                                      1    CFBasicHashApply + 144 (CoreFoundation + 308284) [0x1a500743c]
+                                        1    __CFSetApplyFunction_block_invoke + 28 (CoreFoundation + 308748) [0x1a500760c]
+                                          1    mmcs_get_state_process_container_data_for_file_state + 100 (MMCS + 78432) [0x1cde41260]
+                                            1    mmcs_get_file_process_chunk_reference_with_padding + 108 (MMCS + 242052) [0x1cde69184]
+                                              1    mmcs_get_file_process_chunk_instance_with_padding + 272 (MMCS + 242480) [0x1cde69330]
+                                                1    MMCSItemReaderWriterWrite + 192 (MMCS + 157960) [0x1cde54908]
+                                                  1    pwrite + 8 (libsystem_kernel.dylib + 20452) [0x1a4f3cfe4]
+                                                    1    <Effective Thread QoS Utility, Requested Thread QoS Utility>
+
+  Binary Images:
+           0x102730000 -                ???  cloudd                                        <F41BDA92-9D1E-3A4D-AFC9-B9C0F678F21A>  /System/Library/PrivateFrameworks/CloudKitDaemon.framework/Support/cloudd
+           0x1a4db3000 -        0x1a4df9fff  libdispatch.dylib (1324.60.3)                 <93E1DCFC-EF56-3113-8E7C-1BA85266A93B>  /usr/lib/system/libdispatch.dylib
+           0x1a4f38000 -        0x1a4f6dfff  libsystem_kernel.dylib (8019.80.24)           <384945E6-DD71-37E5-9A3D-84FFF14A1E60>  /usr/lib/system/libsystem_kernel.dylib
+           0x1a4f6e000 -        0x1a4f7afff  libsystem_pthread.dylib (485.60.2)            <F7B2ECCF-E6F1-3109-AE81-9028C0B8332A>  /usr/lib/system/libsystem_pthread.dylib
+           0x1a4fbc000 -        0x1a54fffff  com.apple.CoreFoundation 6.9 (1856.105)       <16FADF8B-A3AF-3E0C-B5FB-CE9A9CDC8747>  /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
+           0x1a5eb0000 -        0x1a629dfff  com.apple.Foundation 6.9 (1856.105)           <90321A38-43A5-3767-9A9C-2C631338B9BC>  /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
+           0x1ab472000 -        0x1ab61ffff  libsqlite3.dylib (331)                        <BF74926A-62E6-3EDD-99BC-40B4388DBA3E>  /usr/lib/libsqlite3.dylib
+           0x1ac668000 -        0x1ac849fff  com.apple.cloudkit.CloudKit 1940 (1940)       <3FC2C2BD-E1ED-306E-B348-1E0D6BEBA5DF>  /System/Library/Frameworks/CloudKit.framework/Versions/A/CloudKit
+           0x1baa80000 -        0x1baad2fff  com.apple.ChunkingLibrary 337.1 (337.1)       <202B9625-0346-36C1-8314-50A77D3505A4>  /System/Library/PrivateFrameworks/ChunkingLibrary.framework/Versions/A/ChunkingLibrary
+           0x1c97d6000 -        0x1c97eafff  libprequelite.dylib (117)                     <A9234318-AF37-3F06-A1A5-98A6EF477E92>  /usr/lib/libprequelite.dylib
+           0x1cde2e000 -        0x1cded3fff  com.apple.MMCS 1.3 (1930)                     <2B5E824B-CC07-3E71-94B3-F6CE7B21A23B>  /System/Library/PrivateFrameworks/MMCS.framework/Versions/A/MMCS
+           0x1d3b76000 -        0x1d3f65fff  com.apple.cloudkit.CloudKitDaemon 1940 (1940) <F74C2D1D-BBC7-3215-BFC6-3CF81CF61DFB>  /System/Library/PrivateFrameworks/CloudKitDaemon.framework/Versions/A/CloudKitDaemon
+
+
+Powerstats for:   bird
+UUID:             514DEC8C-3ABB-37B4-8403-2B4034124ECA
+Path:             /System/Library/PrivateFrameworks/CloudDocsDaemon.framework/Versions/A/Support/bird
+Architecture:     arm64e
+Start time:       2022-02-26 12:39:51.647 -0600
+End time:         2022-02-26 12:45:27.040 -0600
+Num samples:      257 (32%)
+Primary state:    257 samples Non-Frontmost App, Non-Suppressed, Kernel mode, Effective Thread QoS Utility, Requested Thread QoS Utility, Override Thread QoS Unspecified
+User Activity:    0 samples Idle, 257 samples Active
+Power Source:     257 samples on Battery, 0 samples on AC
+  257  start_wqthread + 8 (libsystem_pthread.dylib + 8216) [0x1a4f70018]
+    257  _pthread_wqthread + 288 (libsystem_pthread.dylib + 13060) [0x1a4f71304]
+      257  _dispatch_workloop_worker_thread + 656 (libdispatch.dylib + 91912) [0x1a4dc9708]
+        257  _dispatch_lane_invoke + 444 (libdispatch.dylib + 48856) [0x1a4dbeed8]
+          257  _dispatch_lane_serial_drain + 672 (libdispatch.dylib + 45872) [0x1a4dbe330]
+            257  _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+              257  _dispatch_block_async_invoke2 + 148 (libdispatch.dylib + 76176) [0x1a4dc5990]
+                257  ??? (CloudKit + 483932) [0x1ac6de25c]
+                  257  -[NSInvocation invokeWithTarget:] + 80 (CoreFoundation + 627144) [0x1a50551c8]
+                    257  -[NSInvocation invoke] + 468 (CoreFoundation + 416332) [0x1a5021a4c]
+                      257  __invoking___ + 148 (CoreFoundation + 416724) [0x1a5021bd4]
+                        256  ??? (CloudKit + 1238868) [0x1ac796754]
+                          256  __59-[BRCSyncDownOperation _performAfterFetchingRecordChanges:]_block_invoke.187 + 948 (CloudDocsDaemon + 2532656) [0x1bf81a530]
+                            256  -[BRCServerZone didSyncDownRequestID:serverChangeToken:editedRecords:deletedRecordIDs:deletedShareRecordIDs:movedZoneNames:allocRankZones:syncStatus:savedDirectly:] + 1200 (CloudDocsDaemon + 926900) [0x1bf6924b4]
+                              256  -[BRCServerZone _saveInconsistentStateWithRequestID:serverChangeToken:editedRecords:deletedRecordIDs:deletedShareRecordIDs:syncStatus:] + 428 (CloudDocsDaemon + 924748) [0x1bf691c4c]
+                                256  -[BRCPendingChangesStream saveEditedRecords:deletedRecordIDs:deletedShareIDs:serverChangeToken:clientChangeToken:syncStatus:] + 260 (CloudDocsDaemon + 1956016) [0x1bf78d8b0]
+                                  256  -[PQLConnection performWithFlags:action:] + 240 (libprequelite.dylib + 31820) [0x1c97ddc4c]
+                                    256  _dispatch_lane_barrier_sync_invoke_and_complete + 56 (libdispatch.dylib + 77312) [0x1a4dc5e00]
+                                      256  _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+                                        256  __41-[PQLConnection performWithFlags:action:]_block_invoke + 48 (libprequelite.dylib + 32048) [0x1c97ddd30]
+                                          256  -[PQLConnection _performWithFlags:action:whenFlushed:] + 1220 (libprequelite.dylib + 29764) [0x1c97dd444]
+                                            256  -[PQLConnection _execute:mustSucceed:bindings:] + 72 (libprequelite.dylib + 39644) [0x1c97dfadc]
+                                              256  -[PQLConnection _executeStmt:mustSucceed:] + 112 (libprequelite.dylib + 39216) [0x1c97df930]
+                                                163  sqlite3_step + 3576 (libsqlite3.dylib + 289312) [0x1ab4b8a20]
+                                                  163  sqlite3WalDefaultHook + 72 (libsqlite3.dylib + 461884) [0x1ab4e2c3c]
+                                                    163  sqlite3_wal_checkpoint_v2 + 500 (libsqlite3.dylib + 695928) [0x1ab51be78]
+                                                      163  sqlite3Checkpoint + 372 (libsqlite3.dylib + 696472) [0x1ab51c098]
+                                                        163  sqlite3WalCheckpoint + 5264 (libsqlite3.dylib + 554936) [0x1ab4f97b8]
+                                                          163  unixWrite + 180 (libsqlite3.dylib + 460888) [0x1ab4e2858]
+                                                            163  guarded_pwrite_np + 8 (libsystem_kernel.dylib + 20852) [0x1a4f3d174]
+                                                93   sqlite3_step + 3284 (libsqlite3.dylib + 289020) [0x1ab4b88fc]
+                                                  93   sqlite3VdbeExec + 31584 (libsqlite3.dylib + 322752) [0x1ab4c0cc0]
+                                                    93   sqlite3VdbeHalt + 3428 (libsqlite3.dylib + 155176) [0x1ab497e28]
+                                                      93   sqlite3BtreeCommitPhaseOne + 164 (libsqlite3.dylib + 372568) [0x1ab4ccf58]
+                                                        93   sqlite3PagerCommitPhaseOne + 312 (libsqlite3.dylib + 458816) [0x1ab4e2040]
+                                                          93   pagerWalFrames + 1720 (libsqlite3.dylib + 821220) [0x1ab53a7e4]
+                                                            93   unixWrite + 180 (libsqlite3.dylib + 460888) [0x1ab4e2858]
+                                                              93   guarded_pwrite_np + 8 (libsystem_kernel.dylib + 20852) [0x1a4f3d174]
+                        1    ??? (CloudKit + 1311496) [0x1ac7a8308]
+                          1    __75-[BRCContainerMetadataSyncDownOperation performAfterFetchingAssetContents:]_block_invoke + 488 (CloudDocsDaemon + 880652) [0x1bf68700c]
+                            1    -[BRCAppLibrary(BRCContainerMetadataSyncDownAdditions) _updateContainerMetadataFromRecord:stripIcons:] + 580 (CloudDocsDaemon + 872968) [0x1bf685208]
+                              1    -[BRContainer(BRInternalAdditions) updateMetadataWithRecordData:iconPaths:] + 1084 (CloudDocs + 397616) [0x1ac8ab130]
+                                1    -[BRContainer(BRInternalAdditions) _updateMetadataOnDiskWithProperties:] + 216 (CloudDocs + 391364) [0x1ac8a98c4]
+                                  1    _NSWriteDataToFileWithExtendedAttributes + 644 (Foundation + 285372) [0x1a5ef5abc]
+                                    1    -[NSData(NSData) enumerateByteRangesUsingBlock:] + 132 (Foundation + 292044) [0x1a5ef74cc]
+                                      1    ___NSWriteDataToFileWithExtendedAttributes_block_invoke + 80 (Foundation + 292204) [0x1a5ef756c]
+                                        1    write + 8 (libsystem_kernel.dylib + 21820) [0x1a4f3d53c]
+
+  Binary Images:
+           0x104434000 -                ???  bird                                     <514DEC8C-3ABB-37B4-8403-2B4034124ECA>  /System/Library/PrivateFrameworks/CloudDocsDaemon.framework/Versions/A/Support/bird
+           0x1a4db3000 -        0x1a4df9fff  libdispatch.dylib (1324.60.3)            <93E1DCFC-EF56-3113-8E7C-1BA85266A93B>  /usr/lib/system/libdispatch.dylib
+           0x1a4f38000 -        0x1a4f6dfff  libsystem_kernel.dylib (8019.80.24)      <384945E6-DD71-37E5-9A3D-84FFF14A1E60>  /usr/lib/system/libsystem_kernel.dylib
+           0x1a4f6e000 -        0x1a4f7afff  libsystem_pthread.dylib (485.60.2)       <F7B2ECCF-E6F1-3109-AE81-9028C0B8332A>  /usr/lib/system/libsystem_pthread.dylib
+           0x1a4fbc000 -        0x1a54fffff  com.apple.CoreFoundation 6.9 (1856.105)  <16FADF8B-A3AF-3E0C-B5FB-CE9A9CDC8747>  /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
+           0x1a5eb0000 -        0x1a629dfff  com.apple.Foundation 6.9 (1856.105)      <90321A38-43A5-3767-9A9C-2C631338B9BC>  /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
+           0x1ab472000 -        0x1ab61ffff  libsqlite3.dylib (331)                   <BF74926A-62E6-3EDD-99BC-40B4388DBA3E>  /usr/lib/libsqlite3.dylib
+           0x1ac668000 -        0x1ac849fff  com.apple.cloudkit.CloudKit 1940 (1940)  <3FC2C2BD-E1ED-306E-B348-1E0D6BEBA5DF>  /System/Library/Frameworks/CloudKit.framework/Versions/A/CloudKit
+           0x1ac84a000 -        0x1ac8eefff  com.apple.CloudDocs 1.0 (902.60.2)       <99569A0C-2668-30E2-9E80-2A299B48128A>  /System/Library/PrivateFrameworks/CloudDocs.framework/Versions/A/CloudDocs
+           0x1bf5b0000 -        0x1bf997fff  com.apple.CloudDocsDaemon 1.0 (902.60.2) <435378AF-C0E7-3E42-8B9D-118506C5532F>  /System/Library/PrivateFrameworks/CloudDocsDaemon.framework/Versions/A/CloudDocsDaemon
+           0x1c97d6000 -        0x1c97eafff  libprequelite.dylib (117)                <A9234318-AF37-3F06-A1A5-98A6EF477E92>  /usr/lib/libprequelite.dylib
+
+
+Powerstats for:   coresymbolicationd
+UUID:             8BC10764-033F-38E8-AD09-76375F993585
+Path:             /System/Library/PrivateFrameworks/CoreSymbolication.framework/coresymbolicationd
+Codesigning ID:   com.apple.coresymbolicationd
+Architecture:     arm64e
+Start time:       2022-02-26 12:39:58.643 -0600
+End time:         2022-02-26 12:44:42.214 -0600
+Num samples:      85 (11%)
+Primary state:    69 samples Non-Frontmost App, Non-Suppressed, Kernel mode, Effective Thread QoS Default, Requested Thread QoS Default, Override Thread QoS Unspecified
+User Activity:    0 samples Idle, 85 samples Active
+Power Source:     85 samples on Battery, 0 samples on AC
+  85  start_wqthread + 8 (libsystem_pthread.dylib + 8216) [0x1a4f70018]
+    85  _pthread_wqthread + 288 (libsystem_pthread.dylib + 13060) [0x1a4f71304]
+      85  _dispatch_workloop_worker_thread + 656 (libdispatch.dylib + 91912) [0x1a4dc9708]
+        85  _dispatch_mach_invoke + 456 (libdispatch.dylib + 134328) [0x1a4dd3cb8]
+          85  _dispatch_lane_serial_drain + 376 (libdispatch.dylib + 45576) [0x1a4dbe208]
+            85  _dispatch_mach_msg_invoke + 476 (libdispatch.dylib + 130920) [0x1a4dd2f68]
+              85  _dispatch_client_callout4 + 20 (libdispatch.dylib + 15468) [0x1a4db6c6c]
+                85  _xpc_connection_mach_event + 1368 (libxpc.dylib + 52216) [0x1a4cc6bf8]
+                  85  _xpc_connection_call_event_handler + 176 (libxpc.dylib + 57816) [0x1a4cc81d8]
+                    54  ??? (coresymbolicationd + 21092) [0x102439264]
+                      54  ??? (coresymbolicationd + 42976) [0x10243e7e0]
+                        54  pwrite + 8 (libsystem_kernel.dylib + 20452) [0x1a4f3cfe4]
+                          16  <Effective Thread QoS Background, Requested Thread QoS Background>
+                    31  ??? (coresymbolicationd + 21352) [0x102439368]
+                      31  ??? (coresymbolicationd + 44028) [0x10243ebfc]
+                        31  ??? (coresymbolicationd + 42976) [0x10243e7e0]
+                          31  pwrite + 8 (libsystem_kernel.dylib + 20452) [0x1a4f3cfe4]
+
+  Binary Images:
+           0x102434000 -        0x10244bfff  coresymbolicationd (64550.88.2)     <8BC10764-033F-38E8-AD09-76375F993585>  /System/Library/PrivateFrameworks/CoreSymbolication.framework/coresymbolicationd
+           0x1a4cba000 -        0x1a4cf3fff  libxpc.dylib (2235.80.3)            <FD3E0E8D-4618-3CE5-A24A-5639BE86B979>  /usr/lib/system/libxpc.dylib
+           0x1a4db3000 -        0x1a4df9fff  libdispatch.dylib (1324.60.3)       <93E1DCFC-EF56-3113-8E7C-1BA85266A93B>  /usr/lib/system/libdispatch.dylib
+           0x1a4f38000 -        0x1a4f6dfff  libsystem_kernel.dylib (8019.80.24) <384945E6-DD71-37E5-9A3D-84FFF14A1E60>  /usr/lib/system/libsystem_kernel.dylib
+           0x1a4f6e000 -        0x1a4f7afff  libsystem_pthread.dylib (485.60.2)  <F7B2ECCF-E6F1-3109-AE81-9028C0B8332A>  /usr/lib/system/libsystem_pthread.dylib
+
+
+Powerstats for:   photolibraryd
+UUID:             0993C6CF-400F-34EB-9132-BD41638F6249
+Path:             /System/Library/PrivateFrameworks/PhotoLibraryServices.framework/Versions/A/Support/photolibraryd
+Architecture:     arm64e
+Start time:       2022-02-26 12:40:00.857 -0600
+End time:         2022-02-26 12:44:48.455 -0600
+Num samples:      71 (9%)
+Primary state:    47 samples Non-Frontmost App, Non-Suppressed, Kernel mode, Effective Thread QoS Background, Requested Thread QoS Background, Override Thread QoS Unspecified
+User Activity:    0 samples Idle, 71 samples Active
+Power Source:     71 samples on Battery, 0 samples on AC
+  71  start_wqthread + 8 (libsystem_pthread.dylib + 8216) [0x1a4f70018]
+    71  _pthread_wqthread + 288 (libsystem_pthread.dylib + 13060) [0x1a4f71304]
+      71  _dispatch_workloop_worker_thread + 656 (libdispatch.dylib + 91912) [0x1a4dc9708]
+        46  _dispatch_lane_invoke + 392 (libdispatch.dylib + 48804) [0x1a4dbeea4]
+          46  _dispatch_lane_serial_drain + 672 (libdispatch.dylib + 45872) [0x1a4dbe330]
+            46  _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+              38  developerSubmittedBlockToNSManagedObjectContextPerform + 156 (CoreData + 193660) [0x1ab0b847c]
+                37  __52-[PLQueueDispatcher async:identifyingBlock:library:]_block_invoke + 32 (PhotoLibraryServices + 5002372) [0x1c7f32484]
+                  37  __PLQUEUE_DISPATCH_IS_CALLING_OUT_TO_BG_BLOCK__ + 24 (PhotoLibraryServices + 5001468) [0x1c7f320fc]
+                    37  __122-[PLPhotoLibrary(MegaMocAdditions) _withDispatchGroup:synchronously:name:shouldSave:performTransaction:completionHandler:]_block_invoke.254 + 44 (PhotoLibraryServices + 2802888) [0x1c7d194c8]
+                      37  -[PLManagedObjectContext pl_performWithOptions:andBlock:] + 100 (PhotoLibraryServices + 110472) [0x1c7a87f88]
+                        37  -[PLManagedObjectContext performWithOptions:andBlock:] + 160 (PhotoLibraryServices + 92092) [0x1c7a837bc]
+                          37  -[NSManagedObjectContext(_NSCoreDataSPI) performWithOptions:andBlock:] + 592 (CoreData + 355140) [0x1ab0dfb44]
+                            37  _dispatch_lane_barrier_sync_invoke_and_complete + 56 (libdispatch.dylib + 77312) [0x1a4dc5e00]
+                              37  _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+                                37  developerSubmittedBlockToNSManagedObjectContextPerform + 156 (CoreData + 193660) [0x1ab0b847c]
+                                  37  __54-[PLManagedObjectContext performWithOptions:andBlock:]_block_invoke + 96 (PhotoLibraryServices + 1847936) [0x1c7c30280]
+                                    20  __122-[PLPhotoLibrary(MegaMocAdditions) _withDispatchGroup:synchronously:name:shouldSave:performTransaction:completionHandler:]_block_invoke.231 + 328 (PhotoLibraryServices + 2802264) [0x1c7d19258]
+                                      17  -[PLManagedObjectContext save:] + 736 (PhotoLibraryServices + 172632) [0x1c7a97258]
+                                        16  -[NSManagedObjectContext save:] + 1548 (CoreData + 385988) [0x1ab0e73c4]
+                                          16  -[NSPersistentStoreCoordinator executeRequest:withContext:error:] + 1488 (CoreData + 211044) [0x1ab0bc864]
+                                            16  -[NSPersistentStoreCoordinator _routeHeavyweightBlock:] + 264 (CoreData + 213004) [0x1ab0bd00c]
+                                              16  __65-[NSPersistentStoreCoordinator executeRequest:withContext:error:]_block_invoke.843 + 11708 (CoreData + 1478976) [0x1ab1f2140]
+                                                16  -[NSSQLCore executeRequest:withContext:error:] + 2760 (CoreData + 216812) [0x1ab0bdeec]
+                                                  16  -[NSSQLCore dispatchRequest:withRetries:] + 228 (CoreData + 228728) [0x1ab0c0d78]
+                                                    16  -[NSSQLCoreDispatchManager routeStoreRequest:] + 252 (CoreData + 230404) [0x1ab0c1404]
+                                                      16  -[NSSQLDefaultConnectionManager handleStoreRequest:] + 248 (CoreData + 230716) [0x1ab0c153c]
+                                                        16  -[NSSQLiteConnection performAndWait:] + 176 (CoreData + 141184) [0x1ab0ab780]
+                                                          16  _dispatch_lane_barrier_sync_invoke_and_complete + 56 (libdispatch.dylib + 77312) [0x1a4dc5e00]
+                                                            16  _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+                                                              16  __37-[NSSQLiteConnection performAndWait:]_block_invoke + 48 (CoreData + 141464) [0x1ab0ab898]
+                                                                16  __52-[NSSQLDefaultConnectionManager handleStoreRequest:]_block_invoke + 68 (CoreData + 231504) [0x1ab0c1850]
+                                                                  16  -[NSSQLStoreRequestContext executeRequestUsingConnection:] + 260 (CoreData + 232216) [0x1ab0c1b18]
+                                                                    16  -[NSSQLSaveChangesRequestContext executeRequestCore:] + 32 (CoreData + 542520) [0x1ab10d738]
+                                                                      16  _executeSaveChangesRequest + 5204 (CoreData + 548112) [0x1ab10ed10]
+                                                                        16  -[NSSQLiteConnection commitTransaction] + 812 (CoreData + 588732) [0x1ab118bbc]
+                                                                          16  _execute + 132 (CoreData + 160516) [0x1ab0b0304]
+                                                                            16  sqlite3_step + 3284 (libsqlite3.dylib + 289020) [0x1ab4b88fc]
+                                                                              16  sqlite3VdbeExec + 56548 (libsqlite3.dylib + 347716) [0x1ab4c6e44]
+                                                                                16  sqlite3VdbeHalt + 3428 (libsqlite3.dylib + 155176) [0x1ab497e28]
+                                                                                  16  sqlite3BtreeCommitPhaseOne + 164 (libsqlite3.dylib + 372568) [0x1ab4ccf58]
+                                                                                    16  sqlite3PagerCommitPhaseOne + 312 (libsqlite3.dylib + 458816) [0x1ab4e2040]
+                                                                                      16  pagerWalFrames + 1720 (libsqlite3.dylib + 821220) [0x1ab53a7e4]
+                                                                                        16  unixWrite + 180 (libsqlite3.dylib + 460888) [0x1ab4e2858]
+                                                                                          16  guarded_pwrite_np + 8 (libsystem_kernel.dylib + 20852) [0x1a4f3d174]
+                                        1   -[NSManagedObjectContext save:] + 4176 (CoreData + 388616) [0x1ab0e7e08]
+                                          1   -[NSManagedObjectContext _didSaveChanges] + 3196 (CoreData + 1144120) [0x1ab1a0538]
+                                            1   -[NSManagedObjectContext _postContextDidSaveNotificationWithUserInfo:] + 2720 (CoreData + 1186388) [0x1ab1aaa54]
+                                              1   -[NSNotificationCenter postNotificationName:object:userInfo:] + 96 (Foundation + 40508) [0x1a5eb9e3c]
+                                                1   _CFXNotificationPost + 720 (CoreFoundation + 294576) [0x1a5003eb0]
+                                                  1   _CFXRegistrationPost + 456 (CoreFoundation + 1166064) [0x1a50d8af0]
+                                                    1   ___CFXRegistrationPost_block_invoke + 52 (CoreFoundation + 1166212) [0x1a50d8b84]
+                                                      1   __CFNOTIFICATIONCENTER_IS_CALLING_OUT_TO_AN_OBSERVER__ + 28 (CoreFoundation + 496128) [0x1a5035200]
+                                                        1   -[PLChangeNode publishChangesForDidSaveObjectIDsNotification:] + 1120 (PhotoLibraryServices + 174220) [0x1c7a9788c]
+                                                          1   -[PLServerChangePublisher publishChangeEvent:delayedSaveActionsDetail:transaction:] + 200 (PhotoLibraryServices + 376628) [0x1c7ac8f34]
+                                                            1   +[PLClientServerTransaction beginServerTransactionWithToken:changeScopes:pathManager:] + 492 (PhotoLibraryServices + 377256) [0x1c7ac91a8]
+                                                              1   pl_dispatch_sync + 124 (PhotoLibraryServicesCore + 278512) [0x21434bff0]
+                                                                1   _dispatch_lane_barrier_sync_invoke_and_complete + 56 (libdispatch.dylib + 77312) [0x1a4dc5e00]
+                                                                  1   _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+                                                                    1   __pl_dispatch_sync_block_invoke + 44 (PhotoLibraryServicesCore + 278588) [0x21434c03c]
+                                                                      1   __86+[PLClientServerTransaction beginServerTransactionWithToken:changeScopes:pathManager:]_block_invoke + 292 (PhotoLibraryServices + 378184) [0x1c7ac9548]
+                                                                        1   -[_PLServerTransaction _enqueueChangeScopes:] + 136 (PhotoLibraryServices + 379224) [0x1c7ac9958]
+                                                                          1   pl_dispatch_sync + 124 (PhotoLibraryServicesCore + 278512) [0x21434bff0]
+                                                                            1   _dispatch_lane_barrier_sync_invoke_and_complete + 56 (libdispatch.dylib + 77312) [0x1a4dc5e00]
+                                                                              1   _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+                                                                                1   __pl_dispatch_sync_block_invoke + 44 (PhotoLibraryServicesCore + 278588) [0x21434c03c]
+                                                                                  1   __45-[_PLServerTransaction _enqueueChangeScopes:]_block_invoke + 360 (PhotoLibraryServices + 379616) [0x1c7ac9ae0]
+                                                                                    1   -[_PLClientTransaction persistTransactionScopes:] + 164 (PhotoLibraryServices + 362032) [0x1c7ac5630]
+                                                                                      1   pl_dispatch_sync + 124 (PhotoLibraryServicesCore + 278512) [0x21434bff0]
+                                                                                        1   _dispatch_lane_barrier_sync_invoke_and_complete + 56 (libdispatch.dylib + 77312) [0x1a4dc5e00]
+                                                                                          1   _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+                                                                                            1   __pl_dispatch_sync_block_invoke + 44 (PhotoLibraryServicesCore + 278588) [0x21434c03c]
+                                                                                              1   pwrite + 8 (libsystem_kernel.dylib + 20452) [0x1a4f3cfe4]
+                                      3   -[PLManagedObjectContext save:] + 592 (PhotoLibraryServices + 172488) [0x1c7a971c8]
+                                        3   +[PLClientServerTransaction beginClientTransactionWithChangeScopes:pathManager:] + 720 (PhotoLibraryServices + 360232) [0x1c7ac4f28]
+                                          3   -[_PLClientTransaction addChangeScopes:] + 316 (PhotoLibraryServices + 361800) [0x1c7ac5548]
+                                            3   -[_PLClientTransaction persistTransactionScopes:] + 164 (PhotoLibraryServices + 362032) [0x1c7ac5630]
+                                              3   pl_dispatch_sync + 124 (PhotoLibraryServicesCore + 278512) [0x21434bff0]
+                                                3   _dispatch_lane_barrier_sync_invoke_and_complete + 56 (libdispatch.dylib + 77312) [0x1a4dc5e00]
+                                                  3   _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+                                                    3   __pl_dispatch_sync_block_invoke + 44 (PhotoLibraryServicesCore + 278588) [0x21434c03c]
+                                                      3   pwrite + 8 (libsystem_kernel.dylib + 20452) [0x1a4f3cfe4]
+                                    17  __122-[PLPhotoLibrary(MegaMocAdditions) _withDispatchGroup:synchronously:name:shouldSave:performTransaction:completionHandler:]_block_invoke.231 + 184 (PhotoLibraryServices + 2802120) [0x1c7d191c8]
+                                      8   __96-[PLCloudPhotoLibraryManager _updateWithCPLResource:isHighPriority:inLibrary:completionHandler:]_block_invoke + 7928 (PhotoLibraryServices + 1392108) [0x1c7bc0dec]
+                                        8   -[PLCloudPhotoLibraryManager _updateAsset:withImageFileURL:] + 444 (PhotoLibraryServices + 1381968) [0x1c7bbe650]
+                                          8   -[PLManagedAsset generateAndUpdateThumbnailsWithPreviewImage:thumbnailImage:fromImageSource:imageData:forceSRGBConversion:] + 44 (PhotoLibraryServices + 1753868) [0x1c7c1930c]
+                                            8   -[PLManagedAsset generateAndUpdateThumbnailsWithPreviewImage:thumbnailImage:fromImageSource:imageData:metadata:forceSRGBConversion:saveCameraPreviewWellImage:] + 1880 (PhotoLibraryServices + 1753440) [0x1c7c19160]
+                                              8   -[PLThumbnailManager setThumbnailsForAsset:withImage:] + 316 (PhotoLibraryServices + 1289576) [0x1c7ba7d68]
+                                                8   -[PLThumbnailManager setThumbnailsForThumbIdentifier:thumbnailIndex:assetUUID:kind:extension:withImage:] + 216 (PhotoLibraryServices + 1287408) [0x1c7ba74f0]
+                                                  4   -[PLThumbnailManager _downscaleAndWriteTableAndFileBackedThumbnailsWithIdentifier:thumbnailIndex:image:assetUUID:] + 2736 (PhotoLibraryServices + 1292924) [0x1c7ba8a7c]
+                                                    4   -[PLThumbFileManager setImageForEntry:withIdentifier:orIndex:photoUUID:options:] + 964 (PhotoLibraryServices + 5154316) [0x1c7f5760c]
+                                                      4   -[PLThumbFileManager _writeImage:forThumbIdentifier:] + 588 (PhotoLibraryServices + 5153268) [0x1c7f571f4]
+                                                        3   _NSWriteDataToFileWithExtendedAttributes + 644 (Foundation + 285372) [0x1a5ef5abc]
+                                                          3   -[NSData(NSData) enumerateByteRangesUsingBlock:] + 132 (Foundation + 292044) [0x1a5ef74cc]
+                                                            3   ___NSWriteDataToFileWithExtendedAttributes_block_invoke + 80 (Foundation + 292204) [0x1a5ef756c]
+                                                              3   write + 8 (libsystem_kernel.dylib + 21820) [0x1a4f3d53c]
+                                                        1   _NSWriteDataToFileWithExtendedAttributes + 1044 (Foundation + 285772) [0x1a5ef5c4c]
+                                                          1   __rename + 8 (libsystem_kernel.dylib + 21912) [0x1a4f3d598]
+                                                  4   -[PLThumbnailManager _downscaleAndWriteTableAndFileBackedThumbnailsWithIdentifier:thumbnailIndex:image:assetUUID:] + 2504 (PhotoLibraryServices + 1292692) [0x1c7ba8994]
+                                                    4   -[__NSArrayI_Transfer enumerateObjectsWithOptions:usingBlock:] + 160 (CoreFoundation + 1149816) [0x1a50d4b78]
+                                                      4   __NSARRAY_IS_CALLING_OUT_TO_A_BLOCK__ + 24 (CoreFoundation + 490432) [0x1a5033bc0]
+                                                        4   __114-[PLThumbnailManager _downscaleAndWriteTableAndFileBackedThumbnailsWithIdentifier:thumbnailIndex:image:assetUUID:]_block_invoke_2 + 316 (PhotoLibraryServices + 1293600) [0x1c7ba8d20]
+                                                          4   pwrite + 8 (libsystem_kernel.dylib + 20452) [0x1a4f3cfe4]
+                                      6   __96-[PLCloudPhotoLibraryManager _updateWithCPLResource:isHighPriority:inLibrary:completionHandler:]_block_invoke + 2156 (PhotoLibraryServices + 1386336) [0x1c7bbf760]
+                                        6   -[PLCloudPhotoLibraryManager _updateAsset:withImageFileURL:] + 444 (PhotoLibraryServices + 1381968) [0x1c7bbe650]
+                                          6   -[PLManagedAsset generateAndUpdateThumbnailsWithPreviewImage:thumbnailImage:fromImageSource:imageData:forceSRGBConversion:] + 44 (PhotoLibraryServices + 1753868) [0x1c7c1930c]
+                                            6   -[PLManagedAsset generateAndUpdateThumbnailsWithPreviewImage:thumbnailImage:fromImageSource:imageData:metadata:forceSRGBConversion:saveCameraPreviewWellImage:] + 1880 (PhotoLibraryServices + 1753440) [0x1c7c19160]
+                                              6   -[PLThumbnailManager setThumbnailsForAsset:withImage:] + 316 (PhotoLibraryServices + 1289576) [0x1c7ba7d68]
+                                                6   -[PLThumbnailManager setThumbnailsForThumbIdentifier:thumbnailIndex:assetUUID:kind:extension:withImage:] + 216 (PhotoLibraryServices + 1287408) [0x1c7ba74f0]
+                                                  4   -[PLThumbnailManager _downscaleAndWriteTableAndFileBackedThumbnailsWithIdentifier:thumbnailIndex:image:assetUUID:] + 2736 (PhotoLibraryServices + 1292924) [0x1c7ba8a7c]
+                                                    4   -[PLThumbFileManager setImageForEntry:withIdentifier:orIndex:photoUUID:options:] + 964 (PhotoLibraryServices + 5154316) [0x1c7f5760c]
+                                                      4   -[PLThumbFileManager _writeImage:forThumbIdentifier:] + 588 (PhotoLibraryServices + 5153268) [0x1c7f571f4]
+                                                        4   _NSWriteDataToFileWithExtendedAttributes + 644 (Foundation + 285372) [0x1a5ef5abc]
+                                                          4   -[NSData(NSData) enumerateByteRangesUsingBlock:] + 132 (Foundation + 292044) [0x1a5ef74cc]
+                                                            4   ___NSWriteDataToFileWithExtendedAttributes_block_invoke + 80 (Foundation + 292204) [0x1a5ef756c]
+                                                              4   write + 8 (libsystem_kernel.dylib + 21820) [0x1a4f3d53c]
+                                                  2   -[PLThumbnailManager _downscaleAndWriteTableAndFileBackedThumbnailsWithIdentifier:thumbnailIndex:image:assetUUID:] + 2504 (PhotoLibraryServices + 1292692) [0x1c7ba8994]
+                                                    2   -[__NSArrayI_Transfer enumerateObjectsWithOptions:usingBlock:] + 160 (CoreFoundation + 1149816) [0x1a50d4b78]
+                                                      2   __NSARRAY_IS_CALLING_OUT_TO_A_BLOCK__ + 24 (CoreFoundation + 490432) [0x1a5033bc0]
+                                                        2   __114-[PLThumbnailManager _downscaleAndWriteTableAndFileBackedThumbnailsWithIdentifier:thumbnailIndex:image:assetUUID:]_block_invoke_2 + 316 (PhotoLibraryServices + 1293600) [0x1c7ba8d20]
+                                                          2   pwrite + 8 (libsystem_kernel.dylib + 20452) [0x1a4f3cfe4]
+                                      2   __96-[PLCloudPhotoLibraryManager _updateWithCPLResource:isHighPriority:inLibrary:completionHandler:]_block_invoke + 8412 (PhotoLibraryServices + 1392592) [0x1c7bc0fd0]
+                                        2   -[NSFileManager removeItemAtPath:error:] + 64 (Foundation + 381160) [0x1a5f0d0e8]
+                                          2   -[NSOperation start] + 804 (Foundation + 275980) [0x1a5ef360c]
+                                            2   __NSOPERATION_IS_INVOKING_MAIN__ + 24 (Foundation + 279496) [0x1a5ef43c8]
+                                              2   -[NSFilesystemItemRemoveOperation main] + 312 (Foundation + 381536) [0x1a5f0d260]
+                                                2   removefile + 144 (libremovefile.dylib + 5996) [0x1af9c376c]
+                                                  2   __removefile_tree_walker + 408 (libremovefile.dylib + 6532) [0x1af9c3984]
+                                                    2   __unlink + 8 (libsystem_kernel.dylib + 22944) [0x1a4f3d9a0]
+                                      1   __96-[PLCloudPhotoLibraryManager _updateWithCPLResource:isHighPriority:inLibrary:completionHandler:]_block_invoke + 5896 (PhotoLibraryServices + 1390076) [0x1c7bc05fc]
+                                        1   -[NSFileManager removeItemAtPath:error:] + 64 (Foundation + 381160) [0x1a5f0d0e8]
+                                          1   -[NSOperation start] + 804 (Foundation + 275980) [0x1a5ef360c]
+                                            1   __NSOPERATION_IS_INVOKING_MAIN__ + 24 (Foundation + 279496) [0x1a5ef43c8]
+                                              1   -[NSFilesystemItemRemoveOperation main] + 312 (Foundation + 381536) [0x1a5f0d260]
+                                                1   removefile + 144 (libremovefile.dylib + 5996) [0x1af9c376c]
+                                                  1   __removefile_tree_walker + 408 (libremovefile.dylib + 6532) [0x1af9c3984]
+                                                    1   __unlink + 8 (libsystem_kernel.dylib + 22944) [0x1a4f3d9a0]
+                1   __54-[PLManagedObjectContext performWithOptions:andBlock:]_block_invoke + 96 (PhotoLibraryServices + 1847936) [0x1c7c30280]
+                  1   __122-[PLPhotoLibrary(MegaMocAdditions) _withDispatchGroup:synchronously:name:shouldSave:performTransaction:completionHandler:]_block_invoke.231 + 328 (PhotoLibraryServices + 2802264) [0x1c7d19258]
+                    1   -[PLManagedObjectContext save:] + 736 (PhotoLibraryServices + 172632) [0x1c7a97258]
+                      1   -[NSManagedObjectContext save:] + 1548 (CoreData + 385988) [0x1ab0e73c4]
+                        1   -[NSPersistentStoreCoordinator executeRequest:withContext:error:] + 1488 (CoreData + 211044) [0x1ab0bc864]
+                          1   -[NSPersistentStoreCoordinator _routeHeavyweightBlock:] + 264 (CoreData + 213004) [0x1ab0bd00c]
+                            1   __65-[NSPersistentStoreCoordinator executeRequest:withContext:error:]_block_invoke.843 + 11708 (CoreData + 1478976) [0x1ab1f2140]
+                              1   -[NSSQLCore executeRequest:withContext:error:] + 2760 (CoreData + 216812) [0x1ab0bdeec]
+                                1   -[NSSQLCore dispatchRequest:withRetries:] + 228 (CoreData + 228728) [0x1ab0c0d78]
+                                  1   -[NSSQLCoreDispatchManager routeStoreRequest:] + 252 (CoreData + 230404) [0x1ab0c1404]
+                                    1   -[NSSQLDefaultConnectionManager handleStoreRequest:] + 248 (CoreData + 230716) [0x1ab0c153c]
+                                      1   -[NSSQLiteConnection performAndWait:] + 176 (CoreData + 141184) [0x1ab0ab780]
+                                        1   _dispatch_lane_barrier_sync_invoke_and_complete + 56 (libdispatch.dylib + 77312) [0x1a4dc5e00]
+                                          1   _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+                                            1   __37-[NSSQLiteConnection performAndWait:]_block_invoke + 48 (CoreData + 141464) [0x1ab0ab898]
+                                              1   __52-[NSSQLDefaultConnectionManager handleStoreRequest:]_block_invoke + 68 (CoreData + 231504) [0x1ab0c1850]
+                                                1   -[NSSQLStoreRequestContext executeRequestUsingConnection:] + 260 (CoreData + 232216) [0x1ab0c1b18]
+                                                  1   -[NSSQLSaveChangesRequestContext executeRequestCore:] + 32 (CoreData + 542520) [0x1ab10d738]
+                                                    1   _executeSaveChangesRequest + 5204 (CoreData + 548112) [0x1ab10ed10]
+                                                      1   -[NSSQLiteConnection commitTransaction] + 812 (CoreData + 588732) [0x1ab118bbc]
+                                                        1   _execute + 132 (CoreData + 160516) [0x1ab0b0304]
+                                                          1   sqlite3_step + 3284 (libsqlite3.dylib + 289020) [0x1ab4b88fc]
+                                                            1   sqlite3VdbeExec + 56548 (libsqlite3.dylib + 347716) [0x1ab4c6e44]
+                                                              1   sqlite3VdbeHalt + 3428 (libsqlite3.dylib + 155176) [0x1ab497e28]
+                                                                1   sqlite3BtreeCommitPhaseOne + 164 (libsqlite3.dylib + 372568) [0x1ab4ccf58]
+                                                                  1   sqlite3PagerCommitPhaseOne + 312 (libsqlite3.dylib + 458816) [0x1ab4e2040]
+                                                                    1   pagerWalFrames + 1720 (libsqlite3.dylib + 821220) [0x1ab53a7e4]
+                                                                      1   unixWrite + 180 (libsqlite3.dylib + 460888) [0x1ab4e2858]
+                                                                        1   guarded_pwrite_np + 8 (libsystem_kernel.dylib + 20852) [0x1a4f3d174]
+                                                                          1   <Requested Thread QoS Utility>
+              8   _dispatch_call_block_and_release + 32 (libdispatch.dylib + 7776) [0x1a4db4e60]
+                4   __108-[PLCoreDataChangeMerger mergeChangesFromRemoteContextSave:intoAllContextsNotIdenticalTo:completionHandler:]_block_invoke + 456 (PhotoLibraryServices + 2976860) [0x1c7d43c5c]
+                  4   -[PLDelayedSaveActionsProcessor processDelayedSaveActionsDetail:withPhotoLibrary:transaction:] + 1036 (PhotoLibraryServices + 183816) [0x1c7a99e08]
+                    4   -[_PLServerTransaction completeTransactionScope:] + 136 (PhotoLibraryServices + 389928) [0x1c7acc328]
+                      4   pl_dispatch_sync + 124 (PhotoLibraryServicesCore + 278512) [0x21434bff0]
+                        4   _dispatch_lane_barrier_sync_invoke_and_complete + 56 (libdispatch.dylib + 77312) [0x1a4dc5e00]
+                          4   _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+                            4   __pl_dispatch_sync_block_invoke + 44 (PhotoLibraryServicesCore + 278588) [0x21434c03c]
+                              4   -[_PLClientTransaction persistTransactionScopes:] + 164 (PhotoLibraryServices + 362032) [0x1c7ac5630]
+                                4   pl_dispatch_sync + 124 (PhotoLibraryServicesCore + 278512) [0x21434bff0]
+                                  4   _dispatch_lane_barrier_sync_invoke_and_complete + 56 (libdispatch.dylib + 77312) [0x1a4dc5e00]
+                                    4   _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+                                      4   __pl_dispatch_sync_block_invoke + 44 (PhotoLibraryServicesCore + 278588) [0x21434c03c]
+                                        4   pwrite + 8 (libsystem_kernel.dylib + 20452) [0x1a4f3cfe4]
+                2   __59+[PLCPLPlistHandler saveCPLPlistObject:forKey:pathManager:]_block_invoke + 532 (PhotoLibraryServicesCore + 299808) [0x214351320]
+                  2   _NSWriteDataToFileWithExtendedAttributes + 644 (Foundation + 285372) [0x1a5ef5abc]
+                    2   -[NSData(NSData) enumerateByteRangesUsingBlock:] + 132 (Foundation + 292044) [0x1a5ef74cc]
+                      2   ___NSWriteDataToFileWithExtendedAttributes_block_invoke + 80 (Foundation + 292204) [0x1a5ef756c]
+                        2   write + 8 (libsystem_kernel.dylib + 21820) [0x1a4f3d53c]
+                2   __pl_dispatch_async_block_invoke + 44 (PhotoLibraryServicesCore + 278820) [0x21434c124]
+                  2   __40-[PSIDatabase addAssets:withCompletion:]_block_invoke + 128 (PhotoLibraryServices + 5627976) [0x1c7fcb048]
+                    2   -[PSIDatabase _inqPrepareAndExecuteStatement:] + 88 (PhotoLibraryServices + 5546544) [0x1c7fb7230]
+                      1   sqlite3_step + 3576 (libsqlite3.dylib + 289312) [0x1ab4b8a20]
+                        1   sqlite3WalDefaultHook + 72 (libsqlite3.dylib + 461884) [0x1ab4e2c3c]
+                          1   sqlite3_wal_checkpoint_v2 + 500 (libsqlite3.dylib + 695928) [0x1ab51be78]
+                            1   sqlite3Checkpoint + 372 (libsqlite3.dylib + 696472) [0x1ab51c098]
+                              1   sqlite3WalCheckpoint + 5264 (libsqlite3.dylib + 554936) [0x1ab4f97b8]
+                                1   unixWrite + 180 (libsqlite3.dylib + 460888) [0x1ab4e2858]
+                                  1   guarded_pwrite_np + 8 (libsystem_kernel.dylib + 20852) [0x1a4f3d174]
+                                    1   <Requested Thread QoS Utility>
+                      1   sqlite3_step + 3284 (libsqlite3.dylib + 289020) [0x1ab4b88fc]
+                        1   sqlite3VdbeExec + 56548 (libsqlite3.dylib + 347716) [0x1ab4c6e44]
+                          1   sqlite3VdbeHalt + 3428 (libsqlite3.dylib + 155176) [0x1ab497e28]
+                            1   sqlite3BtreeCommitPhaseOne + 164 (libsqlite3.dylib + 372568) [0x1ab4ccf58]
+                              1   sqlite3PagerCommitPhaseOne + 312 (libsqlite3.dylib + 458816) [0x1ab4e2040]
+                                1   pagerWalFrames + 1720 (libsqlite3.dylib + 821220) [0x1ab53a7e4]
+                                  1   unixWrite + 180 (libsqlite3.dylib + 460888) [0x1ab4e2858]
+                                    1   guarded_pwrite_np + 8 (libsystem_kernel.dylib + 20852) [0x1a4f3d174]
+                                      1   <Requested Thread QoS Utility>
+        25  _dispatch_lane_invoke + 444 (libdispatch.dylib + 48856) [0x1a4dbeed8]
+          21  _dispatch_lane_serial_drain + 672 (libdispatch.dylib + 45872) [0x1a4dbe330]
+            21  _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+              21  _dispatch_call_block_and_release + 32 (libdispatch.dylib + 7776) [0x1a4db4e60]
+                21  __pl_dispatch_async_block_invoke + 44 (PhotoLibraryServicesCore + 278820) [0x21434c124]
+                  21  __77-[PLCloudPhotoLibraryManager _runAsyncOnIsolationQueueWithTransaction:block:]_block_invoke + 36 (PhotoLibraryServices + 234548) [0x1c7aa6434]
+                    21  __73-[PLCloudPhotoLibraryManager _processDownloadBatchWithSession:inLibrary:]_block_invoke_2 + 784 (PhotoLibraryServices + 1421556) [0x1c7bc80f4]
+                      21  -[PLCloudBatchDownloader handleIncomingBatch:] + 440 (PhotoLibraryServices + 468760) [0x1c7adf718]
+                        21  -[PLPhotoLibrary(MegaMocAdditions) performTransactionAndWait:completionHandler:] + 124 (PhotoLibraryServices + 132672) [0x1c7a8d640]
+                          21  -[PLPhotoLibrary(MegaMocAdditions) _withDispatchGroup:synchronously:name:shouldSave:performTransaction:completionHandler:] + 808 (PhotoLibraryServices + 109140) [0x1c7a87a54]
+                            21  -[PLQueueDispatcher sync:identifyingBlock:library:] + 336 (PhotoLibraryServices + 5002848) [0x1c7f32660]
+                              21  __PLQUEUE_DISPATCH_IS_CALLING_OUT_TO_UT_BLOCK__ + 24 (PhotoLibraryServices + 5001436) [0x1c7f320dc]
+                                21  -[NSManagedObjectContext performBlockAndWait:] + 280 (CoreData + 193408) [0x1ab0b8380]
+                                  21  _dispatch_lane_barrier_sync_invoke_and_complete + 56 (libdispatch.dylib + 77312) [0x1a4dc5e00]
+                                    21  _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+                                      21  developerSubmittedBlockToNSManagedObjectContextPerform + 156 (CoreData + 193660) [0x1ab0b847c]
+                                        21  __122-[PLPhotoLibrary(MegaMocAdditions) _withDispatchGroup:synchronously:name:shouldSave:performTransaction:completionHandler:]_block_invoke.254 + 44 (PhotoLibraryServices + 2802888) [0x1c7d194c8]
+                                          21  -[PLManagedObjectContext pl_performWithOptions:andBlock:] + 100 (PhotoLibraryServices + 110472) [0x1c7a87f88]
+                                            21  -[PLManagedObjectContext performWithOptions:andBlock:] + 160 (PhotoLibraryServices + 92092) [0x1c7a837bc]
+                                              21  -[NSManagedObjectContext(_NSCoreDataSPI) performWithOptions:andBlock:] + 592 (CoreData + 355140) [0x1ab0dfb44]
+                                                21  _dispatch_lane_barrier_sync_invoke_and_complete + 56 (libdispatch.dylib + 77312) [0x1a4dc5e00]
+                                                  21  _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+                                                    21  developerSubmittedBlockToNSManagedObjectContextPerform + 156 (CoreData + 193660) [0x1ab0b847c]
+                                                      21  __54-[PLManagedObjectContext performWithOptions:andBlock:]_block_invoke + 96 (PhotoLibraryServices + 1847936) [0x1c7c30280]
+                                                        16  __122-[PLPhotoLibrary(MegaMocAdditions) _withDispatchGroup:synchronously:name:shouldSave:performTransaction:completionHandler:]_block_invoke.231 + 328 (PhotoLibraryServices + 2802264) [0x1c7d19258]
+                                                          16  -[PLManagedObjectContext save:] + 736 (PhotoLibraryServices + 172632) [0x1c7a97258]
+                                                            15  -[NSManagedObjectContext save:] + 1548 (CoreData + 385988) [0x1ab0e73c4]
+                                                              15  -[NSPersistentStoreCoordinator executeRequest:withContext:error:] + 1488 (CoreData + 211044) [0x1ab0bc864]
+                                                                15  -[NSPersistentStoreCoordinator _routeHeavyweightBlock:] + 264 (CoreData + 213004) [0x1ab0bd00c]
+                                                                  15  __65-[NSPersistentStoreCoordinator executeRequest:withContext:error:]_block_invoke.843 + 11708 (CoreData + 1478976) [0x1ab1f2140]
+                                                                    15  -[NSSQLCore executeRequest:withContext:error:] + 2760 (CoreData + 216812) [0x1ab0bdeec]
+                                                                      15  -[NSSQLCore dispatchRequest:withRetries:] + 228 (CoreData + 228728) [0x1ab0c0d78]
+                                                                        15  -[NSSQLCoreDispatchManager routeStoreRequest:] + 252 (CoreData + 230404) [0x1ab0c1404]
+                                                                          15  -[NSSQLDefaultConnectionManager handleStoreRequest:] + 248 (CoreData + 230716) [0x1ab0c153c]
+                                                                            15  -[NSSQLiteConnection performAndWait:] + 176 (CoreData + 141184) [0x1ab0ab780]
+                                                                              15  _dispatch_lane_barrier_sync_invoke_and_complete + 56 (libdispatch.dylib + 77312) [0x1a4dc5e00]
+                                                                                15  _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+                                                                                  15  __37-[NSSQLiteConnection performAndWait:]_block_invoke + 48 (CoreData + 141464) [0x1ab0ab898]
+                                                                                    15  __52-[NSSQLDefaultConnectionManager handleStoreRequest:]_block_invoke + 68 (CoreData + 231504) [0x1ab0c1850]
+                                                                                      15  -[NSSQLStoreRequestContext executeRequestUsingConnection:] + 260 (CoreData + 232216) [0x1ab0c1b18]
+                                                                                        15  -[NSSQLSaveChangesRequestContext executeRequestCore:] + 32 (CoreData + 542520) [0x1ab10d738]
+                                                                                          12  _executeSaveChangesRequest + 5204 (CoreData + 548112) [0x1ab10ed10]
+                                                                                            12  -[NSSQLiteConnection commitTransaction] + 812 (CoreData + 588732) [0x1ab118bbc]
+                                                                                              12  _execute + 132 (CoreData + 160516) [0x1ab0b0304]
+                                                                                                10  sqlite3_step + 3284 (libsqlite3.dylib + 289020) [0x1ab4b88fc]
+                                                                                                  10  sqlite3VdbeExec + 56548 (libsqlite3.dylib + 347716) [0x1ab4c6e44]
+                                                                                                    10  sqlite3VdbeHalt + 3428 (libsqlite3.dylib + 155176) [0x1ab497e28]
+                                                                                                      10  sqlite3BtreeCommitPhaseOne + 164 (libsqlite3.dylib + 372568) [0x1ab4ccf58]
+                                                                                                        10  sqlite3PagerCommitPhaseOne + 312 (libsqlite3.dylib + 458816) [0x1ab4e2040]
+                                                                                                          10  pagerWalFrames + 1720 (libsqlite3.dylib + 821220) [0x1ab53a7e4]
+                                                                                                            10  unixWrite + 180 (libsqlite3.dylib + 460888) [0x1ab4e2858]
+                                                                                                              10  guarded_pwrite_np + 8 (libsystem_kernel.dylib + 20852) [0x1a4f3d174]
+                                                                                                                10  <Requested Thread QoS Utility>
+                                                                                                2   sqlite3_step + 3576 (libsqlite3.dylib + 289312) [0x1ab4b8a20]
+                                                                                                  2   sqlite3WalDefaultHook + 72 (libsqlite3.dylib + 461884) [0x1ab4e2c3c]
+                                                                                                    2   sqlite3_wal_checkpoint_v2 + 500 (libsqlite3.dylib + 695928) [0x1ab51be78]
+                                                                                                      2   sqlite3Checkpoint + 372 (libsqlite3.dylib + 696472) [0x1ab51c098]
+                                                                                                        2   sqlite3WalCheckpoint + 5264 (libsqlite3.dylib + 554936) [0x1ab4f97b8]
+                                                                                                          2   unixWrite + 180 (libsqlite3.dylib + 460888) [0x1ab4e2858]
+                                                                                                            2   guarded_pwrite_np + 8 (libsystem_kernel.dylib + 20852) [0x1a4f3d174]
+                                                                                                              2   <Requested Thread QoS Utility>
+                                                                                          3   _executeSaveChangesRequest + 2112 (CoreData + 545020) [0x1ab10e0fc]
+                                                                                            3   -[NSSQLiteConnection insertRow:] + 1820 (CoreData + 721620) [0x1ab1392d4]
+                                                                                              3   -[NSSQLiteConnection execute] + 2428 (CoreData + 159632) [0x1ab0aff90]
+                                                                                                3   _execute + 132 (CoreData + 160516) [0x1ab0b0304]
+                                                                                                  3   sqlite3_step + 3284 (libsqlite3.dylib + 289020) [0x1ab4b88fc]
+                                                                                                    3   sqlite3VdbeExec + 18956 (libsqlite3.dylib + 310124) [0x1ab4bdb6c]
+                                                                                                      3   sqlite3BtreeInsert + 2068 (libsqlite3.dylib + 455248) [0x1ab4e1250]
+                                                                                                        3   insertCell + 296 (libsqlite3.dylib + 457372) [0x1ab4e1a9c]
+                                                                                                          3   pager_write + 372 (libsqlite3.dylib + 441252) [0x1ab4ddba4]
+                                                                                                            3   subjournalPageIfRequired + 720 (libsqlite3.dylib + 819380) [0x1ab53a0b4]
+                                                                                                              3   unixWrite + 180 (libsqlite3.dylib + 460888) [0x1ab4e2858]
+                                                                                                                3   guarded_pwrite_np + 8 (libsystem_kernel.dylib + 20852) [0x1a4f3d174]
+                                                                                                                  3   <Requested Thread QoS Utility>
+                                                            1   -[NSManagedObjectContext save:] + 488 (CoreData + 384928) [0x1ab0e6fa0]
+                                                              1   -[NSManagedObjectContext _prepareForPushChanges:] + 260 (CoreData + 1139752) [0x1ab19f428]
+                                                                1   -[NSManagedObjectContext _validateObjects:forOperation:error:exhaustive:forSave:] + 4544 (CoreData + 1183232) [0x1ab1a9e00]
+                                                                  1   -[PLAdditionalAssetAttributes willSave] + 2104 (PhotoLibraryServices + 4889204) [0x1c7f16a74]
+                                                                    1   -[PLDelayedSaveActions recordAdditionalAssetAttributesForMomentUpdate:] + 248 (PhotoLibraryServices + 5501464) [0x1c7fac218]
+                                                                      1   -[PLDelayedSaveActions _recordDelayedMomentAssetUpdates:] + 112 (PhotoLibraryServices + 5503368) [0x1c7fac988]
+                                                                        1   -[PLDelayedSaveActions persistDelayedActionsScope:] + 132 (PhotoLibraryServices + 5503864) [0x1c7facb78]
+                                                                          1   -[_PLClientTransaction addChangeScopes:] + 316 (PhotoLibraryServices + 361800) [0x1c7ac5548]
+                                                                            1   -[_PLClientTransaction persistTransactionScopes:] + 164 (PhotoLibraryServices + 362032) [0x1c7ac5630]
+                                                                              1   pl_dispatch_sync + 124 (PhotoLibraryServicesCore + 278512) [0x21434bff0]
+                                                                                1   _dispatch_lane_barrier_sync_invoke_and_complete + 56 (libdispatch.dylib + 77312) [0x1a4dc5e00]
+                                                                                  1   _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+                                                                                    1   __pl_dispatch_sync_block_invoke + 44 (PhotoLibraryServicesCore + 278588) [0x21434c03c]
+                                                                                      1   pwrite + 8 (libsystem_kernel.dylib + 20452) [0x1a4f3cfe4]
+                                                                                        1   <Requested Thread QoS Utility>
+                                                        5   __122-[PLPhotoLibrary(MegaMocAdditions) _withDispatchGroup:synchronously:name:shouldSave:performTransaction:completionHandler:]_block_invoke.231 + 184 (PhotoLibraryServices + 2802120) [0x1c7d191c8]
+                                                          3   __46-[PLCloudBatchDownloader handleIncomingBatch:]_block_invoke + 468 (PhotoLibraryServices + 470056) [0x1c7adfc28]
+                                                            3   -[PLCloudBatchDownloader _handleAssetRecords:inSyncContext:withChangeBatch:dedupeGraphPersons:] + 3784 (PhotoLibraryServices + 3234792) [0x1c7d82be8]
+                                                              3   -[PLManagedAsset(RM_CPL) rm_applyResourcesFromAssetChange:inLibrary:] + 3788 (PhotoLibraryServices + 5664736) [0x1c7fd3fe0]
+                                                                3   -[PLManagedAsset setAdjustments:mainFileMetadata:shouldUpdateAttributes:] + 84 (PhotoLibraryServices + 1652292) [0x1c7c00644]
+                                                                  3   -[PLManagedAsset setAdjustments:renderedContentURL:penultimateRenderedJPEGData:penultimateRenderedVideoContentURL:isSubstandardRender:fullSizeRenderSize:fullSizeRenderDuration:renderedVideoComplementContentURL:penultimateRenderedVideoComplementContentURL:renderedVideoPosterContentURL:mainFileMetadata:shouldUpdateAttributes:fileIngestionType:] + 76 (PhotoLibraryServices + 1647876) [0x1c7bff504]
+                                                                    3   -[PLManagedAsset setAdjustments:renderedContentURL:penultimateRenderedJPEGData:penultimateRenderedVideoContentURL:isSubstandardRender:deferredProcessingNeeded:fullSizeRenderSize:fullSizeRenderDuration:renderedVideoComplementContentURL:penultimateRenderedVideoComplementContentURL:renderedVideoPosterContentURL:mainFileMetadata:shouldUpdateAttributes:fileIngestionType:shouldGenerateThumbnails:] + 6780 (PhotoLibraryServices + 1645752) [0x1c7bfecb8]
+                                                                      3   -[PLManagedAsset _ingestAndApplyMetadataChangesFromAdjustmentRenderedContentURL:fullSizeRenderURL:renderedVideoComplementContentURL:videoPosterContentURL:videoPosterRenderURL:ingestionType:updateAdjustmentDictionary:mainFileMetadata:shouldUpdateAttributes:isSubstandardRender:isRevertToOriginal:] + 3064 (PhotoLibraryServices + 1635976) [0x1c7bfc688]
+                                                                        3   -[PLManagedAsset _writeOutAdjustmentsToFile:] + 192 (PhotoLibraryServices + 1648080) [0x1c7bff5d0]
+                                                                          3   _NSWriteDataToFileWithExtendedAttributes + 644 (Foundation + 285372) [0x1a5ef5abc]
+                                                                            3   -[NSData(NSData) enumerateByteRangesUsingBlock:] + 132 (Foundation + 292044) [0x1a5ef74cc]
+                                                                              3   ___NSWriteDataToFileWithExtendedAttributes_block_invoke + 80 (Foundation + 292204) [0x1a5ef756c]
+                                                                                3   write + 8 (libsystem_kernel.dylib + 21820) [0x1a4f3d53c]
+                                                                                  3   <Requested Thread QoS Utility>
+                                                          2   __46-[PLCloudBatchDownloader handleIncomingBatch:]_block_invoke + 556 (PhotoLibraryServices + 470144) [0x1c7adfc80]
+                                                            2   -[PLCloudBatchDownloader _handleMemoryRecords:inLibrary:] + 1684 (PhotoLibraryServices + 3230868) [0x1c7d81c94]
+                                                              2   +[PLMemory deletePendingMemoriesCreatedBefore:inPhotoLibrary:] + 608 (PhotoLibraryServices + 5324336) [0x1c7f80e30]
+                                                                2   -[NSManagedObjectContext(PLManagedObjectContext) enumerateWithIncrementalSaveUsingObjects:shouldRefreshAfterSave:withBlock:] + 784 (PhotoLibraryServices + 171692) [0x1c7a96eac]
+                                                                  2   __124-[NSManagedObjectContext(PLManagedObjectContext) enumerateWithIncrementalSaveUsingObjects:shouldRefreshAfterSave:withBlock:]_block_invoke + 68 (PhotoLibraryServices + 1860432) [0x1c7c33350]
+                                                                    2   -[PLManagedObjectContext save:] + 736 (PhotoLibraryServices + 172632) [0x1c7a97258]
+                                                                      2   -[NSManagedObjectContext save:] + 1548 (CoreData + 385988) [0x1ab0e73c4]
+                                                                        2   -[NSPersistentStoreCoordinator executeRequest:withContext:error:] + 1488 (CoreData + 211044) [0x1ab0bc864]
+                                                                          2   -[NSPersistentStoreCoordinator _routeHeavyweightBlock:] + 264 (CoreData + 213004) [0x1ab0bd00c]
+                                                                            2   __65-[NSPersistentStoreCoordinator executeRequest:withContext:error:]_block_invoke.843 + 11708 (CoreData + 1478976) [0x1ab1f2140]
+                                                                              2   -[NSSQLCore executeRequest:withContext:error:] + 2760 (CoreData + 216812) [0x1ab0bdeec]
+                                                                                2   -[NSSQLCore dispatchRequest:withRetries:] + 228 (CoreData + 228728) [0x1ab0c0d78]
+                                                                                  2   -[NSSQLCoreDispatchManager routeStoreRequest:] + 252 (CoreData + 230404) [0x1ab0c1404]
+                                                                                    2   -[NSSQLDefaultConnectionManager handleStoreRequest:] + 248 (CoreData + 230716) [0x1ab0c153c]
+                                                                                      2   -[NSSQLiteConnection performAndWait:] + 176 (CoreData + 141184) [0x1ab0ab780]
+                                                                                        2   _dispatch_lane_barrier_sync_invoke_and_complete + 56 (libdispatch.dylib + 77312) [0x1a4dc5e00]
+                                                                                          2   _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+                                                                                            2   __37-[NSSQLiteConnection performAndWait:]_block_invoke + 48 (CoreData + 141464) [0x1ab0ab898]
+                                                                                              2   __52-[NSSQLDefaultConnectionManager handleStoreRequest:]_block_invoke + 68 (CoreData + 231504) [0x1ab0c1850]
+                                                                                                2   -[NSSQLStoreRequestContext executeRequestUsingConnection:] + 260 (CoreData + 232216) [0x1ab0c1b18]
+                                                                                                  2   -[NSSQLSaveChangesRequestContext executeRequestCore:] + 32 (CoreData + 542520) [0x1ab10d738]
+                                                                                                    2   _executeSaveChangesRequest + 2112 (CoreData + 545020) [0x1ab10e0fc]
+                                                                                                      2   -[NSSQLiteConnection insertRow:] + 1820 (CoreData + 721620) [0x1ab1392d4]
+                                                                                                        2   -[NSSQLiteConnection execute] + 2428 (CoreData + 159632) [0x1ab0aff90]
+                                                                                                          2   _execute + 132 (CoreData + 160516) [0x1ab0b0304]
+                                                                                                            2   sqlite3_step + 3284 (libsqlite3.dylib + 289020) [0x1ab4b88fc]
+                                                                                                              2   sqlite3VdbeExec + 18956 (libsqlite3.dylib + 310124) [0x1ab4bdb6c]
+                                                                                                                1   sqlite3BtreeInsert + 2100 (libsqlite3.dylib + 455280) [0x1ab4e1270]
+                                                                                                                  1   balance + 6412 (libsqlite3.dylib + 448832) [0x1ab4df940]
+                                                                                                                    1   pager_write + 372 (libsqlite3.dylib + 441252) [0x1ab4ddba4]
+                                                                                                                      1   subjournalPageIfRequired + 720 (libsqlite3.dylib + 819380) [0x1ab53a0b4]
+                                                                                                                        1   unixWrite + 180 (libsqlite3.dylib + 460888) [0x1ab4e2858]
+                                                                                                                          1   guarded_pwrite_np + 8 (libsystem_kernel.dylib + 20852) [0x1a4f3d174]
+                                                                                                                            1   <Requested Thread QoS Utility>
+                                                                                                                1   sqlite3BtreeInsert + 2068 (libsqlite3.dylib + 455248) [0x1ab4e1250]
+                                                                                                                  1   insertCell + 296 (libsqlite3.dylib + 457372) [0x1ab4e1a9c]
+                                                                                                                    1   pager_write + 372 (libsqlite3.dylib + 441252) [0x1ab4ddba4]
+                                                                                                                      1   subjournalPageIfRequired + 720 (libsqlite3.dylib + 819380) [0x1ab53a0b4]
+                                                                                                                        1   unixWrite + 180 (libsqlite3.dylib + 460888) [0x1ab4e2858]
+                                                                                                                          1   guarded_pwrite_np + 8 (libsystem_kernel.dylib + 20852) [0x1a4f3d174]
+                                                                                                                            1   <Requested Thread QoS Utility>
+          4   _dispatch_lane_serial_drain + 376 (libdispatch.dylib + 45576) [0x1a4dbe208]
+            4   _dispatch_lane_invoke + 444 (libdispatch.dylib + 48856) [0x1a4dbeed8]
+              4   _dispatch_lane_serial_drain + 672 (libdispatch.dylib + 45872) [0x1a4dbe330]
+                4   _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+                  4   _dispatch_block_async_invoke2 + 148 (libdispatch.dylib + 76176) [0x1a4dc5990]
+                    4   ??? (libsystem_notify.dylib + 28020) [0x1a7af9d74]
+                      4   __pl_notify_register_dispatch_block_invoke + 56 (PhotoLibraryServicesCore + 281048) [0x21434c9d8]
+                        4   __91-[PLChangeHandlingNotificationObserver _locked_startObservingRemoteNotificationsWithBlock:]_block_invoke + 40 (PhotoLibraryServices + 2887728) [0x1c7d2e030]
+                          4   -[PLChangeHandlingNotificationObserver _inq_handleLowPriorityNotification] + 280 (PhotoLibraryServices + 2886632) [0x1c7d2dbe8]
+                            4   __59-[PLJournalManager _registerForChangeHandlingNotifications]_block_invoke + 60 (PhotoLibraryServices + 5464980) [0x1c7fa3394]
+                              4   -[PLJournalManager _handleChangeHandlingNotificationWithTransaction:] + 136 (PhotoLibraryServices + 5464568) [0x1c7fa31f8]
+                                4   _dispatch_lane_barrier_sync_invoke_and_complete + 56 (libdispatch.dylib + 77312) [0x1a4dc5e00]
+                                  4   _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+                                    4   __69-[PLJournalManager _handleChangeHandlingNotificationWithTransaction:]_block_invoke + 56 (PhotoLibraryServices + 5464656) [0x1c7fa3250]
+                                      4   -[PLJournalManager _replayFromCurrentHistoryTokenWithPayloadIDsToSkipInserts:] + 588 (PhotoLibraryServices + 114568) [0x1c7a88f88]
+                                        3   -[PLJournalManager _appendEntriesByPayloadClassID:withCurrentHistoryToken:] + 260 (PhotoLibraryServices + 141232) [0x1c7a8f7b0]
+                                          3   -[__NSDictionaryM enumerateKeysAndObjectsWithOptions:usingBlock:] + 208 (CoreFoundation + 551520) [0x1a5042a60]
+                                            3   __NSDICTIONARY_IS_CALLING_OUT_TO_A_BLOCK__ + 24 (CoreFoundation + 291488) [0x1a50032a0]
+                                              3   __75-[PLJournalManager _appendEntriesByPayloadClassID:withCurrentHistoryToken:]_block_invoke + 216 (PhotoLibraryServices + 5458112) [0x1c7fa18c0]
+                                                3   -[PLJournal appendChangeEntries:error:] + 288 (PhotoLibraryServices + 4151716) [0x1c7e629a4]
+                                                  3   -[PLJournalFile appendEntries:error:] + 192 (PhotoLibraryServices + 4146408) [0x1c7e614e8]
+                                                    3   -[PLJournalFile openForWritingUsingBlock:error:] + 356 (PhotoLibraryServices + 273204) [0x1c7aafb34]
+                                                      3   __37-[PLJournalFile appendEntries:error:]_block_invoke + 428 (PhotoLibraryServices + 4146904) [0x1c7e616d8]
+                                                        3   -[PLJournalEntry writeToFileHandle:error:] + 588 (PhotoLibraryServices + 303572) [0x1c7ab71d4]
+                                                          3   -[PLJournalEntry _appendHeaderData:headerCRC:payloadData:toFileHandle:] + 268 (PhotoLibraryServices + 316820) [0x1c7aba594]
+                                                            3   -[NSConcreteFileHandle writeData:] + 212 (Foundation + 346280) [0x1a5f048a8]
+                                                              3   -[NSData(NSData) enumerateByteRangesUsingBlock:] + 132 (Foundation + 292044) [0x1a5ef74cc]
+                                                                3   __34-[NSConcreteFileHandle writeData:]_block_invoke + 80 (Foundation + 346488) [0x1a5f04978]
+                                                                  3   write + 8 (libsystem_kernel.dylib + 21820) [0x1a4f3d53c]
+                                        1   -[PLJournalManager _appendEntriesByPayloadClassID:withCurrentHistoryToken:] + 356 (PhotoLibraryServices + 141328) [0x1c7a8f810]
+                                          1   -[PLJournalManagerCore saveHistoryToken:error:] + 364 (PhotoLibraryServices + 391940) [0x1c7accb04]
+                                            1   +[PLJournalFile writeData:toURL:atomically:error:] + 432 (PhotoLibraryServices + 283680) [0x1c7ab2420]
+                                              1   +[PLJournalFile moveURL:toURL:error:] + 148 (PhotoLibraryServices + 285484) [0x1c7ab2b2c]
+                                                1   __rename + 8 (libsystem_kernel.dylib + 21912) [0x1a4f3d598]
+
+  Binary Images:
+           0x100edc000 -                ???  photolibraryd                                      <0993C6CF-400F-34EB-9132-BD41638F6249>  /System/Library/PrivateFrameworks/PhotoLibraryServices.framework/Versions/A/Support/photolibraryd
+           0x1a4db3000 -        0x1a4df9fff  libdispatch.dylib (1324.60.3)                      <93E1DCFC-EF56-3113-8E7C-1BA85266A93B>  /usr/lib/system/libdispatch.dylib
+           0x1a4f38000 -        0x1a4f6dfff  libsystem_kernel.dylib (8019.80.24)                <384945E6-DD71-37E5-9A3D-84FFF14A1E60>  /usr/lib/system/libsystem_kernel.dylib
+           0x1a4f6e000 -        0x1a4f7afff  libsystem_pthread.dylib (485.60.2)                 <F7B2ECCF-E6F1-3109-AE81-9028C0B8332A>  /usr/lib/system/libsystem_pthread.dylib
+           0x1a4fbc000 -        0x1a54fffff  com.apple.CoreFoundation 6.9 (1856.105)            <16FADF8B-A3AF-3E0C-B5FB-CE9A9CDC8747>  /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
+           0x1a5eb0000 -        0x1a629dfff  com.apple.Foundation 6.9 (1856.105)                <90321A38-43A5-3767-9A9C-2C631338B9BC>  /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
+           0x1a7af3000 -        0x1a7b01fff  libsystem_notify.dylib (301)                       <64EAA151-0DA2-32A5-A0AF-1383B8753EB5>  /usr/lib/system/libsystem_notify.dylib
+           0x1ab089000 -        0x1ab456fff  com.apple.CoreData 120 (1145)                      <1C4088D6-CAA7-3264-8F76-38C7898D1B6B>  /System/Library/Frameworks/CoreData.framework/Versions/A/CoreData
+           0x1ab472000 -        0x1ab61ffff  libsqlite3.dylib (331)                             <BF74926A-62E6-3EDD-99BC-40B4388DBA3E>  /usr/lib/libsqlite3.dylib
+           0x1af9c2000 -        0x1af9c4fff  libremovefile.dylib (60)                           <CA9A0D50-7AE5-33E2-81E8-2C031135C40F>  /usr/lib/system/libremovefile.dylib
+           0x1c7a6d000 -        0x1c81d2fff  com.apple.PhotoLibraryServices 1.0 (431.0.140)     <81A55378-AF91-3F81-A14E-226D681DBCEA>  /System/Library/PrivateFrameworks/PhotoLibraryServices.framework/Versions/A/PhotoLibraryServices
+           0x214308000 -        0x2143f5fff  com.apple.PhotoLibraryServicesCore 1.0 (431.0.140) <DD59CEC8-DE7E-3CA0-BCC0-001259D5F7BE>  /System/Library/PrivateFrameworks/PhotoLibraryServicesCore.framework/Versions/A/PhotoLibraryServicesCore
+
+
+Powerstats for:   cloudphotod
+UUID:             676AEE6D-B21A-3827-8558-4411DDC4BBDA
+Path:             /System/Library/PrivateFrameworks/CloudPhotoLibrary.framework/Versions/A/Support/cloudphotod
+Codesigning ID:   com.apple.cloudphotod
+Architecture:     arm64e
+Start time:       2022-02-26 12:39:53.749 -0600
+End time:         2022-02-26 12:44:34.357 -0600
+Num samples:      49 (6%)
+Primary state:    28 samples Non-Frontmost App, Non-Suppressed, Kernel mode, Effective Thread QoS Background, Requested Thread QoS Utility, Override Thread QoS Unspecified
+User Activity:    0 samples Idle, 49 samples Active
+Power Source:     49 samples on Battery, 0 samples on AC
+  49  start_wqthread + 8 (libsystem_pthread.dylib + 8216) [0x1a4f70018]
+    49  _pthread_wqthread + 288 (libsystem_pthread.dylib + 13060) [0x1a4f71304]
+      49  _dispatch_workloop_worker_thread + 656 (libdispatch.dylib + 91912) [0x1a4dc9708]
+        49  _dispatch_lane_invoke + 392 (libdispatch.dylib + 48804) [0x1a4dbeea4]
+          47  _dispatch_lane_serial_drain + 376 (libdispatch.dylib + 45576) [0x1a4dbe208]
+            47  _dispatch_lane_invoke + 444 (libdispatch.dylib + 48856) [0x1a4dbeed8]
+              47  _dispatch_lane_serial_drain + 672 (libdispatch.dylib + 45872) [0x1a4dbe330]
+                47  _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+                  47  _dispatch_block_async_invoke2 + 148 (libdispatch.dylib + 76176) [0x1a4dc5990]
+                    47  ??? (cloudphotod + 263624) [0x1027545c8]
+                      44  ??? (cloudphotod + 241612) [0x10274efcc]
+                        44  ??? (cloudphotod + 221072) [0x102749f90]
+                          44  -[PQLConnection performWithFlags:action:] + 104 (libprequelite.dylib + 31684) [0x1c97ddbc4]
+                            42  -[PQLConnection _performWithFlags:action:whenFlushed:] + 1220 (libprequelite.dylib + 29764) [0x1c97dd444]
+                              42  -[PQLConnection _execute:mustSucceed:bindings:] + 72 (libprequelite.dylib + 39644) [0x1c97dfadc]
+                                42  -[PQLConnection _executeStmt:mustSucceed:] + 112 (libprequelite.dylib + 39216) [0x1c97df930]
+                                  22  sqlite3_step + 3284 (libsqlite3.dylib + 289020) [0x1ab4b88fc]
+                                    22  sqlite3VdbeExec + 31584 (libsqlite3.dylib + 322752) [0x1ab4c0cc0]
+                                      22  sqlite3VdbeHalt + 3428 (libsqlite3.dylib + 155176) [0x1ab497e28]
+                                        22  sqlite3BtreeCommitPhaseOne + 164 (libsqlite3.dylib + 372568) [0x1ab4ccf58]
+                                          22  sqlite3PagerCommitPhaseOne + 312 (libsqlite3.dylib + 458816) [0x1ab4e2040]
+                                            22  pagerWalFrames + 1720 (libsqlite3.dylib + 821220) [0x1ab53a7e4]
+                                              22  unixWrite + 180 (libsqlite3.dylib + 460888) [0x1ab4e2858]
+                                                22  guarded_pwrite_np + 8 (libsystem_kernel.dylib + 20852) [0x1a4f3d174]
+                                                  6   <Effective Thread QoS Utility>
+                                                  1   <Requested Thread QoS Background>
+                                  20  sqlite3_step + 3576 (libsqlite3.dylib + 289312) [0x1ab4b8a20]
+                                    20  sqlite3WalDefaultHook + 72 (libsqlite3.dylib + 461884) [0x1ab4e2c3c]
+                                      20  sqlite3_wal_checkpoint_v2 + 500 (libsqlite3.dylib + 695928) [0x1ab51be78]
+                                        20  sqlite3Checkpoint + 372 (libsqlite3.dylib + 696472) [0x1ab51c098]
+                                          20  sqlite3WalCheckpoint + 5264 (libsqlite3.dylib + 554936) [0x1ab4f97b8]
+                                            20  unixWrite + 180 (libsqlite3.dylib + 460888) [0x1ab4e2858]
+                                              20  guarded_pwrite_np + 8 (libsystem_kernel.dylib + 20852) [0x1a4f3d174]
+                                                5   <Effective Thread QoS Utility>
+                                                4   <Requested Thread QoS Background>
+                            2   -[PQLConnection _performWithFlags:action:whenFlushed:] + 780 (libprequelite.dylib + 29324) [0x1c97dd28c]
+                              2   ??? (cloudphotod + 242180) [0x10274f204]
+                                2   __84-[CPLEngineStore _performWriteTransactionByPassBlocker:WithBlock:completionHandler:]_block_invoke + 156 (CloudPhotoLibrary + 275708) [0x1d0a014fc]
+                                  2   -[CPLEngineStore _performTransaction:withBlock:] + 384 (CloudPhotoLibrary + 286744) [0x1d0a04018]
+                                    2   __84-[CPLEngineStore _performWriteTransactionByPassBlocker:WithBlock:completionHandler:]_block_invoke_2 + 164 (CloudPhotoLibrary + 276328) [0x1d0a01768]
+                                      1   __158-[CPLEngineResourceDownloadQueue _resourceStorageCopyTaskForResource:taskIdentifier:cloudResource:ofRecord:didStartHandler:progressHandler:completionHandler:]_block_invoke_2 + 424 (CloudPhotoLibrary + 615572) [0x1d0a54494]
+                                        1   -[CPLEngineStoreTransaction do:] + 68 (CloudPhotoLibrary + 270392) [0x1d0a00038]
+                                          1   __158-[CPLEngineResourceDownloadQueue _resourceStorageCopyTaskForResource:taskIdentifier:cloudResource:ofRecord:didStartHandler:progressHandler:completionHandler:]_block_invoke.347 + 632 (CloudPhotoLibrary + 618628) [0x1d0a55084]
+                                            1   -[NSFileManager(CPLAdditions) cplCopyItemAtURL:toURL:error:] + 132 (CloudPhotoLibrary + 345864) [0x1d0a12708]
+                                              1   clonefileat + 8 (libsystem_kernel.dylib + 26656) [0x1a4f3e820]
+                                                1   <Requested Thread QoS Background>
+                                      1   __57-[CPLEngineStore _reallyPerformBatchedTransactionsLocked]_block_invoke + 344 (CloudPhotoLibrary + 273320) [0x1d0a00ba8]
+                                        1   -[CPLBackgroundDownloadsTask _completeBackgroundDownloadForResource:error:withTransaction:] + 632 (CloudPhotoLibrary + 956560) [0x1d0aa7890]
+                                          1   -[CPLEngineStoreTransaction do:] + 68 (CloudPhotoLibrary + 270392) [0x1d0a00038]
+                                            1   __91-[CPLBackgroundDownloadsTask _completeBackgroundDownloadForResource:error:withTransaction:]_block_invoke.178 + 76 (CloudPhotoLibrary + 957460) [0x1d0aa7c14]
+                                              1   -[CPLEngineResourceStorage storeDownloadedResource:atURL:error:] + 304 (CloudPhotoLibrary + 214232) [0x1d09f24d8]
+                                                1   -[CPLEngineFileStorage doWrite:error:] + 224 (CloudPhotoLibrary + 340136) [0x1d0a110a8]
+                                                  1   _dispatch_lane_barrier_sync_invoke_and_complete + 56 (libdispatch.dylib + 77312) [0x1a4dc5e00]
+                                                    1   _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+                                                      1   __38-[CPLEngineFileStorage doWrite:error:]_block_invoke + 64 (CloudPhotoLibrary + 340316) [0x1d0a1115c]
+                                                        1   -[CPLEngineFileStorage storeUnretainedFileAtURL:identity:isOriginal:error:] + 124 (CloudPhotoLibrary + 332724) [0x1d0a0f3b4]
+                                                          1   ??? (cloudphotod + 454936) [0x102783118]
+                                                            1   -[NSFileManager createDirectoryAtPath:withIntermediateDirectories:attributes:error:] + 124 (Foundation + 383240) [0x1a5f0d908]
+                                                              1   mkdirat + 8 (libsystem_kernel.dylib + 21352) [0x1a4f3d368]
+                                                                1   <Requested Thread QoS Background>
+                      3   ??? (cloudphotod + 241652) [0x10274eff4]
+                        3   __84-[CPLEngineStore _performWriteTransactionByPassBlocker:WithBlock:completionHandler:]_block_invoke.547 + 184 (CloudPhotoLibrary + 275928) [0x1d0a015d8]
+                          3   -[CPLEngineStore _commitWriteTransaction:commitError:] + 560 (CloudPhotoLibrary + 277060) [0x1d0a01a44]
+                            3   -[CPLEngineResourceStorage writeTransactionDidSucceed] + 232 (CloudPhotoLibrary + 210872) [0x1d09f17b8]
+                              3   -[CPLEngineFileStorage doWrite:error:] + 224 (CloudPhotoLibrary + 340136) [0x1d0a110a8]
+                                3   _dispatch_lane_barrier_sync_invoke_and_complete + 56 (libdispatch.dylib + 77312) [0x1a4dc5e00]
+                                  3   _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+                                    3   __38-[CPLEngineFileStorage doWrite:error:]_block_invoke + 64 (CloudPhotoLibrary + 340316) [0x1d0a1115c]
+                                      3   __54-[CPLEngineResourceStorage writeTransactionDidSucceed]_block_invoke + 332 (CloudPhotoLibrary + 211504) [0x1d09f1a30]
+                                        3   -[__NSDictionaryM enumerateKeysAndObjectsWithOptions:usingBlock:] + 208 (CoreFoundation + 551520) [0x1a5042a60]
+                                          3   __NSDICTIONARY_IS_CALLING_OUT_TO_A_BLOCK__ + 24 (CoreFoundation + 291488) [0x1a50032a0]
+                                            3   __54-[CPLEngineResourceStorage writeTransactionDidSucceed]_block_invoke_3 + 76 (CloudPhotoLibrary + 212096) [0x1d09f1c80]
+                                              3   -[CPLEngineFileStorage deleteFileWithIdentity:includingOriginal:error:] + 232 (CloudPhotoLibrary + 333008) [0x1d0a0f4d0]
+                                                3   ??? (cloudphotod + 459392) [0x102784280]
+                                                  3   -[NSFileManager removeItemAtPath:error:] + 64 (Foundation + 381160) [0x1a5f0d0e8]
+                                                    3   -[NSOperation start] + 804 (Foundation + 275980) [0x1a5ef360c]
+                                                      3   __NSOPERATION_IS_INVOKING_MAIN__ + 24 (Foundation + 279496) [0x1a5ef43c8]
+                                                        3   -[NSFilesystemItemRemoveOperation main] + 312 (Foundation + 381536) [0x1a5f0d260]
+                                                          3   removefile + 144 (libremovefile.dylib + 5996) [0x1af9c376c]
+                                                            3   __removefile_tree_walker + 408 (libremovefile.dylib + 6532) [0x1af9c3984]
+                                                              3   __unlink + 8 (libsystem_kernel.dylib + 22944) [0x1a4f3d9a0]
+                                                                3   <Requested Thread QoS Background>
+          2   _dispatch_lane_serial_drain + 672 (libdispatch.dylib + 45872) [0x1a4dbe330]
+            2   _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+              2   _dispatch_block_async_invoke2 + 148 (libdispatch.dylib + 76176) [0x1a4dc5990]
+                2   ??? (cloudphotod + 771564) [0x1027d05ec]
+                  2   ??? (cloudphotod + 748936) [0x1027cad88]
+                    2   ??? (cloudphotod + 876580) [0x1027ea024]
+                      2   ??? (cloudphotod + 884696) [0x1027ebfd8]
+                        2   -[NSFileManager(CPLAdditions) cplMoveItemAtURL:toURL:error:] + 128 (CloudPhotoLibrary + 345520) [0x1d0a125b0]
+                          2   __rename + 8 (libsystem_kernel.dylib + 21912) [0x1a4f3d598]
+
+  Binary Images:
+           0x102714000 -        0x1028f3fff  cloudphotod (431.0.140)                     <676AEE6D-B21A-3827-8558-4411DDC4BBDA>  /System/Library/PrivateFrameworks/CloudPhotoLibrary.framework/Versions/A/Support/cloudphotod
+           0x1a4db3000 -        0x1a4df9fff  libdispatch.dylib (1324.60.3)               <93E1DCFC-EF56-3113-8E7C-1BA85266A93B>  /usr/lib/system/libdispatch.dylib
+           0x1a4f38000 -        0x1a4f6dfff  libsystem_kernel.dylib (8019.80.24)         <384945E6-DD71-37E5-9A3D-84FFF14A1E60>  /usr/lib/system/libsystem_kernel.dylib
+           0x1a4f6e000 -        0x1a4f7afff  libsystem_pthread.dylib (485.60.2)          <F7B2ECCF-E6F1-3109-AE81-9028C0B8332A>  /usr/lib/system/libsystem_pthread.dylib
+           0x1a4fbc000 -        0x1a54fffff  com.apple.CoreFoundation 6.9 (1856.105)     <16FADF8B-A3AF-3E0C-B5FB-CE9A9CDC8747>  /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
+           0x1a5eb0000 -        0x1a629dfff  com.apple.Foundation 6.9 (1856.105)         <90321A38-43A5-3767-9A9C-2C631338B9BC>  /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
+           0x1ab472000 -        0x1ab61ffff  libsqlite3.dylib (331)                      <BF74926A-62E6-3EDD-99BC-40B4388DBA3E>  /usr/lib/libsqlite3.dylib
+           0x1af9c2000 -        0x1af9c4fff  libremovefile.dylib (60)                    <CA9A0D50-7AE5-33E2-81E8-2C031135C40F>  /usr/lib/system/libremovefile.dylib
+           0x1c97d6000 -        0x1c97eafff  libprequelite.dylib (117)                   <A9234318-AF37-3F06-A1A5-98A6EF477E92>  /usr/lib/libprequelite.dylib
+           0x1d09be000 -        0x1d0b6efff  com.apple.CloudPhotoLibrary 1.0 (431.0.140) <5A78DE9F-F123-3B26-8520-BB4798B70869>  /System/Library/PrivateFrameworks/CloudPhotoLibrary.framework/Versions/A/CloudPhotoLibrary
+
+System Profile:
+Network Service: Wi-Fi, AirPort, en0
+Thunderbolt Bus: MacBook Pro, Apple Inc.
+Thunderbolt Bus: MacBook Pro, Apple Inc.
+Boot Volume File System Type: apfs
+Memory Module: LPDDR4
+USB Device: USB31Bus
+USB Device: USB31Bus
+Display: Color LCD, 2560 x 1600 Retina, Main, MirrorOff, Online
+Model: MacBookPro17,1, BootROM 7429.81.3, proc 8:4:4 processors, 8 GB, SMC 
+Graphics: Apple M1, Apple M1, Built-In
+AirPort: Wi-Fi, wl0: Oct 26 2021 16:10:41 version 18.20.310.15.7.8.120 FWID 01-5d6c3867
+Bluetooth: Version (null), 0 services, 0 devices, 0 incoming serial ports

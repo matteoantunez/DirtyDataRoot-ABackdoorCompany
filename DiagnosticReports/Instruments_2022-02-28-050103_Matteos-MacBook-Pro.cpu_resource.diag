@@ -1,0 +1,750 @@
+Date/Time:        2022-02-28 04:59:18.858 -0600
+End time:         2022-02-28 05:00:57.432 -0600
+OS Version:       macOS 12.2 (Build 21D49)
+Architecture:     arm64e
+Report Version:   35
+Incident Identifier: F37E7A98-22FD-4AAA-94E6-69C5532C0EF1
+Share With Devs:  Yes
+
+Data Source:      Microstackshots
+Shared Cache:     B90241B2-E425-3982-B3F6-26C4567CBB49 slid base address 0x1a4c68000, slide 0x24c68000
+
+Command:          Instruments
+Path:             /Applications/Xcode.app/Contents/Applications/Instruments.app/Contents/MacOS/Instruments
+Identifier:       com.apple.dt.Instruments
+Version:          13.2.1 (64551.30)
+Build Version:    2
+Product Build Version: 13C100
+Project Name:     Instruments
+Source Version:   64551030000000000
+Team ID:          59GAB85EFG
+Architecture:     arm64
+Parent:           UNKNOWN [1]
+PID:              56261
+
+Event:            cpu usage
+Action taken:     none
+CPU:              90 seconds cpu time over 99 seconds (91% cpu average), exceeding limit of 50% cpu over 180 seconds
+CPU limit:        90s
+Limit duration:   180s
+CPU used:         90s
+CPU duration:     99s
+Duration:         98.57s
+Duration Sampled: 96.94s
+Steps:            98
+
+Hardware model:   MacBookPro17,1
+Active cpus:      8
+HW page size:     16384
+VM page size:     16384
+
+Fan speed:        1198 rpm
+Advisory levels:  Battery -> 3, User -> 2, ThermalPressure -> 0, Combined -> 2
+Free disk space:  19.33 GB/228.27 GB, low space threshold 3072 MB
+
+Heaviest stack for the target process:
+  29  start_wqthread + 8 (libsystem_pthread.dylib + 8216) [0x1a4f70018]
+  29  _pthread_wqthread + 228 (libsystem_pthread.dylib + 13000) [0x1a4f712c8]
+  29  _dispatch_worker_thread2 + 164 (libdispatch.dylib + 88920) [0x1a4dc8b58]
+  29  _dispatch_root_queue_drain + 396 (libdispatch.dylib + 86812) [0x1a4dc831c]
+  26  _dispatch_async_redirect_invoke + 596 (libdispatch.dylib + 26332) [0x1a4db96dc]
+  26  _dispatch_continuation_pop + 504 (libdispatch.dylib + 28800) [0x1a4dba080]
+  26  _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+  26  ??? (DVTInstrumentsUtilities + 160164) [0x1050171a4]
+  26  ??? (DVTInstrumentsUtilities + 126740) [0x10500ef14]
+  26  ??? (DVTInstrumentsUtilities + 143644) [0x10501311c]
+  24  -[XRAnalysisCoreModelingExecutor executeStopOnItinerary:] + 3056 (InstrumentsAnalysisCore + 1418568) [0x105386548]
+  24  -[XRCLIPSModeler populateSpeculationTables:parameters:] + 460 (InstrumentsAnalysisCore + 278236) [0x10526fedc]
+  24  XRCLIPSBlackboardEngine::executeRules() + 228 (InstrumentsAnalysisCore + 581392) [0x1052b9f10]
+  24  _runInCLocale(void () block_pointer) + 68 (InstrumentsAnalysisCore + 642624) [0x1052c8e40]
+  24  invocation function for block in XRCLIPS::run(long long) + 28 (InstrumentsAnalysisCore + 644968) [0x1052c9768]
+  24  Run + 2688 (InstrumentsAnalysisCore + 1481424) [0x105395ad0]
+  24  EvaluateProcActions + 428 (InstrumentsAnalysisCore + 1348204) [0x10537526c]
+  24  EvaluateExpression + 520 (InstrumentsAnalysisCore + 1321984) [0x10536ec00]
+  24  PrognFunction + 72 (InstrumentsAnalysisCore + 270736) [0x10526e190]
+  24  EvaluateExpression + 520 (InstrumentsAnalysisCore + 1321984) [0x10536ec00]
+  24  DelayedQueryDoForAllFacts + 684 (InstrumentsAnalysisCore + 99176) [0x105244368]
+  24  EvaluateExpression + 520 (InstrumentsAnalysisCore + 1321984) [0x10536ec00]
+  24  PrognFunction + 72 (InstrumentsAnalysisCore + 270736) [0x10526e190]
+  22  EvaluateExpression + 952 (InstrumentsAnalysisCore + 1322416) [0x10536edb0]
+  22  EvaluateDeffunctionCall + 44 (InstrumentsAnalysisCore + 1431224) [0x1053896b8]
+  20  CallDeffunction + 356 (InstrumentsAnalysisCore + 326092) [0x10527b9cc]
+  20  EvaluateProcActions + 428 (InstrumentsAnalysisCore + 1348204) [0x10537526c]
+  20  EvaluateExpression + 520 (InstrumentsAnalysisCore + 1321984) [0x10536ec00]
+  20  PrognFunction + 72 (InstrumentsAnalysisCore + 270736) [0x10526e190]
+  20  EvaluateExpression + 520 (InstrumentsAnalysisCore + 1321984) [0x10536ec00]
+  19  WhileFunction + 448 (InstrumentsAnalysisCore + 268384) [0x10526d860]
+  10  RemoveGarbageFacts + 48 (InstrumentsAnalysisCore + 839308) [0x1052f8e8c]
+
+
+Powerstats for:   Instruments [56261] [unique pid 255713]
+UUID:             41B2B5A3-EDB8-3E49-AD77-BCA301CFAE77
+Path:             /Applications/Xcode.app/Contents/Applications/Instruments.app/Contents/MacOS/Instruments
+Identifier:       com.apple.dt.Instruments
+Version:          13.2.1 (64551.30)
+Build Version:    2
+Product Build Version: 13C100
+Project Name:     Instruments
+Source Version:   64551030000000000
+Team ID:          59GAB85EFG
+Architecture:     arm64
+Parent:           UNKNOWN [1]
+UID:              501
+Sudden Term:      Tracked
+Footprint:        8098.50 MB
+Pageins:          7158 pages
+Start time:       2022-02-28 04:59:20.135 -0600
+End time:         2022-02-28 05:00:54.358 -0600
+Num samples:      29 (30%)
+Primary state:    29 samples Non-Frontmost App, Non-Suppressed, User mode, Effective Thread QoS User Initiated, Requested Thread QoS User Initiated, Override Thread QoS Unspecified
+User Activity:    29 samples Idle, 0 samples Active
+Power Source:     0 samples on Battery, 29 samples on AC
+  29  start_wqthread + 8 (libsystem_pthread.dylib + 8216) [0x1a4f70018]
+    29  _pthread_wqthread + 228 (libsystem_pthread.dylib + 13000) [0x1a4f712c8]
+      29  _dispatch_worker_thread2 + 164 (libdispatch.dylib + 88920) [0x1a4dc8b58]
+        29  _dispatch_root_queue_drain + 396 (libdispatch.dylib + 86812) [0x1a4dc831c]
+          26  _dispatch_async_redirect_invoke + 596 (libdispatch.dylib + 26332) [0x1a4db96dc]
+            26  _dispatch_continuation_pop + 504 (libdispatch.dylib + 28800) [0x1a4dba080]
+              26  _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+                26  ??? (DVTInstrumentsUtilities + 160164) [0x1050171a4]
+                  26  ??? (DVTInstrumentsUtilities + 126740) [0x10500ef14]
+                    26  ??? (DVTInstrumentsUtilities + 143644) [0x10501311c]
+                      24  -[XRAnalysisCoreModelingExecutor executeStopOnItinerary:] + 3056 (InstrumentsAnalysisCore + 1418568) [0x105386548]
+                        24  -[XRCLIPSModeler populateSpeculationTables:parameters:] + 460 (InstrumentsAnalysisCore + 278236) [0x10526fedc]
+                          24  XRCLIPSBlackboardEngine::executeRules() + 228 (InstrumentsAnalysisCore + 581392) [0x1052b9f10]
+                            24  _runInCLocale(void () block_pointer) + 68 (InstrumentsAnalysisCore + 642624) [0x1052c8e40]
+                              24  invocation function for block in XRCLIPS::run(long long) + 28 (InstrumentsAnalysisCore + 644968) [0x1052c9768]
+                                24  Run + 2688 (InstrumentsAnalysisCore + 1481424) [0x105395ad0]
+                                  24  EvaluateProcActions + 428 (InstrumentsAnalysisCore + 1348204) [0x10537526c]
+                                    24  EvaluateExpression + 520 (InstrumentsAnalysisCore + 1321984) [0x10536ec00]
+                                      24  PrognFunction + 72 (InstrumentsAnalysisCore + 270736) [0x10526e190]
+                                        24  EvaluateExpression + 520 (InstrumentsAnalysisCore + 1321984) [0x10536ec00]
+                                          24  DelayedQueryDoForAllFacts + 684 (InstrumentsAnalysisCore + 99176) [0x105244368]
+                                            24  EvaluateExpression + 520 (InstrumentsAnalysisCore + 1321984) [0x10536ec00]
+                                              24  PrognFunction + 72 (InstrumentsAnalysisCore + 270736) [0x10526e190]
+                                                22  EvaluateExpression + 952 (InstrumentsAnalysisCore + 1322416) [0x10536edb0]
+                                                  22  EvaluateDeffunctionCall + 44 (InstrumentsAnalysisCore + 1431224) [0x1053896b8]
+                                                    20  CallDeffunction + 356 (InstrumentsAnalysisCore + 326092) [0x10527b9cc]
+                                                      20  EvaluateProcActions + 428 (InstrumentsAnalysisCore + 1348204) [0x10537526c]
+                                                        20  EvaluateExpression + 520 (InstrumentsAnalysisCore + 1321984) [0x10536ec00]
+                                                          20  PrognFunction + 72 (InstrumentsAnalysisCore + 270736) [0x10526e190]
+                                                            20  EvaluateExpression + 520 (InstrumentsAnalysisCore + 1321984) [0x10536ec00]
+                                                              19  WhileFunction + 448 (InstrumentsAnalysisCore + 268384) [0x10526d860]
+                                                                10  RemoveGarbageFacts + 48 (InstrumentsAnalysisCore + 839308) [0x1052f8e8c]
+                                                                9   RemoveGarbageFacts + 64 (InstrumentsAnalysisCore + 839324) [0x1052f8e9c]
+                                                              1   WhileFunction + 384 (InstrumentsAnalysisCore + 268320) [0x10526d820]
+                                                                1   UDFNextArgument + 248 (InstrumentsAnalysisCore + 1125616) [0x10533ecf0]
+                                                                  1   EvaluateExpression + 520 (InstrumentsAnalysisCore + 1321984) [0x10536ec00]
+                                                                    1   PrognFunction + 72 (InstrumentsAnalysisCore + 270736) [0x10526e190]
+                                                                      1   EvaluateExpression + 520 (InstrumentsAnalysisCore + 1321984) [0x10536ec00]
+                                                                        1   XRCLIPSBlackboardEngine::_setTableColumn(environmentData*, udfContext*, udfValue*) + 160 (InstrumentsAnalysisCore + 566300) [0x1052b641c]
+                                                                          1   UDFNextArgument + 248 (InstrumentsAnalysisCore + 1125616) [0x10533ecf0]
+                                                                            1   EvaluateExpression + 520 (InstrumentsAnalysisCore + 1321984) [0x10536ec00]
+                                                                              1   -[XRAnalysisCoreObjectRegistry addArrayOfUInt64sToCore:] + 456 (InstrumentsAnalysisCore + 1384016) [0x10537de50]
+                                                    2   CallDeffunction + 608 (InstrumentsAnalysisCore + 326344) [0x10527bac8]
+                                                      2   GCBlockEndUDF + 172 (InstrumentsAnalysisCore + 42724) [0x1052366e4]
+                                                        2   RemoveGarbageFacts + 64 (InstrumentsAnalysisCore + 839324) [0x1052f8e9c]
+                                                2   EvaluateExpression + 520 (InstrumentsAnalysisCore + 1321984) [0x10536ec00]
+                                                  2   RetractCommand + 252 (InstrumentsAnalysisCore + 84016) [0x105240830]
+                                                    2   Retract + 172 (InstrumentsAnalysisCore + 842892) [0x1052f9c8c]
+                                                      1   RemoveGarbageFacts + 64 (InstrumentsAnalysisCore + 839324) [0x1052f8e9c]
+                                                      1   RemoveGarbageFacts + 48 (InstrumentsAnalysisCore + 839308) [0x1052f8e8c]
+                      2   -[XRAnalysisCoreModelingExecutor executeStopOnItinerary:] + 3000 (InstrumentsAnalysisCore + 1418512) [0x105386510]
+                        2   -[XRCLIPSModeler populateOutputTables:usingObserverations:parameters:yieldFlag:] + 48 (InstrumentsAnalysisCore + 277696) [0x10526fcc0]
+                          1   XRCLIPSBlackboardEngine::modelEventStream(XRAnalysisCoreReadCursor*, bool _Atomic*) + 2216 (InstrumentsAnalysisCore + 580532) [0x1052b9bb4]
+                            1   _objc_rootDealloc + 80 (libobjc.A.dylib + 34704) [0x1a4e02790]
+                              1   objc_destructInstance + 80 (libobjc.A.dylib + 34800) [0x1a4e027f0]
+                                1   object_cxxDestructFromClass(objc_object*, objc_class*) + 76 (libobjc.A.dylib + 71576) [0x1a4e0b798]
+                          1   XRCLIPSBlackboardEngine::modelEventStream(XRAnalysisCoreReadCursor*, bool _Atomic*) + 820 (InstrumentsAnalysisCore + 579136) [0x1052b9640]
+                            1   XRCLIPSBlackboardEngine::executeRules() + 228 (InstrumentsAnalysisCore + 581392) [0x1052b9f10]
+                              1   _runInCLocale(void () block_pointer) + 68 (InstrumentsAnalysisCore + 642624) [0x1052c8e40]
+                                1   invocation function for block in XRCLIPS::run(long long) + 28 (InstrumentsAnalysisCore + 644968) [0x1052c9768]
+                                  1   Run + 3228 (InstrumentsAnalysisCore + 1481964) [0x105395cec]
+                                    1   DecrementFactBasisCount + 116 (InstrumentsAnalysisCore + 842228) [0x1052f99f4]
+                                      1   AtomDeinstall + 44 (InstrumentsAnalysisCore + 1324592) [0x10536f630]
+          3   _dispatch_async_redirect_invoke + 748 (libdispatch.dylib + 26484) [0x1a4db9774]
+            3   _dispatch_continuation_pop + 504 (libdispatch.dylib + 28800) [0x1a4dba080]
+              3   _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+                3   ??? (DVTInstrumentsUtilities + 160164) [0x1050171a4]
+                  3   ??? (DVTInstrumentsUtilities + 126740) [0x10500ef14]
+                    3   ??? (DVTInstrumentsUtilities + 143644) [0x10501311c]
+                      3   -[XRAnalysisCoreModelingExecutor executeStopOnItinerary:] + 3000 (InstrumentsAnalysisCore + 1418512) [0x105386510]
+                        3   -[XRCLIPSModeler populateOutputTables:usingObserverations:parameters:yieldFlag:] + 48 (InstrumentsAnalysisCore + 277696) [0x10526fcc0]
+                          3   XRCLIPSBlackboardEngine::modelEventStream(XRAnalysisCoreReadCursor*, bool _Atomic*) + 2188 (InstrumentsAnalysisCore + 580504) [0x1052b9b98]
+                            3   AssertDriver + 1204 (InstrumentsAnalysisCore + 844236) [0x1052fa1cc]
+                              3   FactPatternMatch + 400 (InstrumentsAnalysisCore + 800252) [0x1052ef5fc]
+                                3   ProcessFactAlphaMatch + 268 (InstrumentsAnalysisCore + 802436) [0x1052efe84]
+                                  3   EmptyDrive + 424 (InstrumentsAnalysisCore + 795712) [0x1052ee440]
+                                    3   NetworkAssertLeft + 904 (InstrumentsAnalysisCore + 799152) [0x1052ef1b0]
+                                      1   PPDrive + 428 (InstrumentsAnalysisCore + 797836) [0x1052eec8c]
+                                        1   UpdateBetaPMLinks + 148 (InstrumentsAnalysisCore + 425644) [0x105293eac]
+                                      1   PPDrive + 380 (InstrumentsAnalysisCore + 797788) [0x1052eec5c]
+                                        1   BetaMemoryHashValue + 220 (InstrumentsAnalysisCore + 798124) [0x1052eedac]
+                                      1   PPDrive + 136 (InstrumentsAnalysisCore + 797544) [0x1052eeb68]
+                                        1   NetworkAssertLeft + 904 (InstrumentsAnalysisCore + 799152) [0x1052ef1b0]
+                                          1   PPDrive + 136 (InstrumentsAnalysisCore + 797544) [0x1052eeb68]
+                                            1   NetworkAssertLeft + 904 (InstrumentsAnalysisCore + 799152) [0x1052ef1b0]
+                                              1   NetworkAssertLeft + 1260 (InstrumentsAnalysisCore + 799508) [0x1052ef314]
+
+  Binary Images:
+           0x104d84000 -                ???  com.apple.dt.Instruments 13.2.1 (64551.30)                         <41B2B5A3-EDB8-3E49-AD77-BCA301CFAE77>  /Applications/Xcode.app/Contents/Applications/Instruments.app/Contents/MacOS/Instruments
+           0x104ff0000 -        0x10505ffff  com.apple.dt.instruments.DVTInstrumentsUtilities 13.2.1 (64551.32) <B7B417EB-A912-3414-BB1D-E1D0A12AB760>  /Applications/Xcode.app/Contents/SharedFrameworks/DVTInstrumentsUtilities.framework/Versions/A/DVTInstrumentsUtilities
+           0x10522c000 -        0x105407fff  com.apple.dt.InstrumentsAnalysisCore 13.2.1 (64551.30)             <F3BD2899-6EA6-30E6-AA1D-5F0616A21FED>  /Applications/Xcode.app/Contents/Applications/Instruments.app/Contents/Frameworks/InstrumentsAnalysisCore.framework/Versions/A/InstrumentsAnalysisCore
+           0x1a4db3000 -        0x1a4df9fff  libdispatch.dylib (1324.60.3)                                      <93E1DCFC-EF56-3113-8E7C-1BA85266A93B>  /usr/lib/system/libdispatch.dylib
+           0x1a4dfa000 -        0x1a4e35fff  libobjc.A.dylib (838.1)                                            <2EB32E1D-90CB-3256-8681-9034085A06A6>  /usr/lib/libobjc.A.dylib
+           0x1a4f6e000 -        0x1a4f7afff  libsystem_pthread.dylib (485.60.2)                                 <F7B2ECCF-E6F1-3109-AE81-9028C0B8332A>  /usr/lib/system/libsystem_pthread.dylib
+
+
+Powerstats for:   ping
+UUID:             94DCFCCC-6D55-319B-8D94-21A1583E5E54
+Path:             /sbin/ping
+Codesigning ID:   com.apple.ping
+Architecture:     arm64e
+Start time:       2022-02-28 04:59:19.968 -0600
+End time:         2022-02-28 05:00:54.468 -0600
+Num samples:      28 (29%)
+Primary state:    23 samples Non-Frontmost App, Non-Suppressed, User mode, Effective Thread QoS Default, Requested Thread QoS User Interactive, Override Thread QoS Unspecified
+User Activity:    28 samples Idle, 0 samples Active
+Power Source:     0 samples on Battery, 28 samples on AC
+  28  start + 520 (dyld + 20724) [0x104da90f4]
+    13  __recvmsg + 8 (libsystem_kernel.dylib + 25404) [0x1a4f3e33c]
+      3   <Kernel mode>
+    12  ??? (ping + 23980) [0x10050ddac]
+      12  __sendto + 8 (libsystem_kernel.dylib + 24424) [0x1a4f3df68]
+        1   <Kernel mode>
+    3   __select + 8 (libsystem_kernel.dylib + 48440) [0x1a4f43d38]
+      1   <Kernel mode>
+
+  Binary Images:
+           0x100508000 -        0x100533fff  ping (624)                          <94DCFCCC-6D55-319B-8D94-21A1583E5E54>  /sbin/ping
+           0x104da4000 -        0x104e1ffff  dyld (941.5)                        <D21A73EA-79CD-36EB-8AC9-2C5CF5181A27>  /usr/lib/dyld
+           0x1a4f38000 -        0x1a4f6dfff  libsystem_kernel.dylib (8019.80.24) <384945E6-DD71-37E5-9A3D-84FFF14A1E60>  /usr/lib/system/libsystem_kernel.dylib
+
+
+Powerstats for:   mediaanalysisd
+UUID:             A90322FD-E4C4-3E43-BEE0-4EFE03EC84E7
+Path:             /System/Library/PrivateFrameworks/MediaAnalysis.framework/Versions/A/mediaanalysisd
+Codesigning ID:   com.apple.mediaanalysisd
+Architecture:     arm64e
+Start time:       2022-02-28 04:59:59.051 -0600
+End time:         2022-02-28 05:00:56.469 -0600
+Num samples:      25 (26%)
+Primary state:    18 samples Non-Frontmost App, Non-Suppressed, User mode, Effective Thread QoS Background, Requested Thread QoS Utility, Override Thread QoS Unspecified
+User Activity:    25 samples Idle, 0 samples Active
+Power Source:     0 samples on Battery, 25 samples on AC
+  25  start_wqthread + 8 (libsystem_pthread.dylib + 8216) [0x1a4f70018]
+    25  _pthread_wqthread + 228 (libsystem_pthread.dylib + 13000) [0x1a4f712c8]
+      25  _dispatch_worker_thread2 + 164 (libdispatch.dylib + 88920) [0x1a4dc8b58]
+        24  _dispatch_root_queue_drain + 684 (libdispatch.dylib + 87100) [0x1a4dc843c]
+          24  _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+            24  _dispatch_apply_invoke + 224 (libdispatch.dylib + 95172) [0x1a4dca3c4]
+              24  _dispatch_client_callout2 + 20 (libdispatch.dylib + 15340) [0x1a4db6bec]
+                24  ??? (mediaanalysisd + 631028) [0x10077a0f4]
+                  21  ??? (mediaanalysisd + 624684) [0x10077882c]
+                    15  -[VCPPreAnalyzer analyzeWithImageURL:isPano:isSDOF:completionHandler:] + 748 (MediaAnalysis + 779556) [0x2129ce524]
+                      15  -[VCPPreAnalyzer _performAnalysis:isPano:isSDOF:colorPixelBuffer:andLumaPixelBuffer:image:] + 488 (MediaAnalysis + 777464) [0x2129cdcf8]
+                        15  _dispatch_apply_with_attr_f + 1324 (libdispatch.dylib + 97672) [0x1a4dcad88]
+                          15  _dispatch_sync_function_invoke + 52 (libdispatch.dylib + 36816) [0x1a4dbbfd0]
+                            15  _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+                              15  _dispatch_apply_serial + 164 (libdispatch.dylib + 99612) [0x1a4dcb51c]
+                                15  _dispatch_client_callout2 + 20 (libdispatch.dylib + 15340) [0x1a4db6bec]
+                                  9   __91-[VCPPreAnalyzer _performAnalysis:isPano:isSDOF:colorPixelBuffer:andLumaPixelBuffer:image:]_block_invoke + 112 (MediaAnalysis + 778172) [0x2129cdfbc]
+                                    4   -[VCPPreAnalyzer _performSceneAnalysis:image:isPano:] + 2748 (MediaAnalysis + 766616) [0x2129cb298]
+                                      4   -[VNImageRequestHandler performRequests:gatheredForensics:error:] + 188 (Vision + 1709172) [0x1b61bb474]
+                                        4   -[VNRequestPerformer _performRequests:onBehalfOfRequest:inContext:error:] + 444 (Vision + 2067052) [0x1b6212a6c]
+                                          4   -[VNRequestPerformer _performOrderedRequests:inContext:error:] + 556 (Vision + 2066172) [0x1b62126fc]
+                                            4   VNExecuteBlock + 80 (Vision + 995464) [0x1b610d088]
+                                              4   -[VNRequest performInContext:error:] + 736 (Vision + 661240) [0x1b60bb6f8]
+                                                4   -[VNImageAnalyzerCompoundRequest internalPerformRevision:inContext:error:] + 896 (Vision + 1650796) [0x1b61ad06c]
+                                                  4   -[VNDetector processInSynchronizationQueueUsingQualityOfServiceClass:options:regionOfInterest:warningRecorder:error:progressHandler:] + 528 (Vision + 1003084) [0x1b610ee4c]
+                                                    4   _dispatch_sync_block_with_privdata + 432 (libdispatch.dylib + 35792) [0x1a4dbbbd0]
+                                                      4   _dispatch_sync_f_slow + 172 (libdispatch.dylib + 76972) [0x1a4dc5cac]
+                                                        4   _dispatch_sync_invoke_and_complete_recurse + 64 (libdispatch.dylib + 78384) [0x1a4dc6230]
+                                                          4   _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+                                                            4   _dispatch_block_sync_invoke + 152 (libdispatch.dylib + 30720) [0x1a4dba800]
+                                                              4   __133-[VNDetector processInSynchronizationQueueUsingQualityOfServiceClass:options:regionOfInterest:warningRecorder:error:progressHandler:]_block_invoke.363 + 48 (Vision + 1003620) [0x1b610f064]
+                                                                4   VNExecuteBlock + 80 (Vision + 995464) [0x1b610d088]
+                                                                  4   __133-[VNDetector processInSynchronizationQueueUsingQualityOfServiceClass:options:regionOfInterest:warningRecorder:error:progressHandler:]_block_invoke + 56 (Vision + 1003508) [0x1b610eff4]
+                                                                    4   -[VNDetector tracedProcessWithOptions:regionOfInterest:warningRecorder:error:progressHandler:] + 232 (Vision + 1002140) [0x1b610ea9c]
+                                                                      4   -[VNImageAnalyzerMultiDetector processWithOptions:regionOfInterest:warningRecorder:error:progressHandler:] + 1772 (Vision + 1912036) [0x1b61ecce4]
+                                                                        3   -[VNImageAnalyzerMultiDetector _observationsForScene:junk:VNVYvzEtX1JlUdu8xx5qhDI:landmark:sceneprint:includingLabelsAndConfidences:compressedSceneprint:aesthetics:saliencyAHeatMap:saliencyOHeatMap:recognizedObjects:VN5kJNH3eYuyaLxNpZr5Z7zi:VNdGg5skzXHSAENO6T3enHE:photosAdjustments:of32BGRAImageInPixelBufferProvidedByBlock:withOptions:originalImageSize:regionOfInterest:warningRecorder:error:] + 3644 (Vision + 1918444) [0x1b61ee5ec]
+                                                                          2   -[VNImageAnalyzerMultiDetector _populateLeafSceneObservations:hierarchySceneObservations:forLastAnalysisWithOptions:error:] + 1380 (Vision + 1941756) [0x1b61f40fc]
+                                                                            2   VNExecuteBlock + 80 (Vision + 995464) [0x1b610d088]
+                                                                              1   __123-[VNImageAnalyzerMultiDetector _populateLeafSceneObservations:hierarchySceneObservations:forLastAnalysisWithOptions:error:]_block_invoke + 156 (Vision + 1942696) [0x1b61f44a8]
+                                                                                1   vision::mod::ImageClassifier_HierarchicalModel::infer(std::__1::unordered_map<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, float, std::__1::hash<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::equal_to<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::allocator<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const, float> > > const&, bool, bool) + 348 (Vision + 1180200) [0x1b613a228]
+                                                                                  1   std::__1::pair<std::__1::__hash_iterator<std::__1::__hash_node<std::__1::__hash_value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, vision::mod::ImageClassfier_GraphNode*>, void*>*>, bool> std::__1::__hash_table<std::__1::__hash_value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, vision::mod::ImageClassfier_GraphNode*>, std::__1::__unordered_map_hasher<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__hash_value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, vision::mod::ImageClassfier_GraphNode*>, std::__1::hash<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::equal_to<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::__unordered_map_equal<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__hash_value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, vision::mod::ImageClassfier_GraphNode*>, std::__1::equal_to<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::hash<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__hash_value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, vision::mod::ImageClassfier_GraphNode*> > >::__emplace_unique_key_args<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::piecewise_construct_t const&, std::__1::tuple<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&>, std::__1::tuple<> >(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::piecewise_construct_t const&, std::__1::tuple<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&>&&, std::__1::tuple<>&&) + 136 (Vision + 1175076) [0x1b6138e24]
+                                                                              1   __123-[VNImageAnalyzerMultiDetector _populateLeafSceneObservations:hierarchySceneObservations:forLastAnalysisWithOptions:error:]_block_invoke + 120 (Vision + 1942660) [0x1b61f4484]
+                                                                                1   std::__1::pair<std::__1::__hash_iterator<std::__1::__hash_node<std::__1::__hash_value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, float>, void*>*>, bool> std::__1::__hash_table<std::__1::__hash_value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, float>, std::__1::__unordered_map_hasher<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__hash_value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, float>, std::__1::hash<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::equal_to<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::__unordered_map_equal<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__hash_value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, float>, std::__1::equal_to<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::hash<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__hash_value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, float> > >::__emplace_unique_key_args<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::piecewise_construct_t const&, std::__1::tuple<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&>, std::__1::tuple<> >(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::piecewise_construct_t const&, std::__1::tuple<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&>&&, std::__1::tuple<>&&) + 424 (Vision + 639624) [0x1b60b6288]
+                                                                                  1   std::__1::unique_ptr<std::__1::__hash_node<std::__1::__hash_value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, float>, void*>, std::__1::__hash_node_destructor<std::__1::allocator<std::__1::__hash_node<std::__1::__hash_value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, float>, void*> > > > std::__1::__hash_table<std::__1::__hash_value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, float>, std::__1::__unordered_map_hasher<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__hash_value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, float>, std::__1::hash<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::equal_to<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::__unordered_map_equal<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__hash_value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, float>, std::__1::equal_to<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::hash<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__hash_value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, float> > >::__construct_node_hash<std::__1::piecewise_construct_t const&, std::__1::tuple<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&>, std::__1::tuple<> >(unsigned long, std::__1::piecewise_construct_t const&, std::__1::tuple<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&>&&, std::__1::tuple<>&&) + 48 (Vision + 640036) [0x1b60b6424]
+                                                                                    1   operator new(unsigned long) + 32 (libc++abi.dylib + 88288) [0x1a4f338e0]
+                                                                                      1   _malloc_zone_malloc + 156 (libsystem_malloc.dylib + 124784) [0x1a4da6770]
+                                                                                        1   szone_malloc_should_clear + 92 (libsystem_malloc.dylib + 9620) [0x1a4d8a594]
+                                                                                          1   tiny_malloc_should_clear + 156 (libsystem_malloc.dylib + 14136) [0x1a4d8b738]
+                                                                          1   -[VNImageAnalyzerMultiDetector _populateLeafSceneObservations:hierarchySceneObservations:forLastAnalysisWithOptions:error:] + 816 (Vision + 1941192) [0x1b61f3ec8]
+                                                                            1   _insertObjectIntoTopNArray(NSMutableArray*, unsigned long, objc_object*, NSComparisonResult (objc_object*, objc_object*) block_pointer) + 148 (Vision + 1944768) [0x1b61f4cc0]
+                                                                              1   -[__NSArrayM insertObject:atIndex:] + 64 (CoreFoundation + 136116) [0x1a4fdd3b4]
+                                                                        1   -[VNImageAnalyzerMultiDetector _observationsForScene:junk:VNVYvzEtX1JlUdu8xx5qhDI:landmark:sceneprint:includingLabelsAndConfidences:compressedSceneprint:aesthetics:saliencyAHeatMap:saliencyOHeatMap:recognizedObjects:VN5kJNH3eYuyaLxNpZr5Z7zi:VNdGg5skzXHSAENO6T3enHE:photosAdjustments:of32BGRAImageInPixelBufferProvidedByBlock:withOptions:originalImageSize:regionOfInterest:warningRecorder:error:] + 420 (Vision + 1915220) [0x1b61ed954]
+                                                                          1   -[VNImageAnalyzerMultiDetector _performAnalysis:on32BGRAImageInPixelBufferProvidedByBlock:error:] + 316 (Vision + 1940124) [0x1b61f3a9c]
+                                                                            1   vision::mod::ImageAnalyzer::analyze(unsigned int, vImage_Buffer const&, _ImageProcessing_ImageType, _Geometry2D_rect2D_ const&) + 4344 (Vision + 939136) [0x1b60ff480]
+                                                                              1   espresso_plan_execute_sync + 132 (Espresso + 3975036) [0x1b9c9e77c]
+                                                                                1   EspressoLight::espresso_plan::execute_sync() + 412 (Espresso + 3952396) [0x1b9c98f0c]
+                                                                                  1   EspressoLight::espresso_plan::dispatch_task_on_compute_batch(std::__1::shared_ptr<Espresso::abstract_batch> const&, std::__1::shared_ptr<EspressoLight::plan_task_t> const&) + 704 (Espresso + 3908304) [0x1b9c8e2d0]
+                                                                                    1   Espresso::net::__forward(std::__1::shared_ptr<Espresso::abstract_batch> const&, int, int) + 376 (Espresso + 3261896) [0x1b9bf05c8]
+                                                                                      1   Espresso::net_compiler_segment_based::__forward(std::__1::shared_ptr<Espresso::abstract_batch> const&) + 1044 (Espresso + 3228728) [0x1b9be8438]
+                                                                                        1   Espresso::ANERuntimeEngine::compiler::__forward_segment(std::__1::shared_ptr<Espresso::abstract_batch> const&, int, Espresso::net_compiler_segment_based::segment_t const&) + 1928 (Espresso + 8373220) [0x1ba0d03e4]
+                                                                                          1   -[_ANEClient doEvaluateDirectWithModel:options:request:qos:error:] + 1516 (AppleNeuralEngine + 84160) [0x1bb4508c0]
+                                                                                            1   -[_ANEProgramForEvaluation processRequest:model:qos:qIndex:modelStringID:options:error:] + 2120 (AppleNeuralEngine + 22880) [0x1bb441960]
+                                                                                              1   H11ANEProgramProcessRequestDirect + 1284 (ANEServices + 88972) [0x1ba333b8c]
+                                                                                                1   H11ANE::H11ANEFrameReceiver::ProgramProcessRequest(H11ANE::H11ANEFrameReceiverRequest&, H11ANESharedEventsStruct*) + 960 (ANEServices + 60056) [0x1ba32ca98]
+                                                                                                  1   H11ANE::H11ANEDevice::ANE_ProgramSendRequest(H11ANEProgramRequestArgsStruct*, unsigned int) + 148 (ANEServices + 55552) [0x1ba32b900]
+                                                                                                    1   IOConnectCallAsyncMethod + 224 (IOKit + 50448) [0x1a7a29510]
+                                                                                                      1   io_connect_async_method + 516 (IOKit + 23240) [0x1a7a22ac8]
+                                                                                                        1   mach_msg_trap + 8 (libsystem_kernel.dylib + 6484) [0x1a4f39954]
+                                    2   -[VCPPreAnalyzer _performSceneAnalysis:image:isPano:] + 5208 (MediaAnalysis + 769076) [0x2129cbc34]
+                                      2   -[VNImageRequestHandler performRequests:gatheredForensics:error:] + 188 (Vision + 1709172) [0x1b61bb474]
+                                        2   -[VNRequestPerformer _performRequests:onBehalfOfRequest:inContext:error:] + 444 (Vision + 2067052) [0x1b6212a6c]
+                                          2   -[VNRequestPerformer _performOrderedRequests:inContext:error:] + 556 (Vision + 2066172) [0x1b62126fc]
+                                            2   VNExecuteBlock + 80 (Vision + 995464) [0x1b610d088]
+                                              2   -[VNRequest performInContext:error:] + 736 (Vision + 661240) [0x1b60bb6f8]
+                                                1   -[VNSmartCam5CompoundRequest internalPerformRevision:inContext:error:] + 636 (Vision + 2090376) [0x1b6218588]
+                                                  1   -[VNDetector processInSynchronizationQueueUsingQualityOfServiceClass:options:regionOfInterest:warningRecorder:error:progressHandler:] + 528 (Vision + 1003084) [0x1b610ee4c]
+                                                    1   _dispatch_sync_block_with_privdata + 432 (libdispatch.dylib + 35792) [0x1a4dbbbd0]
+                                                      1   _dispatch_lane_barrier_sync_invoke_and_complete + 56 (libdispatch.dylib + 77312) [0x1a4dc5e00]
+                                                        1   _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+                                                          1   _dispatch_block_sync_invoke + 152 (libdispatch.dylib + 30720) [0x1a4dba800]
+                                                            1   __133-[VNDetector processInSynchronizationQueueUsingQualityOfServiceClass:options:regionOfInterest:warningRecorder:error:progressHandler:]_block_invoke.363 + 48 (Vision + 1003620) [0x1b610f064]
+                                                              1   VNExecuteBlock + 80 (Vision + 995464) [0x1b610d088]
+                                                                1   __133-[VNDetector processInSynchronizationQueueUsingQualityOfServiceClass:options:regionOfInterest:warningRecorder:error:progressHandler:]_block_invoke + 56 (Vision + 1003508) [0x1b610eff4]
+                                                                  1   -[VNDetector tracedProcessWithOptions:regionOfInterest:warningRecorder:error:progressHandler:] + 232 (Vision + 1002140) [0x1b610ea9c]
+                                                                    1   -[VNImageAnalyzerBasedDetector processWithOptions:regionOfInterest:warningRecorder:error:progressHandler:] + 956 (Vision + 1734348) [0x1b61c16cc]
+                                                                      1   vision::mod::ImageAnalyzer::analyze(unsigned int, vImage_Buffer const&, _ImageProcessing_ImageType, _Geometry2D_rect2D_ const&) + 4344 (Vision + 939136) [0x1b60ff480]
+                                                                        1   espresso_plan_execute_sync + 132 (Espresso + 3975036) [0x1b9c9e77c]
+                                                                          1   EspressoLight::espresso_plan::execute_sync() + 412 (Espresso + 3952396) [0x1b9c98f0c]
+                                                                            1   EspressoLight::espresso_plan::dispatch_task_on_compute_batch(std::__1::shared_ptr<Espresso::abstract_batch> const&, std::__1::shared_ptr<EspressoLight::plan_task_t> const&) + 760 (Espresso + 3908360) [0x1b9c8e308]
+                                                                              1   EspressoLight::espresso_plan::__copy_outputs(std::__1::shared_ptr<EspressoLight::plan_task_t>, std::__1::shared_ptr<Espresso::abstract_batch> const&, int, std::__1::shared_ptr<Espresso::net>) + 860 (Espresso + 3913236) [0x1b9c8f614]
+                                                                                1   Espresso::ANERuntimeEngine::blob_container::__copy_to_host(std::__1::shared_ptr<Espresso::abstract_batch> const&, std::__1::shared_ptr<Espresso::blob<float, 4> >&) + 364 (Espresso + 9381880) [0x1ba1c67f8]
+                                                                                  1   IOSurfaceClientLock + 160 (IOSurface + 17904) [0x1ad7d55f0]
+                                                                                    1   IOConnectCallMethod + 236 (IOKit + 15300) [0x1a7a20bc4]
+                                                                                      1   io_connect_method + 440 (IOKit + 15784) [0x1a7a20da8]
+                                                                                        1   mach_msg_trap + 8 (libsystem_kernel.dylib + 6484) [0x1a4f39954]
+                                                                                          1   <Kernel mode>
+                                                1   -[VNSmartCam5CompoundRequest internalPerformRevision:inContext:error:] + 252 (Vision + 2089992) [0x1b6218408]
+                                                  1   -[VNSession detectorOfType:configuredWithOptions:error:] + 132 (Vision + 1421176) [0x1b6174f78]
+                                                    1   -[VNSession detectorOfClass:configuredWithOptions:error:] + 232 (Vision + 1420404) [0x1b6174c74]
+                                                      1   -[VNSession _locateDetectorOfClass:configuredWithOptions:allowingCreation:error:] + 96 (Vision + 1420720) [0x1b6174db0]
+                                                        1   -[VNDetectorCache detectorOfClass:configuredWithOptions:error:] + 228 (Vision + 1534684) [0x1b6190adc]
+                                                          1   -[VNDetector canBehaveAsDetectorOfClass:withConfiguration:] + 48 (Vision + 1004008) [0x1b610f1e8]
+                                                            1   _CFNonObjCStringCreateCopy + 0 (CoreFoundation + 43232) [0x1a4fc68e0]
+                                    2   -[VCPPreAnalyzer _performSceneAnalysis:image:isPano:] + 3148 (MediaAnalysis + 767016) [0x2129cb428]
+                                      2   ??? (CVNLP + 196948) [0x1b048e154]
+                                        2   _dispatch_lane_barrier_sync_invoke_and_complete + 56 (libdispatch.dylib + 77312) [0x1a4dc5e00]
+                                          2   _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+                                            2   ??? (CVNLP + 197232) [0x1b048e270]
+                                              2   ??? (CVNLP + 262840) [0x1b049e2b8]
+                                                2   ??? (CVNLP + 184428) [0x1b048b06c]
+                                                  2   ??? (CVNLP + 263396) [0x1b049e4e4]
+                                                    2   ??? (CVNLP + 263568) [0x1b049e590]
+                                                      2   espresso_plan_execute_sync + 132 (Espresso + 3975036) [0x1b9c9e77c]
+                                                        2   EspressoLight::espresso_plan::execute_sync() + 412 (Espresso + 3952396) [0x1b9c98f0c]
+                                                          2   EspressoLight::espresso_plan::dispatch_task_on_compute_batch(std::__1::shared_ptr<Espresso::abstract_batch> const&, std::__1::shared_ptr<EspressoLight::plan_task_t> const&) + 504 (Espresso + 3908104) [0x1b9c8e208]
+                                                            2   EspressoLight::espresso_plan::__copy_inputs(std::__1::shared_ptr<EspressoLight::plan_task_t>, std::__1::shared_ptr<Espresso::abstract_batch> const&, int, std::__1::shared_ptr<Espresso::net>) + 968 (Espresso + 3911020) [0x1b9c8ed6c]
+                                                              2   Espresso::abstract_blob_container::__copy_from_CVPixelBuffer(std::__1::shared_ptr<Espresso::abstract_batch> const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, __CVBuffer*, Espresso::abstract_blob_container::cv_settings const&, unsigned long) + 304 (Espresso + 4855460) [0x1b9d756a4]
+                                                                2   Espresso::fill_blob_with_images_batch_safe_v2(std::__1::shared_ptr<Espresso::abstract_batch> const&, Espresso::abstract_blob_container*, std::__1::vector<vImage_Buffer, std::__1::allocator<vImage_Buffer> > const&, int, std::__1::shared_ptr<Espresso::blob<float, 4> >*, Espresso::vimage2espresso_param const&) + 104 (Espresso + 4522128) [0x1b9d24090]
+                                                                  2   Espresso::ANERuntimeEngine::blob_container::__copy_from_vimage_buffers(std::__1::shared_ptr<Espresso::abstract_batch> const&, std::__1::vector<vImage_Buffer, std::__1::allocator<vImage_Buffer> > const&, int, Espresso::vimage2espresso_param const&) + 300 (Espresso + 9363948) [0x1ba1c21ec]
+                                                                    1   ??? (libvDSP.dylib + 349504) [0x1aec10540]
+                                                                    1   vConvert_ARGB8888ToPlanar8_CV_vec + 168 (vImage + 2460160) [0x1abd75a00]
+                                                                      1   <Kernel mode>
+                                    1   -[VCPPreAnalyzer _performSceneAnalysis:image:isPano:] + 4460 (MediaAnalysis + 768328) [0x2129cb948]
+                                      1   -[VNImageRequestHandler performRequests:gatheredForensics:error:] + 188 (Vision + 1709172) [0x1b61bb474]
+                                        1   -[VNRequestPerformer _performRequests:onBehalfOfRequest:inContext:error:] + 444 (Vision + 2067052) [0x1b6212a6c]
+                                          1   -[VNRequestPerformer _performOrderedRequests:inContext:error:] + 556 (Vision + 2066172) [0x1b62126fc]
+                                            1   VNExecuteBlock + 80 (Vision + 995464) [0x1b610d088]
+                                              1   -[VNRequest performInContext:error:] + 736 (Vision + 661240) [0x1b60bb6f8]
+                                                1   -[VNClassifyMemeImageRequest internalPerformRevision:inContext:error:] + 160 (Vision + 2346640) [0x1b6256e90]
+                                                  1   -[VNClassifyMemeImageRequest _applicableDetectorAndOptions:loadedInSession:error:] + 144 (Vision + 2347916) [0x1b625738c]
+                                                    1   -[VNSession detectorOfType:configuredWithOptions:error:] + 132 (Vision + 1421176) [0x1b6174f78]
+                                                      1   -[VNSession detectorOfClass:configuredWithOptions:error:] + 232 (Vision + 1420404) [0x1b6174c74]
+                                                        1   -[VNSession _locateDetectorOfClass:configuredWithOptions:allowingCreation:error:] + 192 (Vision + 1420816) [0x1b6174e10]
+                                                          1   -[VNFrameworkManager detectorOfClass:configuredWithOptions:forSession:error:] + 376 (Vision + 2101488) [0x1b621b0f0]
+                                                            1   +[VNDetector detectorWithConfigurationOptions:forSession:error:] + 140 (Vision + 1006988) [0x1b610fd8c]
+                                                              1   -[VNMemeClassifier completeInitializationForSession:error:] + 132 (Vision + 2254288) [0x1b62405d0]
+                                                                1   -[VNImageAnalyzerBasedDetector completeInitializationForSession:error:] + 916 (Vision + 1735792) [0x1b61c1c70]
+                                                                  1   vision::mod::ImageAnalyzer::ImageAnalyzer(char const*, char const*, char const*, char const*, char const*, char const*, char const*, vision::mod::ImageAnalyzer_Options const&) + 2084 (Vision + 1739120) [0x1b61c2970]
+                                                                    1   espresso_plan_add_network + 364 (Espresso + 3970004) [0x1b9c9d3d4]
+                                                                      1   EspressoLight::espresso_plan::add_network(char const*, espresso_storage_type_t) + 64 (Espresso + 3958612) [0x1b9c9a754]
+                                                                        1   EspressoLight::espresso_plan::add_network(char const*, espresso_storage_type_t, std::__1::shared_ptr<Espresso::net>) + 360 (Espresso + 3879868) [0x1b9c873bc]
+                                                                          1   Espresso::load_network(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::shared_ptr<Espresso::abstract_context> const&, Espresso::compute_path, bool) + 2004 (Espresso + 5324784) [0x1b9de7ff0]
+                                                                            1   Espresso::load_and_shape_network(std::__1::shared_ptr<Espresso::SerDes::generic_serdes_object> const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::shared_ptr<Espresso::abstract_context> const&, Espresso::network_shape const&, Espresso::compute_path, std::__1::shared_ptr<Espresso::blob_storage_abstract> const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) + 512 (Espresso + 5317256) [0x1b9de6288]
+                                                                              1   Espresso::load_network_layers_internal(std::__1::shared_ptr<Espresso::SerDes::generic_serdes_object>, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::shared_ptr<Espresso::abstract_context> const&, Espresso::network_shape const&, std::__1::basic_istream<char, std::__1::char_traits<char> >*, Espresso::compute_path, bool, std::__1::shared_ptr<Espresso::blob_storage_abstract> const&) + 264 (Espresso + 5271232) [0x1b9ddaec0]
+                                                                                1   Espresso::run_dispatch_v2(std::__1::shared_ptr<Espresso::abstract_context>, std::__1::shared_ptr<Espresso::net>, std::__1::vector<std::__1::shared_ptr<Espresso::SerDes::generic_serdes_object>, std::__1::allocator<std::__1::shared_ptr<Espresso::SerDes::generic_serdes_object> > > const&, Espresso::network_shape const&, Espresso::compute_path const&, std::__1::basic_istream<char, std::__1::char_traits<char> >*) + 5440 (Espresso + 5203748) [0x1b9dca724]
+                                                                                  1   try_dispatch(std::__1::shared_ptr<Espresso::abstract_context>, std::__1::shared_ptr<Espresso::net>, std::__1::vector<std::__1::shared_ptr<Espresso::SerDes::generic_serdes_object>, std::__1::allocator<std::__1::shared_ptr<Espresso::SerDes::generic_serdes_object> > > const&, Espresso::network_shape const&, Espresso::compute_path const&, std::__1::basic_istream<char, std::__1::char_traits<char> >*, Espresso::platform const&, Espresso::compute_path const&) + 472 (Espresso + 5196580) [0x1b9dc8b24]
+                                                                                    1   Espresso::get_net_info_ir(std::__1::shared_ptr<Espresso::abstract_context>, std::__1::shared_ptr<Espresso::net>, std::__1::vector<std::__1::shared_ptr<Espresso::SerDes::generic_serdes_object>, std::__1::allocator<std::__1::shared_ptr<Espresso::SerDes::generic_serdes_object> > > const&, Espresso::network_shape const&, Espresso::compute_path const&, Espresso::platform const&, Espresso::compute_path const&, std::__1::shared_ptr<Espresso::cpu_context_transfer_algo_t>&, std::__1::shared_ptr<Espresso::net_info_ir_t>&, std::__1::shared_ptr<Espresso::kernels_validation_status_t>&) + 648 (Espresso + 5195600) [0x1b9dc8750]
+                                                                                      1   Espresso::cpu_context_transfer_algo_t::create_net_info_ir(std::__1::vector<std::__1::shared_ptr<Espresso::SerDes::generic_serdes_object>, std::__1::allocator<std::__1::shared_ptr<Espresso::SerDes::generic_serdes_object> > > const&, std::__1::shared_ptr<Espresso::abstract_context>, Espresso::network_shape const&, Espresso::compute_path, std::__1::shared_ptr<Espresso::net_info_ir_t>) + 112 (Espresso + 4597616) [0x1b9d36770]
+                                                                                        1   Espresso::cpu_context_transfer_algo_t::check_all_kernels_availability_on_context(std::__1::vector<std::__1::shared_ptr<Espresso::SerDes::generic_serdes_object>, std::__1::allocator<std::__1::shared_ptr<Espresso::SerDes::generic_serdes_object> > > const&, std::__1::shared_ptr<Espresso::abstract_context>&, Espresso::compute_path, std::__1::shared_ptr<Espresso::net_info_ir_t>&) + 288 (Espresso + 4591624) [0x1b9d35008]
+                                                                                          1   is_kernel_available_on_engine(unsigned long, std::__1::shared_ptr<Espresso::base_kernel>, Espresso::kernel_info_t const&, std::__1::shared_ptr<Espresso::SerDes::generic_serdes_object>, std::__1::shared_ptr<Espresso::abstract_context>, Espresso::compute_path, std::__1::shared_ptr<Espresso::net_info_ir_t>, std::__1::shared_ptr<Espresso::kernels_validation_status_t>) + 780 (Espresso + 4594040) [0x1b9d35978]
+                                                                                            1   Espresso::SerDes::serdes_object_json_objc::get_keys(std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >&) + 108 (Espresso + 3842228) [0x1b9c7e0b4]
+                                                                                              1   objc_msgSend + 64 (libobjc.A.dylib + 25408) [0x1a4e00340]
+                                  4   __91-[VCPPreAnalyzer _performAnalysis:isPano:isSDOF:colorPixelBuffer:andLumaPixelBuffer:image:]_block_invoke + 264 (MediaAnalysis + 778324) [0x2129ce054]
+                                    3   -[VCPPreAnalyzer _performRotationAnalysis:withColorPixelBuffer:] + 704 (MediaAnalysis + 774536) [0x2129cd188]
+                                      2   vImageScale_ARGB8888 + 892 (vImage + 111208) [0x1abb38268]
+                                        1   vImageVerticalShear_ARGB8888 + 576 (vImage + 126356) [0x1abb3bd94]
+                                          1   vVertical_Scale_ARGB_8888_Accelerate + 6652 (vImage + 1792696) [0x1abcd2ab8]
+                                        1   vImageVerticalShear_ARGB8888 + 88 (vImage + 125868) [0x1abb3bbac]
+                                      1   vImageScale_ARGB8888 + 1044 (vImage + 111360) [0x1abb38300]
+                                        1   vImageHorizontalShear_ARGB8888 + 656 (vImage + 114000) [0x1abb38d50]
+                                          1   vHorizontal_Shear_ARGB_8888 + 9488 (vImage + 123792) [0x1abb3b390]
+                                    1   -[VCPPreAnalyzer _performRotationAnalysis:withColorPixelBuffer:] + 1108 (MediaAnalysis + 774940) [0x2129cd31c]
+                                      1   -[MLModel predictionFromFeatures:error:] + 112 (CoreML + 3205844) [0x1acbfdad4]
+                                        1   -[MLNeuralNetworkEngine predictionFromFeatures:options:error:] + 436 (CoreML + 2542712) [0x1acb5bc78]
+                                          1   _dispatch_lane_barrier_sync_invoke_and_complete + 56 (libdispatch.dylib + 77312) [0x1a4dc5e00]
+                                            1   _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+                                              1   __62-[MLNeuralNetworkEngine predictionFromFeatures:options:error:]_block_invoke + 128 (CoreML + 2543108) [0x1acb5be04]
+                                                1   -[MLNeuralNetworkEngine evaluateInputs:options:error:] + 376 (CoreML + 2588760) [0x1acb67058]
+                                                  1   _dispatch_lane_barrier_sync_invoke_and_complete + 56 (libdispatch.dylib + 77312) [0x1a4dc5e00]
+                                                    1   _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+                                                      1   __54-[MLNeuralNetworkEngine evaluateInputs:options:error:]_block_invoke + 44 (CoreML + 2589236) [0x1acb67234]
+                                                        1   -[MLNeuralNetworkEngine evaluateInputs:bufferIndex:options:error:] + 800 (CoreML + 2580080) [0x1acb64e70]
+                                                          1   CVPixelBufferBacking::unlockBaseAddress(unsigned long long) + 100 (CoreVideo + 86972) [0x1ac5c83bc]
+                                                            1   IOSurfaceClientUnlock + 156 (IOSurface + 18208) [0x1ad7d5720]
+                                                              1   IOConnectCallMethod + 236 (IOKit + 15300) [0x1a7a20bc4]
+                                                                1   io_connect_method + 440 (IOKit + 15784) [0x1a7a20da8]
+                                                                  1   mach_msg_trap + 8 (libsystem_kernel.dylib + 6484) [0x1a4f39954]
+                                  2   __91-[VCPPreAnalyzer _performAnalysis:isPano:isSDOF:colorPixelBuffer:andLumaPixelBuffer:image:]_block_invoke + 176 (MediaAnalysis + 778236) [0x2129cdffc]
+                                    2   -[VCPPreAnalyzer _performExposureAnalysis:withLumaPixelBuffer:] + 236 (MediaAnalysis + 773428) [0x2129ccd34]
+                                      1   -[VCPImageExposurePreAnalyzer analyzePixelBuffer:flags:results:cancel:] + 700 (MediaAnalysis + 335628) [0x212961f0c]
+                                        1   <Kernel mode>
+                                      1   -[VCPImageExposurePreAnalyzer analyzePixelBuffer:flags:results:cancel:] + 404 (MediaAnalysis + 335332) [0x212961de4]
+                                        1   <Kernel mode>
+                    5   -[VCPPreAnalyzer analyzeWithImageURL:isPano:isSDOF:completionHandler:] + 284 (MediaAnalysis + 779092) [0x2129ce354]
+                      2   -[VCPPreAnalyzer _loadImageURL:isPano:colorPixelBuffer:andLumaPixelBuffer:image:] + 92 (MediaAnalysis + 740228) [0x2129c4b84]
+                        2   -[VCPSceneProcessingImageManager loadFullPixelBuffer:scaledPixelBuffer299:scaledPixelBuffer360:fromImageURL:isPano:] + 168 (MediaAnalysis + 732752) [0x2129c2e50]
+                          2   -[VCPImageManager pixelBufferWithFormat:fromImageURL:flushCache:] + 28 (MediaAnalysis + 544572) [0x212994f3c]
+                            1   -[VCPImageManager pixelBufferWithFormat:fromImageURL:flushCache:orientation:] + 276 (MediaAnalysis + 544856) [0x212995058]
+                              1   -[VCPImageManager pixelBufferWithFormat:andMaxDimension:fromData:withUniformTypeIdentifier:flushCache:orientation:] + 244 (MediaAnalysis + 543576) [0x212994b58]
+                                1   _dispatch_lane_barrier_sync_invoke_and_complete + 56 (libdispatch.dylib + 77312) [0x1a4dc5e00]
+                                  1   _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+                                    1   __115-[VCPImageManager pixelBufferWithFormat:andMaxDimension:fromData:withUniformTypeIdentifier:flushCache:orientation:]_block_invoke + 92 (MediaAnalysis + 543764) [0x212994c14]
+                                      1   -[VCPImageManager acceleratedDecodeImageData:pixelFormat:maxDimension:pixelBuffer:orientation:flushCache:] + 472 (MediaAnalysis + 539364) [0x212993ae4]
+                                        1   CMPhotoDecompressionContainerCreateImageForIndex + 268 (CMPhoto + 347672) [0x20c04be18]
+                                          1   ??? (CMPhoto + 542736) [0x20c07b810]
+                                            1   ??? (CMPhoto + 553852) [0x20c07e37c]
+                                              1   ??? (CMPhoto + 585456) [0x20c085ef0]
+                                                1   applejpeg_decode_image_all + 872 (AppleJPEG + 21120) [0x1b0eb9280]
+                                                  1   aj_decode_all_mt + 592 (AppleJPEG + 41464) [0x1b0ebe1f8]
+                                                    1   aj_decode_all + 300 (AppleJPEG + 41872) [0x1b0ebe390]
+                                                      1   fill_coeff_buffer + 440 (AppleJPEG + 44464) [0x1b0ebedb0]
+                                                        1   aj_mcu_decode + 1672 (AppleJPEG + 75096) [0x1b0ec6558]
+                                                          1   aj_huffman_decode_ac_s1 + 100 (AppleJPEG + 78232) [0x1b0ec7198]
+                                                            1   <Kernel mode>
+                            1   -[VCPImageManager pixelBufferWithFormat:fromImageURL:flushCache:orientation:] + 128 (MediaAnalysis + 544708) [0x212994fc4]
+                              1   -[NSURL getResourceValue:forKey:error:] + 120 (CoreFoundation + 449988) [0x1a5029dc4]
+                                1   CFURLCopyResourcePropertyForKey + 140 (CoreFoundation + 354972) [0x1a5012a9c]
+                                  1   _FSURLCopyResourcePropertyForKeyInternal(__CFURL const*, __CFString const*, void*, void*, __CFError**, unsigned char) + 232 (CoreServicesInternal + 4296) [0x1a79a30c8]
+                                    1   prepareValuesForBitmap(__CFURL const*, __FileCache*, _FilePropertyBitmap*, __CFError**) + 412 (CoreServicesInternal + 16496) [0x1a79a6070]
+                                      1   __getattrlist + 8 (libsystem_kernel.dylib + 9084) [0x1a4f3a37c]
+                                        1   <Kernel mode>
+                      1   -[VCPPreAnalyzer _loadImageURL:isPano:colorPixelBuffer:andLumaPixelBuffer:image:] + 492 (MediaAnalysis + 740628) [0x2129c4d14]
+                        1   -[VCPPreAnalyzer _convertFromBuffer:toLumaPixelBuffer:isPano:] + 204 (MediaAnalysis + 739892) [0x2129c4a34]
+                          1   VTPixelTransferSessionTransferImage + 3632 (VideoToolbox + 12344) [0x1b1025038]
+                            1   VTMetalTransferSessionTransferImageSync + 308 (VideoToolbox + 16552) [0x1b10260a8]
+                              1   ??? (VideoToolbox + 1969232) [0x1b1202c50]
+                                1   CVMetalTextureCacheCreateTextureFromImage + 236 (CoreVideo + 93672) [0x1ac5c9de8]
+                                  1   CVMetalTextureCache::createTextureFromImageWithParams(__CFAllocator const*, CVImageBuffer*, __CFDictionary const*, unsigned long, int, int, unsigned long, int*) + 476 (CoreVideo + 94380) [0x1ac5ca0ac]
+                                    1   CVMetalTextureCache::createTextureBackingFromImageBacking(__CFAllocator const*, CVImageBacking*, CVImageBuffer*, __CFDictionary const*, int*) + 704 (CoreVideo + 95636) [0x1ac5ca594]
+                                      1   CVPixelBufferBacking::createTextureBackingForDevice(__CFAllocator const*, void*, __CFDictionary const*, CVImageBuffer*, int*) + 144 (CoreVideo + 96608) [0x1ac5ca960]
+                                        1   CVPixelBufferMetalTextureBacking::initWithPixelBackingDevice(CVPixelBufferBacking*, void*, __CFDictionary const*, CVImageBuffer*, int*) + 276 (CoreVideo + 97196) [0x1ac5cabac]
+                                          1   CVPixelBufferMetalTextureBacking::createTexture(CVImageBuffer*) + 740 (CoreVideo + 98140) [0x1ac5caf5c]
+                                            1   CVMTLTextureCreate + 284 (CoreVideo + 98524) [0x1ac5cb0dc]
+                                              1   ??? (AGXMetal13_3 + 5016952) [0x206cbcd78]
+                                                1   -[IOGPUMetalTexture initWithDevice:descriptor:iosurface:plane:field:args:argsSize:] + 768 (IOGPU + 65448) [0x1bf564fa8]
+                                                  1   -[IOGPUMetalResource initWithDevice:remoteStorageResource:options:args:argsSize:] + 476 (IOGPU + 55800) [0x1bf5629f8]
+                                                    1   IOGPUResourceCreate + 224 (IOGPU + 80240) [0x1bf568970]
+                                                      1   IOConnectCallMethod + 236 (IOKit + 15300) [0x1a7a20bc4]
+                                                        1   io_connect_method + 440 (IOKit + 15784) [0x1a7a20da8]
+                                                          1   mach_msg_trap + 8 (libsystem_kernel.dylib + 6484) [0x1a4f39954]
+                                                            1   <Kernel mode>
+                      1   -[VCPPreAnalyzer _loadImageURL:isPano:colorPixelBuffer:andLumaPixelBuffer:image:] + 348 (MediaAnalysis + 740484) [0x2129c4c84]
+                        1   -[VCPPreAnalysisImage preWarmWidth:andHeight:] + 224 (MediaAnalysis + 735344) [0x2129c3870]
+                          1   -[VCPSceneProcessingImageManager scalePixelBuffer:toPixelBuffer:width:height:] + 180 (MediaAnalysis + 733732) [0x2129c3224]
+                            1   -[VCPSceneProcessingImageManager fullPixelBuffer:toScaledBuffer:] + 456 (MediaAnalysis + 731280) [0x2129c2890]
+                              1   vImageScale_ARGB8888 + 892 (vImage + 111208) [0x1abb38268]
+                                1   vImageVerticalShear_ARGB8888 + 576 (vImage + 126356) [0x1abb3bd94]
+                                  1   vVertical_Scale_ARGB_8888_Accelerate + 14736 (vImage + 1800780) [0x1abcd4a4c]
+                      1   -[VCPPreAnalyzer _loadImageURL:isPano:colorPixelBuffer:andLumaPixelBuffer:image:] + 296 (MediaAnalysis + 740432) [0x2129c4c50]
+                        1   -[VCPPreAnalysisImage preWarmWidth:andHeight:] + 224 (MediaAnalysis + 735344) [0x2129c3870]
+                          1   -[VCPSceneProcessingImageManager scalePixelBuffer:toPixelBuffer:width:height:] + 92 (MediaAnalysis + 733644) [0x2129c31cc]
+                            1   -[VCPSceneProcessingImageManager _pooledPixelBuffer:withDimension:] + 172 (MediaAnalysis + 730344) [0x2129c24e8]
+                              1   CVPixelBufferPoolCreatePixelBuffer + 104 (CoreVideo + 124164) [0x1ac5d1504]
+                                1   CVPixelBufferPool::createPixelBuffer(__CFAllocator const*, __CFDictionary const*, int*) + 1076 (CoreVideo + 125348) [0x1ac5d19a4]
+                                  1   CVPixelBufferBacking::initWithPixelBufferDescription(unsigned long, unsigned long, void*, unsigned long, unsigned long, unsigned long, void**, unsigned long*, unsigned long*, unsigned long*, void (*)(void*, void const*), void (*)(void*, void const*, unsigned long, unsigned long, void const**), void*, __CFDictionary const*, __CFDictionary const*, __IOSurface*, __IOSurface*, __CVBuffer*, unsigned long*, int*) + 1620 (CoreVideo + 208840) [0x1ac5e5fc8]
+                                    1   _CVPixelBufferStandardMemoryLayout(void*, __CFAllocator const*, __CFDictionary const*, __CFDictionary const*, __CFDictionary const*, __CFDictionary const*, unsigned long, unsigned long, unsigned long, unsigned long, unsigned long, unsigned long, unsigned long, unsigned long, unsigned long, unsigned long, void**, unsigned long*, unsigned long*, unsigned long*, unsigned long*, unsigned long*, __IOSurface**, __IOSurface*, __CVBuffer*, unsigned int*, unsigned long*, void**) + 116 (CoreVideo + 210144) [0x1ac5e64e0]
+                                      1   CVPixelBufferBacking::performStandardMemoryLayoutAndCopyIOSurfaceCreationProperties(void*, unsigned char, __CFAllocator const*, __CFDictionary const*, __CFDictionary const*, __CFDictionary const*, __CFDictionary const*, unsigned long, unsigned long, unsigned long, unsigned long, unsigned long, unsigned long, unsigned long, unsigned long, unsigned long, unsigned long, void**, unsigned long*, unsigned long*, unsigned long*, unsigned long*, unsigned long*, __IOSurface**, __IOSurface*, __CVBuffer*, unsigned int*, unsigned long*, void**, __CFDictionary const**) + 9600 (CoreVideo + 206564) [0x1ac5e56e4]
+                                        1   -[IOSurface initWithProperties:] + 80 (IOSurface + 12340) [0x1ad7d4034]
+                                          1   IOSurfaceClientCreateChild + 204 (IOSurface + 27760) [0x1ad7d7c70]
+                                            1   IOConnectCallMethod + 236 (IOKit + 15300) [0x1a7a20bc4]
+                                              1   io_connect_method + 440 (IOKit + 15784) [0x1a7a20da8]
+                                                1   mach_msg_trap + 8 (libsystem_kernel.dylib + 6484) [0x1a4f39954]
+                    1   -[VCPPreAnalyzer analyzeWithImageURL:isPano:isSDOF:completionHandler:] + 1108 (MediaAnalysis + 779916) [0x2129ce68c]
+                      1   objc_autoreleasePoolPop + 208 (libobjc.A.dylib + 40296) [0x1a4e03d68]
+                        1   AutoreleasePoolPage::releaseUntil(objc_object**) + 200 (libobjc.A.dylib + 54156) [0x1a4e0738c]
+                          1   -[VNImageBuffer dealloc] + 168 (Vision + 620392) [0x1b60b1768]
+                            1   -[__NSDictionaryM dealloc] + 148 (CoreFoundation + 188528) [0x1a4fea070]
+                              1   cow_cleanup + 144 (CoreFoundation + 188752) [0x1a4fea150]
+                                1   _CFRelease + 1180 (CoreFoundation + 1432376) [0x1a5119b38]
+                                  1   free_tiny + 428 (libsystem_malloc.dylib + 25624) [0x1a4d8e418]
+                                    1   tiny_free_no_lock + 560 (libsystem_malloc.dylib + 26568) [0x1a4d8e7c8]
+                                      1   tiny_free_list_add_ptr + 296 (libsystem_malloc.dylib + 28604) [0x1a4d8efbc]
+                  3   ??? (mediaanalysisd + 623976) [0x100778568]
+                    3   +[PHAssetResource(MediaAnalysis) vcp_allAcceptableResourcesForAsset:] + 88 (MediaAnalysis + 1273852) [0x212a46ffc]
+                      3   +[PHAssetResource(MediaAnalysis) vcp_allResourcesForAsset:] + 36 (MediaAnalysis + 1273732) [0x212a46f84]
+                        3   +[PHAssetResource(Private) assetResourcesForAsset:includeDerivatives:includeMetadata:includeAdjustmentOverflowDataBlob:] + 304 (Photos + 1095724) [0x1c56a782c]
+                          3   -[PLPhotoLibrary(MegaMocAdditions) performBlockAndWait:] + 108 (PhotoLibraryServices + 115356) [0x1c7a8929c]
+                            3   -[PLPhotoLibrary(MegaMocAdditions) _withDispatchGroup:synchronously:name:shouldSave:performTransaction:completionHandler:] + 896 (PhotoLibraryServices + 109228) [0x1c7a87aac]
+                              3   -[PLManagedObjectContext pl_performWithOptions:andBlock:] + 100 (PhotoLibraryServices + 110472) [0x1c7a87f88]
+                                3   -[PLManagedObjectContext performWithOptions:andBlock:] + 160 (PhotoLibraryServices + 92092) [0x1c7a837bc]
+                                  3   -[NSManagedObjectContext(_NSCoreDataSPI) performWithOptions:andBlock:] + 592 (CoreData + 355140) [0x1ab0dfb44]
+                                    2   _dispatch_lane_barrier_sync_invoke_and_complete + 56 (libdispatch.dylib + 77312) [0x1a4dc5e00]
+                                      2   _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+                                        2   developerSubmittedBlockToNSManagedObjectContextPerform + 156 (CoreData + 193660) [0x1ab0b847c]
+                                          2   __54-[PLManagedObjectContext performWithOptions:andBlock:]_block_invoke + 96 (PhotoLibraryServices + 1847936) [0x1c7c30280]
+                                            2   __122-[PLPhotoLibrary(MegaMocAdditions) _withDispatchGroup:synchronously:name:shouldSave:performTransaction:completionHandler:]_block_invoke.231 + 184 (PhotoLibraryServices + 2802120) [0x1c7d191c8]
+                                              1   __120+[PHAssetResource(Private) assetResourcesForAsset:includeDerivatives:includeMetadata:includeAdjustmentOverflowDataBlob:]_block_invoke + 520 (Photos + 1096340) [0x1c56a7a94]
+                                                1   +[PLManagedAsset(RM) fetchResourcesForAssetWithObjectID:inContext:versions:includeVirtualResources:allowDerivatives:excludeDynamicCPLResources:additionalPredicate:relationshipKeyPathsForPrefetching:error:] + 864 (PhotoLibraryServices + 6023808) [0x1c802ba80]
+                                                  1   -[PLManagedObjectContext executeFetchRequest:error:] + 108 (PhotoLibraryServices + 132384) [0x1c7a8d520]
+                                                    1   -[PLManagedObjectContext pl_executeFetchRequest:error:] + 280 (PhotoLibraryServices + 1849760) [0x1c7c309a0]
+                                                      1   -[NSManagedObjectContext executeFetchRequest:error:] + 1076 (CoreData + 202712) [0x1ab0ba7d8]
+                                                        1   -[NSPersistentStoreCoordinator executeRequest:withContext:error:] + 1488 (CoreData + 211044) [0x1ab0bc864]
+                                                          1   -[NSPersistentStoreCoordinator _routeHeavyweightBlock:] + 264 (CoreData + 213004) [0x1ab0bd00c]
+                                                            1   __65-[NSPersistentStoreCoordinator executeRequest:withContext:error:]_block_invoke.843 + 2324 (CoreData + 1469592) [0x1ab1efc98]
+                                                              1   -[NSSQLCore executeRequest:withContext:error:] + 4156 (CoreData + 218208) [0x1ab0be460]
+                                                                1   -[NSSQLCore dispatchRequest:withRetries:] + 228 (CoreData + 228728) [0x1ab0c0d78]
+                                                                  1   -[NSSQLCoreDispatchManager routeStoreRequest:] + 252 (CoreData + 230404) [0x1ab0c1404]
+                                                                    1   -[NSSQLDefaultConnectionManager handleStoreRequest:] + 248 (CoreData + 230716) [0x1ab0c153c]
+                                                                      1   -[NSSQLiteConnection performAndWait:] + 176 (CoreData + 141184) [0x1ab0ab780]
+                                                                        1   _dispatch_lane_barrier_sync_invoke_and_complete + 56 (libdispatch.dylib + 77312) [0x1a4dc5e00]
+                                                                          1   _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+                                                                            1   __37-[NSSQLiteConnection performAndWait:]_block_invoke + 48 (CoreData + 141464) [0x1ab0ab898]
+                                                                              1   __52-[NSSQLDefaultConnectionManager handleStoreRequest:]_block_invoke + 68 (CoreData + 231504) [0x1ab0c1850]
+                                                                                1   -[NSSQLStoreRequestContext executeRequestUsingConnection:] + 260 (CoreData + 232216) [0x1ab0c1b18]
+                                                                                  1   -[NSSQLFetchRequestContext executeRequestCore:] + 36 (CoreData + 233092) [0x1ab0c1e84]
+                                                                                    1   -[NSSQLFetchRequestContext fetchStatement] + 244 (CoreData + 233468) [0x1ab0c1ffc]
+                                                                                      1   -[NSSQLFetchRequestContext _createStatement] + 60 (CoreData + 234096) [0x1ab0c2270]
+                                                                                        1   -[NSSQLiteAdapter newSelectStatementWithFetchRequestContext:ignoreInheritance:] + 176 (CoreData + 234332) [0x1ab0c235c]
+                                                                                          1   -[NSSQLGenerator newSQLStatementForRequest:ignoreInheritance:countOnly:nestingLevel:nestIsWhereScoped:requestContext:] + 3260 (CoreData + 237952) [0x1ab0c3180]
+                                                                                            1   objc_msgSend + 76 (libobjc.A.dylib + 25420) [0x1a4e0034c]
+                                              1   __120+[PHAssetResource(Private) assetResourcesForAsset:includeDerivatives:includeMetadata:includeAdjustmentOverflowDataBlob:]_block_invoke + 288 (Photos + 1096108) [0x1c56a79ac]
+                                                1   -[PLManagedObjectContext executeFetchRequest:error:] + 108 (PhotoLibraryServices + 132384) [0x1c7a8d520]
+                                                  1   -[PLManagedObjectContext pl_executeFetchRequest:error:] + 280 (PhotoLibraryServices + 1849760) [0x1c7c309a0]
+                                                    1   -[NSManagedObjectContext executeFetchRequest:error:] + 1076 (CoreData + 202712) [0x1ab0ba7d8]
+                                                      1   -[NSPersistentStoreCoordinator executeRequest:withContext:error:] + 1488 (CoreData + 211044) [0x1ab0bc864]
+                                                        1   -[NSPersistentStoreCoordinator _routeHeavyweightBlock:] + 264 (CoreData + 213004) [0x1ab0bd00c]
+                                                          1   __65-[NSPersistentStoreCoordinator executeRequest:withContext:error:]_block_invoke.843 + 2324 (CoreData + 1469592) [0x1ab1efc98]
+                                                            1   -[NSSQLCore executeRequest:withContext:error:] + 4156 (CoreData + 218208) [0x1ab0be460]
+                                                              1   -[NSSQLCore dispatchRequest:withRetries:] + 228 (CoreData + 228728) [0x1ab0c0d78]
+                                                                1   -[NSSQLCoreDispatchManager routeStoreRequest:] + 252 (CoreData + 230404) [0x1ab0c1404]
+                                                                  1   -[NSSQLDefaultConnectionManager handleStoreRequest:] + 248 (CoreData + 230716) [0x1ab0c153c]
+                                                                    1   -[NSSQLiteConnection performAndWait:] + 176 (CoreData + 141184) [0x1ab0ab780]
+                                                                      1   _dispatch_lane_barrier_sync_invoke_and_complete + 56 (libdispatch.dylib + 77312) [0x1a4dc5e00]
+                                                                        1   _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+                                                                          1   __37-[NSSQLiteConnection performAndWait:]_block_invoke + 48 (CoreData + 141464) [0x1ab0ab898]
+                                                                            1   __52-[NSSQLDefaultConnectionManager handleStoreRequest:]_block_invoke + 68 (CoreData + 231504) [0x1ab0c1850]
+                                                                              1   -[NSSQLStoreRequestContext executeRequestUsingConnection:] + 260 (CoreData + 232216) [0x1ab0c1b18]
+                                                                                1   -[NSSQLFetchRequestContext executeRequestCore:] + 36 (CoreData + 233092) [0x1ab0c1e84]
+                                                                                  1   -[NSSQLFetchRequestContext fetchStatement] + 244 (CoreData + 233468) [0x1ab0c1ffc]
+                                                                                    1   -[NSSQLFetchRequestContext _createStatement] + 60 (CoreData + 234096) [0x1ab0c2270]
+                                                                                      1   -[NSSQLiteAdapter newSelectStatementWithFetchRequestContext:ignoreInheritance:] + 176 (CoreData + 234332) [0x1ab0c235c]
+                                                                                        1   -[NSSQLGenerator newSQLStatementForRequest:ignoreInheritance:countOnly:nestingLevel:nestIsWhereScoped:requestContext:] + 2296 (CoreData + 236988) [0x1ab0c2dbc]
+                                                                                          1   -[__NSDictionaryM dealloc] + 32 (CoreFoundation + 188412) [0x1a4fe9ffc]
+                                    1   _dispatch_sync_f_slow + 172 (libdispatch.dylib + 76972) [0x1a4dc5cac]
+                                      1   _dispatch_sync_invoke_and_complete_recurse + 64 (libdispatch.dylib + 78384) [0x1a4dc6230]
+                                        1   _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+                                          1   developerSubmittedBlockToNSManagedObjectContextPerform + 156 (CoreData + 193660) [0x1ab0b847c]
+                                            1   __54-[PLManagedObjectContext performWithOptions:andBlock:]_block_invoke + 96 (PhotoLibraryServices + 1847936) [0x1c7c30280]
+                                              1   __122-[PLPhotoLibrary(MegaMocAdditions) _withDispatchGroup:synchronously:name:shouldSave:performTransaction:completionHandler:]_block_invoke.231 + 184 (PhotoLibraryServices + 2802120) [0x1c7d191c8]
+                                                1   __120+[PHAssetResource(Private) assetResourcesForAsset:includeDerivatives:includeMetadata:includeAdjustmentOverflowDataBlob:]_block_invoke + 692 (Photos + 1096512) [0x1c56a7b40]
+                                                  1   +[PHAssetResource(Private) _assetResourcesFromPLResources:includeMetadata:mediaMetadataVirtualResources:asset:assetHasAdjustments:includeDerivatives:includeAdjustmentOverflowDataBlob:] + 692 (Photos + 1092252) [0x1c56a6a9c]
+                                                    1   -[PHAssetResource initWithResource:asset:hasAdjustments:] + 752 (Photos + 1086248) [0x1c56a5328]
+                                                      1   -[PLInternalResource uniformTypeIdentifier] + 132 (PhotoLibraryServices + 883104) [0x1c7b449a0]
+                                                        1   +[PLUniformTypeIdentifier utiWithCompactRepresentation:conformanceHint:] + 144 (PhotoLibraryServices + 5189196) [0x1c7f5fe4c]
+                                                          1   -[PLUniformTypeIdentifier initWithIdentifier:compactRepresentation:conformanceHint:] + 208 (PhotoLibraryServices + 5188008) [0x1c7f5f9a8]
+                                                            1   _UTTypeGetForIdentifier(NSString*, bool) + 156 (UniformTypeIdentifiers + 15252) [0x1a8c7db94]
+                                                              1   +[UTType _typeWithTypeRecord:detachTypeRecord:findConstant:] + 240 (UniformTypeIdentifiers + 24364) [0x1a8c7ff2c]
+                                                                1   +[LSRecord(LSDetachable) resolveAllPropertiesOfRecords:count:andDetachOnQueue:] + 356 (LaunchServices + 1507716) [0x1a5670184]
+                                                                  1   -[LSRecord detach] + 188 (LaunchServices + 1503616) [0x1a566f180]
+                                                                    1   -[_UTDeclaredTypeRecord _detachFromContext:tableID:unitID:unitBytes:] + 56 (LaunchServices + 1826200) [0x1a56bdd98]
+                                                                      1   -[UTTypeRecord _detachFromContext:tableID:unitID:unitBytes:] + 100 (LaunchServices + 1817328) [0x1a56bbaf0]
+                                                                        1   -[LSRecord detach] + 188 (LaunchServices + 1503616) [0x1a566f180]
+                                                                          1   -[_LSLocalizedStringRecord _detachFromContext:tableID:unitID:unitBytes:] + 60 (LaunchServices + 1280208) [0x1a56388d0]
+                                                                            1   objc_object* __strong __LSRECORD_GETTER__<objc_object* __strong>(LSRecord*, objc_selector*, objc_selector*) + 312 (LaunchServices + 1497500) [0x1a566d99c]
+                                                                              1   LaunchServices::LocalizedString::getAllUnsafeLocalizations(_LSDatabase*, NSString*, bool*, bool*) const + 928 (LaunchServices + 1269372) [0x1a5635e7c]
+                                                                                1   -[__NSDictionaryM setObject:forKeyedSubscript:] + 64 (CoreFoundation + 301672) [0x1a5005a68]
+        1   _dispatch_root_queue_drain + 964 (libdispatch.dylib + 87380) [0x1a4dc8554]
+          1   _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+            1   _dispatch_call_block_and_release + 32 (libdispatch.dylib + 7776) [0x1a4db4e60]
+              1   ??? (mediaanalysisd + 56200) [0x1006edb88]
+                1   -[VCPMABaseTask run] + 92 (MediaAnalysis + 487292) [0x212986f7c]
+                  1   ??? (mediaanalysisd + 422220) [0x10074714c]
+                    1   ??? (mediaanalysisd + 405612) [0x10074306c]
+                      1   ??? (mediaanalysisd + 611588) [0x100775504]
+                        1   ??? (mediaanalysisd + 610584) [0x100775118]
+                          1   ??? (mediaanalysisd + 599740) [0x1007726bc]
+                            1   ??? (mediaanalysisd + 593632) [0x100770ee0]
+                              1   ??? (mediaanalysisd + 298588) [0x100728e5c]
+                                1   ??? (mediaanalysisd + 594060) [0x10077108c]
+                                  1   ??? (mediaanalysisd + 637560) [0x10077ba78]
+                                    1   ??? (mediaanalysisd + 627316) [0x100779274]
+                                      1   _dispatch_apply_with_attr_f + 1152 (libdispatch.dylib + 97500) [0x1a4dcacdc]
+                                        1   _dispatch_apply_invoke_and_wait + 224 (libdispatch.dylib + 100696) [0x1a4dcb958]
+                                          1   _dispatch_client_callout2 + 20 (libdispatch.dylib + 15340) [0x1a4db6bec]
+                                            1   ??? (mediaanalysisd + 631028) [0x10077a0f4]
+                                              1   ??? (mediaanalysisd + 624684) [0x10077882c]
+                                                1   -[VCPPreAnalyzer analyzeWithImageURL:isPano:isSDOF:completionHandler:] + 748 (MediaAnalysis + 779556) [0x2129ce524]
+                                                  1   -[VCPPreAnalyzer _performAnalysis:isPano:isSDOF:colorPixelBuffer:andLumaPixelBuffer:image:] + 488 (MediaAnalysis + 777464) [0x2129cdcf8]
+                                                    1   _dispatch_apply_with_attr_f + 1324 (libdispatch.dylib + 97672) [0x1a4dcad88]
+                                                      1   _dispatch_sync_function_invoke + 52 (libdispatch.dylib + 36816) [0x1a4dbbfd0]
+                                                        1   _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+                                                          1   _dispatch_apply_serial + 164 (libdispatch.dylib + 99612) [0x1a4dcb51c]
+                                                            1   _dispatch_client_callout2 + 20 (libdispatch.dylib + 15340) [0x1a4db6bec]
+                                                              1   __91-[VCPPreAnalyzer _performAnalysis:isPano:isSDOF:colorPixelBuffer:andLumaPixelBuffer:image:]_block_invoke + 176 (MediaAnalysis + 778236) [0x2129cdffc]
+                                                                1   -[VCPPreAnalyzer _performExposureAnalysis:withLumaPixelBuffer:] + 236 (MediaAnalysis + 773428) [0x2129ccd34]
+                                                                  1   -[VCPImageExposurePreAnalyzer analyzePixelBuffer:flags:results:cancel:] + 700 (MediaAnalysis + 335628) [0x212961f0c]
+
+  Binary Images:
+           0x1006e0000 -        0x1007d7fff  mediaanalysisd (50.4)                            <A90322FD-E4C4-3E43-BEE0-4EFE03EC84E7>  /System/Library/PrivateFrameworks/MediaAnalysis.framework/Versions/A/mediaanalysisd
+           0x1a4d88000 -        0x1a4db2fff  libsystem_malloc.dylib (374.60.3)                <961751ED-F18B-30D4-8025-AA12CA23197B>  /usr/lib/system/libsystem_malloc.dylib
+           0x1a4db3000 -        0x1a4df9fff  libdispatch.dylib (1324.60.3)                    <93E1DCFC-EF56-3113-8E7C-1BA85266A93B>  /usr/lib/system/libdispatch.dylib
+           0x1a4dfa000 -        0x1a4e35fff  libobjc.A.dylib (838.1)                          <2EB32E1D-90CB-3256-8681-9034085A06A6>  /usr/lib/libobjc.A.dylib
+           0x1a4f1e000 -        0x1a4f37fff  libc++abi.dylib (1200.3)                         <8F8963C1-403D-3282-AE5E-4F6E0E85F5A6>  /usr/lib/libc++abi.dylib
+           0x1a4f38000 -        0x1a4f6dfff  libsystem_kernel.dylib (8019.80.24)              <384945E6-DD71-37E5-9A3D-84FFF14A1E60>  /usr/lib/system/libsystem_kernel.dylib
+           0x1a4f6e000 -        0x1a4f7afff  libsystem_pthread.dylib (485.60.2)               <F7B2ECCF-E6F1-3109-AE81-9028C0B8332A>  /usr/lib/system/libsystem_pthread.dylib
+           0x1a4fbc000 -        0x1a54fffff  com.apple.CoreFoundation 6.9 (1856.105)          <16FADF8B-A3AF-3E0C-B5FB-CE9A9CDC8747>  /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
+           0x1a5500000 -        0x1a5760fff  com.apple.LaunchServices 1141.1 (1141.1)         <E986B6D9-472C-3BEA-AB9A-D3ABEF2A07FB>  /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/LaunchServices
+           0x1a79a2000 -        0x1a79defff  com.apple.CoreServicesInternal 484 (484)         <B0C40221-F4C3-3F56-B25B-D484E5D3A8BB>  /System/Library/PrivateFrameworks/CoreServicesInternal.framework/Versions/A/CoreServicesInternal
+           0x1a7a1d000 -        0x1a7af2fff  com.apple.framework.IOKit 2.0.2 (1955.80.2)      <97E3D808-8BCB-3AC4-85AB-60FAA4CAE04F>  /System/Library/Frameworks/IOKit.framework/Versions/A/IOKit
+           0x1a8c7a000 -        0x1a8c8dfff  com.apple.UniformTypeIdentifiers 709 (709)       <211E5CD2-E274-398B-9233-45957BB2EC57>  /System/Library/Frameworks/UniformTypeIdentifiers.framework/Versions/A/UniformTypeIdentifiers
+           0x1ab089000 -        0x1ab456fff  com.apple.CoreData 120 (1145)                    <1C4088D6-CAA7-3264-8F76-38C7898D1B6B>  /System/Library/Frameworks/CoreData.framework/Versions/A/CoreData
+           0x1abb1d000 -        0x1abe81fff  com.apple.vImage 8.1 (555)                       <233C4361-1931-370F-A8FA-1E30C02A41EB>  /System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vImage.framework/Versions/A/vImage
+           0x1ac5b3000 -        0x1ac60ffff  com.apple.CoreVideo 1.8 (465.3)                  <A8940300-AB7C-3BBE-A748-89B330EA1A6D>  /System/Library/Frameworks/CoreVideo.framework/Versions/A/CoreVideo
+           0x1ac8ef000 -        0x1acf47fff  com.apple.CoreML 1.0 (1127.60.2.0.1)             <67D71D31-DFEB-3005-B9EE-2CB00BDFD31D>  /System/Library/Frameworks/CoreML.framework/Versions/A/CoreML
+           0x1ad7d1000 -        0x1ad7e4fff  com.apple.IOSurface 302.11.1 (302.11.1)          <9E4A8852-04E5-33F9-B0AC-1C2CB446D9DD>  /System/Library/Frameworks/IOSurface.framework/Versions/A/IOSurface
+           0x1aebbb000 -        0x1aec9dfff  libvDSP.dylib (794.40.2)                         <89E116F2-9696-3558-8521-3BA51CE8AAB8>  /System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libvDSP.dylib
+           0x1b045e000 -        0x1b0509fff  com.apple.CVNLP 1.0 (119)                        <2BA28750-7712-34E1-89AD-E875A8B0AFF0>  /System/Library/PrivateFrameworks/CVNLP.framework/Versions/A/CVNLP
+           0x1b0eb4000 -        0x1b0ef8fff  com.apple.AppleJPEG 1.0 (1)                      <01226058-3849-34D7-AA11-7AE0D974F42E>  /System/Library/PrivateFrameworks/AppleJPEG.framework/Versions/A/AppleJPEG
+           0x1b1022000 -        0x1b1478fff  com.apple.VideoToolbox 1.0 (2935.5.1)            <D0FE04F5-A986-3147-98D6-3AF541715778>  /System/Library/Frameworks/VideoToolbox.framework/Versions/A/VideoToolbox
+           0x1b601a000 -        0x1b630cfff  com.apple.VN 5.0.71 (5.0.71)                     <8E50FAC8-0960-3170-8151-49C0295C9CE5>  /System/Library/Frameworks/Vision.framework/Versions/A/Vision
+           0x1b98d4000 -        0x1ba31dfff  com.apple.vision.EspressoFramework 1.0 (314.1.7) <0DB58A20-848F-3B34-89D9-ACA366C7AC58>  /System/Library/PrivateFrameworks/Espresso.framework/Versions/A/Espresso
+           0x1ba31e000 -        0x1ba33dfff  com.apple.ANEServices 5.35 (5.35)                <9426A58F-7A47-33BD-A0D5-06F96FCD51B2>  /System/Library/PrivateFrameworks/ANEServices.framework/Versions/A/ANEServices
+           0x1bb43c000 -        0x1bb45bfff  com.apple.CoreML.AppleNeuralEngine 1.0 (1)       <AB672F0A-9629-3CD9-B313-ABB5991FCE4D>  /System/Library/PrivateFrameworks/AppleNeuralEngine.framework/Versions/A/AppleNeuralEngine
+           0x1bf555000 -        0x1bf581fff  com.apple.IOGPU 35.11 (35.11)                    <B65F1B3A-8D38-3CF9-87C7-8854EC9F0C2B>  /System/Library/PrivateFrameworks/IOGPU.framework/Versions/A/IOGPU
+           0x1c559c000 -        0x1c5858fff  com.apple.Photos 1.0 (431.0.140)                 <29A37C9F-F126-3158-8FE7-0939E8C47225>  /System/Library/Frameworks/Photos.framework/Versions/A/Photos
+           0x1c7a6d000 -        0x1c81d2fff  com.apple.PhotoLibraryServices 1.0 (431.0.140)   <81A55378-AF91-3F81-A14E-226D681DBCEA>  /System/Library/PrivateFrameworks/PhotoLibraryServices.framework/Versions/A/PhotoLibraryServices
+           0x2067f4000 -        0x206d07fff  com.apple.AGXMetal13-3 188.10 (188.10)           <7867B6C8-73C4-388F-9A8B-BD6ED1DFA4ED>  /System/Library/Extensions/AGXMetal13_3.bundle/Contents/MacOS/AGXMetal13_3
+           0x20bff7000 -        0x20c0a1fff  com.apple.CMPhoto 1.0 (1)                        <28A53E0E-8862-38CD-84D9-6342D1572891>  /System/Library/PrivateFrameworks/CMPhoto.framework/Versions/A/CMPhoto
+           0x212910000 -        0x212bfbfff  com.apple.MediaAnalysis 1.0 (1)                  <494BBD55-1375-3E1A-96EF-95BDA1CFB6A7>  /System/Library/PrivateFrameworks/MediaAnalysis.framework/Versions/A/MediaAnalysis
+
+
+Powerstats for:   photolibraryd
+UUID:             0993C6CF-400F-34EB-9132-BD41638F6249
+Path:             /System/Library/PrivateFrameworks/PhotoLibraryServices.framework/Versions/A/Support/photolibraryd
+Architecture:     arm64e
+Start time:       2022-02-28 05:00:17.582 -0600
+End time:         2022-02-28 05:00:56.911 -0600
+Num samples:      5 (5%)
+Primary state:    5 samples Non-Frontmost App, Non-Suppressed, User mode, Effective Thread QoS Utility, Requested Thread QoS Utility, Override Thread QoS Unspecified
+User Activity:    5 samples Idle, 0 samples Active
+Power Source:     0 samples on Battery, 5 samples on AC
+  5  start_wqthread + 8 (libsystem_pthread.dylib + 8216) [0x1a4f70018]
+    5  _pthread_wqthread + 288 (libsystem_pthread.dylib + 13060) [0x1a4f71304]
+      5  _dispatch_workloop_worker_thread + 656 (libdispatch.dylib + 91912) [0x1a4dc9708]
+        4  _dispatch_lane_invoke + 392 (libdispatch.dylib + 48804) [0x1a4dbeea4]
+          4  _dispatch_lane_serial_drain + 672 (libdispatch.dylib + 45872) [0x1a4dbe330]
+            4  _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+              4  developerSubmittedBlockToNSManagedObjectContextPerform + 156 (CoreData + 193660) [0x1ab0b847c]
+                4  __52-[PLQueueDispatcher async:identifyingBlock:library:]_block_invoke + 32 (PhotoLibraryServices + 5002372) [0x1c7f32484]
+                  4  __PLQUEUE_DISPATCH_IS_CALLING_OUT_TO_UT_BLOCK__ + 24 (PhotoLibraryServices + 5001436) [0x1c7f320dc]
+                    4  __122-[PLPhotoLibrary(MegaMocAdditions) _withDispatchGroup:synchronously:name:shouldSave:performTransaction:completionHandler:]_block_invoke.254 + 44 (PhotoLibraryServices + 2802888) [0x1c7d194c8]
+                      4  -[PLManagedObjectContext pl_performWithOptions:andBlock:] + 100 (PhotoLibraryServices + 110472) [0x1c7a87f88]
+                        4  -[PLManagedObjectContext performWithOptions:andBlock:] + 160 (PhotoLibraryServices + 92092) [0x1c7a837bc]
+                          4  -[NSManagedObjectContext(_NSCoreDataSPI) performWithOptions:andBlock:] + 592 (CoreData + 355140) [0x1ab0dfb44]
+                            4  _dispatch_lane_barrier_sync_invoke_and_complete + 56 (libdispatch.dylib + 77312) [0x1a4dc5e00]
+                              4  _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+                                4  developerSubmittedBlockToNSManagedObjectContextPerform + 156 (CoreData + 193660) [0x1ab0b847c]
+                                  4  __54-[PLManagedObjectContext performWithOptions:andBlock:]_block_invoke + 96 (PhotoLibraryServices + 1847936) [0x1c7c30280]
+                                    4  __122-[PLPhotoLibrary(MegaMocAdditions) _withDispatchGroup:synchronously:name:shouldSave:performTransaction:completionHandler:]_block_invoke.231 + 184 (PhotoLibraryServices + 2802120) [0x1c7d191c8]
+                                      2  __52-[PHPerformChangesRequest executeWithService:reply:]_block_invoke.169 + 2228 (Photos + 452716) [0x1c560a86c]
+                                        2  -[PLManagedObjectContext save:] + 736 (PhotoLibraryServices + 172632) [0x1c7a97258]
+                                          2  -[NSManagedObjectContext save:] + 1548 (CoreData + 385988) [0x1ab0e73c4]
+                                            2  -[NSPersistentStoreCoordinator executeRequest:withContext:error:] + 1488 (CoreData + 211044) [0x1ab0bc864]
+                                              2  -[NSPersistentStoreCoordinator _routeHeavyweightBlock:] + 264 (CoreData + 213004) [0x1ab0bd00c]
+                                                2  __65-[NSPersistentStoreCoordinator executeRequest:withContext:error:]_block_invoke.843 + 11708 (CoreData + 1478976) [0x1ab1f2140]
+                                                  2  -[NSSQLCore executeRequest:withContext:error:] + 2760 (CoreData + 216812) [0x1ab0bdeec]
+                                                    1  -[NSSQLCore dispatchRequest:withRetries:] + 228 (CoreData + 228728) [0x1ab0c0d78]
+                                                      1  -[NSSQLCoreDispatchManager routeStoreRequest:] + 252 (CoreData + 230404) [0x1ab0c1404]
+                                                        1  -[NSSQLDefaultConnectionManager handleStoreRequest:] + 248 (CoreData + 230716) [0x1ab0c153c]
+                                                          1  -[NSSQLiteConnection performAndWait:] + 176 (CoreData + 141184) [0x1ab0ab780]
+                                                            1  _dispatch_lane_barrier_sync_invoke_and_complete + 56 (libdispatch.dylib + 77312) [0x1a4dc5e00]
+                                                              1  _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+                                                                1  __37-[NSSQLiteConnection performAndWait:]_block_invoke + 48 (CoreData + 141464) [0x1ab0ab898]
+                                                                  1  __52-[NSSQLDefaultConnectionManager handleStoreRequest:]_block_invoke + 68 (CoreData + 231504) [0x1ab0c1850]
+                                                                    1  -[NSSQLStoreRequestContext executeRequestUsingConnection:] + 260 (CoreData + 232216) [0x1ab0c1b18]
+                                                                      1  -[NSSQLSaveChangesRequestContext executeRequestCore:] + 32 (CoreData + 542520) [0x1ab10d738]
+                                                                        1  _executeSaveChangesRequest + 2112 (CoreData + 545020) [0x1ab10e0fc]
+                                                                          1  -[NSSQLiteConnection insertRow:] + 332 (CoreData + 720132) [0x1ab138d04]
+                                                                            1  _sqlCoreLookupSQLEntityForEntityDescription + 92 (CoreData + 226300) [0x1ab0c03fc]
+                                                                              1  -[NSEntityDescription managedObjectModel] + 0 (CoreData + 55140) [0x1ab096764]
+                                                    1  -[NSSQLCore dispatchRequest:withRetries:] + 68 (CoreData + 228568) [0x1ab0c0cd8]
+                                                      1  -[NSSQLSaveChangesRequestContext executePrologue] + 44 (CoreData + 537476) [0x1ab10c384]
+                                                        1  -[NSSQLSavePlan _createRowsForSave] + 468 (CoreData + 538044) [0x1ab10c5bc]
+                                                          1  CFDictionarySetValue + 348 (CoreFoundation + 25704) [0x1a4fc2468]
+                                                            1  CFBasicHashSetValue + 200 (CoreFoundation + 26012) [0x1a4fc259c]
+                                      2  __52-[PHPerformChangesRequest executeWithService:reply:]_block_invoke.169 + 1556 (Photos + 452044) [0x1c560a5cc]
+                                        2  -[__NSArrayM enumerateObjectsWithOptions:usingBlock:] + 196 (CoreFoundation + 490056) [0x1a5033a48]
+                                          2  __NSARRAY_IS_CALLING_OUT_TO_A_BLOCK__ + 24 (CoreFoundation + 490432) [0x1a5033bc0]
+                                            2  __52-[PHPerformChangesRequest executeWithService:reply:]_block_invoke.218 + 164 (Photos + 456084) [0x1c560b594]
+                                              2  -[PHAssetChangeRequest applyMutationsToManagedObject:photoLibrary:error:] + 1820 (Photos + 1012788) [0x1c5693434]
+                                                2  +[PLSceneClassification insertIntoPhotoLibrary:asset:sceneIdentifier:confidence:packedBoundingBoxRect:] + 288 (PhotoLibraryServices + 3733740) [0x1c7dfc8ec]
+                                                  2  _sharedIMPL_setvfk_core + 292 (CoreData + 478580) [0x1ab0fdd74]
+                                                    2  _PF_ManagedObject_DidChangeValueForKeyIndex + 116 (CoreData + 447208) [0x1ab0f62e8]
+                                                      2  NSKeyValueDidChangeWithPerThreadPendingNotifications + 160 (Foundation + 1791856) [0x1a6065770]
+                                                        2  NSKeyValueDidChange + 356 (Foundation + 1058140) [0x1a5fb255c]
+                                                          2  NSKeyValueNotifyObserver + 292 (Foundation + 221500) [0x1a5ee613c]
+                                                            2  -[NSManagedObject(_NSInternalMethods) _didChangeValue:forRelationship:named:withInverse:] + 564 (CoreData + 475536) [0x1ab0fd190]
+                                                              2  -[NSManagedObject _maintainInverseRelationship:forProperty:oldDestination:newDestination:] + 1476 (CoreData + 1234096) [0x1ab1b64b0]
+                                                                2  -[NSObject(NSKeyValueObserverNotification) willChangeValueForKey:withSetMutation:usingObjects:] + 72 (Foundation + 860428) [0x1a5f8210c]
+                                                                  2  NSKeyValueWillChangeWithPerThreadPendingNotifications + 320 (Foundation + 1791428) [0x1a60655c4]
+                                                                    1  NSKVOCopyPendingNotificationStack + 256 (Foundation + 1058980) [0x1a5fb28a4]
+                                                                      1  CFDictionarySetValue + 348 (CoreFoundation + 25704) [0x1a4fc2468]
+                                                                        1  CFBasicHashSetValue + 1120 (CoreFoundation + 26932) [0x1a4fc2934]
+                                                                    1  NSKVOCopyPendingNotificationStack + 148 (Foundation + 1058872) [0x1a5fb2838]
+                                                                      1  CFDictionaryGetValue + 256 (CoreFoundation + 34216) [0x1a4fc45a8]
+                                                                        1  CFBasicHashFindBucket + 240 (CoreFoundation + 34508) [0x1a4fc46cc]
+                                                                          1  CFStringHashCString + 48 (CoreFoundation + 406152) [0x1a501f288]
+        1  _dispatch_lane_invoke + 444 (libdispatch.dylib + 48856) [0x1a4dbeed8]
+          1  _dispatch_lane_serial_drain + 376 (libdispatch.dylib + 45576) [0x1a4dbe208]
+            1  _dispatch_mach_invoke + 456 (libdispatch.dylib + 134328) [0x1a4dd3cb8]
+              1  _dispatch_lane_serial_drain + 376 (libdispatch.dylib + 45576) [0x1a4dbe208]
+                1  _dispatch_mach_msg_invoke + 476 (libdispatch.dylib + 130920) [0x1a4dd2f68]
+                  1  _dispatch_client_callout4 + 20 (libdispatch.dylib + 15468) [0x1a4db6c6c]
+                    1  _xpc_connection_mach_event + 1368 (libxpc.dylib + 52216) [0x1a4cc6bf8]
+                      1  _xpc_connection_call_event_handler + 176 (libxpc.dylib + 57816) [0x1a4cc81d8]
+                        1  message_handler + 228 (Foundation + 138444) [0x1a5ed1ccc]
+                          1  -[NSXPCConnection _decodeAndInvokeMessageWithEvent:flags:] + 1820 (Foundation + 447248) [0x1a5f1d310]
+                            1  __NSXPCCONNECTION_IS_CALLING_OUT_TO_EXPORTED_OBJECT_S2__ + 16 (Foundation + 451376) [0x1a5f1e330]
+                              1  -[PLAssetsdPhotoKitService applyChangesRequest:reply:] + 232 (PhotoLibraryServices + 4100468) [0x1c7e56174]
+                                1  -[PHPerformChangesRequest decodeWithService:clientAuthorization:] + 524 (Photos + 458876) [0x1c560c07c]
+                                  1  applyRequest + 308 (Photos + 459276) [0x1c560c20c]
+                                    1  xpc_array_apply + 96 (libxpc.dylib + 54176) [0x1a4cc73a0]
+                                      1  __applyRequest_block_invoke + 40 (Photos + 459420) [0x1c560c29c]
+                                        1  +[PHChangeRequestHelper changeRequestWithXPCDict:request:clientAuthorization:] + 156 (Photos + 582888) [0x1c562a4e8]
+                                          1  -[PHAssetChangeRequest initWithXPCDict:request:clientAuthorization:] + 3096 (Photos + 1069612) [0x1c56a122c]
+
+  Binary Images:
+           0x100edc000 -                ???  photolibraryd                                  <0993C6CF-400F-34EB-9132-BD41638F6249>  /System/Library/PrivateFrameworks/PhotoLibraryServices.framework/Versions/A/Support/photolibraryd
+           0x1a4cba000 -        0x1a4cf3fff  libxpc.dylib (2235.80.3)                       <FD3E0E8D-4618-3CE5-A24A-5639BE86B979>  /usr/lib/system/libxpc.dylib
+           0x1a4db3000 -        0x1a4df9fff  libdispatch.dylib (1324.60.3)                  <93E1DCFC-EF56-3113-8E7C-1BA85266A93B>  /usr/lib/system/libdispatch.dylib
+           0x1a4f6e000 -        0x1a4f7afff  libsystem_pthread.dylib (485.60.2)             <F7B2ECCF-E6F1-3109-AE81-9028C0B8332A>  /usr/lib/system/libsystem_pthread.dylib
+           0x1a4fbc000 -        0x1a54fffff  com.apple.CoreFoundation 6.9 (1856.105)        <16FADF8B-A3AF-3E0C-B5FB-CE9A9CDC8747>  /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
+           0x1a5eb0000 -        0x1a629dfff  com.apple.Foundation 6.9 (1856.105)            <90321A38-43A5-3767-9A9C-2C631338B9BC>  /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
+           0x1ab089000 -        0x1ab456fff  com.apple.CoreData 120 (1145)                  <1C4088D6-CAA7-3264-8F76-38C7898D1B6B>  /System/Library/Frameworks/CoreData.framework/Versions/A/CoreData
+           0x1c559c000 -        0x1c5858fff  com.apple.Photos 1.0 (431.0.140)               <29A37C9F-F126-3158-8FE7-0939E8C47225>  /System/Library/Frameworks/Photos.framework/Versions/A/Photos
+           0x1c7a6d000 -        0x1c81d2fff  com.apple.PhotoLibraryServices 1.0 (431.0.140) <81A55378-AF91-3F81-A14E-226D681DBCEA>  /System/Library/PrivateFrameworks/PhotoLibraryServices.framework/Versions/A/PhotoLibraryServices

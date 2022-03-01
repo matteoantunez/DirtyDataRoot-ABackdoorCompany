@@ -1,0 +1,350 @@
+Date/Time:        2022-03-01 00:28:08.013 -0600
+End time:         2022-03-01 00:54:38.101 -0600
+OS Version:       macOS 12.2.1 (Build 21D62)
+Architecture:     arm64e
+Report Version:   35
+Incident Identifier: E133773B-7778-4234-A480-E87994F27B6F
+Share With Devs:  Yes
+
+Data Source:      Microstackshots
+Shared Cache:     296EB28E-6AEB-3129-8FA6-FEB92261A4EB slid base address 0x1801e4000, slide 0x1e4000
+Shared Cache:     5C9FF5DB-8827-329A-8A37-2483935A9EA1 slid base address 0x7ff80be54000, slide 0xbe54000
+
+Command:          ArchiveService
+Path:             /System/Library/Frameworks/FileProvider.framework/XPCServices/ArchiveService.xpc/Contents/MacOS/ArchiveService
+Identifier:       com.apple.FileProvider.ArchiveService
+Version:          1.0 (1)
+Build Version:    1
+Project Name:     FileProvider_executables
+Source Version:   378080012000000
+Architecture:     arm64e
+Parent:           launchd [1]
+PID:              7431
+
+Event:            disk writes
+Action taken:     none
+Writes:           2147.50 MB of file backed memory dirtied over 1590 seconds (1350.55 KB per second average), exceeding limit of 24.86 KB per second over 86400 seconds
+Writes limit:     2147.48 MB
+Limit duration:   86400s
+Writes caused:    2147.50 MB
+Writes duration:  1590s
+Duration:         1590.09s
+Duration Sampled: 1589.07s
+Steps:            605 ( (10.49 MB/step))
+
+Hardware model:   MacBookPro17,1
+Active cpus:      8
+HW page size:     16384
+VM page size:     16384
+
+Advisory levels:  Battery -> 2, User -> 2, ThermalPressure -> 0, Combined -> 2
+Free disk space:  51.62 GB/228.27 GB, low space threshold 3072 MB
+Low Power Mode:   Enabled
+
+Heaviest stack for the target process:
+  205  start_wqthread + 8 (libsystem_pthread.dylib + 8216) [0x1804ec018]
+  205  _pthread_wqthread + 228 (libsystem_pthread.dylib + 13000) [0x1804ed2c8]
+  205  _dispatch_worker_thread2 + 164 (libdispatch.dylib + 88920) [0x180344b58]
+  205  _dispatch_root_queue_drain + 396 (libdispatch.dylib + 86812) [0x18034431c]
+  205  _dispatch_async_redirect_invoke + 596 (libdispatch.dylib + 26332) [0x1803356dc]
+  205  _dispatch_continuation_pop + 504 (libdispatch.dylib + 28800) [0x180336080]
+  205  _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x180332bac]
+  205  _dispatch_block_async_invoke2 + 148 (libdispatch.dylib + 76176) [0x180341990]
+  205  __NSOQSchedule_f + 184 (Foundation + 274836) [0x18146f194]
+  205  __NSOPERATIONQUEUE_IS_STARTING_AN_OPERATION__ + 24 (Foundation + 275168) [0x18146f2e0]
+  205  -[NSOperation start] + 804 (Foundation + 275980) [0x18146f60c]
+  205  __NSOPERATION_IS_INVOKING_MAIN__ + 24 (Foundation + 279496) [0x1814703c8]
+  205  -[NSBlockOperation main] + 104 (Foundation + 279608) [0x181470438]
+  205  __NSBLOCKOPERATION_IS_CALLING_OUT_TO_A_BLOCK__ + 24 (Foundation + 279952) [0x181470590]
+  205  __78-[NSFileCoordinator(NSPrivate) _coordinateAccessWithIntents:queue:byAccessor:]_block_invoke_3 + 188 (Foundation + 1044712) [0x18152b0e8]
+  205  __66-[NSFileCoordinator coordinateAccessWithIntents:queue:byAccessor:]_block_invoke + 132 (Foundation + 1044992) [0x18152b200]
+  205  -[NSFileCoordinator _invokeAccessor:thenCompletionHandler:] + 100 (Foundation + 1021104) [0x1815254b0]
+  205  ??? (ArchiveService + 28792) [0x100ec7078]
+  205  ??? (ArchiveService + 19572) [0x100ec4c74]
+  205  ??? (ArchiveService + 41856) [0x100eca380]
+  205  ??? (ArchiveService + 38972) [0x100ec983c]
+  205  ??? (ArchiveService + 31640) [0x100ec7b98]
+  205  ??? (ArchiveService + 40080) [0x100ec9c90]
+  190  ??? (ArchiveService + 34004) [0x100ec84d4]
+  190  ??? (ArchiveService + 32744) [0x100ec7fe8]
+  190  ??? (libarchive.2.dylib + 442380) [0x18b10600c]
+  190  ??? (libarchive.2.dylib + 358032) [0x18b0f1690]
+  157  ??? (libarchive.2.dylib + 359192) [0x18b0f1b18]
+  157  write + 8 (libsystem_kernel.dylib + 21820) [0x1804b953c]
+
+
+Powerstats for:   ArchiveService [7431]
+UUID:             88F74370-C1C2-3E91-91AA-EC63B478135C
+Path:             /System/Library/Frameworks/FileProvider.framework/XPCServices/ArchiveService.xpc/Contents/MacOS/ArchiveService
+Identifier:       com.apple.FileProvider.ArchiveService
+Version:          1.0 (1)
+Build Version:    1
+Project Name:     FileProvider_executables
+Source Version:   378080012000000
+Shared Cache:     296EB28E-6AEB-3129-8FA6-FEB92261A4EB slid base address 0x1801e4000, slide 0x1e4000
+Architecture:     arm64e
+Parent:           launchd [1]
+UID:              501
+Sudden Term:      Tracked (allows idle exit)
+Footprint:        9792 KB -> 36.75 MB (+27.19 MB)
+Start time:       2022-03-01 00:52:53.088 -0600
+End time:         2022-03-01 00:54:37.801 -0600
+Num samples:      205 (34%)
+Primary state:    205 samples Non-Frontmost App, Non-Suppressed, Kernel mode, Effective Thread QoS Default, Requested Thread QoS Default, Override Thread QoS Unspecified
+User Activity:    0 samples Idle, 205 samples Active
+Power Source:     205 samples on Battery, 0 samples on AC
+  205  start_wqthread + 8 (libsystem_pthread.dylib + 8216) [0x1804ec018]
+    205  _pthread_wqthread + 228 (libsystem_pthread.dylib + 13000) [0x1804ed2c8]
+      205  _dispatch_worker_thread2 + 164 (libdispatch.dylib + 88920) [0x180344b58]
+        205  _dispatch_root_queue_drain + 396 (libdispatch.dylib + 86812) [0x18034431c]
+          205  _dispatch_async_redirect_invoke + 596 (libdispatch.dylib + 26332) [0x1803356dc]
+            205  _dispatch_continuation_pop + 504 (libdispatch.dylib + 28800) [0x180336080]
+              205  _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x180332bac]
+                205  _dispatch_block_async_invoke2 + 148 (libdispatch.dylib + 76176) [0x180341990]
+                  205  __NSOQSchedule_f + 184 (Foundation + 274836) [0x18146f194]
+                    205  __NSOPERATIONQUEUE_IS_STARTING_AN_OPERATION__ + 24 (Foundation + 275168) [0x18146f2e0]
+                      205  -[NSOperation start] + 804 (Foundation + 275980) [0x18146f60c]
+                        205  __NSOPERATION_IS_INVOKING_MAIN__ + 24 (Foundation + 279496) [0x1814703c8]
+                          205  -[NSBlockOperation main] + 104 (Foundation + 279608) [0x181470438]
+                            205  __NSBLOCKOPERATION_IS_CALLING_OUT_TO_A_BLOCK__ + 24 (Foundation + 279952) [0x181470590]
+                              205  __78-[NSFileCoordinator(NSPrivate) _coordinateAccessWithIntents:queue:byAccessor:]_block_invoke_3 + 188 (Foundation + 1044712) [0x18152b0e8]
+                                205  __66-[NSFileCoordinator coordinateAccessWithIntents:queue:byAccessor:]_block_invoke + 132 (Foundation + 1044992) [0x18152b200]
+                                  205  -[NSFileCoordinator _invokeAccessor:thenCompletionHandler:] + 100 (Foundation + 1021104) [0x1815254b0]
+                                    205  ??? (ArchiveService + 28792) [0x100ec7078]
+                                      205  ??? (ArchiveService + 19572) [0x100ec4c74]
+                                        205  ??? (ArchiveService + 41856) [0x100eca380]
+                                          205  ??? (ArchiveService + 38972) [0x100ec983c]
+                                            205  ??? (ArchiveService + 31640) [0x100ec7b98]
+                                              205  ??? (ArchiveService + 40080) [0x100ec9c90]
+                                                190  ??? (ArchiveService + 34004) [0x100ec84d4]
+                                                  190  ??? (ArchiveService + 32744) [0x100ec7fe8]
+                                                    190  ??? (libarchive.2.dylib + 442380) [0x18b10600c]
+                                                      190  ??? (libarchive.2.dylib + 358032) [0x18b0f1690]
+                                                        157  ??? (libarchive.2.dylib + 359192) [0x18b0f1b18]
+                                                          157  write + 8 (libsystem_kernel.dylib + 21820) [0x1804b953c]
+                                                        33   ??? (libarchive.2.dylib + 359008) [0x18b0f1a60]
+                                                          33   write + 8 (libsystem_kernel.dylib + 21820) [0x1804b953c]
+                                                15   ??? (ArchiveService + 33720) [0x100ec83b8]
+                                                  15   ??? (libarchive.2.dylib + 360592) [0x18b0f2090]
+                                                    15   ??? (libarchive.2.dylib + 360912) [0x18b0f21d0]
+                                                      15   ??? (libarchive.2.dylib + 443312) [0x18b1063b0]
+                                                        15   ??? (libarchive.2.dylib + 358032) [0x18b0f1690]
+                                                          9    ??? (libarchive.2.dylib + 359192) [0x18b0f1b18]
+                                                            9    write + 8 (libsystem_kernel.dylib + 21820) [0x1804b953c]
+                                                          6    ??? (libarchive.2.dylib + 359008) [0x18b0f1a60]
+                                                            6    write + 8 (libsystem_kernel.dylib + 21820) [0x1804b953c]
+
+  Binary Images:
+           0x100ec0000 -        0x100edbfff  com.apple.FileProvider.ArchiveService 1.0 (1) <88F74370-C1C2-3E91-91AA-EC63B478135C>  /System/Library/Frameworks/FileProvider.framework/XPCServices/ArchiveService.xpc/Contents/MacOS/ArchiveService
+           0x18032f000 -        0x180375fff  libdispatch.dylib (1324.60.3)                 <93E1DCFC-EF56-3113-8E7C-1BA85266A93B>  /usr/lib/system/libdispatch.dylib
+           0x1804b4000 -        0x1804e9fff  libsystem_kernel.dylib (8019.80.24)           <384945E6-DD71-37E5-9A3D-84FFF14A1E60>  /usr/lib/system/libsystem_kernel.dylib
+           0x1804ea000 -        0x1804f6fff  libsystem_pthread.dylib (485.60.2)            <F7B2ECCF-E6F1-3109-AE81-9028C0B8332A>  /usr/lib/system/libsystem_pthread.dylib
+           0x18142c000 -        0x181819fff  com.apple.Foundation 6.9 (1856.107)           <F3AB29BA-726D-3D0B-8125-CEB1A79CD832>  /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
+           0x18b09a000 -        0x18b11ffff  libarchive.2.dylib (103)                      <15F5C871-A869-3EA0-8D1B-899B75DA82D4>  /usr/lib/libarchive.2.dylib
+
+
+Powerstats for:   prl_vm_app (Parallels Desktop)
+UUID:             9E613BE9-1E02-3396-967A-72088B3C45FB
+Path:             /Applications/Parallels Desktop.app/Contents/MacOS/Parallels VM.app/Contents/MacOS/prl_vm_app
+Identifier:       com.parallels.vm
+Version:          17.1.1 (51537)
+Team ID:          4C6364ACXT
+Shared Cache:     296EB28E-6AEB-3129-8FA6-FEB92261A4EB slid base address 0x1801e4000, slide 0x1e4000
+Architecture:     arm64
+Start time:       2022-03-01 00:32:25.051 -0600
+End time:         2022-03-01 00:32:32.589 -0600
+Num samples:      122 (20%)
+Primary state:    122 samples Non-Frontmost App, Non-Suppressed, Kernel mode, Effective Thread QoS Default, Requested Thread QoS Default, Override Thread QoS Unspecified
+User Activity:    0 samples Idle, 122 samples Active
+Power Source:     122 samples on Battery, 0 samples on AC
+  122  thread_start + 8 (libsystem_pthread.dylib + 8228) [0x1804ec024]
+    122  _pthread_start + 148 (libsystem_pthread.dylib + 29248) [0x1804f1240]
+      122  ??? (QtCore + 142116) [0x101d0eb24]
+        120  ??? (prl_vm_app + 431460) [0x1007d5564]
+          120  ??? (prl_vm_app + 432008) [0x1007d5788]
+            120  ??? (prl_vm_app + 591428) [0x1007fc644]
+              120  ??? (prl_vm_app + 412848) [0x1007d0cb0]
+                120  ??? (prl_vm_app + 8010608) [0x100f0fb70]
+                  120  ??? (prl_vm_app + 8009308) [0x100f0f65c]
+                    120  ??? (prl_vm_app + 8018248) [0x100f11948]
+                      120  ??? (prl_vm_app + 8016236) [0x100f1116c]
+                        120  ??? (prl_vm_app + 9141040) [0x101023b30]
+                          117  ??? (prl_vm_app + 8026484) [0x100f13974]
+                            117  ??? (prl_vm_app + 9163788) [0x10102940c]
+                              117  write + 8 (libsystem_kernel.dylib + 21820) [0x1804b953c]
+                          3    ??? (prl_vm_app + 8026336) [0x100f138e0]
+                            3    ??? (prl_vm_app + 9163788) [0x10102940c]
+                              3    write + 8 (libsystem_kernel.dylib + 21820) [0x1804b953c]
+        2    ??? (prl_vm_app + 1302316) [0x1008a9f2c]
+          2    ??? (prl_vm_app + 1303680) [0x1008aa480]
+            2    ??? (prl_vm_app + 1765380) [0x10091b004]
+              2    ??? (prl_vm_app + 1320780) [0x1008ae74c]
+                2    ??? (prl_vm_app + 1310288) [0x1008abe50]
+                  2    ??? (prl_vm_app + 1311256) [0x1008ac218]
+                    2    ??? (prl_vm_app + 1314684) [0x1008acf7c]
+                      2    ??? (prl_vm_app + 1317560) [0x1008adab8]
+                        2    _platform_memmove + 168 (libsystem_platform.dylib + 16824) [0x1805081b8]
+
+  Binary Images:
+           0x10076c000 -        0x10145bfff  com.parallels.vm 17.1.1 (51537)     <9E613BE9-1E02-3396-967A-72088B3C45FB>  /Applications/Parallels Desktop.app/Contents/MacOS/Parallels VM.app/Contents/MacOS/prl_vm_app
+           0x101cec000 -                ???  QtCore                              <4FC22FD0-D443-35D1-AB9C-EC8EBCCD21BC>  /Users/USER/Library/Caches/*/Parallels Desktop.app/Contents/Frameworks/QtCore.framework/Versions/5/QtCore
+           0x1804b4000 -        0x1804e9fff  libsystem_kernel.dylib (8019.80.24) <384945E6-DD71-37E5-9A3D-84FFF14A1E60>  /usr/lib/system/libsystem_kernel.dylib
+           0x1804ea000 -        0x1804f6fff  libsystem_pthread.dylib (485.60.2)  <F7B2ECCF-E6F1-3109-AE81-9028C0B8332A>  /usr/lib/system/libsystem_pthread.dylib
+           0x180504000 -        0x18050bfff  libsystem_platform.dylib (273.40.1) <49CF1536-27E5-3A34-9724-D75552CBAB56>  /usr/lib/system/libsystem_platform.dylib
+
+
+Powerstats for:   coresymbolicationd
+UUID:             8BC10764-033F-38E8-AD09-76375F993585
+Path:             /System/Library/PrivateFrameworks/CoreSymbolication.framework/coresymbolicationd
+Codesigning ID:   com.apple.coresymbolicationd
+Shared Cache:     296EB28E-6AEB-3129-8FA6-FEB92261A4EB slid base address 0x1801e4000, slide 0x1e4000
+Architecture:     arm64e
+Start time:       2022-03-01 00:36:39.202 -0600
+End time:         2022-03-01 00:54:36.751 -0600
+Num samples:      54 (9%)
+Primary state:    48 samples Non-Frontmost App, Non-Suppressed, Kernel mode, Effective Thread QoS Default, Requested Thread QoS Default, Override Thread QoS Unspecified
+User Activity:    0 samples Idle, 54 samples Active
+Power Source:     54 samples on Battery, 0 samples on AC
+  54  start_wqthread + 8 (libsystem_pthread.dylib + 8216) [0x1804ec018]
+    54  _pthread_wqthread + 288 (libsystem_pthread.dylib + 13060) [0x1804ed304]
+      54  _dispatch_workloop_worker_thread + 656 (libdispatch.dylib + 91912) [0x180345708]
+        54  _dispatch_mach_invoke + 456 (libdispatch.dylib + 134328) [0x18034fcb8]
+          54  _dispatch_lane_serial_drain + 376 (libdispatch.dylib + 45576) [0x18033a208]
+            54  _dispatch_mach_msg_invoke + 476 (libdispatch.dylib + 130920) [0x18034ef68]
+              54  _dispatch_client_callout4 + 20 (libdispatch.dylib + 15468) [0x180332c6c]
+                54  _xpc_connection_mach_event + 1368 (libxpc.dylib + 52216) [0x180242bf8]
+                  54  _xpc_connection_call_event_handler + 176 (libxpc.dylib + 57816) [0x1802441d8]
+                    34  ??? (coresymbolicationd + 21092) [0x102ee5264]
+                      34  ??? (coresymbolicationd + 42976) [0x102eea7e0]
+                        34  pwrite + 8 (libsystem_kernel.dylib + 20452) [0x1804b8fe4]
+                          4   <Effective Thread QoS Background, Requested Thread QoS Background>
+                          2   <Effective Thread QoS Background>
+                    20  ??? (coresymbolicationd + 21352) [0x102ee5368]
+                      20  ??? (coresymbolicationd + 44028) [0x102eeabfc]
+                        20  ??? (coresymbolicationd + 42976) [0x102eea7e0]
+                          20  pwrite + 8 (libsystem_kernel.dylib + 20452) [0x1804b8fe4]
+
+  Binary Images:
+           0x102ee0000 -        0x102ef7fff  coresymbolicationd (64550.88.2)     <8BC10764-033F-38E8-AD09-76375F993585>  /System/Library/PrivateFrameworks/CoreSymbolication.framework/coresymbolicationd
+           0x180236000 -        0x18026ffff  libxpc.dylib (2235.80.3)            <FD3E0E8D-4618-3CE5-A24A-5639BE86B979>  /usr/lib/system/libxpc.dylib
+           0x18032f000 -        0x180375fff  libdispatch.dylib (1324.60.3)       <93E1DCFC-EF56-3113-8E7C-1BA85266A93B>  /usr/lib/system/libdispatch.dylib
+           0x1804b4000 -        0x1804e9fff  libsystem_kernel.dylib (8019.80.24) <384945E6-DD71-37E5-9A3D-84FFF14A1E60>  /usr/lib/system/libsystem_kernel.dylib
+           0x1804ea000 -        0x1804f6fff  libsystem_pthread.dylib (485.60.2)  <F7B2ECCF-E6F1-3109-AE81-9028C0B8332A>  /usr/lib/system/libsystem_pthread.dylib
+
+
+Powerstats for:   installd
+UUID:             D964891D-A3BB-35D0-A3F4-FACAA581F3C1
+Path:             /System/Library/PrivateFrameworks/PackageKit.framework/Versions/A/Resources/installd
+Shared Cache:     296EB28E-6AEB-3129-8FA6-FEB92261A4EB slid base address 0x1801e4000, slide 0x1e4000
+Architecture:     arm64e
+Start time:       2022-03-01 00:35:09.437 -0600
+End time:         2022-03-01 00:36:09.230 -0600
+Num samples:      39 (6%)
+Primary state:    39 samples Non-Frontmost App, Non-Suppressed, Kernel mode, Effective Thread QoS Utility, Requested Thread QoS Utility, Override Thread QoS Unspecified
+User Activity:    0 samples Idle, 39 samples Active
+Power Source:     39 samples on Battery, 0 samples on AC
+  39  start_wqthread + 8 (libsystem_pthread.dylib + 8216) [0x1804ec018]
+    39  _pthread_wqthread + 228 (libsystem_pthread.dylib + 13000) [0x1804ed2c8]
+      39  _dispatch_worker_thread2 + 164 (libdispatch.dylib + 88920) [0x180344b58]
+        39  _dispatch_root_queue_drain + 684 (libdispatch.dylib + 87100) [0x18034443c]
+          39  _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x180332bac]
+            39  _dispatch_block_async_invoke2 + 148 (libdispatch.dylib + 76176) [0x180341990]
+              39  -[PKInstall _installMain:] + 2736 (PackageKit + 155716) [0x19dde9044]
+                39  -[PKInstallOperationController run] + 244 (PackageKit + 416996) [0x19de28ce4]
+                  39  -[PKInstallOperation start] + 92 (PackageKit + 421448) [0x19de29e48]
+                    39  -[NSOperation start] + 804 (Foundation + 275980) [0x18146f60c]
+                      39  __NSOPERATION_IS_INVOKING_MAIN__ + 24 (Foundation + 279496) [0x1814703c8]
+                        39  -[PKExtractInstallOperation main] + 416 (PackageKit + 433708) [0x19de2ce2c]
+                          39  -[PKExtractInstallOperation _extractAllSpecifiersOnceAndReturnFailingSpecifier:andError:] + 516 (PackageKit + 433000) [0x19de2cb68]
+                            39  -[PKExtractInstallOperation _extractPayloadForPackageSpecifier:error:] + 1720 (PackageKit + 429468) [0x19de2bd9c]
+                              39  -[PKPayloadCopier run] + 728 (PackageKit + 511008) [0x19de3fc20]
+                                39  BOMCopierCopyWithOptions + 1820 (Bom + 7476) [0x18c3eed34]
+                                  39  _copyFromCPIO + 968 (Bom + 112044) [0x18c4085ac]
+                                    39  _copyDir + 1368 (Bom + 24876) [0x18c3f312c]
+                                      39  _copyFromCPIO + 968 (Bom + 112044) [0x18c4085ac]
+                                        39  _copyDir + 1368 (Bom + 24876) [0x18c3f312c]
+                                          39  _copyFromCPIO + 968 (Bom + 112044) [0x18c4085ac]
+                                            39  _copyDir + 1368 (Bom + 24876) [0x18c3f312c]
+                                              39  _copyFromCPIO + 968 (Bom + 112044) [0x18c4085ac]
+                                                39  _copyDir + 1368 (Bom + 24876) [0x18c3f312c]
+                                                  39  _copyFromCPIO + 968 (Bom + 112044) [0x18c4085ac]
+                                                    39  _copyDir + 1368 (Bom + 24876) [0x18c3f312c]
+                                                      37  _copyFromCPIO + 968 (Bom + 112044) [0x18c4085ac]
+                                                        37  _copyDir + 1368 (Bom + 24876) [0x18c3f312c]
+                                                          26  _copyFromCPIO + 968 (Bom + 112044) [0x18c4085ac]
+                                                            26  _copyDir + 1368 (Bom + 24876) [0x18c3f312c]
+                                                              14  _copyFromCPIO + 1004 (Bom + 112080) [0x18c4085d0]
+                                                                14  _copyFile + 4976 (Bom + 31648) [0x18c3f4ba0]
+                                                                  14  _executeBomCopySpecification + 1040 (Bom + 37640) [0x18c3f6308]
+                                                                    14  _BOMFileDirectWrite + 120 (Bom + 39120) [0x18c3f68d0]
+                                                                      14  write + 8 (libsystem_kernel.dylib + 21820) [0x1804b953c]
+                                                              12  _copyFromCPIO + 968 (Bom + 112044) [0x18c4085ac]
+                                                                12  _copyDir + 1368 (Bom + 24876) [0x18c3f312c]
+                                                                  11  _copyFromCPIO + 968 (Bom + 112044) [0x18c4085ac]
+                                                                    11  _copyDir + 1368 (Bom + 24876) [0x18c3f312c]
+                                                                      6   _copyFromCPIO + 968 (Bom + 112044) [0x18c4085ac]
+                                                                        6   _copyDir + 1368 (Bom + 24876) [0x18c3f312c]
+                                                                          4   _copyFromCPIO + 1004 (Bom + 112080) [0x18c4085d0]
+                                                                            4   _copyFile + 4976 (Bom + 31648) [0x18c3f4ba0]
+                                                                              4   _executeBomCopySpecification + 1040 (Bom + 37640) [0x18c3f6308]
+                                                                                4   _BOMFileDirectWrite + 120 (Bom + 39120) [0x18c3f68d0]
+                                                                                  4   write + 8 (libsystem_kernel.dylib + 21820) [0x1804b953c]
+                                                                          2   _copyFromCPIO + 968 (Bom + 112044) [0x18c4085ac]
+                                                                            2   _copyDir + 1368 (Bom + 24876) [0x18c3f312c]
+                                                                              1   _copyFromCPIO + 1004 (Bom + 112080) [0x18c4085d0]
+                                                                                1   _copyFile + 4976 (Bom + 31648) [0x18c3f4ba0]
+                                                                                  1   _executeBomCopySpecification + 1040 (Bom + 37640) [0x18c3f6308]
+                                                                                    1   _BOMFileDirectWrite + 120 (Bom + 39120) [0x18c3f68d0]
+                                                                                      1   write + 8 (libsystem_kernel.dylib + 21820) [0x1804b953c]
+                                                                              1   _copyFromCPIO + 968 (Bom + 112044) [0x18c4085ac]
+                                                                                1   _copyDir + 1368 (Bom + 24876) [0x18c3f312c]
+                                                                                  1   _copyFromCPIO + 968 (Bom + 112044) [0x18c4085ac]
+                                                                                    1   _copyDir + 1368 (Bom + 24876) [0x18c3f312c]
+                                                                                      1   _copyFromCPIO + 1004 (Bom + 112080) [0x18c4085d0]
+                                                                                        1   _copyFile + 4976 (Bom + 31648) [0x18c3f4ba0]
+                                                                                          1   _executeBomCopySpecification + 1040 (Bom + 37640) [0x18c3f6308]
+                                                                                            1   _BOMFileDirectWrite + 120 (Bom + 39120) [0x18c3f68d0]
+                                                                                              1   write + 8 (libsystem_kernel.dylib + 21820) [0x1804b953c]
+                                                                      5   _copyFromCPIO + 1004 (Bom + 112080) [0x18c4085d0]
+                                                                        5   _copyFile + 4976 (Bom + 31648) [0x18c3f4ba0]
+                                                                          5   _executeBomCopySpecification + 1040 (Bom + 37640) [0x18c3f6308]
+                                                                            5   _BOMFileDirectWrite + 120 (Bom + 39120) [0x18c3f68d0]
+                                                                              5   write + 8 (libsystem_kernel.dylib + 21820) [0x1804b953c]
+                                                                  1   _copyFromCPIO + 1004 (Bom + 112080) [0x18c4085d0]
+                                                                    1   _copyFile + 4976 (Bom + 31648) [0x18c3f4ba0]
+                                                                      1   _executeBomCopySpecification + 1040 (Bom + 37640) [0x18c3f6308]
+                                                                        1   _BOMFileDirectWrite + 120 (Bom + 39120) [0x18c3f68d0]
+                                                                          1   write + 8 (libsystem_kernel.dylib + 21820) [0x1804b953c]
+                                                          11  _copyFromCPIO + 1004 (Bom + 112080) [0x18c4085d0]
+                                                            11  _copyFile + 4976 (Bom + 31648) [0x18c3f4ba0]
+                                                              11  _executeBomCopySpecification + 1040 (Bom + 37640) [0x18c3f6308]
+                                                                11  _BOMFileDirectWrite + 120 (Bom + 39120) [0x18c3f68d0]
+                                                                  11  write + 8 (libsystem_kernel.dylib + 21820) [0x1804b953c]
+                                                      2   _copyFromCPIO + 1004 (Bom + 112080) [0x18c4085d0]
+                                                        2   _copyFile + 4976 (Bom + 31648) [0x18c3f4ba0]
+                                                          2   _executeBomCopySpecification + 1040 (Bom + 37640) [0x18c3f6308]
+                                                            2   _BOMFileDirectWrite + 120 (Bom + 39120) [0x18c3f68d0]
+                                                              2   write + 8 (libsystem_kernel.dylib + 21820) [0x1804b953c]
+
+  Binary Images:
+           0x104524000 -                ???  installd                            <D964891D-A3BB-35D0-A3F4-FACAA581F3C1>  /System/Library/PrivateFrameworks/PackageKit.framework/Versions/A/Resources/installd
+           0x18032f000 -        0x180375fff  libdispatch.dylib (1324.60.3)       <93E1DCFC-EF56-3113-8E7C-1BA85266A93B>  /usr/lib/system/libdispatch.dylib
+           0x1804b4000 -        0x1804e9fff  libsystem_kernel.dylib (8019.80.24) <384945E6-DD71-37E5-9A3D-84FFF14A1E60>  /usr/lib/system/libsystem_kernel.dylib
+           0x1804ea000 -        0x1804f6fff  libsystem_pthread.dylib (485.60.2)  <F7B2ECCF-E6F1-3109-AE81-9028C0B8332A>  /usr/lib/system/libsystem_pthread.dylib
+           0x18142c000 -        0x181819fff  com.apple.Foundation 6.9 (1856.107) <F3AB29BA-726D-3D0B-8125-CEB1A79CD832>  /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
+           0x18c3ed000 -        0x18c42ffff  com.apple.bom 14.0 (237)            <DC2F282E-BD88-38F8-9AD2-7E8F29FA3707>  /System/Library/PrivateFrameworks/Bom.framework/Versions/A/Bom
+           0x19ddc3000 -        0x19de8efff  com.apple.PackageKit 3.0 (1125)     <3E8E3639-8776-3A43-BC27-03F7B0D24445>  /System/Library/PrivateFrameworks/PackageKit.framework/Versions/A/PackageKit
+
+System Profile:
+Network Service: Wi-Fi, AirPort, en0
+Thunderbolt Bus: MacBook Pro, Apple Inc.
+Thunderbolt Bus: MacBook Pro, Apple Inc.
+Boot Volume File System Type: apfs
+Memory Module: LPDDR4
+USB Device: USB31Bus
+USB Device: USB31Bus
+Display: Color LCD, 2560 x 1600 Retina, Main, MirrorOff, Online
+Model: MacBookPro17,1, BootROM 7429.81.3, proc 8:4:4 processors, 8 GB, SMC 
+Graphics: Apple M1, Apple M1, Built-In
+AirPort: Wi-Fi, wl0: Oct 26 2021 16:10:41 version 18.20.310.15.7.8.120 FWID 01-5d6c3867
+Bluetooth: Version (null), 0 services, 0 devices, 0 incoming serial ports

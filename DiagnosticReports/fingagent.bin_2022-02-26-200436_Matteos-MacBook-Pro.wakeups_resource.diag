@@ -1,0 +1,125 @@
+Date/Time:        2022-02-26 20:00:58.914 -0600
+End time:         2022-02-26 20:04:34.984 -0600
+OS Version:       macOS 12.2 (Build 21D49)
+Architecture:     arm64e
+Report Version:   35
+Incident Identifier: 01534D00-6FC6-4FCF-A907-321761626AD6
+Share With Devs:  Yes
+
+Data Source:      Microstackshots
+Shared Cache:     13FE38D9-95AD-3D4F-889F-443CD57D94DE slid base address 0x7ff81dc98000, slide 0x1dc98000
+Shared Cache:     B90241B2-E425-3982-B3F6-26C4567CBB49 slid base address 0x1a4c68000, slide 0x24c68000
+
+Command:          fingagent.bin
+Path:             /Applications/Fing.app/Contents/Resources/service/lib/fingagent.bin
+Codesigning ID:   fingagent
+Team ID:          747FK9M934
+Architecture:     x86_64 (translated)
+Parent:           UNKNOWN [1]
+PID:              34794
+
+Event:            wakeups
+Action taken:     none
+Wakeups:          45001 wakeups over the last 216 seconds (208 wakeups per second average), exceeding limit of 150 wakeups per second over 300 seconds
+Wakeups limit:    45000
+Limit duration:   300s
+Wakeups caused:   45001
+Wakeups duration: 216s
+Duration:         216.07s
+Duration Sampled: 43.25s
+Steps:            17
+
+Hardware model:   MacBookPro17,1
+Active cpus:      8
+HW page size:     16384
+VM page size:     16384
+
+Fan speed:        0 rpm
+Advisory levels:  Battery -> 3, User -> 2, ThermalPressure -> 0, Combined -> 2
+Free disk space:  23.35 GB/228.27 GB, low space threshold 3072 MB
+
+Heaviest stack for the target process:
+  17  thread_start + 15 (libsystem_pthread.dylib + 8207) [0x7ff81dfb200f]
+  17  _pthread_start + 125 (libsystem_pthread.dylib + 25844) [0x7ff81dfb64f4]
+  17  boost::(anonymous namespace)::thread_proxy(void*) + 50 (libboost_thread.dylib + 9954) [0x1092296e2]
+  8   overlook::net::discovery::DataLinkLayerDiscoverer::discoveryRun() + 8276 (liboverlook.dylib + 1322100) [0x109e9bc74]
+  7   overlook::net::discovery::DataLinkLayerDiscoverer::sendDiscoveryPacket(boost::shared_ptr<overlook::net::PacketCaptureSession>, overlook::rawdata::OutputBuffer&, boost::intrusive_ptr<overlook::net::InetAddress>, boost::intrusive_ptr<overlook::net::HardwareAddress>) + 1233 (liboverlook.dylib + 1336705) [0x109e9f581]
+  7   overlook::net::PacketCaptureSession::sendPacket(overlook::rawdata::ReadBuffer const&) + 83 (liboverlook.dylib + 402419) [0x109dbb3f3]
+  7   pcap_sendpacket + 13 (libpcap.A.dylib + 104850) [0x109464992]
+  7   ??? [0x7ff8ae546940]
+
+
+Powerstats for:   fingagent.bin [34794]
+UUID:             8D9ED077-119A-3934-A94F-1F5B4A3609FE
+Path:             /Applications/Fing.app/Contents/Resources/service/lib/fingagent.bin
+Codesigning ID:   fingagent
+Team ID:          747FK9M934
+Shared Cache:     13FE38D9-95AD-3D4F-889F-443CD57D94DE slid base address 0x7ff81dc98000, slide 0x1dc98000
+Architecture:     x86_64 (translated)
+Parent:           UNKNOWN [1]
+UID:              0
+Footprint:        18.08 MB
+Start time:       2022-02-26 20:03:45.484 -0600
+End time:         2022-02-26 20:04:28.736 -0600
+Num samples:      17 (100%)
+Primary state:    11 samples Non-Frontmost App, Non-Suppressed, User mode, Effective Thread QoS Utility, Requested Thread QoS Default, Override Thread QoS Unspecified
+User Activity:    0 samples Idle, 17 samples Active
+Power Source:     0 samples on Battery, 17 samples on AC
+  17  thread_start + 15 (libsystem_pthread.dylib + 8207) [0x7ff81dfb200f]
+    17  _pthread_start + 125 (libsystem_pthread.dylib + 25844) [0x7ff81dfb64f4]
+      17  boost::(anonymous namespace)::thread_proxy(void*) + 50 (libboost_thread.dylib + 9954) [0x1092296e2]
+        8   overlook::net::discovery::DataLinkLayerDiscoverer::discoveryRun() + 8276 (liboverlook.dylib + 1322100) [0x109e9bc74]
+          7   overlook::net::discovery::DataLinkLayerDiscoverer::sendDiscoveryPacket(boost::shared_ptr<overlook::net::PacketCaptureSession>, overlook::rawdata::OutputBuffer&, boost::intrusive_ptr<overlook::net::InetAddress>, boost::intrusive_ptr<overlook::net::HardwareAddress>) + 1233 (liboverlook.dylib + 1336705) [0x109e9f581]
+            7   overlook::net::PacketCaptureSession::sendPacket(overlook::rawdata::ReadBuffer const&) + 83 (liboverlook.dylib + 402419) [0x109dbb3f3]
+              7   pcap_sendpacket + 13 (libpcap.A.dylib + 104850) [0x109464992]
+                7   ??? [0x7ff8ae546940]
+                  5   <Kernel mode>
+          1   overlook::net::discovery::DataLinkLayerDiscoverer::sendDiscoveryPacket(boost::shared_ptr<overlook::net::PacketCaptureSession>, overlook::rawdata::OutputBuffer&, boost::intrusive_ptr<overlook::net::InetAddress>, boost::intrusive_ptr<overlook::net::HardwareAddress>) + 1269 (liboverlook.dylib + 1336741) [0x109e9f5a5]
+            1   overlook::net::proto::ethernet::Packet::~Packet() + 15 (liboverlook.dylib + 1471455) [0x109ec03df]
+              1   ??? [0x10aae423c]
+        4   overlook::net::discovery::DataLinkLayerDiscoverer::discoveryRun() + 8626 (liboverlook.dylib + 1322450) [0x109e9bdd2]
+          4   overlook::net::discovery::DataLinkLayerDiscoverer::sleepUntil(overlook::TimeStamp const&, bool) + 102 (liboverlook.dylib + 1334134) [0x109e9eb76]
+            3   overlook::Monitor::wait(boost::unique_lock<boost::mutex>&, overlook::TimeStamp const&) + 237 (liboverlook.dylib + 25597) [0x109d5f3fd]
+              2   boost::condition_variable::do_wait_until(boost::unique_lock<boost::mutex>&, timespec const&) + 48 (liboverlook.dylib + 32160) [0x109d60da0]
+                1   ??? [0x10b18dc78]
+                1   ??? [0x10a8feb70]
+              1   boost::condition_variable::do_wait_until(boost::unique_lock<boost::mutex>&, timespec const&) + 76 (liboverlook.dylib + 32188) [0x109d60dbc]
+                1   ??? [0x7ff8ae546940]
+                  1   <Kernel mode>
+            1   overlook::Monitor::wait(boost::unique_lock<boost::mutex>&, overlook::TimeStamp const&) + 93 (liboverlook.dylib + 25453) [0x109d5f36d]
+              1   ??? [0x10a9045a4]
+        1   overlook::net::smb::SMBSniffer::taskRun() + 427 (liboverlook.dylib + 5292587) [0x10a26522b]
+          1   ??? [0x10a910a90]
+        1   overlook::net::discovery::DataLinkLayerDiscoverer::discoveryRun() + 7431 (liboverlook.dylib + 1321255) [0x109e9b927]
+          1   ??? [0x10aabf6e4]
+        1   overlook::net::upnp::UpnpResolver::fallbackCaptureRun() + 833 (liboverlook.dylib + 726001) [0x109e0a3f1]
+          1   overlook::net::PacketCaptureSession::capture(overlook::TimeStamp const&) + 1311 (liboverlook.dylib + 397791) [0x109dba1df]
+            1   overlook::Monitor::wait(boost::unique_lock<boost::mutex>&, overlook::TimeStamp const&) + 237 (liboverlook.dylib + 25597) [0x109d5f3fd]
+              1   boost::condition_variable::do_wait_until(boost::unique_lock<boost::mutex>&, timespec const&) + 76 (liboverlook.dylib + 32188) [0x109d60dbc]
+                1   ??? [0x7ff8ae8c0d3c]
+        1   overlook::net::upnp::UpnpResolver::taskRun() + 2895 (liboverlook.dylib + 715343) [0x109e07a4f]
+          1   ??? [0x7ff8ae8b8da4]
+        1   overlook::fingagent::http::HttpSession::handleSession() + 77 (fingagent.bin + 1280141) [0x10054988d]
+          1   boost::asio::detail::task_io_service::run(boost::system::error_code&) + 161 (fingagent.bin + 1252129) [0x100542b21]
+            1   boost::asio::detail::task_io_service::do_run_one(boost::asio::detail::scoped_lock<boost::asio::detail::posix_mutex>&, boost::asio::detail::task_io_service_thread_info&, boost::system::error_code const&) + 800 (fingagent.bin + 1253472) [0x100543060]
+              1   boost::asio::detail::reactive_socket_recv_op<boost::asio::mutable_buffers_1, boost::_bi::bind_t<void, boost::_mfi::mf2<void, overlook::fingagent::http::HttpSession, boost::system::error_code const&, unsigned long>, boost::_bi::list3<boost::_bi::value<overlook::fingagent::http::HttpSession*>, boost::arg<1> (*)(), boost::arg<2> (*)()> > >::do_complete(boost::asio::detail::task_io_service*, boost::asio::detail::task_io_service_operation*, boost::system::error_code const&, unsigned long) + 154 (fingagent.bin + 1313466) [0x100551aba]
+                1   overlook::fingagent::http::HttpSession::handleRead(boost::system::error_code const&, unsigned long) + 1225 (fingagent.bin + 1289417) [0x10054bcc9]
+                  1   overlook::fingagent::http::HttpSession::handleIncomingPacket(unsigned long) + 1551 (fingagent.bin + 1294575) [0x10054d0ef]
+                    1   overlook::fingagent::dispatch::FingAgentDispatcher::dispatch(boost::shared_ptr<overlook::fingagent::http::HttpSession>) + 4024 (fingagent.bin + 809080) [0x1004d6878]
+                      1   overlook::fingagent::common::NetworkInterfaces::getNetworkInterfaces(boost::weak_ptr<overlook::fingagent::http::HttpSession>) + 4488 (fingagent.bin + 682008) [0x1004b7818]
+                        1   overlook::fingagent::common::NetworkInterfaces::getNicInfos(boost::property_tree::basic_ptree<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >&) + 94 (fingagent.bin + 671006) [0x1004b4d1e]
+                          1   overlook::net::NetworkSelector::getAvailableNetworks(std::__1::vector<overlook::net::NetworkSelector::RankedNetwork, std::__1::allocator<overlook::net::NetworkSelector::RankedNetwork> >&, bool) + 130 (liboverlook.dylib + 364946) [0x109db2192]
+                            1   overlook::net::NetworkInterface::getNetworkInterfaces(overlook::net::NetworkInterfaceList&) + 1099 (liboverlook.dylib + 226747) [0x109d905bb]
+                              1   pcap_findalldevs + 9 (libpcap.A.dylib + 100339) [0x1094637f3]
+                                1   pcap_platform_finddevs + 16 (libpcap.A.dylib + 82302) [0x10945f17e]
+                                  1   pcap_findalldevs_interfaces + 193 (libpcap.A.dylib + 12769) [0x10944e1e1]
+                                    1   check_bpf_bindable + 45 (libpcap.A.dylib + 82361) [0x10945f1b9]
+                                      1   bpf_open + 91 (libpcap.A.dylib + 82651) [0x10945f2db]
+                                        1   ??? [0x7ff8ae546940]
+
+  Binary Images:
+           0x100411000 -        0x10067cfff  fingagent.bin (0)                  <8D9ED077-119A-3934-A94F-1F5B4A3609FE>  /Applications/Fing.app/Contents/Resources/service/lib/fingagent.bin
+           0x109227000 -        0x109234fff  libboost_thread.dylib (0)          <64705F49-C24F-3314-A61A-222A6C54CA1B>  /Applications/Fing.app/Contents/Resources/service/lib/libboost_thread.dylib
+           0x10944b000 -        0x109583fff  libpcap.A.dylib (79.250.1)         <C0893641-7DFF-3A33-BDAE-190FF54837E8>  /Applications/Fing.app/Contents/Resources/service/lib/libpcap.A.dylib
+           0x109d59000 -        0x10a498fff  liboverlook.dylib (0)              <5FC5B3DA-3C34-3A61-9DAB-24D10235D09F>  /Applications/Fing.app/Contents/Resources/service/lib/liboverlook.dylib
+        0x7ff81dfb0000 -     0x7ff81dfbbfff  libsystem_pthread.dylib (485.60.2) <EE564342-D8F2-396D-B642-40092CF34D82>  /usr/lib/system/libsystem_pthread.dylib

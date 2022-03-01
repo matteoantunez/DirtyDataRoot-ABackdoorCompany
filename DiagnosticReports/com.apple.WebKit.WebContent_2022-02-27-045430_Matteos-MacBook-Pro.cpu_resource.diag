@@ -1,0 +1,647 @@
+Date/Time:        2022-02-27 04:52:41.279 -0600
+End time:         2022-02-27 04:54:23.590 -0600
+OS Version:       macOS 12.2 (Build 21D49)
+Architecture:     arm64e
+Report Version:   35
+Incident Identifier: 9E745072-8D4B-480F-9CA2-0800D657B537
+Share With Devs:  Yes
+
+Data Source:      Microstackshots
+Shared Cache:     B90241B2-E425-3982-B3F6-26C4567CBB49 slid base address 0x1a4c68000, slide 0x24c68000
+Shared Cache:     13FE38D9-95AD-3D4F-889F-443CD57D94DE slid base address 0x7ff81dc98000, slide 0x1dc98000
+
+Command:          com.apple.WebKit.WebContent
+Path:             /System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.xpc/Contents/MacOS/com.apple.WebKit.WebContent
+Identifier:       com.apple.WebKit.WebContent
+Version:          17612 (17612.4.9.1.5)
+Build Version:    1
+Project Name:     WebKit
+Source Version:   7612004009001005
+Architecture:     arm64e
+Parent:           UNKNOWN [1]
+PID:              24649
+
+Event:            cpu usage
+Action taken:     none
+CPU:              90 seconds cpu time over 102 seconds (88% cpu average), exceeding limit of 50% cpu over 180 seconds
+CPU limit:        90s
+Limit duration:   180s
+CPU used:         90s
+CPU duration:     102s
+Duration:         102.31s
+Duration Sampled: 98.02s
+Steps:            86
+
+Hardware model:   MacBookPro17,1
+Active cpus:      8
+HW page size:     16384
+VM page size:     16384
+
+Fan speed:        0 rpm
+Advisory levels:  Battery -> 1, User -> 2, ThermalPressure -> 0, Combined -> 1
+Free disk space:  14.60 GB/228.27 GB, low space threshold 3072 MB
+Low Power Mode:   Enabled
+
+Heaviest stack for the target process:
+  17  start + 520 (dyld + 20724) [0x1008410f4]
+  17  WebKit::XPCServiceMain(int, char const**) + 152 (WebKit + 2509884) [0x1c313dc3c]
+  17  xpc_main + 108 (libxpc.dylib + 98820) [0x1a4cd2204]
+  17  _xpc_objc_main + 900 (libxpc.dylib + 100608) [0x1a4cd2900]
+  17  -[NSRunLoop(NSRunLoop) run] + 92 (Foundation + 997536) [0x1a5fa38a0]
+  17  -[NSRunLoop(NSRunLoop) runMode:beforeDate:] + 236 (Foundation + 408992) [0x1a5f13da0]
+  15  CFRunLoopRunSpecific + 684 (CoreFoundation + 534408) [0x1a503e788]
+  15  __CFRunLoopDoObservers + 572 (CoreFoundation + 539800) [0x1a503fc98]
+  15  __CFRUNLOOP_IS_CALLING_OUT_TO_AN_OBSERVER_CALLBACK_FUNCTION__ + 36 (CoreFoundation + 540236) [0x1a503fe4c]
+  15  WebKit::TiledCoreAnimationDrawingArea::updateRendering(WebKit::TiledCoreAnimationDrawingArea::UpdateRenderingType) + 588 (WebKit + 6065040) [0x1c34a1b90]
+  9   WebCore::Page::updateRendering() + 1148 (WebCore + 26623788) [0x1c1dbef2c]
+  9   WebCore::Page::forEachDocumentFromMainFrame(WebCore::Frame const&, WTF::Function<void (WebCore::Document&)> const&) + 324 (WebCore + 26644220) [0x1c1dc3efc]
+  5   WebCore::Document::updateIntersectionObservations() + 5548 (WebCore + 19820084) [0x1c1741e34]
+  5   WebCore::IntersectionObserver::notify() + 292 (WebCore + 26557100) [0x1c1daeaac]
+  5   WebCore::JSIntersectionObserverCallback::handleEvent(WebCore::IntersectionObserver&, WTF::Vector<WTF::Ref<WebCore::IntersectionObserverEntry, WTF::RawPtrTraits<WebCore::IntersectionObserverEntry> >, 0ul, WTF::CrashOnOverflow, 16ul, WTF::FastMalloc> const&, WebCore::IntersectionObserver&) + 588 (WebCore + 7780872) [0x1c0bc6a08]
+  5   WebCore::JSCallbackData::invokeCallback(WebCore::JSDOMGlobalObject&, JSC::JSObject*, JSC::JSValue, JSC::MarkedArgumentBufferWithSize<8ul>&, WebCore::JSCallbackData::CallbackType, JSC::PropertyName, WTF::NakedPtr<JSC::Exception>&) + 572 (WebCore + 16795564) [0x1c145f7ac]
+  5   JSC::profiledCall(JSC::JSGlobalObject*, JSC::ProfilingReason, JSC::JSValue, JSC::CallData const&, JSC::JSValue, JSC::ArgList const&, WTF::NakedPtr<JSC::Exception>&) + 204 (JavaScriptCore + 12960336) [0x1bdc6b250]
+  5   JSC::Interpreter::executeCall(JSC::JSGlobalObject*, JSC::JSObject*, JSC::CallData const&, JSC::JSValue, JSC::ArgList const&) + 488 (JavaScriptCore + 10623012) [0x1bda30824]
+  5   ??? [0x10f0047e8]
+  5   ??? [0x10f729714]
+  5   ??? [0x10f05a7e0]
+  3   ??? [0x10f1c1b78]
+  3   ??? [0x10f728d20]
+  3   ??? [0x10f091310]
+  3   ??? [0x10fa68a28]
+  3   ??? [0x10f0a8d80]
+  3   ??? [0x10f05a7e0]
+  3   ??? [0x10f18ac38]
+  3   ??? [0x10f026c90]
+  3   ??? [0x10f6834b8]
+  3   ??? [0x10f70b25c]
+  1   ??? [0x10f5da9ec]
+  1   ??? [0x10f25555c]
+  1   ??? [0x10f3e5a28]
+  1   operationCompareStringEq + 72 (JavaScriptCore + 891128) [0x1bd0e88f8]
+  1   JSC::JSString::equalSlowCase(JSC::JSGlobalObject*, JSC::JSString*) const + 180 (JavaScriptCore + 14220016) [0x1bdd9eaf0]
+  1   JSC::JSRopeString::resolveRope(JSC::JSGlobalObject*) const + 568 (JavaScriptCore + 14225144) [0x1bdd9fef8]
+  1   void JSC::JSRopeString::resolveRopeInternalNoSubstring<unsigned char>(unsigned char*) const + 184 (JavaScriptCore + 14220540) [0x1bdd9ecfc]
+
+
+Powerstats for:   com.apple.WebKit.WebContent [24649] [unique pid 124385]
+UUID:             EB12CF64-DF7F-36B3-9BBF-7AEF4AEE0B09
+Path:             /System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.xpc/Contents/MacOS/com.apple.WebKit.WebContent
+Identifier:       com.apple.WebKit.WebContent
+Version:          17612 (17612.4.9.1.5)
+Build Version:    1
+Project Name:     WebKit
+Source Version:   7612004009001005
+Shared Cache:     B90241B2-E425-3982-B3F6-26C4567CBB49 slid base address 0x1a4c68000, slide 0x24c68000
+Architecture:     arm64e
+Parent:           UNKNOWN [1]
+UID:              501
+Sudden Term:      Tracked (allows idle exit)
+Footprint:        461.25 MB -> 454.36 MB (-7056 KB) (max 486.59 MB )
+Start time:       2022-02-27 04:52:45.165 -0600
+End time:         2022-02-27 04:54:21.067 -0600
+Num samples:      19 (22%)
+Primary state:    9 samples Non-Frontmost App, Non-Suppressed, User mode, Effective Thread QoS User Interactive, Requested Thread QoS User Interactive, Override Thread QoS Unspecified
+User Activity:    0 samples Idle, 19 samples Active
+Power Source:     19 samples on Battery, 0 samples on AC
+  17  start + 520 (dyld + 20724) [0x1008410f4]
+    17  WebKit::XPCServiceMain(int, char const**) + 152 (WebKit + 2509884) [0x1c313dc3c]
+      17  xpc_main + 108 (libxpc.dylib + 98820) [0x1a4cd2204]
+        17  _xpc_objc_main + 900 (libxpc.dylib + 100608) [0x1a4cd2900]
+          17  -[NSRunLoop(NSRunLoop) run] + 92 (Foundation + 997536) [0x1a5fa38a0]
+            17  -[NSRunLoop(NSRunLoop) runMode:beforeDate:] + 236 (Foundation + 408992) [0x1a5f13da0]
+              15  CFRunLoopRunSpecific + 684 (CoreFoundation + 534408) [0x1a503e788]
+                15  __CFRunLoopDoObservers + 572 (CoreFoundation + 539800) [0x1a503fc98]
+                  15  __CFRUNLOOP_IS_CALLING_OUT_TO_AN_OBSERVER_CALLBACK_FUNCTION__ + 36 (CoreFoundation + 540236) [0x1a503fe4c]
+                    15  WebKit::TiledCoreAnimationDrawingArea::updateRendering(WebKit::TiledCoreAnimationDrawingArea::UpdateRenderingType) + 588 (WebKit + 6065040) [0x1c34a1b90]
+                      9   WebCore::Page::updateRendering() + 1148 (WebCore + 26623788) [0x1c1dbef2c]
+                        9   WebCore::Page::forEachDocumentFromMainFrame(WebCore::Frame const&, WTF::Function<void (WebCore::Document&)> const&) + 324 (WebCore + 26644220) [0x1c1dc3efc]
+                          5   WebCore::Document::updateIntersectionObservations() + 5548 (WebCore + 19820084) [0x1c1741e34]
+                            5   WebCore::IntersectionObserver::notify() + 292 (WebCore + 26557100) [0x1c1daeaac]
+                              5   WebCore::JSIntersectionObserverCallback::handleEvent(WebCore::IntersectionObserver&, WTF::Vector<WTF::Ref<WebCore::IntersectionObserverEntry, WTF::RawPtrTraits<WebCore::IntersectionObserverEntry> >, 0ul, WTF::CrashOnOverflow, 16ul, WTF::FastMalloc> const&, WebCore::IntersectionObserver&) + 588 (WebCore + 7780872) [0x1c0bc6a08]
+                                5   WebCore::JSCallbackData::invokeCallback(WebCore::JSDOMGlobalObject&, JSC::JSObject*, JSC::JSValue, JSC::MarkedArgumentBufferWithSize<8ul>&, WebCore::JSCallbackData::CallbackType, JSC::PropertyName, WTF::NakedPtr<JSC::Exception>&) + 572 (WebCore + 16795564) [0x1c145f7ac]
+                                  5   JSC::profiledCall(JSC::JSGlobalObject*, JSC::ProfilingReason, JSC::JSValue, JSC::CallData const&, JSC::JSValue, JSC::ArgList const&, WTF::NakedPtr<JSC::Exception>&) + 204 (JavaScriptCore + 12960336) [0x1bdc6b250]
+                                    5   JSC::Interpreter::executeCall(JSC::JSGlobalObject*, JSC::JSObject*, JSC::CallData const&, JSC::JSValue, JSC::ArgList const&) + 488 (JavaScriptCore + 10623012) [0x1bda30824]
+                                      5   ??? [0x10f0047e8]
+                                        5   ??? [0x10f729714]
+                                          5   ??? [0x10f05a7e0]
+                                            3   ??? [0x10f1c1b78]
+                                              3   ??? [0x10f728d20]
+                                                3   ??? [0x10f091310]
+                                                  3   ??? [0x10fa68a28]
+                                                    3   ??? [0x10f0a8d80]
+                                                      3   ??? [0x10f05a7e0]
+                                                        3   ??? [0x10f18ac38]
+                                                          3   ??? [0x10f026c90]
+                                                            3   ??? [0x10f6834b8]
+                                                              3   ??? [0x10f70b25c]
+                                                                1   ??? [0x10f5da9ec]
+                                                                  1   ??? [0x10f25555c]
+                                                                    1   ??? [0x10f3e5a28]
+                                                                      1   operationCompareStringEq + 72 (JavaScriptCore + 891128) [0x1bd0e88f8]
+                                                                        1   JSC::JSString::equalSlowCase(JSC::JSGlobalObject*, JSC::JSString*) const + 180 (JavaScriptCore + 14220016) [0x1bdd9eaf0]
+                                                                          1   JSC::JSRopeString::resolveRope(JSC::JSGlobalObject*) const + 568 (JavaScriptCore + 14225144) [0x1bdd9fef8]
+                                                                            1   void JSC::JSRopeString::resolveRopeInternalNoSubstring<unsigned char>(unsigned char*) const + 184 (JavaScriptCore + 14220540) [0x1bdd9ecfc]
+                                                                              1   <Suppressed>
+                                                                1   ??? [0x10f56057c]
+                                                                  1   ??? [0x10f336c28]
+                                                                    1   ??? [0x10f17d7b4]
+                                                                      1   <Suppressed>
+                                                                1   ??? [0x10f560510]
+                                                                  1   ??? [0x10f0260e4]
+                                                                    1   ??? [0x10f004c70]
+                                                                      1   JSC::objectConstructorAssign(JSC::JSGlobalObject*, JSC::CallFrame*) + 1248 (JavaScriptCore + 14724592) [0x1bde19df0]
+                                                                        1   bool JSC::JSObject::putDirectInternal<(JSC::JSObject::PutMode)0>(JSC::VM&, JSC::PropertyName, JSC::JSValue, unsigned int, JSC::PutPropertySlot&) + 2256 (JavaScriptCore + 11791200) [0x1bdb4db60]
+                                                                          1   <Suppressed>
+                                            2   ??? [0x10f1c1bd4]
+                                              2   ??? [0x10f728d20]
+                                                2   ??? [0x10f091310]
+                                                  2   ??? [0x10fa68a28]
+                                                    2   ??? [0x10f0a8d80]
+                                                      2   ??? [0x10f05a7e0]
+                                                        2   ??? [0x10f18ac38]
+                                                          2   ??? [0x10f026c90]
+                                                            2   ??? [0x10f6834b8]
+                                                              1   ??? [0x10f71defc]
+                                                                1   ??? [0x10f70a4e8]
+                                                              1   ??? [0x10f63eb18]
+                                                                1   ??? [0x10f72732c]
+                                                                  1   JSC::stringProtoFuncStartsWith(JSC::JSGlobalObject*, JSC::CallFrame*) + 12 (JavaScriptCore + 15012684) [0x1bde6034c]
+                          3   WebCore::Document::updateIntersectionObservations() + 2580 (WebCore + 19817116) [0x1c174129c]
+                            3   WebCore::RenderObject::localToContainerQuad(WebCore::FloatQuad const&, WebCore::RenderLayerModelObject const*, unsigned int, bool*) const + 284 (WebCore + 643832) [0x1c04f82f8]
+                              3   WebCore::RenderBox::mapLocalToContainer(WebCore::RenderLayerModelObject const*, WebCore::TransformState&, unsigned int, bool*) const + 1224 (WebCore + 645156) [0x1c04f8824]
+                                2   WebCore::RenderBox::mapLocalToContainer(WebCore::RenderLayerModelObject const*, WebCore::TransformState&, unsigned int, bool*) const + 1224 (WebCore + 645156) [0x1c04f8824]
+                                  2   WebCore::RenderBox::mapLocalToContainer(WebCore::RenderLayerModelObject const*, WebCore::TransformState&, unsigned int, bool*) const + 1224 (WebCore + 645156) [0x1c04f8824]
+                                    1   WebCore::RenderBox::mapLocalToContainer(WebCore::RenderLayerModelObject const*, WebCore::TransformState&, unsigned int, bool*) const + 1224 (WebCore + 645156) [0x1c04f8824]
+                                      1   WebCore::RenderBox::mapLocalToContainer(WebCore::RenderLayerModelObject const*, WebCore::TransformState&, unsigned int, bool*) const + 1224 (WebCore + 645156) [0x1c04f8824]
+                                        1   WebCore::RenderBox::mapLocalToContainer(WebCore::RenderLayerModelObject const*, WebCore::TransformState&, unsigned int, bool*) const + 1224 (WebCore + 645156) [0x1c04f8824]
+                                          1   WebCore::RenderBox::mapLocalToContainer(WebCore::RenderLayerModelObject const*, WebCore::TransformState&, unsigned int, bool*) const + 1224 (WebCore + 645156) [0x1c04f8824]
+                                            1   WebCore::RenderBox::mapLocalToContainer(WebCore::RenderLayerModelObject const*, WebCore::TransformState&, unsigned int, bool*) const + 1224 (WebCore + 645156) [0x1c04f8824]
+                                              1   <Suppressed>
+                                    1   WebCore::RenderBox::mapLocalToContainer(WebCore::RenderLayerModelObject const*, WebCore::TransformState&, unsigned int, bool*) const + 716 (WebCore + 644648) [0x1c04f8628]
+                                      1   WebCore::RenderBox::offsetFromContainer(WebCore::RenderElement&, WebCore::LayoutPoint const&, bool*) const + 112 (WebCore + 30198284) [0x1c2127a0c]
+                                        1   WebCore::RenderBoxModelObject::stickyPositionOffset() const + 132 (WebCore + 30273752) [0x1c213a0d8]
+                                          1   WebCore::RenderBoxModelObject::computeStickyPositionConstraints(WebCore::StickyPositionViewportConstraints&, WebCore::FloatRect const&) const + 140 (WebCore + 30274060) [0x1c213a20c]
+                                            1   <Suppressed>
+                                1   WebCore::RenderBox::mapLocalToContainer(WebCore::RenderLayerModelObject const*, WebCore::TransformState&, unsigned int, bool*) const + 716 (WebCore + 644648) [0x1c04f8628]
+                                  1   WebCore::RenderBox::offsetFromContainer(WebCore::RenderElement&, WebCore::LayoutPoint const&, bool*) const + 160 (WebCore + 30198332) [0x1c2127a3c]
+                                    1   WebCore::RenderBox::topLeftLocationOffset() const + 132 (WebCore + 233300) [0x1c0493f54]
+                                      1   <Suppressed>
+                          1   WebCore::Document::updateIntersectionObservations() + 320 (WebCore + 19814856) [0x1c17409c8]
+                            1   mach_absolute_time + 28 (libsystem_kernel.dylib + 7772) [0x1a4f39e5c]
+                              1   <Suppressed>
+                      6   WebCore::Page::updateRendering() + 1572 (WebCore + 26624212) [0x1c1dbf0d4]
+                        6   WebCore::FrameView::updateLayoutAndStyleIfNeededRecursive() + 1144 (WebCore + 196744) [0x1c048b088]
+                          6   WebCore::Document::updateStyleIfNeeded() + 432 (WebCore + 180552) [0x1c0487148]
+                            6   WebCore::Document::resolveStyle(WebCore::Document::ResolveStyleType) + 1944 (WebCore + 19686192) [0x1c1721330]
+                              6   WebCore::Style::TreeResolver::resolve() + 860 (WebCore + 32102164) [0x1c22f8714]
+                                4   WebCore::Style::TreeResolver::resolveComposedTree() + 5292 (WebCore + 32091084) [0x1c22f5bcc]
+                                  4   WebCore::Style::TreeResolver::resolvePseudoStyle(WebCore::Element&, WebCore::Style::ElementUpdate const&, WebCore::PseudoId) + 316 (WebCore + 32085120) [0x1c22f4480]
+                                    4   WebCore::Style::Resolver::pseudoStyleForElement(WebCore::Element const&, WebCore::Style::PseudoElementRequest const&, WebCore::RenderStyle const&, WebCore::RenderStyle const*, WebCore::SelectorFilter const*) + 660 (WebCore + 32043320) [0x1c22ea138]
+                                      4   WebCore::Style::Resolver::applyMatchedProperties(WebCore::Style::Resolver::State&, WebCore::Style::MatchResult const&, WebCore::Style::Resolver::UseMatchedDeclarationsCache) + 1464 (WebCore + 32036784) [0x1c22e87b0]
+                                        4   WebCore::Style::Builder::applyLowPriorityProperties() + 300 (WebCore + 31978308) [0x1c22da344]
+                                          3   void WebCore::Style::Builder::applyPropertiesImpl<(WebCore::Style::Builder::CustomPropertyCycleTracking)1>(int, int) + 256 (WebCore + 31981516) [0x1c22dafcc]
+                                            3   WebCore::Style::Builder::applyProperty(WebCore::CSSPropertyID, WebCore::CSSValue&, WebCore::SelectorChecker::LinkMatchMask) + 88 (WebCore + 31978944) [0x1c22da5c0]
+                                              2   WebCore::Style::Builder::resolvedVariableValue(WebCore::CSSPropertyID, WebCore::CSSValue const&) + 640 (WebCore + 31985196) [0x1c22dbe2c]
+                                                2   WebCore::CSSParser::parseValueWithVariableReferences(WebCore::CSSPropertyID, WebCore::CSSValue const&, WebCore::Style::BuilderState&) + 576 (WebCore + 18768760) [0x1c1641378]
+                                                  1   WebCore::resolveTokenRange(WebCore::CSSParserTokenRange, WTF::Vector<WebCore::CSSParserToken, 0ul, WTF::CrashOnOverflow, 16ul, WTF::FastMalloc>&, WebCore::Style::BuilderState&) + 1852 (WebCore + 18465156) [0x1c15f7184]
+                                                  1   WebCore::resolveTokenRange(WebCore::CSSParserTokenRange, WTF::Vector<WebCore::CSSParserToken, 0ul, WTF::CrashOnOverflow, 16ul, WTF::FastMalloc>&, WebCore::Style::BuilderState&) + 564 (WebCore + 18463868) [0x1c15f6c7c]
+                                                    1   WebCore::Style::Builder::applyCustomProperty(WTF::String const&) + 208 (WebCore + 31982148) [0x1c22db244]
+                                                      1   WTF::AtomStringImpl::addSlowCase(WTF::StringImpl&) + 96 (JavaScriptCore + 17689072) [0x1be0ed9f0]
+                                                        1   WTF::equal(WTF::StringImpl const&, WTF::StringImpl const&) + 220 (JavaScriptCore + 17947720) [0x1be12cc48]
+                                              1   WebCore::Style::Builder::resolvedVariableValue(WebCore::CSSPropertyID, WebCore::CSSValue const&) + 496 (WebCore + 31985052) [0x1c22dbd9c]
+                                                1   WebCore::CSSParser::parseValueWithVariableReferences(WebCore::CSSPropertyID, WebCore::CSSValue const&, WebCore::Style::BuilderState&) + 192 (WebCore + 18768376) [0x1c16411f8]
+                                                  1   WebCore::resolveTokenRange(WebCore::CSSParserTokenRange, WTF::Vector<WebCore::CSSParserToken, 0ul, WTF::CrashOnOverflow, 16ul, WTF::FastMalloc>&, WebCore::Style::BuilderState&) + 1748 (WebCore + 18465052) [0x1c15f711c]
+                                                    1   bmalloc_allocate_impl_medium_slow_case + 776 (JavaScriptCore + 18237992) [0x1be173a28]
+                                                      1   bmalloc_heap_config_specialized_local_allocator_try_allocate_small_segregated_slow + 3544 (JavaScriptCore + 18289352) [0x1be1802c8]
+                                          1   void WebCore::Style::Builder::applyPropertiesImpl<(WebCore::Style::Builder::CustomPropertyCycleTracking)1>(int, int) + 292 (WebCore + 31981552) [0x1c22daff0]
+                                            1   WebCore::Style::Builder::applyProperty(WebCore::CSSPropertyID, WebCore::CSSValue&, WebCore::SelectorChecker::LinkMatchMask) + 88 (WebCore + 31978944) [0x1c22da5c0]
+                                              1   WebCore::Style::Builder::resolvedVariableValue(WebCore::CSSPropertyID, WebCore::CSSValue const&) + 640 (WebCore + 31985196) [0x1c22dbe2c]
+                                                1   WebCore::CSSParser::parseValueWithVariableReferences(WebCore::CSSPropertyID, WebCore::CSSValue const&, WebCore::Style::BuilderState&) + 624 (WebCore + 18768808) [0x1c16413a8]
+                                                  1   WebCore::CSSVariableData::CSSVariableData(WebCore::CSSParserTokenRange const&) + 112 (WebCore + 18462092) [0x1c15f658c]
+                                                    1   WTF::StringBuilder::appendCharacters(char16_t const*, unsigned int) + 160 (JavaScriptCore + 17919596) [0x1be125e6c]
+                                                      1   WTF::StringBuilder::extendBufferForAppendingWithUpconvert(unsigned int) + 248 (JavaScriptCore + 17918908) [0x1be125bbc]
+                                                        1   void WTF::StringBuilder::allocateBuffer<char16_t, unsigned char>(unsigned char const*, unsigned int) + 76 (JavaScriptCore + 17919104) [0x1be125c80]
+                                                          1   WTF::tryFastMalloc(unsigned long) + 320 (JavaScriptCore + 32788) [0x1bd017014]
+                                                            1   bmalloc_try_allocate_impl_medium_slow_case(unsigned long, unsigned long) + 788 (JavaScriptCore + 17754340) [0x1be0fd8e4]
+                                                              1   bmalloc_heap_config_specialized_local_allocator_try_allocate_small_segregated_slow + 3552 (JavaScriptCore + 18289360) [0x1be1802d0]
+                                1   WebCore::Style::TreeResolver::resolveComposedTree() + 5412 (WebCore + 32091204) [0x1c22f5c44]
+                                  1   WebCore::Style::TreeResolver::resolvePseudoStyle(WebCore::Element&, WebCore::Style::ElementUpdate const&, WebCore::PseudoId) + 316 (WebCore + 32085120) [0x1c22f4480]
+                                    1   WebCore::Style::Resolver::pseudoStyleForElement(WebCore::Element const&, WebCore::Style::PseudoElementRequest const&, WebCore::RenderStyle const&, WebCore::RenderStyle const*, WebCore::SelectorFilter const*) + 660 (WebCore + 32043320) [0x1c22ea138]
+                                      1   WebCore::Style::Resolver::applyMatchedProperties(WebCore::Style::Resolver::State&, WebCore::Style::MatchResult const&, WebCore::Style::Resolver::UseMatchedDeclarationsCache) + 1464 (WebCore + 32036784) [0x1c22e87b0]
+                                        1   WebCore::Style::Builder::applyLowPriorityProperties() + 300 (WebCore + 31978308) [0x1c22da344]
+                                          1   void WebCore::Style::Builder::applyPropertiesImpl<(WebCore::Style::Builder::CustomPropertyCycleTracking)1>(int, int) + 292 (WebCore + 31981552) [0x1c22daff0]
+                                            1   WebCore::Style::Builder::applyProperty(WebCore::CSSPropertyID, WebCore::CSSValue&, WebCore::SelectorChecker::LinkMatchMask) + 88 (WebCore + 31978944) [0x1c22da5c0]
+                                              1   WebCore::Style::Builder::resolvedVariableValue(WebCore::CSSPropertyID, WebCore::CSSValue const&) + 640 (WebCore + 31985196) [0x1c22dbe2c]
+                                                1   WebCore::CSSParser::parseValueWithVariableReferences(WebCore::CSSPropertyID, WebCore::CSSValue const&, WebCore::Style::BuilderState&) + 576 (WebCore + 18768760) [0x1c1641378]
+                                                  1   WTF::String::String(char16_t const*, unsigned int) + 220 (JavaScriptCore + 18208844) [0x1be16c84c]
+                                1   WebCore::Style::TreeResolver::resolveComposedTree() + 3732 (WebCore + 32089524) [0x1c22f55b4]
+                                  1   WebCore::Style::Resolver::styleForElement(WebCore::Element const&, WebCore::RenderStyle const*, WebCore::RenderStyle const*, WebCore::RuleMatchingBehavior, WebCore::SelectorFilter const*) + 1080 (WebCore + 32032536) [0x1c22e7718]
+                                    1   WebCore::Style::Resolver::applyMatchedProperties(WebCore::Style::Resolver::State&, WebCore::Style::MatchResult const&, WebCore::Style::Resolver::UseMatchedDeclarationsCache) + 1464 (WebCore + 32036784) [0x1c22e87b0]
+                                      1   WebCore::Style::Builder::applyLowPriorityProperties() + 212 (WebCore + 31978220) [0x1c22da2ec]
+                                        1   WebCore::Style::Builder::applyCustomProperty(WTF::String const&) + 1268 (WebCore + 31983208) [0x1c22db668]
+                                          1   WebCore::Style::Builder::resolvedVariableValue(WebCore::CSSPropertyID, WebCore::CSSValue const&) + 640 (WebCore + 31985196) [0x1c22dbe2c]
+                                            1   WebCore::CSSParser::parseValueWithVariableReferences(WebCore::CSSPropertyID, WebCore::CSSValue const&, WebCore::Style::BuilderState&) + 1532 (WebCore + 18769716) [0x1c1641734]
+                                              1   WebCore::CSSPropertyParser::parseTypedCustomPropertyValue(WTF::String const&, WTF::String const&, WebCore::Style::BuilderState const&) + 348 (WebCore + 18883852) [0x1c165d50c]
+                                                1   bmalloc_allocate_impl_medium_slow_case + 776 (JavaScriptCore + 18237992) [0x1be173a28]
+                                                  1   bmalloc_heap_config_specialized_local_allocator_try_allocate_small_segregated_slow + 3552 (JavaScriptCore + 18289360) [0x1be1802d0]
+              2   CFRunLoopRunSpecific + 600 (CoreFoundation + 534324) [0x1a503e734]
+                1   __CFRunLoopRun + 1944 (CoreFoundation + 538220) [0x1a503f66c]
+                  1   __CFRunLoopDoTimers + 392 (CoreFoundation + 649968) [0x1a505aaf0]
+                    1   __CFRunLoopDoTimer + 1076 (CoreFoundation + 651364) [0x1a505b064]
+                      1   __CFRUNLOOP_IS_CALLING_OUT_TO_A_TIMER_CALLBACK_FUNCTION__ + 32 (CoreFoundation + 652392) [0x1a505b468]
+                        1   WebCore::timerFired(__CFRunLoopTimer*, void*) + 68 (WebCore + 37436) [0x1c046423c]
+                          1   WTF::Detail::CallableWrapper<WebCore::ThreadTimers::setSharedTimer(WebCore::SharedTimer*)::$_0, void>::call() + 248 (WebCore + 27414636) [0x1c1e8006c]
+                            1   WebCore::WindowEventLoop::didReachTimeToRun() + 36 (WebCore + 20555600) [0x1c17f5750]
+                              1   WebCore::EventLoop::run() + 224 (WebCore + 20056632) [0x1c177ba38]
+                                1   WebCore::EventTarget::dispatchEvent(WebCore::Event&) + 440 (WebCore + 20066604) [0x1c177e12c]
+                                  1   WebCore::EventTarget::fireEventListeners(WebCore::Event&, WebCore::EventTarget::EventInvokePhase) + 300 (WebCore + 20066960) [0x1c177e290]
+                                    1   WebCore::EventTarget::innerInvokeEventListeners(WebCore::Event&, WTF::Vector<WTF::RefPtr<WebCore::RegisteredEventListener, WTF::RawPtrTraits<WebCore::RegisteredEventListener>, WTF::DefaultRefDerefTraits<WebCore::RegisteredEventListener> >, 1ul, WTF::CrashOnOverflow, 16ul, WTF::FastMalloc>, WebCore::EventTarget::EventInvokePhase) + 604 (WebCore + 20069028) [0x1c177eaa4]
+                                      1   JSC::VMEntryScope::VMEntryScope(JSC::VM&, JSC::JSGlobalObject*) + 0 (JavaScriptCore + 15254916) [0x1bde9b584]
+                1   __CFRunLoopRun + 820 (CoreFoundation + 537096) [0x1a503f208]
+                  1   __CFRunLoopDoSources0 + 268 (CoreFoundation + 542868) [0x1a5040894]
+                    1   __CFRunLoopDoSource0 + 208 (CoreFoundation + 543656) [0x1a5040ba8]
+                      1   __CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE0_PERFORM_FUNCTION__ + 28 (CoreFoundation + 543836) [0x1a5040c5c]
+                        1   WTF::RunLoop::performWork(void*) + 36 (JavaScriptCore + 17905572) [0x1be1227a4]
+                          1   WTF::RunLoop::performWork() + 200 (JavaScriptCore + 17902108) [0x1be121a1c]
+                            1   WTF::Detail::CallableWrapper<IPC::Connection::enqueueIncomingMessage(std::__1::unique_ptr<IPC::Decoder, std::__1::default_delete<IPC::Decoder> >)::$_11, void>::call() + 240 (WebKit + 601752) [0x1c2f6be98]
+                              1   IPC::Decoder::~Decoder() + 64 (WebKit + 603808) [0x1c2f6c6a0]
+                                1   _kernelrpc_mach_port_deallocate_trap + 8 (libsystem_kernel.dylib + 6340) [0x1a4f398c4]
+                                  1   <Suppressed>
+  2   start_wqthread + 0 (libsystem_pthread.dylib + 8208) [0x1a4f70010]
+    2   <Kernel mode, Effective Thread QoS Default, Requested Thread QoS Default>
+
+  Binary Images:
+           0x1006ec000 -        0x1006f7fff  com.apple.WebKit.WebContent 17612 (17612.4.9.1.5) <EB12CF64-DF7F-36B3-9BBF-7AEF4AEE0B09>  /System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.xpc/Contents/MacOS/com.apple.WebKit.WebContent
+           0x10083c000 -        0x1008b7fff  dyld (941.5)                                      <D21A73EA-79CD-36EB-8AC9-2C5CF5181A27>  /usr/lib/dyld
+           0x1a4cba000 -        0x1a4cf3fff  libxpc.dylib (2235.80.3)                          <FD3E0E8D-4618-3CE5-A24A-5639BE86B979>  /usr/lib/system/libxpc.dylib
+           0x1a4f38000 -        0x1a4f6dfff  libsystem_kernel.dylib (8019.80.24)               <384945E6-DD71-37E5-9A3D-84FFF14A1E60>  /usr/lib/system/libsystem_kernel.dylib
+           0x1a4f6e000 -        0x1a4f7afff  libsystem_pthread.dylib (485.60.2)                <F7B2ECCF-E6F1-3109-AE81-9028C0B8332A>  /usr/lib/system/libsystem_pthread.dylib
+           0x1a4fbc000 -        0x1a54fffff  com.apple.CoreFoundation 6.9 (1856.105)           <16FADF8B-A3AF-3E0C-B5FB-CE9A9CDC8747>  /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
+           0x1a5eb0000 -        0x1a629dfff  com.apple.Foundation 6.9 (1856.105)               <90321A38-43A5-3767-9A9C-2C631338B9BC>  /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
+           0x1bd00f000 -        0x1be2f2fff  com.apple.JavaScriptCore 17612 (17612.4.9.1.5)    <5078F2C2-A8EC-3B97-B51E-B351E61D8843>  /System/Library/Frameworks/JavaScriptCore.framework/Versions/A/JavaScriptCore
+           0x1c045b000 -        0x1c2846fff  com.apple.WebCore 17612 (17612.4.9.1.5)           <83EB004C-D50A-3AD8-9BD4-C0519740B37F>  /System/Library/Frameworks/WebKit.framework/Versions/A/Frameworks/WebCore.framework/Versions/A/WebCore
+           0x1c2ed9000 -        0x1c3854fff  com.apple.WebKit 17612 (17612.4.9.1.5)            <85225776-DBE9-3B7D-9B53-88692425A518>  /System/Library/Frameworks/WebKit.framework/Versions/A/WebKit
+
+
+Powerstats for:   com.apple.WebKit.GPU
+UUID:             99B8DA5C-C95C-3DD6-AAF1-FF708B59EAD2
+Path:             /System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.GPU.xpc/Contents/MacOS/com.apple.WebKit.GPU
+Identifier:       com.apple.WebKit.GPU
+Version:          17612 (17612.4.9.1.5)
+Build Version:    1
+Project Name:     WebKit
+Source Version:   7612004009001005
+Shared Cache:     B90241B2-E425-3982-B3F6-26C4567CBB49 slid base address 0x1a4c68000, slide 0x24c68000
+Architecture:     arm64e
+Start time:       2022-02-27 04:52:47.681 -0600
+End time:         2022-02-27 04:54:23.151 -0600
+Num samples:      39 (45%)
+Primary state:    18 samples Non-Frontmost App, Non-Suppressed, User mode, Effective Thread QoS Default, Requested Thread QoS Default, Override Thread QoS Unspecified
+User Activity:    0 samples Idle, 39 samples Active
+Power Source:     39 samples on Battery, 0 samples on AC
+  28  start_wqthread + 8 (libsystem_pthread.dylib + 8216) [0x1a4f70018]
+    25  _pthread_wqthread + 228 (libsystem_pthread.dylib + 13000) [0x1a4f712c8]
+      25  _dispatch_worker_thread2 + 164 (libdispatch.dylib + 88920) [0x1a4dc8b58]
+        25  _dispatch_root_queue_drain + 396 (libdispatch.dylib + 86812) [0x1a4dc831c]
+          25  _dispatch_async_redirect_invoke + 596 (libdispatch.dylib + 26332) [0x1a4db96dc]
+            25  _dispatch_continuation_pop + 504 (libdispatch.dylib + 28800) [0x1a4dba080]
+              25  _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+                25  void WTF::dispatchWorkItem<WTF::(anonymous namespace)::DispatchWorkItem>(void*) + 60 (JavaScriptCore + 18205876) [0x1be16bcb4]
+                  25  WTF::Detail::CallableWrapper<WebKit::MediaFormatReader::parseByteSource(WTF::RetainPtr<OpaqueMTPluginByteSource*>&&)::$_6, void>::call() + 124 (WebKit + 4343528) [0x1c32fd6e8]
+                    25  WebCore::SourceBufferParserWebM::appendData(WebCore::SourceBufferParser::Segment&&, WTF::CompletionHandler<void ()>&&, WebCore::SourceBufferParser::AppendFlags) + 2256 (WebCore + 28508976) [0x1c1f8b330]
+                      25  webm::WebmParser::Feed(webm::Callback*, webm::Reader*) + 296 (libwebrtc.dylib + 7342988) [0x1ad648b8c]
+                        25  webm::IdParser::Feed(webm::Callback*, webm::Reader*, unsigned long long*) + 128 (libwebrtc.dylib + 7201164) [0x1ad62618c]
+                          25  WebCore::SourceBufferParserWebM::SegmentReader::Read(unsigned long, unsigned char*, unsigned long long*) + 188 (WebCore + 28569716) [0x1c1f9a074]
+                            24  WebCore::SourceBufferParser::Segment::read(unsigned long, unsigned long, unsigned char*) const + 208 (WebCore + 28505072) [0x1c1f8a3f0]
+                              24  ??? (MediaToolbox + 575284) [0x1b1859734]
+                                24  ??? (MediaToolbox + 529372) [0x1b184e3dc]
+                                  20  ??? (MediaToolbox + 510332) [0x1b184997c]
+                                    17  ??? (MediaToolbox + 514852) [0x1b184ab24]
+                                      11  ??? (MediaToolbox + 520800) [0x1b184c260]
+                                        11  FigRetainProxyUnlockMutex + 68 (CoreMedia + 122272) [0x1ad96eda0]
+                                          11  _pthread_mutex_firstfit_unlock_slow + 244 (libsystem_pthread.dylib + 8088) [0x1a4f6ff98]
+                                            9   __psynch_mutexdrop + 8 (libsystem_kernel.dylib + 18312) [0x1a4f3c788]
+                                              9   <Kernel mode>
+                                            2   DYLD-STUB$$__psynch_mutexdrop + 0 (libsystem_pthread.dylib + 47552) [0x1a4f799c0]
+                                      4   ??? (MediaToolbox + 521368) [0x1b184c498]
+                                        4   ??? (MediaToolbox + 5094808) [0x1b1ca8d98]
+                                          1   ??? (MediaToolbox + 5097172) [0x1b1ca96d4]
+                                            1   curll_getURL + 216 (CoreMedia + 627428) [0x1ad9ea2e4]
+                                              1   _dispatch_event_loop_poke + 348 (libdispatch.dylib + 156004) [0x1a4dd9164]
+                                                1   kevent_id + 8 (libsystem_kernel.dylib + 13960) [0x1a4f3b688]
+                                          1   ??? (MediaToolbox + 5096932) [0x1b1ca95e4]
+                                            1   figCustomURLRequestInfoCopyHTTPHeader + 88 (CoreMedia + 613876) [0x1ad9e6df4]
+                                              1   CFRelease + 168 (CoreFoundation + 50108) [0x1a4fc83bc]
+                                          1   ??? (MediaToolbox + 5096916) [0x1b1ca95d4]
+                                            1   CFDictionaryCreateCopy + 44 (CoreFoundation + 248688) [0x1a4ff8b70]
+                                          1   ??? (MediaToolbox + 5096900) [0x1b1ca95c4]
+                                            1   objc_release + 24 (libobjc.A.dylib + 34456) [0x1a4e02698]
+                                      1   ??? (MediaToolbox + 520792) [0x1b184c258]
+                                        1   FigCFDictionarySetInt + 32 (CoreMedia + 207196) [0x1ad98395c]
+                                          1   -[__NSDictionaryM __setObject:forKey:] + 0 (CoreFoundation + 137744) [0x1a4fdda10]
+                                      1   ??? (MediaToolbox + 520752) [0x1b184c230]
+                                        1   CFDictionaryCreateMutable + 44 (CoreFoundation + 22124) [0x1a4fc166c]
+                                          1   __NSDictionaryM_new + 120 (CoreFoundation + 24784) [0x1a4fc20d0]
+                                            1   __CFAllocateObject + 24 (CoreFoundation + 18544) [0x1a4fc0870]
+                                              1   DYLD-STUB$$calloc + 8 (libobjc.A.dylib + 184684) [0x1a4e2716c]
+                                    2   ??? (MediaToolbox + 514660) [0x1b184aa64]
+                                      2   fig_log_emit + 80 (CoreMedia + 54336) [0x1ad95e440]
+                                        2   fig_log_internal + 148 (CoreMedia + 54496) [0x1ad95e4e0]
+                                          1   _os_log_impl_flatten_and_send + 2836 (libsystem_trace.dylib + 25240) [0x1a4cfa298]
+                                          1   _os_log_impl_flatten_and_send + 2668 (libsystem_trace.dylib + 25072) [0x1a4cfa1f0]
+                                    1   ??? (MediaToolbox + 514668) [0x1b184aa6c]
+                                  3   ??? (MediaToolbox + 510400) [0x1b18499c0]
+                                    3   ??? (MediaToolbox + 512476) [0x1b184a1dc]
+                                      3   FigRetainProxyConditionVariableWaitRelative + 92 (CoreMedia + 961156) [0x1ada3ba84]
+                                        3   FigConditionVariableWaitRelative + 16 (CoreMedia + 553568) [0x1ad9d8260]
+                                          3   WaitOnConditionTimedRelative + 92 (CoreMedia + 240264) [0x1ad98ba88]
+                                            3   __psynch_cvwait + 8 (libsystem_kernel.dylib + 20672) [0x1a4f3d0c0]
+                                              1   <Kernel mode>
+                                  1   ??? (MediaToolbox + 511256) [0x1b1849d18]
+                                    1   ??? (MediaToolbox + 502992) [0x1b1847cd0]
+                                      1   FigDeferNotificationToDispatchQueue + 184 (CoreMedia + 60804) [0x1ad95fd84]
+                                        1   _dispatch_async_f_slow + 44 (libdispatch.dylib + 32888) [0x1a4dbb078]
+                            1   WebCore::SourceBufferParser::Segment::read(unsigned long, unsigned long, unsigned char*) const + 104 (WebCore + 28504968) [0x1c1f8a388]
+                              1   ??? (MediaToolbox + 575528) [0x1b1859828]
+                                1   ??? (MediaToolbox + 491324) [0x1b1844f3c]
+                                  1   ??? (MediaToolbox + 507576) [0x1b1848eb8]
+                                    1   FigRetainProxyUnlockMutex + 68 (CoreMedia + 122272) [0x1ad96eda0]
+                                      1   _pthread_mutex_firstfit_unlock_slow + 244 (libsystem_pthread.dylib + 8088) [0x1a4f6ff98]
+                                        1   __psynch_mutexdrop + 8 (libsystem_kernel.dylib + 18312) [0x1a4f3c788]
+                                          1   <Kernel mode>
+    3   _pthread_wqthread + 288 (libsystem_pthread.dylib + 13060) [0x1a4f71304]
+      3   _dispatch_workloop_worker_thread + 656 (libdispatch.dylib + 91912) [0x1a4dc9708]
+        3   _dispatch_lane_invoke + 392 (libdispatch.dylib + 48804) [0x1a4dbeea4]
+          3   _dispatch_lane_serial_drain + 672 (libdispatch.dylib + 45872) [0x1a4dbe330]
+            3   _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+              3   curll_getURLDispatch + 40 (CoreMedia + 628284) [0x1ad9ea63c]
+                3   curll_getURLOnQueue + 1012 (CoreMedia + 629376) [0x1ad9eaa80]
+                  2   curl_dispatchDataCallbackWithError + 172 (CoreMedia + 621364) [0x1ad9e8b34]
+                    2   _dispatch_root_queue_poke_slow + 232 (libdispatch.dylib + 67696) [0x1a4dc3870]
+                      2   _dispatch_semaphore_signal_slow + 52 (libdispatch.dylib + 18212) [0x1a4db7724]
+                        2   semaphore_signal_trap + 8 (libsystem_kernel.dylib + 6508) [0x1a4f3996c]
+                  1   _dispatch_lane_push + 116 (libdispatch.dylib + 59320) [0x1a4dc17b8]
+  8   thread_start + 8 (libsystem_pthread.dylib + 8228) [0x1a4f70024]
+    8   _pthread_start + 148 (libsystem_pthread.dylib + 29248) [0x1a4f75240]
+      7   _dispatch_worker_thread + 244 (libdispatch.dylib + 86188) [0x1a4dc80ac]
+        7   _dispatch_root_queue_drain + 396 (libdispatch.dylib + 86812) [0x1a4dc831c]
+          7   _dispatch_lane_invoke + 444 (libdispatch.dylib + 48856) [0x1a4dbeed8]
+            7   _dispatch_lane_serial_drain + 672 (libdispatch.dylib + 45872) [0x1a4dbe330]
+              7   _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+                4   figDeferredNotificationDispatchFunction + 44 (CoreMedia + 60956) [0x1ad95fe1c]
+                  1   ??? (MediaToolbox + 504052) [0x1b18480f4]
+                    1   CMNotificationCenterPostNotification + 128 (CoreMedia + 32960) [0x1ad9590c0]
+                      1   CFNotificationCenterPostNotificationWithOptions + 136 (CoreFoundation + 496276) [0x1a5035294]
+                        1   _CFXNotificationPost + 620 (CoreFoundation + 294476) [0x1a5003e4c]
+                          1   CFXNotificationRegistrarFind + 324 (CoreFoundation + 1730816) [0x1a5162900]
+                            1   _CFXNotificationRegistrarFindName + 104 (CoreFoundation + 1731420) [0x1a5162b5c]
+                              1   CFCachedStringEqual + 52 (CoreFoundation + 1742108) [0x1a516551c]
+                                1   CFEqual + 548 (CoreFoundation + 44380) [0x1a4fc6d5c]
+                                  1   <Effective Thread QoS Unspecified, Requested Thread QoS Unspecified>
+                  1   ??? (MediaToolbox + 503212) [0x1b1847dac]
+                    1   CMNotificationCenterPostNotification + 128 (CoreMedia + 32960) [0x1ad9590c0]
+                      1   CFNotificationCenterPostNotificationWithOptions + 136 (CoreFoundation + 496276) [0x1a5035294]
+                        1   _CFXNotificationPost + 620 (CoreFoundation + 294476) [0x1a5003e4c]
+                          1   CFXNotificationRegistrarFind + 324 (CoreFoundation + 1730816) [0x1a5162900]
+                            1   _CFXNotificationRegistrarFindName + 104 (CoreFoundation + 1731420) [0x1a5162b5c]
+                              1   CFCachedStringEqual + 52 (CoreFoundation + 1742108) [0x1a516551c]
+                                1   CFEqual + 480 (CoreFoundation + 44312) [0x1a4fc6d18]
+                                  1   <Effective Thread QoS Unspecified, Requested Thread QoS Unspecified>
+                  1   ??? (MediaToolbox + 503092) [0x1b1847d34]
+                    1   FigRetainProxyLockMutex + 28 (CoreMedia + 121956) [0x1ad96ec64]
+                      1   _pthread_mutex_firstfit_lock_slow + 168 (libsystem_pthread.dylib + 7248) [0x1a4f6fc50]
+                        1   <Effective Thread QoS Unspecified, Requested Thread QoS Unspecified>
+                  1   CFNotificationCenterGetLocalCenter + 0 (CoreFoundation + 270372) [0x1a4ffe024]
+                    1   <Effective Thread QoS Unspecified, Requested Thread QoS Unspecified>
+                3   curl_performDataCallbackDispatch + 44 (CoreMedia + 622576) [0x1ad9e8ff0]
+                  3   ??? (MediaToolbox + 5097628) [0x1b1ca989c]
+                    2   ??? (MediaToolbox + 5100732) [0x1b1caa4bc]
+                      2   ??? (MediaToolbox + 525704) [0x1b184d588]
+                        2   __psynch_cvbroad + 8 (libsystem_kernel.dylib + 20716) [0x1a4f3d0ec]
+                          2   <Effective Thread QoS Unspecified, Requested Thread QoS Unspecified>
+                    1   ??? (MediaToolbox + 522480) [0x1b184c8f0]
+                      1   <Effective Thread QoS Unspecified, Requested Thread QoS Unspecified>
+      1   _dispatch_worker_thread + 312 (libdispatch.dylib + 86256) [0x1a4dc80f0]
+        1   _dispatch_semaphore_wait_slow + 76 (libdispatch.dylib + 18364) [0x1a4db77bc]
+          1   semaphore_timedwait_trap + 8 (libsystem_kernel.dylib + 6568) [0x1a4f399a8]
+            1   <Effective Thread QoS Unspecified, Requested Thread QoS Unspecified>
+  3   start_wqthread + 0 (libsystem_pthread.dylib + 8208) [0x1a4f70010]
+    2   <Kernel mode>
+
+  Binary Images:
+           0x102d48000 -                ???  com.apple.WebKit.GPU 17612 (17612.4.9.1.5)     <99B8DA5C-C95C-3DD6-AAF1-FF708B59EAD2>  /System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.GPU.xpc/Contents/MacOS/com.apple.WebKit.GPU
+           0x1a4cf4000 -        0x1a4d0dfff  libsystem_trace.dylib (1375.40.2)              <4EE35FBA-FAF5-3289-9AD8-D4693D48E0E4>  /usr/lib/system/libsystem_trace.dylib
+           0x1a4db3000 -        0x1a4df9fff  libdispatch.dylib (1324.60.3)                  <93E1DCFC-EF56-3113-8E7C-1BA85266A93B>  /usr/lib/system/libdispatch.dylib
+           0x1a4dfa000 -        0x1a4e35fff  libobjc.A.dylib (838.1)                        <2EB32E1D-90CB-3256-8681-9034085A06A6>  /usr/lib/libobjc.A.dylib
+           0x1a4f38000 -        0x1a4f6dfff  libsystem_kernel.dylib (8019.80.24)            <384945E6-DD71-37E5-9A3D-84FFF14A1E60>  /usr/lib/system/libsystem_kernel.dylib
+           0x1a4f6e000 -        0x1a4f7afff  libsystem_pthread.dylib (485.60.2)             <F7B2ECCF-E6F1-3109-AE81-9028C0B8332A>  /usr/lib/system/libsystem_pthread.dylib
+           0x1a4fbc000 -        0x1a54fffff  com.apple.CoreFoundation 6.9 (1856.105)        <16FADF8B-A3AF-3E0C-B5FB-CE9A9CDC8747>  /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
+           0x1acf48000 -        0x1ad70bfff  libwebrtc.dylib (7612.4.9.1.5)                 <E9E0DF6C-CD89-36BC-86B9-D3BEFC7EE999>  /System/Library/Frameworks/WebKit.framework/Versions/A/Frameworks/WebCore.framework/Versions/A/Frameworks/libwebrtc.dylib
+           0x1ad951000 -        0x1ada62fff  com.apple.CoreMedia 1.0 (2935.5.1)             <6A9D10FF-752D-3122-BFAC-581929950857>  /System/Library/Frameworks/CoreMedia.framework/Versions/A/CoreMedia
+           0x1b17cd000 -        0x1b1f3efff  com.apple.MediaToolbox 1.0 (2935.5.1)          <617149F5-7AC0-3EAD-A8DC-404E7C7C48BD>  /System/Library/Frameworks/MediaToolbox.framework/Versions/A/MediaToolbox
+           0x1bd00f000 -        0x1be2f2fff  com.apple.JavaScriptCore 17612 (17612.4.9.1.5) <5078F2C2-A8EC-3B97-B51E-B351E61D8843>  /System/Library/Frameworks/JavaScriptCore.framework/Versions/A/JavaScriptCore
+           0x1c045b000 -        0x1c2846fff  com.apple.WebCore 17612 (17612.4.9.1.5)        <83EB004C-D50A-3AD8-9BD4-C0519740B37F>  /System/Library/Frameworks/WebKit.framework/Versions/A/Frameworks/WebCore.framework/Versions/A/WebCore
+           0x1c2ed9000 -        0x1c3854fff  com.apple.WebKit 17612 (17612.4.9.1.5)         <85225776-DBE9-3B7D-9B53-88692425A518>  /System/Library/Frameworks/WebKit.framework/Versions/A/WebKit
+
+
+Powerstats for:   Fing Helper (Renderer) (Electron Helper (Renderer))
+UUID:             E77B806A-0235-3B7A-93DF-C17FD5301281
+Path:             /Applications/Fing.app/Contents/Frameworks/Fing Helper (Renderer).app/Contents/MacOS/Fing Helper (Renderer)
+Identifier:       com.fing.app.helper.Renderer
+Version:          ??? (2.8.0.334)
+Team ID:          747FK9M934
+Shared Cache:     13FE38D9-95AD-3D4F-889F-443CD57D94DE slid base address 0x7ff81dc98000, slide 0x1dc98000
+Architecture:     x86_64 (translated)
+Start time:       2022-02-27 04:53:38.649 -0600
+End time:         2022-02-27 04:54:23.189 -0600
+Num samples:      6 (7%)
+Primary state:    4 samples Non-Frontmost App, Non-Suppressed, User mode, Effective Thread QoS Default, Requested Thread QoS User Interactive, Override Thread QoS Unspecified
+User Activity:    0 samples Idle, 6 samples Active
+Power Source:     6 samples on Battery, 0 samples on AC
+  4  start + 462 (dyld + 21758) [0x2010144fe]
+    4  ??? (Fing Helper (Renderer) + 6226) [0x100ed1852]
+      4  ElectronMain + 134 (Electron Framework + 117478) [0x111943ae6]
+        4  electron::fuses::IsCookieEncryptionEnabled() + 5716898 (Electron Framework + 7614946) [0x11206a1e2]
+          4  electron::fuses::IsCookieEncryptionEnabled() + 5716662 (Electron Framework + 7614710) [0x11206a0f6]
+            4  electron::fuses::IsCookieEncryptionEnabled() + 5720406 (Electron Framework + 7618454) [0x11206af96]
+              4  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 36688330 (Electron Framework + 53609050) [0x114c4725a]
+                4  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 9716124 (Electron Framework + 26636844) [0x11328e22c]
+                  4  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 9902911 (Electron Framework + 26823631) [0x1132bbbcf]
+                    4  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 10123883 (Electron Framework + 27044603) [0x1132f1afb]
+                      4  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 10128745 (Electron Framework + 27049465) [0x1132f2df9]
+                        4  -[NSRunLoop(NSRunLoop) runMode:beforeDate:] + 216 (Foundation + 390766) [0x7ff81ee0866e]
+                          4  CFRunLoopRunSpecific + 567 (CoreFoundation + 514217) [0x7ff81e07a8a9]
+                            4  __CFRunLoopRun + 897 (CoreFoundation + 516863) [0x7ff81e07b2ff]
+                              4  __CFRunLoopDoSources0 + 242 (CoreFoundation + 522467) [0x7ff81e07c8e3]
+                                4  __CFRunLoopDoSource0 + 180 (CoreFoundation + 523120) [0x7ff81e07cb70]
+                                  4  __CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE0_PERFORM_FUNCTION__ + 17 (CoreFoundation + 523272) [0x7ff81e07cc08]
+                                    4  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 10125199 (Electron Framework + 27045919) [0x1132f201f]
+                                      4  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 10112338 (Electron Framework + 27033058) [0x1132eede2]
+                                        4  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 10127216 (Electron Framework + 27047936) [0x1132f2800]
+                                          3  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 9897830 (Electron Framework + 26818550) [0x1132ba7f6]
+                                            3  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 9798796 (Electron Framework + 26719516) [0x1132a251c]
+                                              2  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 20615978 (Electron Framework + 37536698) [0x113cf33ba]
+                                                2  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 20618956 (Electron Framework + 37539676) [0x113cf3f5c]
+                                                  2  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 26170696 (Electron Framework + 43091416) [0x11423f5d8]
+                                                    2  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 28897874 (Electron Framework + 45818594) [0x1144d92e2]
+                                                      2  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 28892443 (Electron Framework + 45813163) [0x1144d7dab]
+                                                        2  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 25987433 (Electron Framework + 42908153) [0x1142129f9]
+                                                          2  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 24839991 (Electron Framework + 41760711) [0x1140fa7c7]
+                                                            2  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 25243953 (Electron Framework + 42164673) [0x11415d1c1]
+                                                              2  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 25241931 (Electron Framework + 42162651) [0x11415c9db]
+                                                                2  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 25034525 (Electron Framework + 41955245) [0x114129fad]
+                                                                  2  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 25037501 (Electron Framework + 41958221) [0x11412ab4d]
+                                                                    2  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 25100652 (Electron Framework + 42021372) [0x11413a1fc]
+                                                                      2  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 25086248 (Electron Framework + 42006968) [0x1141369b8]
+                                                                        2  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 25089104 (Electron Framework + 42009824) [0x1141374e0]
+                                                                          2  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 30221929 (Electron Framework + 47142649) [0x11461c6f9]
+                                                                            2  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 32694941 (Electron Framework + 49615661) [0x11487832d]
+                                                                              2  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 30203011 (Electron Framework + 47123731) [0x114617d13]
+                                                                                2  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 30339132 (Electron Framework + 47259852) [0x1146390cc]
+                                                                                  2  v8::Function::Call(v8::Local<v8::Context>, v8::Local<v8::Value>, int, v8::Local<v8::Value>*) + 579 (Electron Framework + 8248035) [0x112104ae3]
+                                                                                    2  v8::internal::Execution::Call(v8::internal::Isolate*, v8::internal::Handle<v8::internal::Object>, v8::internal::Handle<v8::internal::Object>, int, v8::internal::Handle<v8::internal::Object>*) + 667 (Electron Framework + 8911643) [0x1121a6b1b]
+                                                                                      2  ??? [0x7900047383]
+                                                                                        2  ??? [0x79000475fb]
+                                                                                          2  ??? [0x7900049541]
+                                                                                            1  ??? [0x7900226b24]
+                                                                                              1  ??? [0x79003a365d]
+                                                                                                1  ??? [0x79002ec33f]
+                                                                                                  1  ??? [0x7900390ca8]
+                                                                                                    1  ??? [0x7900049541]
+                                                                                                      1  ??? [0x7900391be1]
+                                                                                                        1  ??? [0x79003893e7]
+                                                                                                          1  ??? [0x790004b78e]
+                                                                                                            1  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 32711032 (Electron Framework + 49631752) [0x11487c208]
+                                                                                                              1  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 23565798 (Electron Framework + 40486518) [0x113fc3676]
+                                                                                                                1  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 23564698 (Electron Framework + 40485418) [0x113fc322a]
+                                                                                                                  1  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 24996289 (Electron Framework + 41917009) [0x114120a51]
+                                                                                                                    1  ??? [0x11d76918c]
+                                                                                            1  ??? [0x7900049541]
+                                                                                              1  ??? [0x79003a365d]
+                                                                                                1  ??? [0x79002eb254]
+                                                                                                  1  ??? [0x79000469ba]
+                                                                                                    1  ??? [0x79002a993f]
+                                                                                                      1  ??? [0x790007f72b]
+                                                                                                        1  v8::internal::StringTable::TryStringToIndexOrLookupExisting(v8::internal::Isolate*, unsigned long) + 674 (Electron Framework + 11612722) [0x11243a232]
+                                                                                                          1  node::SetTracingController(v8::TracingController*) + 1008182 (Electron Framework + 56892902) [0x114f68de6]
+                                                                                                            1  _malloc_zone_malloc + 125 (libsystem_malloc.dylib + 121558) [0x7ff81ddebad6]
+                                                                                                              1  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 10151247 (Electron Framework + 27071967) [0x1132f85df]
+                                                                                                                1  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 10151247 (Electron Framework + 27071967) [0x1132f85df]
+                                                                                                                  1  nanov2_malloc + 56 (libsystem_malloc.dylib + 5446) [0x7ff81ddcf546]
+                                                                                                                    1  nanov2_allocate + 130 (libsystem_malloc.dylib + 5657) [0x7ff81ddcf619]
+                                                                                                                      1  ??? [0x7ff8ae66838c]
+                                              1  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 31584033 (Electron Framework + 48504753) [0x114768fb1]
+                                                1  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 31586482 (Electron Framework + 48507202) [0x114769942]
+                                                  1  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 31585661 (Electron Framework + 48506381) [0x11476960d]
+                                                    1  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 31611149 (Electron Framework + 48531869) [0x11476f99d]
+                                                      1  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 31611057 (Electron Framework + 48531777) [0x11476f941]
+                                                        1  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 31600522 (Electron Framework + 48521242) [0x11476d01a]
+                                                          1  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 26174042 (Electron Framework + 43094762) [0x1142402ea]
+                                                            1  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 28899036 (Electron Framework + 45819756) [0x1144d976c]
+                                                              1  v8::internal::compiler::GetI32WasmCallDescriptorForSimd(v8::internal::Zone*, v8::internal::compiler::CallDescriptor*) + 24750649 (Electron Framework + 93996665) [0x1172cb679]
+                                                                1  v8::internal::compiler::GetI32WasmCallDescriptorForSimd(v8::internal::Zone*, v8::internal::compiler::CallDescriptor*) + 27521548 (Electron Framework + 96767564) [0x11756fe4c]
+                                                                  1  v8::internal::compiler::GetI32WasmCallDescriptorForSimd(v8::internal::Zone*, v8::internal::compiler::CallDescriptor*) + 25623854 (Electron Framework + 94869870) [0x1173a096e]
+                                                                    1  v8::internal::compiler::GetI32WasmCallDescriptorForSimd(v8::internal::Zone*, v8::internal::compiler::CallDescriptor*) + 25669450 (Electron Framework + 94915466) [0x1173abb8a]
+                                                                      1  v8::internal::compiler::GetI32WasmCallDescriptorForSimd(v8::internal::Zone*, v8::internal::compiler::CallDescriptor*) + 25649747 (Electron Framework + 94895763) [0x1173a6e93]
+                                                                        1  v8::internal::compiler::GetI32WasmCallDescriptorForSimd(v8::internal::Zone*, v8::internal::compiler::CallDescriptor*) + 25647722 (Electron Framework + 94893738) [0x1173a66aa]
+                                                                          1  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 25034525 (Electron Framework + 41955245) [0x114129fad]
+                                                                            1  v8::internal::compiler::GetI32WasmCallDescriptorForSimd(v8::internal::Zone*, v8::internal::compiler::CallDescriptor*) + 24351992 (Electron Framework + 93598008) [0x11726a138]
+                                                                              1  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 25037385 (Electron Framework + 41958105) [0x11412aad9]
+                                                                                1  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 25086248 (Electron Framework + 42006968) [0x1141369b8]
+                                                                                  1  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 25089104 (Electron Framework + 42009824) [0x1141374e0]
+                                                                                    1  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 30221929 (Electron Framework + 47142649) [0x11461c6f9]
+                                                                                      1  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 32694941 (Electron Framework + 49615661) [0x11487832d]
+                                                                                        1  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 30203011 (Electron Framework + 47123731) [0x114617d13]
+                                                                                          1  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 30339132 (Electron Framework + 47259852) [0x1146390cc]
+                                                                                            1  v8::Function::Call(v8::Local<v8::Context>, v8::Local<v8::Value>, int, v8::Local<v8::Value>*) + 579 (Electron Framework + 8248035) [0x112104ae3]
+                                                                                              1  v8::internal::Execution::Call(v8::internal::Isolate*, v8::internal::Handle<v8::internal::Object>, v8::internal::Handle<v8::internal::Object>, int, v8::internal::Handle<v8::internal::Object>*) + 667 (Electron Framework + 8911643) [0x1121a6b1b]
+                                                                                                1  ??? [0x7900047383]
+                                                                                                  1  ??? [0x79000475fb]
+                                                                                                    1  ??? [0x7900049541]
+                                                                                                      1  ??? [0x7900049541]
+                                                                                                        1  ??? [0x79003bada5]
+                                                                                                          1  ??? [0x79002890f8]
+                                                                                                            1  ??? [0x7900049541]
+                                                                                                              1  ??? [0x7900290af0]
+                                                                                                                1  ??? [0x79002d8db0]
+                                                                                                                  1  ??? [0x79002d41c5]
+                                                                                                                    1  ??? [0x7900049541]
+                                                                                                                      1  ??? (libRosettaRuntime + 49612) [0x108f221cc]
+                                          1  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 9898032 (Electron Framework + 26818752) [0x1132ba8c0]
+                                            1  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 9836193 (Electron Framework + 26756913) [0x1132ab731]
+                                              1  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 1507127 (Electron Framework + 18427847) [0x112ab9fc7]
+                                                1  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 1493418 (Electron Framework + 18414138) [0x112ab6a3a]
+                                                  1  v8::internal::MicrotaskQueue::PerformCheckpoint(v8::Isolate*) + 416 (Electron Framework + 9028992) [0x1121c3580]
+                                                    1  v8::internal::Execution::TryCall(v8::internal::Isolate*, v8::internal::Handle<v8::internal::Object>, v8::internal::Handle<v8::internal::Object>, int, v8::internal::Handle<v8::internal::Object>*, v8::internal::Execution::MessageHandling, v8::internal::MaybeHandle<v8::internal::Object>*, bool) + 576 (Electron Framework + 8919040) [0x1121a8800]
+                                                      1  v8::internal::Execution::TryCall(v8::internal::Isolate*, v8::internal::Handle<v8::internal::Object>, v8::internal::Handle<v8::internal::Object>, int, v8::internal::Handle<v8::internal::Object>*, v8::internal::Execution::MessageHandling, v8::internal::MaybeHandle<v8::internal::Object>*, bool) + 355 (Electron Framework + 8918819) [0x1121a8723]
+                                                        1  v8::internal::Execution::Call(v8::internal::Isolate*, v8::internal::Handle<v8::internal::Object>, v8::internal::Handle<v8::internal::Object>, int, v8::internal::Handle<v8::internal::Object>*) + 5810 (Electron Framework + 8916786) [0x1121a7f32]
+                                                          1  ??? [0x7900047543]
+                                                            1  ??? [0x7900069a28]
+                                                              1  ??? [0x79000fb358]
+                                                                1  ??? [0x7900049541]
+                                                                  1  ??? [0x7900298c50]
+                                                                    1  ??? [0x7900295790]
+                                                                      1  ??? [0x79003bada5]
+                                                                        1  ??? [0x79002890f8]
+                                                                          1  ??? [0x7900049541]
+                                                                            1  ??? [0x7900290af0]
+                                                                              1  ??? [0x79002da344]
+                                                                                1  ??? [0x7900049541]
+                                                                                  1  ??? [0x7900049541]
+                                                                                    1  ??? [0x7900049541]
+                                                                                      1  ??? [0x790014030e]
+                                                                                        1  ??? [0x79000469ba]
+                                                                                          1  ??? [0x7900049541]
+                                                                                            1  ??? [0x79001f3ee8]
+                                                                                              1  ??? [0x7900098f7e]
+                                                                                                1  ??? [0x79000b22b8]
+                                                                                                  1  v8::internal::Runtime::SetObjectProperty(v8::internal::Isolate*, v8::internal::Handle<v8::internal::Object>, v8::internal::Handle<v8::internal::Object>, v8::internal::Handle<v8::internal::Object>, v8::internal::StoreOrigin, v8::Maybe<v8::internal::ShouldThrow>) + 9723 (Electron Framework + 12507451) [0x11251493b]
+                                                                                                    1  v8::internal::JSReceiver::GetDataProperty(v8::internal::LookupIterator*, v8::internal::AllocationPolicy) + 1503 (Electron Framework + 11022335) [0x1123a9fff]
+                                                                                                      1  ??? [0x11ae263e0]
+  2  thread_start + 15 (libsystem_pthread.dylib + 8207) [0x7ff81dfb200f]
+    2  _pthread_start + 125 (libsystem_pthread.dylib + 25844) [0x7ff81dfb64f4]
+      2  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 10105960 (Electron Framework + 27026680) [0x1132ed4f8]
+        1  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 9985853 (Electron Framework + 26906573) [0x1132cffcd]
+          1  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 9986404 (Electron Framework + 26907124) [0x1132d01f4]
+            1  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 9947075 (Electron Framework + 26867795) [0x1132c6853]
+              1  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 10104968 (Electron Framework + 27025688) [0x1132ed118]
+                1  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 9948699 (Electron Framework + 26869419) [0x1132c6eab]
+                  1  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 9952935 (Electron Framework + 26873655) [0x1132c7f37]
+                    1  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 9798796 (Electron Framework + 26719516) [0x1132a251c]
+                      1  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 9929163 (Electron Framework + 26849883) [0x1132c225b]
+                        1  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 31915431 (Electron Framework + 48836151) [0x1147b9e37]
+                          1  v8::internal::Sweeper::StartSweeperTasks() + 10340 (Electron Framework + 10167796) [0x1122d95f4]
+                            1  v8::internal::Sweeper::StartSweeperTasks() + 6701 (Electron Framework + 10164157) [0x1122d87bd]
+                              1  v8::internal::Sweeper::StartSweeperTasks() + 2975 (Electron Framework + 10160431) [0x1122d792f]
+                                1  ??? [0x10125ddf8]
+                                  1  <Effective Thread QoS Unspecified, Requested Thread QoS Unspecified>
+        1  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 1529920 (Electron Framework + 18450640) [0x112abf8d0]
+          1  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 9716124 (Electron Framework + 26636844) [0x11328e22c]
+            1  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 9902911 (Electron Framework + 26823631) [0x1132bbbcf]
+              1  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 9600881 (Electron Framework + 26521601) [0x113272001]
+                1  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 9897830 (Electron Framework + 26818550) [0x1132ba7f6]
+                  1  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 9798796 (Electron Framework + 26719516) [0x1132a251c]
+                    1  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 20280280 (Electron Framework + 37201000) [0x113ca1468]
+                      1  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 20294835 (Electron Framework + 37215555) [0x113ca4d43]
+                        1  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 20306119 (Electron Framework + 37226839) [0x113ca7957]
+                          1  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 20139900 (Electron Framework + 37060620) [0x113c7f00c]
+                            1  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 20612500 (Electron Framework + 37533220) [0x113cf2624]
+                              1  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 20462488 (Electron Framework + 37383208) [0x113ccdc28]
+                                1  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 20643869 (Electron Framework + 37564589) [0x113cfa0ad]
+                                  1  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 19953839 (Electron Framework + 36874559) [0x113c5193f]
+                                    1  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 19955277 (Electron Framework + 36875997) [0x113c51edd]
+                                      1  v8::internal::SetupIsolateDelegate::SetupHeap(v8::internal::Heap*) + 20101570 (Electron Framework + 37022290) [0x113c75a52]
+                                        1  free + 120 (libsystem_malloc.dylib + 8472) [0x7ff81ddd0118]
+                                          1  szone_size + 45 (libsystem_malloc.dylib + 18756) [0x7ff81ddd2944]
+                                            1  ??? [0x7ff8ae66c994]
+                                              1  <Effective Thread QoS Unspecified, Requested Thread QoS Unspecified>
+
+  Binary Images:
+           0x100ed0000 -        0x100ee3fff  com.fing.app.helper.Renderer (2.8.0.334) <E77B806A-0235-3B7A-93DF-C17FD5301281>  /Applications/Fing.app/Contents/Frameworks/Fing Helper (Renderer).app/Contents/MacOS/Fing Helper (Renderer)
+           0x108f16000 -        0x108f71fff  libRosettaRuntime (254.5.5)              <541DAD79-EC88-353E-823D-D0FD980BFD90>  /Library/Apple/*/libRosettaRuntime
+           0x111927000 -        0x119a76fff  com.github.Electron.framework (13.4.0)   <3AC6811C-C93A-3A42-83E2-2B84E3A68DF4>  /Applications/Fing.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Electron Framework
+           0x20100f000 -        0x201092fff  dyld (941.5)                             <7DE33963-BBC5-3996-BA6E-F1D562C17C95>  /usr/lib/dyld
+        0x7ff81ddce000 -     0x7ff81ddf9fff  libsystem_malloc.dylib (374.60.3)        <DB7B390B-09CA-3E17-A367-5FF55DC92262>  /usr/lib/system/libsystem_malloc.dylib
+        0x7ff81dfb0000 -     0x7ff81dfbbfff  libsystem_pthread.dylib (485.60.2)       <EE564342-D8F2-396D-B642-40092CF34D82>  /usr/lib/system/libsystem_pthread.dylib
+        0x7ff81dffd000 -     0x7ff81e4fdfff  com.apple.CoreFoundation 6.9 (1856.105)  <F56186E2-5605-3C5C-9063-C14BA1BA950C>  /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
+        0x7ff81eda9000 -     0x7ff81f163fff  com.apple.Foundation 6.9 (1856.105)      <D97BFBA6-8818-33C6-A511-66F5C432FBD7>  /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation

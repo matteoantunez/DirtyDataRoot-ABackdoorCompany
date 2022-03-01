@@ -1,0 +1,848 @@
+Date/Time:        2022-02-26 18:11:03.373 -0600
+End time:         2022-02-27 01:09:43.649 -0600
+OS Version:       macOS 12.2 (Build 21D49)
+Architecture:     arm64e
+Report Version:   35
+Incident Identifier: 3941D142-B3C0-4691-932B-FD426A05110F
+Share With Devs:  Yes
+
+Data Source:      Microstackshots
+Shared Cache:     B90241B2-E425-3982-B3F6-26C4567CBB49 slid base address 0x1a4c68000, slide 0x24c68000
+Shared Cache:     13FE38D9-95AD-3D4F-889F-443CD57D94DE slid base address 0x7ff81dc98000, slide 0x1dc98000
+
+Command:          com.apple.StreamingUnzipService
+Path:             /System/Library/PrivateFrameworks/StreamingZip.framework/Versions/A/XPCServices/com.apple.StreamingUnzipService.xpc/Contents/MacOS/com.apple.StreamingUnzipService
+Identifier:       com.apple.StreamingUnzipService
+Version:          1.0 (1)
+Build Version:    4228
+Project Name:     StreamingZip
+Source Version:   182000000000000
+Architecture:     arm64e
+Parent:           launchd [1]
+PID:              34554
+
+Event:            disk writes
+Action taken:     none
+Writes:           2147.52 MB of file backed memory dirtied over 25120 seconds (85.49 KB per second average), exceeding limit of 24.86 KB per second over 86400 seconds
+Writes limit:     2147.48 MB
+Limit duration:   86400s
+Writes caused:    2147.52 MB
+Writes duration:  25120s
+Duration:         25120.28s
+Duration Sampled: 25119.45s
+Steps:            1565 ( (10.49 MB/step))
+
+Hardware model:   MacBookPro17,1
+Active cpus:      8
+HW page size:     16384
+VM page size:     16384
+
+Advisory levels:  Battery -> 3, User -> 2, ThermalPressure -> 0, Combined -> 2
+Free disk space:  21.16 GB/228.27 GB, low space threshold 3072 MB
+Low Power Mode:   Enabled (for first 24962.0s)
+
+Heaviest stack for the target process:
+  184  start_wqthread + 8 (libsystem_pthread.dylib + 8216) [0x1a4f70018]
+  184  _pthread_wqthread + 288 (libsystem_pthread.dylib + 13060) [0x1a4f71304]
+  184  _dispatch_workloop_worker_thread + 656 (libdispatch.dylib + 91912) [0x1a4dc9708]
+  184  _dispatch_lane_invoke + 444 (libdispatch.dylib + 48856) [0x1a4dbeed8]
+  184  _dispatch_lane_serial_drain + 376 (libdispatch.dylib + 45576) [0x1a4dbe208]
+  184  _dispatch_mach_invoke + 456 (libdispatch.dylib + 134328) [0x1a4dd3cb8]
+  184  _dispatch_lane_serial_drain + 376 (libdispatch.dylib + 45576) [0x1a4dbe208]
+  184  _dispatch_mach_msg_invoke + 476 (libdispatch.dylib + 130920) [0x1a4dd2f68]
+  184  _dispatch_client_callout4 + 20 (libdispatch.dylib + 15468) [0x1a4db6c6c]
+  184  _xpc_connection_mach_event + 1368 (libxpc.dylib + 52216) [0x1a4cc6bf8]
+  184  _xpc_connection_call_event_handler + 176 (libxpc.dylib + 57816) [0x1a4cc81d8]
+  184  message_handler + 228 (Foundation + 138444) [0x1a5ed1ccc]
+  184  -[NSXPCConnection _decodeAndInvokeMessageWithEvent:flags:] + 1820 (Foundation + 447248) [0x1a5f1d310]
+  184  __NSXPCCONNECTION_IS_CALLING_OUT_TO_EXPORTED_OBJECT_S2__ + 16 (Foundation + 451376) [0x1a5f1e330]
+  184  ??? (com.apple.StreamingUnzipService + 85472) [0x10022cde0]
+  184  -[NSData(NSData) enumerateByteRangesUsingBlock:] + 132 (Foundation + 292044) [0x1a5ef74cc]
+  184  ??? (com.apple.StreamingUnzipService + 85864) [0x10022cf68]
+  184  write + 8 (libsystem_kernel.dylib + 21820) [0x1a4f3d53c]
+
+
+Powerstats for:   com.apple.StreamingUnzipService [34554]
+UUID:             94E35F0B-8163-3595-987F-7F54331F7098
+Path:             /System/Library/PrivateFrameworks/StreamingZip.framework/Versions/A/XPCServices/com.apple.StreamingUnzipService.xpc/Contents/MacOS/com.apple.StreamingUnzipService
+Identifier:       com.apple.StreamingUnzipService
+Version:          1.0 (1)
+Build Version:    4228
+Project Name:     StreamingZip
+Source Version:   182000000000000
+Shared Cache:     B90241B2-E425-3982-B3F6-26C4567CBB49 slid base address 0x1a4c68000, slide 0x24c68000
+Architecture:     arm64e
+Parent:           launchd [1]
+UID:              242
+Sudden Term:      Tracked (allows idle exit)
+Footprint:        6928 KB -> 8480 KB (+1552 KB)
+Pageins:          24 pages
+Start time:       2022-02-26 19:58:25.639 -0600
+End time:         2022-02-27 01:09:42.948 -0600
+Num samples:      184 (12%)
+Primary state:    164 samples Non-Frontmost App, Non-Suppressed, Kernel mode, Effective Thread QoS Background, Requested Thread QoS Background, Override Thread QoS Unspecified
+User Activity:    182 samples Idle, 2 samples Active
+Power Source:     0 samples on Battery, 184 samples on AC
+  184  start_wqthread + 8 (libsystem_pthread.dylib + 8216) [0x1a4f70018]
+    184  _pthread_wqthread + 288 (libsystem_pthread.dylib + 13060) [0x1a4f71304]
+      184  _dispatch_workloop_worker_thread + 656 (libdispatch.dylib + 91912) [0x1a4dc9708]
+        184  _dispatch_lane_invoke + 444 (libdispatch.dylib + 48856) [0x1a4dbeed8]
+          184  _dispatch_lane_serial_drain + 376 (libdispatch.dylib + 45576) [0x1a4dbe208]
+            184  _dispatch_mach_invoke + 456 (libdispatch.dylib + 134328) [0x1a4dd3cb8]
+              184  _dispatch_lane_serial_drain + 376 (libdispatch.dylib + 45576) [0x1a4dbe208]
+                184  _dispatch_mach_msg_invoke + 476 (libdispatch.dylib + 130920) [0x1a4dd2f68]
+                  184  _dispatch_client_callout4 + 20 (libdispatch.dylib + 15468) [0x1a4db6c6c]
+                    184  _xpc_connection_mach_event + 1368 (libxpc.dylib + 52216) [0x1a4cc6bf8]
+                      184  _xpc_connection_call_event_handler + 176 (libxpc.dylib + 57816) [0x1a4cc81d8]
+                        184  message_handler + 228 (Foundation + 138444) [0x1a5ed1ccc]
+                          184  -[NSXPCConnection _decodeAndInvokeMessageWithEvent:flags:] + 1820 (Foundation + 447248) [0x1a5f1d310]
+                            184  __NSXPCCONNECTION_IS_CALLING_OUT_TO_EXPORTED_OBJECT_S2__ + 16 (Foundation + 451376) [0x1a5f1e330]
+                              184  ??? (com.apple.StreamingUnzipService + 85472) [0x10022cde0]
+                                184  -[NSData(NSData) enumerateByteRangesUsingBlock:] + 132 (Foundation + 292044) [0x1a5ef74cc]
+                                  184  ??? (com.apple.StreamingUnzipService + 85864) [0x10022cf68]
+                                    184  write + 8 (libsystem_kernel.dylib + 21820) [0x1a4f3d53c]
+                                      17   <Requested Thread QoS Default>
+                                      2    <Effective Thread QoS Maintenance, Requested Thread QoS Maintenance>
+                                      1    <Effective Thread QoS Default, Requested Thread QoS Default>
+
+  Binary Images:
+           0x100218000 -        0x10023ffff  com.apple.StreamingUnzipService 1.0 (1) <94E35F0B-8163-3595-987F-7F54331F7098>  /System/Library/PrivateFrameworks/StreamingZip.framework/Versions/A/XPCServices/com.apple.StreamingUnzipService.xpc/Contents/MacOS/com.apple.StreamingUnzipService
+           0x1a4cba000 -        0x1a4cf3fff  libxpc.dylib (2235.80.3)                <FD3E0E8D-4618-3CE5-A24A-5639BE86B979>  /usr/lib/system/libxpc.dylib
+           0x1a4db3000 -        0x1a4df9fff  libdispatch.dylib (1324.60.3)           <93E1DCFC-EF56-3113-8E7C-1BA85266A93B>  /usr/lib/system/libdispatch.dylib
+           0x1a4f38000 -        0x1a4f6dfff  libsystem_kernel.dylib (8019.80.24)     <384945E6-DD71-37E5-9A3D-84FFF14A1E60>  /usr/lib/system/libsystem_kernel.dylib
+           0x1a4f6e000 -        0x1a4f7afff  libsystem_pthread.dylib (485.60.2)      <F7B2ECCF-E6F1-3109-AE81-9028C0B8332A>  /usr/lib/system/libsystem_pthread.dylib
+           0x1a5eb0000 -        0x1a629dfff  com.apple.Foundation 6.9 (1856.105)     <90321A38-43A5-3767-9A9C-2C631338B9BC>  /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
+
+
+Powerstats for:   revisiond
+UUID:             10454362-2564-3732-9697-D34CDA377DC6
+Path:             /System/Library/PrivateFrameworks/GenerationalStorage.framework/Versions/A/Support/revisiond
+Codesigning ID:   com.apple.revisiond
+Shared Cache:     B90241B2-E425-3982-B3F6-26C4567CBB49 slid base address 0x1a4c68000, slide 0x24c68000
+Architecture:     arm64e
+Start time:       2022-02-26 18:12:58.288 -0600
+End time:         2022-02-26 19:44:46.141 -0600
+Num samples:      373 (24%)
+Primary state:    373 samples Non-Frontmost App, Non-Suppressed, Kernel mode, Effective Thread QoS Background, Requested Thread QoS Background, Override Thread QoS Unspecified
+User Activity:    0 samples Idle, 373 samples Active
+Power Source:     2 samples on Battery, 371 samples on AC
+  373  start_wqthread + 8 (libsystem_pthread.dylib + 8216) [0x1a4f70018]
+    373  _pthread_wqthread + 288 (libsystem_pthread.dylib + 13060) [0x1a4f71304]
+      373  _dispatch_workloop_worker_thread + 656 (libdispatch.dylib + 91912) [0x1a4dc9708]
+        373  _dispatch_lane_invoke + 444 (libdispatch.dylib + 48856) [0x1a4dbeed8]
+          371  _dispatch_lane_serial_drain + 896 (libdispatch.dylib + 46096) [0x1a4dbe410]
+            371  _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+              371  _dispatch_call_block_and_release + 32 (libdispatch.dylib + 7776) [0x1a4db4e60]
+                371  ??? (revisiond + 161236) [0x102e6f5d4]
+                  371  ??? (revisiond + 106112) [0x102e61e80]
+                    371  CKConvertFileToChunked + 44 (ChunkingLibrary + 42764) [0x1baa8a70c]
+                      345  _CKConvertFileToChunked + 608 (ChunkingLibrary + 34812) [0x1baa887fc]
+                        345  CSChunkFile + 148 (ChunkingLibrary + 52244) [0x1baa8cc14]
+                          345  chunkFdForStorage + 1068 (ChunkingLibrary + 71556) [0x1baa91784]
+                            345  chunkItem + 3996 (ChunkingLibrary + 79648) [0x1baa93720]
+                              345  CSchunklist_add_stream + 1140 (ChunkingLibrary + 105056) [0x1baa99a60]
+                                273  CSChunkStorageCallback + 124 (ChunkingLibrary + 59076) [0x1baa8e6c4]
+                                  273  _CSFlushChunkBatch + 140 (ChunkingLibrary + 59468) [0x1baa8e84c]
+                                    216  _CSStoreChunks + 2144 (ChunkingLibrary + 153700) [0x1baaa5864]
+                                      216  write + 8 (libsystem_kernel.dylib + 21820) [0x1a4f3d53c]
+                                    56   _CSStoreChunks + 3888 (ChunkingLibrary + 155444) [0x1baaa5f34]
+                                      56   _CSEndTransactionSqlRc + 72 (ChunkingLibrary + 115376) [0x1baa9c2b0]
+                                        56   CS_corruption_checking_sqlite3_exec + 120 (ChunkingLibrary + 114876) [0x1baa9c0bc]
+                                          56   sqlite3_exec + 356 (libsqlite3.dylib + 40468) [0x1ab47be14]
+                                            48   sqlite3_step + 3284 (libsqlite3.dylib + 289020) [0x1ab4b88fc]
+                                              48   sqlite3VdbeExec + 56548 (libsqlite3.dylib + 347716) [0x1ab4c6e44]
+                                                48   sqlite3VdbeHalt + 3428 (libsqlite3.dylib + 155176) [0x1ab497e28]
+                                                  48   sqlite3BtreeCommitPhaseOne + 164 (libsqlite3.dylib + 372568) [0x1ab4ccf58]
+                                                    48   sqlite3PagerCommitPhaseOne + 312 (libsqlite3.dylib + 458816) [0x1ab4e2040]
+                                                      48   pagerWalFrames + 1720 (libsqlite3.dylib + 821220) [0x1ab53a7e4]
+                                                        48   unixWrite + 180 (libsqlite3.dylib + 460888) [0x1ab4e2858]
+                                                          48   guarded_pwrite_np + 8 (libsystem_kernel.dylib + 20852) [0x1a4f3d174]
+                                            8    sqlite3_step + 3576 (libsqlite3.dylib + 289312) [0x1ab4b8a20]
+                                              8    sqlite3WalDefaultHook + 72 (libsqlite3.dylib + 461884) [0x1ab4e2c3c]
+                                                8    sqlite3_wal_checkpoint_v2 + 500 (libsqlite3.dylib + 695928) [0x1ab51be78]
+                                                  8    sqlite3Checkpoint + 372 (libsqlite3.dylib + 696472) [0x1ab51c098]
+                                                    8    sqlite3WalCheckpoint + 5264 (libsqlite3.dylib + 554936) [0x1ab4f97b8]
+                                                      8    unixWrite + 180 (libsqlite3.dylib + 460888) [0x1ab4e2858]
+                                                        8    guarded_pwrite_np + 8 (libsystem_kernel.dylib + 20852) [0x1a4f3d174]
+                                    1    _CSStoreChunks + 544 (ChunkingLibrary + 152100) [0x1baaa5224]
+                                      1    _CSSetDirtyState + 140 (ChunkingLibrary + 156428) [0x1baaa630c]
+                                        1    __open + 8 (libsystem_kernel.dylib + 9172) [0x1a4f3a3d4]
+                                72   CSChunkStorageCallback + 308 (ChunkingLibrary + 59260) [0x1baa8e77c]
+                                  72   _CSRegisterStorageChunkList + 356 (ChunkingLibrary + 159608) [0x1baaa6f78]
+                                    72   _CSEndTransactionSqlRc + 72 (ChunkingLibrary + 115376) [0x1baa9c2b0]
+                                      72   CS_corruption_checking_sqlite3_exec + 120 (ChunkingLibrary + 114876) [0x1baa9c0bc]
+                                        72   sqlite3_exec + 356 (libsqlite3.dylib + 40468) [0x1ab47be14]
+                                          64   sqlite3_step + 3284 (libsqlite3.dylib + 289020) [0x1ab4b88fc]
+                                            64   sqlite3VdbeExec + 56548 (libsqlite3.dylib + 347716) [0x1ab4c6e44]
+                                              64   sqlite3VdbeHalt + 3428 (libsqlite3.dylib + 155176) [0x1ab497e28]
+                                                64   sqlite3BtreeCommitPhaseOne + 164 (libsqlite3.dylib + 372568) [0x1ab4ccf58]
+                                                  64   sqlite3PagerCommitPhaseOne + 312 (libsqlite3.dylib + 458816) [0x1ab4e2040]
+                                                    64   pagerWalFrames + 1720 (libsqlite3.dylib + 821220) [0x1ab53a7e4]
+                                                      64   unixWrite + 180 (libsqlite3.dylib + 460888) [0x1ab4e2858]
+                                                        64   guarded_pwrite_np + 8 (libsystem_kernel.dylib + 20852) [0x1a4f3d174]
+                                          8    sqlite3_step + 3576 (libsqlite3.dylib + 289312) [0x1ab4b8a20]
+                                            8    sqlite3WalDefaultHook + 72 (libsqlite3.dylib + 461884) [0x1ab4e2c3c]
+                                              8    sqlite3_wal_checkpoint_v2 + 500 (libsqlite3.dylib + 695928) [0x1ab51be78]
+                                                8    sqlite3Checkpoint + 372 (libsqlite3.dylib + 696472) [0x1ab51c098]
+                                                  8    sqlite3WalCheckpoint + 5264 (libsqlite3.dylib + 554936) [0x1ab4f97b8]
+                                                    8    unixWrite + 180 (libsqlite3.dylib + 460888) [0x1ab4e2858]
+                                                      8    guarded_pwrite_np + 8 (libsystem_kernel.dylib + 20852) [0x1a4f3d174]
+                      22   _CKConvertFileToChunked + 3708 (ChunkingLibrary + 37912) [0x1baa89418]
+                        22   CKCommitChunkedFile + 124 (ChunkingLibrary + 60300) [0x1baa8eb8c]
+                          22   _CSCommitChunkedFile + 380 (ChunkingLibrary + 158052) [0x1baaa6964]
+                            22   CSsql_corruption_checking_do + 76 (ChunkingLibrary + 126864) [0x1baa9ef90]
+                              22   CSsql_doV + 328 (ChunkingLibrary + 45352) [0x1baa8b128]
+                                22   sqlite3_exec + 356 (libsqlite3.dylib + 40468) [0x1ab47be14]
+                                  22   sqlite3_step + 3284 (libsqlite3.dylib + 289020) [0x1ab4b88fc]
+                                    22   sqlite3VdbeExec + 56456 (libsqlite3.dylib + 347624) [0x1ab4c6de8]
+                                      22   sqlite3VdbeHalt + 3428 (libsqlite3.dylib + 155176) [0x1ab497e28]
+                                        22   sqlite3BtreeCommitPhaseOne + 164 (libsqlite3.dylib + 372568) [0x1ab4ccf58]
+                                          22   sqlite3PagerCommitPhaseOne + 312 (libsqlite3.dylib + 458816) [0x1ab4e2040]
+                                            22   pagerWalFrames + 1720 (libsqlite3.dylib + 821220) [0x1ab53a7e4]
+                                              22   unixWrite + 180 (libsqlite3.dylib + 460888) [0x1ab4e2858]
+                                                22   guarded_pwrite_np + 8 (libsystem_kernel.dylib + 20852) [0x1a4f3d174]
+                      2    fsetxattr + 8 (libsystem_kernel.dylib + 27944) [0x1a4f3ed28]
+                      2    ftruncate + 8 (libsystem_kernel.dylib + 20496) [0x1a4f3d010]
+          2    _dispatch_lane_serial_drain + 376 (libdispatch.dylib + 45576) [0x1a4dbe208]
+            2    _dispatch_source_invoke + 1356 (libdispatch.dylib + 106916) [0x1a4dcd1a4]
+              2    _dispatch_continuation_pop + 504 (libdispatch.dylib + 28800) [0x1a4dba080]
+                2    _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+                  2    _dispatch_block_async_invoke2 + 148 (libdispatch.dylib + 76176) [0x1a4dc5990]
+                    2    __37-[PQLConnection _batchStartIfNeeded:]_block_invoke + 172 (libprequelite.dylib + 22192) [0x1c97db6b0]
+                      2    -[PQLConnection flush] + 316 (libprequelite.dylib + 27668) [0x1c97dcc14]
+                        2    -[PQLConnection _execute:mustSucceed:bindings:] + 72 (libprequelite.dylib + 39644) [0x1c97dfadc]
+                          2    -[PQLConnection _executeStmt:mustSucceed:] + 112 (libprequelite.dylib + 39216) [0x1c97df930]
+                            1    sqlite3_step + 3576 (libsqlite3.dylib + 289312) [0x1ab4b8a20]
+                              1    sqlite3WalDefaultHook + 72 (libsqlite3.dylib + 461884) [0x1ab4e2c3c]
+                                1    sqlite3_wal_checkpoint_v2 + 500 (libsqlite3.dylib + 695928) [0x1ab51be78]
+                                  1    sqlite3Checkpoint + 372 (libsqlite3.dylib + 696472) [0x1ab51c098]
+                                    1    sqlite3WalCheckpoint + 5264 (libsqlite3.dylib + 554936) [0x1ab4f97b8]
+                                      1    unixWrite + 180 (libsqlite3.dylib + 460888) [0x1ab4e2858]
+                                        1    guarded_pwrite_np + 8 (libsystem_kernel.dylib + 20852) [0x1a4f3d174]
+                            1    sqlite3_step + 3284 (libsqlite3.dylib + 289020) [0x1ab4b88fc]
+                              1    sqlite3VdbeExec + 56548 (libsqlite3.dylib + 347716) [0x1ab4c6e44]
+                                1    sqlite3VdbeHalt + 3428 (libsqlite3.dylib + 155176) [0x1ab497e28]
+                                  1    sqlite3BtreeCommitPhaseOne + 164 (libsqlite3.dylib + 372568) [0x1ab4ccf58]
+                                    1    sqlite3PagerCommitPhaseOne + 312 (libsqlite3.dylib + 458816) [0x1ab4e2040]
+                                      1    pagerWalFrames + 1720 (libsqlite3.dylib + 821220) [0x1ab53a7e4]
+                                        1    unixWrite + 180 (libsqlite3.dylib + 460888) [0x1ab4e2858]
+                                          1    guarded_pwrite_np + 8 (libsystem_kernel.dylib + 20852) [0x1a4f3d174]
+
+  Binary Images:
+           0x102e48000 -        0x102ea3fff  revisiond (333)                         <10454362-2564-3732-9697-D34CDA377DC6>  /System/Library/PrivateFrameworks/GenerationalStorage.framework/Versions/A/Support/revisiond
+           0x1a4db3000 -        0x1a4df9fff  libdispatch.dylib (1324.60.3)           <93E1DCFC-EF56-3113-8E7C-1BA85266A93B>  /usr/lib/system/libdispatch.dylib
+           0x1a4f38000 -        0x1a4f6dfff  libsystem_kernel.dylib (8019.80.24)     <384945E6-DD71-37E5-9A3D-84FFF14A1E60>  /usr/lib/system/libsystem_kernel.dylib
+           0x1a4f6e000 -        0x1a4f7afff  libsystem_pthread.dylib (485.60.2)      <F7B2ECCF-E6F1-3109-AE81-9028C0B8332A>  /usr/lib/system/libsystem_pthread.dylib
+           0x1ab472000 -        0x1ab61ffff  libsqlite3.dylib (331)                  <BF74926A-62E6-3EDD-99BC-40B4388DBA3E>  /usr/lib/libsqlite3.dylib
+           0x1baa80000 -        0x1baad2fff  com.apple.ChunkingLibrary 337.1 (337.1) <202B9625-0346-36C1-8314-50A77D3505A4>  /System/Library/PrivateFrameworks/ChunkingLibrary.framework/Versions/A/ChunkingLibrary
+           0x1c97d6000 -        0x1c97eafff  libprequelite.dylib (117)               <A9234318-AF37-3F06-A1A5-98A6EF477E92>  /usr/lib/libprequelite.dylib
+
+
+Powerstats for:   cloudd
+UUID:             F41BDA92-9D1E-3A4D-AFC9-B9C0F678F21A
+Path:             /System/Library/PrivateFrameworks/CloudKitDaemon.framework/Support/cloudd
+Codesigning ID:   com.apple.cloudd
+Shared Cache:     B90241B2-E425-3982-B3F6-26C4567CBB49 slid base address 0x1a4c68000, slide 0x24c68000
+Architecture:     arm64e
+Start time:       2022-02-26 18:12:25.612 -0600
+End time:         2022-02-27 01:07:24.787 -0600
+Num samples:      325 (21%)
+Primary state:    282 samples Non-Frontmost App, Non-Suppressed, Kernel mode, Effective Thread QoS Utility, Requested Thread QoS Utility, Override Thread QoS Unspecified
+User Activity:    277 samples Idle, 48 samples Active
+Power Source:     5 samples on Battery, 320 samples on AC
+  276  thread_start + 8 (libsystem_pthread.dylib + 8228) [0x1a4f70024]
+    276  _pthread_start + 148 (libsystem_pthread.dylib + 29248) [0x1a4f75240]
+      276  __NSThread__start__ + 808 (Foundation + 377576) [0x1a5f0c2e8]
+        276  ??? (CloudKitDaemon + 2039124) [0x1d3d67d54]
+          276  CFRunLoopRunSpecific + 600 (CoreFoundation + 534324) [0x1a503e734]
+            149  __CFRunLoopRun + 800 (CoreFoundation + 537076) [0x1a503f1f4]
+              149  __CFRunLoopDoBlocks + 412 (CoreFoundation + 542076) [0x1a504057c]
+                149  __CFRUNLOOP_IS_CALLING_OUT_TO_A_BLOCK__ + 28 (CoreFoundation + 542472) [0x1a5040708]
+                  149  _dispatch_block_invoke_direct + 264 (libdispatch.dylib + 30308) [0x1a4dba664]
+                    149  _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+                      149  ??? (CloudKitDaemon + 2051636) [0x1d3d6ae34]
+                        128  ??? (CloudKitDaemon + 1915876) [0x1d3d49be4]
+                          106  ??? (CloudKitDaemon + 1912576) [0x1d3d48f00]
+                            106  ??? (CloudKitDaemon + 1667312) [0x1d3d0d0f0]
+                              106  ??? (CloudKitDaemon + 1665732) [0x1d3d0cac4]
+                                106  MMCSUnregisterFiles + 800 (MMCS + 432140) [0x1cde9780c]
+                                  106  mmcs_engine_force_commit + 32 (MMCS + 186048) [0x1cde5b6c0]
+                                    106  _CSCommitDatabaseTransactions + 96 (ChunkingLibrary + 21160) [0x1baa852a8]
+                                      106  _CSEndTransactionSqlRc + 72 (ChunkingLibrary + 115376) [0x1baa9c2b0]
+                                        106  CS_corruption_checking_sqlite3_exec + 120 (ChunkingLibrary + 114876) [0x1baa9c0bc]
+                                          106  sqlite3_exec + 356 (libsqlite3.dylib + 40468) [0x1ab47be14]
+                                            68   sqlite3_step + 3576 (libsqlite3.dylib + 289312) [0x1ab4b8a20]
+                                              68   sqlite3WalDefaultHook + 72 (libsqlite3.dylib + 461884) [0x1ab4e2c3c]
+                                                68   sqlite3_wal_checkpoint_v2 + 500 (libsqlite3.dylib + 695928) [0x1ab51be78]
+                                                  68   sqlite3Checkpoint + 372 (libsqlite3.dylib + 696472) [0x1ab51c098]
+                                                    68   sqlite3WalCheckpoint + 5264 (libsqlite3.dylib + 554936) [0x1ab4f97b8]
+                                                      68   unixWrite + 180 (libsqlite3.dylib + 460888) [0x1ab4e2858]
+                                                        68   guarded_pwrite_np + 8 (libsystem_kernel.dylib + 20852) [0x1a4f3d174]
+                                            38   sqlite3_step + 3284 (libsqlite3.dylib + 289020) [0x1ab4b88fc]
+                                              38   sqlite3VdbeExec + 56548 (libsqlite3.dylib + 347716) [0x1ab4c6e44]
+                                                38   sqlite3VdbeHalt + 3428 (libsqlite3.dylib + 155176) [0x1ab497e28]
+                                                  38   sqlite3BtreeCommitPhaseOne + 164 (libsqlite3.dylib + 372568) [0x1ab4ccf58]
+                                                    38   sqlite3PagerCommitPhaseOne + 312 (libsqlite3.dylib + 458816) [0x1ab4e2040]
+                                                      38   pagerWalFrames + 1720 (libsqlite3.dylib + 821220) [0x1ab53a7e4]
+                                                        38   unixWrite + 180 (libsqlite3.dylib + 460888) [0x1ab4e2858]
+                                                          38   guarded_pwrite_np + 8 (libsystem_kernel.dylib + 20852) [0x1a4f3d174]
+                          22   ??? (CloudKitDaemon + 1912736) [0x1d3d48fa0]
+                            22   ??? (CloudKit + 622444) [0x1ac6fff6c]
+                              22   ??? (CloudKit + 621952) [0x1ac6ffd80]
+                                22   ??? (CloudKit + 622792) [0x1ac7000c8]
+                                  22   ??? (CloudKit + 621636) [0x1ac6ffc44]
+                                    22   sqlite3_exec + 356 (libsqlite3.dylib + 40468) [0x1ab47be14]
+                                      12   sqlite3_step + 3576 (libsqlite3.dylib + 289312) [0x1ab4b8a20]
+                                        12   sqlite3WalDefaultHook + 72 (libsqlite3.dylib + 461884) [0x1ab4e2c3c]
+                                          12   sqlite3_wal_checkpoint_v2 + 500 (libsqlite3.dylib + 695928) [0x1ab51be78]
+                                            12   sqlite3Checkpoint + 372 (libsqlite3.dylib + 696472) [0x1ab51c098]
+                                              12   sqlite3WalCheckpoint + 5264 (libsqlite3.dylib + 554936) [0x1ab4f97b8]
+                                                12   unixWrite + 180 (libsqlite3.dylib + 460888) [0x1ab4e2858]
+                                                  12   guarded_pwrite_np + 8 (libsystem_kernel.dylib + 20852) [0x1a4f3d174]
+                                      10   sqlite3_step + 3284 (libsqlite3.dylib + 289020) [0x1ab4b88fc]
+                                        10   sqlite3VdbeExec + 56548 (libsqlite3.dylib + 347716) [0x1ab4c6e44]
+                                          10   sqlite3VdbeHalt + 3428 (libsqlite3.dylib + 155176) [0x1ab497e28]
+                                            10   sqlite3BtreeCommitPhaseOne + 164 (libsqlite3.dylib + 372568) [0x1ab4ccf58]
+                                              10   sqlite3PagerCommitPhaseOne + 312 (libsqlite3.dylib + 458816) [0x1ab4e2040]
+                                                10   pagerWalFrames + 1720 (libsqlite3.dylib + 821220) [0x1ab53a7e4]
+                                                  10   unixWrite + 180 (libsqlite3.dylib + 460888) [0x1ab4e2858]
+                                                    10   guarded_pwrite_np + 8 (libsystem_kernel.dylib + 20852) [0x1a4f3d174]
+                        21   ??? (CloudKitDaemon + 1981920) [0x1d3d59de0]
+                          21   ??? (CloudKitDaemon + 1978992) [0x1d3d59270]
+                            21   ??? (CloudKit + 622444) [0x1ac6fff6c]
+                              21   ??? (CloudKit + 621952) [0x1ac6ffd80]
+                                21   ??? (CloudKit + 622792) [0x1ac7000c8]
+                                  21   ??? (CloudKit + 621636) [0x1ac6ffc44]
+                                    21   sqlite3_exec + 356 (libsqlite3.dylib + 40468) [0x1ab47be14]
+                                      11   sqlite3_step + 3284 (libsqlite3.dylib + 289020) [0x1ab4b88fc]
+                                        11   sqlite3VdbeExec + 56548 (libsqlite3.dylib + 347716) [0x1ab4c6e44]
+                                          11   sqlite3VdbeHalt + 3428 (libsqlite3.dylib + 155176) [0x1ab497e28]
+                                            11   sqlite3BtreeCommitPhaseOne + 164 (libsqlite3.dylib + 372568) [0x1ab4ccf58]
+                                              11   sqlite3PagerCommitPhaseOne + 312 (libsqlite3.dylib + 458816) [0x1ab4e2040]
+                                                11   pagerWalFrames + 1720 (libsqlite3.dylib + 821220) [0x1ab53a7e4]
+                                                  11   unixWrite + 180 (libsqlite3.dylib + 460888) [0x1ab4e2858]
+                                                    11   guarded_pwrite_np + 8 (libsystem_kernel.dylib + 20852) [0x1a4f3d174]
+                                      10   sqlite3_step + 3576 (libsqlite3.dylib + 289312) [0x1ab4b8a20]
+                                        10   sqlite3WalDefaultHook + 72 (libsqlite3.dylib + 461884) [0x1ab4e2c3c]
+                                          10   sqlite3_wal_checkpoint_v2 + 500 (libsqlite3.dylib + 695928) [0x1ab51be78]
+                                            10   sqlite3Checkpoint + 372 (libsqlite3.dylib + 696472) [0x1ab51c098]
+                                              9    sqlite3WalCheckpoint + 5264 (libsqlite3.dylib + 554936) [0x1ab4f97b8]
+                                                9    unixWrite + 180 (libsqlite3.dylib + 460888) [0x1ab4e2858]
+                                                  9    guarded_pwrite_np + 8 (libsystem_kernel.dylib + 20852) [0x1a4f3d174]
+                                              1    sqlite3WalCheckpoint + 4680 (libsqlite3.dylib + 554352) [0x1ab4f9570]
+                                                1    ftruncate + 8 (libsystem_kernel.dylib + 20496) [0x1a4f3d010]
+            127  __CFRunLoopRun + 1728 (CoreFoundation + 538004) [0x1a503f594]
+              127  __CFRunLoopDoBlocks + 412 (CoreFoundation + 542076) [0x1a504057c]
+                127  __CFRUNLOOP_IS_CALLING_OUT_TO_A_BLOCK__ + 28 (CoreFoundation + 542472) [0x1a5040708]
+                  127  _dispatch_block_invoke_direct + 264 (libdispatch.dylib + 30308) [0x1a4dba664]
+                    127  _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+                      127  ??? (CloudKitDaemon + 2051636) [0x1d3d6ae34]
+                        107  ??? (CloudKitDaemon + 1915876) [0x1d3d49be4]
+                          82   ??? (CloudKitDaemon + 1912576) [0x1d3d48f00]
+                            82   ??? (CloudKitDaemon + 1667312) [0x1d3d0d0f0]
+                              82   ??? (CloudKitDaemon + 1665732) [0x1d3d0cac4]
+                                82   MMCSUnregisterFiles + 800 (MMCS + 432140) [0x1cde9780c]
+                                  82   mmcs_engine_force_commit + 32 (MMCS + 186048) [0x1cde5b6c0]
+                                    82   _CSCommitDatabaseTransactions + 96 (ChunkingLibrary + 21160) [0x1baa852a8]
+                                      82   _CSEndTransactionSqlRc + 72 (ChunkingLibrary + 115376) [0x1baa9c2b0]
+                                        82   CS_corruption_checking_sqlite3_exec + 120 (ChunkingLibrary + 114876) [0x1baa9c0bc]
+                                          82   sqlite3_exec + 356 (libsqlite3.dylib + 40468) [0x1ab47be14]
+                                            45   sqlite3_step + 3576 (libsqlite3.dylib + 289312) [0x1ab4b8a20]
+                                              45   sqlite3WalDefaultHook + 72 (libsqlite3.dylib + 461884) [0x1ab4e2c3c]
+                                                45   sqlite3_wal_checkpoint_v2 + 500 (libsqlite3.dylib + 695928) [0x1ab51be78]
+                                                  45   sqlite3Checkpoint + 372 (libsqlite3.dylib + 696472) [0x1ab51c098]
+                                                    45   sqlite3WalCheckpoint + 5264 (libsqlite3.dylib + 554936) [0x1ab4f97b8]
+                                                      45   unixWrite + 180 (libsqlite3.dylib + 460888) [0x1ab4e2858]
+                                                        45   guarded_pwrite_np + 8 (libsystem_kernel.dylib + 20852) [0x1a4f3d174]
+                                            37   sqlite3_step + 3284 (libsqlite3.dylib + 289020) [0x1ab4b88fc]
+                                              37   sqlite3VdbeExec + 56548 (libsqlite3.dylib + 347716) [0x1ab4c6e44]
+                                                37   sqlite3VdbeHalt + 3428 (libsqlite3.dylib + 155176) [0x1ab497e28]
+                                                  37   sqlite3BtreeCommitPhaseOne + 164 (libsqlite3.dylib + 372568) [0x1ab4ccf58]
+                                                    37   sqlite3PagerCommitPhaseOne + 312 (libsqlite3.dylib + 458816) [0x1ab4e2040]
+                                                      37   pagerWalFrames + 1720 (libsqlite3.dylib + 821220) [0x1ab53a7e4]
+                                                        37   unixWrite + 180 (libsqlite3.dylib + 460888) [0x1ab4e2858]
+                                                          37   guarded_pwrite_np + 8 (libsystem_kernel.dylib + 20852) [0x1a4f3d174]
+                          25   ??? (CloudKitDaemon + 1912736) [0x1d3d48fa0]
+                            25   ??? (CloudKit + 622444) [0x1ac6fff6c]
+                              25   ??? (CloudKit + 621952) [0x1ac6ffd80]
+                                25   ??? (CloudKit + 622792) [0x1ac7000c8]
+                                  25   ??? (CloudKit + 621636) [0x1ac6ffc44]
+                                    25   sqlite3_exec + 356 (libsqlite3.dylib + 40468) [0x1ab47be14]
+                                      13   sqlite3_step + 3576 (libsqlite3.dylib + 289312) [0x1ab4b8a20]
+                                        13   sqlite3WalDefaultHook + 72 (libsqlite3.dylib + 461884) [0x1ab4e2c3c]
+                                          13   sqlite3_wal_checkpoint_v2 + 500 (libsqlite3.dylib + 695928) [0x1ab51be78]
+                                            13   sqlite3Checkpoint + 372 (libsqlite3.dylib + 696472) [0x1ab51c098]
+                                              13   sqlite3WalCheckpoint + 5264 (libsqlite3.dylib + 554936) [0x1ab4f97b8]
+                                                13   unixWrite + 180 (libsqlite3.dylib + 460888) [0x1ab4e2858]
+                                                  13   guarded_pwrite_np + 8 (libsystem_kernel.dylib + 20852) [0x1a4f3d174]
+                                      12   sqlite3_step + 3284 (libsqlite3.dylib + 289020) [0x1ab4b88fc]
+                                        12   sqlite3VdbeExec + 56548 (libsqlite3.dylib + 347716) [0x1ab4c6e44]
+                                          12   sqlite3VdbeHalt + 3428 (libsqlite3.dylib + 155176) [0x1ab497e28]
+                                            12   sqlite3BtreeCommitPhaseOne + 164 (libsqlite3.dylib + 372568) [0x1ab4ccf58]
+                                              12   sqlite3PagerCommitPhaseOne + 312 (libsqlite3.dylib + 458816) [0x1ab4e2040]
+                                                12   pagerWalFrames + 1720 (libsqlite3.dylib + 821220) [0x1ab53a7e4]
+                                                  12   unixWrite + 180 (libsqlite3.dylib + 460888) [0x1ab4e2858]
+                                                    12   guarded_pwrite_np + 8 (libsystem_kernel.dylib + 20852) [0x1a4f3d174]
+                        19   ??? (CloudKitDaemon + 1981920) [0x1d3d59de0]
+                          19   ??? (CloudKitDaemon + 1978992) [0x1d3d59270]
+                            19   ??? (CloudKit + 622444) [0x1ac6fff6c]
+                              19   ??? (CloudKit + 621952) [0x1ac6ffd80]
+                                19   ??? (CloudKit + 622792) [0x1ac7000c8]
+                                  19   ??? (CloudKit + 621636) [0x1ac6ffc44]
+                                    19   sqlite3_exec + 356 (libsqlite3.dylib + 40468) [0x1ab47be14]
+                                      13   sqlite3_step + 3576 (libsqlite3.dylib + 289312) [0x1ab4b8a20]
+                                        13   sqlite3WalDefaultHook + 72 (libsqlite3.dylib + 461884) [0x1ab4e2c3c]
+                                          13   sqlite3_wal_checkpoint_v2 + 500 (libsqlite3.dylib + 695928) [0x1ab51be78]
+                                            13   sqlite3Checkpoint + 372 (libsqlite3.dylib + 696472) [0x1ab51c098]
+                                              13   sqlite3WalCheckpoint + 5264 (libsqlite3.dylib + 554936) [0x1ab4f97b8]
+                                                13   unixWrite + 180 (libsqlite3.dylib + 460888) [0x1ab4e2858]
+                                                  13   guarded_pwrite_np + 8 (libsystem_kernel.dylib + 20852) [0x1a4f3d174]
+                                      6    sqlite3_step + 3284 (libsqlite3.dylib + 289020) [0x1ab4b88fc]
+                                        6    sqlite3VdbeExec + 56548 (libsqlite3.dylib + 347716) [0x1ab4c6e44]
+                                          6    sqlite3VdbeHalt + 3428 (libsqlite3.dylib + 155176) [0x1ab497e28]
+                                            6    sqlite3BtreeCommitPhaseOne + 164 (libsqlite3.dylib + 372568) [0x1ab4ccf58]
+                                              6    sqlite3PagerCommitPhaseOne + 312 (libsqlite3.dylib + 458816) [0x1ab4e2040]
+                                                6    pagerWalFrames + 1720 (libsqlite3.dylib + 821220) [0x1ab53a7e4]
+                                                  6    unixWrite + 180 (libsqlite3.dylib + 460888) [0x1ab4e2858]
+                                                    6    guarded_pwrite_np + 8 (libsystem_kernel.dylib + 20852) [0x1a4f3d174]
+                        1    ??? (CloudKitDaemon + 1889440) [0x1d3d434a0]
+                          1    ??? (CloudKitDaemon + 1890380) [0x1d3d4384c]
+                            1    _dispatch_lane_barrier_sync_invoke_and_complete + 56 (libdispatch.dylib + 77312) [0x1a4dc5e00]
+                              1    _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+                                1    ??? (CloudKitDaemon + 1891088) [0x1d3d43b10]
+                                  1    ??? (CloudKit + 629632) [0x1ac701b80]
+                                    1    ??? (CloudKit + 629052) [0x1ac70193c]
+                                      1    sqlite3Close + 1732 (libsqlite3.dylib + 690828) [0x1ab51aa8c]
+                                        1    sqlite3LeaveMutexAndCloseZombie + 492 (libsqlite3.dylib + 645308) [0x1ab50f8bc]
+                                          1    sqlite3BtreeClose + 268 (libsqlite3.dylib + 489144) [0x1ab4e96b8]
+                                            1    sqlite3PagerClose + 336 (libsqlite3.dylib + 490880) [0x1ab4e9d80]
+                                              1    sqlite3WalClose + 352 (libsqlite3.dylib + 491768) [0x1ab4ea0f8]
+                                                1    ftruncate + 8 (libsystem_kernel.dylib + 20496) [0x1a4f3d010]
+  49   start_wqthread + 8 (libsystem_pthread.dylib + 8216) [0x1a4f70018]
+    45   _pthread_wqthread + 288 (libsystem_pthread.dylib + 13060) [0x1a4f71304]
+      45   _dispatch_workloop_worker_thread + 656 (libdispatch.dylib + 91912) [0x1a4dc9708]
+        45   _dispatch_lane_invoke + 444 (libdispatch.dylib + 48856) [0x1a4dbeed8]
+          40   _dispatch_lane_serial_drain + 376 (libdispatch.dylib + 45576) [0x1a4dbe208]
+            39   _dispatch_lane_invoke + 444 (libdispatch.dylib + 48856) [0x1a4dbeed8]
+              39   _dispatch_lane_serial_drain + 376 (libdispatch.dylib + 45576) [0x1a4dbe208]
+                39   _dispatch_lane_invoke + 504 (libdispatch.dylib + 48916) [0x1a4dbef14]
+                  39   _dispatch_lane_concurrent_drain + 1000 (libdispatch.dylib + 82488) [0x1a4dc7238]
+                    39   _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+                      39   _dispatch_call_block_and_release + 32 (libdispatch.dylib + 7776) [0x1a4db4e60]
+                        37   ??? (CloudKitDaemon + 2819428) [0x1d3e26564]
+                          37   -[PQLConnection execute:] + 188 (libprequelite.dylib + 39864) [0x1c97dfbb8]
+                            37   -[PQLConnection _batchStopIfNeeded] + 592 (libprequelite.dylib + 23152) [0x1c97dba70]
+                              37   -[PQLConnection flush] + 316 (libprequelite.dylib + 27668) [0x1c97dcc14]
+                                37   -[PQLConnection _execute:mustSucceed:bindings:] + 72 (libprequelite.dylib + 39644) [0x1c97dfadc]
+                                  37   -[PQLConnection _executeStmt:mustSucceed:] + 112 (libprequelite.dylib + 39216) [0x1c97df930]
+                                    28   sqlite3_step + 3576 (libsqlite3.dylib + 289312) [0x1ab4b8a20]
+                                      28   sqlite3WalDefaultHook + 72 (libsqlite3.dylib + 461884) [0x1ab4e2c3c]
+                                        28   sqlite3_wal_checkpoint_v2 + 500 (libsqlite3.dylib + 695928) [0x1ab51be78]
+                                          28   sqlite3Checkpoint + 372 (libsqlite3.dylib + 696472) [0x1ab51c098]
+                                            28   sqlite3WalCheckpoint + 5264 (libsqlite3.dylib + 554936) [0x1ab4f97b8]
+                                              28   unixWrite + 180 (libsqlite3.dylib + 460888) [0x1ab4e2858]
+                                                28   guarded_pwrite_np + 8 (libsystem_kernel.dylib + 20852) [0x1a4f3d174]
+                                                  28   <Effective Thread QoS Background, Requested Thread QoS Background>
+                                    9    sqlite3_step + 3284 (libsqlite3.dylib + 289020) [0x1ab4b88fc]
+                                      9    sqlite3VdbeExec + 56548 (libsqlite3.dylib + 347716) [0x1ab4c6e44]
+                                        9    sqlite3VdbeHalt + 3428 (libsqlite3.dylib + 155176) [0x1ab497e28]
+                                          9    sqlite3BtreeCommitPhaseOne + 164 (libsqlite3.dylib + 372568) [0x1ab4ccf58]
+                                            9    sqlite3PagerCommitPhaseOne + 312 (libsqlite3.dylib + 458816) [0x1ab4e2040]
+                                              9    pagerWalFrames + 1720 (libsqlite3.dylib + 821220) [0x1ab53a7e4]
+                                                9    unixWrite + 180 (libsqlite3.dylib + 460888) [0x1ab4e2858]
+                                                  9    guarded_pwrite_np + 8 (libsystem_kernel.dylib + 20852) [0x1a4f3d174]
+                                                    9    <Effective Thread QoS Background, Requested Thread QoS Background>
+                        1    ??? (CloudKitDaemon + 2819972) [0x1d3e26784]
+                          1    -[PQLConnection incrementalVacuum:] + 124 (libprequelite.dylib + 42164) [0x1c97e04b4]
+                            1    -[PQLConnection _incrementalVacuum:] + 128 (libprequelite.dylib + 24588) [0x1c97dc00c]
+                              1    sqlite3_exec + 860 (libsqlite3.dylib + 40972) [0x1ab47c00c]
+                                1    sqlite3_step + 3284 (libsqlite3.dylib + 289020) [0x1ab4b88fc]
+                                  1    sqlite3VdbeExec + 56456 (libsqlite3.dylib + 347624) [0x1ab4c6de8]
+                                    1    sqlite3VdbeHalt + 3428 (libsqlite3.dylib + 155176) [0x1ab497e28]
+                                      1    sqlite3BtreeCommitPhaseOne + 164 (libsqlite3.dylib + 372568) [0x1ab4ccf58]
+                                        1    sqlite3PagerCommitPhaseOne + 312 (libsqlite3.dylib + 458816) [0x1ab4e2040]
+                                          1    pagerWalFrames + 1720 (libsqlite3.dylib + 821220) [0x1ab53a7e4]
+                                            1    unixWrite + 180 (libsqlite3.dylib + 460888) [0x1ab4e2858]
+                                              1    guarded_pwrite_np + 8 (libsystem_kernel.dylib + 20852) [0x1a4f3d174]
+                                                1    <Effective Thread QoS Background, Requested Thread QoS Background>
+                        1    ??? (CloudKitDaemon + 2819816) [0x1d3e266e8]
+                          1    -[PQLConnection flush] + 316 (libprequelite.dylib + 27668) [0x1c97dcc14]
+                            1    -[PQLConnection _execute:mustSucceed:bindings:] + 72 (libprequelite.dylib + 39644) [0x1c97dfadc]
+                              1    -[PQLConnection _executeStmt:mustSucceed:] + 112 (libprequelite.dylib + 39216) [0x1c97df930]
+                                1    sqlite3_step + 3284 (libsqlite3.dylib + 289020) [0x1ab4b88fc]
+                                  1    sqlite3VdbeExec + 56548 (libsqlite3.dylib + 347716) [0x1ab4c6e44]
+                                    1    sqlite3VdbeHalt + 3428 (libsqlite3.dylib + 155176) [0x1ab497e28]
+                                      1    sqlite3BtreeCommitPhaseOne + 164 (libsqlite3.dylib + 372568) [0x1ab4ccf58]
+                                        1    sqlite3PagerCommitPhaseOne + 312 (libsqlite3.dylib + 458816) [0x1ab4e2040]
+                                          1    pagerWalFrames + 2488 (libsqlite3.dylib + 821988) [0x1ab53aae4]
+                                            1    walIndexAppend + 496 (libsqlite3.dylib + 180816) [0x1ab49e250]
+                                              1    <Effective Thread QoS Background, Requested Thread QoS Background>
+            1    _dispatch_mach_invoke + 940 (libdispatch.dylib + 134812) [0x1a4dd3e9c]
+              1    _dispatch_mach_cancel_invoke + 132 (libdispatch.dylib + 146108) [0x1a4dd6abc]
+                1    _dispatch_client_callout4 + 20 (libdispatch.dylib + 15468) [0x1a4db6c6c]
+                  1    _xpc_connection_mach_event + 1124 (libxpc.dylib + 51972) [0x1a4cc6b04]
+                    1    _xpc_connection_call_event_handler + 176 (libxpc.dylib + 57816) [0x1a4cc81d8]
+                      1    message_handler + 496 (Foundation + 138712) [0x1a5ed1dd8]
+                        1    -[_NSXPCConnectionExportedObjectTable invalidate] + 64 (Foundation + 140672) [0x1a5ed2580]
+                          1    CFDictionaryRemoveAllValues + 416 (CoreFoundation + 521620) [0x1a503b594]
+                            1    __CFBasicHashDrain + 344 (CoreFoundation + 122480) [0x1a4fd9e70]
+                              1    -[_NSXPCConnectionExportInfo dealloc] + 48 (Foundation + 140780) [0x1a5ed25ec]
+                                1    ??? (CloudKitDaemon + 146536) [0x1d3b99c68]
+                                  1    _objc_rootDealloc + 80 (libobjc.A.dylib + 34704) [0x1a4e02790]
+                                    1    objc_destructInstance + 80 (libobjc.A.dylib + 34800) [0x1a4e027f0]
+                                      1    object_cxxDestructFromClass(objc_object*, objc_class*) + 116 (libobjc.A.dylib + 71616) [0x1a4e0b7c0]
+                                        1    ??? (CloudKitDaemon + 263560) [0x1d3bb6588]
+                                          1    ??? (CloudKitDaemon + 86788) [0x1d3b8b304]
+                                            1    ??? (CloudKitDaemon + 2825108) [0x1d3e27b94]
+                                              1    ??? (CloudKitDaemon + 3188804) [0x1d3e80844]
+                                                1    ??? (CloudKitDaemon + 3191084) [0x1d3e8112c]
+                                                  1    _dispatch_sync_invoke_and_complete_recurse + 64 (libdispatch.dylib + 78384) [0x1a4dc6230]
+                                                    1    _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+                                                      1    ??? (CloudKitDaemon + 3189356) [0x1d3e80a6c]
+                                                        1    -[PQLConnection close:] + 244 (libprequelite.dylib + 36064) [0x1c97dece0]
+                                                          1    sqlite3Close + 1732 (libsqlite3.dylib + 690828) [0x1ab51aa8c]
+                                                            1    sqlite3LeaveMutexAndCloseZombie + 492 (libsqlite3.dylib + 645308) [0x1ab50f8bc]
+                                                              1    sqlite3BtreeClose + 268 (libsqlite3.dylib + 489144) [0x1ab4e96b8]
+                                                                1    sqlite3PagerClose + 336 (libsqlite3.dylib + 490880) [0x1ab4e9d80]
+                                                                  1    sqlite3WalClose + 196 (libsqlite3.dylib + 491612) [0x1ab4ea05c]
+                                                                    1    sqlite3WalCheckpoint + 5264 (libsqlite3.dylib + 554936) [0x1ab4f97b8]
+                                                                      1    unixWrite + 180 (libsqlite3.dylib + 460888) [0x1ab4e2858]
+                                                                        1    guarded_pwrite_np + 8 (libsystem_kernel.dylib + 20852) [0x1a4f3d174]
+                                                                          1    <Effective Thread QoS Default, Requested Thread QoS Default>
+          5    _dispatch_lane_serial_drain + 672 (libdispatch.dylib + 45872) [0x1a4dbe330]
+            5    _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+              3    _dispatch_block_async_invoke2 + 148 (libdispatch.dylib + 76176) [0x1a4dc5990]
+                3    __59-[CacheDeleteServiceListener servicePurge:info:replyBlock:]_block_invoke + 136 (CacheDelete + 164752) [0x1b2e65390]
+                  3    ___CacheDeleteRegisterLegacyCallbacks_block_invoke.394 + 400 (CacheDelete + 100056) [0x1b2e556d8]
+                    3    ??? (cloudd + 21324) [0x10273534c]
+                      3    _dispatch_lane_barrier_sync_invoke_and_complete + 56 (libdispatch.dylib + 77312) [0x1a4dc5e00]
+                        3    _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+                          3    ??? (cloudd + 21976) [0x1027355d8]
+                            3    CKMuckingWithPersonas + 352 (CloudKitDaemon + 2722272) [0x1d3e0e9e0]
+                              3    ??? (cloudd + 22892) [0x10273596c]
+                                3    ??? (CloudKitDaemon + 155056) [0x1d3b9bdb0]
+                                  3    ??? (CloudKitDaemon + 1625780) [0x1d3d02eb4]
+                                    3    _dispatch_lane_barrier_sync_invoke_and_complete + 56 (libdispatch.dylib + 77312) [0x1a4dc5e00]
+                                      3    _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+                                        3    ??? (CloudKitDaemon + 1626692) [0x1d3d03244]
+                                          3    ??? (CloudKitDaemon + 1883900) [0x1d3d41efc]
+                                            3    _dispatch_lane_barrier_sync_invoke_and_complete + 56 (libdispatch.dylib + 77312) [0x1a4dc5e00]
+                                              3    _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+                                                3    ??? (CloudKitDaemon + 1884532) [0x1d3d42174]
+                                                  3    ??? (CloudKitDaemon + 1887984) [0x1d3d42ef0]
+                                                    3    ??? (CloudKit + 626952) [0x1ac701108]
+                                                      3    ??? (CloudKit + 621952) [0x1ac6ffd80]
+                                                        2    ??? (CloudKit + 627988) [0x1ac701514]
+                                                          2    sqlite3_exec + 324 (libsqlite3.dylib + 40436) [0x1ab47bdf4]
+                                                            2    sqlite3LockAndPrepare + 244 (libsqlite3.dylib + 42676) [0x1ab47c6b4]
+                                                              2    sqlite3Prepare + 432 (libsqlite3.dylib + 43556) [0x1ab47ca24]
+                                                                2    sqlite3RunParser + 796 (libsqlite3.dylib + 46520) [0x1ab47d5b8]
+                                                                  2    yy_reduce + 11640 (libsqlite3.dylib + 62188) [0x1ab4812ec]
+                                                                    2    sqlite3Pragma + 2228 (libsqlite3.dylib + 103440) [0x1ab48b410]
+                                                                      2    sqlite3InitOne + 640 (libsqlite3.dylib + 132556) [0x1ab4925cc]
+                                                                        2    sqlite3BtreeBeginTrans + 868 (libsqlite3.dylib + 160680) [0x1ab4993a8]
+                                                                          2    sqlite3PagerSharedLock + 516 (libsqlite3.dylib + 163520) [0x1ab499ec0]
+                                                                            2    walTryBeginRead + 700 (libsqlite3.dylib + 170512) [0x1ab49ba10]
+                                                                              1    walIndexReadHdr + 284 (libsqlite3.dylib + 172640) [0x1ab49c260]
+                                                                                1    walIndexPageRealloc + 224 (libsqlite3.dylib + 823652) [0x1ab53b164]
+                                                                                  1    guarded_pwrite_np + 8 (libsystem_kernel.dylib + 20852) [0x1a4f3d174]
+                                                                              1    walIndexReadHdr + 112 (libsqlite3.dylib + 172468) [0x1ab49c1b4]
+                                                                                1    walIndexPageRealloc + 224 (libsqlite3.dylib + 823652) [0x1ab53b164]
+                                                                                  1    unixShmMap + 2956 (libsqlite3.dylib + 179008) [0x1ab49db40]
+                                                                                    1    ftruncate + 8 (libsystem_kernel.dylib + 20496) [0x1a4f3d010]
+                                                        1    ??? (CloudKit + 628264) [0x1ac701628]
+                                                          1    sqlite3_exec + 356 (libsqlite3.dylib + 40468) [0x1ab47be14]
+                                                            1    sqlite3_step + 3284 (libsqlite3.dylib + 289020) [0x1ab4b88fc]
+                                                              1    sqlite3VdbeExec + 56456 (libsqlite3.dylib + 347624) [0x1ab4c6de8]
+                                                                1    sqlite3VdbeHalt + 3428 (libsqlite3.dylib + 155176) [0x1ab497e28]
+                                                                  1    sqlite3BtreeCommitPhaseOne + 164 (libsqlite3.dylib + 372568) [0x1ab4ccf58]
+                                                                    1    sqlite3PagerCommitPhaseOne + 312 (libsqlite3.dylib + 458816) [0x1ab4e2040]
+                                                                      1    pagerWalFrames + 1720 (libsqlite3.dylib + 821220) [0x1ab53a7e4]
+                                                                        1    unixWrite + 180 (libsqlite3.dylib + 460888) [0x1ab4e2858]
+                                                                          1    guarded_pwrite_np + 8 (libsystem_kernel.dylib + 20852) [0x1a4f3d174]
+              2    _dispatch_call_block_and_release + 32 (libdispatch.dylib + 7776) [0x1a4db4e60]
+                1    ??? (CloudKitDaemon + 566364) [0x1d3c0045c]
+                  1    ??? (CloudKitDaemon + 540500) [0x1d3bf9f54]
+                    1    ??? (CloudKitDaemon + 1821832) [0x1d3d32c88]
+                      1    ??? (CloudKitDaemon + 3259388) [0x1d3e91bfc]
+                        1    _dispatch_lane_barrier_sync_invoke_and_complete + 56 (libdispatch.dylib + 77312) [0x1a4dc5e00]
+                          1    _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+                            1    ??? (CloudKitDaemon + 3259584) [0x1d3e91cc0]
+                              1    ??? (CloudKit + 622444) [0x1ac6fff6c]
+                                1    ??? (CloudKit + 621952) [0x1ac6ffd80]
+                                  1    ??? (CloudKit + 622792) [0x1ac7000c8]
+                                    1    ??? (CloudKit + 621636) [0x1ac6ffc44]
+                                      1    sqlite3_exec + 356 (libsqlite3.dylib + 40468) [0x1ab47be14]
+                                        1    sqlite3_step + 3284 (libsqlite3.dylib + 289020) [0x1ab4b88fc]
+                                          1    sqlite3VdbeExec + 56548 (libsqlite3.dylib + 347716) [0x1ab4c6e44]
+                                            1    sqlite3VdbeHalt + 3428 (libsqlite3.dylib + 155176) [0x1ab497e28]
+                                              1    sqlite3BtreeCommitPhaseOne + 164 (libsqlite3.dylib + 372568) [0x1ab4ccf58]
+                                                1    sqlite3PagerCommitPhaseOne + 312 (libsqlite3.dylib + 458816) [0x1ab4e2040]
+                                                  1    pagerWalFrames + 1720 (libsqlite3.dylib + 821220) [0x1ab53a7e4]
+                                                    1    unixWrite + 180 (libsqlite3.dylib + 460888) [0x1ab4e2858]
+                                                      1    guarded_pwrite_np + 8 (libsystem_kernel.dylib + 20852) [0x1a4f3d174]
+                1    ??? (CloudKitDaemon + 88208) [0x1d3b8b890]
+                  1    ??? (CloudKitDaemon + 87300) [0x1d3b8b504]
+                    1    ??? (CloudKitDaemon + 3187460) [0x1d3e80304]
+                      1    ??? (CloudKitDaemon + 3186520) [0x1d3e7ff58]
+                        1    ??? (CloudKitDaemon + 3180556) [0x1d3e7e80c]
+                          1    -[PQLConnection userVersion] + 60 (libprequelite.dylib + 41676) [0x1c97e02cc]
+                            1    -[PQLConnection fetchObjectOfClass:sql:] + 48 (libprequelite.dylib + 41048) [0x1c97e0058]
+                              1    -[PQLConnection fetchObjectOfClass:initializer:sql:args:] + 164 (libprequelite.dylib + 40828) [0x1c97dff7c]
+                                1    -[PQLResultSet onlyObjectOfClass:initializer:] + 56 (libprequelite.dylib + 45468) [0x1c97e119c]
+                                  1    -[PQLResultSet _next:] + 116 (libprequelite.dylib + 44840) [0x1c97e0f28]
+                                    1    sqlite3_step + 3284 (libsqlite3.dylib + 289020) [0x1ab4b88fc]
+                                      1    sqlite3VdbeExec + 3868 (libsqlite3.dylib + 295036) [0x1ab4ba07c]
+                                        1    sqlite3BtreeBeginTrans + 868 (libsqlite3.dylib + 160680) [0x1ab4993a8]
+                                          1    sqlite3PagerSharedLock + 516 (libsqlite3.dylib + 163520) [0x1ab499ec0]
+                                            1    walTryBeginRead + 700 (libsqlite3.dylib + 170512) [0x1ab49ba10]
+                                              1    walIndexReadHdr + 1392 (libsqlite3.dylib + 173748) [0x1ab49c6b4]
+                                                1    walIndexWriteHdr + 172 (libsqlite3.dylib + 181040) [0x1ab49e330]
+                                                  1    <Effective Thread QoS Background, Requested Thread QoS Background>
+    4    _pthread_wqthread + 228 (libsystem_pthread.dylib + 13000) [0x1a4f712c8]
+      4    _dispatch_worker_thread2 + 164 (libdispatch.dylib + 88920) [0x1a4dc8b58]
+        4    _dispatch_root_queue_drain + 396 (libdispatch.dylib + 86812) [0x1a4dc831c]
+          4    _dispatch_async_redirect_invoke + 596 (libdispatch.dylib + 26332) [0x1a4db96dc]
+            4    _dispatch_continuation_pop + 504 (libdispatch.dylib + 28800) [0x1a4dba080]
+              4    _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+                2    _dispatch_call_block_and_release + 32 (libdispatch.dylib + 7776) [0x1a4db4e60]
+                  2    ??? (CloudKitDaemon + 378816) [0x1d3bd27c0]
+                    2    ??? (CloudKitDaemon + 2586716) [0x1d3ded85c]
+                      2    ??? (CloudKitDaemon + 2650732) [0x1d3dfd26c]
+                        2    ??? (CloudKitDaemon + 62744) [0x1d3b85518]
+                          2    ??? (CloudKitDaemon + 60864) [0x1d3b84dc0]
+                            2    _dispatch_lane_barrier_sync_invoke_and_complete + 56 (libdispatch.dylib + 77312) [0x1a4dc5e00]
+                              2    _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+                                2    ??? (CloudKitDaemon + 61800) [0x1d3b85168]
+                                  2    ??? (CloudKit + 626952) [0x1ac701108]
+                                    2    ??? (CloudKit + 621952) [0x1ac6ffd80]
+                                      1    ??? (CloudKit + 628264) [0x1ac701628]
+                                        1    sqlite3_exec + 356 (libsqlite3.dylib + 40468) [0x1ab47be14]
+                                          1    sqlite3_step + 3284 (libsqlite3.dylib + 289020) [0x1ab4b88fc]
+                                            1    sqlite3VdbeExec + 56456 (libsqlite3.dylib + 347624) [0x1ab4c6de8]
+                                              1    sqlite3VdbeHalt + 3428 (libsqlite3.dylib + 155176) [0x1ab497e28]
+                                                1    sqlite3BtreeCommitPhaseOne + 164 (libsqlite3.dylib + 372568) [0x1ab4ccf58]
+                                                  1    sqlite3PagerCommitPhaseOne + 312 (libsqlite3.dylib + 458816) [0x1ab4e2040]
+                                                    1    pagerWalFrames + 1720 (libsqlite3.dylib + 821220) [0x1ab53a7e4]
+                                                      1    unixWrite + 180 (libsqlite3.dylib + 460888) [0x1ab4e2858]
+                                                        1    guarded_pwrite_np + 8 (libsystem_kernel.dylib + 20852) [0x1a4f3d174]
+                                      1    ??? (CloudKit + 627988) [0x1ac701514]
+                                        1    sqlite3_exec + 324 (libsqlite3.dylib + 40436) [0x1ab47bdf4]
+                                          1    sqlite3LockAndPrepare + 244 (libsqlite3.dylib + 42676) [0x1ab47c6b4]
+                                            1    sqlite3Prepare + 432 (libsqlite3.dylib + 43556) [0x1ab47ca24]
+                                              1    sqlite3RunParser + 796 (libsqlite3.dylib + 46520) [0x1ab47d5b8]
+                                                1    yy_reduce + 11640 (libsqlite3.dylib + 62188) [0x1ab4812ec]
+                                                  1    sqlite3Pragma + 2228 (libsqlite3.dylib + 103440) [0x1ab48b410]
+                                                    1    sqlite3InitOne + 640 (libsqlite3.dylib + 132556) [0x1ab4925cc]
+                                                      1    sqlite3BtreeBeginTrans + 868 (libsqlite3.dylib + 160680) [0x1ab4993a8]
+                                                        1    sqlite3PagerSharedLock + 516 (libsqlite3.dylib + 163520) [0x1ab499ec0]
+                                                          1    walTryBeginRead + 700 (libsqlite3.dylib + 170512) [0x1ab49ba10]
+                                                            1    walIndexReadHdr + 112 (libsqlite3.dylib + 172468) [0x1ab49c1b4]
+                                                              1    walIndexPageRealloc + 224 (libsqlite3.dylib + 823652) [0x1ab53b164]
+                                                                1    unixShmMap + 2956 (libsqlite3.dylib + 179008) [0x1ab49db40]
+                                                                  1    ftruncate + 8 (libsystem_kernel.dylib + 20496) [0x1a4f3d010]
+                2    _Block_release + 200 (libsystem_blocks.dylib + 6660) [0x1a4cb9a04]
+                  2    _Block_release + 200 (libsystem_blocks.dylib + 6660) [0x1a4cb9a04]
+                    2    ??? (CloudKitDaemon + 146536) [0x1d3b99c68]
+                      2    _objc_rootDealloc + 80 (libobjc.A.dylib + 34704) [0x1a4e02790]
+                        2    objc_destructInstance + 80 (libobjc.A.dylib + 34800) [0x1a4e027f0]
+                          2    object_cxxDestructFromClass(objc_object*, objc_class*) + 116 (libobjc.A.dylib + 71616) [0x1a4e0b7c0]
+                            2    ??? (CloudKitDaemon + 263560) [0x1d3bb6588]
+                              2    ??? (CloudKitDaemon + 86788) [0x1d3b8b304]
+                                2    ??? (CloudKitDaemon + 2825108) [0x1d3e27b94]
+                                  2    ??? (CloudKitDaemon + 3188804) [0x1d3e80844]
+                                    2    ??? (CloudKitDaemon + 3191084) [0x1d3e8112c]
+                                      2    _dispatch_sync_invoke_and_complete_recurse + 64 (libdispatch.dylib + 78384) [0x1a4dc6230]
+                                        2    _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+                                          2    ??? (CloudKitDaemon + 3189356) [0x1d3e80a6c]
+                                            2    -[PQLConnection close:] + 244 (libprequelite.dylib + 36064) [0x1c97dece0]
+                                              2    sqlite3Close + 1732 (libsqlite3.dylib + 690828) [0x1ab51aa8c]
+                                                2    sqlite3LeaveMutexAndCloseZombie + 492 (libsqlite3.dylib + 645308) [0x1ab50f8bc]
+                                                  2    sqlite3BtreeClose + 268 (libsqlite3.dylib + 489144) [0x1ab4e96b8]
+                                                    2    sqlite3PagerClose + 336 (libsqlite3.dylib + 490880) [0x1ab4e9d80]
+                                                      2    sqlite3WalClose + 196 (libsqlite3.dylib + 491612) [0x1ab4ea05c]
+                                                        2    sqlite3WalCheckpoint + 5264 (libsqlite3.dylib + 554936) [0x1ab4f97b8]
+                                                          2    unixWrite + 180 (libsqlite3.dylib + 460888) [0x1ab4e2858]
+                                                            2    guarded_pwrite_np + 8 (libsystem_kernel.dylib + 20852) [0x1a4f3d174]
+                                                              2    <Effective Thread QoS Background, Requested Thread QoS Background>
+
+  Binary Images:
+           0x102730000 -        0x10273ffff  cloudd (1940)                                 <F41BDA92-9D1E-3A4D-AFC9-B9C0F678F21A>  /System/Library/PrivateFrameworks/CloudKitDaemon.framework/Support/cloudd
+           0x1a4cb8000 -        0x1a4cb9fff  libsystem_blocks.dylib (79)                   <0DBEE155-6231-3352-84A0-2D9E11BCD4F2>  /usr/lib/system/libsystem_blocks.dylib
+           0x1a4cba000 -        0x1a4cf3fff  libxpc.dylib (2235.80.3)                      <FD3E0E8D-4618-3CE5-A24A-5639BE86B979>  /usr/lib/system/libxpc.dylib
+           0x1a4db3000 -        0x1a4df9fff  libdispatch.dylib (1324.60.3)                 <93E1DCFC-EF56-3113-8E7C-1BA85266A93B>  /usr/lib/system/libdispatch.dylib
+           0x1a4dfa000 -        0x1a4e35fff  libobjc.A.dylib (838.1)                       <2EB32E1D-90CB-3256-8681-9034085A06A6>  /usr/lib/libobjc.A.dylib
+           0x1a4f38000 -        0x1a4f6dfff  libsystem_kernel.dylib (8019.80.24)           <384945E6-DD71-37E5-9A3D-84FFF14A1E60>  /usr/lib/system/libsystem_kernel.dylib
+           0x1a4f6e000 -        0x1a4f7afff  libsystem_pthread.dylib (485.60.2)            <F7B2ECCF-E6F1-3109-AE81-9028C0B8332A>  /usr/lib/system/libsystem_pthread.dylib
+           0x1a4fbc000 -        0x1a54fffff  com.apple.CoreFoundation 6.9 (1856.105)       <16FADF8B-A3AF-3E0C-B5FB-CE9A9CDC8747>  /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
+           0x1a5eb0000 -        0x1a629dfff  com.apple.Foundation 6.9 (1856.105)           <90321A38-43A5-3767-9A9C-2C631338B9BC>  /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
+           0x1ab472000 -        0x1ab61ffff  libsqlite3.dylib (331)                        <BF74926A-62E6-3EDD-99BC-40B4388DBA3E>  /usr/lib/libsqlite3.dylib
+           0x1ac668000 -        0x1ac849fff  com.apple.cloudkit.CloudKit 1940 (1940)       <3FC2C2BD-E1ED-306E-B348-1E0D6BEBA5DF>  /System/Library/Frameworks/CloudKit.framework/Versions/A/CloudKit
+           0x1b2e3d000 -        0x1b2e75fff  com.apple.CacheDelete 1.0 (1)                 <DA9CB73C-5E13-3D77-BA9B-1C3CDD488BED>  /System/Library/PrivateFrameworks/CacheDelete.framework/Versions/A/CacheDelete
+           0x1baa80000 -        0x1baad2fff  com.apple.ChunkingLibrary 337.1 (337.1)       <202B9625-0346-36C1-8314-50A77D3505A4>  /System/Library/PrivateFrameworks/ChunkingLibrary.framework/Versions/A/ChunkingLibrary
+           0x1c97d6000 -        0x1c97eafff  libprequelite.dylib (117)                     <A9234318-AF37-3F06-A1A5-98A6EF477E92>  /usr/lib/libprequelite.dylib
+           0x1cde2e000 -        0x1cded3fff  com.apple.MMCS 1.3 (1930)                     <2B5E824B-CC07-3E71-94B3-F6CE7B21A23B>  /System/Library/PrivateFrameworks/MMCS.framework/Versions/A/MMCS
+           0x1d3b76000 -        0x1d3f65fff  com.apple.cloudkit.CloudKitDaemon 1940 (1940) <F74C2D1D-BBC7-3215-BFC6-3CF81CF61DFB>  /System/Library/PrivateFrameworks/CloudKitDaemon.framework/Versions/A/CloudKitDaemon
+
+
+Powerstats for:   Google Chrome Helper (Chrome Helper)
+UUID:             4C4C44D5-5555-3144-A195-B47EA2473619
+Path:             /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/98.0.4758.109/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper
+Identifier:       com.google.Chrome.helper
+Version:          98.0.4758.109 (4758.109)
+Team ID:          EQHXZ8M8AV
+Shared Cache:     B90241B2-E425-3982-B3F6-26C4567CBB49 slid base address 0x1a4c68000, slide 0x24c68000
+Architecture:     arm64
+Start time:       2022-02-26 18:26:11.133 -0600
+End time:         2022-02-26 20:13:25.391 -0600
+Num samples:      230 (15%)
+Primary state:    218 samples Non-Frontmost App, Non-Suppressed, Kernel mode, Effective Thread QoS Unspecified, Requested Thread QoS Unspecified, Override Thread QoS Unspecified
+User Activity:    27 samples Idle, 203 samples Active
+Power Source:     229 samples on Battery, 1 samples on AC
+  218  thread_start + 8 (libsystem_pthread.dylib + 8228) [0x1a4f70024]
+    218  _pthread_start + 148 (libsystem_pthread.dylib + 29248) [0x1a4f75240]
+      218  ChromeMain + 49178904 (Google Chrome Framework + 49190520) [0x11a561678]
+        217  ChromeMain + 49039532 (Google Chrome Framework + 49051148) [0x11a53f60c]
+          217  ChromeMain + 49040488 (Google Chrome Framework + 49052104) [0x11a53f9c8]
+            217  ChromeMain + 48981320 (Google Chrome Framework + 48992936) [0x11a5312a8]
+              217  ChromeMain + 49177652 (Google Chrome Framework + 49189268) [0x11a561194]
+                216  ChromeMain + 48981832 (Google Chrome Framework + 48993448) [0x11a5314a8]
+                  216  ChromeMain + 48983096 (Google Chrome Framework + 48994712) [0x11a531998]
+                    216  ChromeMain + 48859384 (Google Chrome Framework + 48871000) [0x11a513658]
+                      216  ChromeMain + 49053768 (Google Chrome Framework + 49065384) [0x11a542da8]
+                        216  ChromeMain + 49053304 (Google Chrome Framework + 49064920) [0x11a542bd8]
+                          214  ChromeMain + 53133292 (Google Chrome Framework + 53144908) [0x11a926d4c]
+                            195  ChromeMain + 53215624 (Google Chrome Framework + 53227240) [0x11a93aee8]
+                              195  pwrite + 8 (libsystem_kernel.dylib + 20452) [0x1a4f3cfe4]
+                            8    ChromeMain + 53218764 (Google Chrome Framework + 53230380) [0x11a93bb2c]
+                              8    ChromeMain + 53220048 (Google Chrome Framework + 53231664) [0x11a93c030]
+                                8    pwrite + 8 (libsystem_kernel.dylib + 20452) [0x1a4f3cfe4]
+                            6    ChromeMain + 53177352 (Google Chrome Framework + 53188968) [0x11a931968]
+                              6    ChromeMain + 53212100 (Google Chrome Framework + 53223716) [0x11a93a124]
+                                6    ChromeMain + 53211500 (Google Chrome Framework + 53223116) [0x11a939ecc]
+                                  6    pwrite + 8 (libsystem_kernel.dylib + 20452) [0x1a4f3cfe4]
+                            4    ChromeMain + 53215544 (Google Chrome Framework + 53227160) [0x11a93ae98]
+                              4    ftruncate + 8 (libsystem_kernel.dylib + 20496) [0x1a4f3d010]
+                            1    ChromeMain + 53221900 (Google Chrome Framework + 53233516) [0x11a93c76c]
+                              1    pwrite + 8 (libsystem_kernel.dylib + 20452) [0x1a4f3cfe4]
+                          2    ChromeMain + 1655412 (Google Chrome Framework + 1667028) [0x11780efd4]
+                            2    ChromeMain + 9237488 (Google Chrome Framework + 9249104) [0x117f4a150]
+                              2    ChromeMain + 53213468 (Google Chrome Framework + 53225084) [0x11a93a67c]
+                                2    ChromeMain + 53212828 (Google Chrome Framework + 53224444) [0x11a93a3fc]
+                                  2    ChromeMain + 53227620 (Google Chrome Framework + 53239236) [0x11a93ddc4]
+                                    2    ChromeMain + 49158652 (Google Chrome Framework + 49170268) [0x11a55c75c]
+                                      2    __unlink + 8 (libsystem_kernel.dylib + 22944) [0x1a4f3d9a0]
+                1    ChromeMain + 48982272 (Google Chrome Framework + 48993888) [0x11a531660]
+                  1    ChromeMain + 48984960 (Google Chrome Framework + 48996576) [0x11a5320e0]
+                    1    ChromeMain + 48983700 (Google Chrome Framework + 48995316) [0x11a531bf4]
+                      1    ChromeMain + 48859384 (Google Chrome Framework + 48871000) [0x11a513658]
+                        1    ChromeMain + 68299464 (Google Chrome Framework + 68311080) [0x11b79d828]
+                          1    ChromeMain + 66423252 (Google Chrome Framework + 66434868) [0x11b5d3734]
+                            1    ChromeMain + 66423120 (Google Chrome Framework + 66434736) [0x11b5d36b0]
+                              1    ChromeMain + 66448896 (Google Chrome Framework + 66460512) [0x11b5d9b60]
+                                1    ChromeMain + 66624692 (Google Chrome Framework + 66636308) [0x11b604a14]
+                                  1    ChromeMain + 66664500 (Google Chrome Framework + 66676116) [0x11b60e594]
+                                    1    ChromeMain + 66579580 (Google Chrome Framework + 66591196) [0x11b5f99dc]
+                                      1    ChromeMain + 66556152 (Google Chrome Framework + 66567768) [0x11b5f3e58]
+                                        1    pwrite + 8 (libsystem_kernel.dylib + 20452) [0x1a4f3cfe4]
+        1    ChromeMain + 49039400 (Google Chrome Framework + 49051016) [0x11a53f588]
+          1    ChromeMain + 49040488 (Google Chrome Framework + 49052104) [0x11a53f9c8]
+            1    ChromeMain + 48981320 (Google Chrome Framework + 48992936) [0x11a5312a8]
+              1    ChromeMain + 49177652 (Google Chrome Framework + 49189268) [0x11a561194]
+                1    ChromeMain + 48982272 (Google Chrome Framework + 48993888) [0x11a531660]
+                  1    ChromeMain + 48984960 (Google Chrome Framework + 48996576) [0x11a5320e0]
+                    1    ChromeMain + 48983700 (Google Chrome Framework + 48995316) [0x11a531bf4]
+                      1    ChromeMain + 48859384 (Google Chrome Framework + 48871000) [0x11a513658]
+                        1    ChromeMain + 12764568 (Google Chrome Framework + 12776184) [0x1182a72f8]
+                          1    ChromeMain + 48561264 (Google Chrome Framework + 48572880) [0x11a4ca9d0]
+                            1    ChromeMain + 48558568 (Google Chrome Framework + 48570184) [0x11a4c9f48]
+                              1    ChromeMain + 48558184 (Google Chrome Framework + 48569800) [0x11a4c9dc8]
+                                1    write + 8 (libsystem_kernel.dylib + 21820) [0x1a4f3d53c]
+  12   start + 520 (dyld + 20724) [0x102af50f4]
+    12   main + 232 (Google Chrome Helper + 2504) [0x1003109c8]
+      12   ChromeMain + 224 (Google Chrome Framework + 11840) [0x11767ae40]
+        12   ChromeMain + 44579028 (Google Chrome Framework + 44590644) [0x11a0fe634]
+          12   ChromeMain + 44576716 (Google Chrome Framework + 44588332) [0x11a0fdd2c]
+            12   ChromeMain + 44583032 (Google Chrome Framework + 44594648) [0x11a0ff5d8]
+              12   ChromeMain + 44580560 (Google Chrome Framework + 44592176) [0x11a0fec30]
+                12   ChromeMain + 44352140 (Google Chrome Framework + 44363756) [0x11a0c6fec]
+                  12   ChromeMain + 48764936 (Google Chrome Framework + 48776552) [0x11a4fc568]
+                    12   ChromeMain + 48957868 (Google Chrome Framework + 48969484) [0x11a52b70c]
+                      12   ChromeMain + 48624404 (Google Chrome Framework + 48636020) [0x11a4da074]
+                        12   ChromeMain + 48955748 (Google Chrome Framework + 48967364) [0x11a52aec4]
+                          12   ChromeMain + 48859384 (Google Chrome Framework + 48871000) [0x11a513658]
+                            12   ChromeMain + 50588260 (Google Chrome Framework + 50599876) [0x11a6b97c4]
+                              12   ChromeMain + 50457816 (Google Chrome Framework + 50469432) [0x11a699a38]
+                                12   ChromeMain + 50482608 (Google Chrome Framework + 50494224) [0x11a69fb10]
+                                  12   ChromeMain + 50513468 (Google Chrome Framework + 50525084) [0x11a6a739c]
+                                    12   ChromeMain + 50472300 (Google Chrome Framework + 50483916) [0x11a69d2cc]
+                                      12   ChromeMain + 50482608 (Google Chrome Framework + 50494224) [0x11a69fb10]
+                                        12   ChromeMain + 50466984 (Google Chrome Framework + 50478600) [0x11a69be08]
+                                          12   ChromeMain + 23495904 (Google Chrome Framework + 23507520) [0x118ce3240]
+                                            12   ChromeMain + 44487436 (Google Chrome Framework + 44499052) [0x11a0e806c]
+                                              12   ChromeMain + 74250632 (Google Chrome Framework + 74262248) [0x11bd4a6e8]
+                                                12   ChromeMain + 74255864 (Google Chrome Framework + 74267480) [0x11bd4bb58]
+                                                  12   ChromeMain + 74257436 (Google Chrome Framework + 74269052) [0x11bd4c17c]
+                                                    12   write + 8 (libsystem_kernel.dylib + 21820) [0x1a4f3d53c]
+                                                      12   <Effective Thread QoS Default, Requested Thread QoS User Interactive>
+
+  Binary Images:
+           0x100310000 -        0x100357fff  com.google.Chrome.helper 98.0.4758.109 (4758.109)    <4C4C44D5-5555-3144-A195-B47EA2473619>  /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/98.0.4758.109/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper
+           0x102af0000 -        0x102b6bfff  dyld (941.5)                                         <D21A73EA-79CD-36EB-8AC9-2C5CF5181A27>  /usr/lib/dyld
+           0x117678000 -        0x120437fff  com.google.Chrome.framework 98.0.4758.109 (4758.109) <4C4C44F4-5555-3144-A16B-FEECB2F897BA>  /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/98.0.4758.109/Google Chrome Framework
+           0x1a4f38000 -        0x1a4f6dfff  libsystem_kernel.dylib (8019.80.24)                  <384945E6-DD71-37E5-9A3D-84FFF14A1E60>  /usr/lib/system/libsystem_kernel.dylib
+           0x1a4f6e000 -        0x1a4f7afff  libsystem_pthread.dylib (485.60.2)                   <F7B2ECCF-E6F1-3109-AE81-9028C0B8332A>  /usr/lib/system/libsystem_pthread.dylib
+
+
+Powerstats for:   oahd-helper
+UUID:             439743C3-1D06-3749-8418-3B1F49C5F81D
+Path:             /usr/libexec/rosetta/oahd-helper
+Codesigning ID:   com.apple.oahd-helper
+Shared Cache:     B90241B2-E425-3982-B3F6-26C4567CBB49 slid base address 0x1a4c68000, slide 0x24c68000
+Architecture:     arm64
+Start time:       2022-02-26 18:11:03.496 -0600
+End time:         2022-02-26 19:58:51.625 -0600
+Num samples:      163 (10%)
+Primary state:    163 samples Non-Frontmost App, Non-Suppressed, Kernel mode, Effective Thread QoS Default, Requested Thread QoS Default, Override Thread QoS Unspecified
+User Activity:    0 samples Idle, 163 samples Active
+Power Source:     161 samples on Battery, 2 samples on AC
+  163  start + 520 (dyld + 20724) [0x1011750f4]
+    103  ??? (oahd-helper + 39608) [0x10001dab8]
+      103  pwrite + 8 (libsystem_kernel.dylib + 20452) [0x1a4f3cfe4]
+    29   ??? (oahd-helper + 41280) [0x10001e140]
+      29   pwrite + 8 (libsystem_kernel.dylib + 20452) [0x1a4f3cfe4]
+    19   ??? (oahd-helper + 39988) [0x10001dc34]
+      18   ??? (oahd-helper + 51216) [0x100020810]
+        18   pwrite + 8 (libsystem_kernel.dylib + 20452) [0x1a4f3cfe4]
+      1    ??? (oahd-helper + 51192) [0x1000207f8]
+        1    pwrite + 8 (libsystem_kernel.dylib + 20452) [0x1a4f3cfe4]
+    6    ??? (oahd-helper + 41188) [0x10001e0e4]
+      6    pwrite + 8 (libsystem_kernel.dylib + 20452) [0x1a4f3cfe4]
+    5    ??? (oahd-helper + 39888) [0x10001dbd0]
+      4    ??? (oahd-helper + 55964) [0x100021a9c]
+        4    pwrite + 8 (libsystem_kernel.dylib + 20452) [0x1a4f3cfe4]
+      1    ??? (oahd-helper + 58204) [0x10002235c]
+        1    pwrite + 8 (libsystem_kernel.dylib + 20452) [0x1a4f3cfe4]
+    1    ??? (oahd-helper + 42744) [0x10001e6f8]
+      1    ??? (oahd-helper + 15780) [0x100017da4]
+        1    ??? (oahd-helper + 17356) [0x1000183cc]
+          1    pwrite + 8 (libsystem_kernel.dylib + 20452) [0x1a4f3cfe4]
+
+  Binary Images:
+           0x100014000 -        0x100033fff  oahd-helper (254.5.5)               <439743C3-1D06-3749-8418-3B1F49C5F81D>  /usr/libexec/rosetta/oahd-helper
+           0x101170000 -        0x1011ebfff  dyld (941.5)                        <D21A73EA-79CD-36EB-8AC9-2C5CF5181A27>  /usr/lib/dyld
+           0x1a4f38000 -        0x1a4f6dfff  libsystem_kernel.dylib (8019.80.24) <384945E6-DD71-37E5-9A3D-84FFF14A1E60>  /usr/lib/system/libsystem_kernel.dylib
+
+System Profile:
+Network Service: Wi-Fi, AirPort, en0
+Thunderbolt Bus: MacBook Pro, Apple Inc.
+Thunderbolt Bus: MacBook Pro, Apple Inc.
+Boot Volume File System Type: apfs
+Memory Module: LPDDR4
+USB Device: USB31Bus
+USB Device: USB31Bus
+Display: Color LCD, 2560 x 1600 Retina, Main, MirrorOff, Online
+Model: MacBookPro17,1, BootROM 7429.81.3, proc 8:4:4 processors, 8 GB, SMC 
+Graphics: Apple M1, Apple M1, Built-In
+AirPort: Wi-Fi, wl0: Oct 26 2021 16:10:41 version 18.20.310.15.7.8.120 FWID 01-5d6c3867
+Bluetooth: Version (null), 0 services, 0 devices, 0 incoming serial ports

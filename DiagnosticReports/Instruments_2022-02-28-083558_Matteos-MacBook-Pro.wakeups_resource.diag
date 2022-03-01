@@ -1,0 +1,670 @@
+Date/Time:        2022-02-28 08:30:54.917 -0600
+End time:         2022-02-28 08:35:19.345 -0600
+OS Version:       macOS 12.2 (Build 21D49)
+Architecture:     arm64e
+Report Version:   35
+Incident Identifier: 36734A83-DB03-455B-8849-C802F6EF834B
+Share With Devs:  Yes
+
+Data Source:      Microstackshots
+Shared Cache:     B90241B2-E425-3982-B3F6-26C4567CBB49 slid base address 0x1a4c68000, slide 0x24c68000
+Shared Cache:     13FE38D9-95AD-3D4F-889F-443CD57D94DE slid base address 0x7ff81dc98000, slide 0x1dc98000
+
+Command:          Instruments
+Path:             /Applications/Xcode.app/Contents/Applications/Instruments.app/Contents/MacOS/Instruments
+Identifier:       com.apple.dt.Instruments
+Version:          13.2.1 (64551.30)
+Build Version:    2
+Product Build Version: 13C100
+Project Name:     Instruments
+Source Version:   64551030000000000
+Team ID:          59GAB85EFG
+Architecture:     arm64
+Parent:           launchd [1]
+PID:              67646
+
+Event:            wakeups
+Action taken:     none
+Wakeups:          45001 wakeups over the last 264 seconds (170 wakeups per second average), exceeding limit of 150 wakeups per second over 300 seconds
+Wakeups limit:    45000
+Limit duration:   300s
+Wakeups caused:   45001
+Wakeups duration: 264s
+Duration:         264.43s
+Duration Sampled: 263.23s
+Steps:            303
+
+Hardware model:   MacBookPro17,1
+Active cpus:      8
+HW page size:     16384
+VM page size:     16384
+
+Fan speed:        0 rpm
+Advisory levels:  Battery -> 2, User -> 2, ThermalPressure -> 0, Combined -> 2
+Free disk space:  37.32 GB/228.27 GB, low space threshold 3072 MB
+Low Power Mode:   Enabled
+
+Heaviest stack for the target process:
+  51  start_wqthread + 8 (libsystem_pthread.dylib + 8216) [0x1a4f70018]
+  27  _pthread_wqthread + 228 (libsystem_pthread.dylib + 13000) [0x1a4f712c8]
+  27  _dispatch_worker_thread2 + 164 (libdispatch.dylib + 88920) [0x1a4dc8b58]
+  19  _dispatch_root_queue_drain + 396 (libdispatch.dylib + 86812) [0x1a4dc831c]
+  12  _dispatch_async_redirect_invoke + 596 (libdispatch.dylib + 26332) [0x1a4db96dc]
+  12  _dispatch_continuation_pop + 504 (libdispatch.dylib + 28800) [0x1a4dba080]
+  12  _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+  11  ??? (DVTInstrumentsUtilities + 160164) [0x1045831a4]
+  10  ??? (DVTInstrumentsUtilities + 126740) [0x10457af14]
+  10  ??? (DVTInstrumentsUtilities + 143644) [0x10457f11c]
+  4   -[XRProcessExistenceProjectorUpdateAgent executeStopOnItinerary:] + 176 (InstrumentsPlugIn + 572188) [0x104c7bb1c]
+  4   -[XRAnalysisCoreProjectorUpdateAgent executeStopOnItinerary:] + 856 (InstrumentsAnalysisCore + 1128644) [0x1047c78c4]
+  4   -[XRAnalysisCoreProjectorForTables updateFromCore:yieldFlag:] + 272 (InstrumentsAnalysisCore + 196176) [0x1046e3e50]
+  2   -[XRAnalysisCoreProjectorForTables _resumeBuildingPointsWithCore:store:yieldFlag:] + 428 (InstrumentsAnalysisCore + 193472) [0x1046e33c0]
+  1   Projection::addRowToCoordinate(XRAnalysisCoreAbstractRowArrayCursor const*, ProjectionCoordinate const&, id<XRAnalysisCoreReadOnly>) + 632 (InstrumentsAnalysisCore + 197692) [0x1046e443c]
+
+
+Powerstats for:   Instruments [67646] [unique pid 267095]
+UUID:             41B2B5A3-EDB8-3E49-AD77-BCA301CFAE77
+Path:             /Applications/Xcode.app/Contents/Applications/Instruments.app/Contents/MacOS/Instruments
+Identifier:       com.apple.dt.Instruments
+Version:          13.2.1 (64551.30)
+Build Version:    2
+Product Build Version: 13C100
+Project Name:     Instruments
+Source Version:   64551030000000000
+Team ID:          59GAB85EFG
+Shared Cache:     B90241B2-E425-3982-B3F6-26C4567CBB49 slid base address 0x1a4c68000, slide 0x24c68000
+Architecture:     arm64
+Parent:           launchd [1]
+UID:              501
+Footprint:        122.72 MB -> 7405.23 MB (+7282.52 MB)
+Pageins:          1382047 pages
+Start time:       2022-02-28 08:31:11.448 -0600
+End time:         2022-02-28 08:35:11.497 -0600
+Num samples:      75 (25%)
+Primary state:    37 samples Frontmost App, Non-Suppressed, User mode, Effective Thread QoS User Initiated, Requested Thread QoS User Initiated, Override Thread QoS Unspecified
+User Activity:    0 samples Idle, 75 samples Active
+Power Source:     75 samples on Battery, 0 samples on AC
+  51  start_wqthread + 8 (libsystem_pthread.dylib + 8216) [0x1a4f70018]
+    27  _pthread_wqthread + 228 (libsystem_pthread.dylib + 13000) [0x1a4f712c8]
+      27  _dispatch_worker_thread2 + 164 (libdispatch.dylib + 88920) [0x1a4dc8b58]
+        19  _dispatch_root_queue_drain + 396 (libdispatch.dylib + 86812) [0x1a4dc831c]
+          12  _dispatch_async_redirect_invoke + 596 (libdispatch.dylib + 26332) [0x1a4db96dc]
+            12  _dispatch_continuation_pop + 504 (libdispatch.dylib + 28800) [0x1a4dba080]
+              12  _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+                11  ??? (DVTInstrumentsUtilities + 160164) [0x1045831a4]
+                  10  ??? (DVTInstrumentsUtilities + 126740) [0x10457af14]
+                    10  ??? (DVTInstrumentsUtilities + 143644) [0x10457f11c]
+                      4   -[XRProcessExistenceProjectorUpdateAgent executeStopOnItinerary:] + 176 (InstrumentsPlugIn + 572188) [0x104c7bb1c]
+                        4   -[XRAnalysisCoreProjectorUpdateAgent executeStopOnItinerary:] + 856 (InstrumentsAnalysisCore + 1128644) [0x1047c78c4]
+                          4   -[XRAnalysisCoreProjectorForTables updateFromCore:yieldFlag:] + 272 (InstrumentsAnalysisCore + 196176) [0x1046e3e50]
+                            2   -[XRAnalysisCoreProjectorForTables _resumeBuildingPointsWithCore:store:yieldFlag:] + 428 (InstrumentsAnalysisCore + 193472) [0x1046e33c0]
+                              1   Projection::addRowToCoordinate(XRAnalysisCoreAbstractRowArrayCursor const*, ProjectionCoordinate const&, id<XRAnalysisCoreReadOnly>) + 632 (InstrumentsAnalysisCore + 197692) [0x1046e443c]
+                              1   Projection::addRowToCoordinate(XRAnalysisCoreAbstractRowArrayCursor const*, ProjectionCoordinate const&, id<XRAnalysisCoreReadOnly>) + 436 (InstrumentsAnalysisCore + 197496) [0x1046e4378]
+                            2   -[XRAnalysisCoreProjectorForTables _resumeBuildingPointsWithCore:store:yieldFlag:] + 408 (InstrumentsAnalysisCore + 193452) [0x1046e33ac]
+                              1   objc_release + 0 (libobjc.A.dylib + 34432) [0x1a4e02680]
+                              1   Projection::getCoordinateFromCursor(ProjectionCoordinate*, XRAnalysisCoreReadCursor const*, id<XRAnalysisCoreReadOnly>, XRAnalysisCoreValue* __strong*) + 192 (InstrumentsAnalysisCore + 196936) [0x1046e4148]
+                                1   -[XRAnalysisCoreProcessFromThreadRollup rollUp:to:core:] + 148 (InstrumentsAnalysisCore + 1305832) [0x1047f2ce8]
+                      3   -[XRAnalysisCoreQueryDecoAgent executeStopOnItinerary:] + 484 (InstrumentsKit + 1122396) [0x1052e205c]
+                        3   -[XRAnalysisCoreQueryDecoAgent _fillContainerFromCursor:] + 596 (InstrumentsKit + 1124812) [0x1052e29cc]
+                          2   _XRAnalysisCoreReadCursorWithFilter::next() + 32 (InstrumentsAnalysisCore + 35688) [0x1046bcb68]
+                            1   std::__1::__function::__func<-[XRIndexedStorageTD64_CC32_R addReadCursorsToPack:tableID:query:]::$_0, std::__1::allocator<-[XRIndexedStorageTD64_CC32_R addReadCursorsToPack:tableID:query:]::$_0>, bool (_XRAnalysisCoreReadCursorSeekable*)>::operator()(_XRAnalysisCoreReadCursorSeekable*&&) + 464 (InstrumentsAnalysisCore + 348904) [0x1047092e8]
+                            1   _XRAnalysisCoreReadCursorSeekable::next() + 40 (InstrumentsAnalysisCore + 32368) [0x1046bbe70]
+                              1   std::__1::__function::__func<-[XRIndexedStorageTD64_CC32_R addReadCursorsToPack:tableID:query:]::$_0, std::__1::allocator<-[XRIndexedStorageTD64_CC32_R addReadCursorsToPack:tableID:query:]::$_0>, bool (_XRAnalysisCoreReadCursorSeekable*)>::operator()(_XRAnalysisCoreReadCursorSeekable*&&) + 428 (InstrumentsAnalysisCore + 348868) [0x1047092c4]
+                                1   XRSpatialIndex<XRTD64_CC32_R_Strategy>::_search(XRSpatialIndex<XRTD64_CC32_R_Strategy>::_Cursor*, XRSpatialIndex<XRTD64_CC32_R_Strategy>::SearchMode) + 1712 (InstrumentsAnalysisCore + 350720) [0x104709a00]
+                          1   _XRAnalysisCoreReadCursorWithFilter::next() + 48 (InstrumentsAnalysisCore + 35704) [0x1046bcb78]
+                            1   _XRAnalysisCoreReadCursorWithFilter::validateCursorIsInQuery() + 212 (InstrumentsAnalysisCore + 362852) [0x10470c964]
+                      1   -[XRThreadExistenceProjectorUpdateAgent executeStopOnItinerary:] + 200 (InstrumentsPlugIn + 1086084) [0x104cf9284]
+                        1   -[XRAnalysisCoreProjectorUpdateAgent executeStopOnItinerary:] + 856 (InstrumentsAnalysisCore + 1128644) [0x1047c78c4]
+                          1   -[XRAnalysisCoreProjectorForTables updateFromCore:yieldFlag:] + 432 (InstrumentsAnalysisCore + 196336) [0x1046e3ef0]
+                            1   -[XRAnalysisCoreProjectorForTables _resumeBuildingAggregatesWithCore:store:yieldFlag:] + 908 (InstrumentsAnalysisCore + 195064) [0x1046e39f8]
+                              1   -[XRAnalysisCoreChooseAnyFunction drainCursor:] + 100 (InstrumentsAnalysisCore + 1352876) [0x1047fe4ac]
+                                1   _XRAnalysisCoreRowArrayCursor::next() + 168 (InstrumentsAnalysisCore + 1329416) [0x1047f8908]
+                      1   -[XRAnalysisCoreProjectorUpdateAgent executeStopOnItinerary:] + 856 (InstrumentsAnalysisCore + 1128644) [0x1047c78c4]
+                        1   -[XRAnalysisCoreProjectorForTables updateFromCore:yieldFlag:] + 272 (InstrumentsAnalysisCore + 196176) [0x1046e3e50]
+                          1   -[XRAnalysisCoreProjectorForTables _resumeBuildingPointsWithCore:store:yieldFlag:] + 408 (InstrumentsAnalysisCore + 193452) [0x1046e33ac]
+                            1   Projection::getCoordinateFromCursor(ProjectionCoordinate*, XRAnalysisCoreReadCursor const*, id<XRAnalysisCoreReadOnly>, XRAnalysisCoreValue* __strong*) + 192 (InstrumentsAnalysisCore + 196936) [0x1046e4148]
+                              1   _XRAnalysisCoreReadCursorSeekable::columnValueObject(unsigned char, XRAnalysisCoreValue* __strong*, bool) const + 280 (InstrumentsAnalysisCore + 32976) [0x1046bc0d0]
+                      1   -[XRAnalysisCoreRowArrayQueryAgent executeStopOnItinerary:] + 644 (InstrumentsAnalysisCore + 897980) [0x10478f3bc]
+                        1   _dispatch_apply_with_attr_f + 1152 (libdispatch.dylib + 97500) [0x1a4dcacdc]
+                          1   _dispatch_apply_invoke_and_wait + 224 (libdispatch.dylib + 100696) [0x1a4dcb958]
+                            1   _dispatch_client_callout2 + 20 (libdispatch.dylib + 15340) [0x1a4db6bec]
+                              1   __59-[XRAnalysisCoreRowArrayQueryAgent executeStopOnItinerary:]_block_invoke + 164 (InstrumentsAnalysisCore + 899468) [0x10478f98c]
+                                1   _XRAnalysisCoreReadCursorWithFilter::next() + 32 (InstrumentsAnalysisCore + 35688) [0x1046bcb68]
+                                  1   _XRAnalysisCoreReadCursorSeekable::next() + 40 (InstrumentsAnalysisCore + 32368) [0x1046bbe70]
+                                    1   std::__1::__function::__func<-[XRIndexedStorageT64_CC32_R addReadCursorsToPack:tableID:query:]::$_0, std::__1::allocator<-[XRIndexedStorageT64_CC32_R addReadCursorsToPack:tableID:query:]::$_0>, bool (_XRAnalysisCoreReadCursorSeekable*)>::operator()(_XRAnalysisCoreReadCursorSeekable*&&) + 428 (InstrumentsAnalysisCore + 975256) [0x1047a2198]
+                                      1   XRSpatialIndex<XRT64_CC32_R_Strategy>::_search(XRSpatialIndex<XRT64_CC32_R_Strategy>::_Cursor*, XRSpatialIndex<XRT64_CC32_R_Strategy>::SearchMode) + 1696 (InstrumentsAnalysisCore + 977092) [0x1047a28c4]
+                  1   ??? (DVTInstrumentsUtilities + 126724) [0x10457af04]
+                    1   -[XRAnalysisCoreActivityManager _prepareMinorFrameAgent:] + 88 (InstrumentsAnalysisCore + 45492) [0x1046bf1b4]
+                      1   -[XRAnalysisCoreQueryTicket _prepareMinorFrameAgent:] + 372 (InstrumentsAnalysisCore + 682420) [0x10475a9b4]
+                        1   -[XRIndexedStorage createCursorPackForQuery:tableID:factualPack:speculative:] + 348 (InstrumentsAnalysisCore + 316420) [0x104701404]
+                          1   -[XRIndexedStorageT64_CC32_R addReadCursorsToPack:tableID:query:] + 1796 (InstrumentsAnalysisCore + 962236) [0x10479eebc]
+                            1   XRSpatialIndex<XRT64_CC32_R_Strategy>::_search(XRSpatialIndex<XRT64_CC32_R_Strategy>::_Cursor*, XRSpatialIndex<XRT64_CC32_R_Strategy>::SearchMode) + 2168 (InstrumentsAnalysisCore + 977564) [0x1047a2a9c]
+                1   _dispatch_call_block_and_release + 32 (libdispatch.dylib + 7776) [0x1a4db4e60]
+                  1   __NSOQSchedule_f + 184 (Foundation + 274836) [0x1a5ef3194]
+                    1   __NSOPERATIONQUEUE_IS_STARTING_AN_OPERATION__ + 24 (Foundation + 275168) [0x1a5ef32e0]
+                      1   -[NSOperation start] + 804 (Foundation + 275980) [0x1a5ef360c]
+                        1   __NSOPERATION_IS_INVOKING_MAIN__ + 24 (Foundation + 279496) [0x1a5ef43c8]
+                          1   ??? (DVTInstrumentsUtilities + 37124) [0x104565104]
+                            1   __63-[XRAnalysisCoreSpace afterOperation:priority:accessDirectory:]_block_invoke + 104 (InstrumentsPlugIn + 675480) [0x104c94e98]
+                              1   __30-[XRTrace loadDocument:error:]_block_invoke_2 + 52 (InstrumentsPlugIn + 305648) [0x104c3a9f0]
+                                1   -[_XRAnalysisCoreSpaceDirectory reinitializeWithNewPathManager:] + 260 (InstrumentsPlugIn + 672268) [0x104c9420c]
+                                  1   ??? (DVTInstrumentsUtilities + 134000) [0x10457cb70]
+                                    1   __64-[_XRAnalysisCoreSpaceDirectory reinitializeWithNewPathManager:]_block_invoke + 80 (InstrumentsPlugIn + 672512) [0x104c94300]
+                                      1   -[XRAnalysisCore initWithPathManager:dataSubpath:] + 580 (InstrumentsAnalysisCore + 152072) [0x1046d9208]
+                                        1   -[XRAnalysisCoreModelingHemisphere initWithContext:] + 220 (InstrumentsAnalysisCore + 853692) [0x1047846bc]
+                                          1   -[XRAnalysisCoreObjectRegistry initWithPathManager:coreSubpath:issueResponder:] + 2172 (InstrumentsAnalysisCore + 1378220) [0x1048047ac]
+                                            1   XRIntegerUniquer::XRIntegerUniquer(NSURL*, XRIntegerUniquerFileOpenMode, unsigned int) + 1356 (InstrumentsAnalysisCore + 932780) [0x104797bac]
+                                              1   XRIntegerUniquer::_AddEntry(unsigned long long const*, unsigned int) + 76 (InstrumentsAnalysisCore + 929992) [0x1047970c8]
+                                                1   XRIntegerUniquerHash::Hash128(void const*, unsigned long, unsigned long long*, unsigned long long*) + 1908 (InstrumentsAnalysisCore + 1117824) [0x1047c4e80]
+                                                  1   <Non-Frontmost App>
+          4   _dispatch_queue_override_invoke + 792 (libdispatch.dylib + 27860) [0x1a4db9cd4]
+            4   _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+              3   _dispatch_disk_perform + 516 (libdispatch.dylib + 212200) [0x1a4de6ce8]
+                2   __write_nocancel + 8 (libsystem_kernel.dylib + 22740) [0x1a4f3d8d4]
+                  1   <Kernel mode>
+                1   __read_nocancel + 8 (libsystem_kernel.dylib + 14532) [0x1a4f3b8c4]
+                  1   <Kernel mode>
+              1   _dispatch_call_block_and_release + 32 (libdispatch.dylib + 7776) [0x1a4db4e60]
+                1   madvise + 8 (libsystem_kernel.dylib + 17812) [0x1a4f3c594]
+          3   _dispatch_async_redirect_invoke + 748 (libdispatch.dylib + 26484) [0x1a4db9774]
+            3   _dispatch_continuation_pop + 504 (libdispatch.dylib + 28800) [0x1a4dba080]
+              3   _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+                3   ??? (DVTInstrumentsUtilities + 160164) [0x1045831a4]
+                  3   ??? (DVTInstrumentsUtilities + 126740) [0x10457af14]
+                    3   ??? (DVTInstrumentsUtilities + 143644) [0x10457f11c]
+                      2   -[XRAnalysisCoreQueryDecoAgent executeStopOnItinerary:] + 484 (InstrumentsKit + 1122396) [0x1052e205c]
+                        1   DYLD-STUB$$DTTimelineDecorationContainerCancelled + 4 (InstrumentsKit + 1254120) [0x1053022e8]
+                        1   -[XRAnalysisCoreQueryDecoAgent _fillContainerFromCursor:] + 596 (InstrumentsKit + 1124812) [0x1052e29cc]
+                          1   _XRAnalysisCoreReadCursorWithFilter::next() + 48 (InstrumentsAnalysisCore + 35704) [0x1046bcb78]
+                            1   _XRAnalysisCoreReadCursorWithFilter::validateCursorIsInQuery() + 184 (InstrumentsAnalysisCore + 362824) [0x10470c948]
+                      1   -[XRAnalysisCoreProjectorUpdateAgent executeStopOnItinerary:] + 856 (InstrumentsAnalysisCore + 1128644) [0x1047c78c4]
+                        1   -[XRAnalysisCoreProjectorForTables updateFromCore:yieldFlag:] + 272 (InstrumentsAnalysisCore + 196176) [0x1046e3e50]
+                          1   -[XRAnalysisCoreProjectorForTables _resumeBuildingPointsWithCore:store:yieldFlag:] + 408 (InstrumentsAnalysisCore + 193452) [0x1046e33ac]
+                            1   Projection::getCoordinateFromCursor(ProjectionCoordinate*, XRAnalysisCoreReadCursor const*, id<XRAnalysisCoreReadOnly>, XRAnalysisCoreValue* __strong*) + 192 (InstrumentsAnalysisCore + 196936) [0x1046e4148]
+                              1   -[XRAnalysisCoreStandardHistogramRollUp rollUp:to:core:] + 116 (InstrumentsPlugIn + 1040576) [0x104cee0c0]
+                                1   DYLD-STUB$$objc_msgSend + 8 (CoreFoundation + 1980072) [0x1a519f6a8]
+        8   _dispatch_root_queue_drain + 684 (libdispatch.dylib + 87100) [0x1a4dc843c]
+          8   _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+            8   _dispatch_apply_invoke + 224 (libdispatch.dylib + 95172) [0x1a4dca3c4]
+              8   _dispatch_client_callout2 + 20 (libdispatch.dylib + 15340) [0x1a4db6bec]
+                8   __59-[XRAnalysisCoreRowArrayQueryAgent executeStopOnItinerary:]_block_invoke + 164 (InstrumentsAnalysisCore + 899468) [0x10478f98c]
+                  6   _XRAnalysisCoreReadCursorWithFilter::next() + 32 (InstrumentsAnalysisCore + 35688) [0x1046bcb68]
+                    6   _XRAnalysisCoreReadCursorSeekable::next() + 40 (InstrumentsAnalysisCore + 32368) [0x1046bbe70]
+                      5   std::__1::__function::__func<-[XRIndexedStorageT64_CC32_R addReadCursorsToPack:tableID:query:]::$_0, std::__1::allocator<-[XRIndexedStorageT64_CC32_R addReadCursorsToPack:tableID:query:]::$_0>, bool (_XRAnalysisCoreReadCursorSeekable*)>::operator()(_XRAnalysisCoreReadCursorSeekable*&&) + 428 (InstrumentsAnalysisCore + 975256) [0x1047a2198]
+                        5   XRSpatialIndex<XRT64_CC32_R_Strategy>::_search(XRSpatialIndex<XRT64_CC32_R_Strategy>::_Cursor*, XRSpatialIndex<XRT64_CC32_R_Strategy>::SearchMode) + 1696 (InstrumentsAnalysisCore + 977092) [0x1047a28c4]
+                          3   <Kernel mode>
+                      1   std::__1::__function::__func<-[XRIndexedStorageTD64_CC32_R addReadCursorsToPack:tableID:query:]::$_0, std::__1::allocator<-[XRIndexedStorageTD64_CC32_R addReadCursorsToPack:tableID:query:]::$_0>, bool (_XRAnalysisCoreReadCursorSeekable*)>::operator()(_XRAnalysisCoreReadCursorSeekable*&&) + 448 (InstrumentsAnalysisCore + 348888) [0x1047092d8]
+                        1   _XRAnalysisCoreReadCursorSeekableTD64_CC32_R::moveTo(_XRStorageManagerDirectAddress) + 192 (InstrumentsAnalysisCore + 347048) [0x104708ba8]
+                          1   <Kernel mode>
+                  1   _XRAnalysisCoreReadCursorWithFilter::validateCursorIsInQuery() + 732 (InstrumentsAnalysisCore + 363372) [0x10470cb6c]
+                  1   _XRAnalysisCoreReadCursorWithFilter::next() + 48 (InstrumentsAnalysisCore + 35704) [0x1046bcb78]
+                    1   _XRAnalysisCoreReadCursorWithFilter::validateCursorIsInQuery() + 424 (InstrumentsAnalysisCore + 363064) [0x10470ca38]
+    24  _pthread_wqthread + 288 (libsystem_pthread.dylib + 13060) [0x1a4f71304]
+      24  _dispatch_workloop_worker_thread + 656 (libdispatch.dylib + 91912) [0x1a4dc9708]
+        24  _dispatch_lane_invoke + 392 (libdispatch.dylib + 48804) [0x1a4dbeea4]
+          20  _dispatch_lane_serial_drain + 376 (libdispatch.dylib + 45576) [0x1a4dbe208]
+            20  _dispatch_lane_invoke + 444 (libdispatch.dylib + 48856) [0x1a4dbeed8]
+              20  _dispatch_lane_serial_drain + 672 (libdispatch.dylib + 45872) [0x1a4dbe330]
+                20  _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+                  20  _dispatch_call_block_and_release + 32 (libdispatch.dylib + 7776) [0x1a4db4e60]
+                    17  ___dispatch_operation_deliver_data_block_invoke + 148 (libdispatch.dylib + 215824) [0x1a4de7b10]
+                      17  __60-[XRAnalysisCorePathManagerCompressor _readFileAndTransform]_block_invoke + 156 (InstrumentsAnalysisCore + 943212) [0x10479a46c]
+                        17  -[XRAnalysisCorePathManagerCompressor _transformAndWrite] + 404 (InstrumentsAnalysisCore + 942140) [0x10479a03c]
+                          3   ??? (libz.1.dylib + 47056) [0x1af9307d0]
+                          3   ??? (libz.1.dylib + 46852) [0x1af930704]
+                          3   ??? (libz.1.dylib + 47120) [0x1af930810]
+                            2   <Non-Frontmost App>
+                          2   ??? (libz.1.dylib + 46868) [0x1af930714]
+                          1   ??? (libz.1.dylib + 47728) [0x1af930a70]
+                          1   ??? (libz.1.dylib + 47588) [0x1af9309e4]
+                          1   ??? (libz.1.dylib + 47064) [0x1af9307d8]
+                            1   <Non-Frontmost App>
+                          1   ??? (libz.1.dylib + 46900) [0x1af930734]
+                            1   <Non-Frontmost App>
+                          1   ??? (libz.1.dylib + 46864) [0x1af930710]
+                          1   ??? (libz.1.dylib + 46268) [0x1af9304bc]
+                    3   guarded_close_np + 8 (libsystem_kernel.dylib + 21396) [0x1a4f3d394]
+                      2   <Kernel mode>
+          4   _dispatch_lane_serial_drain + 672 (libdispatch.dylib + 45872) [0x1a4dbe330]
+            4   _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+              2   _dispatch_call_block_and_release + 32 (libdispatch.dylib + 7776) [0x1a4db4e60]
+                1   _dispatch_group_wake + 280 (libdispatch.dylib + 19244) [0x1a4db7b2c]
+                  1   __ulock_wake + 8 (libsystem_kernel.dylib + 14304) [0x1a4f3b7e0]
+                1   __44-[XRTracksElaborator _triggerRecomputation:]_block_invoke + 40 (InstrumentsPlugIn + 916440) [0x104ccfbd8]
+                  1   -[XRTracksElaborator _computeConfigurations] + 3204 (InstrumentsPlugIn + 920204) [0x104cd0a8c]
+                    1   -[XRTracksElaborator _computeFullInformationForTrackConfigurations] + 176 (InstrumentsPlugIn + 942400) [0x104cd6140]
+                      1   -[XRTracksElaborator _computePlanAndGraphsForConfiguration:] + 76 (InstrumentsPlugIn + 942196) [0x104cd6074]
+                        1   -[XRTracksElaborator _fillRecursivelyUIPlanAndGraphsForTrackConfiguration:parentConfigs:] + 2944 (InstrumentsPlugIn + 941984) [0x104cd5fa0]
+                          1   -[XRTracksElaborator _fillRecursivelyUIPlanAndGraphsForTrackConfiguration:parentConfigs:] + 1560 (InstrumentsPlugIn + 940600) [0x104cd5a38]
+                            1   -[XRTracksElaborator _computeGraphsForTrackConfiguration:] + 660 (InstrumentsPlugIn + 938632) [0x104cd5288]
+                              1   -[XRTracksElaborator _computeLaneConfigurationForGraphSpec:trackConfiguration:] + 584 (InstrumentsPlugIn + 936648) [0x104cd4ac8]
+                                1   -[__NSDictionaryM enumerateKeysAndObjectsWithOptions:usingBlock:] + 208 (CoreFoundation + 551520) [0x1a5042a60]
+                                  1   __NSDICTIONARY_IS_CALLING_OUT_TO_A_BLOCK__ + 24 (CoreFoundation + 291488) [0x1a50032a0]
+                                    1   __79-[XRTracksElaborator _computeLaneConfigurationForGraphSpec:trackConfiguration:]_block_invoke + 96 (InstrumentsPlugIn + 936880) [0x104cd4bb0]
+                                      1   -[XRTracksElaborator _plotConfigurationsForGraphTreatment:graphSpec:trackConfiguration:previousConfigurations:] + 2688 (InstrumentsPlugIn + 932620) [0x104cd3b0c]
+                                        1   -[XRAnalysisCoreHistogramTreatment(DataQueryConfiguration) queryConfigurationFromCore:tableID:trace:runNumber:trackConfiguration:graphSpec:sliceByColumnHierarchy:groupByValueSelectionSpec:qualifierValueSelectionSpec:layoutContainmentValueSelectionSpec:dynamicValueProvider:] + 980 (InstrumentsPlugIn + 59156) [0x104bfe714]
+                                          1   +[XRAnalysisCoreAggregateFunction(Factory) aggregateFunctionWithName:parameters:schema:] + 216 (InstrumentsAnalysisCore + 1370180) [0x104802844]
+                                            1   -[XRAnalysisCorePercentageCapacityFunction initWithSchema:parameters:] + 216 (InstrumentsAnalysisCore + 1354868) [0x1047fec74]
+                                              1   -[NSString doubleValue] + 88 (Foundation + 500860) [0x1a5f2a47c]
+                                                1   _NSScanDoubleFromString + 1064 (Foundation + 501984) [0x1a5f2a8e0]
+                                                  1   strtod_l + 464 (libsystem_c.dylib + 28928) [0x1a4e40100]
+              2   _Block_release + 200 (libsystem_blocks.dylib + 6660) [0x1a4cb9a04]
+                1   _dispatch_dispose + 216 (libdispatch.dylib + 10356) [0x1a4db5874]
+                  1   objc_destructInstance + 144 (libobjc.A.dylib + 34864) [0x1a4e02830]
+                    1   objc_object::sidetable_clearDeallocating() + 124 (libobjc.A.dylib + 36208) [0x1a4e02d70]
+                      1   bool objc::DenseMapBase<objc::DenseMap<DisguisedPtr<objc_object>, unsigned long, (anonymous namespace)::RefcountMapValuePurgeable, objc::DenseMapInfo<DisguisedPtr<objc_object> >, objc::detail::DenseMapPair<DisguisedPtr<objc_object>, unsigned long> >, DisguisedPtr<objc_object>, unsigned long, (anonymous namespace)::RefcountMapValuePurgeable, objc::DenseMapInfo<DisguisedPtr<objc_object> >, objc::detail::DenseMapPair<DisguisedPtr<objc_object>, unsigned long> >::LookupBucketFor<DisguisedPtr<objc_object> >(DisguisedPtr<objc_object> const&, objc::detail::DenseMapPair<DisguisedPtr<objc_object>, unsigned long>*&) + 148 (libobjc.A.dylib + 175160) [0x1a4e24c38]
+                1   _Block_release + 200 (libsystem_blocks.dylib + 6660) [0x1a4cb9a04]
+                  1   -[XRAnalysisCorePathManagerCompressor dealloc] + 56 (InstrumentsAnalysisCore + 941152) [0x104799c60]
+                    1   _objc_rootDealloc + 80 (libobjc.A.dylib + 34704) [0x1a4e02790]
+                      1   objc_destructInstance + 80 (libobjc.A.dylib + 34800) [0x1a4e027f0]
+                        1   object_cxxDestructFromClass(objc_object*, objc_class*) + 116 (libobjc.A.dylib + 71616) [0x1a4e0b7c0]
+                          1   -[XRAnalysisCorePathManagerCompressor .cxx_destruct] + 64 (InstrumentsAnalysisCore + 942988) [0x10479a38c]
+                            1   -[OS_dispatch_data dealloc] + 36 (libdispatch.dylib + 220408) [0x1a4de8cf8]
+                              1   free_medium + 2540 (libsystem_malloc.dylib + 40732) [0x1a4d91f1c]
+                                1   madvise + 8 (libsystem_kernel.dylib + 17812) [0x1a4f3c594]
+                                  1   <Kernel mode>
+  17  start + 520 (dyld + 20724) [0x1046050f4]
+    17  NSApplicationMain + 1064 (AppKit + 16520) [0x1a7b57088]
+      17  -[NSApplication run] + 596 (AppKit + 207284) [0x1a7b859b4]
+        17  ??? (Instruments + 19228) [0x1042f4b1c]
+          17  DVTCheckForUndeallocatedObjectsWithBlock + 164 (DVTFoundation + 1767996) [0x10739fa3c]
+            17  ??? (Instruments + 19436) [0x1042f4bec]
+              17  -[NSApplication(NSEvent) _nextEventMatchingEventMask:untilDate:inMode:dequeue:] + 1332 (AppKit + 264356) [0x1a7b938a4]
+                17  _DPSNextEvent + 844 (AppKit + 270336) [0x1a7b95000]
+                  17  _BlockUntilNextEventMatchingListInModeWithFilter + 72 (HIToolbox + 207516) [0x1adbd6a9c]
+                    17  ReceiveNextEventCommon + 320 (HIToolbox + 207860) [0x1adbd6bf4]
+                      17  RunCurrentEventLoopInMode + 292 (HIToolbox + 208744) [0x1adbd6f68]
+                        17  CFRunLoopRunSpecific + 600 (CoreFoundation + 534324) [0x1a503e734]
+                          16  __CFRunLoopRun + 800 (CoreFoundation + 537076) [0x1a503f1f4]
+                            16  __CFRunLoopDoBlocks + 412 (CoreFoundation + 542076) [0x1a504057c]
+                              16  __CFRUNLOOP_IS_CALLING_OUT_TO_A_BLOCK__ + 28 (CoreFoundation + 542472) [0x1a5040708]
+                                16  ___NSMainRunLoopPerformBlockInModes_block_invoke + 44 (AppKit + 5924488) [0x1a80f9688]
+                                  16  __144-[NSDocumentController _coordinateReadingAndGetAlternateContentsForOpeningDocumentAtURL:resolvingSymlinks:thenContinueOnMainThreadWithAccessor:]_block_invoke.774 + 308 (AppKit + 5880252) [0x1a80ee9bc]
+                                    16  __144-[NSDocumentController _coordinateReadingAndGetAlternateContentsForOpeningDocumentAtURL:resolvingSymlinks:thenContinueOnMainThreadWithAccessor:]_block_invoke.778 + 180 (AppKit + 5880528) [0x1a80eead0]
+                                      16  __144-[NSDocumentController _coordinateReadingAndGetAlternateContentsForOpeningDocumentAtURL:resolvingSymlinks:thenContinueOnMainThreadWithAccessor:]_block_invoke_4 + 36 (AppKit + 5879820) [0x1a80ee80c]
+                                        16  __80-[NSDocumentController openDocumentWithContentsOfURL:display:completionHandler:]_block_invoke + 804 (AppKit + 3734976) [0x1a7ee2dc0]
+                                          16  -[NSDocumentController makeDocumentWithContentsOfURL:alternateContents:ofType:completionHandler:] + 188 (AppKit + 5884016) [0x1a80ef870]
+                                            16  __97-[NSDocumentController makeDocumentWithContentsOfURL:alternateContents:ofType:completionHandler:]_block_invoke + 92 (AppKit + 5884128) [0x1a80ef8e0]
+                                              16  -[NSDocumentController makeDocumentWithContentsOfURL:ofType:error:] + 444 (AppKit + 3738276) [0x1a7ee3aa4]
+                                                16  -[NSDocument initWithContentsOfURL:ofType:error:] + 228 (AppKit + 3325028) [0x1a7e7ec64]
+                                                  16  -[NSDocument _initWithContentsOfURL:ofType:error:] + 184 (AppKit + 3325328) [0x1a7e7ed90]
+                                                    16  -[PFTTraceDocument readFromURL:ofType:error:] + 448 (InstrumentsKit + 279460) [0x1052143a4]
+                                                      16  -[XRTrace loadDocument:error:] + 1136 (InstrumentsPlugIn + 296444) [0x104c385fc]
+                                                        16  -[XRTrace loadTemplate:outputURL:preserveRunHistory:error:] + 3596 (InstrumentsPlugIn + 290808) [0x104c36ff8]
+                                                          16  -[NSKeyedUnarchiver decodeObjectOfClasses:forKey:] + 360 (Foundation + 69524) [0x1a5ec0f94]
+                                                            16  -[NSKeyedUnarchiver decodeObjectForKey:] + 176 (Foundation + 69968) [0x1a5ec1150]
+                                                              16  _decodeObject + 180 (Foundation + 70288) [0x1a5ec1290]
+                                                                16  _decodeObjectBinary + 2560 (Foundation + 73180) [0x1a5ec1ddc]
+                                                                  16  -[XRRunListData initWithCoder:] + 712 (InstrumentsPlugIn + 620732) [0x104c878bc]
+                                                                    16  -[NSKeyedUnarchiver decodeObjectOfClasses:forKey:] + 360 (Foundation + 69524) [0x1a5ec0f94]
+                                                                      16  -[NSKeyedUnarchiver decodeObjectForKey:] + 176 (Foundation + 69968) [0x1a5ec1150]
+                                                                        16  _decodeObject + 180 (Foundation + 70288) [0x1a5ec1290]
+                                                                          16  _decodeObjectBinary + 2560 (Foundation + 73180) [0x1a5ec1ddc]
+                                                                            16  -[NSDictionary(NSDictionary) initWithCoder:] + 180 (Foundation + 76724) [0x1a5ec2bb4]
+                                                                              16  -[NSKeyedUnarchiver _decodeArrayOfObjectsForKey:] + 1404 (Foundation + 80124) [0x1a5ec38fc]
+                                                                                16  _decodeObjectBinary + 2560 (Foundation + 73180) [0x1a5ec1ddc]
+                                                                                  16  -[NSDictionary(NSDictionary) initWithCoder:] + 180 (Foundation + 76724) [0x1a5ec2bb4]
+                                                                                    16  -[NSKeyedUnarchiver _decodeArrayOfObjectsForKey:] + 1404 (Foundation + 80124) [0x1a5ec38fc]
+                                                                                      16  _decodeObjectBinary + 2560 (Foundation + 73180) [0x1a5ec1ddc]
+                                                                                        9   ??? (DVTInstrumentsUtilities + 132680) [0x10457c648]
+                                                                                          9   -[NSKeyedUnarchiver decodeObject] + 232 (Foundation + 492316) [0x1a5f2831c]
+                                                                                            9   _decodeObject + 156 (Foundation + 70264) [0x1a5ec1278]
+                                                                                              9   _decodeOffsetAndRef + 120 (Foundation + 1811080) [0x1a606a288]
+                                                                                                2   __CFBinaryPlistGetOffsetForValueFromDictionary3 + 1348 (CoreFoundation + 384188) [0x1a5019cbc]
+                                                                                                  2   <Effective Thread QoS User Interactive, Requested Thread QoS User Interactive>
+                                                                                                2   __CFBinaryPlistGetOffsetForValueFromDictionary3 + 772 (CoreFoundation + 383612) [0x1a5019a7c]
+                                                                                                  2   <Effective Thread QoS User Interactive, Requested Thread QoS User Interactive>
+                                                                                                2   _platform_memcmp + 112 (libsystem_platform.dylib + 7488) [0x1a4f89d40]
+                                                                                                  2   <Effective Thread QoS User Interactive, Requested Thread QoS User Interactive>
+                                                                                                1   __CFBinaryPlistGetOffsetForValueFromDictionary3 + 1508 (CoreFoundation + 384348) [0x1a5019d5c]
+                                                                                                  1   <Non-Frontmost App, Effective Thread QoS User Interactive, Requested Thread QoS User Interactive>
+                                                                                                1   __CFBinaryPlistGetOffsetForValueFromDictionary3 + 916 (CoreFoundation + 383756) [0x1a5019b0c]
+                                                                                                  1   <Non-Frontmost App, Effective Thread QoS User Interactive, Requested Thread QoS User Interactive>
+                                                                                                1   _platform_memcmp + 120 (libsystem_platform.dylib + 7496) [0x1a4f89d48]
+                                                                                                  1   <Effective Thread QoS User Interactive, Requested Thread QoS User Interactive>
+                                                                                        7   ??? (DVTInstrumentsUtilities + 132632) [0x10457c618]
+                                                                                          7   -[NSKeyedUnarchiver decodeObject] + 232 (Foundation + 492316) [0x1a5f2831c]
+                                                                                            7   _decodeObject + 156 (Foundation + 70264) [0x1a5ec1278]
+                                                                                              7   _decodeOffsetAndRef + 120 (Foundation + 1811080) [0x1a606a288]
+                                                                                                3   _platform_memcmp + 112 (libsystem_platform.dylib + 7488) [0x1a4f89d40]
+                                                                                                  3   <Effective Thread QoS User Interactive, Requested Thread QoS User Interactive>
+                                                                                                2   __CFBinaryPlistGetOffsetForValueFromDictionary3 + 1004 (CoreFoundation + 383844) [0x1a5019b64]
+                                                                                                  2   <Effective Thread QoS User Interactive, Requested Thread QoS User Interactive>
+                                                                                                1   __CFBinaryPlistGetOffsetForValueFromDictionary3 + 772 (CoreFoundation + 383612) [0x1a5019a7c]
+                                                                                                  1   <Effective Thread QoS User Interactive, Requested Thread QoS User Interactive>
+                                                                                                1   __CFBinaryPlistGetOffsetForValueFromDictionary3 + 724 (CoreFoundation + 383564) [0x1a5019a4c]
+                                                                                                  1   <Effective Thread QoS User Interactive, Requested Thread QoS User Interactive>
+                          1   __CFRunLoopRun + 840 (CoreFoundation + 537116) [0x1a503f21c]
+                            1   __CFRunLoopDoBlocks + 412 (CoreFoundation + 542076) [0x1a504057c]
+                              1   __CFRUNLOOP_IS_CALLING_OUT_TO_A_BLOCK__ + 28 (CoreFoundation + 542472) [0x1a5040708]
+                                1   ___NSMainRunLoopPerformBlockInModes_block_invoke + 44 (AppKit + 5924488) [0x1a80f9688]
+                                  1   __80-[NSDocumentController openDocumentWithContentsOfURL:display:completionHandler:]_block_invoke.820 + 168 (AppKit + 5883264) [0x1a80ef580]
+                                    1   -[PFTTraceDocument makeWindowControllers] + 428 (InstrumentsKit + 284692) [0x105215814]
+                                      1   -[NSDocument addWindowController:] + 232 (AppKit + 2170380) [0x1a7d64e0c]
+                                        1   -[PFTWindowController setDocument:] + 416 (InstrumentsKit + 459012) [0x105240104]
+                                          1   -[XRTracksUIController initWithDocument:delegate:] + 1260 (InstrumentsKit + 62936) [0x1051df5d8]
+                                            1   -[XRAnalysisCoreDetailViewController initWithNibName:bundle:] + 556 (InstrumentsKit + 898404) [0x1052ab564]
+                                              1   -[XRModalViewController init] + 148 (InstrumentsKit + 570000) [0x10525b290]
+                                                1   +[NSTabViewItem tabViewItemWithViewController:] + 108 (AppKit + 2664368) [0x1a7ddd7b0]
+                                                  1   -[NSTabViewItem _updateWithViewController:] + 668 (AppKit + 2211452) [0x1a7d6ee7c]
+                                                    1   -[NSBundle(NSBundleImageExtension) imageForResource:] + 64 (AppKit + 1835020) [0x1a7d1300c]
+                                                      1   -[NSBundle(NSBundleImageExtension) _newImageForResourceWithProspectiveName:imageClass:] + 344 (AppKit + 113244) [0x1a7b6ea5c]
+                                                        1   -[NSBundle(NSBundleImageExtension) URLsForImageResource:] + 372 (AppKit + 1465472) [0x1a7cb8c80]
+                                                          1   -[NSBundle findBundleResourceURLsCallingMethod:passingTest:] + 108 (Foundation + 510524) [0x1a5f2ca3c]
+                                                            1   _CFBundleCopyFindResources + 1380 (CoreFoundation + 317972) [0x1a5009a14]
+                                                              1   _copyResourceURLsFromBundle + 416 (CoreFoundation + 321180) [0x1a500a69c]
+                                                                1   _CFBundleFindResourcesWithPredicate + 152 (CoreFoundation + 776776) [0x1a5079a48]
+                                                                  1   __57-[NSBundle(NSBundleImageExtension) URLsForImageResource:]_block_invoke + 244 (AppKit + 1467896) [0x1a7cb95f8]
+                                                                    1   -[_NSImageTypeData namedImageSuffixExpression] + 108 (AppKit + 2664792) [0x1a7ddd958]
+                                                                      1   _NSFaultInObject + 56 (Foundation + 46712) [0x1a5ebb678]
+                                                                        1   __46-[_NSImageTypeData namedImageSuffixExpression]_block_invoke + 28 (AppKit + 2664832) [0x1a7ddd980]
+                                                                          1   _NSFaultInObject + 56 (Foundation + 46712) [0x1a5ebb678]
+                                                                            1   newTypesList + 228 (AppKit + 1241672) [0x1a7c82248]
+                                                                              1   +[NSImageRep imageFileTypes] + 140 (AppKit + 2665028) [0x1a7ddda44]
+                                                                                1   +[NSImageRep _imageFileTypesNoCaching] + 24 (AppKit + 2665232) [0x1a7dddb10]
+                                                                                  1   +[NSImageRep imagePasteboardTypes] + 140 (AppKit + 2665444) [0x1a7dddbe4]
+                                                                                    1   +[NSImageRep _imagePasteboardTypesNoCaching] + 488 (AppKit + 2666112) [0x1a7ddde80]
+                                                                                      1   +[NSPasteboard(FilterServices) typesFilterableTo:] + 84 (AppKit + 2666740) [0x1a7dde0f4]
+                                                                                        1   _objc_msgSend_uncached + 68 (libobjc.A.dylib + 26212) [0x1a4e00664]
+                                                                                          1   lookUpImpOrForward + 1016 (libobjc.A.dylib + 27964) [0x1a4e00d3c]
+                                                                                            1   initializeAndMaybeRelock(objc_class*, objc_object*, mutex_tt<false>&, bool) + 156 (libobjc.A.dylib + 28544) [0x1a4e00f80]
+                                                                                              1   initializeNonMetaClass + 784 (libobjc.A.dylib + 30284) [0x1a4e0164c]
+                                                                                                1   CALLING_SOME_+initialize_METHOD + 24 (libobjc.A.dylib + 31204) [0x1a4e019e4]
+                                                                                                  1   +[NSPasteboardFilter initialize] + 60 (AppKit + 2667300) [0x1a7dde324]
+                                                                                                    1   CFNotificationCenterAddObserver + 352 (CoreFoundation + 271432) [0x1a4ffe448]
+                                                                                                      1   _CFXNotificationRegisterObserver + 712 (CoreFoundation + 272280) [0x1a4ffe798]
+                                                                                                        1   xpc_dictionary_set_string + 56 (libxpc.dylib + 7576) [0x1a4cbbd98]
+                                                                                                          1   _xpc_dictionary_insert + 436 (libxpc.dylib + 8256) [0x1a4cbc040]
+                                                                                                            1   _xpc_alloc + 32 (libxpc.dylib + 119316) [0x1a4cd7214]
+                                                                                                              1   _malloc_zone_calloc + 100 (libsystem_malloc.dylib + 125044) [0x1a4da6874]
+                                                                                                                1   <Effective Thread QoS User Interactive, Requested Thread QoS User Interactive>
+  5   thread_start + 8 (libsystem_pthread.dylib + 8228) [0x1a4f70024]
+    5   _pthread_start + 148 (libsystem_pthread.dylib + 29248) [0x1a4f75240]
+      3   CVDisplayLink::runIOThread() + 632 (CoreVideo + 8796) [0x1ac5b525c]
+        3   CVDisplayLink::performIO(CVTimeStamp*) + 308 (CoreVideo + 12412) [0x1ac5b607c]
+          3   ??? (DTGraphKit + 730816) [0x105c0a6c0]
+            3   ??? (DTGraphKit + 1295896) [0x105c94618]
+              3   ??? (DTGraphKit + 1227804) [0x105c83c1c]
+                3   ??? (DTGraphKit + 1245292) [0x105c8806c]
+                  3   ??? (DTGraphKit + 1231208) [0x105c84968]
+                    3   autoreleasepool<A>(invoking:) + 64 (libswiftObjectiveC.dylib + 6860) [0x1b981cacc]
+                      3   ??? (DTGraphKit + 1245472) [0x105c88120]
+                        3   ??? (DTGraphKit + 1244988) [0x105c87f3c]
+                          3   ??? (DTGraphKit + 1232280) [0x105c84d98]
+                            3   autoreleasepool<A>(invoking:) + 64 (libswiftObjectiveC.dylib + 6860) [0x1b981cacc]
+                              3   ??? (DTGraphKit + 1245436) [0x105c880fc]
+                                3   ??? (DTGraphKit + 1243152) [0x105c87810]
+                                  3   ??? (DTGraphKit + 1243228) [0x105c8785c]
+                                    2   ??? (DTGraphKit + 1236084) [0x105c85c74]
+                                      2   +[NSAppearance _performWithCurrentAppearance:usingBlock:] + 92 (AppKit + 191056) [0x1a7b81a50]
+                                        2   ??? (DTGraphKit + 1610336) [0x105ce1260]
+                                          2   ??? (DTGraphKit + 1610304) [0x105ce1240]
+                                            2   ??? (DTGraphKit + 1611052) [0x105ce152c]
+                                              2   ??? (DTGraphKit + 1243476) [0x105c87954]
+                                                2   ??? (DTGraphKit + 1237780) [0x105c86314]
+                                                  2   ??? (DTGraphKit + 1344716) [0x105ca04cc]
+                                                    1   ??? (DTGraphKit + 889808) [0x105c313d0]
+                                                      1   ??? (DTGraphKit + 1071864) [0x105c5daf8]
+                                                        1   ??? (DTGraphKit + 1088576) [0x105c61c40]
+                                                          1   ??? (DTGraphKit + 1524656) [0x105ccc3b0]
+                                                            1   _platform_memmove + 0 (libsystem_platform.dylib + 16656) [0x1a4f8c110]
+                                                              1   <Effective Thread QoS Unspecified, Requested Thread QoS Unspecified>
+                                                    1   ??? (DTGraphKit + 889188) [0x105c31164]
+                                                      1   ??? (DTGraphKit + 886748) [0x105c307dc]
+                                                        1   ??? (DTGraphKit + 1525508) [0x105ccc704]
+                                                          1   ??? (DTGraphKit + 1526140) [0x105ccc97c]
+                                                            1   ??? (DTGraphKit + 1183404) [0x105c78eac]
+                                                              1   ??? (DTGraphKit + 1525316) [0x105ccc644]
+                                                                1   _platform_memmove + 0 (libsystem_platform.dylib + 16656) [0x1a4f8c110]
+                                                                  1   <Effective Thread QoS Unspecified, Requested Thread QoS Unspecified>
+                                    1   ??? (DTGraphKit + 1234720) [0x105c85720]
+                                      1   ??? (DTGraphKit + 1508096) [0x105cc8300]
+                                        1   swift_retain + 60 (libswiftCore.dylib + 3703452) [0x1b233029c]
+                                          1   <Effective Thread QoS Unspecified, Requested Thread QoS Unspecified>
+      1   __NSThread__start__ + 808 (Foundation + 377576) [0x1a5f0c2e8]
+        1   ??? (Devices + 38216) [0x11ea81548]
+          1   -[NSRunLoop(NSRunLoop) runMode:beforeDate:] + 236 (Foundation + 408992) [0x1a5f13da0]
+            1   CFRunLoopRunSpecific + 600 (CoreFoundation + 534324) [0x1a503e734]
+              1   __CFRunLoopRun + 820 (CoreFoundation + 537096) [0x1a503f208]
+                1   __CFRunLoopDoSources0 + 268 (CoreFoundation + 542868) [0x1a5040894]
+                  1   __CFRunLoopDoSource0 + 208 (CoreFoundation + 543656) [0x1a5040ba8]
+                    1   __CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE0_PERFORM_FUNCTION__ + 28 (CoreFoundation + 543836) [0x1a5040c5c]
+                      1   _USBMuxCustomRunLoopSourcePerformCallback + 1188 (MobileDevice + 618472) [0x12887afe8]
+                        1   _AMDDeviceAttachedCallbackv3 + 260 (MobileDevice + 1610424) [0x12896d2b8]
+                          1   CPXStartListeningForPairedDevices + 88 (MobileDevice + 140620) [0x12880654c]
+                            1   _CopyCompanionProxyServiceConnectionForDevice + 152 (MobileDevice + 141736) [0x1288069a8]
+                              1   AMDeviceStartSession + 1024 (MobileDevice + 1600732) [0x12896acdc]
+                                1   lockssl_handshake + 676 (MobileDevice + 1528068) [0x128959104]
+                                  1   ssl23_connect + 1656 (libssl.35.dylib + 48180) [0x1ce0c6c34]
+                                    1   ssl3_connect + 1276 (libssl.35.dylib + 60244) [0x1ce0c9b54]
+                                      1   ssl3_send_client_key_exchange + 1440 (libssl.35.dylib + 70876) [0x1ce0cc4dc]
+                                        1   EC_KEY_generate_key + 180 (libcrypto.35.dylib + 318076) [0x1c931ea7c]
+                                          1   EC_POINT_mul + 72 (libcrypto.35.dylib + 325968) [0x1c9320950]
+                                            1   ec_wNAF_mul + 2280 (libcrypto.35.dylib + 328360) [0x1c93212a8]
+                                              1   ec_GFp_simple_dbl + 452 (libcrypto.35.dylib + 347316) [0x1c9325cb4]
+                                                1   ec_GFp_nist_field_mul + 176 (libcrypto.35.dylib + 338900) [0x1c9323bd4]
+                                                  1   BN_ucmp + 20 (libcrypto.35.dylib + 191980) [0x1c92ffdec]
+                                                    1   <Effective Thread QoS Default, Requested Thread QoS Default>
+      1   ??? (DVTInstrumentsUtilities + 170732) [0x104585aec]
+        1   ??? (DVTInstrumentsUtilities + 168968) [0x104585408]
+          1   _pthread_mutex_firstfit_unlock_slow + 244 (libsystem_pthread.dylib + 8088) [0x1a4f6ff98]
+            1   __psynch_mutexdrop + 8 (libsystem_kernel.dylib + 18312) [0x1a4f3c788]
+              1   <Kernel mode, Effective Thread QoS Unspecified, Requested Thread QoS Unspecified>
+  2   start_wqthread + 0 (libsystem_pthread.dylib + 8208) [0x1a4f70010]
+    2   <Kernel mode, Effective Thread QoS User Interactive, Requested Thread QoS User Interactive>
+
+  Binary Images:
+           0x1042f0000 -        0x104303fff  com.apple.dt.Instruments 13.2.1 (64551.30)                         <41B2B5A3-EDB8-3E49-AD77-BCA301CFAE77>  /Applications/Xcode.app/Contents/Applications/Instruments.app/Contents/MacOS/Instruments
+           0x10455c000 -        0x1045cbfff  com.apple.dt.instruments.DVTInstrumentsUtilities 13.2.1 (64551.32) <B7B417EB-A912-3414-BB1D-E1D0A12AB760>  /Applications/Xcode.app/Contents/SharedFrameworks/DVTInstrumentsUtilities.framework/Versions/A/DVTInstrumentsUtilities
+           0x104600000 -        0x10467bfff  dyld (941.5)                                                       <D21A73EA-79CD-36EB-8AC9-2C5CF5181A27>  /usr/lib/dyld
+           0x1046b4000 -        0x10488ffff  com.apple.dt.InstrumentsAnalysisCore 13.2.1 (64551.30)             <F3BD2899-6EA6-30E6-AA1D-5F0616A21FED>  /Applications/Xcode.app/Contents/Applications/Instruments.app/Contents/Frameworks/InstrumentsAnalysisCore.framework/Versions/A/InstrumentsAnalysisCore
+           0x104bf0000 -        0x104e1ffff  com.apple.dt.instruments.InstrumentsPlugIn 13.2.1 (64551.30)       <E263BDCF-D293-3284-BA91-5CE9B5038EF1>  /Applications/Xcode.app/Contents/Applications/Instruments.app/Contents/Frameworks/InstrumentsPlugIn.framework/Versions/A/InstrumentsPlugIn
+           0x1051d0000 -        0x1053d7fff  com.apple.dt.instruments.InstrumentsKit 13.2.1 (64551.30)          <03C5F634-EA13-3C53-B6B3-AC7DD1F70808>  /Applications/Xcode.app/Contents/Applications/Instruments.app/Contents/Frameworks/InstrumentsKit.framework/Versions/A/InstrumentsKit
+           0x105b58000 -        0x105dcbfff  com.apple.dt.instruments.DTGraphKit 13.2.1 (64551.17)              <C57FDB09-B133-31A2-A4D2-D933CE242F6E>  /Applications/Xcode.app/Contents/SharedFrameworks/DTGraphKit.framework/Versions/A/DTGraphKit
+           0x1071f0000 -        0x10790ffff  com.apple.dt.DVTFoundation 13.2.1 (19564)                          <9B101362-D39F-34EE-A5C5-3FBD934AEDCD>  /Applications/Xcode.app/Contents/SharedFrameworks/DVTFoundation.framework/Versions/A/DVTFoundation
+           0x11ea78000 -        0x11ea97fff  com.apple.dt.instruments.Devices 13.2.1 (64551.30)                 <8301A085-3006-37F3-8E99-99815B2CF379>  /Applications/Xcode.app/Contents/Applications/Instruments.app/Contents/PlugIns/Devices.xrplugin/Contents/MacOS/Devices
+           0x1287e4000 -        0x128b03fff  com.apple.mobiledevice 1368.60.4 (1368.60.4)                       <4AAD5593-9ADF-3721-BE02-C716D7325303>  /Library/Apple/*/MobileDevice.framework/Versions/A/MobileDevice
+           0x1a4cb8000 -        0x1a4cb9fff  libsystem_blocks.dylib (79)                                        <0DBEE155-6231-3352-84A0-2D9E11BCD4F2>  /usr/lib/system/libsystem_blocks.dylib
+           0x1a4cba000 -        0x1a4cf3fff  libxpc.dylib (2235.80.3)                                           <FD3E0E8D-4618-3CE5-A24A-5639BE86B979>  /usr/lib/system/libxpc.dylib
+           0x1a4d88000 -        0x1a4db2fff  libsystem_malloc.dylib (374.60.3)                                  <961751ED-F18B-30D4-8025-AA12CA23197B>  /usr/lib/system/libsystem_malloc.dylib
+           0x1a4db3000 -        0x1a4df9fff  libdispatch.dylib (1324.60.3)                                      <93E1DCFC-EF56-3113-8E7C-1BA85266A93B>  /usr/lib/system/libdispatch.dylib
+           0x1a4dfa000 -        0x1a4e35fff  libobjc.A.dylib (838.1)                                            <2EB32E1D-90CB-3256-8681-9034085A06A6>  /usr/lib/libobjc.A.dylib
+           0x1a4e39000 -        0x1a4eb9fff  libsystem_c.dylib (1506.40.4)                                      <0DBC8B95-0037-3725-A769-0C772C293488>  /usr/lib/system/libsystem_c.dylib
+           0x1a4f38000 -        0x1a4f6dfff  libsystem_kernel.dylib (8019.80.24)                                <384945E6-DD71-37E5-9A3D-84FFF14A1E60>  /usr/lib/system/libsystem_kernel.dylib
+           0x1a4f6e000 -        0x1a4f7afff  libsystem_pthread.dylib (485.60.2)                                 <F7B2ECCF-E6F1-3109-AE81-9028C0B8332A>  /usr/lib/system/libsystem_pthread.dylib
+           0x1a4f88000 -        0x1a4f8ffff  libsystem_platform.dylib (273.40.1)                                <49CF1536-27E5-3A34-9724-D75552CBAB56>  /usr/lib/system/libsystem_platform.dylib
+           0x1a4fbc000 -        0x1a54fffff  com.apple.CoreFoundation 6.9 (1856.105)                            <16FADF8B-A3AF-3E0C-B5FB-CE9A9CDC8747>  /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
+           0x1a5eb0000 -        0x1a629dfff  com.apple.Foundation 6.9 (1856.105)                                <90321A38-43A5-3767-9A9C-2C631338B9BC>  /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
+           0x1a7b53000 -        0x1a8a09fff  com.apple.AppKit 6.9 (2113.30.116)                                 <1B65B629-6D3B-3FCD-AD43-E5683A9F94B7>  /System/Library/Frameworks/AppKit.framework/Versions/C/AppKit
+           0x1ac5b3000 -        0x1ac60ffff  com.apple.CoreVideo 1.8 (465.3)                                    <A8940300-AB7C-3BBE-A748-89B330EA1A6D>  /System/Library/Frameworks/CoreVideo.framework/Versions/A/CoreVideo
+           0x1adba4000 -        0x1aded3fff  com.apple.HIToolbox 2.1.1 (1113.6)                                 <B5A3FE9A-833B-3697-AC9C-1E9E8EB11BAC>  /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/HIToolbox
+           0x1af925000 -        0x1af936fff  libz.1.dylib (77)                                                  <1546610B-3908-399F-ADB0-2EE6CBE5E294>  /usr/lib/libz.1.dylib
+           0x1b1fa8000 -        0x1b23fafff  libswiftCore.dylib (1300.0.46.202)                                 <07943838-0899-34B0-8EB3-A170AB8456A8>  /usr/lib/swift/libswiftCore.dylib
+           0x1b981b000 -        0x1b981dfff  libswiftObjectiveC.dylib (3)                                       <0B9D45EC-CEFE-35AB-815F-66C33E1B1D79>  /usr/lib/swift/libswiftObjectiveC.dylib
+           0x1c92d1000 -        0x1c93c0fff  libcrypto.35.dylib (75.60.3)                                       <8ECA9E1D-77E5-392D-B032-E24D48BB883F>  /usr/lib/libcrypto.35.dylib
+           0x1ce0bb000 -        0x1ce0ecfff  libssl.35.dylib (75.60.3)                                          <35F95FC9-1A96-3D48-8C35-67461F1CAD5C>  /usr/lib/libssl.35.dylib
+
+
+Powerstats for:   ping
+UUID:             94DCFCCC-6D55-319B-8D94-21A1583E5E54
+Path:             /sbin/ping
+Codesigning ID:   com.apple.ping
+Shared Cache:     B90241B2-E425-3982-B3F6-26C4567CBB49 slid base address 0x1a4c68000, slide 0x24c68000
+Architecture:     arm64e
+Start time:       2022-02-28 08:30:55.279 -0600
+End time:         2022-02-28 08:35:17.505 -0600
+Num samples:      136 (45%)
+Primary state:    87 samples Non-Frontmost App, Non-Suppressed, Kernel mode, Effective Thread QoS Default, Requested Thread QoS User Interactive, Override Thread QoS Unspecified
+User Activity:    0 samples Idle, 136 samples Active
+Power Source:     136 samples on Battery, 0 samples on AC
+  136  start + 520 (dyld + 20724) [0x10235d0f4]
+    76   ??? (ping + 23980) [0x10050ddac]
+      75   __sendto + 8 (libsystem_kernel.dylib + 24424) [0x1a4f3df68]
+        23   <User mode>
+      1    write + 8 (libsystem_kernel.dylib + 21820) [0x1a4f3d53c]
+    33   __recvmsg + 8 (libsystem_kernel.dylib + 25404) [0x1a4f3e33c]
+      16   <User mode>
+    24   __select + 8 (libsystem_kernel.dylib + 48440) [0x1a4f43d38]
+      7    <User mode>
+    3    ??? (ping + 24168) [0x10050de68]
+      2    printf + 80 (libsystem_c.dylib + 198652) [0x1a4e697fc]
+        1    vfprintf_l + 68 (libsystem_c.dylib + 77664) [0x1a4e4bf60]
+          1    __xvprintf + 244 (libsystem_c.dylib + 77940) [0x1a4e4c074]
+            1    __vfprintf + 11636 (libsystem_c.dylib + 20700) [0x1a4e3e0dc]
+              1    <User mode>
+        1    vfprintf_l + 40 (libsystem_c.dylib + 77636) [0x1a4e4bf44]
+          1    _pthread_mutex_lock_init_slow + 128 (libsystem_pthread.dylib + 6412) [0x1a4f6f90c]
+            1    <User mode>
+      1    printf + 48 (libsystem_c.dylib + 198620) [0x1a4e697dc]
+        1    <User mode>
+
+  Binary Images:
+           0x100508000 -        0x100533fff  ping (624)                          <94DCFCCC-6D55-319B-8D94-21A1583E5E54>  /sbin/ping
+           0x102358000 -        0x1023d3fff  dyld (941.5)                        <D21A73EA-79CD-36EB-8AC9-2C5CF5181A27>  /usr/lib/dyld
+           0x1a4e39000 -        0x1a4eb9fff  libsystem_c.dylib (1506.40.4)       <0DBC8B95-0037-3725-A769-0C772C293488>  /usr/lib/system/libsystem_c.dylib
+           0x1a4f38000 -        0x1a4f6dfff  libsystem_kernel.dylib (8019.80.24) <384945E6-DD71-37E5-9A3D-84FFF14A1E60>  /usr/lib/system/libsystem_kernel.dylib
+           0x1a4f6e000 -        0x1a4f7afff  libsystem_pthread.dylib (485.60.2)  <F7B2ECCF-E6F1-3109-AE81-9028C0B8332A>  /usr/lib/system/libsystem_pthread.dylib
+
+
+Powerstats for:   com.apple.appkit.xpc.openAndSavePanelService
+UUID:             33B7004C-0123-37EF-99B4-32DC0A9B2105
+Path:             /System/Library/Frameworks/AppKit.framework/Versions/C/XPCServices/com.apple.appkit.xpc.openAndSavePanelService.xpc/Contents/MacOS/com.apple.appkit.xpc.openAndSavePanelService
+Identifier:       com.apple.appkit.xpc.openAndSavePanelService
+Version:          1.0 (1)
+Build Version:    1
+Project Name:     AppKit_executables
+Source Version:   2113030116000000
+Shared Cache:     B90241B2-E425-3982-B3F6-26C4567CBB49 slid base address 0x1a4c68000, slide 0x24c68000
+Architecture:     arm64e
+Start time:       2022-02-28 08:31:12.754 -0600
+End time:         2022-02-28 08:35:15.725 -0600
+Num samples:      48 (16%)
+Primary state:    30 samples Non-Frontmost App, Non-Suppressed, Kernel mode, Effective Thread QoS Background, Requested Thread QoS Background, Override Thread QoS Unspecified
+User Activity:    0 samples Idle, 48 samples Active
+Power Source:     48 samples on Battery, 0 samples on AC
+  48  start_wqthread + 8 (libsystem_pthread.dylib + 8216) [0x1a4f70018]
+    48  _pthread_wqthread + 288 (libsystem_pthread.dylib + 13060) [0x1a4f71304]
+      48  _dispatch_workloop_worker_thread + 656 (libdispatch.dylib + 91912) [0x1a4dc9708]
+        48  _dispatch_lane_invoke + 392 (libdispatch.dylib + 48804) [0x1a4dbeea4]
+          48  _dispatch_lane_serial_drain + 672 (libdispatch.dylib + 45872) [0x1a4dbe330]
+            48  _dispatch_client_callout + 20 (libdispatch.dylib + 15276) [0x1a4db6bac]
+              48  _dispatch_call_block_and_release + 32 (libdispatch.dylib + 7776) [0x1a4db4e60]
+                48  invocation function for block in TFSInfoSizer::SizeFolder(std::__1::shared_ptr<TFSInfoSizer>, unsigned long long) + 64 (DesktopServicesPriv + 702968) [0x1a8d399f8]
+                  47  TOperationSizer::ResumeSizing(unsigned long long) + 148 (DesktopServicesPriv + 1272396) [0x1a8dc4a4c]
+                    47  TDeepCFURLIterator::Next(std::__1::shared_ptr<TCFURLInfo>&, int&, int&, bool&, bool&, std::__1::shared_ptr<TCFURLInfo>&, bool&, std::__1::shared_ptr<TCFURLInfo>&) + 80 (DesktopServicesPriv + 940324) [0x1a8d73924]
+                      46  TDeepCFURLIterator::NextInternal(std::__1::shared_ptr<TCFURLInfo>&, int&, int&, bool&, bool&, std::__1::shared_ptr<TCFURLInfo>&, bool&, std::__1::shared_ptr<TCFURLInfo>&) + 180 (DesktopServicesPriv + 940896) [0x1a8d73b60]
+                        43  TCFURLIterator::Next(std::__1::shared_ptr<TCFURLInfo>&) + 556 (DesktopServicesPriv + 910628) [0x1a8d6c524]
+                          26  TCFURLIterator::NextRaw(std::__1::shared_ptr<TCFURLInfo>&) + 48 (DesktopServicesPriv + 934520) [0x1a8d72278]
+                            21  _URLEnumeratorGetNextURL + 140 (CoreServicesInternal + 47816) [0x1a79adac8]
+                              20  _GetDirectoryURLs(_CFURLEnumerator*) + 1164 (CoreServicesInternal + 53740) [0x1a79af1ec]
+                                18  DirEnumRead + 356 (CoreServicesInternal + 54328) [0x1a79af438]
+                                  18  getattrlistbulk + 8 (libsystem_kernel.dylib + 20584) [0x1a4f3d068]
+                                    5   <User mode>
+                                1   DirEnumRead + 308 (CoreServicesInternal + 54280) [0x1a79af408]
+                                  1   close + 8 (libsystem_kernel.dylib + 9484) [0x1a4f3a50c]
+                                1   DirEnumRead + 272 (CoreServicesInternal + 54244) [0x1a79af3e4]
+                                  1   getattrlistbulk + 8 (libsystem_kernel.dylib + 20584) [0x1a4f3d068]
+                              1   _GetDirectoryURLs(_CFURLEnumerator*) + 624 (CoreServicesInternal + 53200) [0x1a79aefd0]
+                                1   _FSURLCreateWithPathAndAttributes + 472 (CoreServicesInternal + 56284) [0x1a79afbdc]
+                                  1   _CFURLCreateWithFileSystemRepresentation + 328 (CoreFoundation + 99352) [0x1a4fd4418]
+                                    1   CreateStringFromFileSystemRepresentationByAddingPercentEscapes + 892 (CoreFoundation + 65776) [0x1a4fcc0f0]
+                                      1   CFStringCreateWithBytes + 48 (CoreFoundation + 65988) [0x1a4fcc1c4]
+                                        1   __CFStringCreateImmutableFunnel3 + 1768 (CoreFoundation + 14616) [0x1a4fbf918]
+                                          1   _CFRuntimeCreateInstance + 332 (CoreFoundation + 16816) [0x1a4fc01b0]
+                                            1   szone_calloc + 0 (libsystem_malloc.dylib + 33220) [0x1a4d901c4]
+                                              1   <User mode>
+                            5   _URLEnumeratorGetNextURL + 96 (CoreServicesInternal + 47772) [0x1a79ada9c]
+                              3   _InitalizeDirectoryEnumerator(_CFURLEnumerator*) + 1396 (CoreServicesInternal + 49540) [0x1a79ae184]
+                                3   DirEnumOpen + 948 (CoreServicesInternal + 51480) [0x1a79ae918]
+                                  3   __getattrlist + 8 (libsystem_kernel.dylib + 9084) [0x1a4f3a37c]
+                                    1   <User mode>
+                              1   _InitalizeDirectoryEnumerator(_CFURLEnumerator*) + 1412 (CoreServicesInternal + 49556) [0x1a79ae194]
+                                1   <User mode>
+                              1   __getattrlist + 8 (libsystem_kernel.dylib + 9084) [0x1a4f3a37c]
+                          17  TCFURLIterator::NextRaw(std::__1::shared_ptr<TCFURLInfo>&) + 108 (DesktopServicesPriv + 934580) [0x1a8d722b4]
+                            17  TCFURLInfo::Initialize(__CFURL const*, bool, bool) + 208 (DesktopServicesPriv + 10668) [0x1a8c909ac]
+                              16  TCFURLInfo::FetchProperties(bool) + 452 (DesktopServicesPriv + 11268) [0x1a8c90c04]
+                                16  TCFURLInfo::GetBooleanProperty(__CFURL const*, __CFString const*) + 40 (DesktopServicesPriv + 12672) [0x1a8c91180]
+                                  16  CFURLCopyResourcePropertyForKey + 140 (CoreFoundation + 354972) [0x1a5012a9c]
+                                    15  _FSURLCopyResourcePropertyForKeyInternal(__CFURL const*, __CFString const*, void*, void*, __CFError**, unsigned char) + 232 (CoreServicesInternal + 4296) [0x1a79a30c8]
+                                      15  prepareValuesForBitmap(__CFURL const*, __FileCache*, _FilePropertyBitmap*, __CFError**) + 412 (CoreServicesInternal + 16496) [0x1a79a6070]
+                                        7   __getattrlist + 8 (libsystem_kernel.dylib + 9084) [0x1a4f3a37c]
+                                          1   <User mode>
+                                        6   LaunchServices::URLPropertyProvider::prepareValues(__CFURL const*, __FileCache*, __CFString const* const*, void const**, long, void const*, __CFError**) + 460 (LaunchServices + 66380) [0x1a551034c]
+                                          5   LaunchServices::URLPropertyProvider::prepareIsPackageValue(LaunchServices::Database::Context&, FSNode*, __FileCache*, __CFString const*, LaunchServices::URLPropertyProvider::State*, NSError* __autoreleasing*) + 56 (LaunchServices + 1697228) [0x1a569e5cc]
+                                            5   _LSNodeIsPackage + 24 (LaunchServices + 186400) [0x1a552d820]
+                                              5   _LSNodeIsPackageCommon(LSContext*, FSNode*, bool, unsigned char*) + 260 (LaunchServices + 852336) [0x1a55d0170]
+                                                5   -[FSNode(MiscellaneousProperties) getHFSType:creator:error:] + 236 (LaunchServices + 157344) [0x1a55266a0]
+                                                  5   +[NSData(NSData) dataWithContentsOfURL:options:maxLength:error:] + 68 (Foundation + 761588) [0x1a5f69ef4]
+                                                    5   -[NSData(NSData) initWithContentsOfFile:options:maxLength:error:] + 128 (Foundation + 157848) [0x1a5ed6898]
+                                                      5   _NSReadBytesFromFileWithExtendedAttributes + 160 (Foundation + 158264) [0x1a5ed6a38]
+                                                        5   __open + 8 (libsystem_kernel.dylib + 9172) [0x1a4f3a3d4]
+                                                          2   <User mode>
+                                          1   LaunchServices::URLPropertyProvider::prepareIsPackageValue(LaunchServices::Database::Context&, FSNode*, __FileCache*, __CFString const*, LaunchServices::URLPropertyProvider::State*, NSError* __autoreleasing*) + 40 (LaunchServices + 1697212) [0x1a569e5bc]
+                                            1   LaunchServices::Database::Context::operator LSContext*() + 100 (LaunchServices + 67816) [0x1a55108e8]
+                                              1   objc_release + 0 (libobjc.A.dylib + 34432) [0x1a4e02680]
+                                                1   <User mode>
+                                        1   pathURLPropertyProviderPrepareValues(__CFURL const*, __FileCache*, __CFString const* const*, void const**, long, void const*, __CFError**) + 1176 (CoreServicesInternal + 25088) [0x1a79a8200]
+                                          1   CFURLCopyFileSystemPath + 468 (CoreFoundation + 68156) [0x1a4fcca3c]
+                                            1   CFStringCreateWithBytes + 48 (CoreFoundation + 65988) [0x1a4fcc1c4]
+                                              1   __CFStringCreateImmutableFunnel3 + 1768 (CoreFoundation + 14616) [0x1a4fbf918]
+                                                1   _CFRuntimeCreateInstance + 332 (CoreFoundation + 16816) [0x1a4fc01b0]
+                                                  1   szone_calloc + 0 (libsystem_malloc.dylib + 33220) [0x1a4d901c4]
+                                        1   LaunchServices::URLPropertyProvider::prepareValues(__CFURL const*, __FileCache*, __CFString const* const*, void const**, long, void const*, __CFError**) + 68 (LaunchServices + 65988) [0x1a55101c4]
+                                          1   objc_autoreleasePoolPush + 24 (libobjc.A.dylib + 39624) [0x1a4e03ac8]
+                                            1   <User mode>
+                                    1   _FSURLCopyResourcePropertyForKeyInternal(__CFURL const*, __CFString const*, void*, void*, __CFError**, unsigned char) + 152 (CoreServicesInternal + 4216) [0x1a79a3078]
+                                      1   LaunchServices::URLPropertyProvider::copyValues(__CFURL const*, __FileCache*, __CFString const* const*, void const**, void const**, long, void const*) + 68 (LaunchServices + 65852) [0x1a551013c]
+                                        1   _FileCacheGetPropertyValueForKey + 40 (CoreServicesInternal + 18924) [0x1a79a69ec]
+                                          1   _FileCacheLock(__FileCache const*) + 28 (CoreServicesInternal + 166476) [0x1a79caa4c]
+                                            1   pthread_self + 60 (libsystem_pthread.dylib + 10812) [0x1a4f70a3c]
+                                              1   <User mode>
+                              1   TCFURLInfo::FetchProperties(bool) + 672 (DesktopServicesPriv + 11488) [0x1a8c90ce0]
+                                1   CFURLCopyResourcePropertyForKey + 140 (CoreFoundation + 354972) [0x1a5012a9c]
+                                  1   _FSURLCopyResourcePropertyForKeyInternal(__CFURL const*, __CFString const*, void*, void*, __CFError**, unsigned char) + 80 (CoreServicesInternal + 4144) [0x1a79a3030]
+                                    1   getPropertyForKey(__CFString const*) + 36 (CoreServicesInternal + 8388) [0x1a79a40c4]
+                                      1   CFDictionaryGetValue + 292 (CoreFoundation + 34252) [0x1a4fc45cc]
+                                        1   <User mode>
+                        3   TCFURLIterator::Next(std::__1::shared_ptr<TCFURLInfo>&) + 68 (DesktopServicesPriv + 910140) [0x1a8d6c33c]
+                          3   TCFURLInfo::CopyPathURLIfPossible(__CFURL const*) + 40 (DesktopServicesPriv + 895960) [0x1a8d68bd8]
+                            2   CFURLCreateFilePathURL + 1168 (CoreFoundation + 968368) [0x1a50a86b0]
+                              1   _CFURLCreateWithURLString + 1172 (CoreFoundation + 85100) [0x1a4fd0c6c]
+                                1   _CFNonObjCStringCreateCopy + 556 (CoreFoundation + 43788) [0x1a4fc6b0c]
+                                  1   __CFStringCreateImmutableFunnel3 + 1768 (CoreFoundation + 14616) [0x1a4fbf918]
+                                    1   _CFRuntimeCreateInstance + 576 (CoreFoundation + 17060) [0x1a4fc02a4]
+                                      1   object_setClass + 60 (libobjc.A.dylib + 41924) [0x1a4e043c4]
+                              1   _CFURLCreateWithURLString + 556 (CoreFoundation + 84484) [0x1a4fd0a04]
+                                1   <User mode>
+                            1   CFURLCreateFilePathURL + 476 (CoreFoundation + 967676) [0x1a50a83fc]
+                              1   CreateStringFromFileSystemRepresentationByAddingPercentEscapes + 892 (CoreFoundation + 65776) [0x1a4fcc0f0]
+                                1   CFStringCreateWithBytes + 48 (CoreFoundation + 65988) [0x1a4fcc1c4]
+                                  1   __CFStringCreateImmutableFunnel3 + 1768 (CoreFoundation + 14616) [0x1a4fbf918]
+                                    1   _CFRuntimeCreateInstance + 564 (CoreFoundation + 17048) [0x1a4fc0298]
+                                      1   <User mode>
+                      1   TDeepCFURLIterator::NextInternal(std::__1::shared_ptr<TCFURLInfo>&, int&, int&, bool&, bool&, std::__1::shared_ptr<TCFURLInfo>&, bool&, std::__1::shared_ptr<TCFURLInfo>&) + 452 (DesktopServicesPriv + 941168) [0x1a8d73c70]
+                        1   TDeepCFURLIterator::PopIterator() + 32 (DesktopServicesPriv + 178076) [0x1a8cb979c]
+                          1   TCFURLIterator::~TCFURLIterator() + 44 (DesktopServicesPriv + 178508) [0x1a8cb994c]
+                            1   TRef<__CFURLEnumerator const*, TRetainReleasePolicy<__CFURLEnumerator const*> >::~TRef() + 32 (DesktopServicesPriv + 118608) [0x1a8caaf50]
+                              1   _CFRelease + 248 (CoreFoundation + 1431444) [0x1a5119794]
+                                1   _URLEnumeratorFinalize(void const*) + 176 (CoreServicesInternal + 57652) [0x1a79b0134]
+                                  1   DirEnumClose + 92 (CoreServicesInternal + 57792) [0x1a79b01c0]
+                                    1   free_small + 948 (libsystem_malloc.dylib + 21156) [0x1a4d8d2a4]
+                                      1   small_madvise_free_range_no_lock + 516 (libsystem_malloc.dylib + 104700) [0x1a4da18fc]
+                                        1   madvise + 8 (libsystem_kernel.dylib + 17812) [0x1a4f3c594]
+                  1   TOperationSizer::ResumeSizing(unsigned long long) + 108 (DesktopServicesPriv + 1272356) [0x1a8dc4a24]
+                    1   std::__1::shared_ptr<TCFURLInfo> std::__1::allocate_shared<TCFURLInfo, std::__1::allocator<TCFURLInfo>, void>(std::__1::allocator<TCFURLInfo> const&) + 28 (DesktopServicesPriv + 229396) [0x1a8cc6014]
+                      1   malloc + 0 (libsystem_malloc.dylib + 4656) [0x1a4d89230]
+                        1   <User mode>
+
+  Binary Images:
+           0x100e90000 -                ???  com.apple.appkit.xpc.openAndSavePanelService 1.0 (1) <33B7004C-0123-37EF-99B4-32DC0A9B2105>  /System/Library/Frameworks/AppKit.framework/Versions/C/XPCServices/com.apple.appkit.xpc.openAndSavePanelService.xpc/Contents/MacOS/com.apple.appkit.xpc.openAndSavePanelService
+           0x1a4d88000 -        0x1a4db2fff  libsystem_malloc.dylib (374.60.3)                    <961751ED-F18B-30D4-8025-AA12CA23197B>  /usr/lib/system/libsystem_malloc.dylib
+           0x1a4db3000 -        0x1a4df9fff  libdispatch.dylib (1324.60.3)                        <93E1DCFC-EF56-3113-8E7C-1BA85266A93B>  /usr/lib/system/libdispatch.dylib
+           0x1a4dfa000 -        0x1a4e35fff  libobjc.A.dylib (838.1)                              <2EB32E1D-90CB-3256-8681-9034085A06A6>  /usr/lib/libobjc.A.dylib
+           0x1a4f38000 -        0x1a4f6dfff  libsystem_kernel.dylib (8019.80.24)                  <384945E6-DD71-37E5-9A3D-84FFF14A1E60>  /usr/lib/system/libsystem_kernel.dylib
+           0x1a4f6e000 -        0x1a4f7afff  libsystem_pthread.dylib (485.60.2)                   <F7B2ECCF-E6F1-3109-AE81-9028C0B8332A>  /usr/lib/system/libsystem_pthread.dylib
+           0x1a4fbc000 -        0x1a54fffff  com.apple.CoreFoundation 6.9 (1856.105)              <16FADF8B-A3AF-3E0C-B5FB-CE9A9CDC8747>  /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
+           0x1a5500000 -        0x1a5760fff  com.apple.LaunchServices 1141.1 (1141.1)             <E986B6D9-472C-3BEA-AB9A-D3ABEF2A07FB>  /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/LaunchServices
+           0x1a5eb0000 -        0x1a629dfff  com.apple.Foundation 6.9 (1856.105)                  <90321A38-43A5-3767-9A9C-2C631338B9BC>  /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
+           0x1a79a2000 -        0x1a79defff  com.apple.CoreServicesInternal 484 (484)             <B0C40221-F4C3-3F56-B25B-D484E5D3A8BB>  /System/Library/PrivateFrameworks/CoreServicesInternal.framework/Versions/A/CoreServicesInternal
+           0x1a8c8e000 -        0x1a8e15fff  com.apple.desktopservices 2.1 (1438.1.1)             <C36A8FA8-9893-3269-AF49-59FA9CE1EA59>  /System/Library/PrivateFrameworks/DesktopServicesPriv.framework/Versions/A/DesktopServicesPriv

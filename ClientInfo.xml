@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ClientInfo dyn_lists="" id="-1">
+   <Environment></Environment>
+   <HostInfo><![CDATA[]]></HostInfo>
+   <NameInArchive></NameInArchive>
+   <ClientSettings><![CDATA[AKLastEmailListRequestDateKey -- 2022-02-08T09:51:43.507
+AKLastIDMSEnvironment -- 0
+AccountLocaleUpdated -- antunezmatteo@gmail.com
+AcronisOnlineStore/AcronisOnlineStorePromoInitialized -- 2022-02-08 11:02:31
+AcronisOnlineStore/AcronisOnlineStorePromoLastShowtime -- 2022-02-08 11:02:31
+AcronisTrueImage/AcronisTrueImagePromoInitialized -- 2022-02-08 11:02:31
+AcronisTrueImage/AcronisTrueImagePromoLastShowtime -- 2022-02-08 11:02:31
+ActivationExperience -- enter_key
+Antivirus/FirstStartApp -- 2022-02-08 11:02:31
+AppleAntiAliasingThreshold -- 4
+AppleInterfaceStyleSwitchesAutomatically -- true
+AppleKeyboardUIMode -- 3
+AppleLanguages -- en-US
+AppleLanguagesDidMigrate -- 12.2
+AppleLanguagesSchemaVersion -- 2000
+AppleLocale -- en_US
+AppleMiniaturizeOnDoubleClick -- false
+AppleShowAllExtensions -- true
+AppleTextDirection -- false
+Application preferences/Check for updates -- 2
+Application preferences/Download updates automatically -- true
+Application preferences/Last selected page -- 0
+Application preferences/Old application preferences resetted -- true
+Application preferences/SGA Icon Version -- 2
+Configuration Editor/{2982c1b9-e6d5-4209-b73f-9861d345e0b8}/Hardware/Page Id -- 0
+Configuration Editor/{2982c1b9-e6d5-4209-b73f-9861d345e0b8}/Hardware/Page Type -- 18
+Configuration Editor/{2982c1b9-e6d5-4209-b73f-9861d345e0b8}/Options/Page Id -- 0
+Configuration Editor/{2982c1b9-e6d5-4209-b73f-9861d345e0b8}/Options/Page Type -- 19
+Configuration Editor/{2982c1b9-e6d5-4209-b73f-9861d345e0b8}/Section Type -- 2
+Configuration Editor/{2982c1b9-e6d5-4209-b73f-9861d345e0b8}/Window Position -- 400,161
+Configuration Editor/{2982c1b9-e6d5-4209-b73f-9861d345e0b8}/Window Screen Number -- 0
+Console/Default Console Mode/{16158838-5dd0-4713-ae1a-87743c1c0d84} -- 1
+Console/Default Console Mode/{2982c1b9-e6d5-4209-b73f-9861d345e0b8} -- 1
+Console/{16158838-5dd0-4713-ae1a-87743c1c0d84}/0/0/Window Frame Geometry -- 284,74 640x438
+Console/{16158838-5dd0-4713-ae1a-87743c1c0d84}/0/0/Window Normal Geometry -- 284,112 640x400
+Console/{16158838-5dd0-4713-ae1a-87743c1c0d84}/0/0/Window Screen Number -- 0
+Console/{16158838-5dd0-4713-ae1a-87743c1c0d84}/0/0/Window Space Number -- 1
+Console/{16158838-5dd0-4713-ae1a-87743c1c0d84}/0/0/Window Space UUID -- 
+Console/{16158838-5dd0-4713-ae1a-87743c1c0d84}/0/1/Window Frame Geometry -- 284,74 640x438
+Console/{16158838-5dd0-4713-ae1a-87743c1c0d84}/0/1/Window Normal Geometry -- 284,112 640x400
+Console/{16158838-5dd0-4713-ae1a-87743c1c0d84}/0/1/Window Screen Number -- 0
+Console/{16158838-5dd0-4713-ae1a-87743c1c0d84}/0/1/Window Space Number -- 1
+Console/{16158838-5dd0-4713-ae1a-87743c1c0d84}/0/1/Window Space UUID -- 
+Country -- US
+CoveringPermissionsWizardPassed -- true
+DownloadedFrom -- https://download.parallels.com/web-installer/v1/1.0.3-219/Install%20Parallels%20Desktop.dmg?experience=enter_key
+EULA Version -- 4.0.0.parallels
+FileDevSelectorWidget/CdRomHistoryItem.0 -- /Users/matteoantunez/Parallels/Windows 11.pvm/.//Unattended.iso
+FileDevSelectorWidget/CdRomHistoryItem.1 -- /Users/matteoantunez/Downloads/22000.318.211104-1236.co_release_svc_refresh_CLIENTCONSUMER_RET_A64FRE_en-us.iso
+FileDevSelectorWidget/FolderHistoryItem.0 -- /Users/matteoantunez/Parallels
+FileDevSelectorWidget/HardDiskHistoryItem.0 -- /Users/matteoantunez/Parallels/Windows 11.pvm/harddisk.hdd
+Guest OS Sources/L1VzZXJzL21hdHRlb2FudHVuZXovRG93bmxvYWRzLzIyMDAwLjMxOC4yMTExMDQtMTIzNi5jb19yZWxlYXNlX3N2Y19yZWZyZXNoX0NMSUVOVENPTlNVTUVSX1JFVF9BNjRGUkVfZW4tdXMuaXNv/Arch -- 4
+Guest OS Sources/L1VzZXJzL21hdHRlb2FudHVuZXovRG93bmxvYWRzLzIyMDAwLjMxOC4yMTExMDQtMTIzNi5jb19yZWxlYXNlX3N2Y19yZWZyZXNoX0NMSUVOVENPTlNVTUVSX1JFVF9BNjRGUkVfZW4tdXMuaXNv/Build -- 
+Guest OS Sources/L1VzZXJzL21hdHRlb2FudHVuZXovRG93bmxvYWRzLzIyMDAwLjMxOC4yMTExMDQtMTIzNi5jb19yZWxlYXNlX3N2Y19yZWZyZXNoX0NMSUVOVENPTlNVTUVSX1JFVF9BNjRGUkVfZW4tdXMuaXNv/Editions -- "Windows 10 Home", "Windows 10 Home Single Language", "Windows 10 Pro"
+Guest OS Sources/L1VzZXJzL21hdHRlb2FudHVuZXovRG93bmxvYWRzLzIyMDAwLjMxOC4yMTExMDQtMTIzNi5jb19yZWxlYXNlX3N2Y19yZWZyZXNoX0NMSUVOVENPTlNVTUVSX1JFVF9BNjRGUkVfZW4tdXMuaXNv/EditionsForDisplay -- "Windows 11 Home", "Windows 11 Home Single Language", "Windows 11 Pro"
+Guest OS Sources/L1VzZXJzL21hdHRlb2FudHVuZXovRG93bmxvYWRzLzIyMDAwLjMxOC4yMTExMDQtMTIzNi5jb19yZWxlYXNlX3N2Y19yZWZyZXNoX0NMSUVOVENPTlNVTUVSX1JFVF9BNjRGUkVfZW4tdXMuaXNv/EstimatedSize -- 0
+Guest OS Sources/L1VzZXJzL21hdHRlb2FudHVuZXovRG93bmxvYWRzLzIyMDAwLjMxOC4yMTExMDQtMTIzNi5jb19yZWxlYXNlX3N2Y19yZWZyZXNoX0NMSUVOVENPTlNVTUVSX1JFVF9BNjRGUkVfZW4tdXMuaXNv/IsEvaluationVersion -- false
+Guest OS Sources/L1VzZXJzL21hdHRlb2FudHVuZXovRG93bmxvYWRzLzIyMDAwLjMxOC4yMTExMDQtMTIzNi5jb19yZWxlYXNlX3N2Y19yZWZyZXNoX0NMSUVOVENPTlNVTUVSX1JFVF9BNjRGUkVfZW4tdXMuaXNv/IsVolumeLicense -- false
+Guest OS Sources/L1VzZXJzL21hdHRlb2FudHVuZXovRG93bmxvYWRzLzIyMDAwLjMxOC4yMTExMDQtMTIzNi5jb19yZWxlYXNlX3N2Y19yZWZyZXNoX0NMSUVOVENPTlNVTUVSX1JFVF9BNjRGUkVfZW4tdXMuaXNv/Locale -- en-US
+Guest OS Sources/L1VzZXJzL21hdHRlb2FudHVuZXovRG93bmxvYWRzLzIyMDAwLjMxOC4yMTExMDQtMTIzNi5jb19yZWxlYXNlX3N2Y19yZWZyZXNoX0NMSUVOVENPTlNVTUVSX1JFVF9BNjRGUkVfZW4tdXMuaXNv/MacVersion -- 0
+Guest OS Sources/L1VzZXJzL21hdHRlb2FudHVuZXovRG93bmxvYWRzLzIyMDAwLjMxOC4yMTExMDQtMTIzNi5jb19yZWxlYXNlX3N2Y19yZWZyZXNoX0NMSUVOVENPTlNVTUVSX1JFVF9BNjRGUkVfZW4tdXMuaXNv/MediaType -- 0
+Guest OS Sources/L1VzZXJzL21hdHRlb2FudHVuZXovRG93bmxvYWRzLzIyMDAwLjMxOC4yMTExMDQtMTIzNi5jb19yZWxlYXNlX3N2Y19yZWZyZXNoX0NMSUVOVENPTlNVTUVSX1JFVF9BNjRGUkVfZW4tdXMuaXNv/NeedRepack -- false
+Guest OS Sources/L1VzZXJzL21hdHRlb2FudHVuZXovRG93bmxvYWRzLzIyMDAwLjMxOC4yMTExMDQtMTIzNi5jb19yZWxlYXNlX3N2Y19yZWZyZXNoX0NMSUVOVENPTlNVTUVSX1JFVF9BNjRGUkVfZW4tdXMuaXNv/UseCreateInstallMedia -- false
+Guest OS Sources/L1VzZXJzL21hdHRlb2FudHVuZXovRG93bmxvYWRzLzIyMDAwLjMxOC4yMTExMDQtMTIzNi5jb19yZWxlYXNlX3N2Y19yZWZyZXNoX0NMSUVOVENPTlNVTUVSX1JFVF9BNjRGUkVfZW4tdXMuaXNv/UseInstallESD -- false
+Guest OS Sources/L1VzZXJzL21hdHRlb2FudHVuZXovRG93bmxvYWRzLzIyMDAwLjMxOC4yMTExMDQtMTIzNi5jb19yZWxlYXNlX3N2Y19yZWZyZXNoX0NMSUVOVENPTlNVTUVSX1JFVF9BNjRGUkVfZW4tdXMuaXNv/Version -- 2067
+Hidden Messages ID List/13064 -- 1
+HostOsVersion -- 12.2.0
+Last Changed Build Number Release Major -- -1
+License/Flags -- 706563
+License/Params/0 -- 0
+License/Params/1 -- Q9P57F-******-******-******-Y5E45T
+License/Params/10 -- false
+License/Params/11 -- ab221513157f49fdacfb1a12ee9f5548
+License/Params/13 -- antunezmatteo@gmail.com
+License/Params/14 -- 1
+License/Params/2 -- Q9P57F-******-******-******-Y5E45T
+License/Params/3 -- 2022-07-16T11:21:32.000
+License/Params/4 -- {
+    "cpu_limit": 4,
+    "edition": 1,
+    "grace_period_ends_at": "2022-07-16 16:21:32",
+    "hosts": [
+        {
+            "activated_at": "2021-07-09 16:23:06",
+            "hw_id": "6F4D637246DE542B91BCB83B91993F74",
+            "name": "GDPR_HIDDEN",
+            "product_version": "17.1.1-51537"
+        }
+    ],
+    "is_auto_renewable": true,
+    "is_beta": false,
+    "is_bytebot": false,
+    "is_china": false,
+    "is_expired": false,
+    "is_grace_period": false,
+    "is_nfr": false,
+    "is_purchased_online": false,
+    "is_sublicense": false,
+    "is_suspended": false,
+    "is_trial": false,
+    "is_upgrade": false,
+    "lic_key": "Q9P57F-******-******-******-Y5E45T",
+    "limit": 1,
+    "main_period_ends_at": "2022-07-09 16:21:32",
+    "name": "",
+    "offline": false,
+    "parent_key": null,
+    "parent_uuid": null,
+    "platform": 3,
+    "product": 7,
+    "product_version": "*",
+    "ram_limit": 8192,
+    "usage": 1,
+    "uuid": "ab221513157f49fdacfb1a12ee9f5548"
+}
+
+License/Params/5 -- 0
+License/Params/6 -- 1945-09-05T00:00:00.000
+License/Params/7 -- 2022-07-09T11:21:32.000
+License/Params/9 -- 0
+Login/DefaultConnectServer -- localhost
+Login/Servers/1/Connection Security -- 1
+Login/Servers/1/Last Session Uuid -- 
+Login/Servers/1/Save Password -- false
+Login/Servers/1/Server Custom Name -- 
+Login/Servers/1/Server Disp Id -- {ccfab4e1-d486-41ae-9715-e7cc215155a8}
+Login/Servers/1/Server Id -- {e792eede-389d-4185-8b34-0ec01a692da3}
+Login/Servers/1/Server Ip -- 127.0.0.1
+Login/Servers/1/Server Name -- localhost
+Login/Servers/1/Use Local Login -- true
+Login/Servers/1/User Name -- 
+Login/Servers/1/Video compression type -- 65537
+Login/Servers/size -- 1
+Main Window/Status Bar Devices Visibility -- true
+MultipleSessionEnabled -- false
+NSAutomaticCapitalizationEnabled -- true
+NSAutomaticPeriodSubstitutionEnabled -- true
+NSLinguisticDataAssetsRequestLastInterval -- 86400
+NSLinguisticDataAssetsRequestTime -- 2022-02-08T11:26:57.276
+NSLinguisticDataAssetsRequested -- en
+NSLinguisticDataAssetsRequestedByChecker -- en
+NSNavRecentPlaces -- "~/Desktop/Investigation", "~/Documents"
+NSPreferredWebServices -- {"NSWebServicesProviderWebSearch":{"NSDefaultDisplayName":"Google","NSProviderIdentifier":"com.google.www"}}
+NSUserDictionaryReplacementItems -- [{"on":1,"replace":"omw","with":"On my way!"}]
+NewRemaps/Linux/Ctrl+P -- Meta+P
+NotificationPromo/LastPromoDelay -- 0
+NotificationPromo/LastPromoId -- 
+NotificationPromo/PromoShowTime -- 2022-02-09T11:07:49.995
+OS Downloads/https:&#47;&#47;download.parallels.com&#47;desktop&#47;v14&#47;toolbox&#47;toolbox_dec.xml/ContentType -- 0
+OS Downloads/https:&#47;&#47;download.parallels.com&#47;desktop&#47;v14&#47;toolbox&#47;toolbox_dec.xml/DestinationFolder -- /private/var/folders/j1/6qh_w_m54dv4dm_vs32_ddjw0000gn/T
+OS Downloads/https:&#47;&#47;download.parallels.com&#47;desktop&#47;v14&#47;toolbox&#47;toolbox_dec.xml/DownloadUrl -- gmnrBP7/Zy8vtHHwFrbT8YXxyxxsDIMvcRE6YXFAfXBtW/i93mJwgu5omVcF614Iw6Pj/TsdZruSQZ6T9qCYEJXh6CVGVfCP/ejT+6+TRE9bEC5bbWH+KvGtAjc=
+OS Downloads/https:&#47;&#47;download.parallels.com&#47;desktop&#47;v14&#47;toolbox&#47;toolbox_dec.xml/MD5 -- ce57c25fdd8b5d44c23103822cbc0e6a
+OS Downloads/https:&#47;&#47;download.parallels.com&#47;desktop&#47;v14&#47;toolbox&#47;toolbox_dec.xml/SHA1 -- 
+OS Downloads/https:&#47;&#47;download.parallels.com&#47;desktop&#47;v14&#47;toolbox&#47;toolbox_dec.xml/SizeTotal -- 76146229
+OldProfilesImported -- true
+Other Windows/ControlCenter/Window Position -- 0,25
+Other Windows/ControlCenter/Window Screen Number -- 0
+Other Windows/ControlCenter/Window Size -- 540x0
+PKSecureElementAvailableFlagsByHostSome -- 3
+ParallelsToolbox/ParallelsToolboxPromoInitialized -- 2022-02-08 11:02:31
+ParallelsToolbox/ParallelsToolboxPromoLastShowtime -- 2022-02-08 11:02:31
+ParallelsToolbox/ParallelsToolboxPromoOff -- true
+Prev Product Build Number Release Major -- 17
+Prev Product Build Number Version Major -- 51537
+Product Build Number Release Major -- 17
+Product Build Number Release Minor -- 1
+Product Build Number Version Major -- 51537
+Product Build Number Version Minor -- 0
+ProductPromo/ForcePromoOff -- false
+ProductPromo/LastPromoDelay -- 0
+ProductPromo/LastPromoId -- 
+ProductPromo/PromoShowTime -- 2022-02-15T11:07:49.644
+Register/GoogleToken -- k3ytTaOEeEGRqWLDmxKXvbYuy8vvZFXI+s8B4NOTeCXQ/V5qjTS9uRTzHgMbxclb/92hnQUaafcmItx++Koj6hKdpBRgb15kAT3l3bdbkyKe+5+Z+aV3O1lsd/uJ+DcD7wfBnyjScrstz8VZuc29USKjIQGtXLu4bX2M0RInIQLreLuV8GXQB0AbSGarwfKgLukoR8nzbL6YxwIzoPsp15PdZQ==
+Settings Versions/Usb List Version -- 1
+Travel/TravelPromoInitialized -- 2022-02-08 11:02:31
+Travel/TravelPromoLastShowtime -- 2022-02-08 11:02:31
+Travel/TravelPromoTryTime -- 2022-02-08 11:02:31
+UrgentPromo/LastPromoDelay -- 0
+UrgentPromo/LastPromoId -- 
+UrgentPromo/PromoShowTime -- 2022-02-09T11:07:49.645
+Usb Devices/Converted On Version -- 17
+User Preferences/Update/Download Path -- /Users/matteoantunez/Downloads
+User Preferences/Update/Incomplete Update -- false
+User Preferences/Update/Last Checked On -- 2022-02-08 11:47:00
+Vagrant/VagrantPromoInitialized -- 2022-02-08 11:02:31
+Vagrant/VagrantPromoLastShowtime -- 2022-02-08 11:02:31
+WasLaunched -- true
+WelcomeScreenPromo/PromoOff -- true
+WrongRemaps/{B569BAA1-07AF-44BD-91C9-ECBED8B0BAAF}Windows -- true
+com/apple/AppleModemSettingTool/LastCountryCode -- US
+com/apple/ColorSync/Devices -- /Library/Caches/ColorSync/com.apple.colorsync.devices
+com/apple/TimeZonePref/Last_Selected_City -- "41.25865", "-95.93719", "0", "America/Chicago", "US", "Omaha", "U.S.A.", "Omaha", "U.S.A.", "DEPRECATED IN 10.6"
+com/apple/finder/SyncExtensions -- {"collaborationMap":{},"dirMap":{}}
+com/apple/preferences/timezone/new/selected_city -- ?t??u??x??r??w??p?
+com/apple/preferences/timezone/selected_city -- {"AppleMapID":"\u001at\u0010\u001au\u0014\u001bx\u0014\u001cr\u0010\u001dw\u0014\u0013p\u001d"}
+com/apple/sound/beep/flash -- 0
+com/apple/springing/delay -- 0.5
+com/apple/springing/enabled -- true
+com/apple/trackpad/enableSecondaryClick -- true
+com/apple/trackpad/fiveFingerPinchSwipeGesture -- 2
+com/apple/trackpad/forceClick -- true
+com/apple/trackpad/fourFingerHorizSwipeGesture -- 2
+com/apple/trackpad/fourFingerPinchSwipeGesture -- 2
+com/apple/trackpad/fourFingerVertSwipeGesture -- 2
+com/apple/trackpad/momentumScroll -- true
+com/apple/trackpad/pinchGesture -- true
+com/apple/trackpad/rotateGesture -- true
+com/apple/trackpad/scrollBehavior -- 2
+com/apple/trackpad/threeFingerDragGesture -- false
+com/apple/trackpad/threeFingerHorizSwipeGesture -- 2
+com/apple/trackpad/threeFingerTapGesture -- 0
+com/apple/trackpad/threeFingerVertSwipeGesture -- 2
+com/apple/trackpad/twoFingerDoubleTapGesture -- 1
+com/apple/trackpad/twoFingerFromRightEdgeSwipeGesture -- 3
+com/apple/trackpad/version -- 5
+]]></ClientSettings>
+   <InstalledSoftware><![CDATA[]]></InstalledSoftware>
+   <CombinedReportId></CombinedReportId>
+   <Rating>0</Rating>
+</ClientInfo>

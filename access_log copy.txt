@@ -1,0 +1,2 @@
+localhost - - [10/Jan/2022:12:22:41 -0600] "POST / HTTP/1.1" 401 221 CUPS-Get-Devices successful-ok
+localhost - matteoantunez [10/Jan/2022:12:22:41 -0600] "POST / HTTP/1.1" 200 458 CUPS-Get-Devices -
